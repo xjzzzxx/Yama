@@ -16,7 +16,7 @@ Due to space limitations, the semantic parsing rules for opcodes and the experim
 **Yama's complete code and datasets will be published after the paper is accepted.**
 
 * [Yama_src](https://github.com/xjzzzxx/Yama/blob/main/Yama_src)
-* [Yama_datasets](https://github.com/xjzzzxx/Yama/blob/main/Yama_dataset)
+* [Yama_datasets](https://github.com/xjzzzxx/Yama/blob/main/Yama_datasets)
 
 ![alt text](yama_welcome.png)
 
