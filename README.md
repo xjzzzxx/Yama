@@ -1,14 +1,11 @@
 # Yama: Precise Opcodes-based Data Flow Analysis for Detecting PHP Applications Vulnerabilities
 
-Yama, a context-sensitive and path-sensitive interprocedural data flow analysis tool for PHP, used to detect taint-style vulnerabilities in PHP applications. Our approach is based on the observation that PHP opcodes have precise semantics and clear control flow, which can make data flow analysis more precise and efficient.
+Yama, a context-sensitive and path-sensitive interprocedural data flow analysis method for PHP, used to detect taint-style vulnerabilities in PHP applications. Our approach is based on the observation that PHP opcodes have precise semantics and clear control flow, which can make data flow analysis more precise and efficient.
 
 Yama successfully discovered and reported 38 zero-day vulnerabilities in 24 GitHub projects with over 1,000 stars, and 34 new CVE IDs have been assigned:
 
 * [CVEs](#cves)
 
-Our paper can now be previewed on:
-
-* [Yama_arxiv](链接地址)
 
 Due to space limitations, the semantic parsing rules for opcodes and the experimental results of reclassifying each test case in RQ2 can be found here:
 
