@@ -9,14 +9,14 @@ Yama successfully discovered and reported 38 zero-day vulnerabilities in 24 GitH
 
 Due to space limitations, the semantic parsing rules for opcodes and the experimental results of reclassifying each test case in RQ2 can be found here:
 
-* [opcodesSemantics](xjzzzxx/Yama/Yama_appendix/opcodesSemantics.pdf)
-* [RQ2details](xjzzzxx/Yama/Yama_appendix/RQ2details.pdf)
+* [opcodesSemantics](https://github.com/xjzzzxx/Yama/Yama_appendix/opcodesSemantics.pdf)
+* [RQ2details](https://github.com/xjzzzxx/Yama/Yama_appendix/RQ2details.pdf)
 
 # Preview
 **Yama's complete code and datasets will be published after the paper is accepted.**
 
-* [Yama_src](xjzzzxx/Yama/Yama_src)
-* [Yama_datasets](xjzzzxx/Yama/Yama_dataset)
+* [Yama_src](https://github.com/xjzzzxx/Yama/Yama_src)
+* [Yama_datasets](https://github.com/xjzzzxx/Yama/Yama_dataset)
 
 ![alt text](yama_welcome.png)
 
