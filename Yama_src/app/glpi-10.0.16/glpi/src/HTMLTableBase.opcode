@@ -1,0 +1,500 @@
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\HTMLTableBase.php
+function name:  (null)
+number of ops:  5
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   41     0*       <  0> NOP                                                      
+   42     1*       <  0> NOP                                                      
+   43     2*       <  0> NOP                                                      
+  218     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       < 62> RETURN                                                    OP1[  IS_CONST (268435447) 1 ]
+
+Class HTMLTableBase:
+[+]Class Parent Name: NULL
+End Trait extract
+Start Properties extract:
+Key: super, Value: UNINIT, Type: Normal
+End Properties extract.
+
+Function __construct:
+[+]Function Source Class Name: HTMLTableBase
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:super
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\HTMLTableBase.php
+function name:  __construct
+number of ops:  6
+compiled vars:  !0 = $super
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   50     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+   52     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435450) 'super' ]
+          3*       <137> OP_DATA                                                   OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+   53     4*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          5*       < 62> RETURN                                                    OP1[  IS_CONST (268435445) null ]
+
+End of function __construct
+
+Function appendheader:
+[+]Function Source Class Name: HTMLTableBase
+[*]Start of arg_info extract:
+[*]arg_info num_args:2
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:header_object
+[*]type:HTMLTableHeader
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:allow_super_header
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\HTMLTableBase.php
+function name:  appendHeader
+number of ops:  94
+compiled vars:  !0 = $header_object, !1 = $allow_super_header, !2 = $header_name, !3 = $subHeader_name
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   60     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 64> RECV_INIT                                         RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435416) <false> ]
+   63     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       <138> INSTANCEOF                                        RES[  IS_TMP_VAR ~4 ]       OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435413) 'HTMLTableHeader' ]
+          4*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~5 ]       OP1[  IS_TMP_VAR ~4 ]
+          5*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~5 ] OP2[ , ->11 ]
+   64     6*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          7*       < 68> NEW                                               RES[  IS_VAR $6 ]       OP1[ 'Exception' ]
+          8*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435407) 'Implementation+error%3A+appendHeader+requires+HTMLTableHeader+as+parameter' ] OP2[  IS_UNUSED  ]
+          9*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         10*       <108> THROW                                         0           OP1[  IS_VAR $6 ] OP2[  IS_UNUSED  ]
+   66    11*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         12*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435400) '' ]
+   67    13*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         14*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435397) '' ]
+   68    15*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         16*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435394) 'getHeaderAndSubHeaderName' ]
+         17*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         18*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         19*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+   70    20*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         21*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435386) 'isSuperHeader' ]
+         22*       < 60> DO_FCALL                                      0   RES[  IS_VAR $11 ]      OP1[  IS_UNUSED  ]
+         23*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~12 ]      OP1[  IS_VAR $11 ] OP2[ , ->27 ]
+   71    24*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~13 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435382) 'super' ]
+         25*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~14 ]      OP1[  IS_TMP_VAR ~13 ]
+         26*       < 52> BOOL                                              RES[  IS_TMP_VAR ~12 ]      OP1[  IS_TMP_VAR ~14 ]
+         27*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~12 ]      OP1[  IS_TMP_VAR ~12 ] OP2[ , ->30 ]
+   72    28*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~15 ]      OP1[  IS_CV !1 ]
+         29*       < 52> BOOL                                              RES[  IS_TMP_VAR ~12 ]      OP1[  IS_TMP_VAR ~15 ]
+         30*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~12 ] OP2[ , ->40 ]
+   74    31*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         32*       < 68> NEW                                               RES[  IS_VAR $16 ]      OP1[ 'Exception' ]
+         33*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435367) 'sprintf' ]
+   75    34*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435366) 'Implementation+error%3A+invalid+super+header+name+%22%25s%22' ]
+   76    35*       <117> SEND_VAR                                                  OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         36*       < 60> DO_FCALL                                      0   RES[  IS_VAR $17 ]      OP1[  IS_UNUSED  ]
+         37*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $17 ] OP2[  IS_UNUSED  ]
+         38*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         39*       <108> THROW                                         0           OP1[  IS_VAR $16 ] OP2[  IS_UNUSED  ]
+   80    40*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         41*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435353) 'isSuperHeader' ]
+         42*       < 60> DO_FCALL                                      0   RES[  IS_VAR $19 ]      OP1[  IS_UNUSED  ]
+         43*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~20 ]      OP1[  IS_VAR $19 ]
+         44*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~20 ]      OP1[  IS_TMP_VAR ~20 ] OP2[ , ->47 ]
+   81    45*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~21 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435347) 'super' ]
+         46*       < 52> BOOL                                              RES[  IS_TMP_VAR ~20 ]      OP1[  IS_TMP_VAR ~21 ]
+         47*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~20 ] OP2[ , ->57 ]
+   83    48*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         49*       < 68> NEW                                               RES[  IS_VAR $22 ]      OP1[ 'Exception' ]
+         50*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435340) 'sprintf' ]
+   84    51*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435339) 'Implementation+error%3A+invalid+super+header+name+%22%25s%22' ]
+   85    52*       <117> SEND_VAR                                                  OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         53*       < 60> DO_FCALL                                      0   RES[  IS_VAR $23 ]      OP1[  IS_UNUSED  ]
+         54*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $23 ] OP2[  IS_UNUSED  ]
+         55*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         56*       <108> THROW                                         0           OP1[  IS_VAR $22 ] OP2[  IS_UNUSED  ]
+   89    57*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         58*       < 91> FETCH_OBJ_IS                                      RES[  IS_TMP_VAR ~25 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435326) 'headers' ]
+         59*       <115> ISSET_ISEMPTY_DIM_OBJ                         0   RES[  IS_TMP_VAR ~26 ]      OP1[  IS_TMP_VAR ~25 ] OP2[ ,  IS_CV !2 ]
+         60*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~27 ]      OP1[  IS_TMP_VAR ~26 ]
+         61*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~27 ] OP2[ , ->74 ]
+   90    62*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         63*       < 85> FETCH_OBJ_W                                       RES[  IS_VAR $28 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435317) 'headers' ]
+         64*       < 23> ASSIGN_DIM                                                OP1[  IS_VAR $28 ] OP2[ ,  IS_CV !2 ]
+         65*       <137> OP_DATA                                                   OP1[  IS_CONST (268435314) <array> ] OP2[  IS_UNUSED  ]
+   91    66*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         67*       < 85> FETCH_OBJ_W                                       RES[  IS_VAR $30 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435311) 'headers_order' ]
+         68*       < 23> ASSIGN_DIM                                                OP1[  IS_VAR $30 ] OP2[  IS_UNUSED  ]
+         69*       <137> OP_DATA                                                   OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+   92    70*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         71*       < 85> FETCH_OBJ_W                                       RES[  IS_VAR $32 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435304) 'headers_sub_order' ]
+         72*       < 23> ASSIGN_DIM                                                OP1[  IS_VAR $32 ] OP2[ ,  IS_CV !2 ]
+         73*       <137> OP_DATA                                                   OP1[  IS_CONST (268435301) <array> ] OP2[  IS_UNUSED  ]
+   94    74*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         75*       < 91> FETCH_OBJ_IS                                      RES[  IS_TMP_VAR ~34 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435298) 'headers' ]
+         76*       < 90> FETCH_DIM_IS                                      RES[  IS_TMP_VAR ~35 ]      OP1[  IS_TMP_VAR ~34 ] OP2[ ,  IS_CV !2 ]
+         77*       <115> ISSET_ISEMPTY_DIM_OBJ                         0   RES[  IS_TMP_VAR ~36 ]      OP1[  IS_TMP_VAR ~35 ] OP2[ ,  IS_CV !3 ]
+         78*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~37 ]      OP1[  IS_TMP_VAR ~36 ]
+         79*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~37 ] OP2[ , ->85 ]
+   95    80*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         81*       < 85> FETCH_OBJ_W                                       RES[  IS_VAR $38 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435287) 'headers_sub_order' ]
+         82*       < 84> FETCH_DIM_W                                       RES[  IS_VAR $39 ]      OP1[  IS_VAR $38 ] OP2[ ,  IS_CV !2 ]
+         83*       < 23> ASSIGN_DIM                                                OP1[  IS_VAR $39 ] OP2[  IS_UNUSED  ]
+         84*       <137> OP_DATA                                                   OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+   97    85*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         86*       < 85> FETCH_OBJ_W                                       RES[  IS_VAR $41 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435278) 'headers' ]
+         87*       < 84> FETCH_DIM_W                                       RES[  IS_VAR $42 ]      OP1[  IS_VAR $41 ] OP2[ ,  IS_CV !2 ]
+         88*       < 23> ASSIGN_DIM                                                OP1[  IS_VAR $42 ] OP2[ ,  IS_CV !3 ]
+         89*       <137> OP_DATA                                                   OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+   98    90*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         91*       < 62> RETURN                                                    OP1[  IS_CV !0 ]
+   99    92*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         93*       < 62> RETURN                                                    OP1[  IS_CONST (268435265) null ]
+
+End of function appendheader
+
+Function tryaddheader:
+[+]Function Source Class Name: HTMLTableBase
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\HTMLTableBase.php
+function name:  tryAddHeader
+number of ops:  2
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  107     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 62> RETURN                                                    OP1[  IS_CONST (268435453) null ]
+
+End of function tryaddheader
+
+Function addheader:
+[+]Function Source Class Name: HTMLTableBase
+[*]Start of arg_info extract:
+[*]arg_info num_args:4
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:name
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:content
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**2**
+[*]name:super
+[*]type:?HTMLTableSuperHeader
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**3**
+[*]name:father
+[*]type:?HTMLTableHeader
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\HTMLTableBase.php
+function name:  addHeader
+number of ops:  52
+compiled vars:  !0 = $name, !1 = $content, !2 = $super, !3 = $father
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  129     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 63> RECV                                              RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ]
+          2*       < 64> RECV_INIT                                         RES[  IS_CV !2 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435431) null ]
+          3*       < 64> RECV_INIT                                         RES[  IS_CV !3 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435430) null ]
+  136     4*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          5*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435427) 'tryAddHeader' ]
+          6*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  137     7*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          8*       <123> TYPE_CHECK                                    2   RES[  IS_TMP_VAR ~5 ]       OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+          9*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~5 ] OP2[ , ->31 ]
+  138    10*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         11*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~6 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435417) 'super' ]
+         12*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~7 ]       OP1[  IS_TMP_VAR ~6 ]
+         13*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~7 ] OP2[ , ->19 ]
+  139    14*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         15*       < 68> NEW                                               RES[  IS_VAR $8 ]       OP1[ 'Exception' ]
+         16*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435410) 'A+sub+header+requires+a+super+header' ] OP2[  IS_UNUSED  ]
+         17*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         18*       <108> THROW                                         0           OP1[  IS_VAR $8 ] OP2[  IS_UNUSED  ]
+  141    19*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         20*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435403) 'appendHeader' ]
+         21*       < 68> NEW                                               RES[  IS_VAR $10 ]      OP1[ 'HTMLTableSuperHeader' ]
+  142    22*       <184> FETCH_THIS                                        RES[  IS_VAR $11 ]      OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         23*       < 66> SEND_VAR_EX                                               OP1[  IS_VAR $11 ] OP2[  IS_UNUSED  ]
+         24*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         25*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         26*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         27*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         28*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $10 ] OP2[  IS_UNUSED  ]
+         29*       < 60> DO_FCALL                                      0   RES[  IS_VAR $13 ]      OP1[  IS_UNUSED  ]
+         30*       < 62> RETURN                                                    OP1[  IS_VAR $13 ]
+  148    31*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         32*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~14 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435383) 'super' ]
+         33*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~14 ] OP2[ , ->39 ]
+  149    34*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         35*       < 68> NEW                                               RES[  IS_VAR $15 ]      OP1[ 'Exception' ]
+         36*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435378) 'Cannot+attach+a+super+header+to+another+header' ] OP2[  IS_UNUSED  ]
+         37*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         38*       <108> THROW                                         0           OP1[  IS_VAR $15 ] OP2[  IS_UNUSED  ]
+  151    39*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         40*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435371) 'appendHeader' ]
+         41*       < 68> NEW                                               RES[  IS_VAR $17 ]      OP1[ 'HTMLTableSubHeader' ]
+         42*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         43*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         44*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         45*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         46*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         47*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $17 ] OP2[  IS_UNUSED  ]
+         48*       < 60> DO_FCALL                                      0   RES[  IS_VAR $19 ]      OP1[  IS_UNUSED  ]
+         49*       < 62> RETURN                                                    OP1[  IS_VAR $19 ]
+  152    50*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         51*       < 62> RETURN                                                    OP1[  IS_CONST (268435353) null ]
+
+End of function addheader
+
+Function getsuperheaderbyname:
+[+]Function Source Class Name: HTMLTableBase
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:name
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\HTMLTableBase.php
+function name:  getSuperHeaderByName
+number of ops:  9
+compiled vars:  !0 = $name
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  158     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  160     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435448) 'getHeaderByName' ]
+          3*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          4*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435446) '' ] OP2[  IS_UNUSED  ]
+          5*       < 60> DO_FCALL                                      0   RES[  IS_VAR $1 ]       OP1[  IS_UNUSED  ]
+          6*       < 62> RETURN                                                    OP1[  IS_VAR $1 ]
+  161     7*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          8*       < 62> RETURN                                                    OP1[  IS_CONST (268435439) null ]
+
+End of function getsuperheaderbyname
+
+Function getheaderbyname:
+[+]Function Source Class Name: HTMLTableBase
+[*]Start of arg_info extract:
+[*]arg_info num_args:2
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:name
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:sub_name
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\HTMLTableBase.php
+function name:  getHeaderByName
+number of ops:  42
+compiled vars:  !0 = $name, !1 = $sub_name, !2 = $header
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  168     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 64> RECV_INIT                                         RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435444) null ]
+  171     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       <123> TYPE_CHECK                                   64   RES[  IS_TMP_VAR ~3 ]       OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+          4*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~3 ] OP2[ , ->22 ]
+  172     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       < 91> FETCH_OBJ_IS                                      RES[  IS_TMP_VAR ~4 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435435) 'headers' ]
+          7*       < 90> FETCH_DIM_IS                                      RES[  IS_TMP_VAR ~5 ]       OP1[  IS_TMP_VAR ~4 ] OP2[ ,  IS_CV !0 ]
+          8*       <115> ISSET_ISEMPTY_DIM_OBJ                         0   RES[  IS_TMP_VAR ~6 ]       OP1[  IS_TMP_VAR ~5 ] OP2[ ,  IS_CV !1 ]
+          9*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~6 ] OP2[ , ->15 ]
+  173    10*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         11*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~7 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435426) 'headers' ]
+         12*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~8 ]       OP1[  IS_TMP_VAR ~7 ] OP2[ ,  IS_CV !0 ]
+         13*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~9 ]       OP1[  IS_TMP_VAR ~8 ] OP2[ ,  IS_CV !1 ]
+         14*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~9 ]
+  175    15*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         16*       < 68> NEW                                               RES[  IS_VAR $10 ]      OP1[ 'HTMLTableUnknownHeader' ]
+         17*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~11 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435417) '%3A' ]
+         18*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~12 ]      OP1[  IS_TMP_VAR ~11 ] OP2[ ,  IS_CV !1 ]
+         19*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~12 ] OP2[  IS_UNUSED  ]
+         20*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         21*       <108> THROW                                         0           OP1[  IS_VAR $10 ] OP2[  IS_UNUSED  ]
+  178    22*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         23*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~14 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435406) 'headers' ]
+         24*       < 77> FE_RESET_R                                        RES[  IS_VAR $15 ]      OP1[  IS_TMP_VAR ~14 ] OP2[ , ->34 ]
+         25*       < 78> FE_FETCH_R                                                OP1[  IS_VAR $15 ] OP2[ ,  IS_CV !2 ] EXT_JMP_REL[ , ->34 ]
+  179    26*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         27*       <115> ISSET_ISEMPTY_DIM_OBJ                         0   RES[  IS_TMP_VAR ~16 ]      OP1[  IS_CV !2 ] OP2[ ,  IS_CV !0 ]
+         28*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~16 ] OP2[ , ->33 ]
+  180    29*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         30*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~17 ]      OP1[  IS_CV !2 ] OP2[ ,  IS_CV !0 ]
+         31*       <127> FE_FREE                                                   OP1[  IS_VAR $15 ] OP2[  IS_UNUSED  ]
+         32*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~17 ]
+  178    33*       < 42> JMP                                                       OP1[ ->25 ]
+         34*       <127> FE_FREE                                                   OP1[  IS_VAR $15 ] OP2[  IS_UNUSED  ]
+  183    35*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         36*       < 68> NEW                                               RES[  IS_VAR $18 ]      OP1[ 'HTMLTableUnknownHeader' ]
+         37*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         38*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         39*       <108> THROW                                         0           OP1[  IS_VAR $18 ] OP2[  IS_UNUSED  ]
+  184    40*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         41*       < 62> RETURN                                                    OP1[  IS_CONST (268435373) null ]
+
+End of function getheaderbyname
+
+Function getheaders:
+[+]Function Source Class Name: HTMLTableBase
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:header_name
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\HTMLTableBase.php
+function name:  getHeaders
+number of ops:  22
+compiled vars:  !0 = $header_name
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  190     0*       < 64> RECV_INIT                                         RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435449) '' ]
+  193     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       <154> ISSET_ISEMPTY_CV                                  RES[  IS_TMP_VAR ~1 ]       OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          3*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~1 ] OP2[ , ->7 ]
+  194     4*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          5*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~2 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435440) 'headers' ]
+          6*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~2 ]
+  196     7*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          8*       < 91> FETCH_OBJ_IS                                      RES[  IS_TMP_VAR ~3 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435435) 'headers' ]
+          9*       <115> ISSET_ISEMPTY_DIM_OBJ                         0   RES[  IS_TMP_VAR ~4 ]       OP1[  IS_TMP_VAR ~3 ] OP2[ ,  IS_CV !0 ]
+         10*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~4 ] OP2[ , ->15 ]
+  197    11*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         12*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~5 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435428) 'headers' ]
+         13*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~6 ]       OP1[  IS_TMP_VAR ~5 ] OP2[ ,  IS_CV !0 ]
+         14*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~6 ]
+  199    15*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         16*       < 68> NEW                                               RES[  IS_VAR $7 ]       OP1[ 'HTMLTableUnknownHeaders' ]
+         17*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         18*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         19*       <108> THROW                                         0           OP1[  IS_VAR $7 ] OP2[  IS_UNUSED  ]
+  200    20*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         21*       < 62> RETURN                                                    OP1[  IS_CONST (268435413) null ]
+
+End of function getheaders
+
+Function getheaderorder:
+[+]Function Source Class Name: HTMLTableBase
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:header_name
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\HTMLTableBase.php
+function name:  getHeaderOrder
+number of ops:  22
+compiled vars:  !0 = $header_name
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  206     0*       < 64> RECV_INIT                                         RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435449) '' ]
+  209     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       <154> ISSET_ISEMPTY_CV                                  RES[  IS_TMP_VAR ~1 ]       OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          3*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~1 ] OP2[ , ->7 ]
+  210     4*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          5*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~2 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435440) 'headers_order' ]
+          6*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~2 ]
+  212     7*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          8*       < 91> FETCH_OBJ_IS                                      RES[  IS_TMP_VAR ~3 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435435) 'headers_sub_order' ]
+          9*       <115> ISSET_ISEMPTY_DIM_OBJ                         0   RES[  IS_TMP_VAR ~4 ]       OP1[  IS_TMP_VAR ~3 ] OP2[ ,  IS_CV !0 ]
+         10*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~4 ] OP2[ , ->15 ]
+  213    11*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         12*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~5 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435428) 'headers_sub_order' ]
+         13*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~6 ]       OP1[  IS_TMP_VAR ~5 ] OP2[ ,  IS_CV !0 ]
+         14*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~6 ]
+  215    15*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         16*       < 68> NEW                                               RES[  IS_VAR $7 ]       OP1[ 'HTMLTableUnknownHeadersOrder' ]
+         17*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         18*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         19*       <108> THROW                                         0           OP1[  IS_VAR $7 ] OP2[  IS_UNUSED  ]
+  216    20*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         21*       < 62> RETURN                                                    OP1[  IS_CONST (268435413) null ]
+
+End of function getheaderorder
+
+End of class HTMLTableBase.
+

@@ -1,0 +1,875 @@
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\glpi-project\inventory_format\lib\php\FilesToJSON.php
+function name:  (null)
+number of ops:  4
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   42     0*       <  0> NOP                                                      
+   44     1*       <  0> NOP                                                      
+  394     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       < 62> RETURN                                                    OP1[  IS_CONST (268435449) 1 ]
+
+Class Glpi\Inventory\FilesToJSON:
+[+]Class Parent Name: NULL
+End Trait extract
+Start Properties extract:
+Key: path, Value: G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\glpi-project\inventory_format\lib\php/../../data, Type: Normal
+End Properties extract.
+
+Function getjsonfilepath:
+[+]Function Source Class Name: Glpi\Inventory\FilesToJSON
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:string
+
+[*]ArgInfoNo**0**
+[*]name:type
+[*]type:string
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\glpi-project\inventory_format\lib\php\FilesToJSON.php
+function name:  getJsonFilePath
+number of ops:  11
+compiled vars:  !0 = $type
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   83     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+   85     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~1 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435448) 'path' ]
+          3*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~2 ]       OP1[  IS_TMP_VAR ~1 ] OP2[ ,  IS_CONST (268435447) '%2F' ]
+          4*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~3 ]       OP1[  IS_TMP_VAR ~2 ] OP2[ ,  IS_CV !0 ]
+          5*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~4 ]       OP1[  IS_TMP_VAR ~3 ] OP2[ ,  IS_CONST (268435444) '.json' ]
+          6*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_TMP_VAR ~4 ] OP2[  IS_UNUSED  ]
+          7*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~4 ]
+   86     8*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          9*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         10*       < 62> RETURN                                                    OP1[  IS_CONST (268435435) null ]
+
+End of function getjsonfilepath
+
+Function refreshsources:
+[+]Function Source Class Name: Glpi\Inventory\FilesToJSON
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\glpi-project\inventory_format\lib\php\FilesToJSON.php
+function name:  refreshSources
+number of ops:  38
+compiled vars:  !0 = $uri, !1 = $type, !2 = $path, !3 = $contents
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   96     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~4 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435436) 'SOURCES_URLS' ]
+          2*       < 77> FE_RESET_R                                        RES[  IS_VAR $5 ]       OP1[  IS_TMP_VAR ~4 ] OP2[ , ->35 ]
+          3*       < 78> FE_FETCH_R                                        RES[  IS_TMP_VAR ~6 ]       OP1[  IS_VAR $5 ] OP2[ ,  IS_CV !0 ] EXT_JMP_REL[ , ->35 ]
+          4*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_TMP_VAR ~6 ]
+   97     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435427) 'getSourceFilePath' ]
+          7*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+          8*       < 60> DO_FCALL                                      0   RES[  IS_VAR $8 ]       OP1[  IS_UNUSED  ]
+          9*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_VAR $8 ]
+   98    10*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         11*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435419) 'callCurl' ]
+         12*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         13*       < 60> DO_FCALL                                      0   RES[  IS_VAR $10 ]      OP1[  IS_UNUSED  ]
+         14*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_VAR $10 ]
+  100    15*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         16*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435411) 'Glpi%5CInventory%5Cfile_put_contents' ]
+         17*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         18*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         19*       < 60> DO_FCALL                                      0   RES[  IS_VAR $12 ]      OP1[  IS_UNUSED  ]
+         20*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435406) 'Glpi%5CInventory%5Cstrlen' ]
+         21*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         22*       < 60> DO_FCALL                                      0   RES[  IS_VAR $13 ]      OP1[  IS_UNUSED  ]
+         23*       < 17> IS_NOT_IDENTICAL                                  RES[  IS_TMP_VAR ~14 ]      OP1[  IS_VAR $12 ] OP2[ ,  IS_VAR $13 ]
+         24*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~14 ] OP2[ , ->34 ]
+  101    25*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         26*       < 68> NEW                                               RES[  IS_VAR $15 ]      OP1[ 'RuntimeException' ]
+         27*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435397) 'Glpi%5CInventory%5Csprintf' ]
+         28*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435398) 'Unable+to+write+content+in+%25s.' ] OP2[  IS_UNUSED  ]
+         29*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         30*       < 60> DO_FCALL                                      0   RES[  IS_VAR $16 ]      OP1[  IS_UNUSED  ]
+         31*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $16 ] OP2[  IS_UNUSED  ]
+         32*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         33*       <108> THROW                                         0           OP1[  IS_VAR $15 ] OP2[  IS_UNUSED  ]
+   96    34*       < 42> JMP                                                       OP1[ ->3 ]
+         35*       <127> FE_FREE                                                   OP1[  IS_VAR $5 ] OP2[  IS_UNUSED  ]
+  104    36*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         37*       < 62> RETURN                                                    OP1[  IS_CONST (268435381) null ]
+
+End of function refreshsources
+
+Function run:
+[+]Function Source Class Name: Glpi\Inventory\FilesToJSON
+[*]Start of arg_info extract:
+[*]arg_info num_args:0
+[*]Function return type:void
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\glpi-project\inventory_format\lib\php\FilesToJSON.php
+function name:  run
+number of ops:  14
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  114     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435445) 'convertPciFile' ]
+          2*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  115     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435441) 'convertUsbFile' ]
+          5*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  116     6*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          7*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435437) 'convertOUIFile' ]
+          8*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  117     9*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         10*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435433) 'convertIftypeFile' ]
+         11*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  118    12*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         13*       < 62> RETURN                                                    OP1[  IS_CONST (268435429) null ]
+
+End of function run
+
+Function getsourcefilename:
+[+]Function Source Class Name: Glpi\Inventory\FilesToJSON
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:string
+
+[*]ArgInfoNo**0**
+[*]name:type
+[*]type:string
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\glpi-project\inventory_format\lib\php\FilesToJSON.php
+function name:  getSourceFilename
+number of ops:  45
+compiled vars:  !0 = $type, !1 = $basename
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  126     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  128     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435439) null ]
+  131     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~4 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435436) 'TYPE_PCI' ]
+          5*       < 18> IS_EQUAL                                          RES[  ]         OP1[  IS_CV !0 ] OP2[ ,  IS_TMP_VAR ~4 ]
+          6*       < 44> JMPNZ                                                     OP1[  IS_TMP_VAR ~3 ] OP2[ , ->17 ]
+  134     7*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~5 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435431) 'TYPE_USB' ]
+          8*       < 18> IS_EQUAL                                          RES[  ]         OP1[  IS_CV !0 ] OP2[ ,  IS_TMP_VAR ~5 ]
+          9*       < 44> JMPNZ                                                     OP1[  IS_TMP_VAR ~3 ] OP2[ , ->21 ]
+  137    10*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~6 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435426) 'TYPE_OUI' ]
+         11*       < 18> IS_EQUAL                                          RES[  ]         OP1[  IS_CV !0 ] OP2[ ,  IS_TMP_VAR ~6 ]
+         12*       < 44> JMPNZ                                                     OP1[  IS_TMP_VAR ~3 ] OP2[ , ->25 ]
+  140    13*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~7 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435421) 'TYPE_IFTYPE' ]
+         14*       < 18> IS_EQUAL                                          RES[  ]         OP1[  IS_CV !0 ] OP2[ ,  IS_TMP_VAR ~7 ]
+         15*       < 44> JMPNZ                                                     OP1[  IS_TMP_VAR ~3 ] OP2[ , ->29 ]
+         16*       < 42> JMP                                                       OP1[ ->33 ]
+  132    17*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         18*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435412) 'pci.ids' ]
+  133    19*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         20*       < 42> JMP                                                       OP1[ ->39 ]
+  135    21*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         22*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435405) 'usb.ids' ]
+  136    23*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         24*       < 42> JMP                                                       OP1[ ->39 ]
+  138    25*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         26*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435398) 'oui.txt' ]
+  139    27*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         28*       < 42> JMP                                                       OP1[ ->39 ]
+  141    29*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         30*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435391) 'iftype.csv' ]
+  142    31*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         32*       < 42> JMP                                                       OP1[ ->39 ]
+  144    33*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         34*       < 68> NEW                                               RES[  IS_VAR $12 ]      OP1[ 'RuntimeException' ]
+         35*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~13 ]      OP1[  IS_CONST (268435384) 'Unknown+type+' ] OP2[ ,  IS_CV !0 ]
+         36*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~13 ] OP2[  IS_UNUSED  ]
+         37*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         38*       <108> THROW                                         0           OP1[  IS_VAR $12 ] OP2[  IS_UNUSED  ]
+  147    39*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         40*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         41*       < 62> RETURN                                                    OP1[  IS_CV !1 ]
+  148    42*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         43*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         44*       < 62> RETURN                                                    OP1[  IS_CONST (268435367) null ]
+
+End of function getsourcefilename
+
+Function getsourcefilepath:
+[+]Function Source Class Name: Glpi\Inventory\FilesToJSON
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:string
+
+[*]ArgInfoNo**0**
+[*]name:type
+[*]type:string
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\glpi-project\inventory_format\lib\php\FilesToJSON.php
+function name:  getSourceFilePath
+number of ops:  13
+compiled vars:  !0 = $type
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  157     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  159     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~1 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435447) 'path' ]
+          3*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~2 ]       OP1[  IS_TMP_VAR ~1 ] OP2[ ,  IS_CONST (268435446) '%2F' ]
+          4*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435445) 'getSourceFilename' ]
+          5*       <117> SEND_VAR                                                  OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          6*       < 60> DO_FCALL                                      0   RES[  IS_VAR $3 ]       OP1[  IS_UNUSED  ]
+          7*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~4 ]       OP1[  IS_TMP_VAR ~2 ] OP2[ ,  IS_VAR $3 ]
+          8*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_TMP_VAR ~4 ] OP2[  IS_UNUSED  ]
+          9*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~4 ]
+  160    10*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         11*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         12*       < 62> RETURN                                                    OP1[  IS_CONST (268435431) null ]
+
+End of function getsourcefilepath
+
+Function getsourcefile:
+[+]Function Source Class Name: Glpi\Inventory\FilesToJSON
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:type
+[*]type:string
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\glpi-project\inventory_format\lib\php\FilesToJSON.php
+function name:  getSourceFile
+number of ops:  58
+compiled vars:  !0 = $type, !1 = $path, !2 = $file
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  169     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  171     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435422) 'getSourceFilePath' ]
+          3*       <117> SEND_VAR                                                  OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          4*       < 60> DO_FCALL                                      0   RES[  IS_VAR $3 ]       OP1[  IS_UNUSED  ]
+          5*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_VAR $3 ]
+  173     6*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          7*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435414) 'Glpi%5CInventory%5Cfile_exists' ]
+          8*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+          9*       < 60> DO_FCALL                                      0   RES[  IS_VAR $5 ]       OP1[  IS_UNUSED  ]
+         10*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~6 ]       OP1[  IS_VAR $5 ]
+         11*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~6 ] OP2[ , ->36 ]
+  175    12*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         13*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435405) 'getSourceFilename' ]
+         14*       <117> SEND_VAR                                                  OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         15*       < 60> DO_FCALL                                      0   RES[  IS_VAR $7 ]       OP1[  IS_UNUSED  ]
+         16*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~8 ]       OP1[  IS_CONST (268435401) 'G%3A%5Cdesktop%5CYama%5Capp%5Cglpi-10.0.16%5Cglpi%5Cvendor%5Cglpi-project%5Cinventory_format%5Clib%5Cphp%2F..%2F..%2Fsource_files%2F' ] OP2[ ,  IS_VAR $7 ]
+         17*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_TMP_VAR ~8 ]
+  177    18*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         19*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435396) 'Glpi%5CInventory%5Cfile_exists' ]
+         20*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         21*       < 60> DO_FCALL                                      0   RES[  IS_VAR $10 ]      OP1[  IS_UNUSED  ]
+         22*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~11 ]      OP1[  IS_VAR $10 ]
+         23*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~11 ] OP2[ , ->36 ]
+  178    24*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         25*       < 68> NEW                                               RES[  IS_VAR $12 ]      OP1[ 'RuntimeException' ]
+         26*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435387) 'Glpi%5CInventory%5Csprintf' ]
+         27*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435388) 'Source+file+%25s+not+found.' ] OP2[  IS_UNUSED  ]
+         28*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435387) 'getSourceFilename' ]
+         29*       <117> SEND_VAR                                                  OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         30*       < 60> DO_FCALL                                      0   RES[  IS_VAR $13 ]      OP1[  IS_UNUSED  ]
+         31*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $13 ] OP2[  IS_UNUSED  ]
+         32*       < 60> DO_FCALL                                      0   RES[  IS_VAR $14 ]      OP1[  IS_UNUSED  ]
+         33*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $14 ] OP2[  IS_UNUSED  ]
+         34*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         35*       <108> THROW                                         0           OP1[  IS_VAR $12 ] OP2[  IS_UNUSED  ]
+  182    36*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         37*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435371) 'Glpi%5CInventory%5Cfopen' ]
+         38*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         39*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435370) 'r' ] OP2[  IS_UNUSED  ]
+         40*       < 60> DO_FCALL                                      0   RES[  IS_VAR $16 ]      OP1[  IS_UNUSED  ]
+         41*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_VAR $16 ]
+  184    42*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         43*       <123> TYPE_CHECK                                    4   RES[  IS_TMP_VAR ~18 ]      OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         44*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~18 ] OP2[ , ->54 ]
+  185    45*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         46*       < 68> NEW                                               RES[  IS_VAR $19 ]      OP1[ 'RuntimeException' ]
+         47*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435357) 'Glpi%5CInventory%5Csprintf' ]
+         48*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435358) 'Unable+to+open+source+file+%25s.' ] OP2[  IS_UNUSED  ]
+         49*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         50*       < 60> DO_FCALL                                      0   RES[  IS_VAR $20 ]      OP1[  IS_UNUSED  ]
+         51*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $20 ] OP2[  IS_UNUSED  ]
+         52*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         53*       <108> THROW                                         0           OP1[  IS_VAR $19 ] OP2[  IS_UNUSED  ]
+  188    54*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         55*       < 62> RETURN                                                    OP1[  IS_CV !2 ]
+  189    56*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         57*       < 62> RETURN                                                    OP1[  IS_CONST (268435341) null ]
+
+End of function getsourcefile
+
+Function convertpcifile:
+[+]Function Source Class Name: Glpi\Inventory\FilesToJSON
+[*]Start of arg_info extract:
+[*]arg_info num_args:0
+[*]Function return type:void
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\glpi-project\inventory_format\lib\php\FilesToJSON.php
+function name:  convertPciFile
+number of ops:  70
+compiled vars:  !0 = $pciFile, !1 = $pci_ids, !2 = $vendorId, !3 = $stack, !4 = $buffer, !5 = $deviceId
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  199     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435417) 'getSourceFile' ]
+          2*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~6 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435417) 'TYPE_PCI' ]
+          3*       < 65> SEND_VAL                                                  OP1[  IS_TMP_VAR ~6 ]
+          4*       < 60> DO_FCALL                                      0   RES[  IS_VAR $7 ]       OP1[  IS_UNUSED  ]
+          5*       < 22> ASSIGN                                                    OP1[  IS_CV !0 ] OP2[ ,  IS_VAR $7 ]
+  200     6*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          7*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435408) <array> ]
+  202     8*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          9*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435405) null ]
+  203    10*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         11*       < 42> JMP                                                       OP1[ ->46 ]
+  204    12*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         13*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435398) <array> ]
+  205    14*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         15*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435395) 'Glpi%5CInventory%5Cpreg_match' ]
+         16*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435396) '%2F%5E%28%5Cw%2B%29%5Cs%2A%28.%2B%29%2Fi' ] OP2[  IS_UNUSED  ]
+         17*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !4 ] OP2[  IS_UNUSED  ]
+         18*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         19*       < 60> DO_FCALL                                      0   RES[  IS_VAR $12 ]      OP1[  IS_UNUSED  ]
+         20*       < 43> JMPZ                                                      OP1[  IS_VAR $12 ] OP2[ , ->28 ]
+  206    21*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         22*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~13 ]      OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435385) 1 ]
+         23*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_TMP_VAR ~13 ]
+  207    24*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         25*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~16 ]      OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435380) 2 ]
+         26*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !1 ] OP2[ ,  IS_CV !2 ]
+         27*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~16 ] OP2[  IS_UNUSED  ]
+  210    28*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         29*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435373) <array> ]
+  211    30*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         31*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435370) 'Glpi%5CInventory%5Cpreg_match' ]
+         32*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435371) '%2F%5E%09%28%5Cw%2B%29%5Cs%2A%28.%2B%29%2Fi' ] OP2[  IS_UNUSED  ]
+         33*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !4 ] OP2[  IS_UNUSED  ]
+         34*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         35*       < 60> DO_FCALL                                      0   RES[  IS_VAR $18 ]      OP1[  IS_UNUSED  ]
+         36*       < 43> JMPZ                                                      OP1[  IS_VAR $18 ] OP2[ , ->46 ]
+  212    37*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         38*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~19 ]      OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435360) 1 ]
+         39*       < 22> ASSIGN                                                    OP1[  IS_CV !5 ] OP2[ ,  IS_TMP_VAR ~19 ]
+  213    40*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         41*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~21 ]      OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435355) '%3A%3A' ]
+         42*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~22 ]      OP1[  IS_TMP_VAR ~21 ] OP2[ ,  IS_CV !5 ]
+         43*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~24 ]      OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435352) 2 ]
+         44*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !1 ] OP2[ ,  IS_TMP_VAR ~22 ]
+         45*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~24 ] OP2[  IS_UNUSED  ]
+  203    46*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435347) 'Glpi%5CInventory%5Cfgets' ]
+         47*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         48*       < 60> DO_FCALL                                      0   RES[  IS_VAR $25 ]      OP1[  IS_UNUSED  ]
+         49*       < 22> ASSIGN                                            RES[  IS_TMP_VAR ~26 ]      OP1[  IS_CV !4 ] OP2[ ,  IS_VAR $25 ]
+         50*       < 44> JMPNZ                                                     OP1[  IS_TMP_VAR ~26 ] OP2[ , ->12 ]
+  217    51*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         52*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435338) 'Glpi%5CInventory%5Cfeof' ]
+         53*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         54*       < 60> DO_FCALL                                      0   RES[  IS_VAR $27 ]      OP1[  IS_UNUSED  ]
+         55*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~28 ]      OP1[  IS_VAR $27 ]
+         56*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~28 ] OP2[ , ->62 ]
+  219    57*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         58*       < 68> NEW                                               RES[  IS_VAR $29 ]      OP1[ 'RuntimeException' ]
+         59*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435329) 'Error+while+reading+PCI+source+file.' ] OP2[  IS_UNUSED  ]
+         60*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         61*       <108> THROW                                         0           OP1[  IS_VAR $29 ] OP2[  IS_UNUSED  ]
+  222    62*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         63*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435322) 'writeJsonFile' ]
+         64*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~31 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435322) 'TYPE_PCI' ]
+         65*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~31 ] OP2[  IS_UNUSED  ]
+         66*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         67*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  223    68*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         69*       < 62> RETURN                                                    OP1[  IS_CONST (268435313) null ]
+
+End of function convertpcifile
+
+Function convertusbfile:
+[+]Function Source Class Name: Glpi\Inventory\FilesToJSON
+[*]Start of arg_info extract:
+[*]arg_info num_args:0
+[*]Function return type:void
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\glpi-project\inventory_format\lib\php\FilesToJSON.php
+function name:  convertUsbFile
+number of ops:  70
+compiled vars:  !0 = $usbFile, !1 = $usb_ids, !2 = $vendorId, !3 = $stack, !4 = $buffer, !5 = $deviceId
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  233     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435421) 'getSourceFile' ]
+          2*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~6 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435421) 'TYPE_USB' ]
+          3*       < 65> SEND_VAL                                                  OP1[  IS_TMP_VAR ~6 ]
+          4*       < 60> DO_FCALL                                      0   RES[  IS_VAR $7 ]       OP1[  IS_UNUSED  ]
+          5*       < 22> ASSIGN                                                    OP1[  IS_CV !0 ] OP2[ ,  IS_VAR $7 ]
+  234     6*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          7*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435412) <array> ]
+  236     8*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          9*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435409) null ]
+  237    10*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         11*       < 42> JMP                                                       OP1[ ->46 ]
+  238    12*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         13*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435402) <array> ]
+  239    14*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         15*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435399) 'Glpi%5CInventory%5Cpreg_match' ]
+         16*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435400) '%2F%5E%28%5Cw%2B%29%5Cs%2A%28.%2B%29%2Fi' ] OP2[  IS_UNUSED  ]
+         17*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !4 ] OP2[  IS_UNUSED  ]
+         18*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         19*       < 60> DO_FCALL                                      0   RES[  IS_VAR $12 ]      OP1[  IS_UNUSED  ]
+         20*       < 43> JMPZ                                                      OP1[  IS_VAR $12 ] OP2[ , ->28 ]
+  240    21*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         22*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~13 ]      OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435389) 1 ]
+         23*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_TMP_VAR ~13 ]
+  241    24*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         25*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~16 ]      OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435384) 2 ]
+         26*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !1 ] OP2[ ,  IS_CV !2 ]
+         27*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~16 ] OP2[  IS_UNUSED  ]
+  244    28*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         29*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435377) <array> ]
+  245    30*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         31*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435374) 'Glpi%5CInventory%5Cpreg_match' ]
+         32*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435375) '%2F%5E%09%28%5Cw%2B%29%5Cs%2A%28.%2B%29%2Fi' ] OP2[  IS_UNUSED  ]
+         33*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !4 ] OP2[  IS_UNUSED  ]
+         34*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         35*       < 60> DO_FCALL                                      0   RES[  IS_VAR $18 ]      OP1[  IS_UNUSED  ]
+         36*       < 43> JMPZ                                                      OP1[  IS_VAR $18 ] OP2[ , ->46 ]
+  246    37*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         38*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~19 ]      OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435364) 1 ]
+         39*       < 22> ASSIGN                                                    OP1[  IS_CV !5 ] OP2[ ,  IS_TMP_VAR ~19 ]
+  247    40*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         41*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~21 ]      OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435359) '%3A%3A' ]
+         42*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~22 ]      OP1[  IS_TMP_VAR ~21 ] OP2[ ,  IS_CV !5 ]
+         43*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~24 ]      OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435356) 2 ]
+         44*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !1 ] OP2[ ,  IS_TMP_VAR ~22 ]
+         45*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~24 ] OP2[  IS_UNUSED  ]
+  237    46*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435351) 'Glpi%5CInventory%5Cfgets' ]
+         47*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         48*       < 60> DO_FCALL                                      0   RES[  IS_VAR $25 ]      OP1[  IS_UNUSED  ]
+         49*       < 22> ASSIGN                                            RES[  IS_TMP_VAR ~26 ]      OP1[  IS_CV !4 ] OP2[ ,  IS_VAR $25 ]
+         50*       < 44> JMPNZ                                                     OP1[  IS_TMP_VAR ~26 ] OP2[ , ->12 ]
+  251    51*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         52*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435342) 'Glpi%5CInventory%5Cfeof' ]
+         53*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         54*       < 60> DO_FCALL                                      0   RES[  IS_VAR $27 ]      OP1[  IS_UNUSED  ]
+         55*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~28 ]      OP1[  IS_VAR $27 ]
+         56*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~28 ] OP2[ , ->62 ]
+  253    57*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         58*       < 68> NEW                                               RES[  IS_VAR $29 ]      OP1[ 'RuntimeException' ]
+         59*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435333) 'Error+while+reading+USB+source+file.' ] OP2[  IS_UNUSED  ]
+         60*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         61*       <108> THROW                                         0           OP1[  IS_VAR $29 ] OP2[  IS_UNUSED  ]
+  256    62*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         63*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435326) 'writeJsonFile' ]
+         64*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~31 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435326) 'TYPE_USB' ]
+         65*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~31 ] OP2[  IS_UNUSED  ]
+         66*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         67*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  257    68*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         69*       < 62> RETURN                                                    OP1[  IS_CONST (268435317) null ]
+
+End of function convertusbfile
+
+Function convertouifile:
+[+]Function Source Class Name: Glpi\Inventory\FilesToJSON
+[*]Start of arg_info extract:
+[*]arg_info num_args:0
+[*]Function return type:void
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\glpi-project\inventory_format\lib\php\FilesToJSON.php
+function name:  convertOUIFile
+number of ops:  60
+compiled vars:  !0 = $ouiFile, !1 = $ouis, !2 = $stack, !3 = $buffer, !4 = $mac
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  268     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435422) 'getSourceFile' ]
+          2*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~5 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435422) 'TYPE_OUI' ]
+          3*       < 65> SEND_VAL                                                  OP1[  IS_TMP_VAR ~5 ]
+          4*       < 60> DO_FCALL                                      0   RES[  IS_VAR $6 ]       OP1[  IS_UNUSED  ]
+          5*       < 22> ASSIGN                                                    OP1[  IS_CV !0 ] OP2[ ,  IS_VAR $6 ]
+  269     6*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          7*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435413) <array> ]
+  271     8*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          9*       < 42> JMP                                                       OP1[ ->36 ]
+  272    10*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         11*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435406) <array> ]
+  273    12*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         13*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435403) 'Glpi%5CInventory%5Cpreg_match' ]
+         14*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435404) '%2F%5E%28%5CS%2B%29%5Cs%2A%5C%28hex%5C%29%09%7B2%7D%28.%2B%29%2Fi' ] OP2[  IS_UNUSED  ]
+         15*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         16*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         17*       < 60> DO_FCALL                                      0   RES[  IS_VAR $10 ]      OP1[  IS_UNUSED  ]
+         18*       < 43> JMPZ                                                      OP1[  IS_VAR $10 ] OP2[ , ->36 ]
+  274    19*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         20*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435393) 'Glpi%5CInventory%5Cstrtr' ]
+         21*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         22*       < 93> FETCH_DIM_FUNC_ARG                                RES[  IS_VAR $11 ]      OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435392) 1 ]
+         23*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $11 ] OP2[  IS_UNUSED  ]
+         24*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435389) '-' ] OP2[  IS_UNUSED  ]
+         25*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435388) '%3A' ] OP2[  IS_UNUSED  ]
+         26*       < 60> DO_FCALL                                      0   RES[  IS_VAR $12 ]      OP1[  IS_UNUSED  ]
+         27*       < 22> ASSIGN                                                    OP1[  IS_CV !4 ] OP2[ ,  IS_VAR $12 ]
+  275    28*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         29*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435381) 'Glpi%5CInventory%5Ctrim' ]
+         30*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         31*       < 93> FETCH_DIM_FUNC_ARG                                RES[  IS_VAR $15 ]      OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435380) 2 ]
+         32*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $15 ] OP2[  IS_UNUSED  ]
+         33*       < 60> DO_FCALL                                      0   RES[  IS_VAR $16 ]      OP1[  IS_UNUSED  ]
+         34*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !1 ] OP2[ ,  IS_CV !4 ]
+         35*       <137> OP_DATA                                                   OP1[  IS_VAR $16 ] OP2[  IS_UNUSED  ]
+  271    36*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435371) 'Glpi%5CInventory%5Cfgets' ]
+         37*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         38*       < 60> DO_FCALL                                      0   RES[  IS_VAR $17 ]      OP1[  IS_UNUSED  ]
+         39*       < 22> ASSIGN                                            RES[  IS_TMP_VAR ~18 ]      OP1[  IS_CV !3 ] OP2[ ,  IS_VAR $17 ]
+         40*       < 44> JMPNZ                                                     OP1[  IS_TMP_VAR ~18 ] OP2[ , ->10 ]
+  279    41*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         42*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435362) 'Glpi%5CInventory%5Cfeof' ]
+         43*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         44*       < 60> DO_FCALL                                      0   RES[  IS_VAR $19 ]      OP1[  IS_UNUSED  ]
+         45*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~20 ]      OP1[  IS_VAR $19 ]
+         46*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~20 ] OP2[ , ->52 ]
+  281    47*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         48*       < 68> NEW                                               RES[  IS_VAR $21 ]      OP1[ 'RuntimeException' ]
+         49*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435353) 'Error+while+reading+OUI+source+file.' ] OP2[  IS_UNUSED  ]
+         50*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         51*       <108> THROW                                         0           OP1[  IS_VAR $21 ] OP2[  IS_UNUSED  ]
+  284    52*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         53*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435346) 'writeJsonFile' ]
+         54*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~23 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435346) 'TYPE_OUI' ]
+         55*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~23 ] OP2[  IS_UNUSED  ]
+         56*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         57*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  285    58*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         59*       < 62> RETURN                                                    OP1[  IS_CONST (268435337) null ]
+
+End of function convertouifile
+
+Function convertiftypefile:
+[+]Function Source Class Name: Glpi\Inventory\FilesToJSON
+[*]Start of arg_info extract:
+[*]arg_info num_args:0
+[*]Function return type:void
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\glpi-project\inventory_format\lib\php\FilesToJSON.php
+function name:  convertIftypeFile
+number of ops:  49
+compiled vars:  !0 = $iftypeFile, !1 = $iftypes, !2 = $line
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  295     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435427) 'getSourceFile' ]
+          2*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~3 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435427) 'TYPE_IFTYPE' ]
+          3*       < 65> SEND_VAL                                                  OP1[  IS_TMP_VAR ~3 ]
+          4*       < 60> DO_FCALL                                      0   RES[  IS_VAR $4 ]       OP1[  IS_UNUSED  ]
+          5*       < 22> ASSIGN                                                    OP1[  IS_CV !0 ] OP2[ ,  IS_VAR $4 ]
+  296     6*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          7*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435418) <array> ]
+  298     8*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          9*       < 42> JMP                                                       OP1[ ->25 ]
+  300    10*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         11*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~8 ]       OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435411) 0 ]
+         12*       < 71> INIT_ARRAY                                        RES[  IS_TMP_VAR ~9 ]       OP1[  IS_TMP_VAR ~8 ] OP2[ ,  IS_CONST (268435410) 'decimal' ]
+  301    13*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~10 ]      OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435409) 1 ]
+         14*       < 72> ADD_ARRAY_ELEMENT                                 RES[  IS_TMP_VAR ~9 ]       OP1[  IS_TMP_VAR ~10 ] OP2[ ,  IS_CONST (268435408) 'name' ]
+  302    15*       < 90> FETCH_DIM_IS                                      RES[  IS_TMP_VAR ~11 ]      OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435407) 2 ]
+         16*       <169> COALESCE                                          RES[  IS_TMP_VAR ~12 ]      OP1[  IS_TMP_VAR ~11 ] OP2[ , ->18 ]
+         17*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~12 ]      OP1[  IS_CONST (268435404) '' ]
+         18*       < 72> ADD_ARRAY_ELEMENT                                 RES[  IS_TMP_VAR ~9 ]       OP1[  IS_TMP_VAR ~12 ] OP2[ ,  IS_CONST (268435403) 'description' ]
+  303    19*       < 90> FETCH_DIM_IS                                      RES[  IS_TMP_VAR ~13 ]      OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435402) 3 ]
+         20*       <169> COALESCE                                          RES[  IS_TMP_VAR ~14 ]      OP1[  IS_TMP_VAR ~13 ] OP2[ , ->22 ]
+         21*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~14 ]      OP1[  IS_CONST (268435399) '' ]
+         22*       < 72> ADD_ARRAY_ELEMENT                                 RES[  IS_TMP_VAR ~9 ]       OP1[  IS_TMP_VAR ~14 ] OP2[ ,  IS_CONST (268435398) 'references' ]
+  299    23*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+  303    24*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~9 ] OP2[  IS_UNUSED  ]
+  298    25*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435393) 'Glpi%5CInventory%5Cfgetcsv' ]
+         26*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         27*       < 60> DO_FCALL                                      0   RES[  IS_VAR $15 ]      OP1[  IS_UNUSED  ]
+         28*       < 22> ASSIGN                                            RES[  IS_TMP_VAR ~16 ]      OP1[  IS_CV !2 ] OP2[ ,  IS_VAR $15 ]
+         29*       < 44> JMPNZ                                                     OP1[  IS_TMP_VAR ~16 ] OP2[ , ->10 ]
+  307    30*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         31*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435384) 'Glpi%5CInventory%5Cfeof' ]
+         32*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         33*       < 60> DO_FCALL                                      0   RES[  IS_VAR $17 ]      OP1[  IS_UNUSED  ]
+         34*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~18 ]      OP1[  IS_VAR $17 ]
+         35*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~18 ] OP2[ , ->41 ]
+  309    36*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         37*       < 68> NEW                                               RES[  IS_VAR $19 ]      OP1[ 'RuntimeException' ]
+         38*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435375) 'Error+while+reading+IFtype+source+file.' ] OP2[  IS_UNUSED  ]
+         39*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         40*       <108> THROW                                         0           OP1[  IS_VAR $19 ] OP2[  IS_UNUSED  ]
+  312    41*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         42*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435368) 'writeJsonFile' ]
+         43*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~21 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435368) 'TYPE_IFTYPE' ]
+         44*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~21 ] OP2[  IS_UNUSED  ]
+         45*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         46*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  313    47*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         48*       < 62> RETURN                                                    OP1[  IS_CONST (268435359) null ]
+
+End of function convertiftypefile
+
+Function writejsonfile:
+[+]Function Source Class Name: Glpi\Inventory\FilesToJSON
+[*]Start of arg_info extract:
+[*]arg_info num_args:2
+[*]Function return type:void
+
+[*]ArgInfoNo**0**
+[*]name:type
+[*]type:string
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:data
+[*]type:array
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\glpi-project\inventory_format\lib\php\FilesToJSON.php
+function name:  writeJsonFile
+number of ops:  48
+compiled vars:  !0 = $type, !1 = $data, !2 = $path, !3 = $contents
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  323     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 63> RECV                                              RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ]
+  325     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435423) 'getJsonFilePath' ]
+          4*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          5*       < 60> DO_FCALL                                      0   RES[  IS_VAR $4 ]       OP1[  IS_UNUSED  ]
+          6*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_VAR $4 ]
+  326     7*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          8*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435415) 'Glpi%5CInventory%5Cjson_encode' ]
+          9*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         10*       < 99> FETCH_CONSTANT                                    RES[  IS_TMP_VAR ~6 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435414) 'Glpi%5CInventory%5CJSON_PRETTY_PRINT' ]
+         11*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~6 ] OP2[  IS_UNUSED  ]
+         12*       < 60> DO_FCALL                                      0   RES[  IS_VAR $7 ]       OP1[  IS_UNUSED  ]
+         13*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_VAR $7 ]
+  328    14*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         15*       <123> TYPE_CHECK                                    4   RES[  IS_TMP_VAR ~9 ]       OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         16*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~9 ] OP2[ , ->26 ]
+  329    17*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         18*       < 68> NEW                                               RES[  IS_VAR $10 ]      OP1[ 'RuntimeException' ]
+         19*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435401) 'Glpi%5CInventory%5Csprintf' ]
+         20*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435402) 'Error+while+encoding+%22%25s%22+data+to+JSON.' ] OP2[  IS_UNUSED  ]
+         21*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         22*       < 60> DO_FCALL                                      0   RES[  IS_VAR $11 ]      OP1[  IS_UNUSED  ]
+         23*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $11 ] OP2[  IS_UNUSED  ]
+         24*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         25*       <108> THROW                                         0           OP1[  IS_VAR $10 ] OP2[  IS_UNUSED  ]
+  332    26*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         27*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435389) 'Glpi%5CInventory%5Cfile_put_contents' ]
+         28*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         29*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         30*       < 60> DO_FCALL                                      0   RES[  IS_VAR $13 ]      OP1[  IS_UNUSED  ]
+         31*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435384) 'Glpi%5CInventory%5Cstrlen' ]
+         32*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         33*       < 60> DO_FCALL                                      0   RES[  IS_VAR $14 ]      OP1[  IS_UNUSED  ]
+         34*       < 17> IS_NOT_IDENTICAL                                  RES[  IS_TMP_VAR ~15 ]      OP1[  IS_VAR $13 ] OP2[ ,  IS_VAR $14 ]
+         35*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~15 ] OP2[ , ->46 ]
+  333    36*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         37*       < 68> NEW                                               RES[  IS_VAR $16 ]      OP1[ 'RuntimeException' ]
+         38*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435375) 'Glpi%5CInventory%5Csprintf' ]
+         39*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435376) 'Unable+to+write+%22%25s%22+JSON+into+%22%25s%22.' ] OP2[  IS_UNUSED  ]
+         40*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         41*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         42*       < 60> DO_FCALL                                      0   RES[  IS_VAR $17 ]      OP1[  IS_UNUSED  ]
+         43*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $17 ] OP2[  IS_UNUSED  ]
+         44*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         45*       <108> THROW                                         0           OP1[  IS_VAR $16 ] OP2[  IS_UNUSED  ]
+  335    46*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         47*       < 62> RETURN                                                    OP1[  IS_CONST (268435361) null ]
+
+End of function writejsonfile
+
+Function callcurl:
+[+]Function Source Class Name: Glpi\Inventory\FilesToJSON
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:string
+
+[*]ArgInfoNo**0**
+[*]name:url
+[*]type:string
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\glpi-project\inventory_format\lib\php\FilesToJSON.php
+function name:  callCurl
+number of ops:  99
+compiled vars:  !0 = $url, !1 = $ch, !2 = $opts, !3 = $content, !4 = $curl_error, !5 = $status_code, !6 = $msgerr
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  344     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  346     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435396) 'Glpi%5CInventory%5Ccurl_init' ]
+          3*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          4*       < 60> DO_FCALL                                      0   RES[  IS_VAR $7 ]       OP1[  IS_UNUSED  ]
+          5*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_VAR $7 ]
+  348     6*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          7*       <123> TYPE_CHECK                                    4   RES[  IS_TMP_VAR ~9 ]       OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+          8*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~9 ] OP2[ , ->18 ]
+  349     9*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         10*       < 68> NEW                                               RES[  IS_VAR $10 ]      OP1[ 'RuntimeException' ]
+  350    11*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435383) 'Glpi%5CInventory%5Csprintf' ]
+  351    12*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435384) 'Unable+to+initialize+curl+for+%25s' ] OP2[  IS_UNUSED  ]
+         13*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         14*       < 60> DO_FCALL                                      0   RES[  IS_VAR $11 ]      OP1[  IS_UNUSED  ]
+         15*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $11 ] OP2[  IS_UNUSED  ]
+         16*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         17*       <108> THROW                                         0           OP1[  IS_VAR $10 ] OP2[  IS_UNUSED  ]
+  358    18*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         19*       < 99> FETCH_CONSTANT                                    RES[  IS_TMP_VAR ~13 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435371) 'Glpi%5CInventory%5CCURLOPT_URL' ]
+         20*       < 71> INIT_ARRAY                                        RES[  IS_TMP_VAR ~14 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_TMP_VAR ~13 ]
+  359    21*       < 99> FETCH_CONSTANT                                    RES[  IS_TMP_VAR ~15 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435370) 'Glpi%5CInventory%5CCURLOPT_USERAGENT' ]
+         22*       < 72> ADD_ARRAY_ELEMENT                                 RES[  IS_TMP_VAR ~14 ]      OP1[  IS_CONST (268435371) 'GLPI%2FInventory+format+1.0' ] OP2[ ,  IS_TMP_VAR ~15 ]
+  360    23*       < 99> FETCH_CONSTANT                                    RES[  IS_TMP_VAR ~16 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435370) 'Glpi%5CInventory%5CCURLOPT_RETURNTRANSFER' ]
+  358    24*       < 72> ADD_ARRAY_ELEMENT                                 RES[  IS_TMP_VAR ~14 ]      OP1[  IS_CONST (268435371) <true> ] OP2[ ,  IS_TMP_VAR ~16 ]
+  361    25*       < 99> FETCH_CONSTANT                                    RES[  IS_TMP_VAR ~17 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435370) 'Glpi%5CInventory%5CCURLOPT_FOLLOWLOCATION' ]
+  358    26*       < 72> ADD_ARRAY_ELEMENT                                 RES[  IS_TMP_VAR ~14 ]      OP1[  IS_CONST (268435371) <true> ] OP2[ ,  IS_TMP_VAR ~17 ]
+  357    27*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_TMP_VAR ~14 ]
+  363    28*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         29*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435366) 'Glpi%5CInventory%5Ccurl_setopt_array' ]
+         30*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         31*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         32*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  365    33*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         34*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435359) 'Glpi%5CInventory%5Ccurl_exec' ]
+         35*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         36*       < 60> DO_FCALL                                      0   RES[  IS_VAR $20 ]      OP1[  IS_UNUSED  ]
+         37*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_VAR $20 ]
+  366    38*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         39*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435352) 'Glpi%5CInventory%5Ccurl_error' ]
+         40*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         41*       < 60> DO_FCALL                                      0   RES[  IS_VAR $22 ]      OP1[  IS_UNUSED  ]
+         42*       <152> JMP_SET                                           RES[  IS_TMP_VAR ~23 ]      OP1[  IS_VAR $22 ] OP2[ , ->44 ]
+         43*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~23 ]      OP1[  IS_CONST (268435347) null ]
+         44*       < 22> ASSIGN                                                    OP1[  IS_CV !4 ] OP2[ ,  IS_TMP_VAR ~23 ]
+  367    45*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         46*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435342) 'Glpi%5CInventory%5Ccurl_getinfo' ]
+         47*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         48*       < 99> FETCH_CONSTANT                                    RES[  IS_TMP_VAR ~25 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435341) 'Glpi%5CInventory%5CCURLINFO_HTTP_CODE' ]
+         49*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~25 ] OP2[  IS_UNUSED  ]
+         50*       < 60> DO_FCALL                                      0   RES[  IS_VAR $26 ]      OP1[  IS_UNUSED  ]
+         51*       < 22> ASSIGN                                                    OP1[  IS_CV !5 ] OP2[ ,  IS_VAR $26 ]
+  368    52*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         53*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435334) 'Glpi%5CInventory%5Ccurl_close' ]
+         54*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         55*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  370    56*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         57*       < 22> ASSIGN                                                    OP1[  IS_CV !6 ] OP2[ ,  IS_CONST (268435329) null ]
+  371    58*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         59*       <123> TYPE_CHECK                                  1020   RES[  IS_TMP_VAR ~30 ]      OP1[  IS_CV !4 ] OP2[  IS_UNUSED  ]
+         60*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~30 ] OP2[ , ->64 ]
+  372    61*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         62*       < 22> ASSIGN                                                    OP1[  IS_CV !6 ] OP2[ ,  IS_CV !4 ]
+         63*       < 42> JMP                                                       OP1[ ->84 ]
+  373    64*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         65*       < 17> IS_NOT_IDENTICAL                                  RES[  IS_TMP_VAR ~32 ]      OP1[  IS_CV !5 ] OP2[ ,  IS_CONST (268435314) 200 ]
+         66*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~32 ] OP2[ , ->75 ]
+  374    67*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         68*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435309) 'Glpi%5CInventory%5Csprintf' ]
+  375    69*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435310) 'HTTP+code+%25s+received+from+%25s' ] OP2[  IS_UNUSED  ]
+         70*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !5 ] OP2[  IS_UNUSED  ]
+         71*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         72*       < 60> DO_FCALL                                      0   RES[  IS_VAR $33 ]      OP1[  IS_UNUSED  ]
+  374    73*       < 22> ASSIGN                                                    OP1[  IS_CV !6 ] OP2[ ,  IS_VAR $33 ]
+         74*       < 42> JMP                                                       OP1[ ->84 ]
+  379    75*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         76*       <154> ISSET_ISEMPTY_CV                                  RES[  IS_TMP_VAR ~35 ]      OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         77*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~35 ] OP2[ , ->84 ]
+  380    78*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         79*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435291) 'Glpi%5CInventory%5Csprintf' ]
+  381    80*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435292) 'No+data+available+on+%25s' ] OP2[  IS_UNUSED  ]
+         81*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         82*       < 60> DO_FCALL                                      0   RES[  IS_VAR $36 ]      OP1[  IS_UNUSED  ]
+  380    83*       < 22> ASSIGN                                                    OP1[  IS_CV !6 ] OP2[ ,  IS_VAR $36 ]
+  386    84*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         85*       <123> TYPE_CHECK                                  1020   RES[  IS_TMP_VAR ~38 ]      OP1[  IS_CV !6 ] OP2[  IS_UNUSED  ]
+         86*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~38 ] OP2[ , ->92 ]
+  387    87*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         88*       < 68> NEW                                               RES[  IS_VAR $39 ]      OP1[ 'RuntimeException' ]
+         89*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !6 ] OP2[  IS_UNUSED  ]
+         90*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         91*       <108> THROW                                         0           OP1[  IS_VAR $39 ] OP2[  IS_UNUSED  ]
+  391    92*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         93*       < 51> CAST                                          6   RES[  IS_TMP_VAR ~41 ]      OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         94*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_TMP_VAR ~41 ] OP2[  IS_UNUSED  ]
+         95*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~41 ]
+  392    96*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         97*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         98*       < 62> RETURN                                                    OP1[  IS_CONST (268435259) null ]
+
+End of function callcurl
+
+End of class Glpi\Inventory\FilesToJSON.
+

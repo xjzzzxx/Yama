@@ -1,0 +1,887 @@
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\seld\jsonlint\src\Seld\JsonLint\Lexer.php
+function name:  (null)
+number of ops:  13
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   12     0*       <  0> NOP                                                      
+   40     1*       <  0> NOP                                                      
+   62     2*       <  0> NOP                                                      
+   64     3*       <  0> NOP                                                      
+   66     4*       <  0> NOP                                                      
+   68     5*       <  0> NOP                                                      
+   70     6*       <  0> NOP                                                      
+   73     7*       <  0> NOP                                                      
+   75     8*       <  0> NOP                                                      
+   77     9*       <  0> NOP                                                      
+   79    10*       <  0> NOP                                                      
+  321    11*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         12*       < 62> RETURN                                                    OP1[  IS_CONST (268435431) 1 ]
+
+Class Seld\JsonLint\Lexer:
+[+]Class Parent Name: NULL
+End Trait extract
+Start Properties extract:
+Key: input, Value: UNINIT, Type: Normal
+Key: more, Value: UNINIT, Type: Normal
+Key: done, Value: UNINIT, Type: Normal
+Key: offset, Value: UNINIT, Type: Normal
+Key: flags, Value: UNINIT, Type: Normal
+Key: match, Value: UNINIT, Type: Normal
+Key: yylineno, Value: UNINIT, Type: Normal
+Key: yyleng, Value: UNINIT, Type: Normal
+Key: yytext, Value: UNINIT, Type: Normal
+Key: yylloc, Value: UNINIT, Type: Normal
+End Properties extract.
+
+Function __construct:
+[+]Function Source Class Name: Seld\JsonLint\Lexer
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:flags
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\seld\jsonlint\src\Seld\JsonLint\Lexer.php
+function name:  __construct
+number of ops:  6
+compiled vars:  !0 = $flags
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   86     0*       < 64> RECV_INIT                                         RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435453) 0 ]
+   88     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435450) 'flags' ]
+          3*       <137> OP_DATA                                                   OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+   89     4*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          5*       < 62> RETURN                                                    OP1[  IS_CONST (268435445) null ]
+
+End of function __construct
+
+Function lex:
+[+]Function Source Class Name: Seld\JsonLint\Lexer
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\seld\jsonlint\src\Seld\JsonLint\Lexer.php
+function name:  lex
+number of ops:  77
+compiled vars:  !0 = $symbol
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   96     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 42> JMP                                                       OP1[ ->74 ]
+   97     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435355) 'next' ]
+          4*       < 60> DO_FCALL                                      0   RES[  IS_VAR $1 ]       OP1[  IS_UNUSED  ]
+          5*       < 22> ASSIGN                                                    OP1[  IS_CV !0 ] OP2[ ,  IS_VAR $1 ]
+   99     6*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          7*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~4 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435349) 'T_SKIP_WHITESPACE' ]
+          8*       < 18> IS_EQUAL                                          RES[  ]         OP1[  IS_CV !0 ] OP2[ ,  IS_TMP_VAR ~4 ]
+          9*       < 44> JMPNZ                                                     OP1[  IS_TMP_VAR ~3 ] OP2[ , ->23 ]
+  100    10*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~5 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435344) 'T_BREAK_LINE' ]
+         11*       < 18> IS_EQUAL                                          RES[  ]         OP1[  IS_CV !0 ] OP2[ ,  IS_TMP_VAR ~5 ]
+         12*       < 44> JMPNZ                                                     OP1[  IS_TMP_VAR ~3 ] OP2[ , ->23 ]
+  102    13*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~6 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435339) 'T_COMMENT' ]
+         14*       < 18> IS_EQUAL                                          RES[  ]         OP1[  IS_CV !0 ] OP2[ ,  IS_TMP_VAR ~6 ]
+         15*       < 44> JMPNZ                                                     OP1[  IS_TMP_VAR ~3 ] OP2[ , ->25 ]
+  103    16*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~7 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435334) 'T_OPEN_COMMENT' ]
+         17*       < 18> IS_EQUAL                                          RES[  ]         OP1[  IS_CV !0 ] OP2[ ,  IS_TMP_VAR ~7 ]
+         18*       < 44> JMPNZ                                                     OP1[  IS_TMP_VAR ~3 ] OP2[ , ->25 ]
+  113    19*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~8 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435329) 'T_CLOSE_COMMENT' ]
+         20*       < 18> IS_EQUAL                                          RES[  ]         OP1[  IS_CV !0 ] OP2[ ,  IS_TMP_VAR ~8 ]
+         21*       < 44> JMPNZ                                                     OP1[  IS_TMP_VAR ~3 ] OP2[ , ->61 ]
+         22*       < 42> JMP                                                       OP1[ ->72 ]
+  101    23*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         24*       < 42> JMP                                                       OP1[ ->74 ]
+  104    25*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         26*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~9 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435316) 'flags' ]
+         27*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~10 ]      OP1[  IS_CONST (268435316) 'Seld%5CJsonLint%5CJsonParser' ] OP2[ ,  IS_CONST (268435315) 'ALLOW_COMMENTS' ]
+         28*       < 10> BW_AND                                            RES[  IS_TMP_VAR ~11 ]      OP1[  IS_TMP_VAR ~9 ] OP2[ ,  IS_TMP_VAR ~10 ]
+         29*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~12 ]      OP1[  IS_TMP_VAR ~11 ]
+         30*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~12 ] OP2[ , ->42 ]
+  105    31*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         32*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435308) 'parseError' ]
+         33*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~13 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435308) 'yylineno' ]
+         34*       <  1> ADD                                               RES[  IS_TMP_VAR ~14 ]      OP1[  IS_TMP_VAR ~13 ] OP2[ ,  IS_CONST (268435307) 1 ]
+         35*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~15 ]      OP1[  IS_CONST (268435306) 'Lexical+error+on+line+' ] OP2[ ,  IS_TMP_VAR ~14 ]
+         36*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~16 ]      OP1[  IS_TMP_VAR ~15 ] OP2[ ,  IS_CONST (268435305) '.+Comments+are+not+allowed.%0A' ]
+         37*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435304) 'showPosition' ]
+         38*       < 60> DO_FCALL                                      0   RES[  IS_VAR $17 ]      OP1[  IS_UNUSED  ]
+         39*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~18 ]      OP1[  IS_TMP_VAR ~16 ] OP2[ ,  IS_VAR $17 ]
+         40*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~18 ] OP2[  IS_UNUSED  ]
+         41*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  107    42*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         43*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435294) 'skipUntil' ]
+         44*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~20 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435294) 'T_COMMENT' ]
+         45*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~21 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_TMP_VAR ~20 ]
+         46*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~21 ] OP2[ , ->50 ]
+         47*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~22 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435289) 'T_BREAK_LINE' ]
+         48*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~23 ]      OP1[  IS_TMP_VAR ~22 ]
+         49*       < 42> JMP                                                       OP1[ ->52 ]
+         50*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~24 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435284) 'T_CLOSE_COMMENT' ]
+         51*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~23 ]      OP1[  IS_TMP_VAR ~24 ]
+         52*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~23 ] OP2[  IS_UNUSED  ]
+         53*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  108    54*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         55*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~26 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435275) 'done' ]
+         56*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~26 ] OP2[ , ->59 ]
+  110    57*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         58*       < 62> RETURN                                                    OP1[  IS_CONST (268435270) 14 ]
+  112    59*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         60*       < 42> JMP                                                       OP1[ ->74 ]
+  114    61*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         62*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435263) 'parseError' ]
+         63*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~27 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435263) 'yylineno' ]
+         64*       <  1> ADD                                               RES[  IS_TMP_VAR ~28 ]      OP1[  IS_TMP_VAR ~27 ] OP2[ ,  IS_CONST (268435262) 1 ]
+         65*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~29 ]      OP1[  IS_CONST (268435261) 'Lexical+error+on+line+' ] OP2[ ,  IS_TMP_VAR ~28 ]
+         66*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~30 ]      OP1[  IS_TMP_VAR ~29 ] OP2[ ,  IS_CONST (268435260) '.+Unexpected+token.%0A' ]
+         67*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435259) 'showPosition' ]
+         68*       < 60> DO_FCALL                                      0   RES[  IS_VAR $31 ]      OP1[  IS_UNUSED  ]
+         69*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~32 ]      OP1[  IS_TMP_VAR ~30 ] OP2[ ,  IS_VAR $31 ]
+         70*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~32 ] OP2[  IS_UNUSED  ]
+         71*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  116    72*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         73*       < 62> RETURN                                                    OP1[  IS_CV !0 ]
+   96    74*       < 44> JMPNZ                                                     OP1[  IS_CONST (268435247) <true> ] OP2[ , ->2 ]
+  119    75*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         76*       < 62> RETURN                                                    OP1[  IS_CONST (268435244) null ]
+
+End of function lex
+
+Function setinput:
+[+]Function Source Class Name: Seld\JsonLint\Lexer
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:input
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\seld\jsonlint\src\Seld\JsonLint\Lexer.php
+function name:  setInput
+number of ops:  31
+compiled vars:  !0 = $input
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  125     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  127     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435402) 'input' ]
+          3*       <137> OP_DATA                                                   OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+  128     4*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          5*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435397) 'more' ]
+          6*       <137> OP_DATA                                                   OP1[  IS_CONST (268435396) <false> ] OP2[  IS_UNUSED  ]
+  129     7*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          8*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435393) 'done' ]
+          9*       <137> OP_DATA                                                   OP1[  IS_CONST (268435392) <false> ] OP2[  IS_UNUSED  ]
+  130    10*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         11*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435389) 'offset' ]
+         12*       <137> OP_DATA                                                   OP1[  IS_CONST (268435388) 0 ] OP2[  IS_UNUSED  ]
+  131    13*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         14*       < 24> ASSIGN_OBJ                                        RES[  IS_TMP_VAR ~6 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435386) 'yyleng' ]
+         15*       <137> OP_DATA                                                   OP1[  IS_CONST (268435385) 0 ] OP2[  IS_UNUSED  ]
+         16*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435381) 'yylineno' ]
+         17*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~6 ] OP2[  IS_UNUSED  ]
+  132    18*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         19*       < 24> ASSIGN_OBJ                                        RES[  IS_TMP_VAR ~8 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435379) 'match' ]
+         20*       <137> OP_DATA                                                   OP1[  IS_CONST (268435378) '' ] OP2[  IS_UNUSED  ]
+         21*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435374) 'yytext' ]
+         22*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~8 ] OP2[  IS_UNUSED  ]
+  133    23*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         24*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435371) 'yylloc' ]
+         25*       <137> OP_DATA                                                   OP1[  IS_CONST (268435370) <array> ] OP2[  IS_UNUSED  ]
+  135    26*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         27*       <184> FETCH_THIS                                        RES[  IS_TMP_VAR ~10 ]      OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         28*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~10 ]
+  136    29*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         30*       < 62> RETURN                                                    OP1[  IS_CONST (268435361) null ]
+
+End of function setinput
+
+Function showposition:
+[+]Function Source Class Name: Seld\JsonLint\Lexer
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\seld\jsonlint\src\Seld\JsonLint\Lexer.php
+function name:  showPosition
+number of ops:  53
+compiled vars:  !0 = $pre, !1 = $c
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  143     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~2 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435376) 'yylineno' ]
+          2*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~3 ]       OP1[  IS_TMP_VAR ~2 ] OP2[ ,  IS_CONST (268435375) 0 ]
+          3*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~3 ]       OP1[  IS_TMP_VAR ~3 ] OP2[ , ->7 ]
+          4*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~4 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435372) 'offset' ]
+          5*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~5 ]       OP1[  IS_TMP_VAR ~4 ] OP2[ ,  IS_CONST (268435371) 1 ]
+          6*       < 52> BOOL                                              RES[  IS_TMP_VAR ~3 ]       OP1[  IS_TMP_VAR ~5 ]
+          7*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~3 ]       OP1[  IS_TMP_VAR ~3 ] OP2[ , ->11 ]
+          8*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~6 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435366) 'match' ]
+          9*       < 17> IS_NOT_IDENTICAL                                  RES[  IS_TMP_VAR ~7 ]       OP1[  IS_TMP_VAR ~6 ] OP2[ ,  IS_CONST (268435365) '%7B' ]
+         10*       < 52> BOOL                                              RES[  IS_TMP_VAR ~3 ]       OP1[  IS_TMP_VAR ~7 ]
+         11*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~3 ] OP2[ , ->17 ]
+  144    12*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         13*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~8 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435358) 'match' ]
+         14*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~9 ]       OP1[  IS_TMP_VAR ~8 ] OP2[ ,  IS_CONST (268435357) '...' ]
+         15*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~10 ]      OP1[  IS_TMP_VAR ~9 ] OP2[ ,  IS_CONST (268435356) '%0A%5E' ]
+         16*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~10 ]
+  147    17*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         18*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435351) 'Seld%5CJsonLint%5Cstr_replace' ]
+         19*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435352) '%0A' ] OP2[  IS_UNUSED  ]
+         20*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435351) '' ] OP2[  IS_UNUSED  ]
+         21*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435350) 'getPastInput' ]
+         22*       < 60> DO_FCALL                                      0   RES[  IS_VAR $11 ]      OP1[  IS_UNUSED  ]
+         23*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $11 ] OP2[  IS_UNUSED  ]
+         24*       < 60> DO_FCALL                                      0   RES[  IS_VAR $12 ]      OP1[  IS_UNUSED  ]
+         25*       < 22> ASSIGN                                                    OP1[  IS_CV !0 ] OP2[ ,  IS_VAR $12 ]
+  148    26*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         27*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435340) 'Seld%5CJsonLint%5Cstr_repeat' ]
+         28*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435341) '-' ] OP2[  IS_UNUSED  ]
+         29*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435340) 'Seld%5CJsonLint%5Cmax' ]
+         30*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435341) 0 ] OP2[  IS_UNUSED  ]
+         31*       <121> STRLEN                                            RES[  IS_TMP_VAR ~14 ]      OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         32*       <  2> SUB                                               RES[  IS_TMP_VAR ~15 ]      OP1[  IS_TMP_VAR ~14 ] OP2[ ,  IS_CONST (268435338) 1 ]
+         33*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~15 ] OP2[  IS_UNUSED  ]
+         34*       < 60> DO_FCALL                                      0   RES[  IS_VAR $16 ]      OP1[  IS_UNUSED  ]
+         35*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $16 ] OP2[  IS_UNUSED  ]
+         36*       < 60> DO_FCALL                                      0   RES[  IS_VAR $17 ]      OP1[  IS_UNUSED  ]
+         37*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_VAR $17 ]
+  150    38*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         39*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435325) 'Seld%5CJsonLint%5Cstr_replace' ]
+         40*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435326) '%0A' ] OP2[  IS_UNUSED  ]
+         41*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435325) '' ] OP2[  IS_UNUSED  ]
+         42*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435324) 'getUpcomingInput' ]
+         43*       < 60> DO_FCALL                                      0   RES[  IS_VAR $19 ]      OP1[  IS_UNUSED  ]
+         44*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $19 ] OP2[  IS_UNUSED  ]
+         45*       < 60> DO_FCALL                                      0   RES[  IS_VAR $20 ]      OP1[  IS_UNUSED  ]
+         46*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~21 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_VAR $20 ]
+         47*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~22 ]      OP1[  IS_TMP_VAR ~21 ] OP2[ ,  IS_CONST (268435316) '%0A' ]
+         48*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~23 ]      OP1[  IS_TMP_VAR ~22 ] OP2[ ,  IS_CV !1 ]
+         49*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~24 ]      OP1[  IS_TMP_VAR ~23 ] OP2[ ,  IS_CONST (268435313) '%5E' ]
+         50*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~24 ]
+  151    51*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         52*       < 62> RETURN                                                    OP1[  IS_CONST (268435308) null ]
+
+End of function showposition
+
+Function getpastinput:
+[+]Function Source Class Name: Seld\JsonLint\Lexer
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\seld\jsonlint\src\Seld\JsonLint\Lexer.php
+function name:  getPastInput
+number of ops:  32
+compiled vars:  !0 = $pastLength
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  158     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~1 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435417) 'offset' ]
+          2*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~2 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435416) 'match' ]
+          3*       <121> STRLEN                                            RES[  IS_TMP_VAR ~3 ]       OP1[  IS_TMP_VAR ~2 ] OP2[  IS_UNUSED  ]
+          4*       <  2> SUB                                               RES[  IS_TMP_VAR ~4 ]       OP1[  IS_TMP_VAR ~1 ] OP2[ ,  IS_TMP_VAR ~3 ]
+          5*       < 22> ASSIGN                                                    OP1[  IS_CV !0 ] OP2[ ,  IS_TMP_VAR ~4 ]
+  160     6*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          7*       < 20> IS_SMALLER                                        RES[  IS_TMP_VAR ~6 ]       OP1[  IS_CONST (268435407) 20 ] OP2[ ,  IS_CV !0 ]
+          8*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~6 ] OP2[ , ->11 ]
+          9*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~7 ]       OP1[  IS_CONST (268435404) '...' ]
+         10*       < 42> JMP                                                       OP1[ ->12 ]
+         11*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~7 ]       OP1[  IS_CONST (268435401) '' ]
+         12*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435400) 'Seld%5CJsonLint%5Csubstr' ]
+         13*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         14*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $8 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435399) 'input' ]
+         15*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $8 ] OP2[  IS_UNUSED  ]
+         16*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435396) 'Seld%5CJsonLint%5Cmax' ]
+         17*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435397) 0 ] OP2[  IS_UNUSED  ]
+         18*       <  2> SUB                                               RES[  IS_TMP_VAR ~9 ]       OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435396) 20 ]
+         19*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~9 ] OP2[  IS_UNUSED  ]
+         20*       < 60> DO_FCALL                                      0   RES[  IS_VAR $10 ]      OP1[  IS_UNUSED  ]
+         21*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $10 ] OP2[  IS_UNUSED  ]
+         22*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435389) 'Seld%5CJsonLint%5Cmin' ]
+         23*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435390) 20 ] OP2[  IS_UNUSED  ]
+         24*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         25*       < 60> DO_FCALL                                      0   RES[  IS_VAR $11 ]      OP1[  IS_UNUSED  ]
+         26*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $11 ] OP2[  IS_UNUSED  ]
+         27*       < 60> DO_FCALL                                      0   RES[  IS_VAR $12 ]      OP1[  IS_UNUSED  ]
+         28*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~13 ]      OP1[  IS_TMP_VAR ~7 ] OP2[ ,  IS_VAR $12 ]
+         29*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~13 ]
+  161    30*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         31*       < 62> RETURN                                                    OP1[  IS_CONST (268435375) null ]
+
+End of function getpastinput
+
+Function getupcominginput:
+[+]Function Source Class Name: Seld\JsonLint\Lexer
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\seld\jsonlint\src\Seld\JsonLint\Lexer.php
+function name:  getUpcomingInput
+number of ops:  36
+compiled vars:  !0 = $next
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  168     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~1 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435425) 'match' ]
+          2*       < 22> ASSIGN                                                    OP1[  IS_CV !0 ] OP2[ ,  IS_TMP_VAR ~1 ]
+  169     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       <121> STRLEN                                            RES[  IS_TMP_VAR ~3 ]       OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          5*       < 20> IS_SMALLER                                        RES[  IS_TMP_VAR ~4 ]       OP1[  IS_TMP_VAR ~3 ] OP2[ ,  IS_CONST (268435418) 20 ]
+          6*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~4 ] OP2[ , ->20 ]
+  170     7*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          8*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435413) 'Seld%5CJsonLint%5Csubstr' ]
+          9*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         10*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $5 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435412) 'input' ]
+         11*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $5 ] OP2[  IS_UNUSED  ]
+         12*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         13*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $6 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435407) 'offset' ]
+         14*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $6 ] OP2[  IS_UNUSED  ]
+         15*       <121> STRLEN                                            RES[  IS_TMP_VAR ~7 ]       OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         16*       <  2> SUB                                               RES[  IS_TMP_VAR ~8 ]       OP1[  IS_CONST (268435402) 20 ] OP2[ ,  IS_TMP_VAR ~7 ]
+         17*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~8 ] OP2[  IS_UNUSED  ]
+         18*       < 60> DO_FCALL                                      0   RES[  IS_VAR $9 ]       OP1[  IS_UNUSED  ]
+         19*       < 26> ASSIGN_OP                    .=               8           OP1[  IS_CV !0 ] OP2[ ,  IS_VAR $9 ]
+  173    20*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         21*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435393) 'Seld%5CJsonLint%5Csubstr' ]
+         22*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         23*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435392) 0 ] OP2[  IS_UNUSED  ]
+         24*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435391) 20 ] OP2[  IS_UNUSED  ]
+         25*       < 60> DO_FCALL                                      0   RES[  IS_VAR $11 ]      OP1[  IS_UNUSED  ]
+         26*       <121> STRLEN                                            RES[  IS_TMP_VAR ~12 ]      OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         27*       < 20> IS_SMALLER                                        RES[  IS_TMP_VAR ~13 ]      OP1[  IS_CONST (268435386) 20 ] OP2[ ,  IS_TMP_VAR ~12 ]
+         28*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~13 ] OP2[ , ->31 ]
+         29*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~14 ]      OP1[  IS_CONST (268435383) '...' ]
+         30*       < 42> JMP                                                       OP1[ ->32 ]
+         31*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~14 ]      OP1[  IS_CONST (268435380) '' ]
+         32*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~15 ]      OP1[  IS_VAR $11 ] OP2[ ,  IS_TMP_VAR ~14 ]
+         33*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~15 ]
+  174    34*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         35*       < 62> RETURN                                                    OP1[  IS_CONST (268435373) null ]
+
+End of function getupcominginput
+
+Function getfullupcominginput:
+[+]Function Source Class Name: Seld\JsonLint\Lexer
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\seld\jsonlint\src\Seld\JsonLint\Lexer.php
+function name:  getFullUpcomingInput
+number of ops:  92
+compiled vars:  !0 = $next, !1 = $len, !2 = $strEnd
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  181     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~3 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435366) 'match' ]
+          2*       < 22> ASSIGN                                                    OP1[  IS_CV !0 ] OP2[ ,  IS_TMP_VAR ~3 ]
+  182     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435361) 'Seld%5CJsonLint%5Csubstr' ]
+          5*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          6*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435360) 0 ] OP2[  IS_UNUSED  ]
+          7*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435359) 1 ] OP2[  IS_UNUSED  ]
+          8*       < 60> DO_FCALL                                      0   RES[  IS_VAR $5 ]       OP1[  IS_UNUSED  ]
+          9*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~6 ]       OP1[  IS_VAR $5 ] OP2[ ,  IS_CONST (268435356) '%22' ]
+         10*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~6 ]       OP1[  IS_TMP_VAR ~6 ] OP2[ , ->17 ]
+         11*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435353) 'Seld%5CJsonLint%5Csubstr_count' ]
+         12*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         13*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435352) '%22' ] OP2[  IS_UNUSED  ]
+         14*       < 60> DO_FCALL                                      0   RES[  IS_VAR $7 ]       OP1[  IS_UNUSED  ]
+         15*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~8 ]       OP1[  IS_VAR $7 ] OP2[ ,  IS_CONST (268435349) 1 ]
+         16*       < 52> BOOL                                              RES[  IS_TMP_VAR ~6 ]       OP1[  IS_TMP_VAR ~8 ]
+         17*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~6 ] OP2[ , ->71 ]
+  183    18*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         19*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~9 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435342) 'input' ]
+         20*       <121> STRLEN                                            RES[  IS_TMP_VAR ~10 ]      OP1[  IS_TMP_VAR ~9 ] OP2[  IS_UNUSED  ]
+         21*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_TMP_VAR ~10 ]
+  184    22*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         23*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~12 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435335) 'offset' ]
+         24*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~13 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_TMP_VAR ~12 ]
+         25*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~13 ] OP2[ , ->29 ]
+  185    26*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         27*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_CV !1 ]
+         28*       < 42> JMP                                                       OP1[ ->57 ]
+  187    29*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         30*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435322) 'Seld%5CJsonLint%5Cmin' ]
+         31*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435323) 'Seld%5CJsonLint%5Cstrpos' ]
+         32*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         33*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $15 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435322) 'input' ]
+         34*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $15 ] OP2[  IS_UNUSED  ]
+         35*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435319) '%22' ] OP2[  IS_UNUSED  ]
+         36*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~16 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435318) 'offset' ]
+         37*       <  1> ADD                                               RES[  IS_TMP_VAR ~17 ]      OP1[  IS_TMP_VAR ~16 ] OP2[ ,  IS_CONST (268435317) 1 ]
+         38*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~17 ] OP2[  IS_UNUSED  ]
+         39*       < 60> DO_FCALL                                      0   RES[  IS_VAR $18 ]      OP1[  IS_UNUSED  ]
+         40*       <152> JMP_SET                                           RES[  IS_TMP_VAR ~19 ]      OP1[  IS_VAR $18 ] OP2[ , ->42 ]
+         41*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~19 ]      OP1[  IS_CV !1 ]
+         42*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~19 ] OP2[  IS_UNUSED  ]
+         43*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435306) 'Seld%5CJsonLint%5Cstrpos' ]
+         44*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         45*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $20 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435305) 'input' ]
+         46*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $20 ] OP2[  IS_UNUSED  ]
+         47*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435302) '%0A' ] OP2[  IS_UNUSED  ]
+         48*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~21 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435301) 'offset' ]
+         49*       <  1> ADD                                               RES[  IS_TMP_VAR ~22 ]      OP1[  IS_TMP_VAR ~21 ] OP2[ ,  IS_CONST (268435300) 1 ]
+         50*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~22 ] OP2[  IS_UNUSED  ]
+         51*       < 60> DO_FCALL                                      0   RES[  IS_VAR $23 ]      OP1[  IS_UNUSED  ]
+         52*       <152> JMP_SET                                           RES[  IS_TMP_VAR ~24 ]      OP1[  IS_VAR $23 ] OP2[ , ->54 ]
+         53*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~24 ]      OP1[  IS_CV !1 ]
+         54*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~24 ] OP2[  IS_UNUSED  ]
+         55*       < 60> DO_FCALL                                      0   RES[  IS_VAR $25 ]      OP1[  IS_UNUSED  ]
+         56*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_VAR $25 ]
+  189    57*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         58*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435283) 'Seld%5CJsonLint%5Csubstr' ]
+         59*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         60*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $27 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435282) 'input' ]
+         61*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $27 ] OP2[  IS_UNUSED  ]
+         62*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         63*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $28 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435277) 'offset' ]
+         64*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $28 ] OP2[  IS_UNUSED  ]
+         65*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~29 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435274) 'offset' ]
+         66*       <  2> SUB                                               RES[  IS_TMP_VAR ~30 ]      OP1[  IS_CV !2 ] OP2[ ,  IS_TMP_VAR ~29 ]
+         67*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~30 ] OP2[  IS_UNUSED  ]
+         68*       < 60> DO_FCALL                                      0   RES[  IS_VAR $31 ]      OP1[  IS_UNUSED  ]
+         69*       < 26> ASSIGN_OP                    .=               8           OP1[  IS_CV !0 ] OP2[ ,  IS_VAR $31 ]
+         70*       < 42> JMP                                                       OP1[ ->88 ]
+  190    71*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         72*       <121> STRLEN                                            RES[  IS_TMP_VAR ~33 ]      OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         73*       < 20> IS_SMALLER                                        RES[  IS_TMP_VAR ~34 ]      OP1[  IS_TMP_VAR ~33 ] OP2[ ,  IS_CONST (268435259) 20 ]
+         74*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~34 ] OP2[ , ->88 ]
+  191    75*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         76*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435254) 'Seld%5CJsonLint%5Csubstr' ]
+         77*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         78*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $35 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435253) 'input' ]
+         79*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $35 ] OP2[  IS_UNUSED  ]
+         80*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         81*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $36 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435248) 'offset' ]
+         82*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $36 ] OP2[  IS_UNUSED  ]
+         83*       <121> STRLEN                                            RES[  IS_TMP_VAR ~37 ]      OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         84*       <  2> SUB                                               RES[  IS_TMP_VAR ~38 ]      OP1[  IS_CONST (268435243) 20 ] OP2[ ,  IS_TMP_VAR ~37 ]
+         85*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~38 ] OP2[  IS_UNUSED  ]
+         86*       < 60> DO_FCALL                                      0   RES[  IS_VAR $39 ]      OP1[  IS_UNUSED  ]
+         87*       < 26> ASSIGN_OP                    .=               8           OP1[  IS_CV !0 ] OP2[ ,  IS_VAR $39 ]
+  194    88*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         89*       < 62> RETURN                                                    OP1[  IS_CV !0 ]
+  195    90*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         91*       < 62> RETURN                                                    OP1[  IS_CONST (268435230) null ]
+
+End of function getfullupcominginput
+
+Function parseerror:
+[+]Function Source Class Name: Seld\JsonLint\Lexer
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:str
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\seld\jsonlint\src\Seld\JsonLint\Lexer.php
+function name:  parseError
+number of ops:  8
+compiled vars:  !0 = $str
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  201     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  203     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 68> NEW                                               RES[  IS_VAR $1 ]       OP1[ 'Seld%5CJsonLint%5CParsingException' ]
+          3*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          4*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+          5*       <108> THROW                                         0           OP1[  IS_VAR $1 ] OP2[  IS_UNUSED  ]
+  204     6*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          7*       < 62> RETURN                                                    OP1[  IS_CONST (268435437) null ]
+
+End of function parseerror
+
+Function skipuntil:
+[+]Function Source Class Name: Seld\JsonLint\Lexer
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:token
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\seld\jsonlint\src\Seld\JsonLint\Lexer.php
+function name:  skipUntil
+number of ops:  19
+compiled vars:  !0 = $token, !1 = $symbol
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  210     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  212     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435446) 'next' ]
+          3*       < 60> DO_FCALL                                      0   RES[  IS_VAR $2 ]       OP1[  IS_UNUSED  ]
+          4*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_VAR $2 ]
+  213     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       < 42> JMP                                                       OP1[ ->11 ]
+  214     7*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          8*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435436) 'next' ]
+          9*       < 60> DO_FCALL                                      0   RES[  IS_VAR $4 ]       OP1[  IS_UNUSED  ]
+         10*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_VAR $4 ]
+  213    11*       < 17> IS_NOT_IDENTICAL                                  RES[  IS_TMP_VAR ~6 ]       OP1[  IS_CV !1 ] OP2[ ,  IS_CV !0 ]
+         12*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~6 ]       OP1[  IS_TMP_VAR ~6 ] OP2[ , ->16 ]
+         13*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~7 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435428) 'done' ]
+         14*       <123> TYPE_CHECK                                    4   RES[  IS_TMP_VAR ~8 ]       OP1[  IS_TMP_VAR ~7 ] OP2[  IS_UNUSED  ]
+         15*       < 52> BOOL                                              RES[  IS_TMP_VAR ~6 ]       OP1[  IS_TMP_VAR ~8 ]
+         16*       < 44> JMPNZ                                                     OP1[  IS_TMP_VAR ~6 ] OP2[ , ->7 ]
+  216    17*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         18*       < 62> RETURN                                                    OP1[  IS_CONST (268435419) null ]
+
+End of function skipuntil
+
+Function next:
+[+]Function Source Class Name: Seld\JsonLint\Lexer
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\seld\jsonlint\src\Seld\JsonLint\Lexer.php
+function name:  next
+number of ops:  155
+compiled vars:  !0 = $token, !1 = $match, !2 = $col, !3 = $lines, !4 = $rulesLen, !5 = $i, !6 = $lineCount
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  223     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~7 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435288) 'done' ]
+          2*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~7 ] OP2[ , ->6 ]
+  224     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~8 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435283) 'EOF' ]
+          5*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~8 ]
+  226     6*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          7*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~9 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435278) 'offset' ]
+          8*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~10 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435277) 'input' ]
+          9*       <121> STRLEN                                            RES[  IS_TMP_VAR ~11 ]      OP1[  IS_TMP_VAR ~10 ] OP2[  IS_UNUSED  ]
+         10*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~12 ]      OP1[  IS_TMP_VAR ~9 ] OP2[ ,  IS_TMP_VAR ~11 ]
+         11*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~12 ] OP2[ , ->15 ]
+  227    12*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         13*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435268) 'done' ]
+         14*       <137> OP_DATA                                                   OP1[  IS_CONST (268435267) <true> ] OP2[  IS_UNUSED  ]
+  230    15*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         16*       < 22> ASSIGN                                                    OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435264) null ]
+  231    17*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         18*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435261) null ]
+  232    19*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         20*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435258) null ]
+  233    21*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         22*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435255) null ]
+  235    23*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         24*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~18 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435252) 'more' ]
+         25*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~19 ]      OP1[  IS_TMP_VAR ~18 ]
+         26*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~19 ] OP2[ , ->33 ]
+  236    27*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         28*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435245) 'yytext' ]
+         29*       <137> OP_DATA                                                   OP1[  IS_CONST (268435244) '' ] OP2[  IS_UNUSED  ]
+  237    30*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         31*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435241) 'match' ]
+         32*       <137> OP_DATA                                                   OP1[  IS_CONST (268435240) '' ] OP2[  IS_UNUSED  ]
+  240    33*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         34*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435237) 'Seld%5CJsonLint%5Ccount' ]
+         35*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         36*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $22 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435236) 'rules' ]
+         37*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $22 ] OP2[  IS_UNUSED  ]
+         38*       < 60> DO_FCALL                                      0   RES[  IS_VAR $23 ]      OP1[  IS_UNUSED  ]
+         39*       < 22> ASSIGN                                                    OP1[  IS_CV !4 ] OP2[ ,  IS_VAR $23 ]
+  242    40*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         41*       < 22> ASSIGN                                                    OP1[  IS_CV !5 ] OP2[ ,  IS_CONST (268435227) 0 ]
+         42*       < 42> JMP                                                       OP1[ ->130 ]
+  243    43*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         44*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435222) 'Seld%5CJsonLint%5Cpreg_match' ]
+         45*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         46*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $26 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435221) 'rules' ]
+         47*       < 93> FETCH_DIM_FUNC_ARG                                RES[  IS_VAR $27 ]      OP1[  IS_VAR $26 ] OP2[ ,  IS_CV !5 ]
+         48*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $27 ] OP2[  IS_UNUSED  ]
+         49*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         50*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $28 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435214) 'input' ]
+         51*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $28 ] OP2[  IS_UNUSED  ]
+         52*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         53*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435209) 0 ] OP2[  IS_UNUSED  ]
+         54*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         55*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $29 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435206) 'offset' ]
+         56*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $29 ] OP2[  IS_UNUSED  ]
+         57*       < 60> DO_FCALL                                      0   RES[  IS_VAR $30 ]      OP1[  IS_UNUSED  ]
+         58*       < 43> JMPZ                                                      OP1[  IS_VAR $30 ] OP2[ , ->129 ]
+  244    59*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         60*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435197) 'Seld%5CJsonLint%5Cexplode' ]
+         61*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435198) '%0A' ] OP2[  IS_UNUSED  ]
+         62*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         63*       < 93> FETCH_DIM_FUNC_ARG                                RES[  IS_VAR $31 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435195) 0 ]
+         64*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $31 ] OP2[  IS_UNUSED  ]
+         65*       < 60> DO_FCALL                                      0   RES[  IS_VAR $32 ]      OP1[  IS_UNUSED  ]
+         66*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_VAR $32 ]
+  245    67*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         68*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435186) 'Seld%5CJsonLint%5Carray_shift' ]
+         69*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         70*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  246    71*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         72*       <190> COUNT                                             RES[  IS_TMP_VAR ~35 ]      OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         73*       < 22> ASSIGN                                                    OP1[  IS_CV !6 ] OP2[ ,  IS_TMP_VAR ~35 ]
+  247    74*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         75*       < 28> ASSIGN_OBJ_OP                                 1           OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435175) 'yylineno' ]
+         76*       <137> OP_DATA                                                   OP1[  IS_CV !6 ] OP2[  IS_UNUSED  ]
+  249    77*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         78*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~39 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435171) 'yylloc' ]
+         79*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~40 ]      OP1[  IS_TMP_VAR ~39 ] OP2[ ,  IS_CONST (268435170) 'last_line' ]
+         80*       < 71> INIT_ARRAY                                        RES[  IS_TMP_VAR ~41 ]      OP1[  IS_TMP_VAR ~40 ] OP2[ ,  IS_CONST (268435169) 'first_line' ]
+  250    81*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~42 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435168) 'yylineno' ]
+         82*       <  1> ADD                                               RES[  IS_TMP_VAR ~43 ]      OP1[  IS_TMP_VAR ~42 ] OP2[ ,  IS_CONST (268435167) 1 ]
+         83*       < 72> ADD_ARRAY_ELEMENT                                 RES[  IS_TMP_VAR ~41 ]      OP1[  IS_TMP_VAR ~43 ] OP2[ ,  IS_CONST (268435166) 'last_line' ]
+  251    84*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~44 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435165) 'yylloc' ]
+         85*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~45 ]      OP1[  IS_TMP_VAR ~44 ] OP2[ ,  IS_CONST (268435164) 'last_column' ]
+         86*       < 72> ADD_ARRAY_ELEMENT                                 RES[  IS_TMP_VAR ~41 ]      OP1[  IS_TMP_VAR ~45 ] OP2[ ,  IS_CONST (268435163) 'first_column' ]
+  252    87*       < 20> IS_SMALLER                                        RES[  IS_TMP_VAR ~46 ]      OP1[  IS_CONST (268435162) 0 ] OP2[ ,  IS_CV !6 ]
+         88*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~46 ] OP2[ , ->94 ]
+         89*       <  2> SUB                                               RES[  IS_TMP_VAR ~47 ]      OP1[  IS_CV !6 ] OP2[ ,  IS_CONST (268435159) 1 ]
+         90*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~48 ]      OP1[  IS_CV !3 ] OP2[ ,  IS_TMP_VAR ~47 ]
+         91*       <121> STRLEN                                            RES[  IS_TMP_VAR ~49 ]      OP1[  IS_TMP_VAR ~48 ] OP2[  IS_UNUSED  ]
+         92*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~50 ]      OP1[  IS_TMP_VAR ~49 ]
+         93*       < 42> JMP                                                       OP1[ ->100 ]
+         94*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~51 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435150) 'yylloc' ]
+         95*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~52 ]      OP1[  IS_TMP_VAR ~51 ] OP2[ ,  IS_CONST (268435149) 'last_column' ]
+         96*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~53 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435148) 0 ]
+         97*       <121> STRLEN                                            RES[  IS_TMP_VAR ~54 ]      OP1[  IS_TMP_VAR ~53 ] OP2[  IS_UNUSED  ]
+         98*       <  1> ADD                                               RES[  IS_TMP_VAR ~55 ]      OP1[  IS_TMP_VAR ~52 ] OP2[ ,  IS_TMP_VAR ~54 ]
+         99*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~50 ]      OP1[  IS_TMP_VAR ~55 ]
+        100*       < 72> ADD_ARRAY_ELEMENT                                 RES[  IS_TMP_VAR ~41 ]      OP1[  IS_TMP_VAR ~50 ] OP2[ ,  IS_CONST (268435141) 'last_column' ]
+  248   101*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435124) 'yylloc' ]
+  252   102*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~41 ] OP2[  IS_UNUSED  ]
+  254   103*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        104*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~57 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435135) 0 ]
+        105*       < 28> ASSIGN_OBJ_OP                                 8           OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435132) 'yytext' ]
+        106*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~57 ] OP2[  IS_UNUSED  ]
+  255   107*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        108*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~59 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435129) 0 ]
+        109*       < 28> ASSIGN_OBJ_OP                                 8           OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435126) 'match' ]
+        110*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~59 ] OP2[  IS_UNUSED  ]
+  256   111*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        112*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~61 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435123) 'yytext' ]
+        113*       <121> STRLEN                                            RES[  IS_TMP_VAR ~62 ]      OP1[  IS_TMP_VAR ~61 ] OP2[  IS_UNUSED  ]
+        114*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435118) 'yyleng' ]
+        115*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~62 ] OP2[  IS_UNUSED  ]
+  257   116*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        117*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435114) 'more' ]
+        118*       <137> OP_DATA                                                   OP1[  IS_CONST (268435113) <false> ] OP2[  IS_UNUSED  ]
+  258   119*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        120*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~65 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435111) 0 ]
+        121*       <121> STRLEN                                            RES[  IS_TMP_VAR ~66 ]      OP1[  IS_TMP_VAR ~65 ] OP2[  IS_UNUSED  ]
+        122*       < 28> ASSIGN_OBJ_OP                                 1           OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435106) 'offset' ]
+        123*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~66 ] OP2[  IS_UNUSED  ]
+  259   124*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        125*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435102) 'performAction' ]
+        126*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !5 ] OP2[  IS_UNUSED  ]
+        127*       < 60> DO_FCALL                                      0   RES[  IS_VAR $67 ]      OP1[  IS_UNUSED  ]
+        128*       < 62> RETURN                                                    OP1[  IS_VAR $67 ]
+  242   129*       < 34> PRE_INC                                                   OP1[  IS_CV !5 ]
+        130*       < 20> IS_SMALLER                                        RES[  IS_TMP_VAR ~69 ]      OP1[  IS_CV !5 ] OP2[ ,  IS_CV !4 ]
+        131*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        132*       < 44> JMPNZ                                                     OP1[  IS_TMP_VAR ~69 ] OP2[ , ->43 ]
+  263   133*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        134*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~70 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435086) 'offset' ]
+        135*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~71 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435085) 'input' ]
+        136*       <121> STRLEN                                            RES[  IS_TMP_VAR ~72 ]      OP1[  IS_TMP_VAR ~71 ] OP2[  IS_UNUSED  ]
+        137*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~73 ]      OP1[  IS_TMP_VAR ~70 ] OP2[ ,  IS_TMP_VAR ~72 ]
+        138*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~73 ] OP2[ , ->142 ]
+  264   139*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        140*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~74 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435076) 'EOF' ]
+        141*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~74 ]
+  267   142*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        143*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435071) 'parseError' ]
+  268   144*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~75 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435071) 'yylineno' ]
+        145*       <  1> ADD                                               RES[  IS_TMP_VAR ~76 ]      OP1[  IS_TMP_VAR ~75 ] OP2[ ,  IS_CONST (268435070) 1 ]
+        146*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~77 ]      OP1[  IS_CONST (268435069) 'Lexical+error+on+line+' ] OP2[ ,  IS_TMP_VAR ~76 ]
+        147*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~78 ]      OP1[  IS_TMP_VAR ~77 ] OP2[ ,  IS_CONST (268435068) '.+Unrecognized+text.%0A' ]
+        148*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435067) 'showPosition' ]
+        149*       < 60> DO_FCALL                                      0   RES[  IS_VAR $79 ]      OP1[  IS_UNUSED  ]
+        150*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~80 ]      OP1[  IS_TMP_VAR ~78 ] OP2[ ,  IS_VAR $79 ]
+        151*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~80 ] OP2[  IS_UNUSED  ]
+        152*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  270   153*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        154*       < 62> RETURN                                                    OP1[  IS_CONST (268435057) null ]
+
+End of function next
+
+Function performaction:
+[+]Function Source Class Name: Seld\JsonLint\Lexer
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:rule
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\seld\jsonlint\src\Seld\JsonLint\Lexer.php
+function name:  performAction
+number of ops:  102
+compiled vars:  !0 = $rule
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  276     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  278     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       <187> SWITCH_LONG                                               OP1[  IS_CV !0 ] OP2[ , [ 0:->40, 1:->43, 2:->46, 3:->48, 4:->62, 5:->64, 6:->66, 7:->68, 8:->70, 9:->72, 10:->74, 11:->76, 12:->78, 13:->80, 14:->82, 15:->85, 16:->88, 17:->91, ] ] EXT_JMP_REL[ , ->94 ]
+  279     3*       < 18> IS_EQUAL                                          RES[  ]         OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435334) 0 ]
+          4*       < 44> JMPNZ                                                     OP1[  IS_TMP_VAR ~1 ] OP2[ , ->40 ]
+  281     5*       < 18> IS_EQUAL                                          RES[  ]         OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435331) 1 ]
+          6*       < 44> JMPNZ                                                     OP1[  IS_TMP_VAR ~1 ] OP2[ , ->43 ]
+  283     7*       < 18> IS_EQUAL                                          RES[  ]         OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435328) 2 ]
+          8*       < 44> JMPNZ                                                     OP1[  IS_TMP_VAR ~1 ] OP2[ , ->46 ]
+  285     9*       < 18> IS_EQUAL                                          RES[  ]         OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435325) 3 ]
+         10*       < 44> JMPNZ                                                     OP1[  IS_TMP_VAR ~1 ] OP2[ , ->48 ]
+  288    11*       < 18> IS_EQUAL                                          RES[  ]         OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435322) 4 ]
+         12*       < 44> JMPNZ                                                     OP1[  IS_TMP_VAR ~1 ] OP2[ , ->62 ]
+  290    13*       < 18> IS_EQUAL                                          RES[  ]         OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435319) 5 ]
+         14*       < 44> JMPNZ                                                     OP1[  IS_TMP_VAR ~1 ] OP2[ , ->64 ]
+  292    15*       < 18> IS_EQUAL                                          RES[  ]         OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435316) 6 ]
+         16*       < 44> JMPNZ                                                     OP1[  IS_TMP_VAR ~1 ] OP2[ , ->66 ]
+  294    17*       < 18> IS_EQUAL                                          RES[  ]         OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435313) 7 ]
+         18*       < 44> JMPNZ                                                     OP1[  IS_TMP_VAR ~1 ] OP2[ , ->68 ]
+  296    19*       < 18> IS_EQUAL                                          RES[  ]         OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435310) 8 ]
+         20*       < 44> JMPNZ                                                     OP1[  IS_TMP_VAR ~1 ] OP2[ , ->70 ]
+  298    21*       < 18> IS_EQUAL                                          RES[  ]         OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435307) 9 ]
+         22*       < 44> JMPNZ                                                     OP1[  IS_TMP_VAR ~1 ] OP2[ , ->72 ]
+  300    23*       < 18> IS_EQUAL                                          RES[  ]         OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435304) 10 ]
+         24*       < 44> JMPNZ                                                     OP1[  IS_TMP_VAR ~1 ] OP2[ , ->74 ]
+  302    25*       < 18> IS_EQUAL                                          RES[  ]         OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435301) 11 ]
+         26*       < 44> JMPNZ                                                     OP1[  IS_TMP_VAR ~1 ] OP2[ , ->76 ]
+  304    27*       < 18> IS_EQUAL                                          RES[  ]         OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435298) 12 ]
+         28*       < 44> JMPNZ                                                     OP1[  IS_TMP_VAR ~1 ] OP2[ , ->78 ]
+  306    29*       < 18> IS_EQUAL                                          RES[  ]         OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435295) 13 ]
+         30*       < 44> JMPNZ                                                     OP1[  IS_TMP_VAR ~1 ] OP2[ , ->80 ]
+  308    31*       < 18> IS_EQUAL                                          RES[  ]         OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435292) 14 ]
+         32*       < 44> JMPNZ                                                     OP1[  IS_TMP_VAR ~1 ] OP2[ , ->82 ]
+  310    33*       < 18> IS_EQUAL                                          RES[  ]         OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435289) 15 ]
+         34*       < 44> JMPNZ                                                     OP1[  IS_TMP_VAR ~1 ] OP2[ , ->85 ]
+  312    35*       < 18> IS_EQUAL                                          RES[  ]         OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435286) 16 ]
+         36*       < 44> JMPNZ                                                     OP1[  IS_TMP_VAR ~1 ] OP2[ , ->88 ]
+  314    37*       < 18> IS_EQUAL                                          RES[  ]         OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435283) 17 ]
+         38*       < 44> JMPNZ                                                     OP1[  IS_TMP_VAR ~1 ] OP2[ , ->91 ]
+         39*       < 42> JMP                                                       OP1[ ->94 ]
+  280    40*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         41*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~2 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435276) 'T_BREAK_LINE' ]
+         42*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~2 ]
+  282    43*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         44*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~3 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435271) 'T_SKIP_WHITESPACE' ]
+         45*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~3 ]
+  284    46*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         47*       < 62> RETURN                                                    OP1[  IS_CONST (268435266) 6 ]
+  286    48*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         49*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435264) 'Seld%5CJsonLint%5Csubstr' ]
+         50*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         51*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $5 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435263) 'yytext' ]
+         52*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $5 ] OP2[  IS_UNUSED  ]
+         53*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435260) 1 ] OP2[  IS_UNUSED  ]
+         54*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~6 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435259) 'yyleng' ]
+         55*       <  2> SUB                                               RES[  IS_TMP_VAR ~7 ]       OP1[  IS_TMP_VAR ~6 ] OP2[ ,  IS_CONST (268435258) 2 ]
+         56*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~7 ] OP2[  IS_UNUSED  ]
+         57*       < 60> DO_FCALL                                      0   RES[  IS_VAR $8 ]       OP1[  IS_UNUSED  ]
+         58*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435245) 'yytext' ]
+         59*       <137> OP_DATA                                                   OP1[  IS_VAR $8 ] OP2[  IS_UNUSED  ]
+  287    60*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         61*       < 62> RETURN                                                    OP1[  IS_CONST (268435247) 4 ]
+  289    62*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         63*       < 62> RETURN                                                    OP1[  IS_CONST (268435244) 17 ]
+  291    64*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         65*       < 62> RETURN                                                    OP1[  IS_CONST (268435241) 18 ]
+  293    66*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         67*       < 62> RETURN                                                    OP1[  IS_CONST (268435238) 23 ]
+  295    68*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         69*       < 62> RETURN                                                    OP1[  IS_CONST (268435235) 24 ]
+  297    70*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         71*       < 62> RETURN                                                    OP1[  IS_CONST (268435232) 22 ]
+  299    72*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         73*       < 62> RETURN                                                    OP1[  IS_CONST (268435229) 21 ]
+  301    74*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         75*       < 62> RETURN                                                    OP1[  IS_CONST (268435226) 10 ]
+  303    76*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         77*       < 62> RETURN                                                    OP1[  IS_CONST (268435223) 11 ]
+  305    78*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         79*       < 62> RETURN                                                    OP1[  IS_CONST (268435220) 8 ]
+  307    80*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         81*       < 62> RETURN                                                    OP1[  IS_CONST (268435217) 14 ]
+  309    82*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         83*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~9 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435214) 'T_COMMENT' ]
+         84*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~9 ]
+  311    85*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         86*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~10 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435209) 'T_OPEN_COMMENT' ]
+         87*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~10 ]
+  313    88*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         89*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~11 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435204) 'T_CLOSE_COMMENT' ]
+         90*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~11 ]
+  315    91*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         92*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~12 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435199) 'T_INVALID' ]
+         93*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~12 ]
+  317    94*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         95*       < 68> NEW                                               RES[  IS_VAR $13 ]      OP1[ 'LogicException' ]
+         96*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~14 ]      OP1[  IS_CONST (268435194) 'Unsupported+rule+' ] OP2[ ,  IS_CV !0 ]
+         97*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~14 ] OP2[  IS_UNUSED  ]
+         98*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         99*       <108> THROW                                         0           OP1[  IS_VAR $13 ] OP2[  IS_UNUSED  ]
+  319   100*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        101*       < 62> RETURN                                                    OP1[  IS_CONST (268435185) null ]
+
+End of function performaction
+
+End of class Seld\JsonLint\Lexer.
+

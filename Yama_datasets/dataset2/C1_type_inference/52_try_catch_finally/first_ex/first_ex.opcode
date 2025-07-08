@@ -1,0 +1,72 @@
+filename:       E:\【我的开源项目】\Yama\Yama_datasets\dataset2\C1_type_inference\52_try_catch_finally\first_ex\first_ex.php
+function name:  (null)
+number of ops:  11
+compiled vars:  !0 = $b
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   18     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 80> FETCH_R                      global               RES[  IS_TMP_VAR ~1 ]       OP1[  IS_CONST (268435449) '_GET' ]
+          2*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~2 ]       OP1[  IS_TMP_VAR ~1 ] OP2[ ,  IS_CONST (268435448) 'p1' ]
+          3*       < 22> ASSIGN                                                    OP1[  IS_CV !0 ] OP2[ ,  IS_TMP_VAR ~2 ]
+   19     4*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          5*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435443) 'foo' ]
+          6*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~4 ]       OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435442) '%0A' ]
+          7*       < 65> SEND_VAL                                                  OP1[  IS_TMP_VAR ~4 ]
+          8*       < 60> DO_FCALL                                      0   RES[  IS_VAR $5 ]       OP1[  IS_UNUSED  ]
+          9*       <136> ECHO                                                      OP1[  IS_VAR $5 ]
+   21    10*       < 62> RETURN                                                    OP1[  IS_CONST (268435435) 1 ]
+
+Function foo:
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:b
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       E:\【我的开源项目】\Yama\Yama_datasets\dataset2\C1_type_inference\52_try_catch_finally\first_ex\first_ex.php
+function name:  foo
+number of ops:  29
+compiled vars:  !0 = $b, !1 = $bar, !2 = $e
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+    2     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+    4     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_CV !0 ]
+    5     3*       <  0> NOP                                                      
+    6     4*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          5*       < 68> NEW                                               RES[  IS_VAR $5 ]       OP1[ 'Exception' ]
+          6*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435437) 'Exception' ] OP2[  IS_UNUSED  ]
+          7*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+          8*       <108> THROW                                         0           OP1[  IS_VAR $5 ] OP2[  IS_UNUSED  ]
+          9*       < 42> JMP                                                       OP1[ ->17 ]
+    7    10*       <107> CATCH                                       last  RES[  IS_CV !2 ]       OP1[  IS_CONST (268435430) 'Exception' ]
+    8    11*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         12*       <136> ECHO                                                      OP1[  IS_CONST (268435428) 'catch+%0A' ]
+   10    13*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         14*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~7 ]       OP1[  IS_CV !1 ]
+         15*       <162> FAST_CALL                                                 OP1[ ->19 ]
+         16*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~7 ]
+   12    17*       <162> FAST_CALL                                                 OP1[ ->19 ]
+         18*       < 42> JMP                                                       OP1[ ->27 ]
+   13    19*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         20*       <136> ECHO                                                      OP1[  IS_CONST (268435413) 'finally+%0A' ]
+   15    21*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         22*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435410) 'htmlspecialchars' ]
+         23*       <117> SEND_VAR                                                  OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         24*       < 60> DO_FCALL                                      0   RES[  IS_VAR $8 ]       OP1[  IS_UNUSED  ]
+         25*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_VAR $8 ]
+         26*       <163> FAST_RET                                                 
+   17    27*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         28*       < 62> RETURN                                                    OP1[  IS_CONST (268435399) null ]
+
+End of function foo
+

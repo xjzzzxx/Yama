@@ -1,0 +1,1447 @@
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\swaggest\json-diff\src\JsonDiff.php
+function name:  (null)
+number of ops:  25
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+    3     0*       <  0> NOP                                                      
+    5     1*       <  0> NOP                                                      
+    6     2*       <  0> NOP                                                      
+    7     3*       <  0> NOP                                                      
+    8     4*       <  0> NOP                                                      
+   49     5*       <  0> NOP                                                      
+   54     6*       <  0> NOP                                                      
+   59     7*       <  0> NOP                                                      
+   61     8*       <  0> NOP                                                      
+   62     9*       <  0> NOP                                                      
+   63    10*       <  0> NOP                                                      
+   65    11*       <  0> NOP                                                      
+   66    12*       <  0> NOP                                                      
+   67    13*       <  0> NOP                                                      
+   69    14*       <  0> NOP                                                      
+   70    15*       <  0> NOP                                                      
+   71    16*       <  0> NOP                                                      
+   72    17*       <  0> NOP                                                      
+   76    18*       <  0> NOP                                                      
+   78    19*       <  0> NOP                                                      
+   79    20*       <  0> NOP                                                      
+   81    21*       <  0> NOP                                                      
+   84    22*       <  0> NOP                                                      
+  560    23*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         24*       < 62> RETURN                                                    OP1[  IS_CONST (268435407) 1 ]
+
+Class Swaggest\JsonDiff\JsonDiff:
+[+]Class Parent Name: NULL
+End Trait extract
+Start Properties extract:
+Key: options, Value: 0, Type: Normal
+Key: merge, Value: UNINIT, Type: Normal
+Key: added, Value: UNINIT, Type: Normal
+Key: addedCnt, Value: 0, Type: Normal
+Key: removed, Value: UNINIT, Type: Normal
+Key: removedCnt, Value: 0, Type: Normal
+Key: modifiedOriginal, Value: UNINIT, Type: Normal
+Key: modifiedNew, Value: UNINIT, Type: Normal
+Key: modifiedCnt, Value: 0, Type: Normal
+Key: path, Value: , Type: Normal
+Key: rearranged, Value: UNINIT, Type: Normal
+Key: jsonPatch, Value: UNINIT, Type: Normal
+Key: jsonHash, Value: UNINIT, Type: Normal
+End Properties extract.
+
+Function __construct:
+[+]Function Source Class Name: Swaggest\JsonDiff\JsonDiff
+[*]Start of arg_info extract:
+[*]arg_info num_args:4
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:original
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:new
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**2**
+[*]name:options
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**3**
+[*]name:skipPaths
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\swaggest\json-diff\src\JsonDiff.php
+function name:  __construct
+number of ops:  48
+compiled vars:  !0 = $original, !1 = $new, !2 = $options, !3 = $skipPaths
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   96     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 63> RECV                                              RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ]
+          2*       < 64> RECV_INIT                                         RES[  IS_CV !2 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435413) 0 ]
+          3*       < 64> RECV_INIT                                         RES[  IS_CV !3 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435412) <array> ]
+   98     4*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          5*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~4 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435409) 'SKIP_JSON_PATCH' ]
+          6*       < 10> BW_AND                                            RES[  IS_TMP_VAR ~5 ]       OP1[  IS_CV !2 ] OP2[ ,  IS_TMP_VAR ~4 ]
+          7*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~6 ]       OP1[  IS_TMP_VAR ~5 ]
+          8*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~6 ] OP2[ , ->14 ]
+   99     9*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         10*       < 68> NEW                                               RES[  IS_VAR $8 ]       OP1[ 'Swaggest%5CJsonDiff%5CJsonPatch' ]
+         11*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         12*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435396) 'jsonPatch' ]
+         13*       <137> OP_DATA                                                   OP1[  IS_VAR $8 ] OP2[  IS_UNUSED  ]
+  102    14*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         15*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435393) 'options' ]
+         16*       <137> OP_DATA                                                   OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+  104    17*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         18*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435388) 'skipPaths' ]
+         19*       <137> OP_DATA                                                   OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+  106    20*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         21*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~12 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435383) 'JSON_URI_FRAGMENT_ID' ]
+         22*       < 10> BW_AND                                            RES[  IS_TMP_VAR ~13 ]      OP1[  IS_CV !2 ] OP2[ ,  IS_TMP_VAR ~12 ]
+         23*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~13 ] OP2[ , ->27 ]
+  107    24*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         25*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435376) 'path' ]
+         26*       <137> OP_DATA                                                   OP1[  IS_CONST (268435375) '%23' ] OP2[  IS_UNUSED  ]
+  110    27*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         28*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435373) 'process' ]
+         29*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         30*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         31*       < 60> DO_FCALL                                      0   RES[  IS_VAR $16 ]      OP1[  IS_UNUSED  ]
+         32*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435364) 'rearranged' ]
+         33*       <137> OP_DATA                                                   OP1[  IS_VAR $16 ] OP2[  IS_UNUSED  ]
+  111    34*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         35*       <123> TYPE_CHECK                                  1020   RES[  IS_TMP_VAR ~17 ]      OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         36*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~17 ]      OP1[  IS_TMP_VAR ~17 ] OP2[ , ->40 ]
+         37*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~18 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435357) 'merge' ]
+         38*       <123> TYPE_CHECK                                    2   RES[  IS_TMP_VAR ~19 ]      OP1[  IS_TMP_VAR ~18 ] OP2[  IS_UNUSED  ]
+         39*       < 52> BOOL                                              RES[  IS_TMP_VAR ~17 ]      OP1[  IS_TMP_VAR ~19 ]
+         40*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~17 ] OP2[ , ->46 ]
+  112    41*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         42*       < 68> NEW                                               RES[  IS_VAR $21 ]      OP1[ 'stdClass' ]
+         43*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         44*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435344) 'merge' ]
+         45*       <137> OP_DATA                                                   OP1[  IS_VAR $21 ] OP2[  IS_UNUSED  ]
+  114    46*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         47*       < 62> RETURN                                                    OP1[  IS_CONST (268435341) null ]
+
+End of function __construct
+
+Function getdiffcnt:
+[+]Function Source Class Name: Swaggest\JsonDiff\JsonDiff
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\swaggest\json-diff\src\JsonDiff.php
+function name:  getDiffCnt
+number of ops:  9
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  122     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435442) 'addedCnt' ]
+          2*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~1 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435441) 'modifiedCnt' ]
+          3*       <  1> ADD                                               RES[  IS_TMP_VAR ~2 ]       OP1[  IS_TMP_VAR ~0 ] OP2[ ,  IS_TMP_VAR ~1 ]
+          4*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~3 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435438) 'removedCnt' ]
+          5*       <  1> ADD                                               RES[  IS_TMP_VAR ~4 ]       OP1[  IS_TMP_VAR ~2 ] OP2[ ,  IS_TMP_VAR ~3 ]
+          6*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~4 ]
+  123     7*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          8*       < 62> RETURN                                                    OP1[  IS_CONST (268435431) null ]
+
+End of function getdiffcnt
+
+Function getremoved:
+[+]Function Source Class Name: Swaggest\JsonDiff\JsonDiff
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\swaggest\json-diff\src\JsonDiff.php
+function name:  getRemoved
+number of ops:  5
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  131     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435450) 'removed' ]
+          2*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~0 ]
+  132     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       < 62> RETURN                                                    OP1[  IS_CONST (268435445) null ]
+
+End of function getremoved
+
+Function getremovedpaths:
+[+]Function Source Class Name: Swaggest\JsonDiff\JsonDiff
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\swaggest\json-diff\src\JsonDiff.php
+function name:  getRemovedPaths
+number of ops:  5
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  140     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435449) 'removedPaths' ]
+          2*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~0 ]
+  141     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       < 62> RETURN                                                    OP1[  IS_CONST (268435444) null ]
+
+End of function getremovedpaths
+
+Function getremovedcnt:
+[+]Function Source Class Name: Swaggest\JsonDiff\JsonDiff
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\swaggest\json-diff\src\JsonDiff.php
+function name:  getRemovedCnt
+number of ops:  5
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  149     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435449) 'removedCnt' ]
+          2*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~0 ]
+  150     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       < 62> RETURN                                                    OP1[  IS_CONST (268435444) null ]
+
+End of function getremovedcnt
+
+Function getadded:
+[+]Function Source Class Name: Swaggest\JsonDiff\JsonDiff
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\swaggest\json-diff\src\JsonDiff.php
+function name:  getAdded
+number of ops:  5
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  158     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435452) 'added' ]
+          2*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~0 ]
+  159     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       < 62> RETURN                                                    OP1[  IS_CONST (268435447) null ]
+
+End of function getadded
+
+Function getaddedcnt:
+[+]Function Source Class Name: Swaggest\JsonDiff\JsonDiff
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\swaggest\json-diff\src\JsonDiff.php
+function name:  getAddedCnt
+number of ops:  5
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  167     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435449) 'addedCnt' ]
+          2*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~0 ]
+  168     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       < 62> RETURN                                                    OP1[  IS_CONST (268435444) null ]
+
+End of function getaddedcnt
+
+Function getaddedpaths:
+[+]Function Source Class Name: Swaggest\JsonDiff\JsonDiff
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\swaggest\json-diff\src\JsonDiff.php
+function name:  getAddedPaths
+number of ops:  5
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  176     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435449) 'addedPaths' ]
+          2*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~0 ]
+  177     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       < 62> RETURN                                                    OP1[  IS_CONST (268435444) null ]
+
+End of function getaddedpaths
+
+Function getmodifiedoriginal:
+[+]Function Source Class Name: Swaggest\JsonDiff\JsonDiff
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\swaggest\json-diff\src\JsonDiff.php
+function name:  getModifiedOriginal
+number of ops:  5
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  185     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435449) 'modifiedOriginal' ]
+          2*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~0 ]
+  186     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       < 62> RETURN                                                    OP1[  IS_CONST (268435444) null ]
+
+End of function getmodifiedoriginal
+
+Function getmodifiednew:
+[+]Function Source Class Name: Swaggest\JsonDiff\JsonDiff
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\swaggest\json-diff\src\JsonDiff.php
+function name:  getModifiedNew
+number of ops:  5
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  194     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435449) 'modifiedNew' ]
+          2*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~0 ]
+  195     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       < 62> RETURN                                                    OP1[  IS_CONST (268435444) null ]
+
+End of function getmodifiednew
+
+Function getmodifiedcnt:
+[+]Function Source Class Name: Swaggest\JsonDiff\JsonDiff
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\swaggest\json-diff\src\JsonDiff.php
+function name:  getModifiedCnt
+number of ops:  5
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  203     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435449) 'modifiedCnt' ]
+          2*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~0 ]
+  204     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       < 62> RETURN                                                    OP1[  IS_CONST (268435444) null ]
+
+End of function getmodifiedcnt
+
+Function getmodifiedpaths:
+[+]Function Source Class Name: Swaggest\JsonDiff\JsonDiff
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\swaggest\json-diff\src\JsonDiff.php
+function name:  getModifiedPaths
+number of ops:  5
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  212     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435449) 'modifiedPaths' ]
+          2*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~0 ]
+  213     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       < 62> RETURN                                                    OP1[  IS_CONST (268435444) null ]
+
+End of function getmodifiedpaths
+
+Function getmodifieddiff:
+[+]Function Source Class Name: Swaggest\JsonDiff\JsonDiff
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\swaggest\json-diff\src\JsonDiff.php
+function name:  getModifiedDiff
+number of ops:  5
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  221     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435449) 'modifiedDiff' ]
+          2*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~0 ]
+  222     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       < 62> RETURN                                                    OP1[  IS_CONST (268435444) null ]
+
+End of function getmodifieddiff
+
+Function getrearranged:
+[+]Function Source Class Name: Swaggest\JsonDiff\JsonDiff
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\swaggest\json-diff\src\JsonDiff.php
+function name:  getRearranged
+number of ops:  5
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  230     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435449) 'rearranged' ]
+          2*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~0 ]
+  231     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       < 62> RETURN                                                    OP1[  IS_CONST (268435444) null ]
+
+End of function getrearranged
+
+Function getpatch:
+[+]Function Source Class Name: Swaggest\JsonDiff\JsonDiff
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\swaggest\json-diff\src\JsonDiff.php
+function name:  getPatch
+number of ops:  5
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  239     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435449) 'jsonPatch' ]
+          2*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~0 ]
+  240     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       < 62> RETURN                                                    OP1[  IS_CONST (268435444) null ]
+
+End of function getpatch
+
+Function getmergepatch:
+[+]Function Source Class Name: Swaggest\JsonDiff\JsonDiff
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\swaggest\json-diff\src\JsonDiff.php
+function name:  getMergePatch
+number of ops:  5
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  247     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435452) 'merge' ]
+          2*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~0 ]
+  249     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       < 62> RETURN                                                    OP1[  IS_CONST (268435447) null ]
+
+End of function getmergepatch
+
+Function process:
+[+]Function Source Class Name: Swaggest\JsonDiff\JsonDiff
+[*]Start of arg_info extract:
+[*]arg_info num_args:2
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:original
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:new
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\swaggest\json-diff\src\JsonDiff.php
+function name:  process
+number of ops:  521
+compiled vars:  !0 = $original, !1 = $new, !2 = $merge, !3 = $newArray, !4 = $newOrdered, !5 = $originalKeys, !6 = $isArray, !7 = $removedOffset, !8 = $isUriFragment, !9 = $diffCnt, !10 = $originalValue, !11 = $key, !12 = $path, !13 = $pathItems, !14 = $actualKey, !15 = $value
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  258     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 63> RECV                                              RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ]
+  260     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~16 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434887) 'options' ]
+          4*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~17 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434886) 'SKIP_JSON_MERGE_PATCH' ]
+          5*       < 10> BW_AND                                            RES[  IS_TMP_VAR ~18 ]      OP1[  IS_TMP_VAR ~16 ] OP2[ ,  IS_TMP_VAR ~17 ]
+          6*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~19 ]      OP1[  IS_TMP_VAR ~18 ]
+          7*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_TMP_VAR ~19 ]
+  262     8*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          9*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~21 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434877) 'options' ]
+         10*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~22 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434876) 'TOLERATE_ASSOCIATIVE_ARRAYS' ]
+         11*       < 10> BW_AND                                            RES[  IS_TMP_VAR ~23 ]      OP1[  IS_TMP_VAR ~21 ] OP2[ ,  IS_TMP_VAR ~22 ]
+         12*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~23 ] OP2[ , ->51 ]
+  263    13*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         14*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268434869) 'Swaggest%5CJsonDiff%5Cis_array' ]
+         15*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         16*       < 60> DO_FCALL                                      0   RES[  IS_VAR $24 ]      OP1[  IS_UNUSED  ]
+         17*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~25 ]      OP1[  IS_VAR $24 ] OP2[ , ->21 ]
+         18*       <154> ISSET_ISEMPTY_CV                                  RES[  IS_TMP_VAR ~26 ]      OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         19*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~27 ]      OP1[  IS_TMP_VAR ~26 ]
+         20*       < 52> BOOL                                              RES[  IS_TMP_VAR ~25 ]      OP1[  IS_TMP_VAR ~27 ]
+         21*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~25 ]      OP1[  IS_TMP_VAR ~25 ] OP2[ , ->28 ]
+         22*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268434856) 'Swaggest%5CJsonDiff%5Carray_key_exists' ]
+         23*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268434857) 0 ] OP2[  IS_UNUSED  ]
+         24*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         25*       < 60> DO_FCALL                                      0   RES[  IS_VAR $28 ]      OP1[  IS_UNUSED  ]
+         26*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~29 ]      OP1[  IS_VAR $28 ]
+         27*       < 52> BOOL                                              RES[  IS_TMP_VAR ~25 ]      OP1[  IS_TMP_VAR ~29 ]
+         28*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~25 ] OP2[ , ->32 ]
+  264    29*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         30*       < 51> CAST                                          8   RES[  IS_TMP_VAR ~30 ]      OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         31*       < 22> ASSIGN                                                    OP1[  IS_CV !0 ] OP2[ ,  IS_TMP_VAR ~30 ]
+  267    32*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         33*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268434838) 'Swaggest%5CJsonDiff%5Cis_array' ]
+         34*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         35*       < 60> DO_FCALL                                      0   RES[  IS_VAR $32 ]      OP1[  IS_UNUSED  ]
+         36*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~33 ]      OP1[  IS_VAR $32 ] OP2[ , ->40 ]
+         37*       <154> ISSET_ISEMPTY_CV                                  RES[  IS_TMP_VAR ~34 ]      OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         38*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~35 ]      OP1[  IS_TMP_VAR ~34 ]
+         39*       < 52> BOOL                                              RES[  IS_TMP_VAR ~33 ]      OP1[  IS_TMP_VAR ~35 ]
+         40*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~33 ]      OP1[  IS_TMP_VAR ~33 ] OP2[ , ->47 ]
+         41*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268434825) 'Swaggest%5CJsonDiff%5Carray_key_exists' ]
+         42*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268434826) 0 ] OP2[  IS_UNUSED  ]
+         43*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         44*       < 60> DO_FCALL                                      0   RES[  IS_VAR $36 ]      OP1[  IS_UNUSED  ]
+         45*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~37 ]      OP1[  IS_VAR $36 ]
+         46*       < 52> BOOL                                              RES[  IS_TMP_VAR ~33 ]      OP1[  IS_TMP_VAR ~37 ]
+         47*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~33 ] OP2[ , ->51 ]
+  268    48*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         49*       < 51> CAST                                          8   RES[  IS_TMP_VAR ~38 ]      OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         50*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_TMP_VAR ~38 ]
+  273    51*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         52*       <138> INSTANCEOF                                        RES[  IS_TMP_VAR ~40 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268434807) 'stdClass' ]
+         53*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~41 ]      OP1[  IS_TMP_VAR ~40 ]
+         54*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~41 ]      OP1[  IS_TMP_VAR ~41 ] OP2[ , ->60 ]
+         55*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268434803) 'Swaggest%5CJsonDiff%5Cis_array' ]
+         56*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         57*       < 60> DO_FCALL                                      0   RES[  IS_VAR $42 ]      OP1[  IS_UNUSED  ]
+         58*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~43 ]      OP1[  IS_VAR $42 ]
+         59*       < 52> BOOL                                              RES[  IS_TMP_VAR ~41 ]      OP1[  IS_TMP_VAR ~43 ]
+         60*       < 47> JMPNZ_EX                                          RES[  IS_TMP_VAR ~41 ]      OP1[  IS_TMP_VAR ~41 ] OP2[ , ->70 ]
+  274    61*       <138> INSTANCEOF                                        RES[  IS_TMP_VAR ~44 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268434794) 'stdClass' ]
+         62*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~45 ]      OP1[  IS_TMP_VAR ~44 ]
+         63*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~45 ]      OP1[  IS_TMP_VAR ~45 ] OP2[ , ->69 ]
+         64*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268434790) 'Swaggest%5CJsonDiff%5Cis_array' ]
+         65*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         66*       < 60> DO_FCALL                                      0   RES[  IS_VAR $46 ]      OP1[  IS_UNUSED  ]
+         67*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~47 ]      OP1[  IS_VAR $46 ]
+         68*       < 52> BOOL                                              RES[  IS_TMP_VAR ~45 ]      OP1[  IS_TMP_VAR ~47 ]
+         69*       < 52> BOOL                                              RES[  IS_TMP_VAR ~41 ]      OP1[  IS_TMP_VAR ~45 ]
+         70*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~41 ] OP2[ , ->177 ]
+  276    71*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         72*       < 17> IS_NOT_IDENTICAL                                  RES[  IS_TMP_VAR ~48 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CV !1 ]
+         73*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~48 ]      OP1[  IS_TMP_VAR ~48 ] OP2[ , ->84 ]
+         74*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268434773) 'Swaggest%5CJsonDiff%5Cin_array' ]
+         75*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         76*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $49 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434772) 'path' ]
+         77*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $49 ] OP2[  IS_UNUSED  ]
+         78*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         79*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $50 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434767) 'skipPaths' ]
+         80*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $50 ] OP2[  IS_UNUSED  ]
+         81*       < 60> DO_FCALL                                      0   RES[  IS_VAR $51 ]      OP1[  IS_UNUSED  ]
+         82*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~52 ]      OP1[  IS_VAR $51 ]
+         83*       < 52> BOOL                                              RES[  IS_TMP_VAR ~48 ]      OP1[  IS_TMP_VAR ~52 ]
+         84*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~48 ] OP2[ , ->175 ]
+  277    85*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         86*       <132> PRE_INC_OBJ                                               OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434754) 'modifiedCnt' ]
+  278    87*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         88*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~54 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434751) 'options' ]
+         89*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~55 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434750) 'STOP_ON_DIFF' ]
+         90*       < 10> BW_AND                                            RES[  IS_TMP_VAR ~56 ]      OP1[  IS_TMP_VAR ~54 ] OP2[ ,  IS_TMP_VAR ~55 ]
+         91*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~56 ] OP2[ , ->94 ]
+  279    92*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         93*       < 62> RETURN                                                    OP1[  IS_CONST (268434743) null ]
+  281    94*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         95*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~59 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434741) 'path' ]
+         96*       < 85> FETCH_OBJ_W                                       RES[  IS_VAR $57 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434738) 'modifiedPaths' ]
+         97*       < 23> ASSIGN_DIM                                                OP1[  IS_VAR $57 ] OP2[  IS_UNUSED  ]
+         98*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~59 ] OP2[  IS_UNUSED  ]
+  283    99*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        100*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~60 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434732) 'jsonPatch' ]
+        101*       <123> TYPE_CHECK                                  1020   RES[  IS_TMP_VAR ~61 ]      OP1[  IS_TMP_VAR ~60 ] OP2[  IS_UNUSED  ]
+        102*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~61 ] OP2[ , ->125 ]
+  284   103*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        104*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~62 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434725) 'jsonPatch' ]
+        105*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~62 ] OP2[ ,  IS_CONST (268434724) 'op' ]
+        106*       < 68> NEW                                               RES[  IS_VAR $63 ]      OP1[ 'Swaggest%5CJsonDiff%5CJsonPatch%5CTest' ]
+        107*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        108*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $64 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434722) 'path' ]
+        109*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $64 ] OP2[  IS_UNUSED  ]
+        110*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+        111*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+        112*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $63 ] OP2[  IS_UNUSED  ]
+        113*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  285   114*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        115*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~67 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434709) 'jsonPatch' ]
+        116*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~67 ] OP2[ ,  IS_CONST (268434708) 'op' ]
+        117*       < 68> NEW                                               RES[  IS_VAR $68 ]      OP1[ 'Swaggest%5CJsonDiff%5CJsonPatch%5CReplace' ]
+        118*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        119*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $69 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434706) 'path' ]
+        120*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $69 ] OP2[  IS_UNUSED  ]
+        121*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+        122*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+        123*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $68 ] OP2[  IS_UNUSED  ]
+        124*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  288   125*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        126*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268434693) 'Swaggest%5CJsonDiff%5CJsonPointer' ] OP2[ ,  IS_CONST (268434695) 'add' ]
+        127*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        128*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $72 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434693) 'modifiedOriginal' ]
+        129*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $72 ] OP2[  IS_UNUSED  ]
+        130*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        131*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $73 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434688) 'pathItems' ]
+        132*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $73 ] OP2[  IS_UNUSED  ]
+        133*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+        134*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  289   135*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        136*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268434679) 'Swaggest%5CJsonDiff%5CJsonPointer' ] OP2[ ,  IS_CONST (268434681) 'add' ]
+        137*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        138*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $75 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434679) 'modifiedNew' ]
+        139*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $75 ] OP2[  IS_UNUSED  ]
+        140*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        141*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $76 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434674) 'pathItems' ]
+        142*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $76 ] OP2[  IS_UNUSED  ]
+        143*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+        144*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  291   145*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        146*       < 43> JMPZ                                                      OP1[  IS_CV !2 ] OP2[ , ->159 ]
+  292   147*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        148*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268434661) 'Swaggest%5CJsonDiff%5CJsonPointer' ] OP2[ ,  IS_CONST (268434663) 'add' ]
+        149*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        150*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $78 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434661) 'merge' ]
+        151*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $78 ] OP2[  IS_UNUSED  ]
+        152*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        153*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $79 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434656) 'pathItems' ]
+        154*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $79 ] OP2[  IS_UNUSED  ]
+        155*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+        156*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~80 ]      OP1[  IS_CONST (268434652) 'Swaggest%5CJsonDiff%5CJsonPointer' ] OP2[ ,  IS_CONST (268434651) 'RECURSIVE_KEY_CREATION' ]
+        157*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~80 ] OP2[  IS_UNUSED  ]
+        158*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  295   159*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        160*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~82 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434646) 'options' ]
+        161*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~83 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434645) 'COLLECT_MODIFIED_DIFF' ]
+        162*       < 10> BW_AND                                            RES[  IS_TMP_VAR ~84 ]      OP1[  IS_TMP_VAR ~82 ] OP2[ ,  IS_TMP_VAR ~83 ]
+        163*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~84 ] OP2[ , ->175 ]
+  296   164*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        165*       < 68> NEW                                               RES[  IS_VAR $87 ]      OP1[ 'Swaggest%5CJsonDiff%5CModifiedPathDiff' ]
+        166*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        167*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $88 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434637) 'path' ]
+        168*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $88 ] OP2[  IS_UNUSED  ]
+        169*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+        170*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+        171*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+        172*       < 85> FETCH_OBJ_W                                       RES[  IS_VAR $85 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434624) 'modifiedDiff' ]
+        173*       < 23> ASSIGN_DIM                                                OP1[  IS_VAR $85 ] OP2[  IS_UNUSED  ]
+        174*       <137> OP_DATA                                                   OP1[  IS_VAR $87 ] OP2[  IS_UNUSED  ]
+  299   175*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        176*       < 62> RETURN                                                    OP1[  IS_CV !1 ]
+  303   177*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        178*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~90 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434616) 'options' ]
+        179*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~91 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434615) 'REARRANGE_ARRAYS' ]
+        180*       < 10> BW_AND                                            RES[  IS_TMP_VAR ~92 ]      OP1[  IS_TMP_VAR ~90 ] OP2[ ,  IS_TMP_VAR ~91 ]
+        181*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~92 ]      OP1[  IS_TMP_VAR ~92 ] OP2[ , ->186 ]
+  304   182*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268434610) 'Swaggest%5CJsonDiff%5Cis_array' ]
+        183*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+        184*       < 60> DO_FCALL                                      0   RES[  IS_VAR $93 ]      OP1[  IS_UNUSED  ]
+        185*       < 52> BOOL                                              RES[  IS_TMP_VAR ~92 ]      OP1[  IS_VAR $93 ]
+        186*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~92 ]      OP1[  IS_TMP_VAR ~92 ] OP2[ , ->191 ]
+        187*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268434603) 'Swaggest%5CJsonDiff%5Cis_array' ]
+        188*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+        189*       < 60> DO_FCALL                                      0   RES[  IS_VAR $94 ]      OP1[  IS_UNUSED  ]
+        190*       < 52> BOOL                                              RES[  IS_TMP_VAR ~92 ]      OP1[  IS_VAR $94 ]
+        191*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~92 ] OP2[ , ->198 ]
+  306   192*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        193*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434594) 'rearrangeArray' ]
+        194*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+        195*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+        196*       < 60> DO_FCALL                                      0   RES[  IS_VAR $95 ]      OP1[  IS_UNUSED  ]
+        197*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_VAR $95 ]
+  309   198*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        199*       <138> INSTANCEOF                                        RES[  IS_TMP_VAR ~97 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268434584) 'stdClass' ]
+        200*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~97 ] OP2[ , ->206 ]
+        201*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268434582) 'Swaggest%5CJsonDiff%5Cget_object_vars' ]
+        202*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+        203*       < 60> DO_FCALL                                      0   RES[  IS_VAR $98 ]      OP1[  IS_UNUSED  ]
+        204*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~99 ]      OP1[  IS_VAR $98 ]
+        205*       < 42> JMP                                                       OP1[ ->207 ]
+        206*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~99 ]      OP1[  IS_CV !1 ]
+        207*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_TMP_VAR ~99 ]
+  310   208*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        209*       < 22> ASSIGN                                                    OP1[  IS_CV !4 ] OP2[ ,  IS_CONST (268434569) <array> ]
+  312   210*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        211*       <138> INSTANCEOF                                        RES[  IS_TMP_VAR ~102 ]     OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268434566) 'stdClass' ]
+        212*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~102 ] OP2[ , ->218 ]
+        213*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268434564) 'Swaggest%5CJsonDiff%5Cget_object_vars' ]
+        214*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+        215*       < 60> DO_FCALL                                      0   RES[  IS_VAR $103 ]     OP1[  IS_UNUSED  ]
+        216*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~104 ]     OP1[  IS_VAR $103 ]
+        217*       < 42> JMP                                                       OP1[ ->219 ]
+        218*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~104 ]     OP1[  IS_CV !0 ]
+        219*       < 22> ASSIGN                                                    OP1[  IS_CV !5 ] OP2[ ,  IS_TMP_VAR ~104 ]
+  313   220*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        221*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268434551) 'Swaggest%5CJsonDiff%5Cis_array' ]
+        222*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+        223*       < 60> DO_FCALL                                      0   RES[  IS_VAR $106 ]     OP1[  IS_UNUSED  ]
+        224*       < 22> ASSIGN                                                    OP1[  IS_CV !6 ] OP2[ ,  IS_VAR $106 ]
+  314   225*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        226*       < 22> ASSIGN                                                    OP1[  IS_CV !7 ] OP2[ ,  IS_CONST (268434544) 0 ]
+  316   227*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        228*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~109 ]     OP1[  IS_CV !2 ] OP2[ , ->233 ]
+        229*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268434539) 'Swaggest%5CJsonDiff%5Cis_array' ]
+        230*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+        231*       < 60> DO_FCALL                                      0   RES[  IS_VAR $110 ]     OP1[  IS_UNUSED  ]
+        232*       < 52> BOOL                                              RES[  IS_TMP_VAR ~109 ]     OP1[  IS_VAR $110 ]
+        233*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~109 ]     OP1[  IS_TMP_VAR ~109 ] OP2[ , ->239 ]
+        234*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268434532) 'Swaggest%5CJsonDiff%5Cis_array' ]
+        235*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+        236*       < 60> DO_FCALL                                      0   RES[  IS_VAR $111 ]     OP1[  IS_UNUSED  ]
+        237*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~112 ]     OP1[  IS_VAR $111 ]
+        238*       < 52> BOOL                                              RES[  IS_TMP_VAR ~109 ]     OP1[  IS_TMP_VAR ~112 ]
+        239*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~109 ] OP2[ , ->253 ]
+  317   240*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        241*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268434521) <false> ]
+  318   242*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        243*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268434518) 'Swaggest%5CJsonDiff%5CJsonPointer' ] OP2[ ,  IS_CONST (268434520) 'add' ]
+        244*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        245*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $114 ]     OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434518) 'merge' ]
+        246*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $114 ] OP2[  IS_UNUSED  ]
+        247*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        248*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $115 ]     OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434513) 'pathItems' ]
+        249*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $115 ] OP2[  IS_UNUSED  ]
+        250*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+        251*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+        252*       < 42> JMP                                                       OP1[ ->274 ]
+  319   253*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        254*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~117 ]     OP1[  IS_CV !2 ] OP2[ , ->257 ]
+        255*       <138> INSTANCEOF                                        RES[  IS_TMP_VAR ~118 ]     OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268434500) 'stdClass' ]
+        256*       < 52> BOOL                                              RES[  IS_TMP_VAR ~117 ]     OP1[  IS_TMP_VAR ~118 ]
+        257*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~117 ]     OP1[  IS_TMP_VAR ~117 ] OP2[ , ->261 ]
+        258*       <138> INSTANCEOF                                        RES[  IS_TMP_VAR ~119 ]     OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268434496) 'stdClass' ]
+        259*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~120 ]     OP1[  IS_TMP_VAR ~119 ]
+        260*       < 52> BOOL                                              RES[  IS_TMP_VAR ~117 ]     OP1[  IS_TMP_VAR ~120 ]
+        261*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~117 ] OP2[ , ->274 ]
+  320   262*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        263*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268434488) <false> ]
+  321   264*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        265*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268434485) 'Swaggest%5CJsonDiff%5CJsonPointer' ] OP2[ ,  IS_CONST (268434487) 'add' ]
+        266*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        267*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $122 ]     OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434485) 'merge' ]
+        268*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $122 ] OP2[  IS_UNUSED  ]
+        269*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        270*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $123 ]     OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434480) 'pathItems' ]
+        271*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $123 ] OP2[  IS_UNUSED  ]
+        272*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+        273*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  324   274*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        275*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~125 ]     OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434471) 'options' ]
+        276*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~126 ]     OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434470) 'JSON_URI_FRAGMENT_ID' ]
+        277*       < 10> BW_AND                                            RES[  IS_TMP_VAR ~127 ]     OP1[  IS_TMP_VAR ~125 ] OP2[ ,  IS_TMP_VAR ~126 ]
+        278*       < 52> BOOL                                              RES[  IS_TMP_VAR ~128 ]     OP1[  IS_TMP_VAR ~127 ]
+        279*       < 22> ASSIGN                                                    OP1[  IS_CV !8 ] OP2[ ,  IS_TMP_VAR ~128 ]
+  325   280*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        281*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~130 ]     OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434461) 'addedCnt' ]
+        282*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~131 ]     OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434460) 'modifiedCnt' ]
+        283*       <  1> ADD                                               RES[  IS_TMP_VAR ~132 ]     OP1[  IS_TMP_VAR ~130 ] OP2[ ,  IS_TMP_VAR ~131 ]
+        284*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~133 ]     OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434457) 'removedCnt' ]
+        285*       <  1> ADD                                               RES[  IS_TMP_VAR ~134 ]     OP1[  IS_TMP_VAR ~132 ] OP2[ ,  IS_TMP_VAR ~133 ]
+        286*       < 22> ASSIGN                                                    OP1[  IS_CV !9 ] OP2[ ,  IS_TMP_VAR ~134 ]
+  326   287*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        288*       < 77> FE_RESET_R                                        RES[  IS_VAR $136 ]     OP1[  IS_CV !5 ] OP2[ , ->417 ]
+        289*       < 78> FE_FETCH_R                                        RES[  IS_TMP_VAR ~137 ]     OP1[  IS_VAR $136 ] OP2[ ,  IS_CV !10 ] EXT_JMP_REL[ , ->417 ]
+        290*       < 22> ASSIGN                                                    OP1[  IS_CV !11 ] OP2[ ,  IS_TMP_VAR ~137 ]
+  327   291*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        292*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~139 ]     OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434442) 'options' ]
+        293*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~140 ]     OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434441) 'STOP_ON_DIFF' ]
+        294*       < 10> BW_AND                                            RES[  IS_TMP_VAR ~141 ]     OP1[  IS_TMP_VAR ~139 ] OP2[ ,  IS_TMP_VAR ~140 ]
+        295*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~141 ] OP2[ , ->308 ]
+  328   296*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        297*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~142 ]     OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434434) 'modifiedCnt' ]
+        298*       < 47> JMPNZ_EX                                          RES[  IS_TMP_VAR ~142 ]     OP1[  IS_TMP_VAR ~142 ] OP2[ , ->301 ]
+        299*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~143 ]     OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434431) 'addedCnt' ]
+        300*       < 52> BOOL                                              RES[  IS_TMP_VAR ~142 ]     OP1[  IS_TMP_VAR ~143 ]
+        301*       < 47> JMPNZ_EX                                          RES[  IS_TMP_VAR ~142 ]     OP1[  IS_TMP_VAR ~142 ] OP2[ , ->304 ]
+        302*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~144 ]     OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434426) 'removedCnt' ]
+        303*       < 52> BOOL                                              RES[  IS_TMP_VAR ~142 ]     OP1[  IS_TMP_VAR ~144 ]
+        304*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~142 ] OP2[ , ->308 ]
+  329   305*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        306*       <127> FE_FREE                                                   OP1[  IS_VAR $136 ] OP2[  IS_UNUSED  ]
+        307*       < 62> RETURN                                                    OP1[  IS_CONST (268434417) null ]
+  333   308*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        309*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~145 ]     OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434414) 'path' ]
+        310*       < 22> ASSIGN                                                    OP1[  IS_CV !12 ] OP2[ ,  IS_TMP_VAR ~145 ]
+  334   311*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        312*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~147 ]     OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434409) 'pathItems' ]
+        313*       < 22> ASSIGN                                                    OP1[  IS_CV !13 ] OP2[ ,  IS_TMP_VAR ~147 ]
+  335   314*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        315*       < 22> ASSIGN                                                    OP1[  IS_CV !14 ] OP2[ ,  IS_CV !11 ]
+  336   316*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        317*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~150 ]     OP1[  IS_CV !6 ] OP2[ , ->322 ]
+        318*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268434398) 'Swaggest%5CJsonDiff%5Cis_int' ]
+        319*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !14 ] OP2[  IS_UNUSED  ]
+        320*       < 60> DO_FCALL                                      0   RES[  IS_VAR $151 ]     OP1[  IS_UNUSED  ]
+        321*       < 52> BOOL                                              RES[  IS_TMP_VAR ~150 ]     OP1[  IS_VAR $151 ]
+        322*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~150 ] OP2[ , ->325 ]
+  337   323*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        324*       < 26> ASSIGN_OP                    -=               2           OP1[  IS_CV !14 ] OP2[ ,  IS_CV !7 ]
+  339   325*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        326*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268434386) 'Swaggest%5CJsonDiff%5CJsonPointer' ] OP2[ ,  IS_CONST (268434388) 'escapeSegment' ]
+        327*       < 51> CAST                                          6   RES[  IS_TMP_VAR ~154 ]     OP1[  IS_CV !14 ] OP2[  IS_UNUSED  ]
+        328*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~154 ] OP2[  IS_UNUSED  ]
+        329*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !8 ] OP2[  IS_UNUSED  ]
+        330*       < 60> DO_FCALL                                      0   RES[  IS_VAR $155 ]     OP1[  IS_UNUSED  ]
+        331*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~156 ]     OP1[  IS_CONST (268434380) '%2F' ] OP2[ ,  IS_VAR $155 ]
+        332*       < 28> ASSIGN_OBJ_OP                                 8           OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434373) 'path' ]
+        333*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~156 ] OP2[  IS_UNUSED  ]
+  340   334*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        335*       < 85> FETCH_OBJ_W                                       RES[  IS_VAR $157 ]     OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434373) 'pathItems' ]
+        336*       < 23> ASSIGN_DIM                                                OP1[  IS_VAR $157 ] OP2[  IS_UNUSED  ]
+        337*       <137> OP_DATA                                                   OP1[  IS_CV !14 ] OP2[  IS_UNUSED  ]
+  342   338*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        339*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268434366) 'Swaggest%5CJsonDiff%5Carray_key_exists' ]
+        340*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !11 ] OP2[  IS_UNUSED  ]
+        341*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+        342*       < 60> DO_FCALL                                      0   RES[  IS_VAR $159 ]     OP1[  IS_UNUSED  ]
+        343*       < 43> JMPZ                                                      OP1[  IS_VAR $159 ] OP2[ , ->355 ]
+  343   344*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        345*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434357) 'process' ]
+        346*       <117> SEND_VAR                                                  OP1[  IS_CV !10 ] OP2[  IS_UNUSED  ]
+        347*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~161 ]     OP1[  IS_CV !3 ] OP2[ ,  IS_CV !11 ]
+        348*       < 65> SEND_VAL                                                  OP1[  IS_TMP_VAR ~161 ]
+        349*       < 60> DO_FCALL                                      0   RES[  IS_VAR $162 ]     OP1[  IS_UNUSED  ]
+        350*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !4 ] OP2[ ,  IS_CV !11 ]
+        351*       <137> OP_DATA                                                   OP1[  IS_VAR $162 ] OP2[  IS_UNUSED  ]
+  344   352*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        353*       < 75> UNSET_DIM                                                 OP1[  IS_CV !3 ] OP2[ ,  IS_CV !11 ]
+        354*       < 42> JMP                                                       OP1[ ->410 ]
+  346   355*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        356*       <132> PRE_INC_OBJ                                               OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434337) 'removedCnt' ]
+  347   357*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        358*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~164 ]     OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434334) 'options' ]
+        359*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~165 ]     OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434333) 'STOP_ON_DIFF' ]
+        360*       < 10> BW_AND                                            RES[  IS_TMP_VAR ~166 ]     OP1[  IS_TMP_VAR ~164 ] OP2[ ,  IS_TMP_VAR ~165 ]
+        361*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~166 ] OP2[ , ->365 ]
+  348   362*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        363*       <127> FE_FREE                                                   OP1[  IS_VAR $136 ] OP2[  IS_UNUSED  ]
+        364*       < 62> RETURN                                                    OP1[  IS_CONST (268434324) null ]
+  350   365*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        366*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~169 ]     OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434322) 'path' ]
+        367*       < 85> FETCH_OBJ_W                                       RES[  IS_VAR $167 ]     OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434319) 'removedPaths' ]
+        368*       < 23> ASSIGN_DIM                                                OP1[  IS_VAR $167 ] OP2[  IS_UNUSED  ]
+        369*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~169 ] OP2[  IS_UNUSED  ]
+  351   370*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        371*       < 43> JMPZ                                                      OP1[  IS_CV !6 ] OP2[ , ->374 ]
+  352   372*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        373*       < 34> PRE_INC                                                   OP1[  IS_CV !7 ]
+  355   374*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        375*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~171 ]     OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434305) 'jsonPatch' ]
+        376*       <123> TYPE_CHECK                                  1020   RES[  IS_TMP_VAR ~172 ]     OP1[  IS_TMP_VAR ~171 ] OP2[  IS_UNUSED  ]
+        377*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~172 ] OP2[ , ->388 ]
+  356   378*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        379*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~173 ]     OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434298) 'jsonPatch' ]
+        380*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~173 ] OP2[ ,  IS_CONST (268434297) 'op' ]
+        381*       < 68> NEW                                               RES[  IS_VAR $174 ]     OP1[ 'Swaggest%5CJsonDiff%5CJsonPatch%5CRemove' ]
+        382*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        383*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $175 ]     OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434295) 'path' ]
+        384*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $175 ] OP2[  IS_UNUSED  ]
+        385*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+        386*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $174 ] OP2[  IS_UNUSED  ]
+        387*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  359   388*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        389*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268434284) 'Swaggest%5CJsonDiff%5CJsonPointer' ] OP2[ ,  IS_CONST (268434286) 'add' ]
+        390*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        391*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $178 ]     OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434284) 'removed' ]
+        392*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $178 ] OP2[  IS_UNUSED  ]
+        393*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        394*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $179 ]     OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434279) 'pathItems' ]
+        395*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $179 ] OP2[  IS_UNUSED  ]
+        396*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !10 ] OP2[  IS_UNUSED  ]
+        397*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  360   398*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        399*       < 43> JMPZ                                                      OP1[  IS_CV !2 ] OP2[ , ->410 ]
+  361   400*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        401*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268434266) 'Swaggest%5CJsonDiff%5CJsonPointer' ] OP2[ ,  IS_CONST (268434268) 'add' ]
+        402*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        403*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $181 ]     OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434266) 'merge' ]
+        404*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $181 ] OP2[  IS_UNUSED  ]
+        405*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        406*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $182 ]     OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434261) 'pathItems' ]
+        407*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $182 ] OP2[  IS_UNUSED  ]
+        408*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268434258) null ] OP2[  IS_UNUSED  ]
+        409*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  365   410*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        411*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434253) 'path' ]
+        412*       <137> OP_DATA                                                   OP1[  IS_CV !12 ] OP2[  IS_UNUSED  ]
+  366   413*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        414*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434248) 'pathItems' ]
+        415*       <137> OP_DATA                                                   OP1[  IS_CV !13 ] OP2[  IS_UNUSED  ]
+  326   416*       < 42> JMP                                                       OP1[ ->289 ]
+        417*       <127> FE_FREE                                                   OP1[  IS_VAR $136 ] OP2[  IS_UNUSED  ]
+  369   418*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        419*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~186 ]     OP1[  IS_CV !2 ] OP2[ , ->421 ]
+        420*       < 52> BOOL                                              RES[  IS_TMP_VAR ~186 ]     OP1[  IS_CV !6 ]
+        421*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~186 ]     OP1[  IS_TMP_VAR ~186 ] OP2[ , ->429 ]
+        422*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~187 ]     OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434233) 'addedCnt' ]
+        423*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~188 ]     OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434232) 'modifiedCnt' ]
+        424*       <  1> ADD                                               RES[  IS_TMP_VAR ~189 ]     OP1[  IS_TMP_VAR ~187 ] OP2[ ,  IS_TMP_VAR ~188 ]
+        425*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~190 ]     OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434229) 'removedCnt' ]
+        426*       <  1> ADD                                               RES[  IS_TMP_VAR ~191 ]     OP1[  IS_TMP_VAR ~189 ] OP2[ ,  IS_TMP_VAR ~190 ]
+        427*       < 20> IS_SMALLER                                        RES[  IS_TMP_VAR ~192 ]     OP1[  IS_CV !9 ] OP2[ ,  IS_TMP_VAR ~191 ]
+        428*       < 52> BOOL                                              RES[  IS_TMP_VAR ~186 ]     OP1[  IS_TMP_VAR ~192 ]
+        429*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~186 ] OP2[ , ->440 ]
+  370   430*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        431*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268434218) 'Swaggest%5CJsonDiff%5CJsonPointer' ] OP2[ ,  IS_CONST (268434220) 'add' ]
+        432*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        433*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $193 ]     OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434218) 'merge' ]
+        434*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $193 ] OP2[  IS_UNUSED  ]
+        435*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        436*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $194 ]     OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434213) 'pathItems' ]
+        437*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $194 ] OP2[  IS_UNUSED  ]
+        438*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+        439*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  374   440*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        441*       < 77> FE_RESET_R                                        RES[  IS_VAR $196 ]     OP1[  IS_CV !3 ] OP2[ , ->508 ]
+        442*       < 78> FE_FETCH_R                                        RES[  IS_TMP_VAR ~197 ]     OP1[  IS_VAR $196 ] OP2[ ,  IS_CV !15 ] EXT_JMP_REL[ , ->508 ]
+        443*       < 22> ASSIGN                                                    OP1[  IS_CV !11 ] OP2[ ,  IS_TMP_VAR ~197 ]
+  375   444*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        445*       <132> PRE_INC_OBJ                                               OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434196) 'addedCnt' ]
+  376   446*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        447*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~200 ]     OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434193) 'options' ]
+        448*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~201 ]     OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434192) 'STOP_ON_DIFF' ]
+        449*       < 10> BW_AND                                            RES[  IS_TMP_VAR ~202 ]     OP1[  IS_TMP_VAR ~200 ] OP2[ ,  IS_TMP_VAR ~201 ]
+        450*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~202 ] OP2[ , ->454 ]
+  377   451*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        452*       <127> FE_FREE                                                   OP1[  IS_VAR $196 ] OP2[  IS_UNUSED  ]
+        453*       < 62> RETURN                                                    OP1[  IS_CONST (268434183) null ]
+  379   454*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        455*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !4 ] OP2[ ,  IS_CV !11 ]
+        456*       <137> OP_DATA                                                   OP1[  IS_CV !15 ] OP2[  IS_UNUSED  ]
+  380   457*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        458*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~204 ]     OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434174) 'path' ]
+        459*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~205 ]     OP1[  IS_TMP_VAR ~204 ] OP2[ ,  IS_CONST (268434173) '%2F' ]
+        460*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268434172) 'Swaggest%5CJsonDiff%5CJsonPointer' ] OP2[ ,  IS_CONST (268434174) 'escapeSegment' ]
+        461*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !11 ] OP2[  IS_UNUSED  ]
+        462*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !8 ] OP2[  IS_UNUSED  ]
+        463*       < 60> DO_FCALL                                      0   RES[  IS_VAR $206 ]     OP1[  IS_UNUSED  ]
+        464*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~207 ]     OP1[  IS_TMP_VAR ~205 ] OP2[ ,  IS_VAR $206 ]
+        465*       < 22> ASSIGN                                                    OP1[  IS_CV !12 ] OP2[ ,  IS_TMP_VAR ~207 ]
+  381   466*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        467*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~209 ]     OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434162) 'pathItems' ]
+        468*       < 22> ASSIGN                                                    OP1[  IS_CV !13 ] OP2[ ,  IS_TMP_VAR ~209 ]
+  382   469*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        470*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !13 ] OP2[  IS_UNUSED  ]
+        471*       <137> OP_DATA                                                   OP1[  IS_CV !11 ] OP2[  IS_UNUSED  ]
+  383   472*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        473*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268434151) 'Swaggest%5CJsonDiff%5CJsonPointer' ] OP2[ ,  IS_CONST (268434153) 'add' ]
+        474*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        475*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $212 ]     OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434151) 'added' ]
+        476*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $212 ] OP2[  IS_UNUSED  ]
+        477*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !13 ] OP2[  IS_UNUSED  ]
+        478*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !15 ] OP2[  IS_UNUSED  ]
+        479*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  384   480*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        481*       < 43> JMPZ                                                      OP1[  IS_CV !2 ] OP2[ , ->490 ]
+  385   482*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        483*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268434136) 'Swaggest%5CJsonDiff%5CJsonPointer' ] OP2[ ,  IS_CONST (268434138) 'add' ]
+        484*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        485*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $214 ]     OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434136) 'merge' ]
+        486*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $214 ] OP2[  IS_UNUSED  ]
+        487*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !13 ] OP2[  IS_UNUSED  ]
+        488*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !15 ] OP2[  IS_UNUSED  ]
+        489*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  388   490*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        491*       < 85> FETCH_OBJ_W                                       RES[  IS_VAR $216 ]     OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434125) 'addedPaths' ]
+        492*       < 23> ASSIGN_DIM                                                OP1[  IS_VAR $216 ] OP2[  IS_UNUSED  ]
+        493*       <137> OP_DATA                                                   OP1[  IS_CV !12 ] OP2[  IS_UNUSED  ]
+  390   494*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        495*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~218 ]     OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434118) 'jsonPatch' ]
+        496*       <123> TYPE_CHECK                                  1020   RES[  IS_TMP_VAR ~219 ]     OP1[  IS_TMP_VAR ~218 ] OP2[  IS_UNUSED  ]
+        497*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~219 ] OP2[ , ->507 ]
+  391   498*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        499*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~220 ]     OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434111) 'jsonPatch' ]
+        500*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~220 ] OP2[ ,  IS_CONST (268434110) 'op' ]
+        501*       < 68> NEW                                               RES[  IS_VAR $221 ]     OP1[ 'Swaggest%5CJsonDiff%5CJsonPatch%5CAdd' ]
+        502*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !12 ] OP2[  IS_UNUSED  ]
+        503*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !15 ] OP2[  IS_UNUSED  ]
+        504*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+        505*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $221 ] OP2[  IS_UNUSED  ]
+        506*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  374   507*       < 42> JMP                                                       OP1[ ->442 ]
+        508*       <127> FE_FREE                                                   OP1[  IS_VAR $196 ] OP2[  IS_UNUSED  ]
+  396   509*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        510*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268434094) 'Swaggest%5CJsonDiff%5Cis_array' ]
+        511*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+        512*       < 60> DO_FCALL                                      0   RES[  IS_VAR $224 ]     OP1[  IS_UNUSED  ]
+        513*       < 43> JMPZ                                                      OP1[  IS_VAR $224 ] OP2[ , ->516 ]
+        514*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~225 ]     OP1[  IS_CV !4 ]
+        515*       < 42> JMP                                                       OP1[ ->518 ]
+        516*       < 51> CAST                                          8   RES[  IS_TMP_VAR ~226 ]     OP1[  IS_CV !4 ] OP2[  IS_UNUSED  ]
+        517*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~225 ]     OP1[  IS_TMP_VAR ~226 ]
+        518*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~225 ]
+  397   519*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        520*       < 62> RETURN                                                    OP1[  IS_CONST (268434077) null ]
+
+End of function process
+
+Function rearrangearray:
+[+]Function Source Class Name: Swaggest\JsonDiff\JsonDiff
+[*]Start of arg_info extract:
+[*]arg_info num_args:2
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:original
+[*]type:array
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:new
+[*]type:array
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\swaggest\json-diff\src\JsonDiff.php
+function name:  rearrangeArray
+number of ops:  230
+compiled vars:  !0 = $original, !1 = $new, !2 = $first, !3 = $uniqueKey, !4 = $uniqueIdx, !5 = $f, !6 = $value, !7 = $key, !8 = $keyIsUnique, !9 = $item, !10 = $idx, !11 = $newRearranged, !12 = $changedItems, !13 = $newIdx
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  404     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 63> RECV                                              RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ]
+  406     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435286) 'Swaggest%5CJsonDiff%5Creset' ]
+          4*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          5*       < 60> DO_FCALL                                      0   RES[  IS_VAR $14 ]      OP1[  IS_UNUSED  ]
+          6*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_VAR $14 ]
+  407     7*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          8*       <138> INSTANCEOF                                        RES[  IS_TMP_VAR ~16 ]      OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435279) 'stdClass' ]
+          9*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~17 ]      OP1[  IS_TMP_VAR ~16 ]
+         10*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~17 ] OP2[ , ->17 ]
+  408    11*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         12*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435273) 'rearrangeEqualItems' ]
+         13*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         14*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         15*       < 60> DO_FCALL                                      0   RES[  IS_VAR $18 ]      OP1[  IS_UNUSED  ]
+         16*       < 62> RETURN                                                    OP1[  IS_VAR $18 ]
+  411    17*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         18*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435263) <false> ]
+  412    19*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         20*       < 22> ASSIGN                                                    OP1[  IS_CV !4 ] OP2[ ,  IS_CONST (268435260) <array> ]
+  416    21*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         22*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435257) 'Swaggest%5CJsonDiff%5Cget_object_vars' ]
+         23*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         24*       < 60> DO_FCALL                                      0   RES[  IS_VAR $21 ]      OP1[  IS_UNUSED  ]
+         25*       < 22> ASSIGN                                                    OP1[  IS_CV !5 ] OP2[ ,  IS_VAR $21 ]
+  417    26*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         27*       < 77> FE_RESET_R                                        RES[  IS_VAR $23 ]      OP1[  IS_CV !5 ] OP2[ , ->113 ]
+         28*       < 78> FE_FETCH_R                                        RES[  IS_TMP_VAR ~24 ]      OP1[  IS_VAR $23 ] OP2[ ,  IS_CV !6 ] EXT_JMP_REL[ , ->113 ]
+         29*       < 22> ASSIGN                                                    OP1[  IS_CV !7 ] OP2[ ,  IS_TMP_VAR ~24 ]
+  418    30*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         31*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435242) 'Swaggest%5CJsonDiff%5Cis_array' ]
+         32*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !6 ] OP2[  IS_UNUSED  ]
+         33*       < 60> DO_FCALL                                      0   RES[  IS_VAR $26 ]      OP1[  IS_UNUSED  ]
+         34*       < 43> JMPZ                                                      OP1[  IS_VAR $26 ] OP2[ , ->37 ]
+  419    35*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         36*       < 42> JMP                                                       OP1[ ->28 ]
+  422    37*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         38*       < 22> ASSIGN                                                    OP1[  IS_CV !8 ] OP2[ ,  IS_CONST (268435231) <true> ]
+  423    39*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         40*       < 22> ASSIGN                                                    OP1[  IS_CV !4 ] OP2[ ,  IS_CONST (268435228) <array> ]
+  424    41*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         42*       < 77> FE_RESET_R                                        RES[  IS_VAR $29 ]      OP1[  IS_CV !0 ] OP2[ , ->105 ]
+         43*       < 78> FE_FETCH_R                                        RES[  IS_TMP_VAR ~30 ]      OP1[  IS_VAR $29 ] OP2[ ,  IS_CV !9 ] EXT_JMP_REL[ , ->105 ]
+         44*       < 22> ASSIGN                                                    OP1[  IS_CV !10 ] OP2[ ,  IS_TMP_VAR ~30 ]
+  425    45*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         46*       <138> INSTANCEOF                                        RES[  IS_TMP_VAR ~32 ]      OP1[  IS_CV !9 ] OP2[ ,  IS_CONST (268435217) 'stdClass' ]
+         47*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~33 ]      OP1[  IS_TMP_VAR ~32 ]
+         48*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~33 ] OP2[ , ->53 ]
+  426    49*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         50*       <127> FE_FREE                                                   OP1[  IS_VAR $29 ] OP2[  IS_UNUSED  ]
+         51*       <127> FE_FREE                                                   OP1[  IS_VAR $23 ] OP2[  IS_UNUSED  ]
+         52*       < 62> RETURN                                                    OP1[  IS_CV !1 ]
+  428    53*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         54*       <148> ISSET_ISEMPTY_PROP_OBJ                            RES[  IS_TMP_VAR ~34 ]      OP1[  IS_CV !9 ] OP2[ ,  IS_CV !7 ]
+         55*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~35 ]      OP1[  IS_TMP_VAR ~34 ]
+         56*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~35 ] OP2[ , ->61 ]
+  429    57*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         58*       < 22> ASSIGN                                                    OP1[  IS_CV !8 ] OP2[ ,  IS_CONST (268435195) <false> ]
+  430    59*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         60*       < 42> JMP                                                       OP1[ ->105 ]
+  432    61*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         62*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~37 ]      OP1[  IS_CV !9 ] OP2[ ,  IS_CV !7 ]
+         63*       < 22> ASSIGN                                                    OP1[  IS_CV !6 ] OP2[ ,  IS_TMP_VAR ~37 ]
+  433    64*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         65*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435182) 'Swaggest%5CJsonDiff%5Cis_array' ]
+         66*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !6 ] OP2[  IS_UNUSED  ]
+         67*       < 60> DO_FCALL                                      0   RES[  IS_VAR $39 ]      OP1[  IS_UNUSED  ]
+         68*       < 43> JMPZ                                                      OP1[  IS_VAR $39 ] OP2[ , ->73 ]
+  434    69*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         70*       < 22> ASSIGN                                                    OP1[  IS_CV !8 ] OP2[ ,  IS_CONST (268435175) <false> ]
+  435    71*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         72*       < 42> JMP                                                       OP1[ ->105 ]
+  438    73*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         74*       <138> INSTANCEOF                                        RES[  IS_TMP_VAR ~41 ]      OP1[  IS_CV !6 ] OP2[ ,  IS_CONST (268435168) 'stdClass' ]
+         75*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~41 ] OP2[ , ->94 ]
+  439    76*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         77*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~42 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435164) 'jsonHash' ]
+         78*       <123> TYPE_CHECK                                    2   RES[  IS_TMP_VAR ~43 ]      OP1[  IS_TMP_VAR ~42 ] OP2[  IS_UNUSED  ]
+         79*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~43 ] OP2[ , ->88 ]
+  440    80*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         81*       < 68> NEW                                               RES[  IS_VAR $45 ]      OP1[ 'Swaggest%5CJsonDiff%5CJsonHash' ]
+         82*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         83*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $46 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435156) 'options' ]
+         84*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $46 ] OP2[  IS_UNUSED  ]
+         85*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         86*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435147) 'jsonHash' ]
+         87*       <137> OP_DATA                                                   OP1[  IS_VAR $45 ] OP2[  IS_UNUSED  ]
+  443    88*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         89*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~48 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435145) 'jsonHash' ]
+         90*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~48 ] OP2[ ,  IS_CONST (268435144) 'xorHash' ]
+         91*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !6 ] OP2[  IS_UNUSED  ]
+         92*       < 60> DO_FCALL                                      0   RES[  IS_VAR $49 ]      OP1[  IS_UNUSED  ]
+         93*       < 22> ASSIGN                                                    OP1[  IS_CV !6 ] OP2[ ,  IS_VAR $49 ]
+  446    94*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         95*       <115> ISSET_ISEMPTY_DIM_OBJ                         0   RES[  IS_TMP_VAR ~51 ]      OP1[  IS_CV !4 ] OP2[ ,  IS_CV !6 ]
+         96*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~51 ] OP2[ , ->101 ]
+  447    97*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         98*       < 22> ASSIGN                                                    OP1[  IS_CV !8 ] OP2[ ,  IS_CONST (268435130) <false> ]
+  448    99*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        100*       < 42> JMP                                                       OP1[ ->105 ]
+  450   101*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        102*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !4 ] OP2[ ,  IS_CV !6 ]
+        103*       <137> OP_DATA                                                   OP1[  IS_CV !10 ] OP2[  IS_UNUSED  ]
+  424   104*       < 42> JMP                                                       OP1[ ->43 ]
+        105*       <127> FE_FREE                                                   OP1[  IS_VAR $29 ] OP2[  IS_UNUSED  ]
+  453   106*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        107*       < 43> JMPZ                                                      OP1[  IS_CV !8 ] OP2[ , ->112 ]
+  454   108*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        109*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_CV !7 ]
+  455   110*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        111*       < 42> JMP                                                       OP1[ ->113 ]
+  417   112*       < 42> JMP                                                       OP1[ ->28 ]
+        113*       <127> FE_FREE                                                   OP1[  IS_VAR $23 ] OP2[  IS_UNUSED  ]
+  459   114*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        115*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~55 ]      OP1[  IS_CV !3 ]
+        116*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~55 ] OP2[ , ->123 ]
+  460   117*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        118*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435091) 'rearrangeEqualItems' ]
+        119*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+        120*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+        121*       < 60> DO_FCALL                                      0   RES[  IS_VAR $56 ]      OP1[  IS_UNUSED  ]
+        122*       < 62> RETURN                                                    OP1[  IS_VAR $56 ]
+  463   123*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        124*       < 22> ASSIGN                                                    OP1[  IS_CV !11 ] OP2[ ,  IS_CONST (268435081) <array> ]
+  464   125*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        126*       < 22> ASSIGN                                                    OP1[  IS_CV !12 ] OP2[ ,  IS_CONST (268435078) <array> ]
+  466   127*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        128*       < 77> FE_RESET_R                                        RES[  IS_VAR $59 ]      OP1[  IS_CV !1 ] OP2[ , ->202 ]
+        129*       < 78> FE_FETCH_R                                                OP1[  IS_VAR $59 ] OP2[ ,  IS_CV !9 ] EXT_JMP_REL[ , ->202 ]
+  467   130*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        131*       <138> INSTANCEOF                                        RES[  IS_TMP_VAR ~60 ]      OP1[  IS_CV !9 ] OP2[ ,  IS_CONST (268435069) 'stdClass' ]
+        132*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~61 ]      OP1[  IS_TMP_VAR ~60 ]
+        133*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~61 ] OP2[ , ->137 ]
+  468   134*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        135*       <127> FE_FREE                                                   OP1[  IS_VAR $59 ] OP2[  IS_UNUSED  ]
+        136*       < 62> RETURN                                                    OP1[  IS_CV !1 ]
+  471   137*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        138*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435057) 'Swaggest%5CJsonDiff%5Cproperty_exists' ]
+        139*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !9 ] OP2[  IS_UNUSED  ]
+        140*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+        141*       < 60> DO_FCALL                                      0   RES[  IS_VAR $62 ]      OP1[  IS_UNUSED  ]
+        142*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~63 ]      OP1[  IS_VAR $62 ]
+        143*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~63 ] OP2[ , ->147 ]
+  472   144*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        145*       <127> FE_FREE                                                   OP1[  IS_VAR $59 ] OP2[  IS_UNUSED  ]
+        146*       < 62> RETURN                                                    OP1[  IS_CV !1 ]
+  475   147*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        148*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~64 ]      OP1[  IS_CV !9 ] OP2[ ,  IS_CV !3 ]
+        149*       < 22> ASSIGN                                                    OP1[  IS_CV !6 ] OP2[ ,  IS_TMP_VAR ~64 ]
+  477   150*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        151*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435034) 'Swaggest%5CJsonDiff%5Cis_array' ]
+        152*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !6 ] OP2[  IS_UNUSED  ]
+        153*       < 60> DO_FCALL                                      0   RES[  IS_VAR $66 ]      OP1[  IS_UNUSED  ]
+        154*       < 43> JMPZ                                                      OP1[  IS_VAR $66 ] OP2[ , ->158 ]
+  478   155*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        156*       <127> FE_FREE                                                   OP1[  IS_VAR $59 ] OP2[  IS_UNUSED  ]
+        157*       < 62> RETURN                                                    OP1[  IS_CV !1 ]
+  481   158*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        159*       <138> INSTANCEOF                                        RES[  IS_TMP_VAR ~67 ]      OP1[  IS_CV !6 ] OP2[ ,  IS_CONST (268435021) 'stdClass' ]
+        160*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~67 ] OP2[ , ->179 ]
+  482   161*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        162*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~68 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435017) 'jsonHash' ]
+        163*       <123> TYPE_CHECK                                    2   RES[  IS_TMP_VAR ~69 ]      OP1[  IS_TMP_VAR ~68 ] OP2[  IS_UNUSED  ]
+        164*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~69 ] OP2[ , ->173 ]
+  483   165*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        166*       < 68> NEW                                               RES[  IS_VAR $71 ]      OP1[ 'Swaggest%5CJsonDiff%5CJsonHash' ]
+        167*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        168*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $72 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435009) 'options' ]
+        169*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $72 ] OP2[  IS_UNUSED  ]
+        170*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+        171*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435000) 'jsonHash' ]
+        172*       <137> OP_DATA                                                   OP1[  IS_VAR $71 ] OP2[  IS_UNUSED  ]
+  486   173*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        174*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~74 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434998) 'jsonHash' ]
+        175*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~74 ] OP2[ ,  IS_CONST (268434997) 'xorHash' ]
+        176*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !6 ] OP2[  IS_UNUSED  ]
+        177*       < 60> DO_FCALL                                      0   RES[  IS_VAR $75 ]      OP1[  IS_UNUSED  ]
+        178*       < 22> ASSIGN                                                    OP1[  IS_CV !6 ] OP2[ ,  IS_VAR $75 ]
+  490   179*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        180*       <115> ISSET_ISEMPTY_DIM_OBJ                         0   RES[  IS_TMP_VAR ~77 ]      OP1[  IS_CV !4 ] OP2[ ,  IS_CV !6 ]
+        181*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~77 ] OP2[ , ->195 ]
+  491   182*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        183*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~78 ]      OP1[  IS_CV !4 ] OP2[ ,  IS_CV !6 ]
+        184*       < 22> ASSIGN                                                    OP1[  IS_CV !10 ] OP2[ ,  IS_TMP_VAR ~78 ]
+  493   185*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        186*       <115> ISSET_ISEMPTY_DIM_OBJ                         0   RES[  IS_TMP_VAR ~80 ]      OP1[  IS_CV !11 ] OP2[ ,  IS_CV !10 ]
+        187*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~80 ] OP2[ , ->191 ]
+  494   188*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        189*       <127> FE_FREE                                                   OP1[  IS_VAR $59 ] OP2[  IS_UNUSED  ]
+        190*       < 62> RETURN                                                    OP1[  IS_CV !1 ]
+  497   191*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        192*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !11 ] OP2[ ,  IS_CV !10 ]
+        193*       <137> OP_DATA                                                   OP1[  IS_CV !9 ] OP2[  IS_UNUSED  ]
+        194*       < 42> JMP                                                       OP1[ ->198 ]
+  499   195*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        196*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !12 ] OP2[  IS_UNUSED  ]
+        197*       <137> OP_DATA                                                   OP1[  IS_CV !9 ] OP2[  IS_UNUSED  ]
+  502   198*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        199*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !13 ] OP2[ ,  IS_CV !6 ]
+        200*       <137> OP_DATA                                                   OP1[  IS_CV !9 ] OP2[  IS_UNUSED  ]
+  466   201*       < 42> JMP                                                       OP1[ ->129 ]
+        202*       <127> FE_FREE                                                   OP1[  IS_VAR $59 ] OP2[  IS_UNUSED  ]
+  505   203*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        204*       < 22> ASSIGN                                                    OP1[  IS_CV !10 ] OP2[ ,  IS_CONST (268434941) 0 ]
+  506   205*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        206*       < 77> FE_RESET_R                                        RES[  IS_VAR $85 ]      OP1[  IS_CV !12 ] OP2[ , ->221 ]
+        207*       < 78> FE_FETCH_R                                                OP1[  IS_VAR $85 ] OP2[ ,  IS_CV !9 ] EXT_JMP_REL[ , ->221 ]
+  507   208*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        209*       < 42> JMP                                                       OP1[ ->212 ]
+  508   210*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        211*       < 34> PRE_INC                                                   OP1[  IS_CV !10 ]
+  507   212*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268434926) 'Swaggest%5CJsonDiff%5Carray_key_exists' ]
+        213*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !10 ] OP2[  IS_UNUSED  ]
+        214*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !11 ] OP2[  IS_UNUSED  ]
+        215*       < 60> DO_FCALL                                      0   RES[  IS_VAR $87 ]      OP1[  IS_UNUSED  ]
+        216*       < 44> JMPNZ                                                     OP1[  IS_VAR $87 ] OP2[ , ->210 ]
+  510   217*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        218*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !11 ] OP2[ ,  IS_CV !10 ]
+        219*       <137> OP_DATA                                                   OP1[  IS_CV !9 ] OP2[  IS_UNUSED  ]
+  506   220*       < 42> JMP                                                       OP1[ ->207 ]
+        221*       <127> FE_FREE                                                   OP1[  IS_VAR $85 ] OP2[  IS_UNUSED  ]
+  513   222*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        223*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268434907) 'Swaggest%5CJsonDiff%5Cksort' ]
+        224*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !11 ] OP2[  IS_UNUSED  ]
+        225*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  514   226*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        227*       < 62> RETURN                                                    OP1[  IS_CV !11 ]
+  515   228*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        229*       < 62> RETURN                                                    OP1[  IS_CONST (268434898) null ]
+
+End of function rearrangearray
+
+Function rearrangeequalitems:
+[+]Function Source Class Name: Swaggest\JsonDiff\JsonDiff
+[*]Start of arg_info extract:
+[*]arg_info num_args:2
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:original
+[*]type:array
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:new
+[*]type:array
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\swaggest\json-diff\src\JsonDiff.php
+function name:  rearrangeEqualItems
+number of ops:  106
+compiled vars:  !0 = $original, !1 = $new, !2 = $origIdx, !3 = $item, !4 = $i, !5 = $hash, !6 = $newIdx, !7 = $newRearranged, !8 = $changedItems, !9 = $j, !10 = $idx
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  517     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 63> RECV                                              RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ]
+  519     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~11 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435381) 'jsonHash' ]
+          4*       <123> TYPE_CHECK                                    2   RES[  IS_TMP_VAR ~12 ]      OP1[  IS_TMP_VAR ~11 ] OP2[  IS_UNUSED  ]
+          5*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~12 ] OP2[ , ->14 ]
+  520     6*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          7*       < 68> NEW                                               RES[  IS_VAR $14 ]      OP1[ 'Swaggest%5CJsonDiff%5CJsonHash' ]
+          8*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          9*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $15 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435373) 'options' ]
+         10*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $15 ] OP2[  IS_UNUSED  ]
+         11*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         12*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435364) 'jsonHash' ]
+         13*       <137> OP_DATA                                                   OP1[  IS_VAR $14 ] OP2[  IS_UNUSED  ]
+  523    14*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         15*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435362) <array> ]
+  524    16*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         17*       < 77> FE_RESET_R                                        RES[  IS_VAR $18 ]      OP1[  IS_CV !0 ] OP2[ , ->31 ]
+         18*       < 78> FE_FETCH_R                                        RES[  IS_TMP_VAR ~19 ]      OP1[  IS_VAR $18 ] OP2[ ,  IS_CV !3 ] EXT_JMP_REL[ , ->31 ]
+         19*       < 22> ASSIGN                                                    OP1[  IS_CV !4 ] OP2[ ,  IS_TMP_VAR ~19 ]
+  525    20*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         21*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~21 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435351) 'jsonHash' ]
+         22*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~21 ] OP2[ ,  IS_CONST (268435350) 'xorHash' ]
+         23*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         24*       < 60> DO_FCALL                                      0   RES[  IS_VAR $22 ]      OP1[  IS_UNUSED  ]
+         25*       < 22> ASSIGN                                                    OP1[  IS_CV !5 ] OP2[ ,  IS_VAR $22 ]
+  526    26*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         27*       < 84> FETCH_DIM_W                                       RES[  IS_VAR $24 ]      OP1[  IS_CV !2 ] OP2[ ,  IS_CV !5 ]
+         28*       < 23> ASSIGN_DIM                                                OP1[  IS_VAR $24 ] OP2[  IS_UNUSED  ]
+         29*       <137> OP_DATA                                                   OP1[  IS_CV !4 ] OP2[  IS_UNUSED  ]
+  524    30*       < 42> JMP                                                       OP1[ ->18 ]
+         31*       <127> FE_FREE                                                   OP1[  IS_VAR $18 ] OP2[  IS_UNUSED  ]
+  529    32*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         33*       < 22> ASSIGN                                                    OP1[  IS_CV !6 ] OP2[ ,  IS_CONST (268435330) <array> ]
+  530    34*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         35*       < 77> FE_RESET_R                                        RES[  IS_VAR $27 ]      OP1[  IS_CV !1 ] OP2[ , ->48 ]
+         36*       < 78> FE_FETCH_R                                        RES[  IS_TMP_VAR ~28 ]      OP1[  IS_VAR $27 ] OP2[ ,  IS_CV !3 ] EXT_JMP_REL[ , ->48 ]
+         37*       < 22> ASSIGN                                                    OP1[  IS_CV !4 ] OP2[ ,  IS_TMP_VAR ~28 ]
+  531    38*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         39*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~30 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435319) 'jsonHash' ]
+         40*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~30 ] OP2[ ,  IS_CONST (268435318) 'xorHash' ]
+         41*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         42*       < 60> DO_FCALL                                      0   RES[  IS_VAR $31 ]      OP1[  IS_UNUSED  ]
+         43*       < 22> ASSIGN                                                    OP1[  IS_CV !5 ] OP2[ ,  IS_VAR $31 ]
+  532    44*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         45*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !6 ] OP2[ ,  IS_CV !4 ]
+         46*       <137> OP_DATA                                                   OP1[  IS_CV !5 ] OP2[  IS_UNUSED  ]
+  530    47*       < 42> JMP                                                       OP1[ ->36 ]
+         48*       <127> FE_FREE                                                   OP1[  IS_VAR $27 ] OP2[  IS_UNUSED  ]
+  535    49*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         50*       < 22> ASSIGN                                                    OP1[  IS_CV !7 ] OP2[ ,  IS_CONST (268435300) <array> ]
+  536    51*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         52*       < 22> ASSIGN                                                    OP1[  IS_CV !8 ] OP2[ ,  IS_CONST (268435297) <array> ]
+  537    53*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         54*       < 77> FE_RESET_R                                        RES[  IS_VAR $36 ]      OP1[  IS_CV !6 ] OP2[ , ->78 ]
+         55*       < 78> FE_FETCH_R                                        RES[  IS_TMP_VAR ~37 ]      OP1[  IS_VAR $36 ] OP2[ ,  IS_CV !5 ] EXT_JMP_REL[ , ->78 ]
+         56*       < 22> ASSIGN                                                    OP1[  IS_CV !4 ] OP2[ ,  IS_TMP_VAR ~37 ]
+  538    57*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         58*       <115> ISSET_ISEMPTY_DIM_OBJ                         1   RES[  IS_TMP_VAR ~39 ]      OP1[  IS_CV !2 ] OP2[ ,  IS_CV !5 ]
+         59*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~40 ]      OP1[  IS_TMP_VAR ~39 ]
+         60*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~40 ] OP2[ , ->73 ]
+  539    61*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         62*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435278) 'Swaggest%5CJsonDiff%5Carray_shift' ]
+         63*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         64*       < 93> FETCH_DIM_FUNC_ARG                                RES[  IS_VAR $41 ]      OP1[  IS_CV !2 ] OP2[ ,  IS_CV !5 ]
+         65*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $41 ] OP2[  IS_UNUSED  ]
+         66*       < 60> DO_FCALL                                      0   RES[  IS_VAR $42 ]      OP1[  IS_UNUSED  ]
+         67*       < 22> ASSIGN                                                    OP1[  IS_CV !9 ] OP2[ ,  IS_VAR $42 ]
+  541    68*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         69*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~45 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CV !4 ]
+         70*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !7 ] OP2[ ,  IS_CV !9 ]
+         71*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~45 ] OP2[  IS_UNUSED  ]
+         72*       < 42> JMP                                                       OP1[ ->77 ]
+  543    73*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         74*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~47 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CV !4 ]
+         75*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !8 ] OP2[  IS_UNUSED  ]
+         76*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~47 ] OP2[  IS_UNUSED  ]
+  537    77*       < 42> JMP                                                       OP1[ ->55 ]
+         78*       <127> FE_FREE                                                   OP1[  IS_VAR $36 ] OP2[  IS_UNUSED  ]
+  548    79*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         80*       < 22> ASSIGN                                                    OP1[  IS_CV !10 ] OP2[ ,  IS_CONST (268435245) 0 ]
+  549    81*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         82*       < 77> FE_RESET_R                                        RES[  IS_VAR $49 ]      OP1[  IS_CV !8 ] OP2[ , ->97 ]
+         83*       < 78> FE_FETCH_R                                                OP1[  IS_VAR $49 ] OP2[ ,  IS_CV !3 ] EXT_JMP_REL[ , ->97 ]
+  550    84*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         85*       < 42> JMP                                                       OP1[ ->88 ]
+  551    86*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         87*       < 34> PRE_INC                                                   OP1[  IS_CV !10 ]
+  550    88*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435230) 'Swaggest%5CJsonDiff%5Carray_key_exists' ]
+         89*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !10 ] OP2[  IS_UNUSED  ]
+         90*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !7 ] OP2[  IS_UNUSED  ]
+         91*       < 60> DO_FCALL                                      0   RES[  IS_VAR $51 ]      OP1[  IS_UNUSED  ]
+         92*       < 44> JMPNZ                                                     OP1[  IS_VAR $51 ] OP2[ , ->86 ]
+  553    93*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         94*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !7 ] OP2[ ,  IS_CV !10 ]
+         95*       <137> OP_DATA                                                   OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+  549    96*       < 42> JMP                                                       OP1[ ->83 ]
+         97*       <127> FE_FREE                                                   OP1[  IS_VAR $49 ] OP2[  IS_UNUSED  ]
+  556    98*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         99*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435211) 'Swaggest%5CJsonDiff%5Cksort' ]
+        100*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !7 ] OP2[  IS_UNUSED  ]
+        101*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  558   102*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        103*       < 62> RETURN                                                    OP1[  IS_CV !7 ]
+  559   104*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        105*       < 62> RETURN                                                    OP1[  IS_CONST (268435202) null ]
+
+End of function rearrangeequalitems
+
+End of class Swaggest\JsonDiff\JsonDiff.
+

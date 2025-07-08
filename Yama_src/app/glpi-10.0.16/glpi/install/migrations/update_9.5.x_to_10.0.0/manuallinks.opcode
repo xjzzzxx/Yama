@@ -1,0 +1,42 @@
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\install\migrations\update_9.5.x_to_10.0.0\manuallinks.php
+function name:  (null)
+number of ops:  35
+compiled vars:  !0 = $default_charset, !1 = $default_collation, !2 = $default_key_sign, !3 = $DB, !4 = $query
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   40     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435430) 'DBConnection' ] OP2[ ,  IS_CONST (268435432) 'getDefaultCharset' ]
+          2*       < 60> DO_FCALL                                      0   RES[  IS_VAR $5 ]       OP1[  IS_UNUSED  ]
+          3*       < 22> ASSIGN                                                    OP1[  IS_CV !0 ] OP2[ ,  IS_VAR $5 ]
+   41     4*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          5*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435426) 'DBConnection' ] OP2[ ,  IS_CONST (268435428) 'getDefaultCollation' ]
+          6*       < 60> DO_FCALL                                      0   RES[  IS_VAR $7 ]       OP1[  IS_UNUSED  ]
+          7*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_VAR $7 ]
+   42     8*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          9*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435422) 'DBConnection' ] OP2[ ,  IS_CONST (268435424) 'getDefaultPrimaryKeySignOption' ]
+         10*       < 60> DO_FCALL                                      0   RES[  IS_VAR $9 ]       OP1[  IS_UNUSED  ]
+         11*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_VAR $9 ]
+   44    12*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         13*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435418) 'tableExists' ]
+         14*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435418) 'glpi_manuallinks' ] OP2[  IS_UNUSED  ]
+         15*       < 60> DO_FCALL                                      0   RES[  IS_VAR $11 ]      OP1[  IS_UNUSED  ]
+         16*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~12 ]      OP1[  IS_VAR $11 ]
+         17*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~12 ] OP2[ , ->34 ]
+   45    18*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         19*       < 54> ROPE_INIT                                     9   RES[  IS_TMP_VAR ~14 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435409) 'CREATE+TABLE+%60glpi_manuallinks%60+%28%0A++++++%60id%60+int+' ]
+   46    20*       < 55> ROPE_ADD                                      1   RES[  IS_TMP_VAR ~14 ]      OP1[  IS_TMP_VAR ~14 ] OP2[ ,  IS_CV !2 ]
+         21*       < 55> ROPE_ADD                                      2   RES[  IS_TMP_VAR ~14 ]      OP1[  IS_TMP_VAR ~14 ] OP2[ ,  IS_CONST (268435406) '+NOT+NULL+AUTO_INCREMENT%2C%0A++++++%60name%60+varchar%28255%29+DEFAULT+NULL%2C%0A++++++%60url%60+varchar%288096%29+NOT+NULL%2C%0A++++++%60open_window%60+tinyint+NOT+NULL+DEFAULT+%271%27%2C%0A++++++%60icon%60+varchar%28255%29+DEFAULT+NULL%2C%0A++++++%60comment%60+text%2C%0A++++++%60items_id%60+int+' ]
+   52    22*       < 55> ROPE_ADD                                      3   RES[  IS_TMP_VAR ~14 ]      OP1[  IS_TMP_VAR ~14 ] OP2[ ,  IS_CV !2 ]
+         23*       < 55> ROPE_ADD                                      4   RES[  IS_TMP_VAR ~14 ]      OP1[  IS_TMP_VAR ~14 ] OP2[ ,  IS_CONST (268435403) '+NOT+NULL+DEFAULT+%270%27%2C%0A++++++%60itemtype%60+varchar%28255%29+DEFAULT+NULL%2C%0A++++++%60date_creation%60+timestamp+NULL+DEFAULT+NULL%2C%0A++++++%60date_mod%60+timestamp+NULL+DEFAULT+NULL%2C%0A++++++PRIMARY+KEY+%28%60id%60%29%2C%0A++++++KEY+%60item%60+%28%60itemtype%60%2C%60items_id%60%29%2C%0A++++++KEY+%60items_id%60+%28%60items_id%60%29%2C%0A++++++KEY+%60date_creation%60+%28%60date_creation%60%29%2C%0A++++++KEY+%60date_mod%60+%28%60date_mod%60%29%0A++++++%29+ENGINE+%3D+InnoDB+ROW_FORMAT+%3D+DYNAMIC+DEFAULT+CHARSET+%3D+' ]
+   61    24*       < 55> ROPE_ADD                                      5   RES[  IS_TMP_VAR ~14 ]      OP1[  IS_TMP_VAR ~14 ] OP2[ ,  IS_CV !0 ]
+         25*       < 55> ROPE_ADD                                      6   RES[  IS_TMP_VAR ~14 ]      OP1[  IS_TMP_VAR ~14 ] OP2[ ,  IS_CONST (268435400) '+COLLATE+%3D+' ]
+         26*       < 55> ROPE_ADD                                      7   RES[  IS_TMP_VAR ~14 ]      OP1[  IS_TMP_VAR ~14 ] OP2[ ,  IS_CV !1 ]
+         27*       < 56> ROPE_END                                      8   RES[  IS_TMP_VAR ~13 ]      OP1[  IS_TMP_VAR ~14 ] OP2[ ,  IS_CONST (268435397) '%3B' ]
+   45    28*       < 22> ASSIGN                                                    OP1[  IS_CV !4 ] OP2[ ,  IS_TMP_VAR ~13 ]
+   62    29*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         30*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435392) 'doQueryOrDie' ]
+         31*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !4 ] OP2[  IS_UNUSED  ]
+         32*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435390) '10.0+add+table+glpi_manuallinks' ] OP2[  IS_UNUSED  ]
+         33*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+   64    34*       < 62> RETURN                                                    OP1[  IS_CONST (268435387) 1 ]
+

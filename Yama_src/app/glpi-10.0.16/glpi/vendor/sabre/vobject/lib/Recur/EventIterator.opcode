@@ -1,0 +1,883 @@
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\sabre\vobject\lib\Recur\EventIterator.php
+function name:  (null)
+number of ops:  23
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+    3     0*       <  0> NOP                                                      
+    5     1*       <  0> NOP                                                      
+    6     2*       <  0> NOP                                                      
+    7     3*       <  0> NOP                                                      
+    8     4*       <  0> NOP                                                      
+    9     5*       <  0> NOP                                                      
+   10     6*       <  0> NOP                                                      
+   11     7*       <  0> NOP                                                      
+   68     8*       <  0> NOP                                                      
+   75     9*       <  0> NOP                                                      
+  419    10*       <  0> NOP                                                      
+  426    11*       <  0> NOP                                                      
+  433    12*       <  0> NOP                                                      
+  440    13*       <  0> NOP                                                      
+  450    14*       <  0> NOP                                                      
+  458    15*       <  0> NOP                                                      
+  465    16*       <  0> NOP                                                      
+  472    17*       <  0> NOP                                                      
+  479    18*       <  0> NOP                                                      
+  489    19*       <  0> NOP                                                      
+   61    20*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         21*       <144> DECLARE_CLASS                                             OP1[  IS_CONST (268435411) 'sabre%5Cvobject%5Crecur%5Ceventiterator' ] OP2[  IS_UNUSED  ]
+  498    22*       < 62> RETURN                                                    OP1[  IS_CONST (268435411) 1 ]
+
+Class Sabre\VObject\Recur\EventIterator:
+[+]Class Parent Name: NULL
+End Trait extract
+Start Properties extract:
+Key: timeZone, Value: UNINIT, Type: Normal
+Key: recurIterator, Value: UNINIT, Type: Normal
+Key: eventDuration, Value: UNINIT, Type: Normal
+Key: masterEvent, Value: UNINIT, Type: Normal
+Key: overriddenEventsIndex, Value: UNINIT, Type: Normal
+Key: counter, Value: UNINIT, Type: Normal
+Key: startDate, Value: UNINIT, Type: Normal
+Key: currentDate, Value: UNINIT, Type: Normal
+Key: nextDate, Value: UNINIT, Type: Normal
+Key: currentOverriddenEvent, Value: UNINIT, Type: Normal
+End Properties extract.
+
+Function __construct:
+[+]Function Source Class Name: Sabre\VObject\Recur\EventIterator
+[*]Start of arg_info extract:
+[*]arg_info num_args:3
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:input
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:uid
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**2**
+[*]name:timeZone
+[*]type:?DateTimeZone
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\sabre\vobject\lib\Recur\EventIterator.php
+function name:  __construct
+number of ops:  276
+compiled vars:  !0 = $input, !1 = $uid, !2 = $timeZone, !3 = $events, !4 = $vevent, !5 = $exDate, !6 = $dt, !7 = $duration, !8 = $end
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   96     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 64> RECV_INIT                                         RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435169) null ]
+          2*       < 64> RECV_INIT                                         RES[  IS_CV !2 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435168) null ]
+   98     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435165) 'Sabre%5CVObject%5CRecur%5Cis_null' ]
+          5*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+          6*       < 60> DO_FCALL                                      0   RES[  IS_VAR $9 ]       OP1[  IS_UNUSED  ]
+          7*       < 43> JMPZ                                                      OP1[  IS_VAR $9 ] OP2[ , ->13 ]
+   99     8*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          9*       < 68> NEW                                               RES[  IS_VAR $10 ]      OP1[ 'DateTimeZone' ]
+         10*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435158) 'UTC' ] OP2[  IS_UNUSED  ]
+         11*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         12*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_VAR $10 ]
+  101    13*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         14*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435151) 'timeZone' ]
+         15*       <137> OP_DATA                                                   OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+  103    16*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         17*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435146) 'Sabre%5CVObject%5CRecur%5Cis_array' ]
+         18*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         19*       < 60> DO_FCALL                                      0   RES[  IS_VAR $14 ]      OP1[  IS_UNUSED  ]
+         20*       < 43> JMPZ                                                      OP1[  IS_VAR $14 ] OP2[ , ->24 ]
+  104    21*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         22*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_CV !0 ]
+         23*       < 42> JMP                                                       OP1[ ->56 ]
+  105    24*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         25*       <138> INSTANCEOF                                        RES[  IS_TMP_VAR ~16 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435133) 'Sabre%5CVObject%5CComponent%5CVEvent' ]
+         26*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~16 ] OP2[ , ->31 ]
+  107    27*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         28*       < 71> INIT_ARRAY                                        RES[  IS_TMP_VAR ~17 ]      OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         29*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_TMP_VAR ~17 ]
+         30*       < 42> JMP                                                       OP1[ ->56 ]
+  110    31*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         32*       < 51> CAST                                          6   RES[  IS_TMP_VAR ~19 ]      OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         33*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_TMP_VAR ~19 ]
+  111    34*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         35*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~21 ]      OP1[  IS_CV !1 ]
+         36*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~21 ] OP2[ , ->42 ]
+  112    37*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         38*       < 68> NEW                                               RES[  IS_VAR $22 ]      OP1[ 'InvalidArgumentException' ]
+         39*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435109) 'The+UID+argument+is+required+when+a+VCALENDAR+is+passed+to+this+constructor' ] OP2[  IS_UNUSED  ]
+         40*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         41*       <108> THROW                                         0           OP1[  IS_VAR $22 ] OP2[  IS_UNUSED  ]
+  114    42*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         43*       <148> ISSET_ISEMPTY_PROP_OBJ                            RES[  IS_TMP_VAR ~24 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435102) 'VEVENT' ]
+         44*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~25 ]      OP1[  IS_TMP_VAR ~24 ]
+         45*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~25 ] OP2[ , ->51 ]
+  115    46*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         47*       < 68> NEW                                               RES[  IS_VAR $26 ]      OP1[ 'InvalidArgumentException' ]
+         48*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435095) 'No+events+found+in+this+calendar' ] OP2[  IS_UNUSED  ]
+         49*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         50*       <108> THROW                                         0           OP1[  IS_VAR $26 ] OP2[  IS_UNUSED  ]
+  117    51*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         52*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435088) 'getByUID' ]
+         53*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         54*       < 60> DO_FCALL                                      0   RES[  IS_VAR $28 ]      OP1[  IS_UNUSED  ]
+         55*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_VAR $28 ]
+  120    56*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         57*       < 77> FE_RESET_R                                        RES[  IS_VAR $30 ]      OP1[  IS_CV !3 ] OP2[ , ->84 ]
+         58*       < 78> FE_FETCH_R                                                OP1[  IS_VAR $30 ] OP2[ ,  IS_CV !4 ] EXT_JMP_REL[ , ->84 ]
+  121    59*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         60*       <148> ISSET_ISEMPTY_PROP_OBJ                            RES[  IS_TMP_VAR ~31 ]      OP1[  IS_CV !4 ] OP2[ ,  IS_CONST (268435074) 'RECURRENCE-ID' ]
+         61*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~32 ]      OP1[  IS_TMP_VAR ~31 ]
+         62*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~32 ] OP2[ , ->67 ]
+  122    63*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         64*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435067) 'masterEvent' ]
+         65*       <137> OP_DATA                                                   OP1[  IS_CV !4 ] OP2[  IS_UNUSED  ]
+         66*       < 42> JMP                                                       OP1[ ->83 ]
+  125    67*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         68*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~35 ]      OP1[  IS_CV !4 ] OP2[ ,  IS_CONST (268435061) 'RECURRENCE-ID' ]
+         69*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~35 ] OP2[ ,  IS_CONST (268435060) 'getDateTime' ]
+         70*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         71*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $36 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435058) 'timeZone' ]
+         72*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $36 ] OP2[  IS_UNUSED  ]
+         73*       < 60> DO_FCALL                                      0   RES[  IS_VAR $37 ]      OP1[  IS_UNUSED  ]
+         74*       <112> INIT_METHOD_CALL                                          OP1[  IS_VAR $37 ] OP2[ ,  IS_CONST (268435053) 'getTimeStamp' ]
+         75*       < 60> DO_FCALL                                      0   RES[  IS_VAR $38 ]      OP1[  IS_UNUSED  ]
+  124    76*       < 85> FETCH_OBJ_W                                       RES[  IS_VAR $34 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435044) 'exceptions' ]
+  125    77*       < 23> ASSIGN_DIM                                                OP1[  IS_VAR $34 ] OP2[ ,  IS_VAR $38 ]
+  126    78*       <137> OP_DATA                                                   OP1[  IS_CONST (268435047) <true> ] OP2[  IS_UNUSED  ]
+  127    79*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         80*       < 85> FETCH_OBJ_W                                       RES[  IS_VAR $40 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435044) 'overriddenEvents' ]
+         81*       < 23> ASSIGN_DIM                                                OP1[  IS_VAR $40 ] OP2[  IS_UNUSED  ]
+         82*       <137> OP_DATA                                                   OP1[  IS_CV !4 ] OP2[  IS_UNUSED  ]
+  120    83*       < 42> JMP                                                       OP1[ ->58 ]
+         84*       <127> FE_FREE                                                   OP1[  IS_VAR $30 ] OP2[  IS_UNUSED  ]
+  131    85*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         86*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~42 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435033) 'masterEvent' ]
+         87*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~43 ]      OP1[  IS_TMP_VAR ~42 ]
+         88*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~43 ] OP2[ , ->111 ]
+  138    89*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         90*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435026) 'Sabre%5CVObject%5CRecur%5Ccount' ]
+         91*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         92*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $44 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435025) 'overriddenEvents' ]
+         93*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $44 ] OP2[  IS_UNUSED  ]
+         94*       < 60> DO_FCALL                                      0   RES[  IS_VAR $45 ]      OP1[  IS_UNUSED  ]
+         95*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~46 ]      OP1[  IS_VAR $45 ]
+         96*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~46 ] OP2[ , ->103 ]
+  139    97*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         98*       < 68> NEW                                               RES[  IS_VAR $47 ]      OP1[ 'InvalidArgumentException' ]
+         99*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~48 ]      OP1[  IS_CONST (268435014) 'This+VCALENDAR+did+not+have+an+event+with+UID%3A+' ] OP2[ ,  IS_CV !1 ]
+        100*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~48 ] OP2[  IS_UNUSED  ]
+        101*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+        102*       <108> THROW                                         0           OP1[  IS_VAR $47 ] OP2[  IS_UNUSED  ]
+  141   103*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        104*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435006) 'Sabre%5CVObject%5CRecur%5Carray_shift' ]
+        105*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        106*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $51 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435005) 'overriddenEvents' ]
+        107*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $51 ] OP2[  IS_UNUSED  ]
+        108*       < 60> DO_FCALL                                      0   RES[  IS_VAR $52 ]      OP1[  IS_UNUSED  ]
+        109*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434995) 'masterEvent' ]
+        110*       <137> OP_DATA                                                   OP1[  IS_VAR $52 ] OP2[  IS_UNUSED  ]
+  144   111*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        112*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~54 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434995) 'masterEvent' ]
+        113*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~55 ]      OP1[  IS_TMP_VAR ~54 ] OP2[ ,  IS_CONST (268434994) 'DTSTART' ]
+        114*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~55 ] OP2[ ,  IS_CONST (268434993) 'getDateTime' ]
+        115*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        116*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $56 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434991) 'timeZone' ]
+        117*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $56 ] OP2[  IS_UNUSED  ]
+        118*       < 60> DO_FCALL                                      0   RES[  IS_VAR $57 ]      OP1[  IS_UNUSED  ]
+        119*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434980) 'startDate' ]
+        120*       <137> OP_DATA                                                   OP1[  IS_VAR $57 ] OP2[  IS_UNUSED  ]
+  145   121*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        122*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~59 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434981) 'masterEvent' ]
+        123*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~60 ]      OP1[  IS_TMP_VAR ~59 ] OP2[ ,  IS_CONST (268434980) 'DTSTART' ]
+        124*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~60 ] OP2[ ,  IS_CONST (268434979) 'hasTime' ]
+        125*       < 60> DO_FCALL                                      0   RES[  IS_VAR $61 ]      OP1[  IS_UNUSED  ]
+        126*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~62 ]      OP1[  IS_VAR $61 ]
+        127*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434970) 'allDay' ]
+        128*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~62 ] OP2[  IS_UNUSED  ]
+  147   129*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        130*       < 91> FETCH_OBJ_IS                                      RES[  IS_TMP_VAR ~63 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434969) 'masterEvent' ]
+        131*       <148> ISSET_ISEMPTY_PROP_OBJ                            RES[  IS_TMP_VAR ~64 ]      OP1[  IS_TMP_VAR ~63 ] OP2[ ,  IS_CONST (268434968) 'EXDATE' ]
+        132*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~64 ] OP2[ , ->156 ]
+  148   133*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        134*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~65 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434963) 'masterEvent' ]
+        135*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~66 ]      OP1[  IS_TMP_VAR ~65 ] OP2[ ,  IS_CONST (268434962) 'EXDATE' ]
+        136*       < 77> FE_RESET_R                                        RES[  IS_VAR $67 ]      OP1[  IS_TMP_VAR ~66 ] OP2[ , ->155 ]
+        137*       < 78> FE_FETCH_R                                                OP1[  IS_VAR $67 ] OP2[ ,  IS_CV !5 ] EXT_JMP_REL[ , ->155 ]
+  149   138*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        139*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !5 ] OP2[ ,  IS_CONST (268434955) 'getDateTimes' ]
+        140*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        141*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $68 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434953) 'timeZone' ]
+        142*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $68 ] OP2[  IS_UNUSED  ]
+        143*       < 60> DO_FCALL                                      0   RES[  IS_VAR $69 ]      OP1[  IS_UNUSED  ]
+        144*       < 77> FE_RESET_R                                        RES[  IS_VAR $70 ]      OP1[  IS_VAR $69 ] OP2[ , ->153 ]
+        145*       < 78> FE_FETCH_R                                                OP1[  IS_VAR $70 ] OP2[ ,  IS_CV !6 ] EXT_JMP_REL[ , ->153 ]
+  150   146*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        147*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !6 ] OP2[ ,  IS_CONST (268434943) 'getTimeStamp' ]
+        148*       < 60> DO_FCALL                                      0   RES[  IS_VAR $72 ]      OP1[  IS_UNUSED  ]
+        149*       < 85> FETCH_OBJ_W                                       RES[  IS_VAR $71 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434938) 'exceptions' ]
+        150*       < 23> ASSIGN_DIM                                                OP1[  IS_VAR $71 ] OP2[ ,  IS_VAR $72 ]
+        151*       <137> OP_DATA                                                   OP1[  IS_CONST (268434937) <true> ] OP2[  IS_UNUSED  ]
+  149   152*       < 42> JMP                                                       OP1[ ->145 ]
+        153*       <127> FE_FREE                                                   OP1[  IS_VAR $70 ] OP2[  IS_UNUSED  ]
+  148   154*       < 42> JMP                                                       OP1[ ->137 ]
+        155*       <127> FE_FREE                                                   OP1[  IS_VAR $67 ] OP2[  IS_UNUSED  ]
+  155   156*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        157*       < 91> FETCH_OBJ_IS                                      RES[  IS_TMP_VAR ~74 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434926) 'masterEvent' ]
+        158*       <148> ISSET_ISEMPTY_PROP_OBJ                            RES[  IS_TMP_VAR ~75 ]      OP1[  IS_TMP_VAR ~74 ] OP2[ ,  IS_CONST (268434925) 'DTEND' ]
+        159*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~75 ] OP2[ , ->177 ]
+  157   160*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        161*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~77 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434921) 'masterEvent' ]
+        162*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~78 ]      OP1[  IS_TMP_VAR ~77 ] OP2[ ,  IS_CONST (268434920) 'DTEND' ]
+        163*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~78 ] OP2[ ,  IS_CONST (268434919) 'getDateTime' ]
+        164*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        165*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $79 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434917) 'timeZone' ]
+        166*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $79 ] OP2[  IS_UNUSED  ]
+        167*       < 60> DO_FCALL                                      0   RES[  IS_VAR $80 ]      OP1[  IS_UNUSED  ]
+        168*       <112> INIT_METHOD_CALL                                          OP1[  IS_VAR $80 ] OP2[ ,  IS_CONST (268434912) 'getTimeStamp' ]
+        169*       < 60> DO_FCALL                                      0   RES[  IS_VAR $81 ]      OP1[  IS_UNUSED  ]
+  158   170*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~82 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434910) 'startDate' ]
+        171*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~82 ] OP2[ ,  IS_CONST (268434909) 'getTimeStamp' ]
+        172*       < 60> DO_FCALL                                      0   RES[  IS_VAR $83 ]      OP1[  IS_UNUSED  ]
+        173*       <  2> SUB                                               RES[  IS_TMP_VAR ~84 ]      OP1[  IS_VAR $81 ] OP2[ ,  IS_VAR $83 ]
+  156   174*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434894) 'eventDuration' ]
+  158   175*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~84 ] OP2[  IS_UNUSED  ]
+        176*       < 42> JMP                                                       OP1[ ->216 ]
+  159   177*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        178*       < 91> FETCH_OBJ_IS                                      RES[  IS_TMP_VAR ~85 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434897) 'masterEvent' ]
+        179*       <148> ISSET_ISEMPTY_PROP_OBJ                            RES[  IS_TMP_VAR ~86 ]      OP1[  IS_TMP_VAR ~85 ] OP2[ ,  IS_CONST (268434896) 'DURATION' ]
+        180*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~86 ] OP2[ , ->206 ]
+  160   181*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        182*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~87 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434891) 'masterEvent' ]
+        183*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~88 ]      OP1[  IS_TMP_VAR ~87 ] OP2[ ,  IS_CONST (268434890) 'DURATION' ]
+        184*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~88 ] OP2[ ,  IS_CONST (268434889) 'getDateInterval' ]
+        185*       < 60> DO_FCALL                                      0   RES[  IS_VAR $89 ]      OP1[  IS_UNUSED  ]
+        186*       < 22> ASSIGN                                                    OP1[  IS_CV !7 ] OP2[ ,  IS_VAR $89 ]
+  161   187*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        188*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~91 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434883) 'startDate' ]
+        189*       <110> CLONE                                             RES[  IS_TMP_VAR ~92 ]      OP1[  IS_TMP_VAR ~91 ] OP2[  IS_UNUSED  ]
+        190*       < 22> ASSIGN                                                    OP1[  IS_CV !8 ] OP2[ ,  IS_TMP_VAR ~92 ]
+  162   191*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        192*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !8 ] OP2[ ,  IS_CONST (268434876) 'add' ]
+        193*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !7 ] OP2[  IS_UNUSED  ]
+        194*       < 60> DO_FCALL                                      0   RES[  IS_VAR $94 ]      OP1[  IS_UNUSED  ]
+        195*       < 22> ASSIGN                                                    OP1[  IS_CV !8 ] OP2[ ,  IS_VAR $94 ]
+  163   196*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        197*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !8 ] OP2[ ,  IS_CONST (268434869) 'getTimeStamp' ]
+        198*       < 60> DO_FCALL                                      0   RES[  IS_VAR $97 ]      OP1[  IS_UNUSED  ]
+        199*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~98 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434867) 'startDate' ]
+        200*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~98 ] OP2[ ,  IS_CONST (268434866) 'getTimeStamp' ]
+        201*       < 60> DO_FCALL                                      0   RES[  IS_VAR $99 ]      OP1[  IS_UNUSED  ]
+        202*       <  2> SUB                                               RES[  IS_TMP_VAR ~100 ]     OP1[  IS_VAR $97 ] OP2[ ,  IS_VAR $99 ]
+        203*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434856) 'eventDuration' ]
+        204*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~100 ] OP2[  IS_UNUSED  ]
+        205*       < 42> JMP                                                       OP1[ ->216 ]
+  164   206*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        207*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~101 ]     OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434854) 'allDay' ]
+        208*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~101 ] OP2[ , ->213 ]
+  165   209*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        210*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434849) 'eventDuration' ]
+        211*       <137> OP_DATA                                                   OP1[  IS_CONST (268434848) 86400 ] OP2[  IS_UNUSED  ]
+        212*       < 42> JMP                                                       OP1[ ->216 ]
+  167   213*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        214*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434843) 'eventDuration' ]
+        215*       <137> OP_DATA                                                   OP1[  IS_CONST (268434842) 0 ] OP2[  IS_UNUSED  ]
+  170   216*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        217*       < 91> FETCH_OBJ_IS                                      RES[  IS_TMP_VAR ~104 ]     OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434839) 'masterEvent' ]
+        218*       <148> ISSET_ISEMPTY_PROP_OBJ                            RES[  IS_TMP_VAR ~105 ]     OP1[  IS_TMP_VAR ~104 ] OP2[ ,  IS_CONST (268434838) 'RDATE' ]
+        219*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~105 ] OP2[ , ->234 ]
+  171   220*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        221*       < 68> NEW                                               RES[  IS_VAR $107 ]     OP1[ 'Sabre%5CVObject%5CRecur%5CRDateIterator' ]
+  172   222*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~108 ]     OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434834) 'masterEvent' ]
+        223*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~109 ]     OP1[  IS_TMP_VAR ~108 ] OP2[ ,  IS_CONST (268434833) 'RDATE' ]
+        224*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~109 ] OP2[ ,  IS_CONST (268434832) 'getParts' ]
+        225*       < 60> DO_FCALL                                      0   RES[  IS_VAR $110 ]     OP1[  IS_UNUSED  ]
+        226*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $110 ] OP2[  IS_UNUSED  ]
+        227*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+  173   228*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $111 ]     OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434826) 'startDate' ]
+        229*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $111 ] OP2[  IS_UNUSED  ]
+        230*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  171   231*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434813) 'recurIterator' ]
+  173   232*       <137> OP_DATA                                                   OP1[  IS_VAR $107 ] OP2[  IS_UNUSED  ]
+        233*       < 42> JMP                                                       OP1[ ->261 ]
+  175   234*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        235*       < 91> FETCH_OBJ_IS                                      RES[  IS_TMP_VAR ~113 ]     OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434813) 'masterEvent' ]
+        236*       <148> ISSET_ISEMPTY_PROP_OBJ                            RES[  IS_TMP_VAR ~114 ]     OP1[  IS_TMP_VAR ~113 ] OP2[ ,  IS_CONST (268434812) 'RRULE' ]
+        237*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~114 ] OP2[ , ->252 ]
+  176   238*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        239*       < 68> NEW                                               RES[  IS_VAR $116 ]     OP1[ 'Sabre%5CVObject%5CRecur%5CRRuleIterator' ]
+  177   240*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~117 ]     OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434808) 'masterEvent' ]
+        241*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~118 ]     OP1[  IS_TMP_VAR ~117 ] OP2[ ,  IS_CONST (268434807) 'RRULE' ]
+        242*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~118 ] OP2[ ,  IS_CONST (268434806) 'getParts' ]
+        243*       < 60> DO_FCALL                                      0   RES[  IS_VAR $119 ]     OP1[  IS_UNUSED  ]
+        244*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $119 ] OP2[  IS_UNUSED  ]
+        245*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+  178   246*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $120 ]     OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434800) 'startDate' ]
+        247*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $120 ] OP2[  IS_UNUSED  ]
+        248*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  176   249*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434787) 'recurIterator' ]
+  178   250*       <137> OP_DATA                                                   OP1[  IS_VAR $116 ] OP2[  IS_UNUSED  ]
+        251*       < 42> JMP                                                       OP1[ ->261 ]
+  181   252*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        253*       < 68> NEW                                               RES[  IS_VAR $123 ]     OP1[ 'Sabre%5CVObject%5CRecur%5CRRuleIterator' ]
+  183   254*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268434788) <array> ] OP2[  IS_UNUSED  ]
+        255*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+  186   256*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $124 ]     OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434785) 'startDate' ]
+        257*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $124 ] OP2[  IS_UNUSED  ]
+        258*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  181   259*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434775) 'recurIterator' ]
+  186   260*       <137> OP_DATA                                                   OP1[  IS_VAR $123 ] OP2[  IS_UNUSED  ]
+  190   261*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        262*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434774) 'rewind' ]
+        263*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  191   264*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        265*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434770) 'valid' ]
+        266*       < 60> DO_FCALL                                      0   RES[  IS_VAR $127 ]     OP1[  IS_UNUSED  ]
+        267*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~128 ]     OP1[  IS_VAR $127 ]
+        268*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~128 ] OP2[ , ->274 ]
+  192   269*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        270*       < 68> NEW                                               RES[  IS_VAR $129 ]     OP1[ 'Sabre%5CVObject%5CRecur%5CNoInstancesException' ]
+        271*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268434762) 'This+recurrence+rule+does+not+generate+any+valid+instances' ] OP2[  IS_UNUSED  ]
+        272*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+        273*       <108> THROW                                         0           OP1[  IS_VAR $129 ] OP2[  IS_UNUSED  ]
+  194   274*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        275*       < 62> RETURN                                                    OP1[  IS_CONST (268434755) null ]
+
+End of function __construct
+
+Function current:
+[+]Function Source Class Name: Sabre\VObject\Recur\EventIterator
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\sabre\vobject\lib\Recur\EventIterator.php
+function name:  current
+number of ops:  9
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  204     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435451) 'currentDate' ]
+          2*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~0 ] OP2[ , ->7 ]
+  205     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~1 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435446) 'currentDate' ]
+          5*       <110> CLONE                                             RES[  IS_TMP_VAR ~2 ]       OP1[  IS_TMP_VAR ~1 ] OP2[  IS_UNUSED  ]
+          6*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~2 ]
+  207     7*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          8*       < 62> RETURN                                                    OP1[  IS_CONST (268435439) null ]
+
+End of function current
+
+Function getdtstart:
+[+]Function Source Class Name: Sabre\VObject\Recur\EventIterator
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\sabre\vobject\lib\Recur\EventIterator.php
+function name:  getDtStart
+number of ops:  9
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  217     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435451) 'currentDate' ]
+          2*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~0 ] OP2[ , ->7 ]
+  218     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~1 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435446) 'currentDate' ]
+          5*       <110> CLONE                                             RES[  IS_TMP_VAR ~2 ]       OP1[  IS_TMP_VAR ~1 ] OP2[  IS_UNUSED  ]
+          6*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~2 ]
+  220     7*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          8*       < 62> RETURN                                                    OP1[  IS_CONST (268435439) null ]
+
+End of function getdtstart
+
+Function getdtend:
+[+]Function Source Class Name: Sabre\VObject\Recur\EventIterator
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\sabre\vobject\lib\Recur\EventIterator.php
+function name:  getDtEnd
+number of ops:  38
+compiled vars:  !0 = $end
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  230     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435422) 'valid' ]
+          2*       < 60> DO_FCALL                                      0   RES[  IS_VAR $1 ]       OP1[  IS_UNUSED  ]
+          3*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~2 ]       OP1[  IS_VAR $1 ]
+          4*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~2 ] OP2[ , ->7 ]
+  231     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       < 62> RETURN                                                    OP1[  IS_CONST (268435414) null ]
+  233     7*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          8*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~3 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435411) 'currentOverriddenEvent' ]
+          9*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~3 ]       OP1[  IS_TMP_VAR ~3 ] OP2[ , ->13 ]
+         10*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~4 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435408) 'currentOverriddenEvent' ]
+         11*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~5 ]       OP1[  IS_TMP_VAR ~4 ] OP2[ ,  IS_CONST (268435407) 'DTEND' ]
+         12*       < 52> BOOL                                              RES[  IS_TMP_VAR ~3 ]       OP1[  IS_TMP_VAR ~5 ]
+         13*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~3 ] OP2[ , ->24 ]
+  234    14*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         15*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~6 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435400) 'currentOverriddenEvent' ]
+         16*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~7 ]       OP1[  IS_TMP_VAR ~6 ] OP2[ ,  IS_CONST (268435399) 'DTEND' ]
+         17*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~7 ] OP2[ ,  IS_CONST (268435398) 'getDateTime' ]
+         18*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         19*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $8 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435396) 'timeZone' ]
+         20*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $8 ] OP2[  IS_UNUSED  ]
+         21*       < 60> DO_FCALL                                      0   RES[  IS_VAR $9 ]       OP1[  IS_UNUSED  ]
+         22*       < 62> RETURN                                                    OP1[  IS_VAR $9 ]
+         23*       < 42> JMP                                                       OP1[ ->36 ]
+  236    24*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         25*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~10 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435385) 'currentDate' ]
+         26*       <110> CLONE                                             RES[  IS_TMP_VAR ~11 ]      OP1[  IS_TMP_VAR ~10 ] OP2[  IS_UNUSED  ]
+         27*       < 22> ASSIGN                                                    OP1[  IS_CV !0 ] OP2[ ,  IS_TMP_VAR ~11 ]
+  238    28*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         29*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435378) 'modify' ]
+         30*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~13 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435378) 'eventDuration' ]
+         31*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~14 ]      OP1[  IS_CONST (268435377) '%2B' ] OP2[ ,  IS_TMP_VAR ~13 ]
+         32*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~15 ]      OP1[  IS_TMP_VAR ~14 ] OP2[ ,  IS_CONST (268435376) '+seconds' ]
+         33*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~15 ] OP2[  IS_UNUSED  ]
+         34*       < 60> DO_FCALL                                      0   RES[  IS_VAR $16 ]      OP1[  IS_UNUSED  ]
+         35*       < 62> RETURN                                                    OP1[  IS_VAR $16 ]
+  240    36*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         37*       < 62> RETURN                                                    OP1[  IS_CONST (268435367) null ]
+
+End of function getdtend
+
+Function geteventobject:
+[+]Function Source Class Name: Sabre\VObject\Recur\EventIterator
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\sabre\vobject\lib\Recur\EventIterator.php
+function name:  getEventObject
+number of ops:  60
+compiled vars:  !0 = $event, !1 = $recurid
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  252     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~2 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435402) 'currentOverriddenEvent' ]
+          2*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~2 ] OP2[ , ->6 ]
+  253     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~3 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435397) 'currentOverriddenEvent' ]
+          5*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~3 ]
+  256     6*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          7*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~4 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435392) 'masterEvent' ]
+          8*       <110> CLONE                                             RES[  IS_TMP_VAR ~5 ]       OP1[  IS_TMP_VAR ~4 ] OP2[  IS_UNUSED  ]
+          9*       < 22> ASSIGN                                                    OP1[  IS_CV !0 ] OP2[ ,  IS_TMP_VAR ~5 ]
+  263    10*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         11*       < 76> UNSET_OBJ                                                 OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435385) 'RRULE' ]
+  264    12*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         13*       < 76> UNSET_OBJ                                                 OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435382) 'EXDATE' ]
+  265    14*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         15*       < 76> UNSET_OBJ                                                 OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435379) 'RDATE' ]
+  266    16*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         17*       < 76> UNSET_OBJ                                                 OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435376) 'EXRULE' ]
+  267    18*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         19*       < 76> UNSET_OBJ                                                 OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435373) 'RECURRENCE-ID' ]
+  271    20*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         21*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~7 ]       OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435370) 'DTSTART' ]
+         22*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~7 ] OP2[ ,  IS_CONST (268435369) 'setDateTime' ]
+         23*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435369) 'getDtStart' ]
+         24*       < 60> DO_FCALL                                      0   RES[  IS_VAR $8 ]       OP1[  IS_UNUSED  ]
+         25*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $8 ] OP2[  IS_UNUSED  ]
+         26*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~9 ]       OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435365) 'DTSTART' ]
+         27*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~9 ] OP2[ ,  IS_CONST (268435364) 'isFloating' ]
+         28*       < 60> DO_FCALL                                      0   RES[  IS_VAR $10 ]      OP1[  IS_UNUSED  ]
+         29*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $10 ] OP2[  IS_UNUSED  ]
+         30*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  272    31*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         32*       <148> ISSET_ISEMPTY_PROP_OBJ                            RES[  IS_TMP_VAR ~12 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435356) 'DTEND' ]
+         33*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~12 ] OP2[ , ->45 ]
+  273    34*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         35*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~13 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435351) 'DTEND' ]
+         36*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~13 ] OP2[ ,  IS_CONST (268435350) 'setDateTime' ]
+         37*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435350) 'getDtEnd' ]
+         38*       < 60> DO_FCALL                                      0   RES[  IS_VAR $14 ]      OP1[  IS_UNUSED  ]
+         39*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $14 ] OP2[  IS_UNUSED  ]
+         40*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~15 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435346) 'DTEND' ]
+         41*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~15 ] OP2[ ,  IS_CONST (268435345) 'isFloating' ]
+         42*       < 60> DO_FCALL                                      0   RES[  IS_VAR $16 ]      OP1[  IS_UNUSED  ]
+         43*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $16 ] OP2[  IS_UNUSED  ]
+         44*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  275    45*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         46*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~18 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435337) 'DTSTART' ]
+         47*       <110> CLONE                                             RES[  IS_TMP_VAR ~19 ]      OP1[  IS_TMP_VAR ~18 ] OP2[  IS_UNUSED  ]
+         48*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_TMP_VAR ~19 ]
+  276    49*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         50*       < 24> ASSIGN_OBJ                                                OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435330) 'name' ]
+         51*       <137> OP_DATA                                                   OP1[  IS_CONST (268435329) 'RECURRENCE-ID' ] OP2[  IS_UNUSED  ]
+  277    52*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         53*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435326) 'add' ]
+         54*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         55*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  279    56*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         57*       < 62> RETURN                                                    OP1[  IS_CV !0 ]
+  280    58*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         59*       < 62> RETURN                                                    OP1[  IS_CONST (268435316) null ]
+
+End of function geteventobject
+
+Function key:
+[+]Function Source Class Name: Sabre\VObject\Recur\EventIterator
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\sabre\vobject\lib\Recur\EventIterator.php
+function name:  key
+number of ops:  6
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  293     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435451) 'counter' ]
+          2*       <  2> SUB                                               RES[  IS_TMP_VAR ~1 ]       OP1[  IS_TMP_VAR ~0 ] OP2[ ,  IS_CONST (268435450) 1 ]
+          3*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~1 ]
+  294     4*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          5*       < 62> RETURN                                                    OP1[  IS_CONST (268435445) null ]
+
+End of function key
+
+Function valid:
+[+]Function Source Class Name: Sabre\VObject\Recur\EventIterator
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\sabre\vobject\lib\Recur\EventIterator.php
+function name:  valid
+number of ops:  22
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  305     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435428) 'counter' ]
+          2*       <173> FETCH_STATIC_PROP_R          unknown              RES[  IS_TMP_VAR ~1 ]       OP1[  IS_CONST (268435427) 'maxRecurrences' ] OP2[ ,  IS_CONST (268435428) 'Sabre%5CVObject%5CSettings' ]
+          3*       < 20> IS_SMALLER                                        RES[  IS_TMP_VAR ~2 ]       OP1[  IS_TMP_VAR ~1 ] OP2[ ,  IS_TMP_VAR ~0 ]
+          4*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~2 ]       OP1[  IS_TMP_VAR ~2 ] OP2[ , ->8 ]
+          5*       <173> FETCH_STATIC_PROP_R          unknown              RES[  IS_TMP_VAR ~3 ]       OP1[  IS_CONST (268435424) 'maxRecurrences' ] OP2[ ,  IS_CONST (268435425) 'Sabre%5CVObject%5CSettings' ]
+          6*       < 17> IS_NOT_IDENTICAL                                  RES[  IS_TMP_VAR ~4 ]       OP1[  IS_TMP_VAR ~3 ] OP2[ ,  IS_CONST (268435425) -1 ]
+          7*       < 52> BOOL                                              RES[  IS_TMP_VAR ~2 ]       OP1[  IS_TMP_VAR ~4 ]
+          8*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~2 ] OP2[ , ->16 ]
+  306     9*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         10*       < 68> NEW                                               RES[  IS_VAR $5 ]       OP1[ 'Sabre%5CVObject%5CRecur%5CMaxInstancesExceededException' ]
+         11*       <173> FETCH_STATIC_PROP_R          unknown              RES[  IS_TMP_VAR ~6 ]       OP1[  IS_CONST (268435418) 'maxRecurrences' ] OP2[ ,  IS_CONST (268435419) 'Sabre%5CVObject%5CSettings' ]
+         12*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~7 ]       OP1[  IS_CONST (268435419) 'Recurring+events+are+only+allowed+to+generate+' ] OP2[ ,  IS_TMP_VAR ~6 ]
+         13*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~7 ] OP2[  IS_UNUSED  ]
+         14*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         15*       <108> THROW                                         0           OP1[  IS_VAR $5 ] OP2[  IS_UNUSED  ]
+  309    16*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         17*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~9 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435410) 'currentDate' ]
+         18*       < 52> BOOL                                              RES[  IS_TMP_VAR ~10 ]      OP1[  IS_TMP_VAR ~9 ]
+         19*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~10 ]
+  310    20*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         21*       < 62> RETURN                                                    OP1[  IS_CONST (268435403) null ]
+
+End of function valid
+
+Function rewind:
+[+]Function Source Class Name: Sabre\VObject\Recur\EventIterator
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\sabre\vobject\lib\Recur\EventIterator.php
+function name:  rewind
+number of ops:  53
+compiled vars:  !0 = $index, !1 = $event, !2 = $key, !3 = $stamp
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  320     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~4 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435401) 'recurIterator' ]
+          2*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~4 ] OP2[ ,  IS_CONST (268435400) 'rewind' ]
+          3*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  322     4*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          5*       < 22> ASSIGN                                                    OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435396) <array> ]
+  323     6*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          7*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~7 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435393) 'overriddenEvents' ]
+          8*       < 77> FE_RESET_R                                        RES[  IS_VAR $8 ]       OP1[  IS_TMP_VAR ~7 ] OP2[ , ->26 ]
+          9*       < 78> FE_FETCH_R                                        RES[  IS_TMP_VAR ~9 ]       OP1[  IS_VAR $8 ] OP2[ ,  IS_CV !1 ] EXT_JMP_REL[ , ->26 ]
+         10*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_TMP_VAR ~9 ]
+  324    11*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         12*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~11 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435384) 'DTSTART' ]
+         13*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~11 ] OP2[ ,  IS_CONST (268435383) 'getDateTime' ]
+         14*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         15*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $12 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435381) 'timeZone' ]
+         16*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $12 ] OP2[  IS_UNUSED  ]
+         17*       < 60> DO_FCALL                                      0   RES[  IS_VAR $13 ]      OP1[  IS_UNUSED  ]
+         18*       <112> INIT_METHOD_CALL                                          OP1[  IS_VAR $13 ] OP2[ ,  IS_CONST (268435376) 'getTimeStamp' ]
+         19*       < 60> DO_FCALL                                      0   RES[  IS_VAR $14 ]      OP1[  IS_UNUSED  ]
+         20*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_VAR $14 ]
+  325    21*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         22*       < 84> FETCH_DIM_W                                       RES[  IS_VAR $16 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CV !3 ]
+         23*       < 23> ASSIGN_DIM                                                OP1[  IS_VAR $16 ] OP2[  IS_UNUSED  ]
+         24*       <137> OP_DATA                                                   OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+  323    25*       < 42> JMP                                                       OP1[ ->9 ]
+         26*       <127> FE_FREE                                                   OP1[  IS_VAR $8 ] OP2[  IS_UNUSED  ]
+  327    27*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         28*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435358) 'Sabre%5CVObject%5CRecur%5Ckrsort' ]
+         29*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         30*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  328    31*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         32*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435353) 'counter' ]
+         33*       <137> OP_DATA                                                   OP1[  IS_CONST (268435352) 0 ] OP2[  IS_UNUSED  ]
+  329    34*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         35*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435349) 'overriddenEventsIndex' ]
+         36*       <137> OP_DATA                                                   OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+  330    37*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         38*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435344) 'currentOverriddenEvent' ]
+         39*       <137> OP_DATA                                                   OP1[  IS_CONST (268435343) null ] OP2[  IS_UNUSED  ]
+  332    40*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         41*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435340) 'nextDate' ]
+         42*       <137> OP_DATA                                                   OP1[  IS_CONST (268435339) null ] OP2[  IS_UNUSED  ]
+  333    43*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         44*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~24 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435337) 'startDate' ]
+         45*       <110> CLONE                                             RES[  IS_TMP_VAR ~25 ]      OP1[  IS_TMP_VAR ~24 ] OP2[  IS_UNUSED  ]
+         46*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435332) 'currentDate' ]
+         47*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~25 ] OP2[  IS_UNUSED  ]
+  335    48*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         49*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435328) 'next' ]
+         50*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  336    51*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         52*       < 62> RETURN                                                    OP1[  IS_CONST (268435324) null ]
+
+End of function rewind
+
+Function next:
+[+]Function Source Class Name: Sabre\VObject\Recur\EventIterator
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\sabre\vobject\lib\Recur\EventIterator.php
+function name:  next
+number of ops:  113
+compiled vars:  !0 = $nextDate, !1 = $offsets, !2 = $timestamp, !3 = $offset
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  346     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435319) 'currentOverriddenEvent' ]
+          2*       <137> OP_DATA                                                   OP1[  IS_CONST (268435318) null ] OP2[  IS_UNUSED  ]
+  347     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       <132> PRE_INC_OBJ                                               OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435315) 'counter' ]
+  348     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~6 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435312) 'nextDate' ]
+          7*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~6 ] OP2[ , ->15 ]
+  350     8*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          9*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~7 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435307) 'nextDate' ]
+         10*       < 22> ASSIGN                                                    OP1[  IS_CV !0 ] OP2[ ,  IS_TMP_VAR ~7 ]
+  351    11*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         12*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435302) 'nextDate' ]
+         13*       <137> OP_DATA                                                   OP1[  IS_CONST (268435301) null ] OP2[  IS_UNUSED  ]
+         14*       < 42> JMP                                                       OP1[ ->40 ]
+  356    15*       <  0> NOP                                                      
+  357    16*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         17*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~10 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435294) 'recurIterator' ]
+         18*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~10 ] OP2[ ,  IS_CONST (268435293) 'valid' ]
+         19*       < 60> DO_FCALL                                      0   RES[  IS_VAR $11 ]      OP1[  IS_UNUSED  ]
+         20*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~12 ]      OP1[  IS_VAR $11 ]
+         21*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~12 ] OP2[ , ->26 ]
+  358    22*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         23*       < 22> ASSIGN                                                    OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435285) null ]
+  359    24*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         25*       < 42> JMP                                                       OP1[ ->40 ]
+  361    26*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         27*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~14 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435278) 'recurIterator' ]
+         28*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~14 ] OP2[ ,  IS_CONST (268435277) 'current' ]
+         29*       < 60> DO_FCALL                                      0   RES[  IS_VAR $15 ]      OP1[  IS_UNUSED  ]
+         30*       < 22> ASSIGN                                                    OP1[  IS_CV !0 ] OP2[ ,  IS_VAR $15 ]
+  362    31*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         32*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~17 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435271) 'recurIterator' ]
+         33*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~17 ] OP2[ ,  IS_CONST (268435270) 'next' ]
+         34*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  363    35*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435269) 'getTimeStamp' ]
+         36*       < 60> DO_FCALL                                      0   RES[  IS_VAR $20 ]      OP1[  IS_UNUSED  ]
+         37*       < 91> FETCH_OBJ_IS                                      RES[  IS_TMP_VAR ~19 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435264) 'exceptions' ]
+         38*       <115> ISSET_ISEMPTY_DIM_OBJ                         0   RES[  ]         OP1[  IS_TMP_VAR ~19 ] OP2[ ,  IS_VAR $20 ]
+         39*       < 44> JMPNZ                                                     OP1[  IS_TMP_VAR ~21 ] OP2[ , ->16 ]
+  368    40*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         41*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~22 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435259) 'overriddenEventsIndex' ]
+         42*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~22 ] OP2[ , ->108 ]
+  369    43*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         44*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435254) 'Sabre%5CVObject%5CRecur%5Cend' ]
+         45*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         46*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $23 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435253) 'overriddenEventsIndex' ]
+         47*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $23 ] OP2[  IS_UNUSED  ]
+         48*       < 60> DO_FCALL                                      0   RES[  IS_VAR $24 ]      OP1[  IS_UNUSED  ]
+         49*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_VAR $24 ]
+  370    50*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         51*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435244) 'Sabre%5CVObject%5CRecur%5Ckey' ]
+         52*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         53*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $26 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435243) 'overriddenEventsIndex' ]
+         54*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $26 ] OP2[  IS_UNUSED  ]
+         55*       < 60> DO_FCALL                                      0   RES[  IS_VAR $27 ]      OP1[  IS_UNUSED  ]
+         56*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_VAR $27 ]
+  371    57*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         58*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435234) 'Sabre%5CVObject%5CRecur%5Cend' ]
+         59*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         60*       < 60> DO_FCALL                                      0   RES[  IS_VAR $29 ]      OP1[  IS_UNUSED  ]
+         61*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_VAR $29 ]
+  372    62*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         63*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~31 ]      OP1[  IS_CV !0 ]
+         64*       < 47> JMPNZ_EX                                          RES[  IS_TMP_VAR ~31 ]      OP1[  IS_TMP_VAR ~31 ] OP2[ , ->69 ]
+         65*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435223) 'getTimeStamp' ]
+         66*       < 60> DO_FCALL                                      0   RES[  IS_VAR $32 ]      OP1[  IS_UNUSED  ]
+         67*       < 20> IS_SMALLER                                        RES[  IS_TMP_VAR ~33 ]      OP1[  IS_CV !2 ] OP2[ ,  IS_VAR $32 ]
+         68*       < 52> BOOL                                              RES[  IS_TMP_VAR ~31 ]      OP1[  IS_TMP_VAR ~33 ]
+         69*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~31 ] OP2[ , ->108 ]
+  374    70*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         71*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~35 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435214) 'overriddenEvents' ]
+         72*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~36 ]      OP1[  IS_TMP_VAR ~35 ] OP2[ ,  IS_CV !3 ]
+         73*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435209) 'currentOverriddenEvent' ]
+         74*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~36 ] OP2[  IS_UNUSED  ]
+  377    75*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         76*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435205) 'nextDate' ]
+         77*       <137> OP_DATA                                                   OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+  378    78*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         79*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~39 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435201) 'currentOverriddenEvent' ]
+         80*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~40 ]      OP1[  IS_TMP_VAR ~39 ] OP2[ ,  IS_CONST (268435200) 'DTSTART' ]
+         81*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~40 ] OP2[ ,  IS_CONST (268435199) 'getDateTime' ]
+         82*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         83*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $41 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435197) 'timeZone' ]
+         84*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $41 ] OP2[  IS_UNUSED  ]
+         85*       < 60> DO_FCALL                                      0   RES[  IS_VAR $42 ]      OP1[  IS_UNUSED  ]
+         86*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435186) 'currentDate' ]
+         87*       <137> OP_DATA                                                   OP1[  IS_VAR $42 ] OP2[  IS_UNUSED  ]
+  381    88*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         89*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435186) 'Sabre%5CVObject%5CRecur%5Carray_pop' ]
+         90*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         91*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $43 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435185) 'overriddenEventsIndex' ]
+         92*       < 93> FETCH_DIM_FUNC_ARG                                RES[  IS_VAR $44 ]      OP1[  IS_VAR $43 ] OP2[ ,  IS_CV !2 ]
+         93*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $44 ] OP2[  IS_UNUSED  ]
+         94*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  382    95*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         96*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~46 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435176) 'overriddenEventsIndex' ]
+         97*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~47 ]      OP1[  IS_TMP_VAR ~46 ] OP2[ ,  IS_CV !2 ]
+         98*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~48 ]      OP1[  IS_TMP_VAR ~47 ]
+         99*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~48 ] OP2[ , ->106 ]
+  383   100*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        101*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435167) 'Sabre%5CVObject%5CRecur%5Carray_pop' ]
+        102*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        103*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $49 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435166) 'overriddenEventsIndex' ]
+        104*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $49 ] OP2[  IS_UNUSED  ]
+        105*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  387   106*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        107*       < 62> RETURN                                                    OP1[  IS_CONST (268435159) null ]
+  391   108*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        109*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435156) 'currentDate' ]
+        110*       <137> OP_DATA                                                   OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+  392   111*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        112*       < 62> RETURN                                                    OP1[  IS_CONST (268435151) null ]
+
+End of function next
+
+Function fastforward:
+[+]Function Source Class Name: Sabre\VObject\Recur\EventIterator
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:dateTime
+[*]type:DateTimeInterface
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\sabre\vobject\lib\Recur\EventIterator.php
+function name:  fastForward
+number of ops:  16
+compiled vars:  !0 = $dateTime
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  397     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  399     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 42> JMP                                                       OP1[ ->6 ]
+  400     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435441) 'next' ]
+          5*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  399     6*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435439) 'valid' ]
+          7*       < 60> DO_FCALL                                      0   RES[  IS_VAR $2 ]       OP1[  IS_UNUSED  ]
+          8*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~3 ]       OP1[  IS_VAR $2 ] OP2[ , ->13 ]
+          9*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435435) 'getDtEnd' ]
+         10*       < 60> DO_FCALL                                      0   RES[  IS_VAR $4 ]       OP1[  IS_UNUSED  ]
+         11*       < 21> IS_SMALLER_OR_EQUAL                               RES[  IS_TMP_VAR ~5 ]       OP1[  IS_VAR $4 ] OP2[ ,  IS_CV !0 ]
+         12*       < 52> BOOL                                              RES[  IS_TMP_VAR ~3 ]       OP1[  IS_TMP_VAR ~5 ]
+         13*       < 44> JMPNZ                                                     OP1[  IS_TMP_VAR ~3 ] OP2[ , ->3 ]
+  402    14*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         15*       < 62> RETURN                                                    OP1[  IS_CONST (268435425) null ]
+
+End of function fastforward
+
+Function isinfinite:
+[+]Function Source Class Name: Sabre\VObject\Recur\EventIterator
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\sabre\vobject\lib\Recur\EventIterator.php
+function name:  isInfinite
+number of ops:  7
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  411     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435447) 'recurIterator' ]
+          2*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~0 ] OP2[ ,  IS_CONST (268435446) 'isInfinite' ]
+          3*       < 60> DO_FCALL                                      0   RES[  IS_VAR $1 ]       OP1[  IS_UNUSED  ]
+          4*       < 62> RETURN                                                    OP1[  IS_VAR $1 ]
+  412     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       < 62> RETURN                                                    OP1[  IS_CONST (268435440) null ]
+
+End of function isinfinite
+
+End of class Sabre\VObject\Recur\EventIterator.
+

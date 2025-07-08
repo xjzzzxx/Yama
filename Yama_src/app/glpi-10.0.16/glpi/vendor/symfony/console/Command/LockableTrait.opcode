@@ -1,0 +1,151 @@
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\symfony\console\Command\LockableTrait.php
+function name:  (null)
+number of ops:  8
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   12     0*       <  0> NOP                                                      
+   14     1*       <  0> NOP                                                      
+   15     2*       <  0> NOP                                                      
+   16     3*       <  0> NOP                                                      
+   17     4*       <  0> NOP                                                      
+   18     5*       <  0> NOP                                                      
+   70     6*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          7*       < 62> RETURN                                                    OP1[  IS_CONST (268435441) 1 ]
+
+Class Symfony\Component\Console\Command\LockableTrait:
+[+]Class Parent Name: NULL
+End Trait extract
+Start Properties extract:
+Key: lock, Value: UNINIT, Type: Normal
+End Properties extract.
+
+Function lock:
+[+]Function Source Class Name: Symfony\Component\Console\Command\LockableTrait
+[*]Start of arg_info extract:
+[*]arg_info num_args:2
+[*]Function return type:bool
+
+[*]ArgInfoNo**0**
+[*]name:name
+[*]type:?string
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:blocking
+[*]type:bool
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\symfony\console\Command\LockableTrait.php
+function name:  lock
+number of ops:  65
+compiled vars:  !0 = $name, !1 = $blocking, !2 = $store
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   33     0*       < 64> RECV_INIT                                         RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435364) null ]
+          1*       < 64> RECV_INIT                                         RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435363) <false> ]
+   35     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435360) 'Symfony%5CComponent%5CConsole%5CCommand%5Cclass_exists' ]
+          4*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435361) 'Symfony%5CComponent%5CLock%5CStore%5CSemaphoreStore' ] OP2[  IS_UNUSED  ]
+          5*       < 60> DO_FCALL                                      0   RES[  IS_VAR $3 ]       OP1[  IS_UNUSED  ]
+          6*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~4 ]       OP1[  IS_VAR $3 ]
+          7*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~4 ] OP2[ , ->13 ]
+   36     8*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          9*       < 68> NEW                                               RES[  IS_VAR $5 ]       OP1[ 'Symfony%5CComponent%5CConsole%5CException%5CLogicException' ]
+         10*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435352) 'To+enable+the+locking+feature+you+must+install+the+symfony%2Flock+component.' ] OP2[  IS_UNUSED  ]
+         11*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         12*       <108> THROW                                         0           OP1[  IS_VAR $5 ] OP2[  IS_UNUSED  ]
+   39    13*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         14*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~7 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435345) 'lock' ]
+         15*       <123> TYPE_CHECK                                  1020   RES[  IS_TMP_VAR ~8 ]       OP1[  IS_TMP_VAR ~7 ] OP2[  IS_UNUSED  ]
+         16*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~8 ] OP2[ , ->22 ]
+   40    17*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         18*       < 68> NEW                                               RES[  IS_VAR $9 ]       OP1[ 'Symfony%5CComponent%5CConsole%5CException%5CLogicException' ]
+         19*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435338) 'A+lock+is+already+in+place.' ] OP2[  IS_UNUSED  ]
+         20*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         21*       <108> THROW                                         0           OP1[  IS_VAR $9 ] OP2[  IS_UNUSED  ]
+   43    22*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         23*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435331) 'Symfony%5CComponent%5CLock%5CStore%5CSemaphoreStore' ] OP2[ ,  IS_CONST (268435333) 'isSupported' ]
+         24*       < 60> DO_FCALL                                      0   RES[  IS_VAR $11 ]      OP1[  IS_UNUSED  ]
+         25*       < 43> JMPZ                                                      OP1[  IS_VAR $11 ] OP2[ , ->31 ]
+   44    26*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         27*       < 68> NEW                                               RES[  IS_VAR $12 ]      OP1[ 'Symfony%5CComponent%5CLock%5CStore%5CSemaphoreStore' ]
+         28*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         29*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_VAR $12 ]
+         30*       < 42> JMP                                                       OP1[ ->35 ]
+   46    31*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         32*       < 68> NEW                                               RES[  IS_VAR $15 ]      OP1[ 'Symfony%5CComponent%5CLock%5CStore%5CFlockStore' ]
+         33*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         34*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_VAR $15 ]
+   49    35*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         36*       < 68> NEW                                               RES[  IS_VAR $19 ]      OP1[ 'Symfony%5CComponent%5CLock%5CLockFactory' ]
+         37*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         38*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         39*       <112> INIT_METHOD_CALL                                          OP1[  IS_VAR $19 ] OP2[ ,  IS_CONST (268435310) 'createLock' ]
+         40*       <152> JMP_SET                                           RES[  IS_TMP_VAR ~21 ]      OP1[  IS_CV !0 ] OP2[ , ->44 ]
+         41*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435308) 'getName' ]
+         42*       < 60> DO_FCALL                                      0   RES[  IS_VAR $22 ]      OP1[  IS_UNUSED  ]
+         43*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~21 ]      OP1[  IS_VAR $22 ]
+         44*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~21 ] OP2[  IS_UNUSED  ]
+         45*       < 60> DO_FCALL                                      0   RES[  IS_VAR $23 ]      OP1[  IS_UNUSED  ]
+         46*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435293) 'lock' ]
+         47*       <137> OP_DATA                                                   OP1[  IS_VAR $23 ] OP2[  IS_UNUSED  ]
+   50    48*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         49*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~24 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435294) 'lock' ]
+         50*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~24 ] OP2[ ,  IS_CONST (268435293) 'acquire' ]
+         51*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         52*       < 60> DO_FCALL                                      0   RES[  IS_VAR $25 ]      OP1[  IS_UNUSED  ]
+         53*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~26 ]      OP1[  IS_VAR $25 ]
+         54*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~26 ] OP2[ , ->60 ]
+   51    55*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         56*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435283) 'lock' ]
+         57*       <137> OP_DATA                                                   OP1[  IS_CONST (268435282) null ] OP2[  IS_UNUSED  ]
+   53    58*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         59*       < 62> RETURN                                                    OP1[  IS_CONST (268435279) <false> ]
+   56    60*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         61*       < 62> RETURN                                                    OP1[  IS_CONST (268435276) <true> ]
+   57    62*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         63*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         64*       < 62> RETURN                                                    OP1[  IS_CONST (268435271) null ]
+
+End of function lock
+
+Function release:
+[+]Function Source Class Name: Symfony\Component\Console\Command\LockableTrait
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\symfony\console\Command\LockableTrait.php
+function name:  release
+number of ops:  12
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   64     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435447) 'lock' ]
+          2*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~0 ] OP2[ , ->10 ]
+   65     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~1 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435442) 'lock' ]
+          5*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~1 ] OP2[ ,  IS_CONST (268435441) 'release' ]
+          6*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+   66     7*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          8*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435437) 'lock' ]
+          9*       <137> OP_DATA                                                   OP1[  IS_CONST (268435436) null ] OP2[  IS_UNUSED  ]
+   68    10*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         11*       < 62> RETURN                                                    OP1[  IS_CONST (268435433) null ]
+
+End of function release
+
+End of class Symfony\Component\Console\Command\LockableTrait.
+

@@ -1,0 +1,1423 @@
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\Cache\CacheManager.php
+function name:  (null)
+number of ops:  12
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   36     0*       <  0> NOP                                                      
+   38     1*       <  0> NOP                                                      
+   39     2*       <  0> NOP                                                      
+   40     3*       <  0> NOP                                                      
+   41     4*       <  0> NOP                                                      
+   42     5*       <  0> NOP                                                      
+   43     6*       <  0> NOP                                                      
+   44     7*       <  0> NOP                                                      
+   45     8*       <  0> NOP                                                      
+   96     9*       <  0> NOP                                                      
+  565    10*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         11*       < 62> RETURN                                                    OP1[  IS_CONST (268435433) 1 ]
+
+Class Glpi\Cache\CacheManager:
+[+]Class Parent Name: NULL
+End Trait extract
+Start Properties extract:
+Key: config_dir, Value: UNINIT, Type: Normal
+Key: cache_dir, Value: UNINIT, Type: Normal
+End Properties extract.
+
+Function __construct:
+[+]Function Source Class Name: Glpi\Cache\CacheManager
+[*]Start of arg_info extract:
+[*]arg_info num_args:2
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:config_dir
+[*]type:string
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:cache_dir
+[*]type:string
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\Cache\CacheManager.php
+function name:  __construct
+number of ops:  10
+compiled vars:  !0 = $config_dir, !1 = $cache_dir
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  105     0*       < 64> RECV_INIT                                         RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435447) <const ast> ]
+          1*       < 64> RECV_INIT                                         RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435446) <const ast> ]
+  107     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435443) 'config_dir' ]
+          4*       <137> OP_DATA                                                   OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+  108     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435438) 'cache_dir' ]
+          7*       <137> OP_DATA                                                   OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+  109     8*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          9*       < 62> RETURN                                                    OP1[  IS_CONST (268435433) null ]
+
+End of function __construct
+
+Function setnamespaceprefix:
+[+]Function Source Class Name: Glpi\Cache\CacheManager
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:bool
+
+[*]ArgInfoNo**0**
+[*]name:namespace_prefix
+[*]type:string
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\Cache\CacheManager.php
+function name:  setNamespacePrefix
+number of ops:  19
+compiled vars:  !0 = $namespace_prefix, !1 = $config
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  118     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  120     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435445) 'getRawConfig' ]
+          3*       < 60> DO_FCALL                                      0   RES[  IS_VAR $2 ]       OP1[  IS_UNUSED  ]
+          4*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_VAR $2 ]
+  121     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       <152> JMP_SET                                           RES[  IS_TMP_VAR ~5 ]       OP1[  IS_CV !0 ] OP2[ , ->8 ]
+          7*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~5 ]       OP1[  IS_CONST (268435438) null ]
+          8*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435435) 'namespace_prefix' ]
+          9*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~5 ] OP2[  IS_UNUSED  ]
+  123    10*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         11*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435431) 'writeConfig' ]
+         12*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         13*       < 60> DO_FCALL                                      0   RES[  IS_VAR $6 ]       OP1[  IS_UNUSED  ]
+         14*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_VAR $6 ] OP2[  IS_UNUSED  ]
+         15*       < 62> RETURN                                                    OP1[  IS_VAR $6 ]
+  124    16*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         17*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         18*       < 62> RETURN                                                    OP1[  IS_CONST (268435419) null ]
+
+End of function setnamespaceprefix
+
+Function setconfiguration:
+[+]Function Source Class Name: Glpi\Cache\CacheManager
+[*]Start of arg_info extract:
+[*]arg_info num_args:3
+[*]Function return type:bool
+
+[*]ArgInfoNo**0**
+[*]name:context
+[*]type:string
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:dsn
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**2**
+[*]name:options
+[*]type:array
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\Cache\CacheManager.php
+function name:  setConfiguration
+number of ops:  58
+compiled vars:  !0 = $context, !1 = $dsn, !2 = $options, !3 = $config
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  135     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 63> RECV                                              RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ]
+          2*       < 64> RECV_INIT                                         RES[  IS_CV !2 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435416) <array> ]
+  137     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435413) 'isContextValid' ]
+          5*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          6*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435411) <true> ] OP2[  IS_UNUSED  ]
+          7*       < 60> DO_FCALL                                      0   RES[  IS_VAR $4 ]       OP1[  IS_UNUSED  ]
+          8*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~5 ]       OP1[  IS_VAR $4 ]
+          9*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~5 ] OP2[ , ->19 ]
+  138    10*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         11*       < 68> NEW                                               RES[  IS_VAR $6 ]       OP1[ 'InvalidArgumentException' ]
+         12*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435402) 'Glpi%5CCache%5Csprintf' ]
+         13*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435403) 'Invalid+or+non+configurable+context%3A+%22%25s%22.' ] OP2[  IS_UNUSED  ]
+         14*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         15*       < 60> DO_FCALL                                      0   RES[  IS_VAR $7 ]       OP1[  IS_UNUSED  ]
+         16*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $7 ] OP2[  IS_UNUSED  ]
+         17*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         18*       <108> THROW                                         0           OP1[  IS_VAR $6 ] OP2[  IS_UNUSED  ]
+  140    19*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         20*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435390) 'isDsnValid' ]
+         21*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         22*       < 60> DO_FCALL                                      0   RES[  IS_VAR $9 ]       OP1[  IS_UNUSED  ]
+         23*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~10 ]      OP1[  IS_VAR $9 ]
+         24*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~10 ] OP2[ , ->39 ]
+  141    25*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         26*       < 68> NEW                                               RES[  IS_VAR $11 ]      OP1[ 'InvalidArgumentException' ]
+         27*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435380) 'Glpi%5CCache%5Csprintf' ]
+         28*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435381) 'Invalid+DSN%3A+%25s.' ] OP2[  IS_UNUSED  ]
+         29*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435380) 'Glpi%5CCache%5Cjson_encode' ]
+         30*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         31*       < 99> FETCH_CONSTANT                                    RES[  IS_TMP_VAR ~12 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435379) 'Glpi%5CCache%5CJSON_UNESCAPED_SLASHES' ]
+         32*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~12 ] OP2[  IS_UNUSED  ]
+         33*       < 60> DO_FCALL                                      0   RES[  IS_VAR $13 ]      OP1[  IS_UNUSED  ]
+         34*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $13 ] OP2[  IS_UNUSED  ]
+         35*       < 60> DO_FCALL                                      0   RES[  IS_VAR $14 ]      OP1[  IS_UNUSED  ]
+         36*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $14 ] OP2[  IS_UNUSED  ]
+         37*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         38*       <108> THROW                                         0           OP1[  IS_VAR $11 ] OP2[  IS_UNUSED  ]
+  144    39*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         40*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435364) 'getRawConfig' ]
+         41*       < 60> DO_FCALL                                      0   RES[  IS_VAR $16 ]      OP1[  IS_UNUSED  ]
+         42*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_VAR $16 ]
+  146    43*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         44*       < 71> INIT_ARRAY                                        RES[  IS_TMP_VAR ~20 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435359) 'dsn' ]
+  147    45*       < 72> ADD_ARRAY_ELEMENT                                 RES[  IS_TMP_VAR ~20 ]      OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435358) 'options' ]
+  145    46*       < 84> FETCH_DIM_W                                       RES[  IS_VAR $18 ]      OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435354) 'contexts' ]
+         47*       < 23> ASSIGN_DIM                                                OP1[  IS_VAR $18 ] OP2[ ,  IS_CV !0 ]
+  147    48*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~20 ] OP2[  IS_UNUSED  ]
+  150    49*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         50*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435349) 'writeConfig' ]
+         51*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         52*       < 60> DO_FCALL                                      0   RES[  IS_VAR $21 ]      OP1[  IS_UNUSED  ]
+         53*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_VAR $21 ] OP2[  IS_UNUSED  ]
+         54*       < 62> RETURN                                                    OP1[  IS_VAR $21 ]
+  151    55*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         56*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         57*       < 62> RETURN                                                    OP1[  IS_CONST (268435337) null ]
+
+End of function setconfiguration
+
+Function unsetconfiguration:
+[+]Function Source Class Name: Glpi\Cache\CacheManager
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:bool
+
+[*]ArgInfoNo**0**
+[*]name:context
+[*]type:string
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\Cache\CacheManager.php
+function name:  unsetConfiguration
+number of ops:  33
+compiled vars:  !0 = $context, !1 = $config
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  160     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  162     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435437) 'isContextValid' ]
+          3*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          4*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435435) <true> ] OP2[  IS_UNUSED  ]
+          5*       < 60> DO_FCALL                                      0   RES[  IS_VAR $2 ]       OP1[  IS_UNUSED  ]
+          6*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~3 ]       OP1[  IS_VAR $2 ]
+          7*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~3 ] OP2[ , ->17 ]
+  163     8*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          9*       < 68> NEW                                               RES[  IS_VAR $4 ]       OP1[ 'InvalidArgumentException' ]
+         10*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435426) 'Glpi%5CCache%5Csprintf' ]
+         11*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435427) 'Invalid+or+non+configurable+context%3A+%22%25s%22.' ] OP2[  IS_UNUSED  ]
+         12*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         13*       < 60> DO_FCALL                                      0   RES[  IS_VAR $5 ]       OP1[  IS_UNUSED  ]
+         14*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $5 ] OP2[  IS_UNUSED  ]
+         15*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         16*       <108> THROW                                         0           OP1[  IS_VAR $4 ] OP2[  IS_UNUSED  ]
+  166    17*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         18*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435414) 'getRawConfig' ]
+         19*       < 60> DO_FCALL                                      0   RES[  IS_VAR $7 ]       OP1[  IS_UNUSED  ]
+         20*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_VAR $7 ]
+  167    21*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         22*       < 96> FETCH_DIM_UNSET                                   RES[  IS_VAR $9 ]       OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435408) 'contexts' ]
+         23*       < 75> UNSET_DIM                                                 OP1[  IS_VAR $9 ] OP2[ ,  IS_CV !0 ]
+  169    24*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         25*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435403) 'writeConfig' ]
+         26*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         27*       < 60> DO_FCALL                                      0   RES[  IS_VAR $10 ]      OP1[  IS_UNUSED  ]
+         28*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_VAR $10 ] OP2[  IS_UNUSED  ]
+         29*       < 62> RETURN                                                    OP1[  IS_VAR $10 ]
+  170    30*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         31*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         32*       < 62> RETURN                                                    OP1[  IS_CONST (268435391) null ]
+
+End of function unsetconfiguration
+
+Function testconnection:
+[+]Function Source Class Name: Glpi\Cache\CacheManager
+[*]Start of arg_info extract:
+[*]arg_info num_args:2
+[*]Function return type:void
+
+[*]ArgInfoNo**0**
+[*]name:dsn
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:options
+[*]type:array
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\Cache\CacheManager.php
+function name:  testConnection
+number of ops:  51
+compiled vars:  !0 = $dsn, !1 = $options, !2 = $client, !3 = $stats
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  180     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 64> RECV_INIT                                         RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435432) <array> ]
+  182     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435429) 'extractScheme' ]
+          4*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          5*       < 60> DO_FCALL                                      0   RES[  IS_VAR $4 ]       OP1[  IS_UNUSED  ]
+  183     6*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~6 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435425) 'SCHEME_MEMCACHED' ]
+          7*       < 48> CASE                                              RES[  ]         OP1[  IS_VAR $4 ] OP2[ ,  IS_TMP_VAR ~6 ]
+          8*       < 44> JMPNZ                                                     OP1[  IS_TMP_VAR ~5 ] OP2[ , ->16 ]
+  192     9*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~7 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435420) 'SCHEME_REDIS' ]
+         10*       < 48> CASE                                              RES[  ]         OP1[  IS_VAR $4 ] OP2[ ,  IS_TMP_VAR ~7 ]
+         11*       < 44> JMPNZ                                                     OP1[  IS_TMP_VAR ~5 ] OP2[ , ->36 ]
+  193    12*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~8 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435415) 'SCHEME_REDISS' ]
+         13*       < 48> CASE                                              RES[  ]         OP1[  IS_VAR $4 ] OP2[ ,  IS_TMP_VAR ~8 ]
+         14*       < 44> JMPNZ                                                     OP1[  IS_TMP_VAR ~5 ] OP2[ , ->36 ]
+         15*       < 42> JMP                                                       OP1[ ->46 ]
+  185    16*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         17*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435406) 'Symfony%5CComponent%5CCache%5CAdapter%5CMemcachedAdapter' ] OP2[ ,  IS_CONST (268435408) 'createConnection' ]
+         18*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         19*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         20*       < 60> DO_FCALL                                      0   RES[  IS_VAR $9 ]       OP1[  IS_UNUSED  ]
+         21*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_VAR $9 ]
+  186    22*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         23*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435398) 'getStats' ]
+         24*       < 60> DO_FCALL                                      0   RES[  IS_VAR $11 ]      OP1[  IS_UNUSED  ]
+         25*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_VAR $11 ]
+  187    26*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         27*       <123> TYPE_CHECK                                    4   RES[  IS_TMP_VAR ~13 ]      OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         28*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~13 ] OP2[ , ->34 ]
+  189    29*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         30*       < 68> NEW                                               RES[  IS_VAR $14 ]      OP1[ 'RuntimeException' ]
+         31*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435386) 'Unable+to+connect+to+Memcached+server.' ] OP2[  IS_UNUSED  ]
+         32*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         33*       <108> THROW                                         0           OP1[  IS_VAR $14 ] OP2[  IS_UNUSED  ]
+  191    34*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         35*       < 42> JMP                                                       OP1[ ->48 ]
+  195    36*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         37*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435375) 'lazy' ]
+         38*       <137> OP_DATA                                                   OP1[  IS_CONST (268435374) <false> ] OP2[  IS_UNUSED  ]
+  196    39*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         40*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435371) 'Symfony%5CComponent%5CCache%5CAdapter%5CRedisAdapter' ] OP2[ ,  IS_CONST (268435373) 'createConnection' ]
+         41*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         42*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         43*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  197    44*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         45*       < 42> JMP                                                       OP1[ ->48 ]
+  199    46*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         47*       < 42> JMP                                                       OP1[ ->48 ]
+         48*       < 70> FREE                                                      OP1[  IS_VAR $4 ]
+  201    49*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         50*       < 62> RETURN                                                    OP1[  IS_CONST (268435355) null ]
+
+End of function testconnection
+
+Function getcacheinstance:
+[+]Function Source Class Name: Glpi\Cache\CacheManager
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:Psr\SimpleCache\CacheInterface
+
+[*]ArgInfoNo**0**
+[*]name:context
+[*]type:string
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\Cache\CacheManager.php
+function name:  getCacheInstance
+number of ops:  13
+compiled vars:  !0 = $context
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  210     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  212     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 68> NEW                                               RES[  IS_VAR $1 ]       OP1[ 'Glpi%5CCache%5CSimpleCache' ]
+          3*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435447) 'getCacheStorageAdapter' ]
+          4*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          5*       < 60> DO_FCALL                                      0   RES[  IS_VAR $2 ]       OP1[  IS_UNUSED  ]
+          6*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $2 ] OP2[  IS_UNUSED  ]
+          7*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+          8*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_VAR $1 ] OP2[  IS_UNUSED  ]
+          9*       < 62> RETURN                                                    OP1[  IS_VAR $1 ]
+  213    10*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         11*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         12*       < 62> RETURN                                                    OP1[  IS_CONST (268435431) null ]
+
+End of function getcacheinstance
+
+Function getcachestorageadapter:
+[+]Function Source Class Name: Glpi\Cache\CacheManager
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:Psr\Cache\CacheItemPoolInterface
+
+[*]ArgInfoNo**0**
+[*]name:context
+[*]type:string
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\Cache\CacheManager.php
+function name:  getCacheStorageAdapter
+number of ops:  166
+compiled vars:  !0 = $context, !1 = $PHPLOGGER, !2 = $raw_config, !3 = $namespace_prefix, !4 = $namespace, !5 = $adapter, !6 = $context_config, !7 = $dsn, !8 = $options, !9 = $scheme
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  220     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  223     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       <168> BIND_GLOBAL                                               OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435380) 'PHPLOGGER' ]
+  225     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435377) 'isContextValid' ]
+          5*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          6*       < 60> DO_FCALL                                      0   RES[  IS_VAR $10 ]      OP1[  IS_UNUSED  ]
+          7*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~11 ]      OP1[  IS_VAR $10 ]
+          8*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~11 ] OP2[ , ->18 ]
+  226     9*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         10*       < 68> NEW                                               RES[  IS_VAR $12 ]      OP1[ 'InvalidArgumentException' ]
+         11*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435367) 'Glpi%5CCache%5Csprintf' ]
+         12*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435368) 'Invalid+context%3A+%22%25s%22.' ] OP2[  IS_UNUSED  ]
+         13*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         14*       < 60> DO_FCALL                                      0   RES[  IS_VAR $13 ]      OP1[  IS_UNUSED  ]
+         15*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $13 ] OP2[  IS_UNUSED  ]
+         16*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         17*       <108> THROW                                         0           OP1[  IS_VAR $12 ] OP2[  IS_UNUSED  ]
+  229    18*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         19*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435355) 'getRawConfig' ]
+         20*       < 60> DO_FCALL                                      0   RES[  IS_VAR $15 ]      OP1[  IS_UNUSED  ]
+         21*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_VAR $15 ]
+  231    22*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         23*       < 90> FETCH_DIM_IS                                      RES[  IS_TMP_VAR ~17 ]      OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435349) 'namespace_prefix' ]
+         24*       <169> COALESCE                                          RES[  IS_TMP_VAR ~18 ]      OP1[  IS_TMP_VAR ~17 ] OP2[ , ->26 ]
+         25*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~18 ]      OP1[  IS_CONST (268435346) '' ]
+         26*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_TMP_VAR ~18 ]
+  232    27*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         28*       <154> ISSET_ISEMPTY_CV                                  RES[  IS_TMP_VAR ~20 ]      OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         29*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~21 ]      OP1[  IS_TMP_VAR ~20 ]
+         30*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~21 ] OP2[ , ->33 ]
+  233    31*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         32*       < 26> ASSIGN_OP                    .=               8           OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435333) '-' ]
+  236    33*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         34*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~23 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435330) 'CONTEXT_TRANSLATIONS' ]
+         35*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~24 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_TMP_VAR ~23 ]
+         36*       < 47> JMPNZ_EX                                          RES[  IS_TMP_VAR ~24 ]      OP1[  IS_TMP_VAR ~24 ] OP2[ , ->40 ]
+         37*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~25 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435325) 'CONTEXT_INSTALLER' ]
+         38*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~26 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_TMP_VAR ~25 ]
+         39*       < 52> BOOL                                              RES[  IS_TMP_VAR ~24 ]      OP1[  IS_TMP_VAR ~26 ]
+         40*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~24 ] OP2[ , ->60 ]
+  241    41*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         42*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435316) 'normalizeNamespace' ]
+         43*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~27 ]      OP1[  IS_CV !3 ] OP2[ ,  IS_CV !0 ]
+         44*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~28 ]      OP1[  IS_TMP_VAR ~27 ] OP2[ ,  IS_CONST (268435314) '-' ]
+         45*       < 99> FETCH_CONSTANT                                    RES[  IS_TMP_VAR ~29 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435313) 'Glpi%5CCache%5CGLPI_VERSION' ]
+         46*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~30 ]      OP1[  IS_TMP_VAR ~28 ] OP2[ ,  IS_TMP_VAR ~29 ]
+         47*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~30 ] OP2[  IS_UNUSED  ]
+         48*       < 60> DO_FCALL                                      0   RES[  IS_VAR $31 ]      OP1[  IS_UNUSED  ]
+         49*       < 22> ASSIGN                                                    OP1[  IS_CV !4 ] OP2[ ,  IS_VAR $31 ]
+  242    50*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         51*       < 68> NEW                                               RES[  IS_VAR $33 ]      OP1[ 'Symfony%5CComponent%5CCache%5CAdapter%5CFilesystemAdapter' ]
+         52*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !4 ] OP2[  IS_UNUSED  ]
+         53*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435302) 0 ] OP2[  IS_UNUSED  ]
+         54*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         55*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $34 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435299) 'cache_dir' ]
+         56*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $34 ] OP2[  IS_UNUSED  ]
+         57*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         58*       < 22> ASSIGN                                                    OP1[  IS_CV !5 ] OP2[ ,  IS_VAR $33 ]
+         59*       < 42> JMP                                                       OP1[ ->156 ]
+  243    60*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         61*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435288) 'Glpi%5CCache%5Carray_key_exists' ]
+         62*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         63*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         64*       < 93> FETCH_DIM_FUNC_ARG                                RES[  IS_VAR $37 ]      OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435285) 'contexts' ]
+         65*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $37 ] OP2[  IS_UNUSED  ]
+         66*       < 60> DO_FCALL                                      0   RES[  IS_VAR $38 ]      OP1[  IS_UNUSED  ]
+         67*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~39 ]      OP1[  IS_VAR $38 ]
+         68*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~39 ] OP2[ , ->83 ]
+  245    69*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         70*       < 68> NEW                                               RES[  IS_VAR $40 ]      OP1[ 'Symfony%5CComponent%5CCache%5CAdapter%5CFilesystemAdapter' ]
+         71*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435274) 'normalizeNamespace' ]
+         72*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~41 ]      OP1[  IS_CV !3 ] OP2[ ,  IS_CV !0 ]
+         73*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~41 ] OP2[  IS_UNUSED  ]
+         74*       < 60> DO_FCALL                                      0   RES[  IS_VAR $42 ]      OP1[  IS_UNUSED  ]
+         75*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $42 ] OP2[  IS_UNUSED  ]
+         76*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435266) 0 ] OP2[  IS_UNUSED  ]
+         77*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         78*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $43 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435263) 'cache_dir' ]
+         79*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $43 ] OP2[  IS_UNUSED  ]
+         80*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         81*       < 22> ASSIGN                                                    OP1[  IS_CV !5 ] OP2[ ,  IS_VAR $40 ]
+         82*       < 42> JMP                                                       OP1[ ->156 ]
+  247    83*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         84*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~46 ]      OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435252) 'contexts' ]
+         85*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~47 ]      OP1[  IS_TMP_VAR ~46 ] OP2[ ,  IS_CV !0 ]
+         86*       < 22> ASSIGN                                                    OP1[  IS_CV !6 ] OP2[ ,  IS_TMP_VAR ~47 ]
+  249    87*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         88*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~49 ]      OP1[  IS_CV !6 ] OP2[ ,  IS_CONST (268435245) 'dsn' ]
+         89*       < 22> ASSIGN                                                    OP1[  IS_CV !7 ] OP2[ ,  IS_TMP_VAR ~49 ]
+  250    90*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         91*       < 90> FETCH_DIM_IS                                      RES[  IS_TMP_VAR ~51 ]      OP1[  IS_CV !6 ] OP2[ ,  IS_CONST (268435240) 'options' ]
+         92*       <169> COALESCE                                          RES[  IS_TMP_VAR ~52 ]      OP1[  IS_TMP_VAR ~51 ] OP2[ , ->94 ]
+         93*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~52 ]      OP1[  IS_CONST (268435237) <array> ]
+         94*       < 22> ASSIGN                                                    OP1[  IS_CV !8 ] OP2[ ,  IS_TMP_VAR ~52 ]
+  251    95*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         96*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435232) 'extractScheme' ]
+         97*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !7 ] OP2[  IS_UNUSED  ]
+         98*       < 60> DO_FCALL                                      0   RES[  IS_VAR $54 ]      OP1[  IS_UNUSED  ]
+         99*       < 22> ASSIGN                                                    OP1[  IS_CV !9 ] OP2[ ,  IS_VAR $54 ]
+  252   100*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        101*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435224) 'normalizeNamespace' ]
+        102*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~56 ]      OP1[  IS_CV !3 ] OP2[ ,  IS_CV !0 ]
+        103*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~56 ] OP2[  IS_UNUSED  ]
+        104*       < 60> DO_FCALL                                      0   RES[  IS_VAR $57 ]      OP1[  IS_UNUSED  ]
+        105*       < 22> ASSIGN                                                    OP1[  IS_CV !4 ] OP2[ ,  IS_VAR $57 ]
+  255   106*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        107*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~60 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435214) 'SCHEME_MEMCACHED' ]
+        108*       < 18> IS_EQUAL                                          RES[  ]         OP1[  IS_CV !9 ] OP2[ ,  IS_TMP_VAR ~60 ]
+        109*       < 44> JMPNZ                                                     OP1[  IS_TMP_VAR ~59 ] OP2[ , ->117 ]
+  262   110*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~61 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435209) 'SCHEME_REDIS' ]
+        111*       < 18> IS_EQUAL                                          RES[  ]         OP1[  IS_CV !9 ] OP2[ ,  IS_TMP_VAR ~61 ]
+        112*       < 44> JMPNZ                                                     OP1[  IS_TMP_VAR ~59 ] OP2[ , ->129 ]
+  263   113*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~62 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435204) 'SCHEME_REDISS' ]
+        114*       < 18> IS_EQUAL                                          RES[  ]         OP1[  IS_CV !9 ] OP2[ ,  IS_TMP_VAR ~62 ]
+        115*       < 44> JMPNZ                                                     OP1[  IS_TMP_VAR ~59 ] OP2[ , ->129 ]
+        116*       < 42> JMP                                                       OP1[ ->141 ]
+  256   117*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        118*       < 68> NEW                                               RES[  IS_VAR $63 ]      OP1[ 'Symfony%5CComponent%5CCache%5CAdapter%5CMemcachedAdapter' ]
+  257   119*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435195) 'Symfony%5CComponent%5CCache%5CAdapter%5CMemcachedAdapter' ] OP2[ ,  IS_CONST (268435197) 'createConnection' ]
+        120*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !7 ] OP2[  IS_UNUSED  ]
+        121*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !8 ] OP2[  IS_UNUSED  ]
+        122*       < 60> DO_FCALL                                      0   RES[  IS_VAR $64 ]      OP1[  IS_UNUSED  ]
+        123*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $64 ] OP2[  IS_UNUSED  ]
+        124*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !4 ] OP2[  IS_UNUSED  ]
+        125*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  256   126*       < 22> ASSIGN                                                    OP1[  IS_CV !5 ] OP2[ ,  IS_VAR $63 ]
+  260   127*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        128*       < 42> JMP                                                       OP1[ ->156 ]
+  264   129*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        130*       < 68> NEW                                               RES[  IS_VAR $67 ]      OP1[ 'Symfony%5CComponent%5CCache%5CAdapter%5CRedisAdapter' ]
+  265   131*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435177) 'Symfony%5CComponent%5CCache%5CAdapter%5CRedisAdapter' ] OP2[ ,  IS_CONST (268435179) 'createConnection' ]
+        132*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !7 ] OP2[  IS_UNUSED  ]
+        133*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !8 ] OP2[  IS_UNUSED  ]
+        134*       < 60> DO_FCALL                                      0   RES[  IS_VAR $68 ]      OP1[  IS_UNUSED  ]
+        135*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $68 ] OP2[  IS_UNUSED  ]
+        136*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !4 ] OP2[  IS_UNUSED  ]
+        137*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  264   138*       < 22> ASSIGN                                                    OP1[  IS_CV !5 ] OP2[ ,  IS_VAR $67 ]
+  268   139*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        140*       < 42> JMP                                                       OP1[ ->156 ]
+  271   141*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        142*       < 68> NEW                                               RES[  IS_VAR $71 ]      OP1[ 'RuntimeException' ]
+        143*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435159) 'Glpi%5CCache%5Csprintf' ]
+        144*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435160) 'Invalid+cache+DSN+%25s.' ] OP2[  IS_UNUSED  ]
+        145*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435159) 'Glpi%5CCache%5Cvar_export' ]
+        146*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !7 ] OP2[  IS_UNUSED  ]
+        147*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435158) <true> ] OP2[  IS_UNUSED  ]
+        148*       < 60> DO_FCALL                                      0   RES[  IS_VAR $72 ]      OP1[  IS_UNUSED  ]
+        149*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $72 ] OP2[  IS_UNUSED  ]
+        150*       < 60> DO_FCALL                                      0   RES[  IS_VAR $73 ]      OP1[  IS_UNUSED  ]
+        151*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $73 ] OP2[  IS_UNUSED  ]
+        152*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+        153*       <108> THROW                                         0           OP1[  IS_VAR $71 ] OP2[  IS_UNUSED  ]
+  272   154*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        155*       < 42> JMP                                                       OP1[ ->156 ]
+  276   156*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        157*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !5 ] OP2[ ,  IS_CONST (268435139) 'setLogger' ]
+        158*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+        159*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  278   160*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        161*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_CV !5 ] OP2[  IS_UNUSED  ]
+        162*       < 62> RETURN                                                    OP1[  IS_CV !5 ]
+  279   163*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        164*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        165*       < 62> RETURN                                                    OP1[  IS_CONST (268435125) null ]
+
+End of function getcachestorageadapter
+
+Function getcorecacheinstance:
+[+]Function Source Class Name: Glpi\Cache\CacheManager
+[*]Start of arg_info extract:
+[*]arg_info num_args:0
+[*]Function return type:Psr\SimpleCache\CacheInterface
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\Cache\CacheManager.php
+function name:  getCoreCacheInstance
+number of ops:  10
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  289     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435450) 'getCacheInstance' ]
+          2*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435450) 'CONTEXT_CORE' ]
+          3*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~0 ] OP2[  IS_UNUSED  ]
+          4*       < 60> DO_FCALL                                      0   RES[  IS_VAR $1 ]       OP1[  IS_UNUSED  ]
+          5*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_VAR $1 ] OP2[  IS_UNUSED  ]
+          6*       < 62> RETURN                                                    OP1[  IS_VAR $1 ]
+  290     7*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          8*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          9*       < 62> RETURN                                                    OP1[  IS_CONST (268435437) null ]
+
+End of function getcorecacheinstance
+
+Function gettranslationscacheinstance:
+[+]Function Source Class Name: Glpi\Cache\CacheManager
+[*]Start of arg_info extract:
+[*]arg_info num_args:0
+[*]Function return type:Psr\SimpleCache\CacheInterface
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\Cache\CacheManager.php
+function name:  getTranslationsCacheInstance
+number of ops:  10
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  299     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435450) 'getCacheInstance' ]
+          2*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435450) 'CONTEXT_TRANSLATIONS' ]
+          3*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~0 ] OP2[  IS_UNUSED  ]
+          4*       < 60> DO_FCALL                                      0   RES[  IS_VAR $1 ]       OP1[  IS_UNUSED  ]
+          5*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_VAR $1 ] OP2[  IS_UNUSED  ]
+          6*       < 62> RETURN                                                    OP1[  IS_VAR $1 ]
+  300     7*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          8*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          9*       < 62> RETURN                                                    OP1[  IS_CONST (268435437) null ]
+
+End of function gettranslationscacheinstance
+
+Function getinstallercacheinstance:
+[+]Function Source Class Name: Glpi\Cache\CacheManager
+[*]Start of arg_info extract:
+[*]arg_info num_args:0
+[*]Function return type:Psr\SimpleCache\CacheInterface
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\Cache\CacheManager.php
+function name:  getInstallerCacheInstance
+number of ops:  10
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  309     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435450) 'getCacheInstance' ]
+          2*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435450) 'CONTEXT_INSTALLER' ]
+          3*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~0 ] OP2[  IS_UNUSED  ]
+          4*       < 60> DO_FCALL                                      0   RES[  IS_VAR $1 ]       OP1[  IS_UNUSED  ]
+          5*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_VAR $1 ] OP2[  IS_UNUSED  ]
+          6*       < 62> RETURN                                                    OP1[  IS_VAR $1 ]
+  310     7*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          8*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          9*       < 62> RETURN                                                    OP1[  IS_CONST (268435437) null ]
+
+End of function getinstallercacheinstance
+
+Function resetallcaches:
+[+]Function Source Class Name: Glpi\Cache\CacheManager
+[*]Start of arg_info extract:
+[*]arg_info num_args:0
+[*]Function return type:bool
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\Cache\CacheManager.php
+function name:  resetAllCaches
+number of ops:  73
+compiled vars:  !0 = $success, !1 = $known_contexts, !2 = $context, !3 = $tpl_cache_dir, !4 = $tpl_files, !5 = $tpl_file, !6 = $tpl_dirs, !7 = $tpl_dir
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  320     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 22> ASSIGN                                                    OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435424) <true> ]
+  323     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435421) 'getKnownContexts' ]
+          4*       < 60> DO_FCALL                                      0   RES[  IS_VAR $9 ]       OP1[  IS_UNUSED  ]
+          5*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_VAR $9 ]
+  324     6*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          7*       < 77> FE_RESET_R                                        RES[  IS_VAR $11 ]      OP1[  IS_CV !1 ] OP2[ , ->19 ]
+          8*       < 78> FE_FETCH_R                                                OP1[  IS_VAR $11 ] OP2[ ,  IS_CV !2 ] EXT_JMP_REL[ , ->19 ]
+  325     9*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         10*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435409) 'getCacheInstance' ]
+         11*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         12*       < 60> DO_FCALL                                      0   RES[  IS_VAR $12 ]      OP1[  IS_UNUSED  ]
+         13*       <112> INIT_METHOD_CALL                                          OP1[  IS_VAR $12 ] OP2[ ,  IS_CONST (268435405) 'clear' ]
+         14*       < 60> DO_FCALL                                      0   RES[  IS_VAR $13 ]      OP1[  IS_UNUSED  ]
+         15*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~14 ]      OP1[  IS_VAR $13 ] OP2[ , ->17 ]
+         16*       < 52> BOOL                                              RES[  IS_TMP_VAR ~14 ]      OP1[  IS_CV !0 ]
+         17*       < 22> ASSIGN                                                    OP1[  IS_CV !0 ] OP2[ ,  IS_TMP_VAR ~14 ]
+  324    18*       < 42> JMP                                                       OP1[ ->8 ]
+         19*       <127> FE_FREE                                                   OP1[  IS_VAR $11 ] OP2[  IS_UNUSED  ]
+  329    20*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         21*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~16 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435391) 'cache_dir' ]
+         22*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~17 ]      OP1[  IS_TMP_VAR ~16 ] OP2[ ,  IS_CONST (268435390) '%2Ftemplates' ]
+         23*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_TMP_VAR ~17 ]
+  330    24*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         25*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435385) 'Glpi%5CCache%5Cfile_exists' ]
+         26*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         27*       < 60> DO_FCALL                                      0   RES[  IS_VAR $19 ]      OP1[  IS_UNUSED  ]
+         28*       < 43> JMPZ                                                      OP1[  IS_VAR $19 ] OP2[ , ->67 ]
+  331    29*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         30*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435378) 'Glpi%5CCache%5Cglob' ]
+         31*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~20 ]      OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435379) '%2F%2A%2A%2F%2A.php' ]
+         32*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~20 ] OP2[  IS_UNUSED  ]
+         33*       < 60> DO_FCALL                                      0   RES[  IS_VAR $21 ]      OP1[  IS_UNUSED  ]
+         34*       < 22> ASSIGN                                                    OP1[  IS_CV !4 ] OP2[ ,  IS_VAR $21 ]
+  332    35*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         36*       < 77> FE_RESET_R                                        RES[  IS_VAR $23 ]      OP1[  IS_CV !4 ] OP2[ , ->46 ]
+         37*       < 78> FE_FETCH_R                                                OP1[  IS_VAR $23 ] OP2[ ,  IS_CV !5 ] EXT_JMP_REL[ , ->46 ]
+  333    38*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         39*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435364) 'Glpi%5CCache%5Cunlink' ]
+         40*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !5 ] OP2[  IS_UNUSED  ]
+         41*       < 60> DO_FCALL                                      0   RES[  IS_VAR $24 ]      OP1[  IS_UNUSED  ]
+         42*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~25 ]      OP1[  IS_VAR $24 ] OP2[ , ->44 ]
+         43*       < 52> BOOL                                              RES[  IS_TMP_VAR ~25 ]      OP1[  IS_CV !0 ]
+         44*       < 22> ASSIGN                                                    OP1[  IS_CV !0 ] OP2[ ,  IS_TMP_VAR ~25 ]
+  332    45*       < 42> JMP                                                       OP1[ ->37 ]
+         46*       <127> FE_FREE                                                   OP1[  IS_VAR $23 ] OP2[  IS_UNUSED  ]
+  336    47*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         48*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435349) 'Glpi%5CCache%5Cglob' ]
+         49*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~27 ]      OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435350) '%2F%2A' ]
+         50*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~27 ] OP2[  IS_UNUSED  ]
+         51*       < 99> FETCH_CONSTANT                                    RES[  IS_TMP_VAR ~28 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435347) 'Glpi%5CCache%5CGLOB_ONLYDIR' ]
+         52*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~28 ] OP2[  IS_UNUSED  ]
+         53*       < 60> DO_FCALL                                      0   RES[  IS_VAR $29 ]      OP1[  IS_UNUSED  ]
+         54*       < 22> ASSIGN                                                    OP1[  IS_CV !6 ] OP2[ ,  IS_VAR $29 ]
+  337    55*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         56*       < 77> FE_RESET_R                                        RES[  IS_VAR $31 ]      OP1[  IS_CV !6 ] OP2[ , ->66 ]
+         57*       < 78> FE_FETCH_R                                                OP1[  IS_VAR $31 ] OP2[ ,  IS_CV !7 ] EXT_JMP_REL[ , ->66 ]
+  338    58*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         59*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435334) 'Glpi%5CCache%5Crmdir' ]
+         60*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !7 ] OP2[  IS_UNUSED  ]
+         61*       < 60> DO_FCALL                                      0   RES[  IS_VAR $32 ]      OP1[  IS_UNUSED  ]
+         62*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~33 ]      OP1[  IS_VAR $32 ] OP2[ , ->64 ]
+         63*       < 52> BOOL                                              RES[  IS_TMP_VAR ~33 ]      OP1[  IS_CV !0 ]
+         64*       < 22> ASSIGN                                                    OP1[  IS_CV !0 ] OP2[ ,  IS_TMP_VAR ~33 ]
+  337    65*       < 42> JMP                                                       OP1[ ->57 ]
+         66*       <127> FE_FREE                                                   OP1[  IS_VAR $31 ] OP2[  IS_UNUSED  ]
+  342    67*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         68*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         69*       < 62> RETURN                                                    OP1[  IS_CV !0 ]
+  343    70*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         71*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         72*       < 62> RETURN                                                    OP1[  IS_CONST (268435311) null ]
+
+End of function resetallcaches
+
+Function getknowncontexts:
+[+]Function Source Class Name: Glpi\Cache\CacheManager
+[*]Start of arg_info extract:
+[*]arg_info num_args:0
+[*]Function return type:array
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\Cache\CacheManager.php
+function name:  getKnownContexts
+number of ops:  75
+compiled vars:  !0 = $contexts, !1 = $config, !2 = $directory_iterator, !3 = $file, !4 = $context
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  353     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 22> ASSIGN                                                    OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435408) <array> ]
+  361     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435405) 'getRawConfig' ]
+          4*       < 60> DO_FCALL                                      0   RES[  IS_VAR $6 ]       OP1[  IS_UNUSED  ]
+          5*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_VAR $6 ]
+  362     6*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          7*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435399) 'Glpi%5CCache%5Carray_push' ]
+          8*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          9*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435398) 'Glpi%5CCache%5Carray_keys' ]
+         10*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         11*       < 93> FETCH_DIM_FUNC_ARG                                RES[  IS_VAR $8 ]       OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435397) 'contexts' ]
+         12*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $8 ] OP2[  IS_UNUSED  ]
+         13*       < 60> DO_FCALL                                      0   RES[  IS_VAR $9 ]       OP1[  IS_UNUSED  ]
+         14*       <165> SEND_UNPACK                                               OP1[  IS_VAR $9 ] OP2[  IS_UNUSED  ]
+         15*       <199> CHECK_UNDEF_ARGS                                          OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         16*       < 60> DO_FCALL                                      1           OP1[  IS_UNUSED  ]
+  366    17*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         18*       < 68> NEW                                               RES[  IS_VAR $11 ]      OP1[ 'DirectoryIterator' ]
+         19*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         20*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $12 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435382) 'cache_dir' ]
+         21*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $12 ] OP2[  IS_UNUSED  ]
+         22*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         23*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_VAR $11 ]
+  367    24*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         25*       < 77> FE_RESET_R                                        RES[  IS_VAR $15 ]      OP1[  IS_CV !2 ] OP2[ , ->65 ]
+         26*       < 78> FE_FETCH_R                                                OP1[  IS_VAR $15 ] OP2[ ,  IS_CV !3 ] EXT_JMP_REL[ , ->65 ]
+  368    27*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         28*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435367) 'isDot' ]
+         29*       < 60> DO_FCALL                                      0   RES[  IS_VAR $16 ]      OP1[  IS_UNUSED  ]
+         30*       < 47> JMPNZ_EX                                          RES[  IS_TMP_VAR ~17 ]      OP1[  IS_VAR $16 ] OP2[ , ->35 ]
+         31*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435363) 'isDir' ]
+         32*       < 60> DO_FCALL                                      0   RES[  IS_VAR $18 ]      OP1[  IS_UNUSED  ]
+         33*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~19 ]      OP1[  IS_VAR $18 ]
+         34*       < 52> BOOL                                              RES[  IS_TMP_VAR ~17 ]      OP1[  IS_TMP_VAR ~19 ]
+         35*       < 47> JMPNZ_EX                                          RES[  IS_TMP_VAR ~17 ]      OP1[  IS_TMP_VAR ~17 ] OP2[ , ->44 ]
+         36*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435355) 'Glpi%5CCache%5Cpreg_match' ]
+         37*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435356) '%2F%5Eplugin_%2F' ] OP2[  IS_UNUSED  ]
+         38*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435355) 'getFilename' ]
+         39*       < 60> DO_FCALL                                      0   RES[  IS_VAR $20 ]      OP1[  IS_UNUSED  ]
+         40*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $20 ] OP2[  IS_UNUSED  ]
+         41*       < 60> DO_FCALL                                      0   RES[  IS_VAR $21 ]      OP1[  IS_UNUSED  ]
+         42*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~22 ]      OP1[  IS_VAR $21 ]
+         43*       < 52> BOOL                                              RES[  IS_TMP_VAR ~17 ]      OP1[  IS_TMP_VAR ~22 ]
+         44*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~17 ] OP2[ , ->47 ]
+  369    45*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         46*       < 42> JMP                                                       OP1[ ->26 ]
+  372    47*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         48*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435337) 'Glpi%5CCache%5Cpreg_replace' ]
+         49*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435338) '%2F%5Eplugin_%28%5Ba-zA-Z%5D%2B%29%24%2F' ] OP2[  IS_UNUSED  ]
+         50*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435337) 'plugin%3A%241' ] OP2[  IS_UNUSED  ]
+         51*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435336) 'getFilename' ]
+         52*       < 60> DO_FCALL                                      0   RES[  IS_VAR $23 ]      OP1[  IS_UNUSED  ]
+         53*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $23 ] OP2[  IS_UNUSED  ]
+         54*       < 60> DO_FCALL                                      0   RES[  IS_VAR $24 ]      OP1[  IS_UNUSED  ]
+         55*       < 22> ASSIGN                                                    OP1[  IS_CV !4 ] OP2[ ,  IS_VAR $24 ]
+  373    56*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         57*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435326) 'isContextValid' ]
+         58*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !4 ] OP2[  IS_UNUSED  ]
+         59*       < 60> DO_FCALL                                      0   RES[  IS_VAR $26 ]      OP1[  IS_UNUSED  ]
+         60*       < 43> JMPZ                                                      OP1[  IS_VAR $26 ] OP2[ , ->64 ]
+  374    61*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         62*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         63*       <137> OP_DATA                                                   OP1[  IS_CV !4 ] OP2[  IS_UNUSED  ]
+  367    64*       < 42> JMP                                                       OP1[ ->26 ]
+         65*       <127> FE_FREE                                                   OP1[  IS_VAR $15 ] OP2[  IS_UNUSED  ]
+  378    66*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         67*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435308) 'Glpi%5CCache%5Carray_unique' ]
+         68*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         69*       < 60> DO_FCALL                                      0   RES[  IS_VAR $28 ]      OP1[  IS_UNUSED  ]
+         70*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_VAR $28 ] OP2[  IS_UNUSED  ]
+         71*       < 62> RETURN                                                    OP1[  IS_VAR $28 ]
+  379    72*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         73*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         74*       < 62> RETURN                                                    OP1[  IS_CONST (268435297) null ]
+
+End of function getknowncontexts
+
+Function extractscheme:
+[+]Function Source Class Name: Glpi\Cache\CacheManager
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:?string
+
+[*]ArgInfoNo**0**
+[*]name:dsn
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\Cache\CacheManager.php
+function name:  extractScheme
+number of ops:  96
+compiled vars:  !0 = $dsn, !1 = $schemes, !2 = $entry, !3 = $scheme, !4 = $matches
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  388     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  390     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435406) 'Glpi%5CCache%5Cis_array' ]
+          3*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          4*       < 60> DO_FCALL                                      0   RES[  IS_VAR $5 ]       OP1[  IS_UNUSED  ]
+          5*       < 43> JMPZ                                                      OP1[  IS_VAR $5 ] OP2[ , ->54 ]
+  391     6*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          7*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435399) 'Glpi%5CCache%5Ccount' ]
+          8*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          9*       < 60> DO_FCALL                                      0   RES[  IS_VAR $6 ]       OP1[  IS_UNUSED  ]
+         10*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~7 ]       OP1[  IS_VAR $6 ] OP2[ ,  IS_CONST (268435396) 0 ]
+         11*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~7 ] OP2[ , ->14 ]
+  392    12*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         13*       < 62> RETURN                                                    OP1[  IS_CONST (268435391) null ]
+  395    14*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         15*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435388) <array> ]
+  396    16*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         17*       < 77> FE_RESET_R                                        RES[  IS_VAR $9 ]       OP1[  IS_CV !0 ] OP2[ , ->26 ]
+         18*       < 78> FE_FETCH_R                                                OP1[  IS_VAR $9 ] OP2[ ,  IS_CV !2 ] EXT_JMP_REL[ , ->26 ]
+  397    19*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         20*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435379) 'extractScheme' ]
+         21*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         22*       < 60> DO_FCALL                                      0   RES[  IS_VAR $11 ]      OP1[  IS_UNUSED  ]
+         23*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         24*       <137> OP_DATA                                                   OP1[  IS_VAR $11 ] OP2[  IS_UNUSED  ]
+  396    25*       < 42> JMP                                                       OP1[ ->18 ]
+         26*       <127> FE_FREE                                                   OP1[  IS_VAR $9 ] OP2[  IS_UNUSED  ]
+  399    27*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         28*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435365) 'Glpi%5CCache%5Carray_unique' ]
+         29*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         30*       < 60> DO_FCALL                                      0   RES[  IS_VAR $12 ]      OP1[  IS_UNUSED  ]
+         31*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_VAR $12 ]
+  401    32*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         33*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435358) 'Glpi%5CCache%5Ccount' ]
+         34*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         35*       < 60> DO_FCALL                                      0   RES[  IS_VAR $14 ]      OP1[  IS_UNUSED  ]
+         36*       < 17> IS_NOT_IDENTICAL                                  RES[  IS_TMP_VAR ~15 ]      OP1[  IS_VAR $14 ] OP2[ ,  IS_CONST (268435355) 1 ]
+         37*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~15 ] OP2[ , ->40 ]
+  402    38*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         39*       < 62> RETURN                                                    OP1[  IS_CONST (268435350) null ]
+  404    40*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         41*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435347) 'Glpi%5CCache%5Creset' ]
+         42*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         43*       < 60> DO_FCALL                                      0   RES[  IS_VAR $16 ]      OP1[  IS_UNUSED  ]
+         44*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_VAR $16 ]
+  406    45*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         46*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~18 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435340) 'SCHEME_MEMCACHED' ]
+         47*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~19 ]      OP1[  IS_CV !3 ] OP2[ ,  IS_TMP_VAR ~18 ]
+         48*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~19 ] OP2[ , ->51 ]
+         49*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~20 ]      OP1[  IS_CV !3 ]
+         50*       < 42> JMP                                                       OP1[ ->52 ]
+         51*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~20 ]      OP1[  IS_CONST (268435331) null ]
+         52*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_TMP_VAR ~20 ] OP2[  IS_UNUSED  ]
+         53*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~20 ]
+  409    54*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         55*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435324) 'Glpi%5CCache%5Cis_string' ]
+         56*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         57*       < 60> DO_FCALL                                      0   RES[  IS_VAR $21 ]      OP1[  IS_UNUSED  ]
+         58*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~22 ]      OP1[  IS_VAR $21 ]
+         59*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~22 ] OP2[ , ->62 ]
+  410    60*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         61*       < 62> RETURN                                                    OP1[  IS_CONST (268435315) null ]
+  413    62*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         63*       < 22> ASSIGN                                                    OP1[  IS_CV !4 ] OP2[ ,  IS_CONST (268435312) <array> ]
+  414    64*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         65*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435309) 'Glpi%5CCache%5Cpreg_match' ]
+         66*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435310) '%2F%5E%28%3F%3Cscheme%3E%5Ba-z%5D%2B%29%3A%5C%2F%5C%2F%2F' ] OP2[  IS_UNUSED  ]
+         67*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         68*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !4 ] OP2[  IS_UNUSED  ]
+         69*       < 60> DO_FCALL                                      0   RES[  IS_VAR $24 ]      OP1[  IS_UNUSED  ]
+         70*       < 17> IS_NOT_IDENTICAL                                  RES[  IS_TMP_VAR ~25 ]      OP1[  IS_VAR $24 ] OP2[ ,  IS_CONST (268435303) 1 ]
+         71*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~25 ] OP2[ , ->74 ]
+  415    72*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         73*       < 62> RETURN                                                    OP1[  IS_CONST (268435298) null ]
+  417    74*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         75*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~26 ]      OP1[  IS_CV !4 ] OP2[ ,  IS_CONST (268435295) 'scheme' ]
+         76*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_TMP_VAR ~26 ]
+  419    77*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         78*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435290) 'Glpi%5CCache%5Cin_array' ]
+         79*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         80*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435289) 'Glpi%5CCache%5Carray_keys' ]
+         81*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435290) 'getAvailableAdapters' ]
+         82*       < 60> DO_FCALL                                      0   RES[  IS_VAR $28 ]      OP1[  IS_UNUSED  ]
+         83*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $28 ] OP2[  IS_UNUSED  ]
+         84*       < 60> DO_FCALL                                      0   RES[  IS_VAR $29 ]      OP1[  IS_UNUSED  ]
+         85*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $29 ] OP2[  IS_UNUSED  ]
+         86*       < 60> DO_FCALL                                      0   RES[  IS_VAR $30 ]      OP1[  IS_UNUSED  ]
+         87*       < 43> JMPZ                                                      OP1[  IS_VAR $30 ] OP2[ , ->90 ]
+         88*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~31 ]      OP1[  IS_CV !3 ]
+         89*       < 42> JMP                                                       OP1[ ->91 ]
+         90*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~31 ]      OP1[  IS_CONST (268435274) null ]
+         91*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_TMP_VAR ~31 ] OP2[  IS_UNUSED  ]
+         92*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~31 ]
+  420    93*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         94*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         95*       < 62> RETURN                                                    OP1[  IS_CONST (268435265) null ]
+
+End of function extractscheme
+
+Function getrawconfig:
+[+]Function Source Class Name: Glpi\Cache\CacheManager
+[*]Start of arg_info extract:
+[*]arg_info num_args:0
+[*]Function return type:array
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\Cache\CacheManager.php
+function name:  getRawConfig
+number of ops:  123
+compiled vars:  !0 = $config_file, !1 = $config, !2 = $contexts, !3 = $context_config, !4 = $context
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  429     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~5 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435390) 'config_dir' ]
+          2*       < 99> FETCH_CONSTANT                                    RES[  IS_TMP_VAR ~6 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435389) 'Glpi%5CCache%5CDIRECTORY_SEPARATOR' ]
+          3*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~7 ]       OP1[  IS_TMP_VAR ~5 ] OP2[ ,  IS_TMP_VAR ~6 ]
+          4*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~8 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435388) 'CONFIG_FILENAME' ]
+          5*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~9 ]       OP1[  IS_TMP_VAR ~7 ] OP2[ ,  IS_TMP_VAR ~8 ]
+          6*       < 22> ASSIGN                                                    OP1[  IS_CV !0 ] OP2[ ,  IS_TMP_VAR ~9 ]
+  431     7*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          8*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435381) <array> ]
+  432     9*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         10*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435378) 'Glpi%5CCache%5Cfile_exists' ]
+         11*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         12*       < 60> DO_FCALL                                      0   RES[  IS_VAR $12 ]      OP1[  IS_UNUSED  ]
+         13*       < 43> JMPZ                                                      OP1[  IS_VAR $12 ] OP2[ , ->107 ]
+  433    14*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         15*       < 73> INCLUDE_OR_EVAL                                   RES[  IS_VAR $13 ]      OP1[  IS_CV !0 ] OP2[ INCLUDE ]
+         16*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_VAR $13 ]
+  434    17*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         18*       < 90> FETCH_DIM_IS                                      RES[  IS_TMP_VAR ~15 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435365) 'contexts' ]
+         19*       <169> COALESCE                                          RES[  IS_TMP_VAR ~16 ]      OP1[  IS_TMP_VAR ~15 ] OP2[ , ->21 ]
+         20*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~16 ]      OP1[  IS_CONST (268435362) <array> ]
+         21*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_TMP_VAR ~16 ]
+  435    22*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         23*       < 77> FE_RESET_R                                        RES[  IS_VAR $18 ]      OP1[  IS_CV !2 ] OP2[ , ->106 ]
+         24*       < 78> FE_FETCH_R                                        RES[  IS_TMP_VAR ~19 ]      OP1[  IS_VAR $18 ] OP2[ ,  IS_CV !3 ] EXT_JMP_REL[ , ->106 ]
+         25*       < 22> ASSIGN                                                    OP1[  IS_CV !4 ] OP2[ ,  IS_TMP_VAR ~19 ]
+  436    26*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         27*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435349) 'isContextValid' ]
+         28*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !4 ] OP2[  IS_UNUSED  ]
+         29*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435347) <true> ] OP2[  IS_UNUSED  ]
+         30*       < 60> DO_FCALL                                      0   RES[  IS_VAR $21 ]      OP1[  IS_UNUSED  ]
+         31*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~22 ]      OP1[  IS_VAR $21 ]
+         32*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~22 ] OP2[ , ->48 ]
+  437    33*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         34*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435338) 'Glpi%5CCache%5Ctrigger_error' ]
+         35*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435339) 'Glpi%5CCache%5Csprintf' ]
+         36*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435340) 'Invalid+or+non+configurable+context%3A+%22%25s%22.' ] OP2[  IS_UNUSED  ]
+         37*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !4 ] OP2[  IS_UNUSED  ]
+         38*       < 60> DO_FCALL                                      0   RES[  IS_VAR $23 ]      OP1[  IS_UNUSED  ]
+         39*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $23 ] OP2[  IS_UNUSED  ]
+         40*       < 99> FETCH_CONSTANT                                    RES[  IS_TMP_VAR ~24 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435333) 'Glpi%5CCache%5CE_USER_NOTICE' ]
+         41*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~24 ] OP2[  IS_UNUSED  ]
+         42*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  438    43*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         44*       < 96> FETCH_DIM_UNSET                                   RES[  IS_VAR $26 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435328) 'contexts' ]
+         45*       < 75> UNSET_DIM                                                 OP1[  IS_VAR $26 ] OP2[ ,  IS_CV !4 ]
+  439    46*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         47*       < 42> JMP                                                       OP1[ ->24 ]
+  442    48*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         49*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435319) 'isContextValid' ]
+         50*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !4 ] OP2[  IS_UNUSED  ]
+         51*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435317) <true> ] OP2[  IS_UNUSED  ]
+         52*       < 60> DO_FCALL                                      0   RES[  IS_VAR $27 ]      OP1[  IS_UNUSED  ]
+         53*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~28 ]      OP1[  IS_VAR $27 ]
+         54*       < 47> JMPNZ_EX                                          RES[  IS_TMP_VAR ~28 ]      OP1[  IS_TMP_VAR ~28 ] OP2[ , ->60 ]
+  443    55*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435310) 'Glpi%5CCache%5Cis_array' ]
+         56*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         57*       < 60> DO_FCALL                                      0   RES[  IS_VAR $29 ]      OP1[  IS_UNUSED  ]
+         58*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~30 ]      OP1[  IS_VAR $29 ]
+         59*       < 52> BOOL                                              RES[  IS_TMP_VAR ~28 ]      OP1[  IS_TMP_VAR ~30 ]
+         60*       < 47> JMPNZ_EX                                          RES[  IS_TMP_VAR ~28 ]      OP1[  IS_TMP_VAR ~28 ] OP2[ , ->67 ]
+  444    61*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435301) 'Glpi%5CCache%5Carray_key_exists' ]
+         62*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435302) 'dsn' ] OP2[  IS_UNUSED  ]
+         63*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         64*       < 60> DO_FCALL                                      0   RES[  IS_VAR $31 ]      OP1[  IS_UNUSED  ]
+         65*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~32 ]      OP1[  IS_VAR $31 ]
+         66*       < 52> BOOL                                              RES[  IS_TMP_VAR ~28 ]      OP1[  IS_TMP_VAR ~32 ]
+         67*       < 47> JMPNZ_EX                                          RES[  IS_TMP_VAR ~28 ]      OP1[  IS_TMP_VAR ~28 ] OP2[ , ->75 ]
+  445    68*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435291) 'isDsnValid' ]
+         69*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         70*       < 93> FETCH_DIM_FUNC_ARG                                RES[  IS_VAR $33 ]      OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435289) 'dsn' ]
+         71*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $33 ] OP2[  IS_UNUSED  ]
+         72*       < 60> DO_FCALL                                      0   RES[  IS_VAR $34 ]      OP1[  IS_UNUSED  ]
+         73*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~35 ]      OP1[  IS_VAR $34 ]
+         74*       < 52> BOOL                                              RES[  IS_TMP_VAR ~28 ]      OP1[  IS_TMP_VAR ~35 ]
+         75*       < 47> JMPNZ_EX                                          RES[  IS_TMP_VAR ~28 ]      OP1[  IS_TMP_VAR ~28 ] OP2[ , ->89 ]
+  446    76*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435278) 'Glpi%5CCache%5Carray_key_exists' ]
+         77*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435279) 'options' ] OP2[  IS_UNUSED  ]
+         78*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         79*       < 60> DO_FCALL                                      0   RES[  IS_VAR $36 ]      OP1[  IS_UNUSED  ]
+         80*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~37 ]      OP1[  IS_VAR $36 ] OP2[ , ->88 ]
+         81*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435272) 'Glpi%5CCache%5Cis_array' ]
+         82*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         83*       < 93> FETCH_DIM_FUNC_ARG                                RES[  IS_VAR $38 ]      OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435271) 'options' ]
+         84*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $38 ] OP2[  IS_UNUSED  ]
+         85*       < 60> DO_FCALL                                      0   RES[  IS_VAR $39 ]      OP1[  IS_UNUSED  ]
+         86*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~40 ]      OP1[  IS_VAR $39 ]
+         87*       < 52> BOOL                                              RES[  IS_TMP_VAR ~37 ]      OP1[  IS_TMP_VAR ~40 ]
+         88*       < 52> BOOL                                              RES[  IS_TMP_VAR ~28 ]      OP1[  IS_TMP_VAR ~37 ]
+         89*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~28 ] OP2[ , ->105 ]
+  448    90*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         91*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435256) 'Glpi%5CCache%5Ctrigger_error' ]
+         92*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435257) 'Glpi%5CCache%5Csprintf' ]
+         93*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435258) 'Invalid+configuration+for+cache+context+%22%25s%22.' ] OP2[  IS_UNUSED  ]
+         94*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !4 ] OP2[  IS_UNUSED  ]
+         95*       < 60> DO_FCALL                                      0   RES[  IS_VAR $41 ]      OP1[  IS_UNUSED  ]
+         96*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $41 ] OP2[  IS_UNUSED  ]
+         97*       < 99> FETCH_CONSTANT                                    RES[  IS_TMP_VAR ~42 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435251) 'Glpi%5CCache%5CE_USER_WARNING' ]
+         98*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~42 ] OP2[  IS_UNUSED  ]
+         99*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  449   100*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        101*       < 96> FETCH_DIM_UNSET                                   RES[  IS_VAR $44 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435246) 'contexts' ]
+        102*       < 75> UNSET_DIM                                                 OP1[  IS_VAR $44 ] OP2[ ,  IS_CV !4 ]
+  450   103*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        104*       < 42> JMP                                                       OP1[ ->24 ]
+  435   105*       < 42> JMP                                                       OP1[ ->24 ]
+        106*       <127> FE_FREE                                                   OP1[  IS_VAR $18 ] OP2[  IS_UNUSED  ]
+  455   107*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        108*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435233) 'Glpi%5CCache%5Carray_key_exists' ]
+        109*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435234) 'contexts' ] OP2[  IS_UNUSED  ]
+        110*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+        111*       < 60> DO_FCALL                                      0   RES[  IS_VAR $45 ]      OP1[  IS_UNUSED  ]
+        112*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~46 ]      OP1[  IS_VAR $45 ]
+        113*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~46 ] OP2[ , ->117 ]
+  456   114*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        115*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435223) 'contexts' ]
+        116*       <137> OP_DATA                                                   OP1[  IS_CONST (268435222) <array> ] OP2[  IS_UNUSED  ]
+  459   117*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        118*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+        119*       < 62> RETURN                                                    OP1[  IS_CV !1 ]
+  460   120*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        121*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        122*       < 62> RETURN                                                    OP1[  IS_CONST (268435211) null ]
+
+End of function getrawconfig
+
+Function writeconfig:
+[+]Function Source Class Name: Glpi\Cache\CacheManager
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:bool
+
+[*]ArgInfoNo**0**
+[*]name:config
+[*]type:array
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\Cache\CacheManager.php
+function name:  writeConfig
+number of ops:  26
+compiled vars:  !0 = $config, !1 = $config_export, !2 = $config_file_contents
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  469     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  471     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435439) 'Glpi%5CCache%5Cvar_export' ]
+          3*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          4*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435438) <true> ] OP2[  IS_UNUSED  ]
+          5*       < 60> DO_FCALL                                      0   RES[  IS_VAR $3 ]       OP1[  IS_UNUSED  ]
+          6*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_VAR $3 ]
+  474     7*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          8*       < 54> ROPE_INIT                                     3   RES[  IS_TMP_VAR ~6 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435431) '%3C%3Fphp%0Areturn+' ]
+  475     9*       < 55> ROPE_ADD                                      1   RES[  IS_TMP_VAR ~6 ]       OP1[  IS_TMP_VAR ~6 ] OP2[ ,  IS_CV !1 ]
+         10*       < 56> ROPE_END                                      2   RES[  IS_TMP_VAR ~5 ]       OP1[  IS_TMP_VAR ~6 ] OP2[ ,  IS_CONST (268435428) '%3B' ]
+  473    11*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_TMP_VAR ~5 ]
+  478    12*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         13*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435423) 'Toolbox' ] OP2[ ,  IS_CONST (268435425) 'writeConfig' ]
+         14*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~9 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435425) 'CONFIG_FILENAME' ]
+         15*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~9 ] OP2[  IS_UNUSED  ]
+         16*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         17*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         18*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $10 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435418) 'config_dir' ]
+         19*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $10 ] OP2[  IS_UNUSED  ]
+         20*       < 60> DO_FCALL                                      0   RES[  IS_VAR $11 ]      OP1[  IS_UNUSED  ]
+         21*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_VAR $11 ] OP2[  IS_UNUSED  ]
+         22*       < 62> RETURN                                                    OP1[  IS_VAR $11 ]
+  479    23*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         24*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         25*       < 62> RETURN                                                    OP1[  IS_CONST (268435405) null ]
+
+End of function writeconfig
+
+Function iscontextvalid:
+[+]Function Source Class Name: Glpi\Cache\CacheManager
+[*]Start of arg_info extract:
+[*]arg_info num_args:2
+[*]Function return type:bool
+
+[*]ArgInfoNo**0**
+[*]name:context
+[*]type:string
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:only_configurable
+[*]type:bool
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\Cache\CacheManager.php
+function name:  isContextValid
+number of ops:  33
+compiled vars:  !0 = $context, !1 = $only_configurable, !2 = $core_contexts
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  489     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 64> RECV_INIT                                         RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435434) <false> ]
+  491     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435431) <array> ]
+  493     4*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          5*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~4 ]       OP1[  IS_CV !1 ]
+          6*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~4 ] OP2[ , ->15 ]
+  495     7*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          8*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~6 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435422) 'CONTEXT_INSTALLER' ]
+          9*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         10*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~6 ] OP2[  IS_UNUSED  ]
+  496    11*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         12*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~8 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435415) 'CONTEXT_TRANSLATIONS' ]
+         13*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         14*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~8 ] OP2[  IS_UNUSED  ]
+  499    15*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         16*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435408) 'Glpi%5CCache%5Cin_array' ]
+         17*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         18*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         19*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435405) <true> ] OP2[  IS_UNUSED  ]
+         20*       < 60> DO_FCALL                                      0   RES[  IS_VAR $9 ]       OP1[  IS_UNUSED  ]
+         21*       < 47> JMPNZ_EX                                          RES[  IS_TMP_VAR ~10 ]      OP1[  IS_VAR $9 ] OP2[ , ->28 ]
+         22*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435400) 'Glpi%5CCache%5Cpreg_match' ]
+         23*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435401) '%2F%5Eplugin%3A%5Cw%2B%24%2F' ] OP2[  IS_UNUSED  ]
+         24*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         25*       < 60> DO_FCALL                                      0   RES[  IS_VAR $11 ]      OP1[  IS_UNUSED  ]
+         26*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~12 ]      OP1[  IS_VAR $11 ] OP2[ ,  IS_CONST (268435396) 1 ]
+         27*       < 52> BOOL                                              RES[  IS_TMP_VAR ~10 ]      OP1[  IS_TMP_VAR ~12 ]
+         28*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_TMP_VAR ~10 ] OP2[  IS_UNUSED  ]
+         29*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~10 ]
+  500    30*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         31*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         32*       < 62> RETURN                                                    OP1[  IS_CONST (268435385) null ]
+
+End of function iscontextvalid
+
+Function isdsnvalid:
+[+]Function Source Class Name: Glpi\Cache\CacheManager
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:bool
+
+[*]ArgInfoNo**0**
+[*]name:dsn
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\Cache\CacheManager.php
+function name:  isDsnValid
+number of ops:  66
+compiled vars:  !0 = $dsn, !1 = $schemes, !2 = $entry
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  509     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  511     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435418) 'Glpi%5CCache%5Cis_array' ]
+          3*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          4*       < 60> DO_FCALL                                      0   RES[  IS_VAR $3 ]       OP1[  IS_UNUSED  ]
+          5*       < 43> JMPZ                                                      OP1[  IS_VAR $3 ] OP2[ , ->48 ]
+  512     6*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          7*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435411) 'Glpi%5CCache%5Ccount' ]
+          8*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          9*       < 60> DO_FCALL                                      0   RES[  IS_VAR $4 ]       OP1[  IS_UNUSED  ]
+         10*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~5 ]       OP1[  IS_VAR $4 ] OP2[ ,  IS_CONST (268435408) 0 ]
+         11*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~5 ] OP2[ , ->14 ]
+  513    12*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         13*       < 62> RETURN                                                    OP1[  IS_CONST (268435403) <false> ]
+  516    14*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         15*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435400) <array> ]
+  517    16*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         17*       < 77> FE_RESET_R                                        RES[  IS_VAR $7 ]       OP1[  IS_CV !0 ] OP2[ , ->26 ]
+         18*       < 78> FE_FETCH_R                                                OP1[  IS_VAR $7 ] OP2[ ,  IS_CV !2 ] EXT_JMP_REL[ , ->26 ]
+  518    19*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         20*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435391) 'extractScheme' ]
+         21*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         22*       < 60> DO_FCALL                                      0   RES[  IS_VAR $9 ]       OP1[  IS_UNUSED  ]
+         23*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         24*       <137> OP_DATA                                                   OP1[  IS_VAR $9 ] OP2[  IS_UNUSED  ]
+  517    25*       < 42> JMP                                                       OP1[ ->18 ]
+         26*       <127> FE_FREE                                                   OP1[  IS_VAR $7 ] OP2[  IS_UNUSED  ]
+  520    27*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         28*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435377) 'Glpi%5CCache%5Carray_unique' ]
+         29*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         30*       < 60> DO_FCALL                                      0   RES[  IS_VAR $10 ]      OP1[  IS_UNUSED  ]
+         31*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_VAR $10 ]
+  522    32*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         33*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435370) 'Glpi%5CCache%5Ccount' ]
+         34*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         35*       < 60> DO_FCALL                                      0   RES[  IS_VAR $12 ]      OP1[  IS_UNUSED  ]
+         36*       < 17> IS_NOT_IDENTICAL                                  RES[  IS_TMP_VAR ~13 ]      OP1[  IS_VAR $12 ] OP2[ ,  IS_CONST (268435367) 1 ]
+         37*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~13 ] OP2[ , ->40 ]
+  523    38*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         39*       < 62> RETURN                                                    OP1[  IS_CONST (268435362) <false> ]
+  527    40*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         41*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435359) 'Glpi%5CCache%5Creset' ]
+         42*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         43*       < 60> DO_FCALL                                      0   RES[  IS_VAR $14 ]      OP1[  IS_UNUSED  ]
+         44*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~15 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435356) 'SCHEME_MEMCACHED' ]
+         45*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~16 ]      OP1[  IS_VAR $14 ] OP2[ ,  IS_TMP_VAR ~15 ]
+         46*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_TMP_VAR ~16 ] OP2[  IS_UNUSED  ]
+         47*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~16 ]
+  530    48*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         49*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435347) 'Glpi%5CCache%5Cin_array' ]
+         50*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435348) 'extractScheme' ]
+         51*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         52*       < 60> DO_FCALL                                      0   RES[  IS_VAR $17 ]      OP1[  IS_UNUSED  ]
+         53*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $17 ] OP2[  IS_UNUSED  ]
+         54*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435342) 'Glpi%5CCache%5Carray_keys' ]
+         55*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435343) 'getAvailableAdapters' ]
+         56*       < 60> DO_FCALL                                      0   RES[  IS_VAR $18 ]      OP1[  IS_UNUSED  ]
+         57*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $18 ] OP2[  IS_UNUSED  ]
+         58*       < 60> DO_FCALL                                      0   RES[  IS_VAR $19 ]      OP1[  IS_UNUSED  ]
+         59*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $19 ] OP2[  IS_UNUSED  ]
+         60*       < 60> DO_FCALL                                      0   RES[  IS_VAR $20 ]      OP1[  IS_UNUSED  ]
+         61*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_VAR $20 ] OP2[  IS_UNUSED  ]
+         62*       < 62> RETURN                                                    OP1[  IS_VAR $20 ]
+  531    63*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         64*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         65*       < 62> RETURN                                                    OP1[  IS_CONST (268435325) null ]
+
+End of function isdsnvalid
+
+Function normalizenamespace:
+[+]Function Source Class Name: Glpi\Cache\CacheManager
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:string
+
+[*]ArgInfoNo**0**
+[*]name:namespace
+[*]type:string
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\Cache\CacheManager.php
+function name:  normalizeNamespace
+number of ops:  19
+compiled vars:  !0 = $namespace
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  540     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  542     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435438) 'Glpi%5CCache%5Cpreg_replace' ]
+  543     3*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435439) 'Glpi%5CCache%5Cpreg_quote' ]
+          4*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~1 ]       OP1[  IS_CONST (268435441) 'Symfony%5CComponent%5CCache%5CCacheItem' ] OP2[ ,  IS_CONST (268435440) 'RESERVED_CHARACTERS' ]
+          5*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~1 ] OP2[  IS_UNUSED  ]
+          6*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435439) '%2F' ] OP2[  IS_UNUSED  ]
+          7*       < 60> DO_FCALL                                      0   RES[  IS_VAR $2 ]       OP1[  IS_UNUSED  ]
+          8*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~3 ]       OP1[  IS_CONST (268435436) '%2F%5B' ] OP2[ ,  IS_VAR $2 ]
+          9*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~4 ]       OP1[  IS_TMP_VAR ~3 ] OP2[ ,  IS_CONST (268435435) '%5D%2F' ]
+         10*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~4 ] OP2[  IS_UNUSED  ]
+  544    11*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435432) '_' ] OP2[  IS_UNUSED  ]
+  543    12*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         13*       < 60> DO_FCALL                                      0   RES[  IS_VAR $5 ]       OP1[  IS_UNUSED  ]
+         14*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_VAR $5 ] OP2[  IS_UNUSED  ]
+         15*       < 62> RETURN                                                    OP1[  IS_VAR $5 ]
+  547    16*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         17*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         18*       < 62> RETURN                                                    OP1[  IS_CONST (268435419) null ]
+
+End of function normalizenamespace
+
+Function getavailableadapters:
+[+]Function Source Class Name: Glpi\Cache\CacheManager
+[*]Start of arg_info extract:
+[*]arg_info num_args:0
+[*]Function return type:array
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\Cache\CacheManager.php
+function name:  getAvailableAdapters
+number of ops:  21
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  559     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435438) 'SCHEME_MEMCACHED' ]
+          2*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435437) 'Glpi%5CCache%5C__' ]
+          3*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435438) 'Memcached' ] OP2[  IS_UNUSED  ]
+          4*       < 60> DO_FCALL                                      0   RES[  IS_VAR $1 ]       OP1[  IS_UNUSED  ]
+          5*       < 71> INIT_ARRAY                                        RES[  IS_TMP_VAR ~2 ]       OP1[  IS_VAR $1 ] OP2[ ,  IS_TMP_VAR ~0 ]
+  560     6*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~3 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435433) 'SCHEME_REDIS' ]
+          7*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435432) 'Glpi%5CCache%5C__' ]
+          8*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435433) 'Redis+%28TCP%29' ] OP2[  IS_UNUSED  ]
+          9*       < 60> DO_FCALL                                      0   RES[  IS_VAR $4 ]       OP1[  IS_UNUSED  ]
+         10*       < 72> ADD_ARRAY_ELEMENT                                 RES[  IS_TMP_VAR ~2 ]       OP1[  IS_VAR $4 ] OP2[ ,  IS_TMP_VAR ~3 ]
+  561    11*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~5 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435428) 'SCHEME_REDISS' ]
+         12*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435427) 'Glpi%5CCache%5C__' ]
+         13*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435428) 'Redis+%28TLS%29' ] OP2[  IS_UNUSED  ]
+         14*       < 60> DO_FCALL                                      0   RES[  IS_VAR $6 ]       OP1[  IS_UNUSED  ]
+         15*       < 72> ADD_ARRAY_ELEMENT                                 RES[  IS_TMP_VAR ~2 ]       OP1[  IS_VAR $6 ] OP2[ ,  IS_TMP_VAR ~5 ]
+         16*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_TMP_VAR ~2 ] OP2[  IS_UNUSED  ]
+         17*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~2 ]
+  563    18*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         19*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         20*       < 62> RETURN                                                    OP1[  IS_CONST (268435415) null ]
+
+End of function getavailableadapters
+
+End of class Glpi\Cache\CacheManager.
+

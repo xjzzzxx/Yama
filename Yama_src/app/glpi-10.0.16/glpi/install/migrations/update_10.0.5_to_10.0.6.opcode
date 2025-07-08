@@ -1,0 +1,86 @@
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\install\migrations\update_10.0.5_to_10.0.6.php
+function name:  (null)
+number of ops:  1
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   73     0*       < 62> RETURN                                                    OP1[  IS_CONST (268435455) 1 ]
+
+Function update1005to1006:
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\install\migrations\update_10.0.5_to_10.0.6.php
+function name:  update1005to1006
+number of ops:  61
+compiled vars:  !0 = $DB, !1 = $migration, !2 = $updateresult, !3 = $ADDTODISPLAYPREF, !4 = $DELFROMDISPLAYPREF, !5 = $update_dir, !6 = $update_scripts, !7 = $update_script
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   47     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       <168> BIND_GLOBAL                                               OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435425) 'DB' ]
+          2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       <168> BIND_GLOBAL                                               OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435422) 'migration' ]
+   49     4*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          5*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435419) <true> ]
+   50     6*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          7*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435416) <array> ]
+   51     8*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          9*       < 22> ASSIGN                                                    OP1[  IS_CV !4 ] OP2[ ,  IS_CONST (268435413) <array> ]
+   52    10*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         11*       < 22> ASSIGN                                                    OP1[  IS_CV !5 ] OP2[ ,  IS_CONST (268435410) 'G%3A%5Cdesktop%5CYama%5Capp%5Cglpi-10.0.16%5Cglpi%5Cinstall%5Cmigrations%2Fupdate_10.0.5_to_10.0.6%2F' ]
+   55    12*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         13*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435407) 'displayTitle' ]
+         14*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435407) 'sprintf' ]
+         15*       < 59> INIT_FCALL_BY_NAME                                        OP2[  IS_CONST (268435406) '__' ]
+         16*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435406) 'Update+to+%25s' ] OP2[  IS_UNUSED  ]
+         17*       < 60> DO_FCALL                                      0   RES[  IS_VAR $12 ]      OP1[  IS_UNUSED  ]
+         18*       <117> SEND_VAR                                                  OP1[  IS_VAR $12 ] OP2[  IS_UNUSED  ]
+         19*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435401) '10.0.6' ]
+         20*       < 60> DO_FCALL                                      0   RES[  IS_VAR $13 ]      OP1[  IS_UNUSED  ]
+         21*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $13 ] OP2[  IS_UNUSED  ]
+         22*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+   56    23*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         24*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435392) 'setVersion' ]
+         25*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435392) '10.0.6' ] OP2[  IS_UNUSED  ]
+         26*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+   58    27*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         28*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435387) 'scandir' ]
+         29*       <117> SEND_VAR                                                  OP1[  IS_CV !5 ] OP2[  IS_UNUSED  ]
+         30*       < 60> DO_FCALL                                      0   RES[  IS_VAR $16 ]      OP1[  IS_UNUSED  ]
+         31*       < 22> ASSIGN                                                    OP1[  IS_CV !6 ] OP2[ ,  IS_VAR $16 ]
+   59    32*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         33*       < 77> FE_RESET_R                                        RES[  IS_VAR $18 ]      OP1[  IS_CV !6 ] OP2[ , ->48 ]
+         34*       < 78> FE_FETCH_R                                                OP1[  IS_VAR $18 ] OP2[ ,  IS_CV !7 ] EXT_JMP_REL[ , ->48 ]
+   60    35*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         36*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435372) 'preg_match' ]
+         37*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435371) '%2F%5C.php%24%2F' ]
+         38*       <117> SEND_VAR                                                  OP1[  IS_CV !7 ] OP2[  IS_UNUSED  ]
+         39*       < 60> DO_FCALL                                      0   RES[  IS_VAR $19 ]      OP1[  IS_UNUSED  ]
+         40*       < 17> IS_NOT_IDENTICAL                                  RES[  IS_TMP_VAR ~20 ]      OP1[  IS_VAR $19 ] OP2[ ,  IS_CONST (268435366) 1 ]
+         41*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~20 ] OP2[ , ->44 ]
+   61    42*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         43*       < 42> JMP                                                       OP1[ ->34 ]
+   63    44*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         45*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~21 ]      OP1[  IS_CV !5 ] OP2[ ,  IS_CV !7 ]
+         46*       < 73> INCLUDE_OR_EVAL                                           OP1[  IS_TMP_VAR ~21 ] OP2[ REQUIRE ]
+   59    47*       < 42> JMP                                                       OP1[ ->34 ]
+         48*       <127> FE_FREE                                                   OP1[  IS_VAR $18 ] OP2[  IS_UNUSED  ]
+   67    49*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         50*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435347) 'updateDisplayPrefs' ]
+         51*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         52*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !4 ] OP2[  IS_UNUSED  ]
+         53*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+   69    54*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         55*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435339) 'executeMigration' ]
+         56*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+   71    57*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         58*       < 62> RETURN                                                    OP1[  IS_CV !2 ]
+   72    59*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         60*       < 62> RETURN                                                    OP1[  IS_CONST (268435331) null ]
+
+End of function update1005to1006
+

@@ -1,0 +1,206 @@
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\Toolbox\VersionParser.php
+function name:  (null)
+number of ops:  2
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  119     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 62> RETURN                                                    OP1[  IS_CONST (268435453) 1 ]
+
+Class Glpi\Toolbox\VersionParser:
+[+]Class Parent Name: NULL
+End Trait extract
+Start Properties extract:
+Properties: NULL
+End Properties extract
+
+Function getnormalizedversion:
+[+]Function Source Class Name: Glpi\Toolbox\VersionParser
+[*]Start of arg_info extract:
+[*]arg_info num_args:3
+[*]Function return type:string
+
+[*]ArgInfoNo**0**
+[*]name:version
+[*]type:string
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:keep_stability_flag
+[*]type:bool
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**2**
+[*]name:fix_old_glpi_versions
+[*]type:bool
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\Toolbox\VersionParser.php
+function name:  getNormalizedVersion
+number of ops:  71
+compiled vars:  !0 = $version, !1 = $keep_stability_flag, !2 = $fix_old_glpi_versions, !3 = $mapping, !4 = $version_pattern, !5 = $version_matches
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   55     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 64> RECV_INIT                                         RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435400) <true> ]
+          2*       < 64> RECV_INIT                                         RES[  IS_CV !2 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435399) <false> ]
+   61     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       < 43> JMPZ                                                      OP1[  IS_CV !2 ] OP2[ , ->16 ]
+   62     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435392) <array> ]
+   67     7*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          8*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435389) 'Glpi%5CToolbox%5Carray_key_exists' ]
+          9*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         10*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         11*       < 60> DO_FCALL                                      0   RES[  IS_VAR $7 ]       OP1[  IS_UNUSED  ]
+         12*       < 43> JMPZ                                                      OP1[  IS_VAR $7 ] OP2[ , ->16 ]
+   68    13*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         14*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~8 ]       OP1[  IS_CV !3 ] OP2[ ,  IS_CV !0 ]
+         15*       < 22> ASSIGN                                                    OP1[  IS_CV !0 ] OP2[ ,  IS_TMP_VAR ~8 ]
+   72    16*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         17*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435374) 'Glpi%5CToolbox%5Cimplode' ]
+   73    18*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435375) '' ] OP2[  IS_UNUSED  ]
+   75    19*       < 71> INIT_ARRAY                                        RES[  IS_TMP_VAR ~10 ]      OP1[  IS_CONST (268435374) '%2F%5E' ] OP2[  IS_UNUSED  ]
+   76    20*       < 72> ADD_ARRAY_ELEMENT                                 RES[  IS_TMP_VAR ~10 ]      OP1[  IS_CONST (268435373) '%28%3F%3Cmajor%3E%5Cd%2B%29' ] OP2[  IS_UNUSED  ]
+   77    21*       < 72> ADD_ARRAY_ELEMENT                                 RES[  IS_TMP_VAR ~10 ]      OP1[  IS_CONST (268435372) '%5C.%28%3F%3Cminor%3E%5Cd%2B%29' ] OP2[  IS_UNUSED  ]
+   78    22*       < 72> ADD_ARRAY_ELEMENT                                 RES[  IS_TMP_VAR ~10 ]      OP1[  IS_CONST (268435371) '%28%5C.%28%3F%3Cbugfix%3E%5Cd%2B%29%29%3F' ] OP2[  IS_UNUSED  ]
+   79    23*       < 72> ADD_ARRAY_ELEMENT                                 RES[  IS_TMP_VAR ~10 ]      OP1[  IS_CONST (268435370) '%28%5C.%28%3F%3Ctag_fail%3E%5Cd%2B%29%29%3F' ] OP2[  IS_UNUSED  ]
+   80    24*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~11 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435369) 'UNSTABLE_FLAG_PATTERN' ]
+         25*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~12 ]      OP1[  IS_CONST (268435368) '%28%3F%3Cstability_flag%3E-' ] OP2[ ,  IS_TMP_VAR ~11 ]
+         26*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~13 ]      OP1[  IS_TMP_VAR ~12 ] OP2[ ,  IS_CONST (268435367) '%29%3F' ]
+         27*       < 72> ADD_ARRAY_ELEMENT                                 RES[  IS_TMP_VAR ~10 ]      OP1[  IS_TMP_VAR ~13 ] OP2[  IS_UNUSED  ]
+   81    28*       < 72> ADD_ARRAY_ELEMENT                                 RES[  IS_TMP_VAR ~10 ]      OP1[  IS_CONST (268435364) '%24%2F' ] OP2[  IS_UNUSED  ]
+         29*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~10 ] OP2[  IS_UNUSED  ]
+         30*       < 60> DO_FCALL                                      0   RES[  IS_VAR $14 ]      OP1[  IS_UNUSED  ]
+   72    31*       < 22> ASSIGN                                                    OP1[  IS_CV !4 ] OP2[ ,  IS_VAR $14 ]
+   84    32*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         33*       < 22> ASSIGN                                                    OP1[  IS_CV !5 ] OP2[ ,  IS_CONST (268435355) <array> ]
+   85    34*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         35*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435352) 'Glpi%5CToolbox%5Cpreg_match' ]
+         36*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !4 ] OP2[  IS_UNUSED  ]
+         37*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         38*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !5 ] OP2[  IS_UNUSED  ]
+         39*       < 60> DO_FCALL                                      0   RES[  IS_VAR $17 ]      OP1[  IS_UNUSED  ]
+         40*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~18 ]      OP1[  IS_VAR $17 ] OP2[ ,  IS_CONST (268435345) 1 ]
+         41*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~18 ] OP2[ , ->65 ]
+   86    42*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         43*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~19 ]      OP1[  IS_CV !5 ] OP2[ ,  IS_CONST (268435340) 'major' ]
+   87    44*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~20 ]      OP1[  IS_TMP_VAR ~19 ] OP2[ ,  IS_CONST (268435339) '.' ]
+         45*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~21 ]      OP1[  IS_CV !5 ] OP2[ ,  IS_CONST (268435338) 'minor' ]
+         46*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~22 ]      OP1[  IS_TMP_VAR ~20 ] OP2[ ,  IS_TMP_VAR ~21 ]
+   88    47*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~23 ]      OP1[  IS_TMP_VAR ~22 ] OP2[ ,  IS_CONST (268435335) '.' ]
+         48*       < 90> FETCH_DIM_IS                                      RES[  IS_TMP_VAR ~24 ]      OP1[  IS_CV !5 ] OP2[ ,  IS_CONST (268435334) 'bugfix' ]
+         49*       <169> COALESCE                                          RES[  IS_TMP_VAR ~25 ]      OP1[  IS_TMP_VAR ~24 ] OP2[ , ->51 ]
+         50*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~25 ]      OP1[  IS_CONST (268435331) 0 ]
+         51*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~26 ]      OP1[  IS_TMP_VAR ~23 ] OP2[ ,  IS_TMP_VAR ~25 ]
+   89    52*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~27 ]      OP1[  IS_CV !1 ] OP2[ , ->58 ]
+         53*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435326) 'Glpi%5CToolbox%5Carray_key_exists' ]
+         54*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435327) 'stability_flag' ] OP2[  IS_UNUSED  ]
+         55*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !5 ] OP2[  IS_UNUSED  ]
+         56*       < 60> DO_FCALL                                      0   RES[  IS_VAR $28 ]      OP1[  IS_UNUSED  ]
+         57*       < 52> BOOL                                              RES[  IS_TMP_VAR ~27 ]      OP1[  IS_VAR $28 ]
+         58*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~27 ] OP2[ , ->62 ]
+         59*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~29 ]      OP1[  IS_CV !5 ] OP2[ ,  IS_CONST (268435318) 'stability_flag' ]
+         60*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~30 ]      OP1[  IS_TMP_VAR ~29 ]
+         61*       < 42> JMP                                                       OP1[ ->63 ]
+         62*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~30 ]      OP1[  IS_CONST (268435313) '' ]
+         63*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~31 ]      OP1[  IS_TMP_VAR ~26 ] OP2[ ,  IS_TMP_VAR ~30 ]
+   86    64*       < 22> ASSIGN                                                    OP1[  IS_CV !0 ] OP2[ ,  IS_TMP_VAR ~31 ]
+   92    65*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         66*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         67*       < 62> RETURN                                                    OP1[  IS_CV !0 ]
+   93    68*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         69*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         70*       < 62> RETURN                                                    OP1[  IS_CONST (268435298) null ]
+
+End of function getnormalizedversion
+
+Function isstablerelease:
+[+]Function Source Class Name: Glpi\Toolbox\VersionParser
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:bool
+
+[*]ArgInfoNo**0**
+[*]name:version
+[*]type:string
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\Toolbox\VersionParser.php
+function name:  isStableRelease
+number of ops:  15
+compiled vars:  !0 = $version
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  102     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  104     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435444) 'Glpi%5CToolbox%5Cpreg_match' ]
+          3*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~1 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435445) 'UNSTABLE_FLAG_PATTERN' ]
+          4*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~2 ]       OP1[  IS_CONST (268435444) '%2F-' ] OP2[ ,  IS_TMP_VAR ~1 ]
+          5*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~3 ]       OP1[  IS_TMP_VAR ~2 ] OP2[ ,  IS_CONST (268435443) '%24%2F' ]
+          6*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~3 ] OP2[  IS_UNUSED  ]
+          7*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          8*       < 60> DO_FCALL                                      0   RES[  IS_VAR $4 ]       OP1[  IS_UNUSED  ]
+          9*       < 17> IS_NOT_IDENTICAL                                  RES[  IS_TMP_VAR ~5 ]       OP1[  IS_VAR $4 ] OP2[ ,  IS_CONST (268435436) 1 ]
+         10*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_TMP_VAR ~5 ] OP2[  IS_UNUSED  ]
+         11*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~5 ]
+  105    12*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         13*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         14*       < 62> RETURN                                                    OP1[  IS_CONST (268435427) null ]
+
+End of function isstablerelease
+
+Function isdevversion:
+[+]Function Source Class Name: Glpi\Toolbox\VersionParser
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:bool
+
+[*]ArgInfoNo**0**
+[*]name:version
+[*]type:string
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\Toolbox\VersionParser.php
+function name:  isDevVersion
+number of ops:  12
+compiled vars:  !0 = $version
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  114     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  116     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435446) 'Glpi%5CToolbox%5Cpreg_match' ]
+          3*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435447) '%2F-dev%24%2F' ] OP2[  IS_UNUSED  ]
+          4*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          5*       < 60> DO_FCALL                                      0   RES[  IS_VAR $1 ]       OP1[  IS_UNUSED  ]
+          6*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~2 ]       OP1[  IS_VAR $1 ] OP2[ ,  IS_CONST (268435442) 1 ]
+          7*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_TMP_VAR ~2 ] OP2[  IS_UNUSED  ]
+          8*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~2 ]
+  117     9*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         10*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         11*       < 62> RETURN                                                    OP1[  IS_CONST (268435433) null ]
+
+End of function isdevversion
+
+End of class Glpi\Toolbox\VersionParser.
+

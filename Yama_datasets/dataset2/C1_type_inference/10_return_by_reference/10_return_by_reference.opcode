@@ -1,0 +1,58 @@
+filename:       E:\【我的开源项目】\Yama\Yama_datasets\dataset2\C1_type_inference\10_return_by_reference\10_return_by_reference.php
+function name:  (null)
+number of ops:  19
+compiled vars:  !0 = $b, !1 = $obj, !2 = $myValue
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+    4     0*       <  0> NOP                                                      
+   12     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 80> FETCH_R                      global               RES[  IS_TMP_VAR ~3 ]       OP1[  IS_CONST (268435444) '_GET' ]
+          3*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~4 ]       OP1[  IS_TMP_VAR ~3 ] OP2[ ,  IS_CONST (268435443) 'p1' ]
+          4*       < 22> ASSIGN                                                    OP1[  IS_CV !0 ] OP2[ ,  IS_TMP_VAR ~4 ]
+   13     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       < 68> NEW                                               RES[  IS_VAR $6 ]       OP1[ 'foo' ]
+          7*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+          8*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_VAR $6 ]
+   15     9*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         10*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435432) 'getValue' ]
+         11*       < 60> DO_FCALL                                      0   RES[  IS_VAR $9 ]       OP1[  IS_UNUSED  ]
+         12*       < 30> ASSIGN_REF                                                OP1[  IS_CV !2 ] OP2[ ,  IS_VAR $9 ]
+   16    13*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         14*       < 24> ASSIGN_OBJ                                                OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435426) 'value' ]
+         15*       <137> OP_DATA                                                   OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+   19    16*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         17*       <136> ECHO                                                      OP1[  IS_CV !2 ]
+   20    18*       < 62> RETURN                                                    OP1[  IS_CONST (268435419) 1 ]
+
+Class foo:
+[+]Class Parent Name: NULL
+End Trait extract
+Start Properties extract:
+Key: value, Value: 42, Type: Normal
+End Properties extract.
+
+Function getvalue:
+[+]Function Source Class Name: foo
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       E:\【我的开源项目】\Yama\Yama_datasets\dataset2\C1_type_inference\10_return_by_reference\10_return_by_reference.php
+function name:  getValue
+number of ops:  5
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+    8     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 85> FETCH_OBJ_W                                       RES[  IS_VAR $0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435452) 'value' ]
+          2*       <111> RETURN_BY_REF                                             OP1[  IS_VAR $0 ]
+    9     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       <111> RETURN_BY_REF                                             OP1[  IS_CONST (268435447) null ]
+
+End of function getvalue
+
+End of class foo.
+

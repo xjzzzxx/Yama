@@ -1,0 +1,362 @@
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\NotificationEventAbstract.php
+function name:  (null)
+number of ops:  2
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   36     0*       <144> DECLARE_CLASS                                             OP1[  IS_CONST (268435453) 'notificationeventabstract' ] OP2[  IS_UNUSED  ]
+  188     1*       < 62> RETURN                                                    OP1[  IS_CONST (268435453) 1 ]
+
+Class NotificationEventAbstract:
+[+]Class Parent Name: NULL
+End Trait extract
+Start Properties extract:
+Properties: NULL
+End Properties extract
+
+Function raise:
+[+]Function Source Class Name: NotificationEventAbstract
+[*]Start of arg_info extract:
+[*]arg_info num_args:9
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:event
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:item
+[*]type:CommonGLPI
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**2**
+[*]name:options
+[*]type:array
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**3**
+[*]name:label
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**4**
+[*]name:data
+[*]type:array
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**5**
+[*]name:notificationtarget
+[*]type:NotificationTarget
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**6**
+[*]name:template
+[*]type:NotificationTemplate
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**7**
+[*]name:notify_me
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**8**
+[*]name:emitter
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\NotificationEventAbstract.php
+function name:  raise
+number of ops:  241
+compiled vars:  !0 = $event, !1 = $item, !2 = $options, !3 = $label, !4 = $data, !5 = $notificationtarget, !6 = $template, !7 = $notify_me, !8 = $emitter, !9 = $CFG_GLPI, !10 = $DB, !11 = $entity, !12 = $processed, !13 = $targets, !14 = $orig_tz, !15 = $target, !16 = $users_infos, !17 = $key, !18 = $tid, !19 = $send_data
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   52     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 63> RECV                                              RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ]
+          2*       < 63> RECV                                              RES[  IS_CV !2 ]       OP1[  IS_UNUSED  ]
+          3*       < 63> RECV                                              RES[  IS_CV !3 ]       OP1[  IS_UNUSED  ]
+          4*       < 63> RECV                                              RES[  IS_CV !4 ]       OP1[  IS_UNUSED  ]
+          5*       < 63> RECV                                              RES[  IS_CV !5 ]       OP1[  IS_UNUSED  ]
+          6*       < 63> RECV                                              RES[  IS_CV !6 ]       OP1[  IS_UNUSED  ]
+          7*       < 63> RECV                                              RES[  IS_CV !7 ]       OP1[  IS_UNUSED  ]
+          8*       < 64> RECV_INIT                                         RES[  IS_CV !8 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435330) null ]
+   67     9*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         10*       <168> BIND_GLOBAL                                               OP1[  IS_CV !9 ] OP2[ ,  IS_CONST (268435327) 'CFG_GLPI' ]
+         11*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         12*       <168> BIND_GLOBAL                                               OP1[  IS_CV !10 ] OP2[ ,  IS_CONST (268435324) 'DB' ]
+   68    13*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         14*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~20 ]      OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435321) 'mode' ]
+         15*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~21 ]      OP1[  IS_CONST (268435320) 'notifications_' ] OP2[ ,  IS_TMP_VAR ~20 ]
+         16*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~22 ]      OP1[  IS_CV !9 ] OP2[ ,  IS_TMP_VAR ~21 ]
+         17*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~22 ] OP2[ , ->239 ]
+   69    18*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         19*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !5 ] OP2[ ,  IS_CONST (268435313) 'getEntity' ]
+         20*       < 60> DO_FCALL                                      0   RES[  IS_VAR $23 ]      OP1[  IS_UNUSED  ]
+         21*       < 22> ASSIGN                                                    OP1[  IS_CV !11 ] OP2[ ,  IS_VAR $23 ]
+   70    22*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         23*       <115> ISSET_ISEMPTY_DIM_OBJ                         0   RES[  IS_TMP_VAR ~25 ]      OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435307) 'processed' ]
+         24*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~25 ] OP2[ , ->31 ]
+   71    25*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         26*       < 84> FETCH_DIM_W                                       RES[  IS_VAR $26 ]      OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435302) 'processed' ]
+         27*       < 30> ASSIGN_REF                                                OP1[  IS_CV !12 ] OP2[ ,  IS_VAR $26 ]
+   72    28*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         29*       < 75> UNSET_DIM                                                 OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435297) 'processed' ]
+         30*       < 42> JMP                                                       OP1[ ->33 ]
+   74    31*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         32*       < 22> ASSIGN                                                    OP1[  IS_CV !12 ] OP2[ ,  IS_CONST (268435292) <array> ]
+   77    33*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         34*       < 59> INIT_FCALL_BY_NAME                                        OP2[  IS_CONST (268435289) 'getAllDataFromTable' ]
+   78    35*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435289) 'glpi_notificationtargets' ] OP2[  IS_UNUSED  ]
+   79    36*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~29 ]      OP1[  IS_CV !4 ] OP2[ ,  IS_CONST (268435288) 'id' ]
+         37*       < 71> INIT_ARRAY                                        RES[  IS_TMP_VAR ~30 ]      OP1[  IS_TMP_VAR ~29 ] OP2[ ,  IS_CONST (268435287) 'notifications_id' ]
+         38*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~30 ] OP2[  IS_UNUSED  ]
+         39*       < 60> DO_FCALL                                      0   RES[  IS_VAR $31 ]      OP1[  IS_UNUSED  ]
+   77    40*       < 22> ASSIGN                                                    OP1[  IS_CV !13 ] OP2[ ,  IS_VAR $31 ]
+   82    41*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         42*       <113> INIT_STATIC_METHOD_CALL      static                       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435278) 'extraRaise' ]
+   83    43*       < 71> INIT_ARRAY                                        RES[  IS_TMP_VAR ~33 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435278) 'event' ]
+   84    44*       < 72> ADD_ARRAY_ELEMENT                                 RES[  IS_TMP_VAR ~33 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435277) 'item' ]
+   85    45*       < 72> ADD_ARRAY_ELEMENT                                 RES[  IS_TMP_VAR ~33 ]      OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435276) 'options' ]
+   86    46*       < 72> ADD_ARRAY_ELEMENT                                 RES[  IS_TMP_VAR ~33 ]      OP1[  IS_CV !4 ] OP2[ ,  IS_CONST (268435275) 'data' ]
+   87    47*       < 72> ADD_ARRAY_ELEMENT                                 RES[  IS_TMP_VAR ~33 ]      OP1[  IS_CV !5 ] OP2[ ,  IS_CONST (268435274) 'notificationtarget' ]
+   88    48*       < 72> ADD_ARRAY_ELEMENT                                 RES[  IS_TMP_VAR ~33 ]      OP1[  IS_CV !6 ] OP2[ ,  IS_CONST (268435273) 'template' ]
+   89    49*       < 72> ADD_ARRAY_ELEMENT                                 RES[  IS_TMP_VAR ~33 ]      OP1[  IS_CV !7 ] OP2[ ,  IS_CONST (268435272) 'notify_me' ]
+         50*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~33 ] OP2[  IS_UNUSED  ]
+         51*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+   93    52*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         53*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !10 ] OP2[ ,  IS_CONST (268435265) 'guessTimezone' ]
+         54*       < 60> DO_FCALL                                      0   RES[  IS_VAR $35 ]      OP1[  IS_UNUSED  ]
+         55*       < 22> ASSIGN                                                    OP1[  IS_CV !14 ] OP2[ ,  IS_VAR $35 ]
+   96    56*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         57*       < 77> FE_RESET_R                                        RES[  IS_VAR $37 ]      OP1[  IS_CV !13 ] OP2[ , ->236 ]
+         58*       < 78> FE_FETCH_R                                                OP1[  IS_VAR $37 ] OP2[ ,  IS_CV !15 ] EXT_JMP_REL[ , ->236 ]
+   98    59*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         60*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !5 ] OP2[ ,  IS_CONST (268435253) 'addForTarget' ]
+         61*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !15 ] OP2[  IS_UNUSED  ]
+         62*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         63*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  100    64*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         65*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !5 ] OP2[ ,  IS_CONST (268435245) 'getTargets' ]
+         66*       < 60> DO_FCALL                                      0   RES[  IS_VAR $39 ]      OP1[  IS_UNUSED  ]
+         67*       < 77> FE_RESET_R                                        RES[  IS_VAR $40 ]      OP1[  IS_VAR $39 ] OP2[ , ->234 ]
+         68*       < 78> FE_FETCH_R                                                OP1[  IS_VAR $40 ] OP2[ ,  IS_CV !16 ] EXT_JMP_REL[ , ->234 ]
+  101    69*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         70*       <113> INIT_STATIC_METHOD_CALL      static                       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435237) 'getTargetFieldName' ]
+         71*       < 60> DO_FCALL                                      0   RES[  IS_VAR $41 ]      OP1[  IS_UNUSED  ]
+         72*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~42 ]      OP1[  IS_CV !16 ] OP2[ ,  IS_VAR $41 ]
+         73*       < 22> ASSIGN                                                    OP1[  IS_CV !17 ] OP2[ ,  IS_TMP_VAR ~42 ]
+  103    74*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         75*       < 47> JMPNZ_EX                                          RES[  IS_TMP_VAR ~44 ]      OP1[  IS_CV !3 ] OP2[ , ->83 ]
+  104    76*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !5 ] OP2[ ,  IS_CONST (268435227) 'validateSendTo' ]
+         77*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         78*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !16 ] OP2[  IS_UNUSED  ]
+         79*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !7 ] OP2[  IS_UNUSED  ]
+         80*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !8 ] OP2[  IS_UNUSED  ]
+         81*       < 60> DO_FCALL                                      0   RES[  IS_VAR $45 ]      OP1[  IS_UNUSED  ]
+         82*       < 52> BOOL                                              RES[  IS_TMP_VAR ~44 ]      OP1[  IS_VAR $45 ]
+         83*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~44 ] OP2[ , ->233 ]
+  107    84*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         85*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~46 ]      OP1[  IS_CV !16 ] OP2[ ,  IS_CONST (268435211) 'language' ]
+         86*       < 90> FETCH_DIM_IS                                      RES[  IS_TMP_VAR ~47 ]      OP1[  IS_CV !12 ] OP2[ ,  IS_TMP_VAR ~46 ]
+         87*       <115> ISSET_ISEMPTY_DIM_OBJ                         0   RES[  IS_TMP_VAR ~48 ]      OP1[  IS_TMP_VAR ~47 ] OP2[ ,  IS_CV !17 ]
+         88*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~49 ]      OP1[  IS_TMP_VAR ~48 ]
+         89*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~49 ] OP2[ , ->233 ]
+  109    90*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         91*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435200) 'item' ]
+         92*       <137> OP_DATA                                                   OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+  114    93*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         94*       < 90> FETCH_DIM_IS                                      RES[  IS_TMP_VAR ~51 ]      OP1[  IS_CV !16 ] OP2[ ,  IS_CONST (268435195) 'additionnaloption' ]
+         95*       <115> ISSET_ISEMPTY_DIM_OBJ                         0   RES[  IS_TMP_VAR ~52 ]      OP1[  IS_TMP_VAR ~51 ] OP2[ ,  IS_CONST (268435194) 'timezone' ]
+         96*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~52 ]      OP1[  IS_TMP_VAR ~52 ] OP2[ , ->104 ]
+  115    97*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435191) 'is_a' ]
+         98*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~53 ]      OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435190) 'item' ]
+         99*       < 65> SEND_VAL                                                  OP1[  IS_TMP_VAR ~53 ]
+        100*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435187) 'CommonDBTM' ]
+        101*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435186) <true> ]
+        102*       < 60> DO_FCALL                                      0   RES[  IS_VAR $54 ]      OP1[  IS_UNUSED  ]
+        103*       < 52> BOOL                                              RES[  IS_TMP_VAR ~52 ]      OP1[  IS_VAR $54 ]
+        104*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~52 ] OP2[ , ->124 ]
+  117   105*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        106*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !10 ] OP2[ ,  IS_CONST (268435177) 'setTimezone' ]
+        107*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        108*       < 93> FETCH_DIM_FUNC_ARG                                RES[  IS_VAR $55 ]      OP1[  IS_CV !16 ] OP2[ ,  IS_CONST (268435175) 'additionnaloption' ]
+        109*       < 93> FETCH_DIM_FUNC_ARG                                RES[  IS_VAR $56 ]      OP1[  IS_VAR $55 ] OP2[ ,  IS_CONST (268435174) 'timezone' ]
+        110*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $56 ] OP2[  IS_UNUSED  ]
+        111*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  119   112*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        113*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~58 ]      OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435167) 'item' ]
+        114*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~58 ] OP2[ ,  IS_CONST (268435166) 'getFromDB' ]
+        115*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        116*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $59 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435164) 'fields' ]
+        117*       < 93> FETCH_DIM_FUNC_ARG                                RES[  IS_VAR $60 ]      OP1[  IS_VAR $59 ] OP2[ ,  IS_CONST (268435163) 'id' ]
+        118*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $60 ] OP2[  IS_UNUSED  ]
+        119*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  121   120*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        121*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !10 ] OP2[ ,  IS_CONST (268435156) 'setTimezone' ]
+        122*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !14 ] OP2[  IS_UNUSED  ]
+        123*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  125   124*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        125*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !6 ] OP2[ ,  IS_CONST (268435150) 'getTemplateByLanguage' ]
+  126   126*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !5 ] OP2[  IS_UNUSED  ]
+        127*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !16 ] OP2[  IS_UNUSED  ]
+        128*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+        129*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+        130*       < 60> DO_FCALL                                      0   RES[  IS_VAR $63 ]      OP1[  IS_UNUSED  ]
+  125   131*       < 22> ASSIGN                                            RES[  IS_TMP_VAR ~64 ]      OP1[  IS_CV !18 ] OP2[ ,  IS_VAR $63 ]
+        132*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~64 ] OP2[ , ->233 ]
+  133   133*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        134*       < 18> IS_EQUAL                                          RES[  IS_TMP_VAR ~65 ]      OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435134) '' ]
+        135*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~65 ] OP2[ , ->186 ]
+  134   136*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        137*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !6 ] OP2[ ,  IS_CONST (268435129) 'getDataToSend' ]
+  135   138*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !5 ] OP2[  IS_UNUSED  ]
+        139*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !18 ] OP2[  IS_UNUSED  ]
+        140*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !17 ] OP2[  IS_UNUSED  ]
+        141*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !16 ] OP2[  IS_UNUSED  ]
+        142*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+        143*       < 60> DO_FCALL                                      0   RES[  IS_VAR $66 ]      OP1[  IS_UNUSED  ]
+  134   144*       < 22> ASSIGN                                                    OP1[  IS_CV !19 ] OP2[ ,  IS_VAR $66 ]
+  141   145*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        146*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~69 ]      OP1[  IS_CV !4 ] OP2[ ,  IS_CONST (268435114) 'notificationtemplates_id' ]
+        147*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !19 ] OP2[ ,  IS_CONST (268435111) '_notificationtemplates_id' ]
+        148*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~69 ] OP2[  IS_UNUSED  ]
+  142   149*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        150*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435108) 'getType' ]
+        151*       < 60> DO_FCALL                                      0   RES[  IS_VAR $71 ]      OP1[  IS_UNUSED  ]
+        152*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !19 ] OP2[ ,  IS_CONST (268435103) '_itemtype' ]
+        153*       <137> OP_DATA                                                   OP1[  IS_VAR $71 ] OP2[  IS_UNUSED  ]
+  143   154*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        155*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435101) 'method_exists' ]
+        156*       <117> SEND_VAR                                                  OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+        157*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435098) 'getID' ]
+        158*       < 60> DO_FCALL                                      0   RES[  IS_VAR $73 ]      OP1[  IS_UNUSED  ]
+        159*       < 43> JMPZ                                                      OP1[  IS_VAR $73 ] OP2[ , ->168 ]
+  144   160*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435093) 'max' ]
+        161*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435092) 'getID' ]
+        162*       < 60> DO_FCALL                                      0   RES[  IS_VAR $74 ]      OP1[  IS_UNUSED  ]
+        163*       <117> SEND_VAR                                                  OP1[  IS_VAR $74 ] OP2[  IS_UNUSED  ]
+        164*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435088) 0 ]
+        165*       < 60> DO_FCALL                                      0   RES[  IS_VAR $75 ]      OP1[  IS_UNUSED  ]
+        166*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~76 ]      OP1[  IS_VAR $75 ]
+        167*       < 42> JMP                                                       OP1[ ->169 ]
+  145   168*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~76 ]      OP1[  IS_CONST (268435081) 0 ]
+  143   169*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !19 ] OP2[ ,  IS_CONST (268435072) '_items_id' ]
+  145   170*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~76 ] OP2[  IS_UNUSED  ]
+  146   171*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        172*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !19 ] OP2[ ,  IS_CONST (268435074) '_entities_id' ]
+        173*       <137> OP_DATA                                                   OP1[  IS_CV !11 ] OP2[  IS_UNUSED  ]
+  147   174*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        175*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~79 ]      OP1[  IS_CV !4 ] OP2[ ,  IS_CONST (268435070) 'mode' ]
+        176*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !19 ] OP2[ ,  IS_CONST (268435067) 'mode' ]
+        177*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~79 ] OP2[  IS_UNUSED  ]
+  148   178*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        179*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !19 ] OP2[ ,  IS_CONST (268435063) 'event' ]
+        180*       <137> OP_DATA                                                   OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+  150   181*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        182*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435058) 'Notification' ] OP2[ ,  IS_CONST (268435060) 'send' ]
+        183*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !19 ] OP2[  IS_UNUSED  ]
+        184*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+        185*       < 42> JMP                                                       OP1[ ->228 ]
+  152   186*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        187*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !5 ] OP2[ ,  IS_CONST (268435052) 'getFromDB' ]
+        188*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        189*       < 93> FETCH_DIM_FUNC_ARG                                RES[  IS_VAR $82 ]      OP1[  IS_CV !15 ] OP2[ ,  IS_CONST (268435050) 'id' ]
+        190*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $82 ] OP2[  IS_UNUSED  ]
+        191*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  153   192*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        193*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~84 ]      OP1[  IS_CONST (268435043) '%3Ctr+class%3D%27tab_bg_2%27%3E%3Ctd%3E' ] OP2[ ,  IS_CV !3 ]
+        194*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~85 ]      OP1[  IS_TMP_VAR ~84 ] OP2[ ,  IS_CONST (268435042) '%3C%2Ftd%3E' ]
+        195*       <136> ECHO                                                      OP1[  IS_TMP_VAR ~85 ]
+  154   196*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        197*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !5 ] OP2[ ,  IS_CONST (268435037) 'getNameID' ]
+        198*       < 60> DO_FCALL                                      0   RES[  IS_VAR $86 ]      OP1[  IS_UNUSED  ]
+        199*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~87 ]      OP1[  IS_CONST (268435035) '%3Ctd%3E' ] OP2[ ,  IS_VAR $86 ]
+        200*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~88 ]      OP1[  IS_TMP_VAR ~87 ] OP2[ ,  IS_CONST (268435034) '%3C%2Ftd%3E' ]
+        201*       <136> ECHO                                                      OP1[  IS_TMP_VAR ~88 ]
+  155   202*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        203*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435029) 'sprintf' ]
+  156   204*       < 59> INIT_FCALL_BY_NAME                                        OP2[  IS_CONST (268435028) '__' ]
+        205*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435028) '%251%24s+%28%252%24s%29' ] OP2[  IS_UNUSED  ]
+        206*       < 60> DO_FCALL                                      0   RES[  IS_VAR $89 ]      OP1[  IS_UNUSED  ]
+        207*       <117> SEND_VAR                                                  OP1[  IS_VAR $89 ] OP2[  IS_UNUSED  ]
+  157   208*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !6 ] OP2[ ,  IS_CONST (268435023) 'getName' ]
+        209*       < 60> DO_FCALL                                      0   RES[  IS_VAR $90 ]      OP1[  IS_UNUSED  ]
+        210*       <117> SEND_VAR                                                  OP1[  IS_VAR $90 ] OP2[  IS_UNUSED  ]
+  158   211*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~91 ]      OP1[  IS_CV !16 ] OP2[ ,  IS_CONST (268435019) 'language' ]
+        212*       < 65> SEND_VAL                                                  OP1[  IS_TMP_VAR ~91 ]
+        213*       < 60> DO_FCALL                                      0   RES[  IS_VAR $92 ]      OP1[  IS_UNUSED  ]
+        214*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~93 ]      OP1[  IS_CONST (268435014) '%3Ctd%3E' ] OP2[ ,  IS_VAR $92 ]
+  159   215*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~94 ]      OP1[  IS_TMP_VAR ~93 ] OP2[ ,  IS_CONST (268435013) '%3C%2Ftd%3E' ]
+        216*       <136> ECHO                                                      OP1[  IS_TMP_VAR ~94 ]
+  160   217*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        218*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~95 ]      OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435008) 'mode' ]
+        219*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~96 ]      OP1[  IS_CONST (268435007) '%3Ctd%3E' ] OP2[ ,  IS_TMP_VAR ~95 ]
+        220*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~97 ]      OP1[  IS_TMP_VAR ~96 ] OP2[ ,  IS_CONST (268435006) '%3C%2Ftd%3E' ]
+        221*       <136> ECHO                                                      OP1[  IS_TMP_VAR ~97 ]
+  161   222*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        223*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~98 ]      OP1[  IS_CONST (268435001) '%3Ctd%3E' ] OP2[ ,  IS_CV !17 ]
+        224*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~99 ]      OP1[  IS_TMP_VAR ~98 ] OP2[ ,  IS_CONST (268435000) '%3C%2Ftd%3E' ]
+        225*       <136> ECHO                                                      OP1[  IS_TMP_VAR ~99 ]
+  162   226*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        227*       <136> ECHO                                                      OP1[  IS_CONST (268434995) '%3C%2Ftr%3E' ]
+  164   228*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        229*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~100 ]     OP1[  IS_CV !16 ] OP2[ ,  IS_CONST (268434992) 'language' ]
+        230*       < 84> FETCH_DIM_W                                       RES[  IS_VAR $101 ]     OP1[  IS_CV !12 ] OP2[ ,  IS_TMP_VAR ~100 ]
+        231*       < 23> ASSIGN_DIM                                                OP1[  IS_VAR $101 ] OP2[ ,  IS_CV !17 ]
+  165   232*       <137> OP_DATA                                                   OP1[  IS_CV !16 ] OP2[  IS_UNUSED  ]
+  100   233*       < 42> JMP                                                       OP1[ ->68 ]
+        234*       <127> FE_FREE                                                   OP1[  IS_VAR $40 ] OP2[  IS_UNUSED  ]
+   96   235*       < 42> JMP                                                       OP1[ ->58 ]
+        236*       <127> FE_FREE                                                   OP1[  IS_VAR $37 ] OP2[  IS_UNUSED  ]
+  172   237*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        238*       <153> UNSET_CV                                                  OP1[  IS_CV !12 ] OP2[  IS_UNUSED  ]
+  174   239*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        240*       < 62> RETURN                                                    OP1[  IS_CONST (268434971) null ]
+
+End of function raise
+
+Function extraraise:
+[+]Function Source Class Name: NotificationEventAbstract
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:params
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\NotificationEventAbstract.php
+function name:  extraRaise
+number of ops:  3
+compiled vars:  !0 = $params
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  183     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  186     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 62> RETURN                                                    OP1[  IS_CONST (268435451) null ]
+
+End of function extraraise
+
+End of class NotificationEventAbstract.
+

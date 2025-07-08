@@ -1,0 +1,780 @@
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\firebase\php-jwt\src\JWK.php
+function name:  (null)
+number of ops:  5
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+    3     0*       <  0> NOP                                                      
+    5     1*       <  0> NOP                                                      
+    6     2*       <  0> NOP                                                      
+  324     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       < 62> RETURN                                                    OP1[  IS_CONST (268435447) 1 ]
+
+Class Firebase\JWT\JWK:
+[+]Class Parent Name: NULL
+End Trait extract
+Start Properties extract:
+Properties: NULL
+End Properties extract
+
+Function parsekeyset:
+[+]Function Source Class Name: Firebase\JWT\JWK
+[*]Start of arg_info extract:
+[*]arg_info num_args:2
+[*]Function return type:array
+
+[*]ArgInfoNo**0**
+[*]name:jwks
+[*]type:array
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:defaultAlg
+[*]type:?string
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\firebase\php-jwt\src\JWK.php
+function name:  parseKeySet
+number of ops:  62
+compiled vars:  !0 = $jwks, !1 = $defaultAlg, !2 = $keys, !3 = $v, !4 = $k, !5 = $kid, !6 = $key
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   49     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 64> RECV_INIT                                         RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435430) null ]
+   51     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435427) <array> ]
+   53     4*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          5*       <115> ISSET_ISEMPTY_DIM_OBJ                         0   RES[  IS_TMP_VAR ~8 ]       OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435424) 'keys' ]
+          6*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~9 ]       OP1[  IS_TMP_VAR ~8 ]
+          7*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~9 ] OP2[ , ->13 ]
+   54     8*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          9*       < 68> NEW                                               RES[  IS_VAR $10 ]      OP1[ 'UnexpectedValueException' ]
+         10*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435417) '%22keys%22+member+must+exist+in+the+JWK+Set' ] OP2[  IS_UNUSED  ]
+         11*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         12*       <108> THROW                                         0           OP1[  IS_VAR $10 ] OP2[  IS_UNUSED  ]
+   57    13*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         14*       <115> ISSET_ISEMPTY_DIM_OBJ                         1   RES[  IS_TMP_VAR ~12 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435410) 'keys' ]
+         15*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~12 ] OP2[ , ->21 ]
+   58    16*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         17*       < 68> NEW                                               RES[  IS_VAR $13 ]      OP1[ 'InvalidArgumentException' ]
+         18*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435405) 'JWK+Set+did+not+contain+any+keys' ] OP2[  IS_UNUSED  ]
+         19*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         20*       <108> THROW                                         0           OP1[  IS_VAR $13 ] OP2[  IS_UNUSED  ]
+   61    21*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         22*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~15 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435398) 'keys' ]
+         23*       < 77> FE_RESET_R                                        RES[  IS_VAR $16 ]      OP1[  IS_TMP_VAR ~15 ] OP2[ , ->46 ]
+         24*       < 78> FE_FETCH_R                                        RES[  IS_TMP_VAR ~17 ]      OP1[  IS_VAR $16 ] OP2[ ,  IS_CV !3 ] EXT_JMP_REL[ , ->46 ]
+         25*       < 22> ASSIGN                                                    OP1[  IS_CV !4 ] OP2[ ,  IS_TMP_VAR ~17 ]
+   62    26*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         27*       <115> ISSET_ISEMPTY_DIM_OBJ                         0   RES[  IS_TMP_VAR ~19 ]      OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435389) 'kid' ]
+         28*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~19 ] OP2[ , ->32 ]
+         29*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~20 ]      OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435386) 'kid' ]
+         30*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~21 ]      OP1[  IS_TMP_VAR ~20 ]
+         31*       < 42> JMP                                                       OP1[ ->33 ]
+         32*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~21 ]      OP1[  IS_CV !4 ]
+         33*       < 22> ASSIGN                                                    OP1[  IS_CV !5 ] OP2[ ,  IS_TMP_VAR ~21 ]
+   63    34*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         35*       <113> INIT_STATIC_METHOD_CALL      self                         OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435375) 'parseKey' ]
+         36*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         37*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         38*       < 60> DO_FCALL                                      0   RES[  IS_VAR $23 ]      OP1[  IS_UNUSED  ]
+         39*       < 22> ASSIGN                                            RES[  IS_TMP_VAR ~24 ]      OP1[  IS_CV !6 ] OP2[ ,  IS_VAR $23 ]
+         40*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~24 ] OP2[ , ->45 ]
+   64    41*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         42*       < 51> CAST                                          6   RES[  IS_TMP_VAR ~25 ]      OP1[  IS_CV !5 ] OP2[  IS_UNUSED  ]
+         43*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !2 ] OP2[ ,  IS_TMP_VAR ~25 ]
+         44*       <137> OP_DATA                                                   OP1[  IS_CV !6 ] OP2[  IS_UNUSED  ]
+   61    45*       < 42> JMP                                                       OP1[ ->24 ]
+         46*       <127> FE_FREE                                                   OP1[  IS_VAR $16 ] OP2[  IS_UNUSED  ]
+   68    47*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         48*       <190> COUNT                                             RES[  IS_TMP_VAR ~27 ]      OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         49*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~28 ]      OP1[  IS_TMP_VAR ~27 ] OP2[ ,  IS_CONST (268435349) 0 ]
+         50*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~28 ] OP2[ , ->56 ]
+   69    51*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         52*       < 68> NEW                                               RES[  IS_VAR $29 ]      OP1[ 'UnexpectedValueException' ]
+         53*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435344) 'No+supported+algorithms+found+in+JWK+Set' ] OP2[  IS_UNUSED  ]
+         54*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         55*       <108> THROW                                         0           OP1[  IS_VAR $29 ] OP2[  IS_UNUSED  ]
+   72    56*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         57*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         58*       < 62> RETURN                                                    OP1[  IS_CV !2 ]
+   73    59*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         60*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         61*       < 62> RETURN                                                    OP1[  IS_CONST (268435329) null ]
+
+End of function parsekeyset
+
+Function parsekey:
+[+]Function Source Class Name: Firebase\JWT\JWK
+[*]Start of arg_info extract:
+[*]arg_info num_args:2
+[*]Function return type:?Firebase\JWT\Key
+
+[*]ArgInfoNo**0**
+[*]name:jwk
+[*]type:array
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:defaultAlg
+[*]type:?string
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\firebase\php-jwt\src\JWK.php
+function name:  parseKey
+number of ops:  169
+compiled vars:  !0 = $jwk, !1 = $defaultAlg, !2 = $pem, !3 = $publicKey
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   90     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 64> RECV_INIT                                         RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435376) null ]
+   92     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       <154> ISSET_ISEMPTY_CV                                  RES[  IS_TMP_VAR ~4 ]       OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          4*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~4 ] OP2[ , ->10 ]
+   93     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       < 68> NEW                                               RES[  IS_VAR $5 ]       OP1[ 'InvalidArgumentException' ]
+          7*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435367) 'JWK+must+not+be+empty' ] OP2[  IS_UNUSED  ]
+          8*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+          9*       <108> THROW                                         0           OP1[  IS_VAR $5 ] OP2[  IS_UNUSED  ]
+   96    10*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         11*       <115> ISSET_ISEMPTY_DIM_OBJ                         0   RES[  IS_TMP_VAR ~7 ]       OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435360) 'kty' ]
+         12*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~8 ]       OP1[  IS_TMP_VAR ~7 ]
+         13*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~8 ] OP2[ , ->19 ]
+   97    14*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         15*       < 68> NEW                                               RES[  IS_VAR $9 ]       OP1[ 'UnexpectedValueException' ]
+         16*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435353) 'JWK+must+contain+a+%22kty%22+parameter' ] OP2[  IS_UNUSED  ]
+         17*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         18*       <108> THROW                                         0           OP1[  IS_VAR $9 ] OP2[  IS_UNUSED  ]
+  100    19*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         20*       <115> ISSET_ISEMPTY_DIM_OBJ                         0   RES[  IS_TMP_VAR ~11 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435346) 'alg' ]
+         21*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~12 ]      OP1[  IS_TMP_VAR ~11 ]
+         22*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~12 ] OP2[ , ->34 ]
+  101    23*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         24*       <123> TYPE_CHECK                                    2   RES[  IS_TMP_VAR ~13 ]      OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         25*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~13 ] OP2[ , ->31 ]
+  106    26*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         27*       < 68> NEW                                               RES[  IS_VAR $14 ]      OP1[ 'UnexpectedValueException' ]
+         28*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435333) 'JWK+must+contain+an+%22alg%22+parameter' ] OP2[  IS_UNUSED  ]
+         29*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         30*       <108> THROW                                         0           OP1[  IS_VAR $14 ] OP2[  IS_UNUSED  ]
+  108    31*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         32*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435326) 'alg' ]
+         33*       <137> OP_DATA                                                   OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+  111    34*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         35*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~17 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435321) 'kty' ]
+         36*       <188> SWITCH_STRING                                             OP1[  IS_TMP_VAR ~17 ] OP2[ , [ 'RSA':->42, 'EC':->100, ] ] EXT_JMP_REL[ , ->161 ]
+  112    37*       < 48> CASE                                              RES[  ]         OP1[  IS_TMP_VAR ~17 ] OP2[ ,  IS_CONST (268435319) 'RSA' ]
+         38*       < 44> JMPNZ                                                     OP1[  IS_TMP_VAR ~18 ] OP2[ , ->42 ]
+  128    39*       < 48> CASE                                              RES[  ]         OP1[  IS_TMP_VAR ~17 ] OP2[ ,  IS_CONST (268435316) 'EC' ]
+         40*       < 44> JMPNZ                                                     OP1[  IS_TMP_VAR ~18 ] OP2[ , ->100 ]
+         41*       < 42> JMP                                                       OP1[ ->161 ]
+  113    42*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         43*       <115> ISSET_ISEMPTY_DIM_OBJ                         1   RES[  IS_TMP_VAR ~19 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435309) 'd' ]
+         44*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~20 ]      OP1[  IS_TMP_VAR ~19 ]
+         45*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~20 ] OP2[ , ->51 ]
+  114    46*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         47*       < 68> NEW                                               RES[  IS_VAR $21 ]      OP1[ 'UnexpectedValueException' ]
+         48*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435302) 'RSA+private+keys+are+not+supported' ] OP2[  IS_UNUSED  ]
+         49*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         50*       <108> THROW                                         0           OP1[  IS_VAR $21 ] OP2[  IS_UNUSED  ]
+  116    51*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         52*       <115> ISSET_ISEMPTY_DIM_OBJ                         0   RES[  IS_TMP_VAR ~23 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435295) 'n' ]
+         53*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~24 ]      OP1[  IS_TMP_VAR ~23 ]
+         54*       < 47> JMPNZ_EX                                          RES[  IS_TMP_VAR ~24 ]      OP1[  IS_TMP_VAR ~24 ] OP2[ , ->58 ]
+         55*       <115> ISSET_ISEMPTY_DIM_OBJ                         0   RES[  IS_TMP_VAR ~25 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435290) 'e' ]
+         56*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~26 ]      OP1[  IS_TMP_VAR ~25 ]
+         57*       < 52> BOOL                                              RES[  IS_TMP_VAR ~24 ]      OP1[  IS_TMP_VAR ~26 ]
+         58*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~24 ] OP2[ , ->64 ]
+  117    59*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         60*       < 68> NEW                                               RES[  IS_VAR $27 ]      OP1[ 'UnexpectedValueException' ]
+         61*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435281) 'RSA+keys+must+contain+values+for+both+%22n%22+and+%22e%22' ] OP2[  IS_UNUSED  ]
+         62*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         63*       <108> THROW                                         0           OP1[  IS_VAR $27 ] OP2[  IS_UNUSED  ]
+  120    64*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         65*       <113> INIT_STATIC_METHOD_CALL      self                         OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435274) 'createPemFromModulusAndExponent' ]
+         66*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         67*       < 93> FETCH_DIM_FUNC_ARG                                RES[  IS_VAR $29 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435272) 'n' ]
+         68*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $29 ] OP2[  IS_UNUSED  ]
+         69*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         70*       < 93> FETCH_DIM_FUNC_ARG                                RES[  IS_VAR $30 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435267) 'e' ]
+         71*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $30 ] OP2[  IS_UNUSED  ]
+         72*       < 60> DO_FCALL                                      0   RES[  IS_VAR $31 ]      OP1[  IS_UNUSED  ]
+         73*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_VAR $31 ]
+  121    74*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         75*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435258) 'openssl_pkey_get_public' ]
+         76*       <117> SEND_VAR                                                  OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         77*       < 60> DO_FCALL                                      0   RES[  IS_VAR $33 ]      OP1[  IS_UNUSED  ]
+         78*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_VAR $33 ]
+  122    79*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         80*       <123> TYPE_CHECK                                    4   RES[  IS_TMP_VAR ~35 ]      OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         81*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~35 ] OP2[ , ->90 ]
+  123    82*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         83*       < 68> NEW                                               RES[  IS_VAR $36 ]      OP1[ 'DomainException' ]
+  124    84*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435243) 'openssl_error_string' ]
+         85*       < 60> DO_FCALL                                      0   RES[  IS_VAR $37 ]      OP1[  IS_UNUSED  ]
+         86*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~38 ]      OP1[  IS_CONST (268435240) 'OpenSSL+error%3A+' ] OP2[ ,  IS_VAR $37 ]
+         87*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~38 ] OP2[  IS_UNUSED  ]
+         88*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         89*       <108> THROW                                         0           OP1[  IS_VAR $36 ] OP2[  IS_UNUSED  ]
+  127    90*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         91*       < 68> NEW                                               RES[  IS_VAR $40 ]      OP1[ 'Firebase%5CJWT%5CKey' ]
+         92*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         93*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         94*       < 93> FETCH_DIM_FUNC_ARG                                RES[  IS_VAR $41 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435227) 'alg' ]
+         95*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $41 ] OP2[  IS_UNUSED  ]
+         96*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         97*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_VAR $40 ] OP2[  IS_UNUSED  ]
+         98*       < 70> FREE                                                      OP1[  IS_TMP_VAR ~17 ]
+         99*       < 62> RETURN                                                    OP1[  IS_VAR $40 ]
+  129   100*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        101*       <115> ISSET_ISEMPTY_DIM_OBJ                         0   RES[  IS_TMP_VAR ~43 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435214) 'd' ]
+        102*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~43 ] OP2[ , ->108 ]
+  131   103*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        104*       < 68> NEW                                               RES[  IS_VAR $44 ]      OP1[ 'UnexpectedValueException' ]
+        105*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435209) 'Key+data+must+be+for+a+public+key' ] OP2[  IS_UNUSED  ]
+        106*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+        107*       <108> THROW                                         0           OP1[  IS_VAR $44 ] OP2[  IS_UNUSED  ]
+  134   108*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        109*       <115> ISSET_ISEMPTY_DIM_OBJ                         1   RES[  IS_TMP_VAR ~46 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435202) 'crv' ]
+        110*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~46 ] OP2[ , ->116 ]
+  135   111*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        112*       < 68> NEW                                               RES[  IS_VAR $47 ]      OP1[ 'UnexpectedValueException' ]
+        113*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435197) 'crv+not+set' ] OP2[  IS_UNUSED  ]
+        114*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+        115*       <108> THROW                                         0           OP1[  IS_VAR $47 ] OP2[  IS_UNUSED  ]
+  138   116*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        117*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~49 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435190) 'EC_CURVES' ]
+        118*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~50 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435189) 'crv' ]
+        119*       <115> ISSET_ISEMPTY_DIM_OBJ                         0   RES[  IS_TMP_VAR ~51 ]      OP1[  IS_TMP_VAR ~49 ] OP2[ ,  IS_TMP_VAR ~50 ]
+        120*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~52 ]      OP1[  IS_TMP_VAR ~51 ]
+        121*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~52 ] OP2[ , ->127 ]
+  139   122*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        123*       < 68> NEW                                               RES[  IS_VAR $53 ]      OP1[ 'DomainException' ]
+        124*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435180) 'Unrecognised+or+unsupported+EC+curve' ] OP2[  IS_UNUSED  ]
+        125*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+        126*       <108> THROW                                         0           OP1[  IS_VAR $53 ] OP2[  IS_UNUSED  ]
+  142   127*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        128*       <115> ISSET_ISEMPTY_DIM_OBJ                         1   RES[  IS_TMP_VAR ~55 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435173) 'x' ]
+        129*       < 47> JMPNZ_EX                                          RES[  IS_TMP_VAR ~55 ]      OP1[  IS_TMP_VAR ~55 ] OP2[ , ->132 ]
+        130*       <115> ISSET_ISEMPTY_DIM_OBJ                         1   RES[  IS_TMP_VAR ~56 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435170) 'y' ]
+        131*       < 52> BOOL                                              RES[  IS_TMP_VAR ~55 ]      OP1[  IS_TMP_VAR ~56 ]
+        132*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~55 ] OP2[ , ->138 ]
+  143   133*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        134*       < 68> NEW                                               RES[  IS_VAR $57 ]      OP1[ 'UnexpectedValueException' ]
+        135*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435163) 'x+and+y+not+set' ] OP2[  IS_UNUSED  ]
+        136*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+        137*       <108> THROW                                         0           OP1[  IS_VAR $57 ] OP2[  IS_UNUSED  ]
+  146   138*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        139*       <113> INIT_STATIC_METHOD_CALL      self                         OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435156) 'createPemFromCrvAndXYCoordinates' ]
+        140*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        141*       < 93> FETCH_DIM_FUNC_ARG                                RES[  IS_VAR $59 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435154) 'crv' ]
+        142*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $59 ] OP2[  IS_UNUSED  ]
+        143*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        144*       < 93> FETCH_DIM_FUNC_ARG                                RES[  IS_VAR $60 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435149) 'x' ]
+        145*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $60 ] OP2[  IS_UNUSED  ]
+        146*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        147*       < 93> FETCH_DIM_FUNC_ARG                                RES[  IS_VAR $61 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435144) 'y' ]
+        148*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $61 ] OP2[  IS_UNUSED  ]
+        149*       < 60> DO_FCALL                                      0   RES[  IS_VAR $62 ]      OP1[  IS_UNUSED  ]
+        150*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_VAR $62 ]
+  147   151*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        152*       < 68> NEW                                               RES[  IS_VAR $64 ]      OP1[ 'Firebase%5CJWT%5CKey' ]
+        153*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+        154*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        155*       < 93> FETCH_DIM_FUNC_ARG                                RES[  IS_VAR $65 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435131) 'alg' ]
+        156*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $65 ] OP2[  IS_UNUSED  ]
+        157*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+        158*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_VAR $64 ] OP2[  IS_UNUSED  ]
+        159*       < 70> FREE                                                      OP1[  IS_TMP_VAR ~17 ]
+        160*       < 62> RETURN                                                    OP1[  IS_VAR $64 ]
+  150   161*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        162*       < 42> JMP                                                       OP1[ ->163 ]
+        163*       < 70> FREE                                                      OP1[  IS_TMP_VAR ~17 ]
+  153   164*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        165*       < 62> RETURN                                                    OP1[  IS_CONST (268435112) null ]
+  154   166*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        167*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        168*       < 62> RETURN                                                    OP1[  IS_CONST (268435107) null ]
+
+End of function parsekey
+
+Function createpemfromcrvandxycoordinates:
+[+]Function Source Class Name: Firebase\JWT\JWK
+[*]Start of arg_info extract:
+[*]arg_info num_args:3
+[*]Function return type:string
+
+[*]ArgInfoNo**0**
+[*]name:crv
+[*]type:string
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:x
+[*]type:string
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**2**
+[*]name:y
+[*]type:string
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\firebase\php-jwt\src\JWK.php
+function name:  createPemFromCrvAndXYCoordinates
+number of ops:  69
+compiled vars:  !0 = $crv, !1 = $x, !2 = $y, !3 = $pem
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  165     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 63> RECV                                              RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ]
+          2*       < 63> RECV                                              RES[  IS_CV !2 ]       OP1[  IS_UNUSED  ]
+  168     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       <113> INIT_STATIC_METHOD_CALL      self                         OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435404) 'encodeDER' ]
+  169     5*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~4 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435404) 'ASN1_SEQUENCE' ]
+          6*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~4 ] OP2[  IS_UNUSED  ]
+  170     7*       <113> INIT_STATIC_METHOD_CALL      self                         OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435401) 'encodeDER' ]
+  171     8*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~5 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435401) 'ASN1_SEQUENCE' ]
+          9*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~5 ] OP2[  IS_UNUSED  ]
+  172    10*       <113> INIT_STATIC_METHOD_CALL      self                         OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435398) 'encodeDER' ]
+  173    11*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~6 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435398) 'ASN1_OBJECT_IDENTIFIER' ]
+         12*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~6 ] OP2[  IS_UNUSED  ]
+  174    13*       <113> INIT_STATIC_METHOD_CALL      self                         OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435395) 'encodeOID' ]
+         14*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~7 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435395) 'OID' ]
+         15*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~7 ] OP2[  IS_UNUSED  ]
+         16*       < 60> DO_FCALL                                      0   RES[  IS_VAR $8 ]       OP1[  IS_UNUSED  ]
+         17*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $8 ] OP2[  IS_UNUSED  ]
+         18*       < 60> DO_FCALL                                      0   RES[  IS_VAR $9 ]       OP1[  IS_UNUSED  ]
+  176    19*       <113> INIT_STATIC_METHOD_CALL      self                         OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435386) 'encodeDER' ]
+  177    20*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~10 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435386) 'ASN1_OBJECT_IDENTIFIER' ]
+         21*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~10 ] OP2[  IS_UNUSED  ]
+  178    22*       <113> INIT_STATIC_METHOD_CALL      self                         OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435383) 'encodeOID' ]
+         23*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         24*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~11 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435381) 'EC_CURVES' ]
+         25*       < 93> FETCH_DIM_FUNC_ARG                                RES[  IS_VAR $12 ]      OP1[  IS_TMP_VAR ~11 ] OP2[ ,  IS_CV !0 ]
+         26*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $12 ] OP2[  IS_UNUSED  ]
+         27*       < 60> DO_FCALL                                      0   RES[  IS_VAR $13 ]      OP1[  IS_UNUSED  ]
+         28*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $13 ] OP2[  IS_UNUSED  ]
+         29*       < 60> DO_FCALL                                      0   RES[  IS_VAR $14 ]      OP1[  IS_UNUSED  ]
+         30*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~15 ]      OP1[  IS_VAR $9 ] OP2[ ,  IS_VAR $14 ]
+         31*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~15 ] OP2[  IS_UNUSED  ]
+         32*       < 60> DO_FCALL                                      0   RES[  IS_VAR $16 ]      OP1[  IS_UNUSED  ]
+  181    33*       <113> INIT_STATIC_METHOD_CALL      self                         OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435364) 'encodeDER' ]
+  182    34*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~17 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435364) 'ASN1_BIT_STRING' ]
+         35*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~17 ] OP2[  IS_UNUSED  ]
+  184    36*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435361) 'Firebase%5CJWT%5CJWT' ] OP2[ ,  IS_CONST (268435363) 'urlsafeB64Decode' ]
+         37*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         38*       < 60> DO_FCALL                                      0   RES[  IS_VAR $18 ]      OP1[  IS_UNUSED  ]
+         39*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~19 ]      OP1[  IS_CONST (268435359) '%00%04' ] OP2[ ,  IS_VAR $18 ]
+  185    40*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435358) 'Firebase%5CJWT%5CJWT' ] OP2[ ,  IS_CONST (268435360) 'urlsafeB64Decode' ]
+         41*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         42*       < 60> DO_FCALL                                      0   RES[  IS_VAR $20 ]      OP1[  IS_UNUSED  ]
+         43*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~21 ]      OP1[  IS_TMP_VAR ~19 ] OP2[ ,  IS_VAR $20 ]
+         44*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~21 ] OP2[  IS_UNUSED  ]
+         45*       < 60> DO_FCALL                                      0   RES[  IS_VAR $22 ]      OP1[  IS_UNUSED  ]
+         46*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~23 ]      OP1[  IS_VAR $16 ] OP2[ ,  IS_VAR $22 ]
+         47*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~23 ] OP2[  IS_UNUSED  ]
+         48*       < 60> DO_FCALL                                      0   RES[  IS_VAR $24 ]      OP1[  IS_UNUSED  ]
+  167    49*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_VAR $24 ]
+  189    50*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         51*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435340) 'Firebase%5CJWT%5Csprintf' ]
+  190    52*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435341) '-----BEGIN+PUBLIC+KEY-----%0A%25s%0A-----END+PUBLIC+KEY-----%0A' ] OP2[  IS_UNUSED  ]
+  191    53*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435340) 'Firebase%5CJWT%5Cwordwrap' ]
+         54*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435341) 'Firebase%5CJWT%5Cbase64_encode' ]
+         55*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         56*       < 60> DO_FCALL                                      0   RES[  IS_VAR $26 ]      OP1[  IS_UNUSED  ]
+         57*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $26 ] OP2[  IS_UNUSED  ]
+         58*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435336) 64 ] OP2[  IS_UNUSED  ]
+         59*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435335) '%0A' ] OP2[  IS_UNUSED  ]
+         60*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435334) <true> ] OP2[  IS_UNUSED  ]
+         61*       < 60> DO_FCALL                                      0   RES[  IS_VAR $27 ]      OP1[  IS_UNUSED  ]
+         62*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $27 ] OP2[  IS_UNUSED  ]
+         63*       < 60> DO_FCALL                                      0   RES[  IS_VAR $28 ]      OP1[  IS_UNUSED  ]
+         64*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_VAR $28 ] OP2[  IS_UNUSED  ]
+         65*       < 62> RETURN                                                    OP1[  IS_VAR $28 ]
+  193    66*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         67*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         68*       < 62> RETURN                                                    OP1[  IS_CONST (268435319) null ]
+
+End of function createpemfromcrvandxycoordinates
+
+Function createpemfrommodulusandexponent:
+[+]Function Source Class Name: Firebase\JWT\JWK
+[*]Start of arg_info extract:
+[*]arg_info num_args:2
+[*]Function return type:string
+
+[*]ArgInfoNo**0**
+[*]name:n
+[*]type:string
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:e
+[*]type:string
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\firebase\php-jwt\src\JWK.php
+function name:  createPemFromModulusAndExponent
+number of ops:  97
+compiled vars:  !0 = $n, !1 = $e, !2 = $mod, !3 = $exp, !4 = $modulus, !5 = $publicExponent, !6 = $rsaPublicKey, !7 = $rsaOID
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  205     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 63> RECV                                              RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ]
+  209     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435409) 'Firebase%5CJWT%5CJWT' ] OP2[ ,  IS_CONST (268435411) 'urlsafeB64Decode' ]
+          4*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          5*       < 60> DO_FCALL                                      0   RES[  IS_VAR $8 ]       OP1[  IS_UNUSED  ]
+          6*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_VAR $8 ]
+  210     7*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          8*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435403) 'Firebase%5CJWT%5CJWT' ] OP2[ ,  IS_CONST (268435405) 'urlsafeB64Decode' ]
+          9*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         10*       < 60> DO_FCALL                                      0   RES[  IS_VAR $10 ]      OP1[  IS_UNUSED  ]
+         11*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_VAR $10 ]
+  212    12*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         13*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435397) 'pack' ]
+         14*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435396) 'Ca%2Aa%2A' ]
+         15*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435395) 2 ]
+         16*       <113> INIT_STATIC_METHOD_CALL      self                         OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435394) 'encodeLength' ]
+         17*       <121> STRLEN                                            RES[  IS_TMP_VAR ~12 ]      OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         18*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~12 ] OP2[  IS_UNUSED  ]
+         19*       < 60> DO_FCALL                                      0   RES[  IS_VAR $13 ]      OP1[  IS_UNUSED  ]
+         20*       <117> SEND_VAR                                                  OP1[  IS_VAR $13 ] OP2[  IS_UNUSED  ]
+         21*       <117> SEND_VAR                                                  OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         22*       < 60> DO_FCALL                                      0   RES[  IS_VAR $14 ]      OP1[  IS_UNUSED  ]
+         23*       < 22> ASSIGN                                                    OP1[  IS_CV !4 ] OP2[ ,  IS_VAR $14 ]
+  213    24*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         25*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435378) 'pack' ]
+         26*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435377) 'Ca%2Aa%2A' ]
+         27*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435376) 2 ]
+         28*       <113> INIT_STATIC_METHOD_CALL      self                         OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435375) 'encodeLength' ]
+         29*       <121> STRLEN                                            RES[  IS_TMP_VAR ~16 ]      OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         30*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~16 ] OP2[  IS_UNUSED  ]
+         31*       < 60> DO_FCALL                                      0   RES[  IS_VAR $17 ]      OP1[  IS_UNUSED  ]
+         32*       <117> SEND_VAR                                                  OP1[  IS_VAR $17 ] OP2[  IS_UNUSED  ]
+         33*       <117> SEND_VAR                                                  OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         34*       < 60> DO_FCALL                                      0   RES[  IS_VAR $18 ]      OP1[  IS_UNUSED  ]
+         35*       < 22> ASSIGN                                                    OP1[  IS_CV !5 ] OP2[ ,  IS_VAR $18 ]
+  215    36*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         37*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435359) 'pack' ]
+  216    38*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435358) 'Ca%2Aa%2Aa%2A' ]
+  217    39*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435357) 48 ]
+  218    40*       <113> INIT_STATIC_METHOD_CALL      self                         OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435356) 'encodeLength' ]
+         41*       <121> STRLEN                                            RES[  IS_TMP_VAR ~20 ]      OP1[  IS_CV !4 ] OP2[  IS_UNUSED  ]
+         42*       <121> STRLEN                                            RES[  IS_TMP_VAR ~21 ]      OP1[  IS_CV !5 ] OP2[  IS_UNUSED  ]
+         43*       <  1> ADD                                               RES[  IS_TMP_VAR ~22 ]      OP1[  IS_TMP_VAR ~20 ] OP2[ ,  IS_TMP_VAR ~21 ]
+         44*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~22 ] OP2[  IS_UNUSED  ]
+         45*       < 60> DO_FCALL                                      0   RES[  IS_VAR $23 ]      OP1[  IS_UNUSED  ]
+         46*       <117> SEND_VAR                                                  OP1[  IS_VAR $23 ] OP2[  IS_UNUSED  ]
+  219    47*       <117> SEND_VAR                                                  OP1[  IS_CV !4 ] OP2[  IS_UNUSED  ]
+  220    48*       <117> SEND_VAR                                                  OP1[  IS_CV !5 ] OP2[  IS_UNUSED  ]
+         49*       < 60> DO_FCALL                                      0   RES[  IS_VAR $24 ]      OP1[  IS_UNUSED  ]
+  215    50*       < 22> ASSIGN                                                    OP1[  IS_CV !6 ] OP2[ ,  IS_VAR $24 ]
+  224    51*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         52*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435334) 'pack' ]
+         53*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435333) 'H%2A' ]
+         54*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435332) '300d06092a864886f70d0101010500' ]
+         55*       < 60> DO_FCALL                                      0   RES[  IS_VAR $26 ]      OP1[  IS_UNUSED  ]
+         56*       < 22> ASSIGN                                                    OP1[  IS_CV !7 ] OP2[ ,  IS_VAR $26 ]
+  225    57*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         58*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~28 ]      OP1[  IS_CONST (268435325) '%00' ] OP2[ ,  IS_CV !6 ]
+         59*       < 22> ASSIGN                                                    OP1[  IS_CV !6 ] OP2[ ,  IS_TMP_VAR ~28 ]
+  226    60*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         61*       <113> INIT_STATIC_METHOD_CALL      self                         OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435320) 'encodeLength' ]
+         62*       <121> STRLEN                                            RES[  IS_TMP_VAR ~30 ]      OP1[  IS_CV !6 ] OP2[  IS_UNUSED  ]
+         63*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~30 ] OP2[  IS_UNUSED  ]
+         64*       < 60> DO_FCALL                                      0   RES[  IS_VAR $31 ]      OP1[  IS_UNUSED  ]
+         65*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~32 ]      OP1[  IS_CONST (268435314) '%03' ] OP2[ ,  IS_VAR $31 ]
+         66*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~33 ]      OP1[  IS_TMP_VAR ~32 ] OP2[ ,  IS_CV !6 ]
+         67*       < 22> ASSIGN                                                    OP1[  IS_CV !6 ] OP2[ ,  IS_TMP_VAR ~33 ]
+  228    68*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         69*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435307) 'pack' ]
+  229    70*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435306) 'Ca%2Aa%2A' ]
+  230    71*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435305) 48 ]
+  231    72*       <113> INIT_STATIC_METHOD_CALL      self                         OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435304) 'encodeLength' ]
+         73*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~35 ]      OP1[  IS_CV !7 ] OP2[ ,  IS_CV !6 ]
+         74*       <121> STRLEN                                            RES[  IS_TMP_VAR ~36 ]      OP1[  IS_TMP_VAR ~35 ] OP2[  IS_UNUSED  ]
+         75*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~36 ] OP2[  IS_UNUSED  ]
+         76*       < 60> DO_FCALL                                      0   RES[  IS_VAR $37 ]      OP1[  IS_UNUSED  ]
+         77*       <117> SEND_VAR                                                  OP1[  IS_VAR $37 ] OP2[  IS_UNUSED  ]
+  232    78*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~38 ]      OP1[  IS_CV !7 ] OP2[ ,  IS_CV !6 ]
+         79*       < 65> SEND_VAL                                                  OP1[  IS_TMP_VAR ~38 ]
+         80*       < 60> DO_FCALL                                      0   RES[  IS_VAR $39 ]      OP1[  IS_UNUSED  ]
+  228    81*       < 22> ASSIGN                                                    OP1[  IS_CV !6 ] OP2[ ,  IS_VAR $39 ]
+  236    82*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         83*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435284) 'chunk_split' ]
+         84*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435283) 'base64_encode' ]
+         85*       <117> SEND_VAR                                                  OP1[  IS_CV !6 ] OP2[  IS_UNUSED  ]
+         86*       < 60> DO_FCALL                                      0   RES[  IS_VAR $41 ]      OP1[  IS_UNUSED  ]
+         87*       <117> SEND_VAR                                                  OP1[  IS_VAR $41 ] OP2[  IS_UNUSED  ]
+         88*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435276) 64 ]
+         89*       < 60> DO_FCALL                                      0   RES[  IS_VAR $42 ]      OP1[  IS_UNUSED  ]
+         90*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~43 ]      OP1[  IS_CONST (268435273) '-----BEGIN+PUBLIC+KEY-----%0D%0A' ] OP2[ ,  IS_VAR $42 ]
+  237    91*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~44 ]      OP1[  IS_TMP_VAR ~43 ] OP2[ ,  IS_CONST (268435272) '-----END+PUBLIC+KEY-----' ]
+         92*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_TMP_VAR ~44 ] OP2[  IS_UNUSED  ]
+         93*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~44 ]
+  238    94*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         95*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         96*       < 62> RETURN                                                    OP1[  IS_CONST (268435263) null ]
+
+End of function createpemfrommodulusandexponent
+
+Function encodelength:
+[+]Function Source Class Name: Firebase\JWT\JWK
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:string
+
+[*]ArgInfoNo**0**
+[*]name:length
+[*]type:int
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\firebase\php-jwt\src\JWK.php
+function name:  encodeLength
+number of ops:  33
+compiled vars:  !0 = $length, !1 = $temp
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  249     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  251     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 21> IS_SMALLER_OR_EQUAL                               RES[  IS_TMP_VAR ~2 ]       OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435442) 127 ]
+          3*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~2 ] OP2[ , ->10 ]
+  252     4*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          5*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435437) 'chr' ]
+          6*       <117> SEND_VAR                                                  OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          7*       < 60> DO_FCALL                                      0   RES[  IS_VAR $3 ]       OP1[  IS_UNUSED  ]
+          8*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_VAR $3 ] OP2[  IS_UNUSED  ]
+          9*       < 62> RETURN                                                    OP1[  IS_VAR $3 ]
+  255    10*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         11*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435426) 'ltrim' ]
+         12*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435425) 'pack' ]
+         13*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435424) 'N' ]
+         14*       <117> SEND_VAR                                                  OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         15*       < 60> DO_FCALL                                      0   RES[  IS_VAR $4 ]       OP1[  IS_UNUSED  ]
+         16*       <117> SEND_VAR                                                  OP1[  IS_VAR $4 ] OP2[  IS_UNUSED  ]
+         17*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435417) '%00' ]
+         18*       < 60> DO_FCALL                                      0   RES[  IS_VAR $5 ]       OP1[  IS_UNUSED  ]
+         19*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_VAR $5 ]
+  257    20*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         21*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435410) 'pack' ]
+         22*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435409) 'Ca%2A' ]
+         23*       <121> STRLEN                                            RES[  IS_TMP_VAR ~7 ]       OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         24*       <  9> BW_OR                                             RES[  IS_TMP_VAR ~8 ]       OP1[  IS_TMP_VAR ~7 ] OP2[ ,  IS_CONST (268435406) 128 ]
+         25*       < 65> SEND_VAL                                                  OP1[  IS_TMP_VAR ~8 ]
+         26*       <117> SEND_VAR                                                  OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         27*       < 60> DO_FCALL                                      0   RES[  IS_VAR $9 ]       OP1[  IS_UNUSED  ]
+         28*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_VAR $9 ] OP2[  IS_UNUSED  ]
+         29*       < 62> RETURN                                                    OP1[  IS_VAR $9 ]
+  258    30*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         31*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         32*       < 62> RETURN                                                    OP1[  IS_CONST (268435391) null ]
+
+End of function encodelength
+
+Function encodeder:
+[+]Function Source Class Name: Firebase\JWT\JWK
+[*]Start of arg_info extract:
+[*]arg_info num_args:2
+[*]Function return type:string
+
+[*]ArgInfoNo**0**
+[*]name:type
+[*]type:int
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:value
+[*]type:string
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\firebase\php-jwt\src\JWK.php
+function name:  encodeDER
+number of ops:  29
+compiled vars:  !0 = $type, !1 = $value, !2 = $tag_header, !3 = $der
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  268     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 63> RECV                                              RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ]
+  270     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435444) 0 ]
+  271     4*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          5*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~5 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435441) 'ASN1_SEQUENCE' ]
+          6*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~6 ]       OP1[  IS_CV !0 ] OP2[ ,  IS_TMP_VAR ~5 ]
+          7*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~6 ] OP2[ , ->10 ]
+  272     8*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          9*       < 26> ASSIGN_OP                    |=               9           OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435434) 32 ]
+  276    10*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         11*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435431) 'chr' ]
+         12*       <  9> BW_OR                                             RES[  IS_TMP_VAR ~8 ]       OP1[  IS_CV !2 ] OP2[ ,  IS_CV !0 ]
+         13*       < 65> SEND_VAL                                                  OP1[  IS_TMP_VAR ~8 ]
+         14*       < 60> DO_FCALL                                      0   RES[  IS_VAR $9 ]       OP1[  IS_UNUSED  ]
+         15*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_VAR $9 ]
+  279    16*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         17*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435420) 'chr' ]
+         18*       <121> STRLEN                                            RES[  IS_TMP_VAR ~11 ]      OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         19*       < 65> SEND_VAL                                                  OP1[  IS_TMP_VAR ~11 ]
+         20*       < 60> DO_FCALL                                      0   RES[  IS_VAR $12 ]      OP1[  IS_UNUSED  ]
+         21*       < 26> ASSIGN_OP                    .=               8           OP1[  IS_CV !3 ] OP2[ ,  IS_VAR $12 ]
+  281    22*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         23*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~14 ]      OP1[  IS_CV !3 ] OP2[ ,  IS_CV !1 ]
+         24*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_TMP_VAR ~14 ] OP2[  IS_UNUSED  ]
+         25*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~14 ]
+  282    26*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         27*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         28*       < 62> RETURN                                                    OP1[  IS_CONST (268435399) null ]
+
+End of function encodeder
+
+Function encodeoid:
+[+]Function Source Class Name: Firebase\JWT\JWK
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:string
+
+[*]ArgInfoNo**0**
+[*]name:oid
+[*]type:string
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\firebase\php-jwt\src\JWK.php
+function name:  encodeOID
+number of ops:  82
+compiled vars:  !0 = $oid, !1 = $octets, !2 = $first, !3 = $second, !4 = $octet, !5 = $bin
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  290     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  292     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435416) 'Firebase%5CJWT%5Cexplode' ]
+          3*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435417) '.' ] OP2[  IS_UNUSED  ]
+          4*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          5*       < 60> DO_FCALL                                      0   RES[  IS_VAR $6 ]       OP1[  IS_UNUSED  ]
+          6*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_VAR $6 ]
+  295     7*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          8*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435408) 'Firebase%5CJWT%5Carray_shift' ]
+          9*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         10*       < 60> DO_FCALL                                      0   RES[  IS_VAR $8 ]       OP1[  IS_UNUSED  ]
+         11*       < 51> CAST                                          4   RES[  IS_TMP_VAR ~9 ]       OP1[  IS_VAR $8 ] OP2[  IS_UNUSED  ]
+         12*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_TMP_VAR ~9 ]
+  296    13*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         14*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435399) 'Firebase%5CJWT%5Carray_shift' ]
+         15*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         16*       < 60> DO_FCALL                                      0   RES[  IS_VAR $11 ]      OP1[  IS_UNUSED  ]
+         17*       < 51> CAST                                          4   RES[  IS_TMP_VAR ~12 ]      OP1[  IS_VAR $11 ] OP2[  IS_UNUSED  ]
+         18*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_TMP_VAR ~12 ]
+  297    19*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         20*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435390) 'chr' ]
+         21*       <  3> MUL                                               RES[  IS_TMP_VAR ~14 ]      OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435389) 40 ]
+         22*       <  1> ADD                                               RES[  IS_TMP_VAR ~15 ]      OP1[  IS_TMP_VAR ~14 ] OP2[ ,  IS_CV !3 ]
+         23*       < 65> SEND_VAL                                                  OP1[  IS_TMP_VAR ~15 ]
+         24*       < 60> DO_FCALL                                      0   RES[  IS_VAR $16 ]      OP1[  IS_UNUSED  ]
+         25*       < 22> ASSIGN                                                    OP1[  IS_CV !0 ] OP2[ ,  IS_VAR $16 ]
+  300    26*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         27*       < 77> FE_RESET_R                                        RES[  IS_VAR $18 ]      OP1[  IS_CV !1 ] OP2[ , ->75 ]
+         28*       < 78> FE_FETCH_R                                                OP1[  IS_VAR $18 ] OP2[ ,  IS_CV !4 ] EXT_JMP_REL[ , ->75 ]
+  301    29*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         30*       < 18> IS_EQUAL                                          RES[  IS_TMP_VAR ~19 ]      OP1[  IS_CV !4 ] OP2[ ,  IS_CONST (268435372) 0 ]
+         31*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~19 ] OP2[ , ->36 ]
+  302    32*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         33*       < 26> ASSIGN_OP                    .=               8           OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435367) '%00' ]
+  303    34*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         35*       < 42> JMP                                                       OP1[ ->28 ]
+  305    36*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         37*       < 22> ASSIGN                                                    OP1[  IS_CV !5 ] OP2[ ,  IS_CONST (268435360) '' ]
+  307    38*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         39*       < 42> JMP                                                       OP1[ ->49 ]
+  308    40*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         41*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435353) 'chr' ]
+         42*       < 10> BW_AND                                            RES[  IS_TMP_VAR ~22 ]      OP1[  IS_CV !4 ] OP2[ ,  IS_CONST (268435352) 127 ]
+         43*       <  9> BW_OR                                             RES[  IS_TMP_VAR ~23 ]      OP1[  IS_TMP_VAR ~22 ] OP2[ ,  IS_CONST (268435351) 128 ]
+         44*       < 65> SEND_VAL                                                  OP1[  IS_TMP_VAR ~23 ]
+         45*       < 60> DO_FCALL                                      0   RES[  IS_VAR $24 ]      OP1[  IS_UNUSED  ]
+         46*       < 26> ASSIGN_OP                    .=               8           OP1[  IS_CV !5 ] OP2[ ,  IS_VAR $24 ]
+  309    47*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         48*       < 26> ASSIGN_OP                    >>=              7           OP1[  IS_CV !4 ] OP2[ ,  IS_CONST (268435342) 7 ]
+  307    49*       < 44> JMPNZ                                                     OP1[  IS_CV !4 ] OP2[ , ->40 ]
+  311    50*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         51*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~28 ]      OP1[  IS_CV !5 ] OP2[ ,  IS_CONST (268435338) 0 ]
+         52*       < 10> BW_AND                                            RES[  IS_TMP_VAR ~29 ]      OP1[  IS_TMP_VAR ~28 ] OP2[ ,  IS_CONST (268435337) '%7F' ]
+         53*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !5 ] OP2[ ,  IS_CONST (268435333) 0 ]
+         54*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~29 ] OP2[  IS_UNUSED  ]
+  314    55*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         56*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435330) 'Firebase%5CJWT%5Cpack' ]
+         57*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435331) 'V' ] OP2[  IS_UNUSED  ]
+         58*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435330) 65534 ] OP2[  IS_UNUSED  ]
+         59*       < 60> DO_FCALL                                      0   RES[  IS_VAR $30 ]      OP1[  IS_UNUSED  ]
+         60*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435327) 'Firebase%5CJWT%5Cpack' ]
+         61*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435328) 'L' ] OP2[  IS_UNUSED  ]
+         62*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435327) 65534 ] OP2[  IS_UNUSED  ]
+         63*       < 60> DO_FCALL                                      0   RES[  IS_VAR $31 ]      OP1[  IS_UNUSED  ]
+         64*       < 18> IS_EQUAL                                          RES[  IS_TMP_VAR ~32 ]      OP1[  IS_VAR $30 ] OP2[ ,  IS_VAR $31 ]
+         65*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~32 ] OP2[ , ->72 ]
+  315    66*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         67*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435318) 'Firebase%5CJWT%5Cstrrev' ]
+         68*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !5 ] OP2[  IS_UNUSED  ]
+         69*       < 60> DO_FCALL                                      0   RES[  IS_VAR $33 ]      OP1[  IS_UNUSED  ]
+         70*       < 26> ASSIGN_OP                    .=               8           OP1[  IS_CV !0 ] OP2[ ,  IS_VAR $33 ]
+         71*       < 42> JMP                                                       OP1[ ->74 ]
+  317    72*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         73*       < 26> ASSIGN_OP                    .=               8           OP1[  IS_CV !0 ] OP2[ ,  IS_CV !5 ]
+  300    74*       < 42> JMP                                                       OP1[ ->28 ]
+         75*       <127> FE_FREE                                                   OP1[  IS_VAR $18 ] OP2[  IS_UNUSED  ]
+  321    76*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         77*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         78*       < 62> RETURN                                                    OP1[  IS_CV !0 ]
+  322    79*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         80*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         81*       < 62> RETURN                                                    OP1[  IS_CONST (268435293) null ]
+
+End of function encodeoid
+
+End of class Firebase\JWT\JWK.
+

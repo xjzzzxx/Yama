@@ -1,0 +1,342 @@
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\sabre\event\lib\coroutine.php
+function name:  (null)
+number of ops:  5
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+    3     0*       <  0> NOP                                                      
+    5     1*       <  0> NOP                                                      
+    7     2*       <  0> NOP                                                      
+  124     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       < 62> RETURN                                                    OP1[  IS_CONST (268435447) 1 ]
+
+Function sabre%5Cevent%5Ccoroutine:
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:Sabre\Event\Promise
+
+[*]ArgInfoNo**0**
+[*]name:gen
+[*]type:callable
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\sabre\event\lib\coroutine.php
+function name:  Sabre\Event\coroutine
+number of ops:  40
+compiled vars:  !0 = $gen, !1 = $generator, !2 = $promise, !3 = $advanceGenerator, !4 = $e
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   55     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+   57     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       <128> INIT_DYNAMIC_CALL                                         OP1[  IS_UNUSED  ] OP2[  IS_CV !0 ]
+          3*       < 60> DO_FCALL                                      0   RES[  IS_VAR $5 ]       OP1[  IS_UNUSED  ]
+          4*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_VAR $5 ]
+   58     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       <138> INSTANCEOF                                        RES[  IS_TMP_VAR ~7 ]       OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435431) 'Generator' ]
+          7*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~8 ]       OP1[  IS_TMP_VAR ~7 ]
+          8*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~8 ] OP2[ , ->14 ]
+   59     9*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         10*       < 68> NEW                                               RES[  IS_VAR $9 ]       OP1[ 'InvalidArgumentException' ]
+         11*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435425) 'You+must+pass+a+generator+function' ] OP2[  IS_UNUSED  ]
+         12*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         13*       <108> THROW                                         0           OP1[  IS_VAR $9 ] OP2[  IS_UNUSED  ]
+   63    14*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         15*       < 68> NEW                                               RES[  IS_VAR $11 ]      OP1[ 'Sabre%5CEvent%5CPromise' ]
+         16*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         17*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_VAR $11 ]
+   69    18*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         19*       <142> DECLARE_LAMBDA_FUNCTION                           RES[  IS_TMP_VAR ~14 ]      OP1[  IS_CONST (268435412) '%00sabre%5Cevent%5C%7Bclosure%7DG%3A%5Cdesktop%5CYama%5Capp%5Cglpi-10.0.16%5Cglpi%5Cvendor%5Csabre%5Cevent%5Clib%5Ccoroutine.php%3A69%240' ]
+         20*       <182> BIND_LEXICAL                                  1           OP1[  IS_TMP_VAR ~14 ] OP2[ ,  IS_CV !3 ]
+         21*       <182> BIND_LEXICAL                                 32           OP1[  IS_TMP_VAR ~14 ] OP2[ ,  IS_CV !1 ]
+         22*       <182> BIND_LEXICAL                                 64           OP1[  IS_TMP_VAR ~14 ] OP2[ ,  IS_CV !2 ]
+         23*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_TMP_VAR ~14 ]
+  116    24*       <  0> NOP                                                      
+  117    25*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         26*       <128> INIT_DYNAMIC_CALL                                         OP1[  IS_UNUSED  ] OP2[  IS_CV !3 ]
+         27*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         28*       < 42> JMP                                                       OP1[ ->34 ]
+  118    29*       <107> CATCH                                       last  RES[  IS_CV !4 ]       OP1[  IS_CONST (268435393) 'Throwable' ]
+  119    30*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         31*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435391) 'reject' ]
+         32*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !4 ] OP2[  IS_UNUSED  ]
+         33*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  122    34*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         35*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         36*       < 62> RETURN                                                    OP1[  IS_CV !2 ]
+  123    37*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         38*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         39*       < 62> RETURN                                                    OP1[  IS_CONST (268435377) null ]
+
+End of function sabre%5Cevent%5Ccoroutine
+
+Function %00sabre%5Cevent%5C%7Bclosure%7DG%3A%5Cdesktop%5CYama%5Capp%5Cglpi-10.0.16%5Cglpi%5Cvendor%5Csabre%5Cevent%5Clib%5Ccoroutine.php%3A69%240:
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]Key: advanceGenerator, Value: NULL, Type: 1
+[*]Key: generator, Value: NULL, Type: 1
+[*]Key: promise, Value: NULL, Type: 1
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\sabre\event\lib\coroutine.php
+function name:  Sabre\Event\{closure}
+number of ops:  71
+compiled vars:  !0 = $advanceGenerator, !1 = $generator, !2 = $promise, !3 = $yieldedValue, !4 = $returnValue
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   69     0*       <183> BIND_STATIC                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          1*       <183> BIND_STATIC                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+          2*       <183> BIND_STATIC                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+   70     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       < 42> JMP                                                       OP1[ ->35 ]
+   71     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435412) 'current' ]
+          7*       < 60> DO_FCALL                                      0   RES[  IS_VAR $5 ]       OP1[  IS_UNUSED  ]
+          8*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_VAR $5 ]
+   72     9*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         10*       <138> INSTANCEOF                                        RES[  IS_TMP_VAR ~7 ]       OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435406) 'Sabre%5CEvent%5CPromise' ]
+         11*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~7 ] OP2[ , ->31 ]
+   73    12*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         13*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435402) 'then' ]
+   74    14*       <142> DECLARE_LAMBDA_FUNCTION                           RES[  IS_TMP_VAR ~8 ]       OP1[  IS_CONST (268435402) '%00sabre%5Cevent%5C%7Bclosure%7DG%3A%5Cdesktop%5CYama%5Capp%5Cglpi-10.0.16%5Cglpi%5Cvendor%5Csabre%5Cevent%5Clib%5Ccoroutine.php%3A74%241' ]
+         15*       <182> BIND_LEXICAL                                  0           OP1[  IS_TMP_VAR ~8 ] OP2[ ,  IS_CV !1 ]
+         16*       <182> BIND_LEXICAL                                 33           OP1[  IS_TMP_VAR ~8 ] OP2[ ,  IS_CV !0 ]
+   77    17*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~8 ] OP2[  IS_UNUSED  ]
+   78    18*       <142> DECLARE_LAMBDA_FUNCTION                           RES[  IS_TMP_VAR ~9 ]       OP1[  IS_CONST (268435395) '%00sabre%5Cevent%5C%7Bclosure%7DG%3A%5Cdesktop%5CYama%5Capp%5Cglpi-10.0.16%5Cglpi%5Cvendor%5Csabre%5Cevent%5Clib%5Ccoroutine.php%3A78%242' ]
+         19*       <182> BIND_LEXICAL                                  0           OP1[  IS_TMP_VAR ~9 ] OP2[ ,  IS_CV !1 ]
+         20*       <182> BIND_LEXICAL                                 32           OP1[  IS_TMP_VAR ~9 ] OP2[ ,  IS_CV !0 ]
+   81    21*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~9 ] OP2[  IS_UNUSED  ]
+         22*       < 60> DO_FCALL                                      0   RES[  IS_VAR $10 ]      OP1[  IS_UNUSED  ]
+   82    23*       <112> INIT_METHOD_CALL                                          OP1[  IS_VAR $10 ] OP2[ ,  IS_CONST (268435386) 'otherwise' ]
+         24*       <142> DECLARE_LAMBDA_FUNCTION                           RES[  IS_TMP_VAR ~11 ]      OP1[  IS_CONST (268435386) '%00sabre%5Cevent%5C%7Bclosure%7DG%3A%5Cdesktop%5CYama%5Capp%5Cglpi-10.0.16%5Cglpi%5Cvendor%5Csabre%5Cevent%5Clib%5Ccoroutine.php%3A82%243' ]
+         25*       <182> BIND_LEXICAL                                  0           OP1[  IS_TMP_VAR ~11 ] OP2[ ,  IS_CV !2 ]
+   87    26*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~11 ] OP2[  IS_UNUSED  ]
+         27*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+   90    28*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         29*       < 42> JMP                                                       OP1[ ->38 ]
+         30*       < 42> JMP                                                       OP1[ ->35 ]
+   93    31*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         32*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435371) 'send' ]
+         33*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         34*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+   70    35*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435367) 'valid' ]
+         36*       < 60> DO_FCALL                                      0   RES[  IS_VAR $14 ]      OP1[  IS_UNUSED  ]
+         37*       < 44> JMPNZ                                                     OP1[  IS_VAR $14 ] OP2[ , ->5 ]
+  100    38*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         39*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435361) 'valid' ]
+         40*       < 60> DO_FCALL                                      0   RES[  IS_VAR $15 ]      OP1[  IS_UNUSED  ]
+         41*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~16 ]      OP1[  IS_VAR $15 ]
+         42*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~16 ]      OP1[  IS_TMP_VAR ~16 ] OP2[ , ->47 ]
+         43*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~17 ]      OP1[  IS_CONST (268435356) 'Sabre%5CEvent%5CPromise' ] OP2[ ,  IS_CONST (268435355) 'PENDING' ]
+         44*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~18 ]      OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435356) 'state' ]
+         45*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~19 ]      OP1[  IS_TMP_VAR ~17 ] OP2[ ,  IS_TMP_VAR ~18 ]
+         46*       < 52> BOOL                                              RES[  IS_TMP_VAR ~16 ]      OP1[  IS_TMP_VAR ~19 ]
+         47*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~16 ] OP2[ , ->69 ]
+  101    48*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         49*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435347) 'getReturn' ]
+         50*       < 60> DO_FCALL                                      0   RES[  IS_VAR $20 ]      OP1[  IS_UNUSED  ]
+         51*       < 22> ASSIGN                                                    OP1[  IS_CV !4 ] OP2[ ,  IS_VAR $20 ]
+  104    52*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         53*       <138> INSTANCEOF                                        RES[  IS_TMP_VAR ~22 ]      OP1[  IS_CV !4 ] OP2[ ,  IS_CONST (268435341) 'Sabre%5CEvent%5CPromise' ]
+         54*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~22 ] OP2[ , ->65 ]
+  105    55*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         56*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !4 ] OP2[ ,  IS_CONST (268435337) 'then' ]
+         57*       <142> DECLARE_LAMBDA_FUNCTION                           RES[  IS_TMP_VAR ~23 ]      OP1[  IS_CONST (268435337) '%00sabre%5Cevent%5C%7Bclosure%7DG%3A%5Cdesktop%5CYama%5Capp%5Cglpi-10.0.16%5Cglpi%5Cvendor%5Csabre%5Cevent%5Clib%5Ccoroutine.php%3A105%244' ]
+         58*       <182> BIND_LEXICAL                                  0           OP1[  IS_TMP_VAR ~23 ] OP2[ ,  IS_CV !2 ]
+  107    59*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~23 ] OP2[  IS_UNUSED  ]
+         60*       <142> DECLARE_LAMBDA_FUNCTION                           RES[  IS_TMP_VAR ~24 ]      OP1[  IS_CONST (268435332) '%00sabre%5Cevent%5C%7Bclosure%7DG%3A%5Cdesktop%5CYama%5Capp%5Cglpi-10.0.16%5Cglpi%5Cvendor%5Csabre%5Cevent%5Clib%5Ccoroutine.php%3A107%245' ]
+         61*       <182> BIND_LEXICAL                                  0           OP1[  IS_TMP_VAR ~24 ] OP2[ ,  IS_CV !2 ]
+  109    62*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~24 ] OP2[  IS_UNUSED  ]
+         63*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         64*       < 42> JMP                                                       OP1[ ->69 ]
+  111    65*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         66*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435321) 'fulfill' ]
+         67*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !4 ] OP2[  IS_UNUSED  ]
+         68*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  114    69*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         70*       < 62> RETURN                                                    OP1[  IS_CONST (268435315) null ]
+
+End of function %00sabre%5Cevent%5C%7Bclosure%7DG%3A%5Cdesktop%5CYama%5Capp%5Cglpi-10.0.16%5Cglpi%5Cvendor%5Csabre%5Cevent%5Clib%5Ccoroutine.php%3A69%240
+
+Function %00sabre%5Cevent%5C%7Bclosure%7DG%3A%5Cdesktop%5CYama%5Capp%5Cglpi-10.0.16%5Cglpi%5Cvendor%5Csabre%5Cevent%5Clib%5Ccoroutine.php%3A74%241:
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:value
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]Key: generator, Value: NULL, Type: 1
+[*]Key: advanceGenerator, Value: NULL, Type: 1
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\sabre\event\lib\coroutine.php
+function name:  Sabre\Event\{closure}
+number of ops:  12
+compiled vars:  !0 = $value, !1 = $generator, !2 = $advanceGenerator
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   74     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       <183> BIND_STATIC                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+          2*       <183> BIND_STATIC                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+   75     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435445) 'send' ]
+          5*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          6*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+   76     7*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          8*       <128> INIT_DYNAMIC_CALL                                         OP1[  IS_UNUSED  ] OP2[  IS_CV !2 ]
+          9*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+   77    10*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         11*       < 62> RETURN                                                    OP1[  IS_CONST (268435433) null ]
+
+End of function %00sabre%5Cevent%5C%7Bclosure%7DG%3A%5Cdesktop%5CYama%5Capp%5Cglpi-10.0.16%5Cglpi%5Cvendor%5Csabre%5Cevent%5Clib%5Ccoroutine.php%3A74%241
+
+Function %00sabre%5Cevent%5C%7Bclosure%7DG%3A%5Cdesktop%5CYama%5Capp%5Cglpi-10.0.16%5Cglpi%5Cvendor%5Csabre%5Cevent%5Clib%5Ccoroutine.php%3A78%242:
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:reason
+[*]type:Throwable
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]Key: generator, Value: NULL, Type: 1
+[*]Key: advanceGenerator, Value: NULL, Type: 1
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\sabre\event\lib\coroutine.php
+function name:  Sabre\Event\{closure}
+number of ops:  12
+compiled vars:  !0 = $reason, !1 = $generator, !2 = $advanceGenerator
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   78     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       <183> BIND_STATIC                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+          2*       <183> BIND_STATIC                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+   79     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435445) 'throw' ]
+          5*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          6*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+   80     7*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          8*       <128> INIT_DYNAMIC_CALL                                         OP1[  IS_UNUSED  ] OP2[  IS_CV !2 ]
+          9*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+   81    10*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         11*       < 62> RETURN                                                    OP1[  IS_CONST (268435433) null ]
+
+End of function %00sabre%5Cevent%5C%7Bclosure%7DG%3A%5Cdesktop%5CYama%5Capp%5Cglpi-10.0.16%5Cglpi%5Cvendor%5Csabre%5Cevent%5Clib%5Ccoroutine.php%3A78%242
+
+Function %00sabre%5Cevent%5C%7Bclosure%7DG%3A%5Cdesktop%5CYama%5Capp%5Cglpi-10.0.16%5Cglpi%5Cvendor%5Csabre%5Cevent%5Clib%5Ccoroutine.php%3A82%243:
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:reason
+[*]type:Throwable
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]Key: promise, Value: NULL, Type: 1
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\sabre\event\lib\coroutine.php
+function name:  Sabre\Event\{closure}
+number of ops:  8
+compiled vars:  !0 = $reason, !1 = $promise
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   82     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       <183> BIND_STATIC                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+   86     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435447) 'reject' ]
+          4*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          5*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+   87     6*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          7*       < 62> RETURN                                                    OP1[  IS_CONST (268435441) null ]
+
+End of function %00sabre%5Cevent%5C%7Bclosure%7DG%3A%5Cdesktop%5CYama%5Capp%5Cglpi-10.0.16%5Cglpi%5Cvendor%5Csabre%5Cevent%5Clib%5Ccoroutine.php%3A82%243
+
+Function %00sabre%5Cevent%5C%7Bclosure%7DG%3A%5Cdesktop%5CYama%5Capp%5Cglpi-10.0.16%5Cglpi%5Cvendor%5Csabre%5Cevent%5Clib%5Ccoroutine.php%3A105%244:
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:value
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]Key: promise, Value: NULL, Type: 1
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\sabre\event\lib\coroutine.php
+function name:  Sabre\Event\{closure}
+number of ops:  8
+compiled vars:  !0 = $value, !1 = $promise
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  105     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       <183> BIND_STATIC                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+  106     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435447) 'fulfill' ]
+          4*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          5*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  107     6*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          7*       < 62> RETURN                                                    OP1[  IS_CONST (268435441) null ]
+
+End of function %00sabre%5Cevent%5C%7Bclosure%7DG%3A%5Cdesktop%5CYama%5Capp%5Cglpi-10.0.16%5Cglpi%5Cvendor%5Csabre%5Cevent%5Clib%5Ccoroutine.php%3A105%244
+
+Function %00sabre%5Cevent%5C%7Bclosure%7DG%3A%5Cdesktop%5CYama%5Capp%5Cglpi-10.0.16%5Cglpi%5Cvendor%5Csabre%5Cevent%5Clib%5Ccoroutine.php%3A107%245:
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:reason
+[*]type:Throwable
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]Key: promise, Value: NULL, Type: 1
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\sabre\event\lib\coroutine.php
+function name:  Sabre\Event\{closure}
+number of ops:  8
+compiled vars:  !0 = $reason, !1 = $promise
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+          0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       <183> BIND_STATIC                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+  108     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435447) 'reject' ]
+          4*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          5*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  109     6*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          7*       < 62> RETURN                                                    OP1[  IS_CONST (268435441) null ]
+
+End of function %00sabre%5Cevent%5C%7Bclosure%7DG%3A%5Cdesktop%5CYama%5Capp%5Cglpi-10.0.16%5Cglpi%5Cvendor%5Csabre%5Cevent%5Clib%5Ccoroutine.php%3A107%245
+

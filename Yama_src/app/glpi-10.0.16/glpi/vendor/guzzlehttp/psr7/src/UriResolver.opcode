@@ -1,0 +1,645 @@
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\guzzlehttp\psr7\src\UriResolver.php
+function name:  (null)
+number of ops:  4
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+    3     0*       <  0> NOP                                                      
+    5     1*       <  0> NOP                                                      
+  212     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       < 62> RETURN                                                    OP1[  IS_CONST (268435449) 1 ]
+
+Class GuzzleHttp\Psr7\UriResolver:
+[+]Class Parent Name: NULL
+End Trait extract
+Start Properties extract:
+Properties: NULL
+End Properties extract
+
+Function removedotsegments:
+[+]Function Source Class Name: GuzzleHttp\Psr7\UriResolver
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:string
+
+[*]ArgInfoNo**0**
+[*]name:path
+[*]type:string
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\guzzlehttp\psr7\src\UriResolver.php
+function name:  removeDotSegments
+number of ops:  76
+compiled vars:  !0 = $path, !1 = $results, !2 = $segments, !3 = $segment, !4 = $newPath
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   23     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+   25     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~5 ]       OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435421) '' ]
+          3*       < 47> JMPNZ_EX                                          RES[  IS_TMP_VAR ~5 ]       OP1[  IS_TMP_VAR ~5 ] OP2[ , ->6 ]
+          4*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~6 ]       OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435418) '%2F' ]
+          5*       < 52> BOOL                                              RES[  IS_TMP_VAR ~5 ]       OP1[  IS_TMP_VAR ~6 ]
+          6*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~5 ] OP2[ , ->10 ]
+   26     7*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          8*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          9*       < 62> RETURN                                                    OP1[  IS_CV !0 ]
+   29    10*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         11*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435405) <array> ]
+   30    12*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         13*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435402) 'GuzzleHttp%5CPsr7%5Cexplode' ]
+         14*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435403) '%2F' ] OP2[  IS_UNUSED  ]
+         15*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         16*       < 60> DO_FCALL                                      0   RES[  IS_VAR $8 ]       OP1[  IS_UNUSED  ]
+         17*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_VAR $8 ]
+   31    18*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         19*       < 77> FE_RESET_R                                        RES[  IS_VAR $10 ]      OP1[  IS_CV !2 ] OP2[ , ->36 ]
+         20*       < 78> FE_FETCH_R                                                OP1[  IS_VAR $10 ] OP2[ ,  IS_CV !3 ] EXT_JMP_REL[ , ->36 ]
+   32    21*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         22*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~11 ]      OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435388) '..' ]
+         23*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~11 ] OP2[ , ->29 ]
+   33    24*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         25*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435383) 'GuzzleHttp%5CPsr7%5Carray_pop' ]
+         26*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         27*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         28*       < 42> JMP                                                       OP1[ ->35 ]
+   34    29*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         30*       < 17> IS_NOT_IDENTICAL                                  RES[  IS_TMP_VAR ~13 ]      OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435376) '.' ]
+         31*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~13 ] OP2[ , ->35 ]
+   35    32*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         33*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         34*       <137> OP_DATA                                                   OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+   31    35*       < 42> JMP                                                       OP1[ ->20 ]
+         36*       <127> FE_FREE                                                   OP1[  IS_VAR $10 ] OP2[  IS_UNUSED  ]
+   39    37*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         38*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435361) 'GuzzleHttp%5CPsr7%5Cimplode' ]
+         39*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435362) '%2F' ] OP2[  IS_UNUSED  ]
+         40*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         41*       < 60> DO_FCALL                                      0   RES[  IS_VAR $15 ]      OP1[  IS_UNUSED  ]
+         42*       < 22> ASSIGN                                                    OP1[  IS_CV !4 ] OP2[ ,  IS_VAR $15 ]
+   41    43*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         44*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~17 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435353) 0 ]
+         45*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~18 ]      OP1[  IS_TMP_VAR ~17 ] OP2[ ,  IS_CONST (268435352) '%2F' ]
+         46*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~18 ]      OP1[  IS_TMP_VAR ~18 ] OP2[ , ->54 ]
+         47*       <115> ISSET_ISEMPTY_DIM_OBJ                         0   RES[  IS_TMP_VAR ~19 ]      OP1[  IS_CV !4 ] OP2[ ,  IS_CONST (268435349) 0 ]
+         48*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~20 ]      OP1[  IS_TMP_VAR ~19 ]
+         49*       < 47> JMPNZ_EX                                          RES[  IS_TMP_VAR ~20 ]      OP1[  IS_TMP_VAR ~20 ] OP2[ , ->53 ]
+         50*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~21 ]      OP1[  IS_CV !4 ] OP2[ ,  IS_CONST (268435344) 0 ]
+         51*       < 17> IS_NOT_IDENTICAL                                  RES[  IS_TMP_VAR ~22 ]      OP1[  IS_TMP_VAR ~21 ] OP2[ ,  IS_CONST (268435343) '%2F' ]
+         52*       < 52> BOOL                                              RES[  IS_TMP_VAR ~20 ]      OP1[  IS_TMP_VAR ~22 ]
+         53*       < 52> BOOL                                              RES[  IS_TMP_VAR ~18 ]      OP1[  IS_TMP_VAR ~20 ]
+         54*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~18 ] OP2[ , ->59 ]
+   43    55*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         56*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~23 ]      OP1[  IS_CONST (268435334) '%2F' ] OP2[ ,  IS_CV !4 ]
+         57*       < 22> ASSIGN                                                    OP1[  IS_CV !4 ] OP2[ ,  IS_TMP_VAR ~23 ]
+         58*       < 42> JMP                                                       OP1[ ->70 ]
+   44    59*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         60*       < 17> IS_NOT_IDENTICAL                                  RES[  IS_TMP_VAR ~25 ]      OP1[  IS_CV !4 ] OP2[ ,  IS_CONST (268435327) '' ]
+         61*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~25 ]      OP1[  IS_TMP_VAR ~25 ] OP2[ , ->67 ]
+         62*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~26 ]      OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435324) '.' ]
+         63*       < 47> JMPNZ_EX                                          RES[  IS_TMP_VAR ~26 ]      OP1[  IS_TMP_VAR ~26 ] OP2[ , ->66 ]
+         64*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~27 ]      OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435321) '..' ]
+         65*       < 52> BOOL                                              RES[  IS_TMP_VAR ~26 ]      OP1[  IS_TMP_VAR ~27 ]
+         66*       < 52> BOOL                                              RES[  IS_TMP_VAR ~25 ]      OP1[  IS_TMP_VAR ~26 ]
+         67*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~25 ] OP2[ , ->70 ]
+   47    68*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         69*       < 26> ASSIGN_OP                    .=               8           OP1[  IS_CV !4 ] OP2[ ,  IS_CONST (268435312) '%2F' ]
+   50    70*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         71*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_CV !4 ] OP2[  IS_UNUSED  ]
+         72*       < 62> RETURN                                                    OP1[  IS_CV !4 ]
+   51    73*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         74*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         75*       < 62> RETURN                                                    OP1[  IS_CONST (268435301) null ]
+
+End of function removedotsegments
+
+Function resolve:
+[+]Function Source Class Name: GuzzleHttp\Psr7\UriResolver
+[*]Start of arg_info extract:
+[*]arg_info num_args:2
+[*]Function return type:Psr\Http\Message\UriInterface
+
+[*]ArgInfoNo**0**
+[*]name:base
+[*]type:Psr\Http\Message\UriInterface
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:rel
+[*]type:Psr\Http\Message\UriInterface
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\guzzlehttp\psr7\src\UriResolver.php
+function name:  resolve
+number of ops:  156
+compiled vars:  !0 = $base, !1 = $rel, !2 = $targetAuthority, !3 = $targetPath, !4 = $targetQuery, !5 = $lastSlashPos
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   58     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 63> RECV                                              RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ]
+   60     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       < 51> CAST                                          6   RES[  IS_TMP_VAR ~6 ]       OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+          4*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~7 ]       OP1[  IS_TMP_VAR ~6 ] OP2[ ,  IS_CONST (268435368) '' ]
+          5*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~7 ] OP2[ , ->9 ]
+   62     6*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          7*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          8*       < 62> RETURN                                                    OP1[  IS_CV !0 ]
+   65     9*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         10*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435357) 'getScheme' ]
+         11*       < 60> DO_FCALL                                      0   RES[  IS_VAR $8 ]       OP1[  IS_UNUSED  ]
+         12*       < 19> IS_NOT_EQUAL                                      RES[  IS_TMP_VAR ~9 ]       OP1[  IS_VAR $8 ] OP2[ ,  IS_CONST (268435355) '' ]
+         13*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~9 ] OP2[ , ->25 ]
+   66    14*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         15*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435350) 'withPath' ]
+         16*       <113> INIT_STATIC_METHOD_CALL      self                         OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435350) 'removeDotSegments' ]
+         17*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435350) 'getPath' ]
+         18*       < 60> DO_FCALL                                      0   RES[  IS_VAR $10 ]      OP1[  IS_UNUSED  ]
+         19*       <117> SEND_VAR                                                  OP1[  IS_VAR $10 ] OP2[  IS_UNUSED  ]
+         20*       < 60> DO_FCALL                                      0   RES[  IS_VAR $11 ]      OP1[  IS_UNUSED  ]
+         21*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $11 ] OP2[  IS_UNUSED  ]
+         22*       < 60> DO_FCALL                                      0   RES[  IS_VAR $12 ]      OP1[  IS_UNUSED  ]
+         23*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_VAR $12 ] OP2[  IS_UNUSED  ]
+         24*       < 62> RETURN                                                    OP1[  IS_VAR $12 ]
+   69    25*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         26*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435334) 'getAuthority' ]
+         27*       < 60> DO_FCALL                                      0   RES[  IS_VAR $13 ]      OP1[  IS_UNUSED  ]
+         28*       < 19> IS_NOT_EQUAL                                      RES[  IS_TMP_VAR ~14 ]      OP1[  IS_VAR $13 ] OP2[ ,  IS_CONST (268435332) '' ]
+         29*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~14 ] OP2[ , ->46 ]
+   70    30*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         31*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435327) 'getAuthority' ]
+         32*       < 60> DO_FCALL                                      0   RES[  IS_VAR $15 ]      OP1[  IS_UNUSED  ]
+         33*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_VAR $15 ]
+   71    34*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         35*       <113> INIT_STATIC_METHOD_CALL      self                         OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435321) 'removeDotSegments' ]
+         36*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435321) 'getPath' ]
+         37*       < 60> DO_FCALL                                      0   RES[  IS_VAR $17 ]      OP1[  IS_UNUSED  ]
+         38*       <117> SEND_VAR                                                  OP1[  IS_VAR $17 ] OP2[  IS_UNUSED  ]
+         39*       < 60> DO_FCALL                                      0   RES[  IS_VAR $18 ]      OP1[  IS_UNUSED  ]
+         40*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_VAR $18 ]
+   72    41*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         42*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435311) 'getQuery' ]
+         43*       < 60> DO_FCALL                                      0   RES[  IS_VAR $20 ]      OP1[  IS_UNUSED  ]
+         44*       < 22> ASSIGN                                                    OP1[  IS_CV !4 ] OP2[ ,  IS_VAR $20 ]
+         45*       < 42> JMP                                                       OP1[ ->136 ]
+   74    46*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         47*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435303) 'getAuthority' ]
+         48*       < 60> DO_FCALL                                      0   RES[  IS_VAR $22 ]      OP1[  IS_UNUSED  ]
+         49*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_VAR $22 ]
+   75    50*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         51*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435297) 'getPath' ]
+         52*       < 60> DO_FCALL                                      0   RES[  IS_VAR $24 ]      OP1[  IS_UNUSED  ]
+         53*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~25 ]      OP1[  IS_VAR $24 ] OP2[ ,  IS_CONST (268435295) '' ]
+         54*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~25 ] OP2[ , ->73 ]
+   76    55*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         56*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435290) 'getPath' ]
+         57*       < 60> DO_FCALL                                      0   RES[  IS_VAR $26 ]      OP1[  IS_UNUSED  ]
+         58*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_VAR $26 ]
+   77    59*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         60*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435284) 'getQuery' ]
+         61*       < 60> DO_FCALL                                      0   RES[  IS_VAR $28 ]      OP1[  IS_UNUSED  ]
+         62*       < 19> IS_NOT_EQUAL                                      RES[  IS_TMP_VAR ~29 ]      OP1[  IS_VAR $28 ] OP2[ ,  IS_CONST (268435282) '' ]
+         63*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~29 ] OP2[ , ->68 ]
+         64*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435279) 'getQuery' ]
+         65*       < 60> DO_FCALL                                      0   RES[  IS_VAR $30 ]      OP1[  IS_UNUSED  ]
+         66*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~31 ]      OP1[  IS_VAR $30 ]
+         67*       < 42> JMP                                                       OP1[ ->71 ]
+         68*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435273) 'getQuery' ]
+         69*       < 60> DO_FCALL                                      0   RES[  IS_VAR $32 ]      OP1[  IS_UNUSED  ]
+         70*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~31 ]      OP1[  IS_VAR $32 ]
+         71*       < 22> ASSIGN                                                    OP1[  IS_CV !4 ] OP2[ ,  IS_TMP_VAR ~31 ]
+         72*       < 42> JMP                                                       OP1[ ->136 ]
+   79    73*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         74*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435263) 'getPath' ]
+         75*       < 60> DO_FCALL                                      0   RES[  IS_VAR $34 ]      OP1[  IS_UNUSED  ]
+         76*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~35 ]      OP1[  IS_VAR $34 ] OP2[ ,  IS_CONST (268435261) 0 ]
+         77*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~36 ]      OP1[  IS_TMP_VAR ~35 ] OP2[ ,  IS_CONST (268435260) '%2F' ]
+         78*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~36 ] OP2[ , ->84 ]
+   80    79*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         80*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435255) 'getPath' ]
+         81*       < 60> DO_FCALL                                      0   RES[  IS_VAR $37 ]      OP1[  IS_UNUSED  ]
+         82*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_VAR $37 ]
+         83*       < 42> JMP                                                       OP1[ ->127 ]
+   82    84*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         85*       < 19> IS_NOT_EQUAL                                      RES[  IS_TMP_VAR ~39 ]      OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435247) '' ]
+         86*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~39 ]      OP1[  IS_TMP_VAR ~39 ] OP2[ , ->91 ]
+         87*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435244) 'getPath' ]
+         88*       < 60> DO_FCALL                                      0   RES[  IS_VAR $40 ]      OP1[  IS_UNUSED  ]
+         89*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~41 ]      OP1[  IS_VAR $40 ] OP2[ ,  IS_CONST (268435242) '' ]
+         90*       < 52> BOOL                                              RES[  IS_TMP_VAR ~39 ]      OP1[  IS_TMP_VAR ~41 ]
+         91*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~39 ] OP2[ , ->98 ]
+   83    92*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         93*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435235) 'getPath' ]
+         94*       < 60> DO_FCALL                                      0   RES[  IS_VAR $42 ]      OP1[  IS_UNUSED  ]
+         95*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~43 ]      OP1[  IS_CONST (268435233) '%2F' ] OP2[ ,  IS_VAR $42 ]
+         96*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_TMP_VAR ~43 ]
+         97*       < 42> JMP                                                       OP1[ ->127 ]
+   85    98*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         99*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435226) 'GuzzleHttp%5CPsr7%5Cstrrpos' ]
+        100*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435227) 'getPath' ]
+        101*       < 60> DO_FCALL                                      0   RES[  IS_VAR $45 ]      OP1[  IS_UNUSED  ]
+        102*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $45 ] OP2[  IS_UNUSED  ]
+        103*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435223) '%2F' ] OP2[  IS_UNUSED  ]
+        104*       < 60> DO_FCALL                                      0   RES[  IS_VAR $46 ]      OP1[  IS_UNUSED  ]
+        105*       < 22> ASSIGN                                                    OP1[  IS_CV !5 ] OP2[ ,  IS_VAR $46 ]
+   86   106*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        107*       <123> TYPE_CHECK                                    4   RES[  IS_TMP_VAR ~48 ]      OP1[  IS_CV !5 ] OP2[  IS_UNUSED  ]
+        108*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~48 ] OP2[ , ->114 ]
+   87   109*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        110*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435210) 'getPath' ]
+        111*       < 60> DO_FCALL                                      0   RES[  IS_VAR $49 ]      OP1[  IS_UNUSED  ]
+        112*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_VAR $49 ]
+        113*       < 42> JMP                                                       OP1[ ->127 ]
+   89   114*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        115*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435202) 'GuzzleHttp%5CPsr7%5Csubstr' ]
+        116*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435203) 'getPath' ]
+        117*       < 60> DO_FCALL                                      0   RES[  IS_VAR $51 ]      OP1[  IS_UNUSED  ]
+        118*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $51 ] OP2[  IS_UNUSED  ]
+        119*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435199) 0 ] OP2[  IS_UNUSED  ]
+        120*       <  1> ADD                                               RES[  IS_TMP_VAR ~52 ]      OP1[  IS_CV !5 ] OP2[ ,  IS_CONST (268435198) 1 ]
+        121*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~52 ] OP2[  IS_UNUSED  ]
+        122*       < 60> DO_FCALL                                      0   RES[  IS_VAR $53 ]      OP1[  IS_UNUSED  ]
+        123*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435193) 'getPath' ]
+        124*       < 60> DO_FCALL                                      0   RES[  IS_VAR $54 ]      OP1[  IS_UNUSED  ]
+        125*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~55 ]      OP1[  IS_VAR $53 ] OP2[ ,  IS_VAR $54 ]
+        126*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_TMP_VAR ~55 ]
+   93   127*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        128*       <113> INIT_STATIC_METHOD_CALL      self                         OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435185) 'removeDotSegments' ]
+        129*       <117> SEND_VAR                                                  OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+        130*       < 60> DO_FCALL                                      0   RES[  IS_VAR $57 ]      OP1[  IS_UNUSED  ]
+        131*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_VAR $57 ]
+   94   132*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        133*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435177) 'getQuery' ]
+        134*       < 60> DO_FCALL                                      0   RES[  IS_VAR $59 ]      OP1[  IS_UNUSED  ]
+        135*       < 22> ASSIGN                                                    OP1[  IS_CV !4 ] OP2[ ,  IS_VAR $59 ]
+   98   136*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        137*       < 68> NEW                                               RES[  IS_VAR $61 ]      OP1[ 'GuzzleHttp%5CPsr7%5CUri' ]
+        138*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435171) 'GuzzleHttp%5CPsr7%5CUri' ] OP2[ ,  IS_CONST (268435173) 'composeComponents' ]
+   99   139*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435173) 'getScheme' ]
+        140*       < 60> DO_FCALL                                      0   RES[  IS_VAR $62 ]      OP1[  IS_UNUSED  ]
+        141*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $62 ] OP2[  IS_UNUSED  ]
+        142*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+        143*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+        144*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !4 ] OP2[  IS_UNUSED  ]
+  103   145*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435163) 'getFragment' ]
+        146*       < 60> DO_FCALL                                      0   RES[  IS_VAR $63 ]      OP1[  IS_UNUSED  ]
+        147*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $63 ] OP2[  IS_UNUSED  ]
+        148*       < 60> DO_FCALL                                      0   RES[  IS_VAR $64 ]      OP1[  IS_UNUSED  ]
+        149*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $64 ] OP2[  IS_UNUSED  ]
+        150*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+        151*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_VAR $61 ] OP2[  IS_UNUSED  ]
+        152*       < 62> RETURN                                                    OP1[  IS_VAR $61 ]
+  105   153*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        154*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        155*       < 62> RETURN                                                    OP1[  IS_CONST (268435145) null ]
+
+End of function resolve
+
+Function relativize:
+[+]Function Source Class Name: GuzzleHttp\Psr7\UriResolver
+[*]Start of arg_info extract:
+[*]arg_info num_args:2
+[*]Function return type:Psr\Http\Message\UriInterface
+
+[*]ArgInfoNo**0**
+[*]name:base
+[*]type:Psr\Http\Message\UriInterface
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:target
+[*]type:Psr\Http\Message\UriInterface
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\guzzlehttp\psr7\src\UriResolver.php
+function name:  relativize
+number of ops:  135
+compiled vars:  !0 = $base, !1 = $target, !2 = $emptyPathUri, !3 = $segments, !4 = $lastSegment
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  128     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 63> RECV                                              RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ]
+  130     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435376) 'getScheme' ]
+          4*       < 60> DO_FCALL                                      0   RES[  IS_VAR $5 ]       OP1[  IS_UNUSED  ]
+          5*       < 17> IS_NOT_IDENTICAL                                  RES[  IS_TMP_VAR ~6 ]       OP1[  IS_VAR $5 ] OP2[ ,  IS_CONST (268435374) '' ]
+          6*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~6 ]       OP1[  IS_TMP_VAR ~6 ] OP2[ , ->23 ]
+  131     7*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435371) 'getScheme' ]
+          8*       < 60> DO_FCALL                                      0   RES[  IS_VAR $7 ]       OP1[  IS_UNUSED  ]
+          9*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435369) 'getScheme' ]
+         10*       < 60> DO_FCALL                                      0   RES[  IS_VAR $8 ]       OP1[  IS_UNUSED  ]
+         11*       < 17> IS_NOT_IDENTICAL                                  RES[  IS_TMP_VAR ~9 ]       OP1[  IS_VAR $7 ] OP2[ ,  IS_VAR $8 ]
+         12*       < 47> JMPNZ_EX                                          RES[  IS_TMP_VAR ~9 ]       OP1[  IS_TMP_VAR ~9 ] OP2[ , ->22 ]
+         13*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435363) 'getAuthority' ]
+         14*       < 60> DO_FCALL                                      0   RES[  IS_VAR $10 ]      OP1[  IS_UNUSED  ]
+         15*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~11 ]      OP1[  IS_VAR $10 ] OP2[ ,  IS_CONST (268435361) '' ]
+         16*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~11 ]      OP1[  IS_TMP_VAR ~11 ] OP2[ , ->21 ]
+         17*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435358) 'getAuthority' ]
+         18*       < 60> DO_FCALL                                      0   RES[  IS_VAR $12 ]      OP1[  IS_UNUSED  ]
+         19*       < 17> IS_NOT_IDENTICAL                                  RES[  IS_TMP_VAR ~13 ]      OP1[  IS_VAR $12 ] OP2[ ,  IS_CONST (268435356) '' ]
+         20*       < 52> BOOL                                              RES[  IS_TMP_VAR ~11 ]      OP1[  IS_TMP_VAR ~13 ]
+         21*       < 52> BOOL                                              RES[  IS_TMP_VAR ~9 ]       OP1[  IS_TMP_VAR ~11 ]
+         22*       < 52> BOOL                                              RES[  IS_TMP_VAR ~6 ]       OP1[  IS_TMP_VAR ~9 ]
+         23*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~6 ] OP2[ , ->27 ]
+  133    24*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         25*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         26*       < 62> RETURN                                                    OP1[  IS_CV !1 ]
+  136    27*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         28*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435339) 'GuzzleHttp%5CPsr7%5CUri' ] OP2[ ,  IS_CONST (268435341) 'isRelativePathReference' ]
+         29*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         30*       < 60> DO_FCALL                                      0   RES[  IS_VAR $14 ]      OP1[  IS_UNUSED  ]
+         31*       < 43> JMPZ                                                      OP1[  IS_VAR $14 ] OP2[ , ->35 ]
+  140    32*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         33*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         34*       < 62> RETURN                                                    OP1[  IS_CV !1 ]
+  143    35*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         36*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435327) 'getAuthority' ]
+         37*       < 60> DO_FCALL                                      0   RES[  IS_VAR $15 ]      OP1[  IS_UNUSED  ]
+         38*       < 17> IS_NOT_IDENTICAL                                  RES[  IS_TMP_VAR ~16 ]      OP1[  IS_VAR $15 ] OP2[ ,  IS_CONST (268435325) '' ]
+         39*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~16 ]      OP1[  IS_TMP_VAR ~16 ] OP2[ , ->46 ]
+         40*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435322) 'getAuthority' ]
+         41*       < 60> DO_FCALL                                      0   RES[  IS_VAR $17 ]      OP1[  IS_UNUSED  ]
+         42*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435320) 'getAuthority' ]
+         43*       < 60> DO_FCALL                                      0   RES[  IS_VAR $18 ]      OP1[  IS_UNUSED  ]
+         44*       < 17> IS_NOT_IDENTICAL                                  RES[  IS_TMP_VAR ~19 ]      OP1[  IS_VAR $17 ] OP2[ ,  IS_VAR $18 ]
+         45*       < 52> BOOL                                              RES[  IS_TMP_VAR ~16 ]      OP1[  IS_TMP_VAR ~19 ]
+         46*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~16 ] OP2[ , ->53 ]
+  144    47*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         48*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435310) 'withScheme' ]
+         49*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435310) '' ] OP2[  IS_UNUSED  ]
+         50*       < 60> DO_FCALL                                      0   RES[  IS_VAR $20 ]      OP1[  IS_UNUSED  ]
+         51*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_VAR $20 ] OP2[  IS_UNUSED  ]
+         52*       < 62> RETURN                                                    OP1[  IS_VAR $20 ]
+  150    53*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         54*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435301) 'withScheme' ]
+         55*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435301) '' ] OP2[  IS_UNUSED  ]
+         56*       < 60> DO_FCALL                                      0   RES[  IS_VAR $21 ]      OP1[  IS_UNUSED  ]
+         57*       <112> INIT_METHOD_CALL                                          OP1[  IS_VAR $21 ] OP2[ ,  IS_CONST (268435298) 'withPath' ]
+         58*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435298) '' ] OP2[  IS_UNUSED  ]
+         59*       < 60> DO_FCALL                                      0   RES[  IS_VAR $22 ]      OP1[  IS_UNUSED  ]
+         60*       <112> INIT_METHOD_CALL                                          OP1[  IS_VAR $22 ] OP2[ ,  IS_CONST (268435295) 'withUserInfo' ]
+         61*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435295) '' ] OP2[  IS_UNUSED  ]
+         62*       < 60> DO_FCALL                                      0   RES[  IS_VAR $23 ]      OP1[  IS_UNUSED  ]
+         63*       <112> INIT_METHOD_CALL                                          OP1[  IS_VAR $23 ] OP2[ ,  IS_CONST (268435292) 'withPort' ]
+         64*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435292) null ] OP2[  IS_UNUSED  ]
+         65*       < 60> DO_FCALL                                      0   RES[  IS_VAR $24 ]      OP1[  IS_UNUSED  ]
+         66*       <112> INIT_METHOD_CALL                                          OP1[  IS_VAR $24 ] OP2[ ,  IS_CONST (268435289) 'withHost' ]
+         67*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435289) '' ] OP2[  IS_UNUSED  ]
+         68*       < 60> DO_FCALL                                      0   RES[  IS_VAR $25 ]      OP1[  IS_UNUSED  ]
+         69*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_VAR $25 ]
+  152    70*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         71*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435282) 'getPath' ]
+         72*       < 60> DO_FCALL                                      0   RES[  IS_VAR $27 ]      OP1[  IS_UNUSED  ]
+         73*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435280) 'getPath' ]
+         74*       < 60> DO_FCALL                                      0   RES[  IS_VAR $28 ]      OP1[  IS_UNUSED  ]
+         75*       < 17> IS_NOT_IDENTICAL                                  RES[  IS_TMP_VAR ~29 ]      OP1[  IS_VAR $27 ] OP2[ ,  IS_VAR $28 ]
+         76*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~29 ] OP2[ , ->87 ]
+  153    77*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         78*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435272) 'withPath' ]
+         79*       <113> INIT_STATIC_METHOD_CALL      self                         OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435272) 'getRelativePath' ]
+         80*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         81*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         82*       < 60> DO_FCALL                                      0   RES[  IS_VAR $30 ]      OP1[  IS_UNUSED  ]
+         83*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $30 ] OP2[  IS_UNUSED  ]
+         84*       < 60> DO_FCALL                                      0   RES[  IS_VAR $31 ]      OP1[  IS_UNUSED  ]
+         85*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_VAR $31 ] OP2[  IS_UNUSED  ]
+         86*       < 62> RETURN                                                    OP1[  IS_VAR $31 ]
+  156    87*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         88*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435256) 'getQuery' ]
+         89*       < 60> DO_FCALL                                      0   RES[  IS_VAR $32 ]      OP1[  IS_UNUSED  ]
+         90*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435254) 'getQuery' ]
+         91*       < 60> DO_FCALL                                      0   RES[  IS_VAR $33 ]      OP1[  IS_UNUSED  ]
+         92*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~34 ]      OP1[  IS_VAR $32 ] OP2[ ,  IS_VAR $33 ]
+         93*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~34 ] OP2[ , ->100 ]
+  158    94*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         95*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435246) 'withQuery' ]
+         96*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435246) '' ] OP2[  IS_UNUSED  ]
+         97*       < 60> DO_FCALL                                      0   RES[  IS_VAR $35 ]      OP1[  IS_UNUSED  ]
+         98*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_VAR $35 ] OP2[  IS_UNUSED  ]
+         99*       < 62> RETURN                                                    OP1[  IS_VAR $35 ]
+  163   100*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        101*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435237) 'getQuery' ]
+        102*       < 60> DO_FCALL                                      0   RES[  IS_VAR $36 ]      OP1[  IS_UNUSED  ]
+        103*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~37 ]      OP1[  IS_VAR $36 ] OP2[ ,  IS_CONST (268435235) '' ]
+        104*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~37 ] OP2[ , ->129 ]
+  164   105*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        106*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435230) 'GuzzleHttp%5CPsr7%5Cexplode' ]
+        107*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435231) '%2F' ] OP2[  IS_UNUSED  ]
+        108*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435230) 'getPath' ]
+        109*       < 60> DO_FCALL                                      0   RES[  IS_VAR $38 ]      OP1[  IS_UNUSED  ]
+        110*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $38 ] OP2[  IS_UNUSED  ]
+        111*       < 60> DO_FCALL                                      0   RES[  IS_VAR $39 ]      OP1[  IS_UNUSED  ]
+        112*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_VAR $39 ]
+  166   113*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        114*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435220) 'GuzzleHttp%5CPsr7%5Cend' ]
+        115*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+        116*       < 60> DO_FCALL                                      0   RES[  IS_VAR $41 ]      OP1[  IS_UNUSED  ]
+        117*       < 22> ASSIGN                                                    OP1[  IS_CV !4 ] OP2[ ,  IS_VAR $41 ]
+  168   118*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        119*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435213) 'withPath' ]
+        120*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~43 ]      OP1[  IS_CV !4 ] OP2[ ,  IS_CONST (268435213) '' ]
+        121*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~43 ] OP2[ , ->124 ]
+        122*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~44 ]      OP1[  IS_CONST (268435210) '.%2F' ]
+        123*       < 42> JMP                                                       OP1[ ->125 ]
+        124*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~44 ]      OP1[  IS_CV !4 ]
+        125*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~44 ] OP2[  IS_UNUSED  ]
+        126*       < 60> DO_FCALL                                      0   RES[  IS_VAR $45 ]      OP1[  IS_UNUSED  ]
+        127*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_VAR $45 ] OP2[  IS_UNUSED  ]
+        128*       < 62> RETURN                                                    OP1[  IS_VAR $45 ]
+  171   129*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        130*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+        131*       < 62> RETURN                                                    OP1[  IS_CV !2 ]
+  172   132*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        133*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        134*       < 62> RETURN                                                    OP1[  IS_CONST (268435187) null ]
+
+End of function relativize
+
+Function getrelativepath:
+[+]Function Source Class Name: GuzzleHttp\Psr7\UriResolver
+[*]Start of arg_info extract:
+[*]arg_info num_args:2
+[*]Function return type:string
+
+[*]ArgInfoNo**0**
+[*]name:base
+[*]type:Psr\Http\Message\UriInterface
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:target
+[*]type:Psr\Http\Message\UriInterface
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\guzzlehttp\psr7\src\UriResolver.php
+function name:  getRelativePath
+number of ops:  116
+compiled vars:  !0 = $base, !1 = $target, !2 = $sourceSegments, !3 = $targetSegments, !4 = $targetLastSegment, !5 = $segment, !6 = $i, !7 = $relativePath
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  174     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 63> RECV                                              RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ]
+  176     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435398) 'GuzzleHttp%5CPsr7%5Cexplode' ]
+          4*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435399) '%2F' ] OP2[  IS_UNUSED  ]
+          5*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435398) 'getPath' ]
+          6*       < 60> DO_FCALL                                      0   RES[  IS_VAR $8 ]       OP1[  IS_UNUSED  ]
+          7*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $8 ] OP2[  IS_UNUSED  ]
+          8*       < 60> DO_FCALL                                      0   RES[  IS_VAR $9 ]       OP1[  IS_UNUSED  ]
+          9*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_VAR $9 ]
+  177    10*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         11*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435388) 'GuzzleHttp%5CPsr7%5Cexplode' ]
+         12*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435389) '%2F' ] OP2[  IS_UNUSED  ]
+         13*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435388) 'getPath' ]
+         14*       < 60> DO_FCALL                                      0   RES[  IS_VAR $11 ]      OP1[  IS_UNUSED  ]
+         15*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $11 ] OP2[  IS_UNUSED  ]
+         16*       < 60> DO_FCALL                                      0   RES[  IS_VAR $12 ]      OP1[  IS_UNUSED  ]
+         17*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_VAR $12 ]
+  178    18*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         19*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435378) 'GuzzleHttp%5CPsr7%5Carray_pop' ]
+         20*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         21*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  179    22*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         23*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435373) 'GuzzleHttp%5CPsr7%5Carray_pop' ]
+         24*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         25*       < 60> DO_FCALL                                      0   RES[  IS_VAR $15 ]      OP1[  IS_UNUSED  ]
+         26*       < 22> ASSIGN                                                    OP1[  IS_CV !4 ] OP2[ ,  IS_VAR $15 ]
+  180    27*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         28*       < 77> FE_RESET_R                                        RES[  IS_VAR $17 ]      OP1[  IS_CV !2 ] OP2[ , ->46 ]
+         29*       < 78> FE_FETCH_R                                        RES[  IS_TMP_VAR ~18 ]      OP1[  IS_VAR $17 ] OP2[ ,  IS_CV !5 ] EXT_JMP_REL[ , ->46 ]
+         30*       < 22> ASSIGN                                                    OP1[  IS_CV !6 ] OP2[ ,  IS_TMP_VAR ~18 ]
+  181    31*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         32*       <115> ISSET_ISEMPTY_DIM_OBJ                         0   RES[  IS_TMP_VAR ~20 ]      OP1[  IS_CV !3 ] OP2[ ,  IS_CV !6 ]
+         33*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~20 ]      OP1[  IS_TMP_VAR ~20 ] OP2[ , ->37 ]
+         34*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~21 ]      OP1[  IS_CV !3 ] OP2[ ,  IS_CV !6 ]
+         35*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~22 ]      OP1[  IS_CV !5 ] OP2[ ,  IS_TMP_VAR ~21 ]
+         36*       < 52> BOOL                                              RES[  IS_TMP_VAR ~20 ]      OP1[  IS_TMP_VAR ~22 ]
+         37*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~20 ] OP2[ , ->43 ]
+  182    38*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         39*       < 75> UNSET_DIM                                                 OP1[  IS_CV !2 ] OP2[ ,  IS_CV !6 ]
+         40*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         41*       < 75> UNSET_DIM                                                 OP1[  IS_CV !3 ] OP2[ ,  IS_CV !6 ]
+         42*       < 42> JMP                                                       OP1[ ->45 ]
+  184    43*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         44*       < 42> JMP                                                       OP1[ ->46 ]
+  180    45*       < 42> JMP                                                       OP1[ ->29 ]
+         46*       <127> FE_FREE                                                   OP1[  IS_VAR $17 ] OP2[  IS_UNUSED  ]
+  187    47*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         48*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         49*       <137> OP_DATA                                                   OP1[  IS_CV !4 ] OP2[  IS_UNUSED  ]
+  188    50*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         51*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435320) 'GuzzleHttp%5CPsr7%5Cstr_repeat' ]
+         52*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435321) '..%2F' ] OP2[  IS_UNUSED  ]
+         53*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435320) 'GuzzleHttp%5CPsr7%5Ccount' ]
+         54*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         55*       < 60> DO_FCALL                                      0   RES[  IS_VAR $24 ]      OP1[  IS_UNUSED  ]
+         56*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $24 ] OP2[  IS_UNUSED  ]
+         57*       < 60> DO_FCALL                                      0   RES[  IS_VAR $25 ]      OP1[  IS_UNUSED  ]
+         58*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435313) 'GuzzleHttp%5CPsr7%5Cimplode' ]
+         59*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435314) '%2F' ] OP2[  IS_UNUSED  ]
+         60*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         61*       < 60> DO_FCALL                                      0   RES[  IS_VAR $26 ]      OP1[  IS_UNUSED  ]
+         62*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~27 ]      OP1[  IS_VAR $25 ] OP2[ ,  IS_VAR $26 ]
+         63*       < 22> ASSIGN                                                    OP1[  IS_CV !7 ] OP2[ ,  IS_TMP_VAR ~27 ]
+  193    64*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         65*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~29 ]      OP1[  IS_CV !7 ] OP2[ ,  IS_CONST (268435303) '' ]
+         66*       < 47> JMPNZ_EX                                          RES[  IS_TMP_VAR ~29 ]      OP1[  IS_TMP_VAR ~29 ] OP2[ , ->81 ]
+         67*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435300) 'GuzzleHttp%5CPsr7%5Cstrpos' ]
+         68*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         69*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435299) 'GuzzleHttp%5CPsr7%5Cexplode' ]
+         70*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435300) '%2F' ] OP2[  IS_UNUSED  ]
+         71*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !7 ] OP2[  IS_UNUSED  ]
+         72*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435297) 2 ] OP2[  IS_UNUSED  ]
+         73*       < 60> DO_FCALL                                      0   RES[  IS_VAR $30 ]      OP1[  IS_UNUSED  ]
+         74*       <156> SEPARATE                                          RES[  IS_VAR $30 ]      OP1[  IS_VAR $30 ]
+         75*       < 93> FETCH_DIM_FUNC_ARG                                RES[  IS_VAR $31 ]      OP1[  IS_VAR $30 ] OP2[ ,  IS_CONST (268435292) 0 ]
+         76*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $31 ] OP2[  IS_UNUSED  ]
+         77*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435289) '%3A' ] OP2[  IS_UNUSED  ]
+         78*       < 60> DO_FCALL                                      0   RES[  IS_VAR $32 ]      OP1[  IS_UNUSED  ]
+         79*       <123> TYPE_CHECK                                  1018   RES[  IS_TMP_VAR ~33 ]      OP1[  IS_VAR $32 ] OP2[  IS_UNUSED  ]
+         80*       < 52> BOOL                                              RES[  IS_TMP_VAR ~29 ]      OP1[  IS_TMP_VAR ~33 ]
+         81*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~29 ] OP2[ , ->87 ]
+  194    82*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         83*       <  0> NOP                                                      
+         84*       < 53> FAST_CONCAT                                       RES[  IS_TMP_VAR ~34 ]      OP1[  IS_CONST (268435276) '.%2F' ] OP2[ ,  IS_CV !7 ]
+         85*       < 22> ASSIGN                                                    OP1[  IS_CV !7 ] OP2[ ,  IS_TMP_VAR ~34 ]
+         86*       < 42> JMP                                                       OP1[ ->110 ]
+  195    87*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         88*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~36 ]      OP1[  IS_CV !7 ] OP2[ ,  IS_CONST (268435269) 0 ]
+         89*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~37 ]      OP1[  IS_TMP_VAR ~36 ] OP2[ ,  IS_CONST (268435268) '%2F' ]
+         90*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~37 ] OP2[ , ->110 ]
+  196    91*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         92*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435263) 'getAuthority' ]
+         93*       < 60> DO_FCALL                                      0   RES[  IS_VAR $38 ]      OP1[  IS_UNUSED  ]
+         94*       < 19> IS_NOT_EQUAL                                      RES[  IS_TMP_VAR ~39 ]      OP1[  IS_VAR $38 ] OP2[ ,  IS_CONST (268435261) '' ]
+         95*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~39 ]      OP1[  IS_TMP_VAR ~39 ] OP2[ , ->100 ]
+         96*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435258) 'getPath' ]
+         97*       < 60> DO_FCALL                                      0   RES[  IS_VAR $40 ]      OP1[  IS_UNUSED  ]
+         98*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~41 ]      OP1[  IS_VAR $40 ] OP2[ ,  IS_CONST (268435256) '' ]
+         99*       < 52> BOOL                                              RES[  IS_TMP_VAR ~39 ]      OP1[  IS_TMP_VAR ~41 ]
+        100*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~39 ] OP2[ , ->106 ]
+  198   101*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        102*       <  0> NOP                                                      
+        103*       < 53> FAST_CONCAT                                       RES[  IS_TMP_VAR ~42 ]      OP1[  IS_CONST (268435247) '.' ] OP2[ ,  IS_CV !7 ]
+        104*       < 22> ASSIGN                                                    OP1[  IS_CV !7 ] OP2[ ,  IS_TMP_VAR ~42 ]
+        105*       < 42> JMP                                                       OP1[ ->110 ]
+  200   106*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        107*       <  0> NOP                                                      
+        108*       < 53> FAST_CONCAT                                       RES[  IS_TMP_VAR ~44 ]      OP1[  IS_CONST (268435238) '.%2F' ] OP2[ ,  IS_CV !7 ]
+        109*       < 22> ASSIGN                                                    OP1[  IS_CV !7 ] OP2[ ,  IS_TMP_VAR ~44 ]
+  204   110*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        111*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_CV !7 ] OP2[  IS_UNUSED  ]
+        112*       < 62> RETURN                                                    OP1[  IS_CV !7 ]
+  205   113*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        114*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        115*       < 62> RETURN                                                    OP1[  IS_CONST (268435225) null ]
+
+End of function getrelativepath
+
+Function __construct:
+[+]Function Source Class Name: GuzzleHttp\Psr7\UriResolver
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\guzzlehttp\psr7\src\UriResolver.php
+function name:  __construct
+number of ops:  2
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  210     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 62> RETURN                                                    OP1[  IS_CONST (268435453) null ]
+
+End of function __construct
+
+End of class GuzzleHttp\Psr7\UriResolver.
+

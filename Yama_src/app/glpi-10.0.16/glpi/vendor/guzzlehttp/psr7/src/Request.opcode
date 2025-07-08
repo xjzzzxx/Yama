@@ -1,0 +1,517 @@
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\guzzlehttp\psr7\src\Request.php
+function name:  (null)
+number of ops:  11
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+    3     0*       <  0> NOP                                                      
+    5     1*       <  0> NOP                                                      
+    7     2*       <  0> NOP                                                      
+    8     3*       <  0> NOP                                                      
+    9     4*       <  0> NOP                                                      
+   10     5*       <  0> NOP                                                      
+   20     6*       <  0> NOP                                                      
+   23     7*       <  0> NOP                                                      
+   15     8*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          9*       <144> DECLARE_CLASS                                             OP1[  IS_CONST (268435435) 'guzzlehttp%5Cpsr7%5Crequest' ] OP2[  IS_UNUSED  ]
+  158    10*       < 62> RETURN                                                    OP1[  IS_CONST (268435435) 1 ]
+
+Class GuzzleHttp\Psr7\Request:
+[+]Class Parent Name: NULL
+[+]ClassTrait ClassName: GuzzleHttp\Psr7\MessageTrait
+End Trait extract
+Start Properties extract:
+Key: method, Value: UNINIT, Type: Normal
+Key: requestTarget, Value: UNINIT, Type: Normal
+Key: uri, Value: UNINIT, Type: Normal
+End Properties extract.
+
+Function __construct:
+[+]Function Source Class Name: GuzzleHttp\Psr7\Request
+[*]Start of arg_info extract:
+[*]arg_info num_args:5
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:method
+[*]type:string
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:uri
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**2**
+[*]name:headers
+[*]type:array
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**3**
+[*]name:body
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**4**
+[*]name:version
+[*]type:string
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\guzzlehttp\psr7\src\Request.php
+function name:  __construct
+number of ops:  56
+compiled vars:  !0 = $method, !1 = $uri, !2 = $headers, !3 = $body, !4 = $version
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   35     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 63> RECV                                              RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ]
+          2*       < 64> RECV_INIT                                         RES[  IS_CV !2 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435420) <array> ]
+          3*       < 64> RECV_INIT                                         RES[  IS_CV !3 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435419) null ]
+          4*       < 64> RECV_INIT                                         RES[  IS_CV !4 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435418) '1.1' ]
+   42     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435415) 'assertMethod' ]
+          7*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          8*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+   43     9*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         10*       <138> INSTANCEOF                                        RES[  IS_TMP_VAR ~6 ]       OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435409) 'Psr%5CHttp%5CMessage%5CUriInterface' ]
+         11*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~7 ]       OP1[  IS_TMP_VAR ~6 ]
+         12*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~7 ] OP2[ , ->18 ]
+   44    13*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         14*       < 68> NEW                                               RES[  IS_VAR $8 ]       OP1[ 'GuzzleHttp%5CPsr7%5CUri' ]
+         15*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         16*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         17*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_VAR $8 ]
+   47    18*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         19*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435396) 'GuzzleHttp%5CPsr7%5Cstrtoupper' ]
+         20*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         21*       < 60> DO_FCALL                                      0   RES[  IS_VAR $12 ]      OP1[  IS_UNUSED  ]
+         22*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435389) 'method' ]
+         23*       <137> OP_DATA                                                   OP1[  IS_VAR $12 ] OP2[  IS_UNUSED  ]
+   48    24*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         25*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435387) 'uri' ]
+         26*       <137> OP_DATA                                                   OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+   49    27*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         28*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435382) 'setHeaders' ]
+         29*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         30*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+   50    31*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         32*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435376) 'protocol' ]
+         33*       <137> OP_DATA                                                   OP1[  IS_CV !4 ] OP2[  IS_UNUSED  ]
+   52    34*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         35*       < 91> FETCH_OBJ_IS                                      RES[  IS_TMP_VAR ~16 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435371) 'headerNames' ]
+         36*       <115> ISSET_ISEMPTY_DIM_OBJ                         0   RES[  IS_TMP_VAR ~17 ]      OP1[  IS_TMP_VAR ~16 ] OP2[ ,  IS_CONST (268435370) 'host' ]
+         37*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~18 ]      OP1[  IS_TMP_VAR ~17 ]
+         38*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~18 ] OP2[ , ->42 ]
+   53    39*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         40*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435363) 'updateHostFromUri' ]
+         41*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+   56    42*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         43*       < 17> IS_NOT_IDENTICAL                                  RES[  IS_TMP_VAR ~20 ]      OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435359) '' ]
+         44*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~20 ]      OP1[  IS_TMP_VAR ~20 ] OP2[ , ->47 ]
+         45*       <123> TYPE_CHECK                                  1020   RES[  IS_TMP_VAR ~21 ]      OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         46*       < 52> BOOL                                              RES[  IS_TMP_VAR ~20 ]      OP1[  IS_TMP_VAR ~21 ]
+         47*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~20 ] OP2[ , ->54 ]
+   57    48*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         49*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435349) 'GuzzleHttp%5CPsr7%5CUtils' ] OP2[ ,  IS_CONST (268435351) 'streamFor' ]
+         50*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         51*       < 60> DO_FCALL                                      0   RES[  IS_VAR $23 ]      OP1[  IS_UNUSED  ]
+         52*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435342) 'stream' ]
+         53*       <137> OP_DATA                                                   OP1[  IS_VAR $23 ] OP2[  IS_UNUSED  ]
+   59    54*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         55*       < 62> RETURN                                                    OP1[  IS_CONST (268435341) null ]
+
+End of function __construct
+
+Function getrequesttarget:
+[+]Function Source Class Name: GuzzleHttp\Psr7\Request
+[*]Start of arg_info extract:
+[*]arg_info num_args:0
+[*]Function return type:string
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\guzzlehttp\psr7\src\Request.php
+function name:  getRequestTarget
+number of ops:  36
+compiled vars:  !0 = $target
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   63     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~1 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435438) 'requestTarget' ]
+          2*       <123> TYPE_CHECK                                  1020   RES[  IS_TMP_VAR ~2 ]       OP1[  IS_TMP_VAR ~1 ] OP2[  IS_UNUSED  ]
+          3*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~2 ] OP2[ , ->8 ]
+   64     4*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          5*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~3 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435431) 'requestTarget' ]
+          6*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_TMP_VAR ~3 ] OP2[  IS_UNUSED  ]
+          7*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~3 ]
+   67     8*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          9*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~4 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435424) 'uri' ]
+         10*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~4 ] OP2[ ,  IS_CONST (268435423) 'getPath' ]
+         11*       < 60> DO_FCALL                                      0   RES[  IS_VAR $5 ]       OP1[  IS_UNUSED  ]
+         12*       < 22> ASSIGN                                                    OP1[  IS_CV !0 ] OP2[ ,  IS_VAR $5 ]
+   68    13*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         14*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~7 ]       OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435417) '' ]
+         15*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~7 ] OP2[ , ->18 ]
+   69    16*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         17*       < 22> ASSIGN                                                    OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435412) '%2F' ]
+   71    18*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         19*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~9 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435409) 'uri' ]
+         20*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~9 ] OP2[ ,  IS_CONST (268435408) 'getQuery' ]
+         21*       < 60> DO_FCALL                                      0   RES[  IS_VAR $10 ]      OP1[  IS_UNUSED  ]
+         22*       < 19> IS_NOT_EQUAL                                      RES[  IS_TMP_VAR ~11 ]      OP1[  IS_VAR $10 ] OP2[ ,  IS_CONST (268435406) '' ]
+         23*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~11 ] OP2[ , ->30 ]
+   72    24*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         25*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~12 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435401) 'uri' ]
+         26*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~12 ] OP2[ ,  IS_CONST (268435400) 'getQuery' ]
+         27*       < 60> DO_FCALL                                      0   RES[  IS_VAR $13 ]      OP1[  IS_UNUSED  ]
+         28*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~14 ]      OP1[  IS_CONST (268435398) '%3F' ] OP2[ ,  IS_VAR $13 ]
+         29*       < 26> ASSIGN_OP                    .=               8           OP1[  IS_CV !0 ] OP2[ ,  IS_TMP_VAR ~14 ]
+   75    30*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         31*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         32*       < 62> RETURN                                                    OP1[  IS_CV !0 ]
+   76    33*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         34*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         35*       < 62> RETURN                                                    OP1[  IS_CONST (268435385) null ]
+
+End of function getrequesttarget
+
+Function withrequesttarget:
+[+]Function Source Class Name: GuzzleHttp\Psr7\Request
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:Psr\Http\Message\RequestInterface
+
+[*]ArgInfoNo**0**
+[*]name:requestTarget
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\guzzlehttp\psr7\src\Request.php
+function name:  withRequestTarget
+number of ops:  25
+compiled vars:  !0 = $requestTarget, !1 = $new
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   78     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+   80     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435443) 'GuzzleHttp%5CPsr7%5Cpreg_match' ]
+          3*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435444) '%23%5Cs%23' ] OP2[  IS_UNUSED  ]
+          4*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          5*       < 60> DO_FCALL                                      0   RES[  IS_VAR $2 ]       OP1[  IS_UNUSED  ]
+          6*       < 43> JMPZ                                                      OP1[  IS_VAR $2 ] OP2[ , ->12 ]
+   81     7*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          8*       < 68> NEW                                               RES[  IS_VAR $3 ]       OP1[ 'InvalidArgumentException' ]
+   82     9*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435435) 'Invalid+request+target+provided%3B+cannot+contain+whitespace' ] OP2[  IS_UNUSED  ]
+         10*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         11*       <108> THROW                                         0           OP1[  IS_VAR $3 ] OP2[  IS_UNUSED  ]
+   86    12*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         13*       <184> FETCH_THIS                                        RES[  IS_TMP_VAR ~5 ]       OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         14*       <110> CLONE                                             RES[  IS_TMP_VAR ~6 ]       OP1[  IS_TMP_VAR ~5 ] OP2[  IS_UNUSED  ]
+         15*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_TMP_VAR ~6 ]
+   87    16*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         17*       < 24> ASSIGN_OBJ                                                OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435420) 'requestTarget' ]
+         18*       <137> OP_DATA                                                   OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+   88    19*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         20*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         21*       < 62> RETURN                                                    OP1[  IS_CV !1 ]
+   89    22*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         23*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         24*       < 62> RETURN                                                    OP1[  IS_CONST (268435407) null ]
+
+End of function withrequesttarget
+
+Function getmethod:
+[+]Function Source Class Name: GuzzleHttp\Psr7\Request
+[*]Start of arg_info extract:
+[*]arg_info num_args:0
+[*]Function return type:string
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\guzzlehttp\psr7\src\Request.php
+function name:  getMethod
+number of ops:  7
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   93     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435452) 'method' ]
+          2*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_TMP_VAR ~0 ] OP2[  IS_UNUSED  ]
+          3*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~0 ]
+   94     4*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          5*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       < 62> RETURN                                                    OP1[  IS_CONST (268435443) null ]
+
+End of function getmethod
+
+Function withmethod:
+[+]Function Source Class Name: GuzzleHttp\Psr7\Request
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:Psr\Http\Message\RequestInterface
+
+[*]ArgInfoNo**0**
+[*]name:method
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\guzzlehttp\psr7\src\Request.php
+function name:  withMethod
+number of ops:  21
+compiled vars:  !0 = $method, !1 = $new
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   96     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+   98     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435445) 'assertMethod' ]
+          3*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          4*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+   99     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       <184> FETCH_THIS                                        RES[  IS_TMP_VAR ~3 ]       OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          7*       <110> CLONE                                             RES[  IS_TMP_VAR ~4 ]       OP1[  IS_TMP_VAR ~3 ] OP2[  IS_UNUSED  ]
+          8*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_TMP_VAR ~4 ]
+  100     9*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         10*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435432) 'GuzzleHttp%5CPsr7%5Cstrtoupper' ]
+         11*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         12*       < 60> DO_FCALL                                      0   RES[  IS_VAR $7 ]       OP1[  IS_UNUSED  ]
+         13*       < 24> ASSIGN_OBJ                                                OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435425) 'method' ]
+         14*       <137> OP_DATA                                                   OP1[  IS_VAR $7 ] OP2[  IS_UNUSED  ]
+  101    15*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         16*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         17*       < 62> RETURN                                                    OP1[  IS_CV !1 ]
+  102    18*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         19*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         20*       < 62> RETURN                                                    OP1[  IS_CONST (268435415) null ]
+
+End of function withmethod
+
+Function geturi:
+[+]Function Source Class Name: GuzzleHttp\Psr7\Request
+[*]Start of arg_info extract:
+[*]arg_info num_args:0
+[*]Function return type:Psr\Http\Message\UriInterface
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\guzzlehttp\psr7\src\Request.php
+function name:  getUri
+number of ops:  7
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  106     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435452) 'uri' ]
+          2*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_TMP_VAR ~0 ] OP2[  IS_UNUSED  ]
+          3*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~0 ]
+  107     4*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          5*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       < 62> RETURN                                                    OP1[  IS_CONST (268435443) null ]
+
+End of function geturi
+
+Function withuri:
+[+]Function Source Class Name: GuzzleHttp\Psr7\Request
+[*]Start of arg_info extract:
+[*]arg_info num_args:2
+[*]Function return type:Psr\Http\Message\RequestInterface
+
+[*]ArgInfoNo**0**
+[*]name:uri
+[*]type:Psr\Http\Message\UriInterface
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:preserveHost
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\guzzlehttp\psr7\src\Request.php
+function name:  withUri
+number of ops:  34
+compiled vars:  !0 = $uri, !1 = $preserveHost, !2 = $new
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  109     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 64> RECV_INIT                                         RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435446) <false> ]
+  111     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~3 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435443) 'uri' ]
+          4*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~4 ]       OP1[  IS_CV !0 ] OP2[ ,  IS_TMP_VAR ~3 ]
+          5*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~4 ] OP2[ , ->10 ]
+  112     6*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          7*       <184> FETCH_THIS                                        RES[  IS_TMP_VAR ~5 ]       OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          8*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_TMP_VAR ~5 ] OP2[  IS_UNUSED  ]
+          9*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~5 ]
+  115    10*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         11*       <184> FETCH_THIS                                        RES[  IS_TMP_VAR ~6 ]       OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         12*       <110> CLONE                                             RES[  IS_TMP_VAR ~7 ]       OP1[  IS_TMP_VAR ~6 ] OP2[  IS_UNUSED  ]
+         13*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_TMP_VAR ~7 ]
+  116    14*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         15*       < 24> ASSIGN_OBJ                                                OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435420) 'uri' ]
+         16*       <137> OP_DATA                                                   OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+  118    17*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         18*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~10 ]      OP1[  IS_CV !1 ]
+         19*       < 47> JMPNZ_EX                                          RES[  IS_TMP_VAR ~10 ]      OP1[  IS_TMP_VAR ~10 ] OP2[ , ->24 ]
+         20*       < 91> FETCH_OBJ_IS                                      RES[  IS_TMP_VAR ~11 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435411) 'headerNames' ]
+         21*       <115> ISSET_ISEMPTY_DIM_OBJ                         0   RES[  IS_TMP_VAR ~12 ]      OP1[  IS_TMP_VAR ~11 ] OP2[ ,  IS_CONST (268435410) 'host' ]
+         22*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~13 ]      OP1[  IS_TMP_VAR ~12 ]
+         23*       < 52> BOOL                                              RES[  IS_TMP_VAR ~10 ]      OP1[  IS_TMP_VAR ~13 ]
+         24*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~10 ] OP2[ , ->28 ]
+  119    25*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         26*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435401) 'updateHostFromUri' ]
+         27*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  122    28*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         29*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         30*       < 62> RETURN                                                    OP1[  IS_CV !2 ]
+  123    31*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         32*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         33*       < 62> RETURN                                                    OP1[  IS_CONST (268435389) null ]
+
+End of function withuri
+
+Function updatehostfromuri:
+[+]Function Source Class Name: GuzzleHttp\Psr7\Request
+[*]Start of arg_info extract:
+[*]arg_info num_args:0
+[*]Function return type:void
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\guzzlehttp\psr7\src\Request.php
+function name:  updateHostFromUri
+number of ops:  44
+compiled vars:  !0 = $host, !1 = $port, !2 = $header
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  127     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~3 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435434) 'uri' ]
+          2*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~3 ] OP2[ ,  IS_CONST (268435433) 'getHost' ]
+          3*       < 60> DO_FCALL                                      0   RES[  IS_VAR $4 ]       OP1[  IS_UNUSED  ]
+          4*       < 22> ASSIGN                                                    OP1[  IS_CV !0 ] OP2[ ,  IS_VAR $4 ]
+  129     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       < 18> IS_EQUAL                                          RES[  IS_TMP_VAR ~6 ]       OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435427) '' ]
+          7*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~6 ] OP2[ , ->10 ]
+  130     8*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          9*       < 62> RETURN                                                    OP1[  IS_CONST (268435422) null ]
+  133    10*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         11*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~7 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435419) 'uri' ]
+         12*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~7 ] OP2[ ,  IS_CONST (268435418) 'getPort' ]
+         13*       < 60> DO_FCALL                                      0   RES[  IS_VAR $8 ]       OP1[  IS_UNUSED  ]
+         14*       < 22> ASSIGN                                            RES[  IS_TMP_VAR ~9 ]       OP1[  IS_CV !1 ] OP2[ ,  IS_VAR $8 ]
+         15*       <123> TYPE_CHECK                                  1020   RES[  IS_TMP_VAR ~10 ]      OP1[  IS_TMP_VAR ~9 ] OP2[  IS_UNUSED  ]
+         16*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~10 ] OP2[ , ->20 ]
+  134    17*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         18*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~11 ]      OP1[  IS_CONST (268435408) '%3A' ] OP2[ ,  IS_CV !1 ]
+         19*       < 26> ASSIGN_OP                    .=               8           OP1[  IS_CV !0 ] OP2[ ,  IS_TMP_VAR ~11 ]
+  137    20*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         21*       < 91> FETCH_OBJ_IS                                      RES[  IS_TMP_VAR ~13 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435403) 'headerNames' ]
+         22*       <115> ISSET_ISEMPTY_DIM_OBJ                         0   RES[  IS_TMP_VAR ~14 ]      OP1[  IS_TMP_VAR ~13 ] OP2[ ,  IS_CONST (268435402) 'host' ]
+         23*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~14 ] OP2[ , ->29 ]
+  138    24*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         25*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~15 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435397) 'headerNames' ]
+         26*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~16 ]      OP1[  IS_TMP_VAR ~15 ] OP2[ ,  IS_CONST (268435396) 'host' ]
+         27*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_TMP_VAR ~16 ]
+         28*       < 42> JMP                                                       OP1[ ->35 ]
+  140    29*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         30*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435389) 'Host' ]
+  141    31*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         32*       < 85> FETCH_OBJ_W                                       RES[  IS_VAR $19 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435386) 'headerNames' ]
+         33*       < 23> ASSIGN_DIM                                                OP1[  IS_VAR $19 ] OP2[ ,  IS_CONST (268435385) 'host' ]
+         34*       <137> OP_DATA                                                   OP1[  IS_CONST (268435384) 'Host' ] OP2[  IS_UNUSED  ]
+  145    35*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         36*       < 71> INIT_ARRAY                                        RES[  IS_TMP_VAR ~22 ]      OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         37*       < 71> INIT_ARRAY                                        RES[  IS_TMP_VAR ~23 ]      OP1[  IS_TMP_VAR ~22 ] OP2[ ,  IS_CV !2 ]
+         38*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~24 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435378) 'headers' ]
+         39*       <  1> ADD                                               RES[  IS_TMP_VAR ~25 ]      OP1[  IS_TMP_VAR ~23 ] OP2[ ,  IS_TMP_VAR ~24 ]
+         40*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435373) 'headers' ]
+         41*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~25 ] OP2[  IS_UNUSED  ]
+  146    42*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         43*       < 62> RETURN                                                    OP1[  IS_CONST (268435369) null ]
+
+End of function updatehostfromuri
+
+Function assertmethod:
+[+]Function Source Class Name: GuzzleHttp\Psr7\Request
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:void
+
+[*]ArgInfoNo**0**
+[*]name:method
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\guzzlehttp\psr7\src\Request.php
+function name:  assertMethod
+number of ops:  17
+compiled vars:  !0 = $method
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  151     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  153     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435444) 'GuzzleHttp%5CPsr7%5Cis_string' ]
+          3*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          4*       < 60> DO_FCALL                                      0   RES[  IS_VAR $1 ]       OP1[  IS_UNUSED  ]
+          5*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~2 ]       OP1[  IS_VAR $1 ]
+          6*       < 47> JMPNZ_EX                                          RES[  IS_TMP_VAR ~2 ]       OP1[  IS_TMP_VAR ~2 ] OP2[ , ->9 ]
+          7*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~3 ]       OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435437) '' ]
+          8*       < 52> BOOL                                              RES[  IS_TMP_VAR ~2 ]       OP1[  IS_TMP_VAR ~3 ]
+          9*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~2 ] OP2[ , ->15 ]
+  154    10*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         11*       < 68> NEW                                               RES[  IS_VAR $4 ]       OP1[ 'InvalidArgumentException' ]
+         12*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435430) 'Method+must+be+a+non-empty+string.' ] OP2[  IS_UNUSED  ]
+         13*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         14*       <108> THROW                                         0           OP1[  IS_VAR $4 ] OP2[  IS_UNUSED  ]
+  156    15*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         16*       < 62> RETURN                                                    OP1[  IS_CONST (268435423) null ]
+
+End of function assertmethod
+
+End of class GuzzleHttp\Psr7\Request.
+

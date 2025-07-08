@@ -1,0 +1,111 @@
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\sabre\dav\lib\DAV\Xml\Request\ShareResource.php
+function name:  (null)
+number of ops:  8
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+    3     0*       <  0> NOP                                                      
+    5     1*       <  0> NOP                                                      
+    7     2*       <  0> NOP                                                      
+    8     3*       <  0> NOP                                                      
+    9     4*       <  0> NOP                                                      
+   22     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       <144> DECLARE_CLASS                                             OP1[  IS_CONST (268435441) 'sabre%5Cdav%5Cxml%5Crequest%5Cshareresource' ] OP2[  IS_UNUSED  ]
+   81     7*       < 62> RETURN                                                    OP1[  IS_CONST (268435441) 1 ]
+
+Class Sabre\DAV\Xml\Request\ShareResource:
+[+]Class Parent Name: NULL
+End Trait extract
+Start Properties extract:
+End Properties extract.
+
+Function __construct:
+[+]Function Source Class Name: Sabre\DAV\Xml\Request\ShareResource
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:sharees
+[*]type:array
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\sabre\dav\lib\DAV\Xml\Request\ShareResource.php
+function name:  __construct
+number of ops:  6
+compiled vars:  !0 = $sharees
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   36     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+   38     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435450) 'sharees' ]
+          3*       <137> OP_DATA                                                   OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+   39     4*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          5*       < 62> RETURN                                                    OP1[  IS_CONST (268435445) null ]
+
+End of function __construct
+
+Function xmldeserialize:
+[+]Function Source Class Name: Sabre\DAV\Xml\Request\ShareResource
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:reader
+[*]type:Sabre\Xml\Reader
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\sabre\dav\lib\DAV\Xml\Request\ShareResource.php
+function name:  xmlDeserialize
+number of ops:  30
+compiled vars:  !0 = $reader, !1 = $elems, !2 = $sharees, !3 = $elem
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   61     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+   63     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435427) 'parseInnerTree' ]
+   64     3*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435427) <array> ] OP2[  IS_UNUSED  ]
+          4*       < 60> DO_FCALL                                      0   RES[  IS_VAR $4 ]       OP1[  IS_UNUSED  ]
+   63     5*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_VAR $4 ]
+   69     6*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          7*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435420) <array> ]
+   71     8*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          9*       < 77> FE_RESET_R                                        RES[  IS_VAR $7 ]       OP1[  IS_CV !1 ] OP2[ , ->22 ]
+         10*       < 78> FE_FETCH_R                                                OP1[  IS_VAR $7 ] OP2[ ,  IS_CV !3 ] EXT_JMP_REL[ , ->22 ]
+   72    11*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         12*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~8 ]       OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435411) 'name' ]
+         13*       < 17> IS_NOT_IDENTICAL                                  RES[  IS_TMP_VAR ~9 ]       OP1[  IS_TMP_VAR ~8 ] OP2[ ,  IS_CONST (268435410) '%7BDAV%3A%7Dsharee' ]
+         14*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~9 ] OP2[ , ->17 ]
+   73    15*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         16*       < 42> JMP                                                       OP1[ ->10 ]
+   75    17*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         18*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~11 ]      OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435401) 'value' ]
+         19*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         20*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~11 ] OP2[  IS_UNUSED  ]
+   71    21*       < 42> JMP                                                       OP1[ ->10 ]
+         22*       <127> FE_FREE                                                   OP1[  IS_VAR $7 ] OP2[  IS_UNUSED  ]
+   78    23*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         24*       < 68> NEW                          self                 RES[  IS_VAR $12 ]     
+         25*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         26*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         27*       < 62> RETURN                                                    OP1[  IS_VAR $12 ]
+   79    28*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         29*       < 62> RETURN                                                    OP1[  IS_CONST (268435380) null ]
+
+End of function xmldeserialize
+
+End of class Sabre\DAV\Xml\Request\ShareResource.
+

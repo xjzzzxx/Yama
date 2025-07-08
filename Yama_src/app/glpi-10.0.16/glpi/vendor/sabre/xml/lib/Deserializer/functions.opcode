@@ -1,0 +1,684 @@
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\sabre\xml\lib\Deserializer\functions.php
+function name:  (null)
+number of ops:  4
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+    3     0*       <  0> NOP                                                      
+    5     1*       <  0> NOP                                                      
+  360     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       < 62> RETURN                                                    OP1[  IS_CONST (268435449) 1 ]
+
+Function sabre%5Cxml%5Cdeserializer%5Ckeyvalue:
+[*]Start of arg_info extract:
+[*]arg_info num_args:2
+[*]Function return type:array
+
+[*]ArgInfoNo**0**
+[*]name:reader
+[*]type:Sabre\Xml\Reader
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:namespace
+[*]type:?string
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\sabre\xml\lib\Deserializer\functions.php
+function name:  Sabre\Xml\Deserializer\keyValue
+number of ops:  84
+compiled vars:  !0 = $reader, !1 = $namespace, !2 = $values, !3 = $clark
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   58     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 64> RECV_INIT                                         RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435407) null ]
+   61     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~4 ]       OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435404) 'isEmptyElement' ]
+          4*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~4 ] OP2[ , ->10 ]
+   62     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435399) 'next' ]
+          7*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+   64     8*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          9*       < 62> RETURN                                                    OP1[  IS_CONST (268435395) <array> ]
+   67    10*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         11*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435392) 'read' ]
+         12*       < 60> DO_FCALL                                      0   RES[  IS_VAR $6 ]       OP1[  IS_UNUSED  ]
+         13*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~7 ]       OP1[  IS_VAR $6 ]
+         14*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~7 ] OP2[ , ->20 ]
+   68    15*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         16*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435384) 'next' ]
+         17*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+   70    18*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         19*       < 62> RETURN                                                    OP1[  IS_CONST (268435380) <array> ]
+   73    20*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         21*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~9 ]       OP1[  IS_CONST (268435378) 'Sabre%5CXml%5CReader' ] OP2[ ,  IS_CONST (268435377) 'END_ELEMENT' ]
+         22*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~10 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435378) 'nodeType' ]
+         23*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~11 ]      OP1[  IS_TMP_VAR ~9 ] OP2[ ,  IS_TMP_VAR ~10 ]
+         24*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~11 ] OP2[ , ->30 ]
+   74    25*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         26*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435371) 'next' ]
+         27*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+   76    28*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         29*       < 62> RETURN                                                    OP1[  IS_CONST (268435367) <array> ]
+   79    30*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         31*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435364) <array> ]
+   81    32*       <  0> NOP                                                      
+   82    33*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         34*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~14 ]      OP1[  IS_CONST (268435360) 'Sabre%5CXml%5CReader' ] OP2[ ,  IS_CONST (268435359) 'ELEMENT' ]
+         35*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~15 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435360) 'nodeType' ]
+         36*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~16 ]      OP1[  IS_TMP_VAR ~14 ] OP2[ ,  IS_TMP_VAR ~15 ]
+         37*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~16 ] OP2[ , ->64 ]
+   83    38*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         39*       <123> TYPE_CHECK                                  1020   RES[  IS_TMP_VAR ~17 ]      OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         40*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~17 ]      OP1[  IS_TMP_VAR ~17 ] OP2[ , ->44 ]
+         41*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~18 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435349) 'namespaceURI' ]
+         42*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~19 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_TMP_VAR ~18 ]
+         43*       < 52> BOOL                                              RES[  IS_TMP_VAR ~17 ]      OP1[  IS_TMP_VAR ~19 ]
+         44*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~17 ] OP2[ , ->53 ]
+   84    45*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         46*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~20 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435340) 'localName' ]
+         47*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435339) 'parseCurrentElement' ]
+         48*       < 60> DO_FCALL                                      0   RES[  IS_VAR $22 ]      OP1[  IS_UNUSED  ]
+         49*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~23 ]      OP1[  IS_VAR $22 ] OP2[ ,  IS_CONST (268435337) 'value' ]
+         50*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !2 ] OP2[ ,  IS_TMP_VAR ~20 ]
+         51*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~23 ] OP2[  IS_UNUSED  ]
+         52*       < 42> JMP                                                       OP1[ ->63 ]
+   86    53*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         54*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435328) 'getClark' ]
+         55*       < 60> DO_FCALL                                      0   RES[  IS_VAR $24 ]      OP1[  IS_UNUSED  ]
+         56*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_VAR $24 ]
+   87    57*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         58*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435322) 'parseCurrentElement' ]
+         59*       < 60> DO_FCALL                                      0   RES[  IS_VAR $27 ]      OP1[  IS_UNUSED  ]
+         60*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~28 ]      OP1[  IS_VAR $27 ] OP2[ ,  IS_CONST (268435320) 'value' ]
+         61*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !2 ] OP2[ ,  IS_CV !3 ]
+         62*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~28 ] OP2[  IS_UNUSED  ]
+         63*       < 42> JMP                                                       OP1[ ->71 ]
+   90    64*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         65*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435311) 'read' ]
+         66*       < 60> DO_FCALL                                      0   RES[  IS_VAR $29 ]      OP1[  IS_UNUSED  ]
+         67*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~30 ]      OP1[  IS_VAR $29 ]
+         68*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~30 ] OP2[ , ->71 ]
+   91    69*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         70*       < 42> JMP                                                       OP1[ ->75 ]
+   94    71*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~31 ]      OP1[  IS_CONST (268435302) 'Sabre%5CXml%5CReader' ] OP2[ ,  IS_CONST (268435301) 'END_ELEMENT' ]
+         72*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~32 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435302) 'nodeType' ]
+         73*       < 17> IS_NOT_IDENTICAL                                  RES[  ]         OP1[  IS_TMP_VAR ~31 ] OP2[ ,  IS_TMP_VAR ~32 ]
+         74*       < 44> JMPNZ                                                     OP1[  IS_TMP_VAR ~33 ] OP2[ , ->33 ]
+   96    75*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         76*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435295) 'read' ]
+         77*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+   98    78*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         79*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         80*       < 62> RETURN                                                    OP1[  IS_CV !2 ]
+   99    81*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         82*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         83*       < 62> RETURN                                                    OP1[  IS_CONST (268435283) null ]
+
+End of function sabre%5Cxml%5Cdeserializer%5Ckeyvalue
+
+Function sabre%5Cxml%5Cdeserializer%5Cenum:
+[*]Start of arg_info extract:
+[*]arg_info num_args:2
+[*]Function return type:array
+
+[*]ArgInfoNo**0**
+[*]name:reader
+[*]type:Sabre\Xml\Reader
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:namespace
+[*]type:?string
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\sabre\xml\lib\Deserializer\functions.php
+function name:  Sabre\Xml\Deserializer\enum
+number of ops:  80
+compiled vars:  !0 = $reader, !1 = $namespace, !2 = $currentDepth, !3 = $values
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  147     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 64> RECV_INIT                                         RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435408) null ]
+  150     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~4 ]       OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435405) 'isEmptyElement' ]
+          4*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~4 ] OP2[ , ->10 ]
+  151     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435400) 'next' ]
+          7*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  153     8*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          9*       < 62> RETURN                                                    OP1[  IS_CONST (268435396) <array> ]
+  155    10*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         11*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435393) 'read' ]
+         12*       < 60> DO_FCALL                                      0   RES[  IS_VAR $6 ]       OP1[  IS_UNUSED  ]
+         13*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~7 ]       OP1[  IS_VAR $6 ]
+         14*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~7 ] OP2[ , ->20 ]
+  156    15*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         16*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435385) 'next' ]
+         17*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  158    18*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         19*       < 62> RETURN                                                    OP1[  IS_CONST (268435381) <array> ]
+  161    20*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         21*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~9 ]       OP1[  IS_CONST (268435379) 'Sabre%5CXml%5CReader' ] OP2[ ,  IS_CONST (268435378) 'END_ELEMENT' ]
+         22*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~10 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435379) 'nodeType' ]
+         23*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~11 ]      OP1[  IS_TMP_VAR ~9 ] OP2[ ,  IS_TMP_VAR ~10 ]
+         24*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~11 ] OP2[ , ->30 ]
+  162    25*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         26*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435372) 'next' ]
+         27*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  164    28*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         29*       < 62> RETURN                                                    OP1[  IS_CONST (268435368) <array> ]
+  166    30*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         31*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~13 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435365) 'depth' ]
+         32*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_TMP_VAR ~13 ]
+  168    33*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         34*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435360) <array> ]
+  169    35*       <  0> NOP                                                      
+  170    36*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         37*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~16 ]      OP1[  IS_CONST (268435356) 'Sabre%5CXml%5CReader' ] OP2[ ,  IS_CONST (268435355) 'ELEMENT' ]
+         38*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~17 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435356) 'nodeType' ]
+         39*       < 17> IS_NOT_IDENTICAL                                  RES[  IS_TMP_VAR ~18 ]      OP1[  IS_TMP_VAR ~16 ] OP2[ ,  IS_TMP_VAR ~17 ]
+         40*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~18 ] OP2[ , ->43 ]
+  171    41*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         42*       < 42> JMP                                                       OP1[ ->64 ]
+  173    43*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         44*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435345) 'Sabre%5CXml%5CDeserializer%5Cis_null' ]
+         45*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         46*       < 60> DO_FCALL                                      0   RES[  IS_VAR $19 ]      OP1[  IS_UNUSED  ]
+         47*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~20 ]      OP1[  IS_VAR $19 ]
+         48*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~20 ]      OP1[  IS_TMP_VAR ~20 ] OP2[ , ->52 ]
+         49*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~21 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435338) 'namespaceURI' ]
+         50*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~22 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_TMP_VAR ~21 ]
+         51*       < 52> BOOL                                              RES[  IS_TMP_VAR ~20 ]      OP1[  IS_TMP_VAR ~22 ]
+         52*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~20 ] OP2[ , ->58 ]
+  174    53*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         54*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~24 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435329) 'localName' ]
+         55*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         56*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~24 ] OP2[  IS_UNUSED  ]
+         57*       < 42> JMP                                                       OP1[ ->64 ]
+  176    58*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         59*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435320) 'getClark' ]
+         60*       < 60> DO_FCALL                                      0   RES[  IS_VAR $26 ]      OP1[  IS_UNUSED  ]
+         61*       < 51> CAST                                          6   RES[  IS_TMP_VAR ~27 ]      OP1[  IS_VAR $26 ] OP2[  IS_UNUSED  ]
+         62*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         63*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~27 ] OP2[  IS_UNUSED  ]
+  178    64*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~28 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435312) 'depth' ]
+         65*       < 21> IS_SMALLER_OR_EQUAL                               RES[  IS_TMP_VAR ~29 ]      OP1[  IS_CV !2 ] OP2[ ,  IS_TMP_VAR ~28 ]
+         66*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~29 ]      OP1[  IS_TMP_VAR ~29 ] OP2[ , ->70 ]
+         67*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435307) 'next' ]
+         68*       < 60> DO_FCALL                                      0   RES[  IS_VAR $30 ]      OP1[  IS_UNUSED  ]
+         69*       < 52> BOOL                                              RES[  IS_TMP_VAR ~29 ]      OP1[  IS_VAR $30 ]
+         70*       < 44> JMPNZ                                                     OP1[  IS_TMP_VAR ~29 ] OP2[ , ->36 ]
+  180    71*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         72*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435299) 'next' ]
+         73*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  182    74*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         75*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         76*       < 62> RETURN                                                    OP1[  IS_CV !3 ]
+  183    77*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         78*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         79*       < 62> RETURN                                                    OP1[  IS_CONST (268435287) null ]
+
+End of function sabre%5Cxml%5Cdeserializer%5Cenum
+
+Function sabre%5Cxml%5Cdeserializer%5Cvalueobject:
+[*]Start of arg_info extract:
+[*]arg_info num_args:3
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:reader
+[*]type:Sabre\Xml\Reader
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:className
+[*]type:string
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**2**
+[*]name:namespace
+[*]type:string
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\sabre\xml\lib\Deserializer\functions.php
+function name:  Sabre\Xml\Deserializer\valueObject
+number of ops:  89
+compiled vars:  !0 = $reader, !1 = $className, !2 = $namespace, !3 = $valueObject, !4 = $defaultProperties
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  194     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 63> RECV                                              RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ]
+          2*       < 63> RECV                                              RES[  IS_CV !2 ]       OP1[  IS_UNUSED  ]
+  196     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       <109> FETCH_CLASS                                   0   RES[  IS_VAR $5 ]       OP2[  IS_CV !1 ]
+          5*       < 68> NEW                                               RES[  IS_VAR $6 ]       OP1[  IS_VAR $5 ]
+          6*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+          7*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_VAR $6 ]
+  197     8*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          9*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~9 ]       OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435372) 'isEmptyElement' ]
+         10*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~9 ] OP2[ , ->16 ]
+  198    11*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         12*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435367) 'next' ]
+         13*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  200    14*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         15*       < 62> RETURN                                                    OP1[  IS_CV !3 ]
+  203    16*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         17*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435359) 'Sabre%5CXml%5CDeserializer%5Cget_class_vars' ]
+         18*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         19*       < 60> DO_FCALL                                      0   RES[  IS_VAR $11 ]      OP1[  IS_UNUSED  ]
+         20*       < 22> ASSIGN                                                    OP1[  IS_CV !4 ] OP2[ ,  IS_VAR $11 ]
+  205    21*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         22*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435352) 'read' ]
+         23*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  206    24*       <  0> NOP                                                      
+  207    25*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         26*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~14 ]      OP1[  IS_CONST (268435347) 'Sabre%5CXml%5CReader' ] OP2[ ,  IS_CONST (268435346) 'ELEMENT' ]
+         27*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~15 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435347) 'nodeType' ]
+         28*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~16 ]      OP1[  IS_TMP_VAR ~14 ] OP2[ ,  IS_TMP_VAR ~15 ]
+         29*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~16 ]      OP1[  IS_TMP_VAR ~16 ] OP2[ , ->33 ]
+         30*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~17 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435342) 'namespaceURI' ]
+         31*       < 18> IS_EQUAL                                          RES[  IS_TMP_VAR ~18 ]      OP1[  IS_CV !2 ] OP2[ ,  IS_TMP_VAR ~17 ]
+         32*       < 52> BOOL                                              RES[  IS_TMP_VAR ~16 ]      OP1[  IS_TMP_VAR ~18 ]
+         33*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~16 ] OP2[ , ->71 ]
+  208    34*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         35*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435333) 'Sabre%5CXml%5CDeserializer%5Cproperty_exists' ]
+         36*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         37*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         38*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $19 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435330) 'localName' ]
+         39*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $19 ] OP2[  IS_UNUSED  ]
+         40*       < 60> DO_FCALL                                      0   RES[  IS_VAR $20 ]      OP1[  IS_UNUSED  ]
+         41*       < 43> JMPZ                                                      OP1[  IS_VAR $20 ] OP2[ , ->67 ]
+  209    42*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         43*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435321) 'Sabre%5CXml%5CDeserializer%5Cis_array' ]
+         44*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         45*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~21 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435320) 'localName' ]
+         46*       < 93> FETCH_DIM_FUNC_ARG                                RES[  IS_VAR $22 ]      OP1[  IS_CV !4 ] OP2[ ,  IS_TMP_VAR ~21 ]
+         47*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $22 ] OP2[  IS_UNUSED  ]
+         48*       < 60> DO_FCALL                                      0   RES[  IS_VAR $23 ]      OP1[  IS_UNUSED  ]
+         49*       < 43> JMPZ                                                      OP1[  IS_VAR $23 ] OP2[ , ->59 ]
+  210    50*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         51*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~24 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435309) 'localName' ]
+         52*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435308) 'parseCurrentElement' ]
+         53*       < 60> DO_FCALL                                      0   RES[  IS_VAR $27 ]      OP1[  IS_UNUSED  ]
+         54*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~28 ]      OP1[  IS_VAR $27 ] OP2[ ,  IS_CONST (268435306) 'value' ]
+         55*       < 85> FETCH_OBJ_W                                       RES[  IS_VAR $25 ]      OP1[  IS_CV !3 ] OP2[ ,  IS_TMP_VAR ~24 ]
+         56*       < 23> ASSIGN_DIM                                                OP1[  IS_VAR $25 ] OP2[  IS_UNUSED  ]
+         57*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~28 ] OP2[  IS_UNUSED  ]
+         58*       < 42> JMP                                                       OP1[ ->66 ]
+  212    59*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         60*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~29 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435295) 'localName' ]
+         61*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435294) 'parseCurrentElement' ]
+         62*       < 60> DO_FCALL                                      0   RES[  IS_VAR $31 ]      OP1[  IS_UNUSED  ]
+         63*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~32 ]      OP1[  IS_VAR $31 ] OP2[ ,  IS_CONST (268435292) 'value' ]
+         64*       < 24> ASSIGN_OBJ                                                OP1[  IS_CV !3 ] OP2[ ,  IS_TMP_VAR ~29 ]
+         65*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~32 ] OP2[  IS_UNUSED  ]
+         66*       < 42> JMP                                                       OP1[ ->70 ]
+  216    67*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         68*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435283) 'next' ]
+         69*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         70*       < 42> JMP                                                       OP1[ ->78 ]
+  219    71*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         72*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435277) 'read' ]
+         73*       < 60> DO_FCALL                                      0   RES[  IS_VAR $34 ]      OP1[  IS_UNUSED  ]
+         74*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~35 ]      OP1[  IS_VAR $34 ]
+         75*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~35 ] OP2[ , ->78 ]
+  220    76*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         77*       < 42> JMP                                                       OP1[ ->82 ]
+  223    78*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~36 ]      OP1[  IS_CONST (268435268) 'Sabre%5CXml%5CReader' ] OP2[ ,  IS_CONST (268435267) 'END_ELEMENT' ]
+         79*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~37 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435268) 'nodeType' ]
+         80*       < 17> IS_NOT_IDENTICAL                                  RES[  ]         OP1[  IS_TMP_VAR ~36 ] OP2[ ,  IS_TMP_VAR ~37 ]
+         81*       < 44> JMPNZ                                                     OP1[  IS_TMP_VAR ~38 ] OP2[ , ->25 ]
+  225    82*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         83*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435261) 'read' ]
+         84*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  227    85*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         86*       < 62> RETURN                                                    OP1[  IS_CV !3 ]
+  228    87*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         88*       < 62> RETURN                                                    OP1[  IS_CONST (268435253) null ]
+
+End of function sabre%5Cxml%5Cdeserializer%5Cvalueobject
+
+Function sabre%5Cxml%5Cdeserializer%5Crepeatingelements:
+[*]Start of arg_info extract:
+[*]arg_info num_args:2
+[*]Function return type:array
+
+[*]ArgInfoNo**0**
+[*]name:reader
+[*]type:Sabre\Xml\Reader
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:childElementName
+[*]type:string
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\sabre\xml\lib\Deserializer\functions.php
+function name:  Sabre\Xml\Deserializer\repeatingElements
+number of ops:  32
+compiled vars:  !0 = $reader, !1 = $childElementName, !2 = $result, !3 = $element
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  254     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 63> RECV                                              RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ]
+  256     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~4 ]       OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435441) 0 ]
+          4*       < 17> IS_NOT_IDENTICAL                                  RES[  IS_TMP_VAR ~5 ]       OP1[  IS_TMP_VAR ~4 ] OP2[ ,  IS_CONST (268435440) '%7B' ]
+          5*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~5 ] OP2[ , ->9 ]
+  257     6*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          7*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~6 ]       OP1[  IS_CONST (268435435) '%7B%7D' ] OP2[ ,  IS_CV !1 ]
+          8*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_TMP_VAR ~6 ]
+  259     9*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         10*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435430) <array> ]
+  261    11*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         12*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435427) 'parseGetElements' ]
+         13*       < 60> DO_FCALL                                      0   RES[  IS_VAR $9 ]       OP1[  IS_UNUSED  ]
+         14*       < 77> FE_RESET_R                                        RES[  IS_VAR $10 ]      OP1[  IS_VAR $9 ] OP2[ , ->25 ]
+         15*       < 78> FE_FETCH_R                                                OP1[  IS_VAR $10 ] OP2[ ,  IS_CV !3 ] EXT_JMP_REL[ , ->25 ]
+  262    16*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         17*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~11 ]      OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435419) 'name' ]
+         18*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~12 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_TMP_VAR ~11 ]
+         19*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~12 ] OP2[ , ->24 ]
+  263    20*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         21*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~14 ]      OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435412) 'value' ]
+         22*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         23*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~14 ] OP2[  IS_UNUSED  ]
+  261    24*       < 42> JMP                                                       OP1[ ->15 ]
+         25*       <127> FE_FREE                                                   OP1[  IS_VAR $10 ] OP2[  IS_UNUSED  ]
+  267    26*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         27*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         28*       < 62> RETURN                                                    OP1[  IS_CV !2 ]
+  268    29*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         30*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         31*       < 62> RETURN                                                    OP1[  IS_CONST (268435393) null ]
+
+End of function sabre%5Cxml%5Cdeserializer%5Crepeatingelements
+
+Function sabre%5Cxml%5Cdeserializer%5Cmixedcontent:
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:array
+
+[*]ArgInfoNo**0**
+[*]name:reader
+[*]type:Sabre\Xml\Reader
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\sabre\xml\lib\Deserializer\functions.php
+function name:  Sabre\Xml\Deserializer\mixedContent
+number of ops:  77
+compiled vars:  !0 = $reader, !1 = $previousDepth, !2 = $content
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  289     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  292     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~3 ]       OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435404) 'isEmptyElement' ]
+          3*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~3 ] OP2[ , ->9 ]
+  293     4*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          5*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435399) 'next' ]
+          6*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  295     7*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          8*       < 62> RETURN                                                    OP1[  IS_CONST (268435395) <array> ]
+  298     9*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         10*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~5 ]       OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435392) 'depth' ]
+         11*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_TMP_VAR ~5 ]
+  300    12*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         13*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435387) <array> ]
+  301    14*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         15*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435384) 'read' ]
+         16*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  302    17*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         18*       < 42> JMP                                                       OP1[ ->70 ]
+  303    19*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         20*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~9 ]       OP1[  IS_CONST (268435377) 'Sabre%5CXml%5CReader' ] OP2[ ,  IS_CONST (268435376) 'ELEMENT' ]
+         21*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~10 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435377) 'nodeType' ]
+         22*       < 18> IS_EQUAL                                          RES[  IS_TMP_VAR ~11 ]      OP1[  IS_TMP_VAR ~9 ] OP2[ ,  IS_TMP_VAR ~10 ]
+         23*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~11 ] OP2[ , ->30 ]
+  304    24*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         25*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435370) 'parseCurrentElement' ]
+         26*       < 60> DO_FCALL                                      0   RES[  IS_VAR $13 ]      OP1[  IS_UNUSED  ]
+         27*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         28*       <137> OP_DATA                                                   OP1[  IS_VAR $13 ] OP2[  IS_UNUSED  ]
+         29*       < 42> JMP                                                       OP1[ ->70 ]
+  305    30*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         31*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~14 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435360) 'depth' ]
+         32*       < 21> IS_SMALLER_OR_EQUAL                               RES[  IS_TMP_VAR ~15 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_TMP_VAR ~14 ]
+         33*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~15 ]      OP1[  IS_TMP_VAR ~15 ] OP2[ , ->47 ]
+         34*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435355) 'Sabre%5CXml%5CDeserializer%5Cin_array' ]
+         35*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         36*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $16 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435354) 'nodeType' ]
+         37*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $16 ] OP2[  IS_UNUSED  ]
+         38*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~17 ]      OP1[  IS_CONST (268435352) 'Sabre%5CXml%5CReader' ] OP2[ ,  IS_CONST (268435351) 'TEXT' ]
+         39*       < 71> INIT_ARRAY                                        RES[  IS_TMP_VAR ~18 ]      OP1[  IS_TMP_VAR ~17 ] OP2[  IS_UNUSED  ]
+         40*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~19 ]      OP1[  IS_CONST (268435351) 'Sabre%5CXml%5CReader' ] OP2[ ,  IS_CONST (268435350) 'CDATA' ]
+         41*       < 72> ADD_ARRAY_ELEMENT                                 RES[  IS_TMP_VAR ~18 ]      OP1[  IS_TMP_VAR ~19 ] OP2[  IS_UNUSED  ]
+         42*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~20 ]      OP1[  IS_CONST (268435350) 'Sabre%5CXml%5CReader' ] OP2[ ,  IS_CONST (268435349) 'WHITESPACE' ]
+         43*       < 72> ADD_ARRAY_ELEMENT                                 RES[  IS_TMP_VAR ~18 ]      OP1[  IS_TMP_VAR ~20 ] OP2[  IS_UNUSED  ]
+         44*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~18 ] OP2[  IS_UNUSED  ]
+         45*       < 60> DO_FCALL                                      0   RES[  IS_VAR $21 ]      OP1[  IS_UNUSED  ]
+         46*       < 52> BOOL                                              RES[  IS_TMP_VAR ~15 ]      OP1[  IS_VAR $21 ]
+         47*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~15 ] OP2[ , ->56 ]
+  306    48*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         49*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~23 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435338) 'value' ]
+         50*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         51*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~23 ] OP2[  IS_UNUSED  ]
+  307    52*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         53*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435331) 'read' ]
+         54*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         55*       < 42> JMP                                                       OP1[ ->70 ]
+  308    56*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         57*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~25 ]      OP1[  IS_CONST (268435326) 'Sabre%5CXml%5CReader' ] OP2[ ,  IS_CONST (268435325) 'END_ELEMENT' ]
+         58*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~26 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435326) 'nodeType' ]
+         59*       < 18> IS_EQUAL                                          RES[  IS_TMP_VAR ~27 ]      OP1[  IS_TMP_VAR ~25 ] OP2[ ,  IS_TMP_VAR ~26 ]
+         60*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~27 ] OP2[ , ->67 ]
+  310    61*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         62*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435319) 'read' ]
+         63*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  311    64*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         65*       < 42> JMP                                                       OP1[ ->71 ]
+         66*       < 42> JMP                                                       OP1[ ->70 ]
+  313    67*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         68*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435309) 'read' ]
+         69*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  302    70*       < 44> JMPNZ                                                     OP1[  IS_CONST (268435307) <true> ] OP2[ , ->19 ]
+  317    71*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         72*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         73*       < 62> RETURN                                                    OP1[  IS_CV !2 ]
+  318    74*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         75*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         76*       < 62> RETURN                                                    OP1[  IS_CONST (268435296) null ]
+
+End of function sabre%5Cxml%5Cdeserializer%5Cmixedcontent
+
+Function sabre%5Cxml%5Cdeserializer%5Cfunctioncaller:
+[*]Start of arg_info extract:
+[*]arg_info num_args:3
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:reader
+[*]type:Sabre\Xml\Reader
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:func
+[*]type:callable
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**2**
+[*]name:namespace
+[*]type:string
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\sabre\xml\lib\Deserializer\functions.php
+function name:  Sabre\Xml\Deserializer\functionCaller
+number of ops:  119
+compiled vars:  !0 = $reader, !1 = $func, !2 = $namespace, !3 = $funcArgs, !4 = $ref, !5 = $parameter
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  328     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 63> RECV                                              RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ]
+          2*       < 63> RECV                                              RES[  IS_CV !2 ]       OP1[  IS_UNUSED  ]
+  330     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~6 ]       OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435341) 'isEmptyElement' ]
+          5*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~6 ] OP2[ , ->11 ]
+  331     6*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          7*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435336) 'next' ]
+          8*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  333     9*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         10*       < 62> RETURN                                                    OP1[  IS_CONST (268435332) null ]
+  336    11*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         12*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435329) <array> ]
+  337    13*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         14*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435326) 'Sabre%5CXml%5CDeserializer%5Cis_string' ]
+         15*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         16*       < 60> DO_FCALL                                      0   RES[  IS_VAR $9 ]       OP1[  IS_UNUSED  ]
+         17*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~10 ]      OP1[  IS_VAR $9 ] OP2[ , ->24 ]
+         18*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435321) 'Sabre%5CXml%5CDeserializer%5Cstrpos' ]
+         19*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         20*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435320) '%3A%3A' ] OP2[  IS_UNUSED  ]
+         21*       < 60> DO_FCALL                                      0   RES[  IS_VAR $11 ]      OP1[  IS_UNUSED  ]
+         22*       <123> TYPE_CHECK                                  1018   RES[  IS_TMP_VAR ~12 ]      OP1[  IS_VAR $11 ] OP2[  IS_UNUSED  ]
+         23*       < 52> BOOL                                              RES[  IS_TMP_VAR ~10 ]      OP1[  IS_TMP_VAR ~12 ]
+         24*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~10 ] OP2[ , ->31 ]
+         25*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435311) 'Sabre%5CXml%5CDeserializer%5Cexplode' ]
+         26*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435312) '%3A%3A' ] OP2[  IS_UNUSED  ]
+         27*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         28*       < 60> DO_FCALL                                      0   RES[  IS_VAR $13 ]      OP1[  IS_UNUSED  ]
+         29*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~14 ]      OP1[  IS_VAR $13 ]
+         30*       < 42> JMP                                                       OP1[ ->32 ]
+         31*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~14 ]      OP1[  IS_CV !1 ]
+         32*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_TMP_VAR ~14 ]
+  338    33*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         34*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435297) 'Sabre%5CXml%5CDeserializer%5Cis_array' ]
+         35*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         36*       < 60> DO_FCALL                                      0   RES[  IS_VAR $16 ]      OP1[  IS_UNUSED  ]
+         37*       < 43> JMPZ                                                      OP1[  IS_VAR $16 ] OP2[ , ->48 ]
+         38*       < 68> NEW                                               RES[  IS_VAR $17 ]      OP1[ 'ReflectionMethod' ]
+         39*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         40*       < 93> FETCH_DIM_FUNC_ARG                                RES[  IS_VAR $18 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435290) 0 ]
+         41*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $18 ] OP2[  IS_UNUSED  ]
+         42*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         43*       < 93> FETCH_DIM_FUNC_ARG                                RES[  IS_VAR $19 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435285) 1 ]
+         44*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $19 ] OP2[  IS_UNUSED  ]
+         45*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         46*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~21 ]      OP1[  IS_VAR $17 ]
+         47*       < 42> JMP                                                       OP1[ ->52 ]
+         48*       < 68> NEW                                               RES[  IS_VAR $22 ]      OP1[ 'ReflectionFunction' ]
+         49*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         50*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         51*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~21 ]      OP1[  IS_VAR $22 ]
+         52*       < 22> ASSIGN                                                    OP1[  IS_CV !4 ] OP2[ ,  IS_TMP_VAR ~21 ]
+  339    53*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         54*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !4 ] OP2[ ,  IS_CONST (268435266) 'getParameters' ]
+         55*       < 60> DO_FCALL                                      0   RES[  IS_VAR $25 ]      OP1[  IS_UNUSED  ]
+         56*       < 77> FE_RESET_R                                        RES[  IS_VAR $26 ]      OP1[  IS_VAR $25 ] OP2[ , ->64 ]
+         57*       < 78> FE_FETCH_R                                                OP1[  IS_VAR $26 ] OP2[ ,  IS_CV !5 ] EXT_JMP_REL[ , ->64 ]
+  340    58*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         59*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !5 ] OP2[ ,  IS_CONST (268435258) 'getName' ]
+         60*       < 60> DO_FCALL                                      0   RES[  IS_VAR $27 ]      OP1[  IS_UNUSED  ]
+         61*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !3 ] OP2[ ,  IS_VAR $27 ]
+         62*       <137> OP_DATA                                                   OP1[  IS_CONST (268435254) null ] OP2[  IS_UNUSED  ]
+  339    63*       < 42> JMP                                                       OP1[ ->57 ]
+         64*       <127> FE_FREE                                                   OP1[  IS_VAR $26 ] OP2[  IS_UNUSED  ]
+  343    65*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         66*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435247) 'read' ]
+         67*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  344    68*       <  0> NOP                                                      
+  345    69*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         70*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~30 ]      OP1[  IS_CONST (268435242) 'Sabre%5CXml%5CReader' ] OP2[ ,  IS_CONST (268435241) 'ELEMENT' ]
+         71*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~31 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435242) 'nodeType' ]
+         72*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~32 ]      OP1[  IS_TMP_VAR ~30 ] OP2[ ,  IS_TMP_VAR ~31 ]
+         73*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~32 ]      OP1[  IS_TMP_VAR ~32 ] OP2[ , ->77 ]
+         74*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~33 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435237) 'namespaceURI' ]
+         75*       < 18> IS_EQUAL                                          RES[  IS_TMP_VAR ~34 ]      OP1[  IS_CV !2 ] OP2[ ,  IS_TMP_VAR ~33 ]
+         76*       < 52> BOOL                                              RES[  IS_TMP_VAR ~32 ]      OP1[  IS_TMP_VAR ~34 ]
+         77*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~32 ] OP2[ , ->98 ]
+  346    78*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         79*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435228) 'Sabre%5CXml%5CDeserializer%5Carray_key_exists' ]
+         80*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         81*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $35 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435227) 'localName' ]
+         82*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $35 ] OP2[  IS_UNUSED  ]
+         83*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         84*       < 60> DO_FCALL                                      0   RES[  IS_VAR $36 ]      OP1[  IS_UNUSED  ]
+         85*       < 43> JMPZ                                                      OP1[  IS_VAR $36 ] OP2[ , ->94 ]
+  347    86*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         87*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~37 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435216) 'localName' ]
+         88*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435215) 'parseCurrentElement' ]
+         89*       < 60> DO_FCALL                                      0   RES[  IS_VAR $39 ]      OP1[  IS_UNUSED  ]
+         90*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~40 ]      OP1[  IS_VAR $39 ] OP2[ ,  IS_CONST (268435213) 'value' ]
+         91*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !3 ] OP2[ ,  IS_TMP_VAR ~37 ]
+         92*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~40 ] OP2[  IS_UNUSED  ]
+         93*       < 42> JMP                                                       OP1[ ->97 ]
+  350    94*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         95*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435204) 'next' ]
+         96*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         97*       < 42> JMP                                                       OP1[ ->101 ]
+  353    98*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         99*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435198) 'read' ]
+        100*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  355   101*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~43 ]      OP1[  IS_CONST (268435197) 'Sabre%5CXml%5CReader' ] OP2[ ,  IS_CONST (268435196) 'END_ELEMENT' ]
+        102*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~44 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435197) 'nodeType' ]
+        103*       < 17> IS_NOT_IDENTICAL                                  RES[  ]         OP1[  IS_TMP_VAR ~43 ] OP2[ ,  IS_TMP_VAR ~44 ]
+        104*       < 44> JMPNZ                                                     OP1[  IS_TMP_VAR ~45 ] OP2[ , ->69 ]
+  356   105*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        106*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435190) 'read' ]
+        107*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  358   108*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        109*       <128> INIT_DYNAMIC_CALL                                         OP1[  IS_UNUSED  ] OP2[  IS_CV !1 ]
+        110*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435184) 'Sabre%5CXml%5CDeserializer%5Carray_values' ]
+        111*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+        112*       < 60> DO_FCALL                                      0   RES[  IS_VAR $47 ]      OP1[  IS_UNUSED  ]
+        113*       <165> SEND_UNPACK                                               OP1[  IS_VAR $47 ] OP2[  IS_UNUSED  ]
+        114*       <199> CHECK_UNDEF_ARGS                                          OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        115*       < 60> DO_FCALL                                      1   RES[  IS_VAR $48 ]      OP1[  IS_UNUSED  ]
+        116*       < 62> RETURN                                                    OP1[  IS_VAR $48 ]
+  359   117*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        118*       < 62> RETURN                                                    OP1[  IS_CONST (268435171) null ]
+
+End of function sabre%5Cxml%5Cdeserializer%5Cfunctioncaller
+

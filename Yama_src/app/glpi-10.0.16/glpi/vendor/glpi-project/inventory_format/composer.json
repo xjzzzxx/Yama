@@ -1,0 +1,54 @@
+{
+    "name": "glpi-project/inventory_format",
+    "description": "GLPI Inventory format lib",
+    "keywords": ["automatic inventory", "GLPI"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Teclib'",
+            "email": "glpi@teclib.com",
+            "homepage": "https://teclib.com"
+        }
+    ],
+    "support" : {
+        "source": "https://github.com/glpi-project/inventory_format",
+        "issues": "https://github.com/glpi-project/inventory_format/issues"
+    },
+    "require": {
+        "php": ">=7.4",
+        "seld/jsonlint": "^1.10",
+        "swaggest/json-schema": "^0.12.42",
+        "symfony/polyfill-php81": "^1.28",
+        "ext-json": "*",
+        "ext-libxml": "*",
+        "ext-simplexml": "*",
+        "ext-ctype": "*",
+        "ext-curl": "*"
+    },
+    "autoload": {
+        "files": ["lib/php/Converter.php", "lib/php/FilesToJSON.php"]
+    },
+    "bin": ["bin/convert", "bin/build_hw_jsons", "bin/refresh_hw_sources","bin/validate"],
+    "require-dev": {
+        "phpstan/extension-installer": "^1.3",
+        "phpstan/phpstan": "^1.10",
+        "phpstan/phpstan-deprecation-rules": "^1.1",
+        "phpunit/phpunit": "^9.6",
+        "squizlabs/php_codesniffer": "^3.8"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.x-dev"
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "platform": {
+            "php": "7.4.99"
+        },
+        "sort-packages": true,
+        "allow-plugins": {
+            "phpstan/extension-installer": true
+        }
+    }
+}

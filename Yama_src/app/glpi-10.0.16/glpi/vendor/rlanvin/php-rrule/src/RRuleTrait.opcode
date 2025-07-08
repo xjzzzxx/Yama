@@ -1,0 +1,686 @@
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\rlanvin\php-rrule\src\RRuleTrait.php
+function name:  (null)
+number of ops:  2
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  209     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 62> RETURN                                                    OP1[  IS_CONST (268435453) 1 ]
+
+Class RRule\RRuleTrait:
+[+]Class Parent Name: NULL
+End Trait extract
+Start Properties extract:
+Properties: NULL
+End Properties extract
+
+Function getoccurrences:
+[+]Function Source Class Name: RRule\RRuleTrait
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:limit
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\rlanvin\php-rrule\src\RRuleTrait.php
+function name:  getOccurrences
+number of ops:  63
+compiled vars:  !0 = $limit, !1 = $iterator, !2 = $res, !3 = $n, !4 = $occurrence
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   27     0*       < 64> RECV_INIT                                         RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435436) null ]
+   29     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~5 ]       OP1[  IS_CV !0 ]
+          3*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~5 ]       OP1[  IS_TMP_VAR ~5 ] OP2[ , ->7 ]
+          4*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435429) 'isInfinite' ]
+          5*       < 60> DO_FCALL                                      0   RES[  IS_VAR $6 ]       OP1[  IS_UNUSED  ]
+          6*       < 52> BOOL                                              RES[  IS_TMP_VAR ~5 ]       OP1[  IS_VAR $6 ]
+          7*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~5 ] OP2[ , ->13 ]
+   30     8*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          9*       < 68> NEW                                               RES[  IS_VAR $7 ]       OP1[ 'LogicException' ]
+         10*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435421) 'Cannot+get+all+occurrences+of+an+infinite+recurrence+rule.' ] OP2[  IS_UNUSED  ]
+         11*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         12*       <108> THROW                                         0           OP1[  IS_VAR $7 ] OP2[  IS_UNUSED  ]
+   32    13*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         14*       <123> TYPE_CHECK                                  1020   RES[  IS_TMP_VAR ~9 ]       OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         15*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~9 ]       OP1[  IS_TMP_VAR ~9 ] OP2[ , ->18 ]
+         16*       <123> TYPE_CHECK                                  1018   RES[  IS_TMP_VAR ~10 ]      OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         17*       < 52> BOOL                                              RES[  IS_TMP_VAR ~9 ]       OP1[  IS_TMP_VAR ~10 ]
+         18*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~9 ]       OP1[  IS_TMP_VAR ~9 ] OP2[ , ->21 ]
+         19*       < 20> IS_SMALLER                                        RES[  IS_TMP_VAR ~11 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435404) 0 ]
+         20*       < 52> BOOL                                              RES[  IS_TMP_VAR ~9 ]       OP1[  IS_TMP_VAR ~11 ]
+         21*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~9 ] OP2[ , ->27 ]
+   33    22*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         23*       < 68> NEW                                               RES[  IS_VAR $12 ]      OP1[ 'InvalidArgumentException' ]
+         24*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435397) '%24limit+cannot+be+negative' ] OP2[  IS_UNUSED  ]
+         25*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         26*       <108> THROW                                         0           OP1[  IS_VAR $12 ] OP2[  IS_UNUSED  ]
+   37    27*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         28*       <184> FETCH_THIS                                        RES[  IS_TMP_VAR ~14 ]      OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         29*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_TMP_VAR ~14 ]
+   38    30*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         31*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~16 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435384) 'total' ]
+         32*       <123> TYPE_CHECK                                  1020   RES[  IS_TMP_VAR ~17 ]      OP1[  IS_TMP_VAR ~16 ] OP2[  IS_UNUSED  ]
+         33*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~17 ] OP2[ , ->37 ]
+   39    34*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         35*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~18 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435377) 'cache' ]
+         36*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_TMP_VAR ~18 ]
+   42    37*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         38*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435372) <array> ]
+   43    39*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         40*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435369) 0 ]
+   44    41*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         42*       < 77> FE_RESET_R                                        RES[  IS_VAR $22 ]      OP1[  IS_CV !1 ] OP2[ , ->58 ]
+         43*       < 78> FE_FETCH_R                                                OP1[  IS_VAR $22 ] OP2[ ,  IS_CV !4 ] EXT_JMP_REL[ , ->58 ]
+   45    44*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         45*       <110> CLONE                                             RES[  IS_TMP_VAR ~24 ]      OP1[  IS_CV !4 ] OP2[  IS_UNUSED  ]
+         46*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         47*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~24 ] OP2[  IS_UNUSED  ]
+   46    48*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         49*       < 26> ASSIGN_OP                    +=               1           OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435352) 1 ]
+   47    50*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         51*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~26 ]      OP1[  IS_CV !0 ] OP2[ , ->54 ]
+         52*       < 21> IS_SMALLER_OR_EQUAL                               RES[  IS_TMP_VAR ~27 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CV !3 ]
+         53*       < 52> BOOL                                              RES[  IS_TMP_VAR ~26 ]      OP1[  IS_TMP_VAR ~27 ]
+         54*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~26 ] OP2[ , ->57 ]
+   48    55*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         56*       < 42> JMP                                                       OP1[ ->58 ]
+   44    57*       < 42> JMP                                                       OP1[ ->43 ]
+         58*       <127> FE_FREE                                                   OP1[  IS_VAR $22 ] OP2[  IS_UNUSED  ]
+   51    59*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         60*       < 62> RETURN                                                    OP1[  IS_CV !2 ]
+   52    61*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         62*       < 62> RETURN                                                    OP1[  IS_CONST (268435327) null ]
+
+End of function getoccurrences
+
+Function getoccurrencesbetween:
+[+]Function Source Class Name: RRule\RRuleTrait
+[*]Start of arg_info extract:
+[*]arg_info num_args:3
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:begin
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:end
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**2**
+[*]name:limit
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\rlanvin\php-rrule\src\RRuleTrait.php
+function name:  getOccurrencesBetween
+number of ops:  98
+compiled vars:  !0 = $begin, !1 = $end, !2 = $limit, !3 = $iterator, !4 = $res, !5 = $n, !6 = $occurrence
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   62     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 63> RECV                                              RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ]
+          2*       < 64> RECV_INIT                                         RES[  IS_CV !2 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435432) null ]
+   64     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       <123> TYPE_CHECK                                  1020   RES[  IS_TMP_VAR ~7 ]       OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          5*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~7 ] OP2[ , ->11 ]
+   65     6*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          7*       <113> INIT_STATIC_METHOD_CALL      self                         OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435423) 'parseDate' ]
+          8*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          9*       < 60> DO_FCALL                                      0   RES[  IS_VAR $8 ]       OP1[  IS_UNUSED  ]
+         10*       < 22> ASSIGN                                                    OP1[  IS_CV !0 ] OP2[ ,  IS_VAR $8 ]
+   68    11*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         12*       <123> TYPE_CHECK                                  1020   RES[  IS_TMP_VAR ~10 ]      OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         13*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~10 ] OP2[ , ->20 ]
+   69    14*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         15*       <113> INIT_STATIC_METHOD_CALL      self                         OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435409) 'parseDate' ]
+         16*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         17*       < 60> DO_FCALL                                      0   RES[  IS_VAR $11 ]      OP1[  IS_UNUSED  ]
+         18*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_VAR $11 ]
+         19*       < 42> JMP                                                       OP1[ ->32 ]
+   71    20*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         21*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~13 ]      OP1[  IS_CV !2 ]
+         22*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~13 ]      OP1[  IS_TMP_VAR ~13 ] OP2[ , ->26 ]
+         23*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435395) 'isInfinite' ]
+         24*       < 60> DO_FCALL                                      0   RES[  IS_VAR $14 ]      OP1[  IS_UNUSED  ]
+         25*       < 52> BOOL                                              RES[  IS_TMP_VAR ~13 ]      OP1[  IS_VAR $14 ]
+         26*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~13 ] OP2[ , ->32 ]
+   72    27*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         28*       < 68> NEW                                               RES[  IS_VAR $15 ]      OP1[ 'LogicException' ]
+         29*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435387) 'Cannot+get+all+occurrences+of+an+infinite+recurrence+rule.' ] OP2[  IS_UNUSED  ]
+         30*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         31*       <108> THROW                                         0           OP1[  IS_VAR $15 ] OP2[  IS_UNUSED  ]
+   75    32*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         33*       <123> TYPE_CHECK                                  1020   RES[  IS_TMP_VAR ~17 ]      OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         34*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~17 ]      OP1[  IS_TMP_VAR ~17 ] OP2[ , ->37 ]
+         35*       <123> TYPE_CHECK                                  1018   RES[  IS_TMP_VAR ~18 ]      OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         36*       < 52> BOOL                                              RES[  IS_TMP_VAR ~17 ]      OP1[  IS_TMP_VAR ~18 ]
+         37*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~17 ]      OP1[  IS_TMP_VAR ~17 ] OP2[ , ->40 ]
+         38*       < 20> IS_SMALLER                                        RES[  IS_TMP_VAR ~19 ]      OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435370) 0 ]
+         39*       < 52> BOOL                                              RES[  IS_TMP_VAR ~17 ]      OP1[  IS_TMP_VAR ~19 ]
+         40*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~17 ] OP2[ , ->46 ]
+   76    41*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         42*       < 68> NEW                                               RES[  IS_VAR $20 ]      OP1[ 'InvalidArgumentException' ]
+         43*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435363) '%24limit+cannot+be+negative' ] OP2[  IS_UNUSED  ]
+         44*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         45*       <108> THROW                                         0           OP1[  IS_VAR $20 ] OP2[  IS_UNUSED  ]
+   79    46*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         47*       <184> FETCH_THIS                                        RES[  IS_TMP_VAR ~22 ]      OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         48*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_TMP_VAR ~22 ]
+   80    49*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         50*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~24 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435350) 'total' ]
+         51*       <123> TYPE_CHECK                                  1020   RES[  IS_TMP_VAR ~25 ]      OP1[  IS_TMP_VAR ~24 ] OP2[  IS_UNUSED  ]
+         52*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~25 ] OP2[ , ->56 ]
+   81    53*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         54*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~26 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435343) 'cache' ]
+         55*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_TMP_VAR ~26 ]
+   84    56*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         57*       < 22> ASSIGN                                                    OP1[  IS_CV !4 ] OP2[ ,  IS_CONST (268435338) <array> ]
+   85    58*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         59*       < 22> ASSIGN                                                    OP1[  IS_CV !5 ] OP2[ ,  IS_CONST (268435335) 0 ]
+   86    60*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         61*       < 77> FE_RESET_R                                        RES[  IS_VAR $30 ]      OP1[  IS_CV !3 ] OP2[ , ->93 ]
+         62*       < 78> FE_FETCH_R                                                OP1[  IS_VAR $30 ] OP2[ ,  IS_CV !6 ] EXT_JMP_REL[ , ->93 ]
+   87    63*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         64*       <123> TYPE_CHECK                                  1020   RES[  IS_TMP_VAR ~31 ]      OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         65*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~31 ]      OP1[  IS_TMP_VAR ~31 ] OP2[ , ->68 ]
+         66*       < 20> IS_SMALLER                                        RES[  IS_TMP_VAR ~32 ]      OP1[  IS_CV !6 ] OP2[ ,  IS_CV !0 ]
+         67*       < 52> BOOL                                              RES[  IS_TMP_VAR ~31 ]      OP1[  IS_TMP_VAR ~32 ]
+         68*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~31 ] OP2[ , ->71 ]
+   88    69*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         70*       < 42> JMP                                                       OP1[ ->62 ]
+   90    71*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         72*       <123> TYPE_CHECK                                  1020   RES[  IS_TMP_VAR ~33 ]      OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         73*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~33 ]      OP1[  IS_TMP_VAR ~33 ] OP2[ , ->76 ]
+         74*       < 20> IS_SMALLER                                        RES[  IS_TMP_VAR ~34 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CV !6 ]
+         75*       < 52> BOOL                                              RES[  IS_TMP_VAR ~33 ]      OP1[  IS_TMP_VAR ~34 ]
+         76*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~33 ] OP2[ , ->79 ]
+   91    77*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         78*       < 42> JMP                                                       OP1[ ->93 ]
+   93    79*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         80*       <110> CLONE                                             RES[  IS_TMP_VAR ~36 ]      OP1[  IS_CV !6 ] OP2[  IS_UNUSED  ]
+         81*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !4 ] OP2[  IS_UNUSED  ]
+         82*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~36 ] OP2[  IS_UNUSED  ]
+   94    83*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         84*       < 26> ASSIGN_OP                    +=               1           OP1[  IS_CV !5 ] OP2[ ,  IS_CONST (268435286) 1 ]
+   95    85*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         86*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~38 ]      OP1[  IS_CV !2 ] OP2[ , ->89 ]
+         87*       < 21> IS_SMALLER_OR_EQUAL                               RES[  IS_TMP_VAR ~39 ]      OP1[  IS_CV !2 ] OP2[ ,  IS_CV !5 ]
+         88*       < 52> BOOL                                              RES[  IS_TMP_VAR ~38 ]      OP1[  IS_TMP_VAR ~39 ]
+         89*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~38 ] OP2[ , ->92 ]
+   96    90*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         91*       < 42> JMP                                                       OP1[ ->93 ]
+   86    92*       < 42> JMP                                                       OP1[ ->62 ]
+         93*       <127> FE_FREE                                                   OP1[  IS_VAR $30 ] OP2[  IS_UNUSED  ]
+   99    94*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         95*       < 62> RETURN                                                    OP1[  IS_CV !4 ]
+  100    96*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         97*       < 62> RETURN                                                    OP1[  IS_CONST (268435261) null ]
+
+End of function getoccurrencesbetween
+
+Function getoccurrencesafter:
+[+]Function Source Class Name: RRule\RRuleTrait
+[*]Start of arg_info extract:
+[*]arg_info num_args:3
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:date
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:inclusive
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**2**
+[*]name:limit
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\rlanvin\php-rrule\src\RRuleTrait.php
+function name:  getOccurrencesAfter
+number of ops:  38
+compiled vars:  !0 = $date, !1 = $inclusive, !2 = $limit, !3 = $occurrences
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  102     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 64> RECV_INIT                                         RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435438) <false> ]
+          2*       < 64> RECV_INIT                                         RES[  IS_CV !2 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435437) null ]
+  104     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       < 47> JMPNZ_EX                                          RES[  IS_TMP_VAR ~4 ]       OP1[  IS_CV !1 ] OP2[ , ->10 ]
+          5*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435432) 'occursAt' ]
+          6*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          7*       < 60> DO_FCALL                                      0   RES[  IS_VAR $5 ]       OP1[  IS_UNUSED  ]
+          8*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~6 ]       OP1[  IS_VAR $5 ]
+          9*       < 52> BOOL                                              RES[  IS_TMP_VAR ~4 ]       OP1[  IS_TMP_VAR ~6 ]
+         10*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~4 ] OP2[ , ->18 ]
+  105    11*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         12*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435420) 'getOccurrencesBetween' ]
+         13*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         14*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435418) null ] OP2[  IS_UNUSED  ]
+         15*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         16*       < 60> DO_FCALL                                      0   RES[  IS_VAR $7 ]       OP1[  IS_UNUSED  ]
+         17*       < 62> RETURN                                                    OP1[  IS_VAR $7 ]
+  108    18*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         19*       <123> TYPE_CHECK                                  1020   RES[  IS_TMP_VAR ~8 ]       OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         20*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~8 ] OP2[ , ->23 ]
+  109    21*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         22*       < 26> ASSIGN_OP                    +=               1           OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435403) 1 ]
+  111    23*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         24*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435400) 'getOccurrencesBetween' ]
+         25*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         26*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435398) null ] OP2[  IS_UNUSED  ]
+         27*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         28*       < 60> DO_FCALL                                      0   RES[  IS_VAR $10 ]      OP1[  IS_UNUSED  ]
+         29*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_VAR $10 ]
+  112    30*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         31*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435389) 'RRule%5Carray_slice' ]
+         32*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         33*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435388) 1 ] OP2[  IS_UNUSED  ]
+         34*       < 60> DO_FCALL                                      0   RES[  IS_VAR $12 ]      OP1[  IS_UNUSED  ]
+         35*       < 62> RETURN                                                    OP1[  IS_VAR $12 ]
+  113    36*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         37*       < 62> RETURN                                                    OP1[  IS_CONST (268435381) null ]
+
+End of function getoccurrencesafter
+
+Function getnthoccurrenceafter:
+[+]Function Source Class Name: RRule\RRuleTrait
+[*]Start of arg_info extract:
+[*]arg_info num_args:2
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:date
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:index
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\rlanvin\php-rrule\src\RRuleTrait.php
+function name:  getNthOccurrenceAfter
+number of ops:  29
+compiled vars:  !0 = $date, !1 = $index, !2 = $occurrences
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  115     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 63> RECV                                              RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ]
+  117     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       < 21> IS_SMALLER_OR_EQUAL                               RES[  IS_TMP_VAR ~3 ]       OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435439) 0 ]
+          4*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~3 ] OP2[ , ->10 ]
+  118     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       < 68> NEW                                               RES[  IS_VAR $4 ]       OP1[ 'InvalidArgumentException' ]
+          7*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435434) 'Index+must+be+a+positive+integer' ] OP2[  IS_UNUSED  ]
+          8*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+          9*       <108> THROW                                         0           OP1[  IS_VAR $4 ] OP2[  IS_UNUSED  ]
+  121    10*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         11*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435427) 'getOccurrencesAfter' ]
+         12*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         13*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435425) <false> ] OP2[  IS_UNUSED  ]
+         14*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         15*       < 60> DO_FCALL                                      0   RES[  IS_VAR $6 ]       OP1[  IS_UNUSED  ]
+         16*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_VAR $6 ]
+  123    17*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         18*       <  2> SUB                                               RES[  IS_TMP_VAR ~8 ]       OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435416) 1 ]
+         19*       <115> ISSET_ISEMPTY_DIM_OBJ                         0   RES[  IS_TMP_VAR ~9 ]       OP1[  IS_CV !2 ] OP2[ ,  IS_TMP_VAR ~8 ]
+         20*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~9 ] OP2[ , ->25 ]
+         21*       <  2> SUB                                               RES[  IS_TMP_VAR ~10 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435411) 1 ]
+         22*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~11 ]      OP1[  IS_CV !2 ] OP2[ ,  IS_TMP_VAR ~10 ]
+         23*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~12 ]      OP1[  IS_TMP_VAR ~11 ]
+         24*       < 42> JMP                                                       OP1[ ->26 ]
+         25*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~12 ]      OP1[  IS_CONST (268435404) null ]
+         26*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~12 ]
+  124    27*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         28*       < 62> RETURN                                                    OP1[  IS_CONST (268435399) null ]
+
+End of function getnthoccurrenceafter
+
+Function getoccurrencesbefore:
+[+]Function Source Class Name: RRule\RRuleTrait
+[*]Start of arg_info extract:
+[*]arg_info num_args:3
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:date
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:inclusive
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**2**
+[*]name:limit
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\rlanvin\php-rrule\src\RRuleTrait.php
+function name:  getOccurrencesBefore
+number of ops:  34
+compiled vars:  !0 = $date, !1 = $inclusive, !2 = $limit, !3 = $occurrences
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  126     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 64> RECV_INIT                                         RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435439) <false> ]
+          2*       < 64> RECV_INIT                                         RES[  IS_CV !2 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435438) null ]
+  129     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435435) 'getOccurrencesBetween' ]
+          5*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435435) null ] OP2[  IS_UNUSED  ]
+          6*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          7*       < 60> DO_FCALL                                      0   RES[  IS_VAR $4 ]       OP1[  IS_UNUSED  ]
+          8*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_VAR $4 ]
+  131     9*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         10*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~6 ]       OP1[  IS_CV !1 ]
+         11*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~6 ]       OP1[  IS_TMP_VAR ~6 ] OP2[ , ->16 ]
+         12*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435422) 'occursAt' ]
+         13*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         14*       < 60> DO_FCALL                                      0   RES[  IS_VAR $7 ]       OP1[  IS_UNUSED  ]
+         15*       < 52> BOOL                                              RES[  IS_TMP_VAR ~6 ]       OP1[  IS_VAR $7 ]
+         16*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~6 ] OP2[ , ->21 ]
+  132    17*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         18*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435412) 'RRule%5Carray_pop' ]
+         19*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         20*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  136    21*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         22*       < 43> JMPZ                                                      OP1[  IS_CV !2 ] OP2[ , ->30 ]
+  137    23*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         24*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435403) 'RRule%5Carray_slice' ]
+         25*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         26*       <  3> MUL                                               RES[  IS_TMP_VAR ~9 ]       OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435402) -1 ]
+         27*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~9 ] OP2[  IS_UNUSED  ]
+         28*       < 60> DO_FCALL                                      0   RES[  IS_VAR $10 ]      OP1[  IS_UNUSED  ]
+         29*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_VAR $10 ]
+  140    30*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         31*       < 62> RETURN                                                    OP1[  IS_CV !3 ]
+  141    32*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         33*       < 62> RETURN                                                    OP1[  IS_CONST (268435389) null ]
+
+End of function getoccurrencesbefore
+
+Function getnthoccurrencebefore:
+[+]Function Source Class Name: RRule\RRuleTrait
+[*]Start of arg_info extract:
+[*]arg_info num_args:2
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:date
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:index
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\rlanvin\php-rrule\src\RRuleTrait.php
+function name:  getNthOccurrenceBefore
+number of ops:  30
+compiled vars:  !0 = $date, !1 = $index, !2 = $occurrences
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  143     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 63> RECV                                              RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ]
+  145     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       < 21> IS_SMALLER_OR_EQUAL                               RES[  IS_TMP_VAR ~3 ]       OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435437) 0 ]
+          4*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~3 ] OP2[ , ->10 ]
+  146     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       < 68> NEW                                               RES[  IS_VAR $4 ]       OP1[ 'InvalidArgumentException' ]
+          7*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435432) 'Index+must+be+a+positive+integer' ] OP2[  IS_UNUSED  ]
+          8*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+          9*       <108> THROW                                         0           OP1[  IS_VAR $4 ] OP2[  IS_UNUSED  ]
+  149    10*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         11*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435425) 'getOccurrencesBefore' ]
+         12*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         13*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435423) <false> ] OP2[  IS_UNUSED  ]
+         14*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         15*       < 60> DO_FCALL                                      0   RES[  IS_VAR $6 ]       OP1[  IS_UNUSED  ]
+         16*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_VAR $6 ]
+  151    17*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         18*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435414) 'RRule%5Csizeof' ]
+         19*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         20*       < 60> DO_FCALL                                      0   RES[  IS_VAR $8 ]       OP1[  IS_UNUSED  ]
+         21*       < 20> IS_SMALLER                                        RES[  IS_TMP_VAR ~9 ]       OP1[  IS_VAR $8 ] OP2[ ,  IS_CV !1 ]
+         22*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~9 ] OP2[ , ->25 ]
+  152    23*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         24*       < 62> RETURN                                                    OP1[  IS_CONST (268435405) null ]
+  155    25*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         26*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~10 ]      OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435402) 0 ]
+         27*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~10 ]
+  156    28*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         29*       < 62> RETURN                                                    OP1[  IS_CONST (268435397) null ]
+
+End of function getnthoccurrencebefore
+
+Function getnthoccurrencefrom:
+[+]Function Source Class Name: RRule\RRuleTrait
+[*]Start of arg_info extract:
+[*]arg_info num_args:2
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:date
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:index
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\rlanvin\php-rrule\src\RRuleTrait.php
+function name:  getNthOccurrenceFrom
+number of ops:  48
+compiled vars:  !0 = $date, !1 = $index
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  158     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 63> RECV                                              RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ]
+  160     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435431) 'RRule%5Cis_numeric' ]
+          4*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+          5*       < 60> DO_FCALL                                      0   RES[  IS_VAR $2 ]       OP1[  IS_UNUSED  ]
+          6*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~3 ]       OP1[  IS_VAR $2 ]
+          7*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~3 ] OP2[ , ->13 ]
+  161     8*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          9*       < 68> NEW                                               RES[  IS_VAR $4 ]       OP1[ 'InvalidArgumentException' ]
+         10*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435422) 'Malformed+index+%28must+be+a+numeric%29' ] OP2[  IS_UNUSED  ]
+         11*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         12*       <108> THROW                                         0           OP1[  IS_VAR $4 ] OP2[  IS_UNUSED  ]
+  164    13*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         14*       < 18> IS_EQUAL                                          RES[  IS_TMP_VAR ~6 ]       OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435415) 0 ]
+         15*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~6 ] OP2[ , ->29 ]
+  165    16*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         17*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435410) 'occursAt' ]
+         18*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         19*       < 60> DO_FCALL                                      0   RES[  IS_VAR $7 ]       OP1[  IS_UNUSED  ]
+         20*       < 43> JMPZ                                                      OP1[  IS_VAR $7 ] OP2[ , ->26 ]
+         21*       <113> INIT_STATIC_METHOD_CALL      self                         OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435404) 'parseDate' ]
+         22*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         23*       < 60> DO_FCALL                                      0   RES[  IS_VAR $8 ]       OP1[  IS_UNUSED  ]
+         24*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~9 ]       OP1[  IS_VAR $8 ]
+         25*       < 42> JMP                                                       OP1[ ->27 ]
+         26*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~9 ]       OP1[  IS_CONST (268435396) null ]
+         27*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~9 ]
+         28*       < 42> JMP                                                       OP1[ ->46 ]
+  167    29*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         30*       < 20> IS_SMALLER                                        RES[  IS_TMP_VAR ~10 ]      OP1[  IS_CONST (268435389) 0 ] OP2[ ,  IS_CV !1 ]
+         31*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~10 ] OP2[ , ->39 ]
+  168    32*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         33*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435384) 'getNthOccurrenceAfter' ]
+         34*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         35*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         36*       < 60> DO_FCALL                                      0   RES[  IS_VAR $11 ]      OP1[  IS_UNUSED  ]
+         37*       < 62> RETURN                                                    OP1[  IS_VAR $11 ]
+         38*       < 42> JMP                                                       OP1[ ->46 ]
+  171    39*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         40*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435372) 'getNthOccurrenceBefore' ]
+         41*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         42*       <  3> MUL                                               RES[  IS_TMP_VAR ~12 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435370) -1 ]
+         43*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~12 ] OP2[  IS_UNUSED  ]
+         44*       < 60> DO_FCALL                                      0   RES[  IS_VAR $13 ]      OP1[  IS_UNUSED  ]
+         45*       < 62> RETURN                                                    OP1[  IS_VAR $13 ]
+  173    46*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         47*       < 62> RETURN                                                    OP1[  IS_CONST (268435361) null ]
+
+End of function getnthoccurrencefrom
+
+Function parsedate:
+[+]Function Source Class Name: RRule\RRuleTrait
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:date
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\rlanvin\php-rrule\src\RRuleTrait.php
+function name:  parseDate
+number of ops:  66
+compiled vars:  !0 = $date, !1 = $e
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  182     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  185     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       <138> INSTANCEOF                                        RES[  IS_TMP_VAR ~2 ]       OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435416) 'DateTime' ]
+          3*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~3 ]       OP1[  IS_TMP_VAR ~2 ]
+          4*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~3 ]       OP1[  IS_TMP_VAR ~3 ] OP2[ , ->8 ]
+          5*       <138> INSTANCEOF                                        RES[  IS_TMP_VAR ~4 ]       OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435412) 'DateTimeInterface' ]
+          6*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~5 ]       OP1[  IS_TMP_VAR ~4 ]
+          7*       < 52> BOOL                                              RES[  IS_TMP_VAR ~3 ]       OP1[  IS_TMP_VAR ~5 ]
+          8*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~3 ] OP2[ , ->59 ]
+  186     9*       <  0> NOP                                                      
+  187    10*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         11*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435402) 'RRule%5Cis_integer' ]
+         12*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         13*       < 60> DO_FCALL                                      0   RES[  IS_VAR $6 ]       OP1[  IS_UNUSED  ]
+         14*       < 43> JMPZ                                                      OP1[  IS_VAR $6 ] OP2[ , ->29 ]
+  188    15*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         16*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435395) 'DateTime' ] OP2[ ,  IS_CONST (268435397) 'createFromFormat' ]
+         17*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435397) 'U' ]
+         18*       <117> SEND_VAR                                                  OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         19*       < 60> DO_FCALL                                      0   RES[  IS_VAR $7 ]       OP1[  IS_UNUSED  ]
+         20*       < 22> ASSIGN                                                    OP1[  IS_CV !0 ] OP2[ ,  IS_VAR $7 ]
+  189    21*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         22*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435388) 'setTimezone' ]
+         23*       < 68> NEW                                               RES[  IS_VAR $9 ]       OP1[ 'DateTimeZone' ]
+         24*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435388) 'UTC' ] OP2[  IS_UNUSED  ]
+         25*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         26*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $9 ] OP2[  IS_UNUSED  ]
+         27*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         28*       < 42> JMP                                                       OP1[ ->34 ]
+  192    29*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         30*       < 68> NEW                                               RES[  IS_VAR $12 ]      OP1[ 'DateTime' ]
+         31*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         32*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         33*       < 22> ASSIGN                                                    OP1[  IS_CV !0 ] OP2[ ,  IS_VAR $12 ]
+         34*       < 42> JMP                                                       OP1[ ->58 ]
+  194    35*       <107> CATCH                                             RES[  IS_CV !1 ]       OP1[  IS_CONST (268435369) 'Exception' ] OP2[ , ->47 ]
+  195    36*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         37*       < 68> NEW                                               RES[  IS_VAR $15 ]      OP1[ 'InvalidArgumentException' ]
+  196    38*       < 54> ROPE_INIT                                     3   RES[  IS_TMP_VAR ~18 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435369) 'Failed+to+parse+the+date+%28' ]
+         39*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435365) 'getMessage' ]
+         40*       < 60> DO_FCALL                                      0   RES[  IS_VAR $16 ]      OP1[  IS_UNUSED  ]
+         41*       < 55> ROPE_ADD                                      1   RES[  IS_TMP_VAR ~18 ]      OP1[  IS_TMP_VAR ~18 ] OP2[ ,  IS_VAR $16 ]
+         42*       < 56> ROPE_END                                      2   RES[  IS_TMP_VAR ~17 ]      OP1[  IS_TMP_VAR ~18 ] OP2[ ,  IS_CONST (268435362) '%29' ]
+         43*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~17 ] OP2[  IS_UNUSED  ]
+         44*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         45*       <108> THROW                                         0           OP1[  IS_VAR $15 ] OP2[  IS_UNUSED  ]
+         46*       < 42> JMP                                                       OP1[ ->58 ]
+  198    47*       <107> CATCH                                       last  RES[  IS_CV !1 ]       OP1[  IS_CONST (268435353) 'Throwable' ]
+  199    48*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         49*       < 68> NEW                                               RES[  IS_VAR $21 ]      OP1[ 'InvalidArgumentException' ]
+  200    50*       < 54> ROPE_INIT                                     3   RES[  IS_TMP_VAR ~24 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435353) 'Failed+to+parse+the+date+%28' ]
+         51*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435349) 'getMessage' ]
+         52*       < 60> DO_FCALL                                      0   RES[  IS_VAR $22 ]      OP1[  IS_UNUSED  ]
+         53*       < 55> ROPE_ADD                                      1   RES[  IS_TMP_VAR ~24 ]      OP1[  IS_TMP_VAR ~24 ] OP2[ ,  IS_VAR $22 ]
+         54*       < 56> ROPE_END                                      2   RES[  IS_TMP_VAR ~23 ]      OP1[  IS_TMP_VAR ~24 ] OP2[ ,  IS_CONST (268435346) '%29' ]
+         55*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~23 ] OP2[  IS_UNUSED  ]
+         56*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         57*       <108> THROW                                         0           OP1[  IS_VAR $21 ] OP2[  IS_UNUSED  ]
+         58*       < 42> JMP                                                       OP1[ ->62 ]
+  205    59*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         60*       <110> CLONE                                             RES[  IS_TMP_VAR ~27 ]      OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         61*       < 22> ASSIGN                                                    OP1[  IS_CV !0 ] OP2[ ,  IS_TMP_VAR ~27 ]
+  207    62*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         63*       < 62> RETURN                                                    OP1[  IS_CV !0 ]
+  208    64*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         65*       < 62> RETURN                                                    OP1[  IS_CONST (268435325) null ]
+
+End of function parsedate
+
+End of class RRule\RRuleTrait.
+

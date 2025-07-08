@@ -1,0 +1,81 @@
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\MapGeolocation.php
+function name:  (null)
+number of ops:  1
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  181     0*       < 62> RETURN                                                    OP1[  IS_CONST (268435455) 1 ]
+
+Class MapGeolocation:
+[+]Class Parent Name: NULL
+End Trait extract
+Start Properties extract:
+Properties: NULL
+End Properties extract
+
+Function showmap:
+[+]Function Source Class Name: MapGeolocation
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\MapGeolocation.php
+function name:  showMap
+number of ops:  46
+compiled vars:  !0 = $rand, !1 = $js
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   46     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435427) 'mt_rand' ]
+          2*       < 60> DO_FCALL                                      0   RES[  IS_VAR $2 ]       OP1[  IS_UNUSED  ]
+          3*       < 22> ASSIGN                                                    OP1[  IS_CV !0 ] OP2[ ,  IS_VAR $2 ]
+   48     4*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          5*       < 54> ROPE_INIT                                     3   RES[  IS_TMP_VAR ~5 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435420) '%3Cdiv+id%3D%27setlocation_container_' ]
+          6*       < 55> ROPE_ADD                                      1   RES[  IS_TMP_VAR ~5 ]       OP1[  IS_TMP_VAR ~5 ] OP2[ ,  IS_CV !0 ]
+          7*       < 56> ROPE_END                                      2   RES[  IS_TMP_VAR ~4 ]       OP1[  IS_TMP_VAR ~5 ] OP2[ ,  IS_CONST (268435417) '%27%3E%3C%2Fdiv%3E' ]
+          8*       <136> ECHO                                                      OP1[  IS_TMP_VAR ~4 ]
+   91     9*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         10*       < 59> INIT_FCALL_BY_NAME                                        OP2[  IS_CONST (268435412) '__s' ]
+         11*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435412) 'No+result+found' ] OP2[  IS_UNUSED  ]
+         12*       < 60> DO_FCALL                                      0   RES[  IS_VAR $7 ]       OP1[  IS_UNUSED  ]
+         13*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~8 ]       OP1[  IS_CONST (268435409) '%0A++++++%24%28function%28%29%7B%0A+++++++++var+map_elt%2C+_marker%3B%0A+++++++++var+_setLocation+%3D+function%28lat%2C+lng%29+%7B%0A++++++++++++if+%28_marker%29+%7B%0A+++++++++++++++map_elt.removeLayer%28_marker%29%3B%0A++++++++++++%7D%0A++++++++++++_marker+%3D+L.marker%28%5Blat%2C+lng%5D%29.addTo%28map_elt%29%3B%0A++++++++++++map_elt.fitBounds%28%0A+++++++++++++++L.latLngBounds%28%5B_marker.getLatLng%28%29%5D%29%2C+%7B%0A++++++++++++++++++padding%3A+%5B50%2C+50%5D%2C%0A++++++++++++++++++maxZoom%3A+10%0A+++++++++++++++%7D%0A++++++++++++%29%3B%0A+++++++++%7D%3B%0A%0A+++++++++var+_autoSearch+%3D+function%28%29+%7B%0A++++++++++++var+_tosearch+%3D+%27%27%3B%0A++++++++++++var+_address+%3D+%24%28%27%2A%5Bname%3Daddress%5D%27%29.val%28%29%3B%0A++++++++++++var+_town+%3D+%24%28%27%2A%5Bname%3Dtown%5D%27%29.val%28%29%3B%0A++++++++++++var+_country+%3D+%24%28%27%2A%5Bname%3Dcountry%5D%27%29.val%28%29%3B%0A++++++++++++if+%28_address+%21%3D+%27%27%29+%7B%0A+++++++++++++++_tosearch+%2B%3D+_address%3B%0A++++++++++++%7D%0A++++++++++++if+%28_town+%21%3D+%27%27%29+%7B%0A+++++++++++++++if+%28_address+%21%3D+%27%27%29+%7B%0A++++++++++++++++++_tosearch+%2B%3D+%27+%27%3B%0A+++++++++++++++%7D%0A+++++++++++++++_tosearch+%2B%3D+_town%3B%0A++++++++++++%7D%0A++++++++++++if+%28_country+%21%3D+%27%27%29+%7B%0A+++++++++++++++if+%28_address+%21%3D+%27%27+%7C%7C+_town+%21%3D+%27%27%29+%7B%0A++++++++++++++++++_tosearch+%2B%3D+%27+%27%3B%0A+++++++++++++++%7D%0A+++++++++++++++_tosearch+%2B%3D+_country%3B%0A++++++++++++%7D%0A%0A++++++++++++%24%28%27.leaflet-control-geocoder-form+%3E+input%5Btype%3Dtext%5D%27%29.val%28_tosearch%29%3B%0A+++++++++%7D%0A+++++++++var+finalizeMap+%3D+function%28%29+%7B%0A++++++++++++var+geocoder+%3D+L.Control.geocoder%28%7B%0A++++++++++++++++defaultMarkGeocode%3A+false%2C%0A++++++++++++++++errorMessage%3A+%27' ] OP2[ ,  IS_VAR $7 ]
+         14*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~9 ]       OP1[  IS_TMP_VAR ~8 ] OP2[ ,  IS_CONST (268435408) '%27%2C%0A++++++++++++++++placeholder%3A+%27' ]
+   92    15*       < 59> INIT_FCALL_BY_NAME                                        OP2[  IS_CONST (268435407) '__s' ]
+         16*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435407) 'Search' ] OP2[  IS_UNUSED  ]
+         17*       < 60> DO_FCALL                                      0   RES[  IS_VAR $10 ]      OP1[  IS_UNUSED  ]
+         18*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~11 ]      OP1[  IS_TMP_VAR ~9 ] OP2[ ,  IS_VAR $10 ]
+         19*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~12 ]      OP1[  IS_TMP_VAR ~11 ] OP2[ ,  IS_CONST (268435402) '%27%0A++++++++++++%7D%29%3B%0A++++++++++++geocoder.on%28%27markgeocode%27%2C+function%28e%29+%7B%0A++++++++++++++++this._map.fitBounds%28e.geocode.bbox%29%3B%0A++++++++++++%7D%29%3B%0A++++++++++++map_elt.addControl%28geocoder%29%3B%0A++++++++++++_autoSearch%28%29%3B%0A%0A++++++++++++function+onMapClick%28e%29+%7B%0A+++++++++++++++var+popup+%3D+L.popup%28%29%3B%0A+++++++++++++++popup%0A++++++++++++++++++.setLatLng%28e.latlng%29%0A++++++++++++++++++.setContent%28%27SELECTPOPUP%27%29%0A++++++++++++++++++.openOn%28map_elt%29%3B%0A++++++++++++%7D%0A%0A++++++++++++map_elt.on%28%27click%27%2C+onMapClick%29%3B%0A%0A++++++++++++map_elt.on%28%27popupopen%27%2C+function%28e%29%7B%0A+++++++++++++++var+_popup+%3D+e.popup%3B%0A+++++++++++++++var+_container+%3D+%24%28_popup._container%29%3B%0A%0A+++++++++++++++var+_clat+%3D+_popup._latlng.lat.toString%28%29%3B%0A+++++++++++++++var+_clng+%3D+_popup._latlng.lng.toString%28%29%3B%0A%0A+++++++++++++++_popup.setContent%28%27%3Cp%3E%3Ca+href%3D%5C%27%23%5C%27%3E' ]
+  117    20*       < 59> INIT_FCALL_BY_NAME                                        OP2[  IS_CONST (268435401) '__s' ]
+         21*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435401) 'Set+location+here' ] OP2[  IS_UNUSED  ]
+         22*       < 60> DO_FCALL                                      0   RES[  IS_VAR $13 ]      OP1[  IS_UNUSED  ]
+         23*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~14 ]      OP1[  IS_TMP_VAR ~12 ] OP2[ ,  IS_VAR $13 ]
+         24*       < 54> ROPE_INIT                                    13   RES[  IS_TMP_VAR ~16 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435396) '%3C%2Fa%3E%3C%2Fp%3E%27%29%3B%0A%0A+++++++++++++++%24%28_container%29.find%28%27a%27%29.on%28%27click%27%2C+function%28e%29%7B%0A++++++++++++++++++e.preventDefault%28%29%3B%0A++++++++++++++++++_popup.remove%28%29%3B%0A++++++++++++++++++%24%28%27%2A%5Bname%3Dlatitude%5D%27%29.val%28_clat%29%3B%0A++++++++++++++++++%24%28%27%2A%5Bname%3Dlongitude%5D%27%29.val%28_clng%29.trigger%28%27change%27%29%3B%0A+++++++++++++++%7D%29%3B%0A++++++++++++%7D%29%3B%0A%0A++++++++++++var+_curlat+%3D+%24%28%27%2A%5Bname%3Dlatitude%5D%27%29.val%28%29%3B%0A++++++++++++var+_curlng+%3D+%24%28%27%2A%5Bname%3Dlongitude%5D%27%29.val%28%29%3B%0A%0A++++++++++++if+%28_curlat+%26%26+_curlng%29+%7B%0A+++++++++++++++_setLocation%28_curlat%2C+_curlng%29%3B%0A++++++++++++%7D%0A%0A++++++++++++%24%28%27%2A%5Bname%3Dlatitude%5D%2C%2A%5Bname%3Dlongitude%5D%27%29.on%28%27change%27%2C+function%28%29%7B%0A+++++++++++++++var+_curlat+%3D+%24%28%27%2A%5Bname%3Dlatitude%5D%27%29.val%28%29%3B%0A+++++++++++++++var+_curlng+%3D+%24%28%27%2A%5Bname%3Dlongitude%5D%27%29.val%28%29%3B%0A%0A+++++++++++++++if+%28_curlat+%26%26+_curlng%29+%7B%0A++++++++++++++++++_setLocation%28_curlat%2C+_curlng%29%3B%0A+++++++++++++++%7D%0A++++++++++++%7D%29%3B%0A+++++++++%7D%0A%0A+++++++++%2F%2F+Geolocation+may+be+disabled+in+the+browser+%28e.g.+geo.enabled+%3D+false+in+firefox%29%0A+++++++++if+%28%21navigator.geolocation%29+%7B%0A++++++++++++map_elt+%3D+initMap%28%24%28%27%23setlocation_container_' ]
+  146    25*       < 55> ROPE_ADD                                      1   RES[  IS_TMP_VAR ~16 ]      OP1[  IS_TMP_VAR ~16 ] OP2[ ,  IS_CV !0 ]
+         26*       < 55> ROPE_ADD                                      2   RES[  IS_TMP_VAR ~16 ]      OP1[  IS_TMP_VAR ~16 ] OP2[ ,  IS_CONST (268435393) '%27%29%2C+%27setlocation_' ]
+         27*       < 55> ROPE_ADD                                      3   RES[  IS_TMP_VAR ~16 ]      OP1[  IS_TMP_VAR ~16 ] OP2[ ,  IS_CV !0 ]
+         28*       < 55> ROPE_ADD                                      4   RES[  IS_TMP_VAR ~16 ]      OP1[  IS_TMP_VAR ~16 ] OP2[ ,  IS_CONST (268435390) '%27%2C+%27200px%27%29%3B%0A++++++++++++finalizeMap%28%29%3B%0A++++++++++++return%3B%0A+++++++++%7D%0A%0A+++++++++navigator.geolocation.getCurrentPosition%28function%28pos%29+%7B%0A++++++++++++%2F%2F+Try+to+determine+an+appropriate+zoom+level+based+on+accuracy%0A++++++++++++var+acc+%3D+pos.coords.accuracy%3B%0A++++++++++++if+%28acc+%3E+3000%29+%7B%0A++++++++++++++++%2F%2F+Very+low+accuracy.+Most+likely+a+device+without+GPS+or+a+cellular+connection%0A++++++++++++++++var+zoom+%3D+10%3B%0A++++++++++++%7D+else+if+%28acc+%3E+1000%29+%7B%0A++++++++++++++++%2F%2F+Low+accuracy%0A++++++++++++++++var+zoom+%3D+15%3B%0A++++++++++++%7D+else+if+%28acc+%3E+500%29+%7B%0A++++++++++++++++%2F%2F+Medium+accuracy%0A++++++++++++++++var+zoom+%3D+17%3B%0A++++++++++++%7D+else+%7B%0A++++++++++++++++%2F%2F+High+accuracy%0A++++++++++++++++var+zoom+%3D+20%3B%0A++++++++++++%7D%0A++++++++++++map_elt+%3D+initMap%28%24%28%27%23setlocation_container_' ]
+  167    29*       < 55> ROPE_ADD                                      5   RES[  IS_TMP_VAR ~16 ]      OP1[  IS_TMP_VAR ~16 ] OP2[ ,  IS_CV !0 ]
+         30*       < 55> ROPE_ADD                                      6   RES[  IS_TMP_VAR ~16 ]      OP1[  IS_TMP_VAR ~16 ] OP2[ ,  IS_CONST (268435387) '%27%29%2C+%27setlocation_' ]
+         31*       < 55> ROPE_ADD                                      7   RES[  IS_TMP_VAR ~16 ]      OP1[  IS_TMP_VAR ~16 ] OP2[ ,  IS_CV !0 ]
+         32*       < 55> ROPE_ADD                                      8   RES[  IS_TMP_VAR ~16 ]      OP1[  IS_TMP_VAR ~16 ] OP2[ ,  IS_CONST (268435384) '%27%2C+%27200px%27%2C+%7B%0A++++++++++++++++position%3A+%5Bpos.coords.latitude%2C+pos.coords.longitude%5D%2C%0A++++++++++++++++zoom%3A+zoom%0A++++++++++++%7D%29%3B%0A++++++++++++finalizeMap%28%29%3B%0A+++++++++%7D%2C+function%28%29+%7B%0A++++++++++++map_elt+%3D+initMap%28%24%28%27%23setlocation_container_' ]
+  173    33*       < 55> ROPE_ADD                                      9   RES[  IS_TMP_VAR ~16 ]      OP1[  IS_TMP_VAR ~16 ] OP2[ ,  IS_CV !0 ]
+         34*       < 55> ROPE_ADD                                     10   RES[  IS_TMP_VAR ~16 ]      OP1[  IS_TMP_VAR ~16 ] OP2[ ,  IS_CONST (268435381) '%27%29%2C+%27setlocation_' ]
+         35*       < 55> ROPE_ADD                                     11   RES[  IS_TMP_VAR ~16 ]      OP1[  IS_TMP_VAR ~16 ] OP2[ ,  IS_CV !0 ]
+         36*       < 56> ROPE_END                                     12   RES[  IS_TMP_VAR ~15 ]      OP1[  IS_TMP_VAR ~16 ] OP2[ ,  IS_CONST (268435378) '%27%2C+%27200px%27%29%3B%0A++++++++++++finalizeMap%28%29%3B%0A+++++++++%7D%2C+%7BenableHighAccuracy%3A+true%7D%29%3B%0A%0A++++++%7D%29%3B' ]
+         37*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~23 ]      OP1[  IS_TMP_VAR ~14 ] OP2[ ,  IS_TMP_VAR ~15 ]
+   49    38*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_TMP_VAR ~23 ]
+  178    39*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         40*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435371) 'Html' ] OP2[ ,  IS_CONST (268435373) 'scriptBlock' ]
+         41*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         42*       < 60> DO_FCALL                                      0   RES[  IS_VAR $25 ]      OP1[  IS_UNUSED  ]
+         43*       <136> ECHO                                                      OP1[  IS_VAR $25 ]
+  179    44*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         45*       < 62> RETURN                                                    OP1[  IS_CONST (268435365) null ]
+
+End of function showmap
+
+End of class MapGeolocation.
+

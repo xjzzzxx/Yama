@@ -1,0 +1,133 @@
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\sabre\dav\lib\DAV\Auth\Backend\Apache.php
+function name:  (null)
+number of ops:  7
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+    3     0*       <  0> NOP                                                      
+    5     1*       <  0> NOP                                                      
+    7     2*       <  0> NOP                                                      
+    8     3*       <  0> NOP                                                      
+   22     4*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          5*       <144> DECLARE_CLASS                                             OP1[  IS_CONST (268435443) 'sabre%5Cdav%5Cauth%5Cbackend%5Capache' ] OP2[  IS_UNUSED  ]
+   94     6*       < 62> RETURN                                                    OP1[  IS_CONST (268435443) 1 ]
+
+Class Sabre\DAV\Auth\Backend\Apache:
+[+]Class Parent Name: NULL
+End Trait extract
+Start Properties extract:
+Key: principalPrefix, Value: principals/, Type: Normal
+End Properties extract.
+
+Function check:
+[+]Function Source Class Name: Sabre\DAV\Auth\Backend\Apache
+[*]Start of arg_info extract:
+[*]arg_info num_args:2
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:request
+[*]type:Sabre\HTTP\RequestInterface
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:response
+[*]type:Sabre\HTTP\ResponseInterface
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\sabre\dav\lib\DAV\Auth\Backend\Apache.php
+function name:  check
+number of ops:  42
+compiled vars:  !0 = $request, !1 = $response, !2 = $remoteUser
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   57     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 63> RECV                                              RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ]
+   59     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435420) 'getRawServerValue' ]
+          4*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435420) 'REMOTE_USER' ] OP2[  IS_UNUSED  ]
+          5*       < 60> DO_FCALL                                      0   RES[  IS_VAR $3 ]       OP1[  IS_UNUSED  ]
+          6*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_VAR $3 ]
+   60     7*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          8*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435413) 'Sabre%5CDAV%5CAuth%5CBackend%5Cis_null' ]
+          9*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         10*       < 60> DO_FCALL                                      0   RES[  IS_VAR $5 ]       OP1[  IS_UNUSED  ]
+         11*       < 43> JMPZ                                                      OP1[  IS_VAR $5 ] OP2[ , ->17 ]
+   61    12*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         13*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435406) 'getRawServerValue' ]
+         14*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435406) 'REDIRECT_REMOTE_USER' ] OP2[  IS_UNUSED  ]
+         15*       < 60> DO_FCALL                                      0   RES[  IS_VAR $6 ]       OP1[  IS_UNUSED  ]
+         16*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_VAR $6 ]
+   63    17*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         18*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435399) 'Sabre%5CDAV%5CAuth%5CBackend%5Cis_null' ]
+         19*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         20*       < 60> DO_FCALL                                      0   RES[  IS_VAR $8 ]       OP1[  IS_UNUSED  ]
+         21*       < 43> JMPZ                                                      OP1[  IS_VAR $8 ] OP2[ , ->27 ]
+   64    22*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         23*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435392) 'getRawServerValue' ]
+         24*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435392) 'PHP_AUTH_USER' ] OP2[  IS_UNUSED  ]
+         25*       < 60> DO_FCALL                                      0   RES[  IS_VAR $9 ]       OP1[  IS_UNUSED  ]
+         26*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_VAR $9 ]
+   66    27*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         28*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435385) 'Sabre%5CDAV%5CAuth%5CBackend%5Cis_null' ]
+         29*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         30*       < 60> DO_FCALL                                      0   RES[  IS_VAR $11 ]      OP1[  IS_UNUSED  ]
+         31*       < 43> JMPZ                                                      OP1[  IS_VAR $11 ] OP2[ , ->34 ]
+   67    32*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         33*       < 62> RETURN                                                    OP1[  IS_CONST (268435378) <array> ]
+   70    34*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         35*       < 71> INIT_ARRAY                                        RES[  IS_TMP_VAR ~12 ]      OP1[  IS_CONST (268435375) <true> ] OP2[  IS_UNUSED  ]
+         36*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~13 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435374) 'principalPrefix' ]
+         37*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~14 ]      OP1[  IS_TMP_VAR ~13 ] OP2[ ,  IS_CV !2 ]
+         38*       < 72> ADD_ARRAY_ELEMENT                                 RES[  IS_TMP_VAR ~12 ]      OP1[  IS_TMP_VAR ~14 ] OP2[  IS_UNUSED  ]
+         39*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~12 ]
+   71    40*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         41*       < 62> RETURN                                                    OP1[  IS_CONST (268435365) null ]
+
+End of function check
+
+Function challenge:
+[+]Function Source Class Name: Sabre\DAV\Auth\Backend\Apache
+[*]Start of arg_info extract:
+[*]arg_info num_args:2
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:request
+[*]type:Sabre\HTTP\RequestInterface
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:response
+[*]type:Sabre\HTTP\ResponseInterface
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\sabre\dav\lib\DAV\Auth\Backend\Apache.php
+function name:  challenge
+number of ops:  4
+compiled vars:  !0 = $request, !1 = $response
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   90     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 63> RECV                                              RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ]
+   92     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       < 62> RETURN                                                    OP1[  IS_CONST (268435449) null ]
+
+End of function challenge
+
+End of class Sabre\DAV\Auth\Backend\Apache.
+

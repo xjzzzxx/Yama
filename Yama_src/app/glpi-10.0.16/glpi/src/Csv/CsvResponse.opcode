@@ -1,0 +1,79 @@
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\Csv\CsvResponse.php
+function name:  (null)
+number of ops:  3
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   36     0*       <  0> NOP                                                      
+   56     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 62> RETURN                                                    OP1[  IS_CONST (268435451) 1 ]
+
+Class Glpi\Csv\CsvResponse:
+[+]Class Parent Name: NULL
+End Trait extract
+Start Properties extract:
+Properties: NULL
+End Properties extract
+
+Function output:
+[+]Function Source Class Name: Glpi\Csv\CsvResponse
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:void
+
+[*]ArgInfoNo**0**
+[*]name:export
+[*]type:Glpi\Csv\ExportToCsvInterface
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\Csv\CsvResponse.php
+function name:  output
+number of ops:  34
+compiled vars:  !0 = $export, !1 = $csv
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   47     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+   49     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435429) 'League%5CCsv%5CWriter' ] OP2[ ,  IS_CONST (268435431) 'createFromString' ]
+          3*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435431) '' ] OP2[  IS_UNUSED  ]
+          4*       < 60> DO_FCALL                                      0   RES[  IS_VAR $2 ]       OP1[  IS_UNUSED  ]
+          5*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_VAR $2 ]
+   50     6*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          7*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435424) 'setDelimiter' ]
+          8*       < 89> FETCH_IS                                          RES[  IS_TMP_VAR ~4 ]       OP1[  IS_CONST (268435424) '_SESSION' ] OP2[  IS_UNUSED  ]
+          9*       < 90> FETCH_DIM_IS                                      RES[  IS_TMP_VAR ~5 ]       OP1[  IS_TMP_VAR ~4 ] OP2[ ,  IS_CONST (268435423) 'glpicsv_delimiter' ]
+         10*       <169> COALESCE                                          RES[  IS_TMP_VAR ~6 ]       OP1[  IS_TMP_VAR ~5 ] OP2[ , ->12 ]
+         11*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~6 ]       OP1[  IS_CONST (268435420) '%3B' ]
+         12*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~6 ] OP2[  IS_UNUSED  ]
+         13*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+   51    14*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         15*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435413) 'insertOne' ]
+         16*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435413) 'getFileHeader' ]
+         17*       < 60> DO_FCALL                                      0   RES[  IS_VAR $8 ]       OP1[  IS_UNUSED  ]
+         18*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $8 ] OP2[  IS_UNUSED  ]
+         19*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+   52    20*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         21*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435405) 'insertAll' ]
+         22*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435405) 'getFileContent' ]
+         23*       < 60> DO_FCALL                                      0   RES[  IS_VAR $10 ]      OP1[  IS_UNUSED  ]
+         24*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $10 ] OP2[  IS_UNUSED  ]
+         25*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+   53    26*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         27*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435397) 'output' ]
+         28*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435397) 'getFileName' ]
+         29*       < 60> DO_FCALL                                      0   RES[  IS_VAR $12 ]      OP1[  IS_UNUSED  ]
+         30*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $12 ] OP2[  IS_UNUSED  ]
+         31*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+   54    32*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         33*       < 62> RETURN                                                    OP1[  IS_CONST (268435389) null ]
+
+End of function output
+
+End of class Glpi\Csv\CsvResponse.
+

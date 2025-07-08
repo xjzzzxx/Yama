@@ -1,0 +1,2030 @@
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\league\oauth2-client\src\Provider\AbstractProvider.php
+function name:  (null)
+number of ops:  28
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   15     0*       <  0> NOP                                                      
+   17     1*       <  0> NOP                                                      
+   18     2*       <  0> NOP                                                      
+   19     3*       <  0> NOP                                                      
+   20     4*       <  0> NOP                                                      
+   21     5*       <  0> NOP                                                      
+   22     6*       <  0> NOP                                                      
+   23     7*       <  0> NOP                                                      
+   24     8*       <  0> NOP                                                      
+   25     9*       <  0> NOP                                                      
+   26    10*       <  0> NOP                                                      
+   27    11*       <  0> NOP                                                      
+   28    12*       <  0> NOP                                                      
+   29    13*       <  0> NOP                                                      
+   30    14*       <  0> NOP                                                      
+   31    15*       <  0> NOP                                                      
+   32    16*       <  0> NOP                                                      
+   33    17*       <  0> NOP                                                      
+   64    18*       <  0> NOP                                                      
+   69    19*       <  0> NOP                                                      
+   74    20*       <  0> NOP                                                      
+   79    21*       <  0> NOP                                                      
+   84    22*       <  0> NOP                                                      
+   89    23*       <  0> NOP                                                      
+   94    24*       <  0> NOP                                                      
+   40    25*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         26*       <144> DECLARE_CLASS                                             OP1[  IS_CONST (268435401) 'league%5Coauth2%5Cclient%5Cprovider%5Cabstractprovider' ] OP2[  IS_UNUSED  ]
+  844    27*       < 62> RETURN                                                    OP1[  IS_CONST (268435401) 1 ]
+
+Class League\OAuth2\Client\Provider\AbstractProvider:
+[+]Class Parent Name: NULL
+[+]ClassTrait ClassName: League\OAuth2\Client\Tool\ArrayAccessorTrait
+[+]ClassTrait ClassName: League\OAuth2\Client\Tool\GuardedPropertyTrait
+[+]ClassTrait ClassName: League\OAuth2\Client\Tool\QueryBuilderTrait
+End Trait extract
+Start Properties extract:
+Key: clientId, Value: UNINIT, Type: Normal
+Key: clientSecret, Value: UNINIT, Type: Normal
+Key: redirectUri, Value: UNINIT, Type: Normal
+Key: state, Value: UNINIT, Type: Normal
+Key: grantFactory, Value: UNINIT, Type: Normal
+Key: requestFactory, Value: UNINIT, Type: Normal
+Key: httpClient, Value: UNINIT, Type: Normal
+Key: optionProvider, Value: UNINIT, Type: Normal
+End Properties extract.
+
+Function __construct:
+[+]Function Source Class Name: League\OAuth2\Client\Provider\AbstractProvider
+[*]Start of arg_info extract:
+[*]arg_info num_args:2
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:options
+[*]type:array
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:collaborators
+[*]type:array
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\league\oauth2-client\src\Provider\AbstractProvider.php
+function name:  __construct
+number of ops:  77
+compiled vars:  !0 = $options, !1 = $collaborators, !2 = $client_options
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  112     0*       < 64> RECV_INIT                                         RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435411) <array> ]
+          1*       < 64> RECV_INIT                                         RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435410) <array> ]
+  116     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435407) 'fillProperties' ]
+          4*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          5*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  118     6*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          7*       <115> ISSET_ISEMPTY_DIM_OBJ                         1   RES[  IS_TMP_VAR ~4 ]       OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435401) 'grantFactory' ]
+          8*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~4 ] OP2[ , ->14 ]
+  119     9*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         10*       < 68> NEW                                               RES[  IS_VAR $6 ]       OP1[ 'League%5COAuth2%5CClient%5CGrant%5CGrantFactory' ]
+         11*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         12*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435392) 'grantFactory' ]
+         13*       <137> OP_DATA                                                   OP1[  IS_VAR $6 ] OP2[  IS_UNUSED  ]
+  121    14*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         15*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435389) 'setGrantFactory' ]
+         16*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         17*       < 93> FETCH_DIM_FUNC_ARG                                RES[  IS_VAR $8 ]       OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435387) 'grantFactory' ]
+         18*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $8 ] OP2[  IS_UNUSED  ]
+         19*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  123    20*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         21*       <115> ISSET_ISEMPTY_DIM_OBJ                         1   RES[  IS_TMP_VAR ~10 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435380) 'requestFactory' ]
+         22*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~10 ] OP2[ , ->28 ]
+  124    23*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         24*       < 68> NEW                                               RES[  IS_VAR $12 ]      OP1[ 'League%5COAuth2%5CClient%5CTool%5CRequestFactory' ]
+         25*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         26*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435371) 'requestFactory' ]
+         27*       <137> OP_DATA                                                   OP1[  IS_VAR $12 ] OP2[  IS_UNUSED  ]
+  126    28*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         29*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435368) 'setRequestFactory' ]
+         30*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         31*       < 93> FETCH_DIM_FUNC_ARG                                RES[  IS_VAR $14 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435366) 'requestFactory' ]
+         32*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $14 ] OP2[  IS_UNUSED  ]
+         33*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  128    34*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         35*       <115> ISSET_ISEMPTY_DIM_OBJ                         1   RES[  IS_TMP_VAR ~16 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435359) 'httpClient' ]
+         36*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~16 ] OP2[ , ->55 ]
+  129    37*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         38*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435354) 'getAllowedClientOptions' ]
+         39*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         40*       < 60> DO_FCALL                                      0   RES[  IS_VAR $17 ]      OP1[  IS_UNUSED  ]
+         41*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_VAR $17 ]
+  131    42*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         43*       < 68> NEW                                               RES[  IS_VAR $20 ]      OP1[ 'GuzzleHttp%5CClient' ]
+  132    44*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435347) 'League%5COAuth2%5CClient%5CProvider%5Carray_intersect_key' ]
+         45*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         46*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435346) 'League%5COAuth2%5CClient%5CProvider%5Carray_flip' ]
+         47*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         48*       < 60> DO_FCALL                                      0   RES[  IS_VAR $21 ]      OP1[  IS_UNUSED  ]
+         49*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $21 ] OP2[  IS_UNUSED  ]
+         50*       < 60> DO_FCALL                                      0   RES[  IS_VAR $22 ]      OP1[  IS_UNUSED  ]
+         51*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $22 ] OP2[  IS_UNUSED  ]
+         52*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  131    53*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435326) 'httpClient' ]
+  132    54*       <137> OP_DATA                                                   OP1[  IS_VAR $20 ] OP2[  IS_UNUSED  ]
+  135    55*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         56*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435329) 'setHttpClient' ]
+         57*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         58*       < 93> FETCH_DIM_FUNC_ARG                                RES[  IS_VAR $24 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435327) 'httpClient' ]
+         59*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $24 ] OP2[  IS_UNUSED  ]
+         60*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  137    61*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         62*       <115> ISSET_ISEMPTY_DIM_OBJ                         1   RES[  IS_TMP_VAR ~26 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435320) 'optionProvider' ]
+         63*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~26 ] OP2[ , ->69 ]
+  138    64*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         65*       < 68> NEW                                               RES[  IS_VAR $28 ]      OP1[ 'League%5COAuth2%5CClient%5COptionProvider%5CPostAuthOptionProvider' ]
+         66*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         67*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435311) 'optionProvider' ]
+         68*       <137> OP_DATA                                                   OP1[  IS_VAR $28 ] OP2[  IS_UNUSED  ]
+  140    69*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         70*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435308) 'setOptionProvider' ]
+         71*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         72*       < 93> FETCH_DIM_FUNC_ARG                                RES[  IS_VAR $30 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435306) 'optionProvider' ]
+         73*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $30 ] OP2[  IS_UNUSED  ]
+         74*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  141    75*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         76*       < 62> RETURN                                                    OP1[  IS_CONST (268435299) null ]
+
+End of function __construct
+
+Function getallowedclientoptions:
+[+]Function Source Class Name: League\OAuth2\Client\Provider\AbstractProvider
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:options
+[*]type:array
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\league\oauth2-client\src\Provider\AbstractProvider.php
+function name:  getAllowedClientOptions
+number of ops:  14
+compiled vars:  !0 = $options, !1 = $client_options
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  151     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  153     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435440) <array> ]
+  156     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       <115> ISSET_ISEMPTY_DIM_OBJ                         1   RES[  IS_TMP_VAR ~3 ]       OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435437) 'proxy' ]
+          5*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~4 ]       OP1[  IS_TMP_VAR ~3 ]
+          6*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~4 ] OP2[ , ->10 ]
+  157     7*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          8*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+          9*       <137> OP_DATA                                                   OP1[  IS_CONST (268435428) 'verify' ] OP2[  IS_UNUSED  ]
+  160    10*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         11*       < 62> RETURN                                                    OP1[  IS_CV !1 ]
+  161    12*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         13*       < 62> RETURN                                                    OP1[  IS_CONST (268435421) null ]
+
+End of function getallowedclientoptions
+
+Function setgrantfactory:
+[+]Function Source Class Name: League\OAuth2\Client\Provider\AbstractProvider
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:factory
+[*]type:League\OAuth2\Client\Grant\GrantFactory
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\league\oauth2-client\src\Provider\AbstractProvider.php
+function name:  setGrantFactory
+number of ops:  9
+compiled vars:  !0 = $factory
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  169     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  171     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435450) 'grantFactory' ]
+          3*       <137> OP_DATA                                                   OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+  173     4*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          5*       <184> FETCH_THIS                                        RES[  IS_TMP_VAR ~2 ]       OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~2 ]
+  174     7*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          8*       < 62> RETURN                                                    OP1[  IS_CONST (268435439) null ]
+
+End of function setgrantfactory
+
+Function getgrantfactory:
+[+]Function Source Class Name: League\OAuth2\Client\Provider\AbstractProvider
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\league\oauth2-client\src\Provider\AbstractProvider.php
+function name:  getGrantFactory
+number of ops:  5
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  183     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435452) 'grantFactory' ]
+          2*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~0 ]
+  184     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       < 62> RETURN                                                    OP1[  IS_CONST (268435447) null ]
+
+End of function getgrantfactory
+
+Function setrequestfactory:
+[+]Function Source Class Name: League\OAuth2\Client\Provider\AbstractProvider
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:factory
+[*]type:League\OAuth2\Client\Tool\RequestFactory
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\league\oauth2-client\src\Provider\AbstractProvider.php
+function name:  setRequestFactory
+number of ops:  9
+compiled vars:  !0 = $factory
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  192     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  194     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435450) 'requestFactory' ]
+          3*       <137> OP_DATA                                                   OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+  196     4*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          5*       <184> FETCH_THIS                                        RES[  IS_TMP_VAR ~2 ]       OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~2 ]
+  197     7*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          8*       < 62> RETURN                                                    OP1[  IS_CONST (268435439) null ]
+
+End of function setrequestfactory
+
+Function getrequestfactory:
+[+]Function Source Class Name: League\OAuth2\Client\Provider\AbstractProvider
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\league\oauth2-client\src\Provider\AbstractProvider.php
+function name:  getRequestFactory
+number of ops:  5
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  206     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435452) 'requestFactory' ]
+          2*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~0 ]
+  207     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       < 62> RETURN                                                    OP1[  IS_CONST (268435447) null ]
+
+End of function getrequestfactory
+
+Function sethttpclient:
+[+]Function Source Class Name: League\OAuth2\Client\Provider\AbstractProvider
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:client
+[*]type:GuzzleHttp\ClientInterface
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\league\oauth2-client\src\Provider\AbstractProvider.php
+function name:  setHttpClient
+number of ops:  9
+compiled vars:  !0 = $client
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  215     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  217     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435450) 'httpClient' ]
+          3*       <137> OP_DATA                                                   OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+  219     4*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          5*       <184> FETCH_THIS                                        RES[  IS_TMP_VAR ~2 ]       OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~2 ]
+  220     7*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          8*       < 62> RETURN                                                    OP1[  IS_CONST (268435439) null ]
+
+End of function sethttpclient
+
+Function gethttpclient:
+[+]Function Source Class Name: League\OAuth2\Client\Provider\AbstractProvider
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\league\oauth2-client\src\Provider\AbstractProvider.php
+function name:  getHttpClient
+number of ops:  5
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  229     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435452) 'httpClient' ]
+          2*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~0 ]
+  230     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       < 62> RETURN                                                    OP1[  IS_CONST (268435447) null ]
+
+End of function gethttpclient
+
+Function setoptionprovider:
+[+]Function Source Class Name: League\OAuth2\Client\Provider\AbstractProvider
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:provider
+[*]type:League\OAuth2\Client\OptionProvider\OptionProviderInterface
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\league\oauth2-client\src\Provider\AbstractProvider.php
+function name:  setOptionProvider
+number of ops:  9
+compiled vars:  !0 = $provider
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  238     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  240     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435450) 'optionProvider' ]
+          3*       <137> OP_DATA                                                   OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+  242     4*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          5*       <184> FETCH_THIS                                        RES[  IS_TMP_VAR ~2 ]       OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~2 ]
+  243     7*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          8*       < 62> RETURN                                                    OP1[  IS_CONST (268435439) null ]
+
+End of function setoptionprovider
+
+Function getoptionprovider:
+[+]Function Source Class Name: League\OAuth2\Client\Provider\AbstractProvider
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\league\oauth2-client\src\Provider\AbstractProvider.php
+function name:  getOptionProvider
+number of ops:  5
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  252     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435452) 'optionProvider' ]
+          2*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~0 ]
+  253     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       < 62> RETURN                                                    OP1[  IS_CONST (268435447) null ]
+
+End of function getoptionprovider
+
+Function getstate:
+[+]Function Source Class Name: League\OAuth2\Client\Provider\AbstractProvider
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\league\oauth2-client\src\Provider\AbstractProvider.php
+function name:  getState
+number of ops:  5
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  264     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435452) 'state' ]
+          2*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~0 ]
+  265     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       < 62> RETURN                                                    OP1[  IS_CONST (268435447) null ]
+
+End of function getstate
+
+Function getbaseauthorizationurl:
+[+]Function Source Class Name: League\OAuth2\Client\Provider\AbstractProvider
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\league\oauth2-client\src\Provider\AbstractProvider.php
+function name:  getBaseAuthorizationUrl
+number of ops:  2
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  274     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 62> RETURN                                                    OP1[  IS_CONST (268435453) null ]
+
+End of function getbaseauthorizationurl
+
+Function getbaseaccesstokenurl:
+[+]Function Source Class Name: League\OAuth2\Client\Provider\AbstractProvider
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:params
+[*]type:array
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\league\oauth2-client\src\Provider\AbstractProvider.php
+function name:  getBaseAccessTokenUrl
+number of ops:  3
+compiled vars:  !0 = $params
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  284     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 62> RETURN                                                    OP1[  IS_CONST (268435451) null ]
+
+End of function getbaseaccesstokenurl
+
+Function getresourceownerdetailsurl:
+[+]Function Source Class Name: League\OAuth2\Client\Provider\AbstractProvider
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:token
+[*]type:League\OAuth2\Client\Token\AccessToken
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\league\oauth2-client\src\Provider\AbstractProvider.php
+function name:  getResourceOwnerDetailsUrl
+number of ops:  3
+compiled vars:  !0 = $token
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  292     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 62> RETURN                                                    OP1[  IS_CONST (268435451) null ]
+
+End of function getresourceownerdetailsurl
+
+Function getrandomstate:
+[+]Function Source Class Name: League\OAuth2\Client\Provider\AbstractProvider
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:length
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\league\oauth2-client\src\Provider\AbstractProvider.php
+function name:  getRandomState
+number of ops:  12
+compiled vars:  !0 = $length
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  301     0*       < 64> RECV_INIT                                         RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435447) 32 ]
+  305     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435444) 'League%5COAuth2%5CClient%5CProvider%5Cbin2hex' ]
+          3*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435445) 'League%5COAuth2%5CClient%5CProvider%5Crandom_bytes' ]
+          4*       <  4> DIV                                               RES[  IS_TMP_VAR ~1 ]       OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435446) 2 ]
+          5*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~1 ] OP2[  IS_UNUSED  ]
+          6*       < 60> DO_FCALL                                      0   RES[  IS_VAR $2 ]       OP1[  IS_UNUSED  ]
+          7*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $2 ] OP2[  IS_UNUSED  ]
+          8*       < 60> DO_FCALL                                      0   RES[  IS_VAR $3 ]       OP1[  IS_UNUSED  ]
+          9*       < 62> RETURN                                                    OP1[  IS_VAR $3 ]
+  306    10*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         11*       < 62> RETURN                                                    OP1[  IS_CONST (268435433) null ]
+
+End of function getrandomstate
+
+Function getdefaultscopes:
+[+]Function Source Class Name: League\OAuth2\Client\Provider\AbstractProvider
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\league\oauth2-client\src\Provider\AbstractProvider.php
+function name:  getDefaultScopes
+number of ops:  2
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  316     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 62> RETURN                                                    OP1[  IS_CONST (268435453) null ]
+
+End of function getdefaultscopes
+
+Function getscopeseparator:
+[+]Function Source Class Name: League\OAuth2\Client\Provider\AbstractProvider
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\league\oauth2-client\src\Provider\AbstractProvider.php
+function name:  getScopeSeparator
+number of ops:  4
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  326     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 62> RETURN                                                    OP1[  IS_CONST (268435452) '%2C' ]
+  327     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       < 62> RETURN                                                    OP1[  IS_CONST (268435449) null ]
+
+End of function getscopeseparator
+
+Function getauthorizationparameters:
+[+]Function Source Class Name: League\OAuth2\Client\Provider\AbstractProvider
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:options
+[*]type:array
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\league\oauth2-client\src\Provider\AbstractProvider.php
+function name:  getAuthorizationParameters
+number of ops:  59
+compiled vars:  !0 = $options, !1 = $separator
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  335     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  337     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       <115> ISSET_ISEMPTY_DIM_OBJ                         1   RES[  IS_TMP_VAR ~2 ]       OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435412) 'state' ]
+          3*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~2 ] OP2[ , ->9 ]
+  338     4*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          5*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435408) 'getRandomState' ]
+          6*       < 60> DO_FCALL                                      0   RES[  IS_VAR $4 ]       OP1[  IS_UNUSED  ]
+          7*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435403) 'state' ]
+          8*       <137> OP_DATA                                                   OP1[  IS_VAR $4 ] OP2[  IS_UNUSED  ]
+  341     9*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         10*       <115> ISSET_ISEMPTY_DIM_OBJ                         1   RES[  IS_TMP_VAR ~5 ]       OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435400) 'scope' ]
+         11*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~5 ] OP2[ , ->17 ]
+  342    12*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         13*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435396) 'getDefaultScopes' ]
+         14*       < 60> DO_FCALL                                      0   RES[  IS_VAR $7 ]       OP1[  IS_UNUSED  ]
+         15*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435391) 'scope' ]
+         16*       <137> OP_DATA                                                   OP1[  IS_VAR $7 ] OP2[  IS_UNUSED  ]
+  346    17*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         18*       < 26> ASSIGN_OP                    +=               1           OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435388) <array> ]
+  350    19*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         20*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435385) 'League%5COAuth2%5CClient%5CProvider%5Cis_array' ]
+         21*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         22*       < 93> FETCH_DIM_FUNC_ARG                                RES[  IS_VAR $9 ]       OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435384) 'scope' ]
+         23*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $9 ] OP2[  IS_UNUSED  ]
+         24*       < 60> DO_FCALL                                      0   RES[  IS_VAR $10 ]      OP1[  IS_UNUSED  ]
+         25*       < 43> JMPZ                                                      OP1[  IS_VAR $10 ] OP2[ , ->39 ]
+  351    26*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         27*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435375) 'getScopeSeparator' ]
+         28*       < 60> DO_FCALL                                      0   RES[  IS_VAR $11 ]      OP1[  IS_UNUSED  ]
+         29*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_VAR $11 ]
+  352    30*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         31*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435370) 'League%5COAuth2%5CClient%5CProvider%5Cimplode' ]
+         32*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         33*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         34*       < 93> FETCH_DIM_FUNC_ARG                                RES[  IS_VAR $14 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435367) 'scope' ]
+         35*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $14 ] OP2[  IS_UNUSED  ]
+         36*       < 60> DO_FCALL                                      0   RES[  IS_VAR $15 ]      OP1[  IS_UNUSED  ]
+         37*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435357) 'scope' ]
+         38*       <137> OP_DATA                                                   OP1[  IS_VAR $15 ] OP2[  IS_UNUSED  ]
+  356    39*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         40*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~17 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435357) 'state' ]
+         41*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435354) 'state' ]
+         42*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~17 ] OP2[  IS_UNUSED  ]
+  360    43*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         44*       <115> ISSET_ISEMPTY_DIM_OBJ                         0   RES[  IS_TMP_VAR ~18 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435350) 'redirect_uri' ]
+         45*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~19 ]      OP1[  IS_TMP_VAR ~18 ]
+         46*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~19 ] OP2[ , ->51 ]
+  361    47*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         48*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~21 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435344) 'redirectUri' ]
+         49*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435341) 'redirect_uri' ]
+         50*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~21 ] OP2[  IS_UNUSED  ]
+  364    51*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         52*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~23 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435338) 'clientId' ]
+         53*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435335) 'client_id' ]
+         54*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~23 ] OP2[  IS_UNUSED  ]
+  366    55*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         56*       < 62> RETURN                                                    OP1[  IS_CV !0 ]
+  367    57*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         58*       < 62> RETURN                                                    OP1[  IS_CONST (268435327) null ]
+
+End of function getauthorizationparameters
+
+Function getauthorizationquery:
+[+]Function Source Class Name: League\OAuth2\Client\Provider\AbstractProvider
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:params
+[*]type:array
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\league\oauth2-client\src\Provider\AbstractProvider.php
+function name:  getAuthorizationQuery
+number of ops:  8
+compiled vars:  !0 = $params
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  375     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  377     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435449) 'buildQueryString' ]
+          3*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          4*       < 60> DO_FCALL                                      0   RES[  IS_VAR $1 ]       OP1[  IS_UNUSED  ]
+          5*       < 62> RETURN                                                    OP1[  IS_VAR $1 ]
+  378     6*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          7*       < 62> RETURN                                                    OP1[  IS_CONST (268435441) null ]
+
+End of function getauthorizationquery
+
+Function getauthorizationurl:
+[+]Function Source Class Name: League\OAuth2\Client\Provider\AbstractProvider
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:options
+[*]type:array
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\league\oauth2-client\src\Provider\AbstractProvider.php
+function name:  getAuthorizationUrl
+number of ops:  23
+compiled vars:  !0 = $options, !1 = $base, !2 = $params, !3 = $query
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  386     0*       < 64> RECV_INIT                                         RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435446) <array> ]
+  388     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435443) 'getBaseAuthorizationUrl' ]
+          3*       < 60> DO_FCALL                                      0   RES[  IS_VAR $4 ]       OP1[  IS_UNUSED  ]
+          4*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_VAR $4 ]
+  389     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435437) 'getAuthorizationParameters' ]
+          7*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          8*       < 60> DO_FCALL                                      0   RES[  IS_VAR $6 ]       OP1[  IS_UNUSED  ]
+          9*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_VAR $6 ]
+  390    10*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         11*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435429) 'getAuthorizationQuery' ]
+         12*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         13*       < 60> DO_FCALL                                      0   RES[  IS_VAR $8 ]       OP1[  IS_UNUSED  ]
+         14*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_VAR $8 ]
+  392    15*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         16*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435421) 'appendQuery' ]
+         17*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         18*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         19*       < 60> DO_FCALL                                      0   RES[  IS_VAR $10 ]      OP1[  IS_UNUSED  ]
+         20*       < 62> RETURN                                                    OP1[  IS_VAR $10 ]
+  393    21*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         22*       < 62> RETURN                                                    OP1[  IS_CONST (268435411) null ]
+
+End of function getauthorizationurl
+
+Function authorize:
+[+]Function Source Class Name: League\OAuth2\Client\Provider\AbstractProvider
+[*]Start of arg_info extract:
+[*]arg_info num_args:2
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:options
+[*]type:array
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:redirectHandler
+[*]type:?callable
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\league\oauth2-client\src\Provider\AbstractProvider.php
+function name:  authorize
+number of ops:  25
+compiled vars:  !0 = $options, !1 = $redirectHandler, !2 = $url
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  402     0*       < 64> RECV_INIT                                         RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435447) <array> ]
+          1*       < 64> RECV_INIT                                         RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435446) null ]
+  406     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435443) 'getAuthorizationUrl' ]
+          4*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          5*       < 60> DO_FCALL                                      0   RES[  IS_VAR $3 ]       OP1[  IS_UNUSED  ]
+          6*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_VAR $3 ]
+  407     7*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          8*       < 43> JMPZ                                                      OP1[  IS_CV !1 ] OP2[ , ->16 ]
+  408     9*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         10*       <128> INIT_DYNAMIC_CALL                                         OP1[  IS_UNUSED  ] OP2[  IS_CV !1 ]
+         11*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         12*       <184> FETCH_THIS                                        RES[  IS_VAR $5 ]       OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         13*       < 66> SEND_VAR_EX                                               OP1[  IS_VAR $5 ] OP2[  IS_UNUSED  ]
+         14*       < 60> DO_FCALL                                      0   RES[  IS_VAR $6 ]       OP1[  IS_UNUSED  ]
+         15*       < 62> RETURN                                                    OP1[  IS_VAR $6 ]
+  412    16*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         17*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435417) 'League%5COAuth2%5CClient%5CProvider%5Cheader' ]
+         18*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~7 ]       OP1[  IS_CONST (268435418) 'Location%3A+' ] OP2[ ,  IS_CV !2 ]
+         19*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~7 ] OP2[  IS_UNUSED  ]
+         20*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  413    21*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         22*       < 79> EXIT                                                      OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+  415    23*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         24*       < 62> RETURN                                                    OP1[  IS_CONST (268435407) null ]
+
+End of function authorize
+
+Function appendquery:
+[+]Function Source Class Name: League\OAuth2\Client\Provider\AbstractProvider
+[*]Start of arg_info extract:
+[*]arg_info num_args:2
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:url
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:query
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\league\oauth2-client\src\Provider\AbstractProvider.php
+function name:  appendQuery
+number of ops:  29
+compiled vars:  !0 = $url, !1 = $query, !2 = $glue
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  424     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 63> RECV                                              RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ]
+  426     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435439) 'League%5COAuth2%5CClient%5CProvider%5Ctrim' ]
+          4*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+          5*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435438) '%3F%26' ] OP2[  IS_UNUSED  ]
+          6*       < 60> DO_FCALL                                      0   RES[  IS_VAR $3 ]       OP1[  IS_UNUSED  ]
+          7*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_VAR $3 ]
+  428     8*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          9*       < 43> JMPZ                                                      OP1[  IS_CV !1 ] OP2[ , ->25 ]
+  429    10*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         11*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435427) 'League%5COAuth2%5CClient%5CProvider%5Cstrstr' ]
+         12*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         13*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435426) '%3F' ] OP2[  IS_UNUSED  ]
+         14*       < 60> DO_FCALL                                      0   RES[  IS_VAR $5 ]       OP1[  IS_UNUSED  ]
+         15*       <123> TYPE_CHECK                                    4   RES[  IS_TMP_VAR ~6 ]       OP1[  IS_VAR $5 ] OP2[  IS_UNUSED  ]
+         16*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~6 ] OP2[ , ->19 ]
+         17*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~7 ]       OP1[  IS_CONST (268435419) '%3F' ]
+         18*       < 42> JMP                                                       OP1[ ->20 ]
+         19*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~7 ]       OP1[  IS_CONST (268435416) '%26' ]
+         20*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_TMP_VAR ~7 ]
+  430    21*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         22*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~9 ]       OP1[  IS_CV !0 ] OP2[ ,  IS_CV !2 ]
+         23*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~10 ]      OP1[  IS_TMP_VAR ~9 ] OP2[ ,  IS_CV !1 ]
+         24*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~10 ]
+  433    25*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         26*       < 62> RETURN                                                    OP1[  IS_CV !0 ]
+  434    27*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         28*       < 62> RETURN                                                    OP1[  IS_CONST (268435399) null ]
+
+End of function appendquery
+
+Function getaccesstokenmethod:
+[+]Function Source Class Name: League\OAuth2\Client\Provider\AbstractProvider
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\league\oauth2-client\src\Provider\AbstractProvider.php
+function name:  getAccessTokenMethod
+number of ops:  5
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  443     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435452) 'METHOD_POST' ]
+          2*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~0 ]
+  444     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       < 62> RETURN                                                    OP1[  IS_CONST (268435447) null ]
+
+End of function getaccesstokenmethod
+
+Function getaccesstokenresourceownerid:
+[+]Function Source Class Name: League\OAuth2\Client\Provider\AbstractProvider
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\league\oauth2-client\src\Provider\AbstractProvider.php
+function name:  getAccessTokenResourceOwnerId
+number of ops:  5
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  453     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435452) 'ACCESS_TOKEN_RESOURCE_OWNER_ID' ]
+          2*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~0 ]
+  454     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       < 62> RETURN                                                    OP1[  IS_CONST (268435447) null ]
+
+End of function getaccesstokenresourceownerid
+
+Function getaccesstokenquery:
+[+]Function Source Class Name: League\OAuth2\Client\Provider\AbstractProvider
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:params
+[*]type:array
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\league\oauth2-client\src\Provider\AbstractProvider.php
+function name:  getAccessTokenQuery
+number of ops:  8
+compiled vars:  !0 = $params
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  462     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  464     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435449) 'buildQueryString' ]
+          3*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          4*       < 60> DO_FCALL                                      0   RES[  IS_VAR $1 ]       OP1[  IS_UNUSED  ]
+          5*       < 62> RETURN                                                    OP1[  IS_VAR $1 ]
+  465     6*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          7*       < 62> RETURN                                                    OP1[  IS_CONST (268435441) null ]
+
+End of function getaccesstokenquery
+
+Function verifygrant:
+[+]Function Source Class Name: League\OAuth2\Client\Provider\AbstractProvider
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:grant
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\league\oauth2-client\src\Provider\AbstractProvider.php
+function name:  verifyGrant
+number of ops:  21
+compiled vars:  !0 = $grant
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  474     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  476     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435442) 'League%5COAuth2%5CClient%5CProvider%5Cis_string' ]
+          3*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          4*       < 60> DO_FCALL                                      0   RES[  IS_VAR $1 ]       OP1[  IS_UNUSED  ]
+          5*       < 43> JMPZ                                                      OP1[  IS_VAR $1 ] OP2[ , ->12 ]
+  477     6*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          7*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~2 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435435) 'grantFactory' ]
+          8*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~2 ] OP2[ ,  IS_CONST (268435434) 'getGrant' ]
+          9*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         10*       < 60> DO_FCALL                                      0   RES[  IS_VAR $3 ]       OP1[  IS_UNUSED  ]
+         11*       < 62> RETURN                                                    OP1[  IS_VAR $3 ]
+  480    12*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         13*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~4 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435426) 'grantFactory' ]
+         14*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~4 ] OP2[ ,  IS_CONST (268435425) 'checkGrant' ]
+         15*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         16*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  481    17*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         18*       < 62> RETURN                                                    OP1[  IS_CV !0 ]
+  482    19*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         20*       < 62> RETURN                                                    OP1[  IS_CONST (268435415) null ]
+
+End of function verifygrant
+
+Function getaccesstokenurl:
+[+]Function Source Class Name: League\OAuth2\Client\Provider\AbstractProvider
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:params
+[*]type:array
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\league\oauth2-client\src\Provider\AbstractProvider.php
+function name:  getAccessTokenUrl
+number of ops:  27
+compiled vars:  !0 = $params, !1 = $url, !2 = $query
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  490     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  492     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435442) 'getBaseAccessTokenUrl' ]
+          3*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          4*       < 60> DO_FCALL                                      0   RES[  IS_VAR $3 ]       OP1[  IS_UNUSED  ]
+          5*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_VAR $3 ]
+  494     6*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          7*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435434) 'getAccessTokenMethod' ]
+          8*       < 60> DO_FCALL                                      0   RES[  IS_VAR $5 ]       OP1[  IS_UNUSED  ]
+          9*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~6 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435432) 'METHOD_GET' ]
+         10*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~7 ]       OP1[  IS_VAR $5 ] OP2[ ,  IS_TMP_VAR ~6 ]
+         11*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~7 ] OP2[ , ->23 ]
+  495    12*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         13*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435425) 'getAccessTokenQuery' ]
+         14*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         15*       < 60> DO_FCALL                                      0   RES[  IS_VAR $8 ]       OP1[  IS_UNUSED  ]
+         16*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_VAR $8 ]
+  496    17*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         18*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435417) 'appendQuery' ]
+         19*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         20*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         21*       < 60> DO_FCALL                                      0   RES[  IS_VAR $10 ]      OP1[  IS_UNUSED  ]
+         22*       < 62> RETURN                                                    OP1[  IS_VAR $10 ]
+  499    23*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         24*       < 62> RETURN                                                    OP1[  IS_CV !1 ]
+  500    25*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         26*       < 62> RETURN                                                    OP1[  IS_CONST (268435403) null ]
+
+End of function getaccesstokenurl
+
+Function getaccesstokenrequest:
+[+]Function Source Class Name: League\OAuth2\Client\Provider\AbstractProvider
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:params
+[*]type:array
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\league\oauth2-client\src\Provider\AbstractProvider.php
+function name:  getAccessTokenRequest
+number of ops:  28
+compiled vars:  !0 = $params, !1 = $method, !2 = $url, !3 = $options
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  508     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  510     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435440) 'getAccessTokenMethod' ]
+          3*       < 60> DO_FCALL                                      0   RES[  IS_VAR $4 ]       OP1[  IS_UNUSED  ]
+          4*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_VAR $4 ]
+  511     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435434) 'getAccessTokenUrl' ]
+          7*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          8*       < 60> DO_FCALL                                      0   RES[  IS_VAR $6 ]       OP1[  IS_UNUSED  ]
+          9*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_VAR $6 ]
+  512    10*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         11*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~8 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435426) 'optionProvider' ]
+         12*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~8 ] OP2[ ,  IS_CONST (268435425) 'getAccessTokenOptions' ]
+         13*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435425) 'getAccessTokenMethod' ]
+         14*       < 60> DO_FCALL                                      0   RES[  IS_VAR $9 ]       OP1[  IS_UNUSED  ]
+         15*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $9 ] OP2[  IS_UNUSED  ]
+         16*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         17*       < 60> DO_FCALL                                      0   RES[  IS_VAR $10 ]      OP1[  IS_UNUSED  ]
+         18*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_VAR $10 ]
+  514    19*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         20*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435413) 'getRequest' ]
+         21*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         22*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         23*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         24*       < 60> DO_FCALL                                      0   RES[  IS_VAR $12 ]      OP1[  IS_UNUSED  ]
+         25*       < 62> RETURN                                                    OP1[  IS_VAR $12 ]
+  515    26*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         27*       < 62> RETURN                                                    OP1[  IS_CONST (268435401) null ]
+
+End of function getaccesstokenrequest
+
+Function getaccesstoken:
+[+]Function Source Class Name: League\OAuth2\Client\Provider\AbstractProvider
+[*]Start of arg_info extract:
+[*]arg_info num_args:2
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:grant
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:options
+[*]type:array
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\league\oauth2-client\src\Provider\AbstractProvider.php
+function name:  getAccessToken
+number of ops:  57
+compiled vars:  !0 = $grant, !1 = $options, !2 = $params, !3 = $request, !4 = $response, !5 = $prepared, !6 = $token
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  525     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 64> RECV_INIT                                         RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435428) <array> ]
+  527     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435425) 'verifyGrant' ]
+          4*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          5*       < 60> DO_FCALL                                      0   RES[  IS_VAR $7 ]       OP1[  IS_UNUSED  ]
+          6*       < 22> ASSIGN                                                    OP1[  IS_CV !0 ] OP2[ ,  IS_VAR $7 ]
+  530     7*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          8*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~9 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435417) 'clientId' ]
+          9*       < 71> INIT_ARRAY                                        RES[  IS_TMP_VAR ~10 ]      OP1[  IS_TMP_VAR ~9 ] OP2[ ,  IS_CONST (268435416) 'client_id' ]
+  531    10*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~11 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435415) 'clientSecret' ]
+         11*       < 72> ADD_ARRAY_ELEMENT                                 RES[  IS_TMP_VAR ~10 ]      OP1[  IS_TMP_VAR ~11 ] OP2[ ,  IS_CONST (268435414) 'client_secret' ]
+  532    12*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~12 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435413) 'redirectUri' ]
+         13*       < 72> ADD_ARRAY_ELEMENT                                 RES[  IS_TMP_VAR ~10 ]      OP1[  IS_TMP_VAR ~12 ] OP2[ ,  IS_CONST (268435412) 'redirect_uri' ]
+  529    14*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_TMP_VAR ~10 ]
+  535    15*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         16*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435407) 'prepareRequestParameters' ]
+         17*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         18*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         19*       < 60> DO_FCALL                                      0   RES[  IS_VAR $14 ]      OP1[  IS_UNUSED  ]
+         20*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_VAR $14 ]
+  536    21*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         22*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435397) 'getAccessTokenRequest' ]
+         23*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         24*       < 60> DO_FCALL                                      0   RES[  IS_VAR $16 ]      OP1[  IS_UNUSED  ]
+         25*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_VAR $16 ]
+  537    26*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         27*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435389) 'getParsedResponse' ]
+         28*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         29*       < 60> DO_FCALL                                      0   RES[  IS_VAR $18 ]      OP1[  IS_UNUSED  ]
+         30*       < 22> ASSIGN                                                    OP1[  IS_CV !4 ] OP2[ ,  IS_VAR $18 ]
+  538    31*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         32*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435381) 'League%5COAuth2%5CClient%5CProvider%5Cis_array' ]
+         33*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !4 ] OP2[  IS_UNUSED  ]
+         34*       < 60> DO_FCALL                                      0   RES[  IS_VAR $20 ]      OP1[  IS_UNUSED  ]
+         35*       <123> TYPE_CHECK                                    4   RES[  IS_TMP_VAR ~21 ]      OP1[  IS_VAR $20 ] OP2[  IS_UNUSED  ]
+         36*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~21 ] OP2[ , ->42 ]
+  539    37*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         38*       < 68> NEW                                               RES[  IS_VAR $22 ]      OP1[ 'UnexpectedValueException' ]
+  540    39*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435372) 'Invalid+response+received+from+Authorization+Server.+Expected+JSON.' ] OP2[  IS_UNUSED  ]
+         40*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         41*       <108> THROW                                         0           OP1[  IS_VAR $22 ] OP2[  IS_UNUSED  ]
+  543    42*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         43*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435365) 'prepareAccessTokenResponse' ]
+         44*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !4 ] OP2[  IS_UNUSED  ]
+         45*       < 60> DO_FCALL                                      0   RES[  IS_VAR $24 ]      OP1[  IS_UNUSED  ]
+         46*       < 22> ASSIGN                                                    OP1[  IS_CV !5 ] OP2[ ,  IS_VAR $24 ]
+  544    47*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         48*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435357) 'createAccessToken' ]
+         49*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !5 ] OP2[  IS_UNUSED  ]
+         50*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         51*       < 60> DO_FCALL                                      0   RES[  IS_VAR $26 ]      OP1[  IS_UNUSED  ]
+         52*       < 22> ASSIGN                                                    OP1[  IS_CV !6 ] OP2[ ,  IS_VAR $26 ]
+  546    53*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         54*       < 62> RETURN                                                    OP1[  IS_CV !6 ]
+  547    55*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         56*       < 62> RETURN                                                    OP1[  IS_CONST (268435343) null ]
+
+End of function getaccesstoken
+
+Function getrequest:
+[+]Function Source Class Name: League\OAuth2\Client\Provider\AbstractProvider
+[*]Start of arg_info extract:
+[*]arg_info num_args:3
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:method
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:url
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**2**
+[*]name:options
+[*]type:array
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\league\oauth2-client\src\Provider\AbstractProvider.php
+function name:  getRequest
+number of ops:  13
+compiled vars:  !0 = $method, !1 = $url, !2 = $options
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  557     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 63> RECV                                              RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ]
+          2*       < 64> RECV_INIT                                         RES[  IS_CV !2 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435447) <array> ]
+  559     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435444) 'createRequest' ]
+          5*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          6*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+          7*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435440) null ] OP2[  IS_UNUSED  ]
+          8*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+          9*       < 60> DO_FCALL                                      0   RES[  IS_VAR $3 ]       OP1[  IS_UNUSED  ]
+         10*       < 62> RETURN                                                    OP1[  IS_VAR $3 ]
+  560    11*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         12*       < 62> RETURN                                                    OP1[  IS_CONST (268435431) null ]
+
+End of function getrequest
+
+Function getauthenticatedrequest:
+[+]Function Source Class Name: League\OAuth2\Client\Provider\AbstractProvider
+[*]Start of arg_info extract:
+[*]arg_info num_args:4
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:method
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:url
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**2**
+[*]name:token
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**3**
+[*]name:options
+[*]type:array
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\league\oauth2-client\src\Provider\AbstractProvider.php
+function name:  getAuthenticatedRequest
+number of ops:  14
+compiled vars:  !0 = $method, !1 = $url, !2 = $token, !3 = $options
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  571     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 63> RECV                                              RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ]
+          2*       < 63> RECV                                              RES[  IS_CV !2 ]       OP1[  IS_UNUSED  ]
+          3*       < 64> RECV_INIT                                         RES[  IS_CV !3 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435446) <array> ]
+  573     4*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          5*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435443) 'createRequest' ]
+          6*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          7*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+          8*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+          9*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         10*       < 60> DO_FCALL                                      0   RES[  IS_VAR $4 ]       OP1[  IS_UNUSED  ]
+         11*       < 62> RETURN                                                    OP1[  IS_VAR $4 ]
+  574    12*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         13*       < 62> RETURN                                                    OP1[  IS_CONST (268435429) null ]
+
+End of function getauthenticatedrequest
+
+Function createrequest:
+[+]Function Source Class Name: League\OAuth2\Client\Provider\AbstractProvider
+[*]Start of arg_info extract:
+[*]arg_info num_args:4
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:method
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:url
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**2**
+[*]name:token
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**3**
+[*]name:options
+[*]type:array
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\league\oauth2-client\src\Provider\AbstractProvider.php
+function name:  createRequest
+number of ops:  29
+compiled vars:  !0 = $method, !1 = $url, !2 = $token, !3 = $options, !4 = $defaults, !5 = $factory
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  585     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 63> RECV                                              RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ]
+          2*       < 63> RECV                                              RES[  IS_CV !2 ]       OP1[  IS_UNUSED  ]
+          3*       < 63> RECV                                              RES[  IS_CV !3 ]       OP1[  IS_UNUSED  ]
+  588     4*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          5*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435435) 'getHeaders' ]
+          6*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+          7*       < 60> DO_FCALL                                      0   RES[  IS_VAR $6 ]       OP1[  IS_UNUSED  ]
+          8*       < 71> INIT_ARRAY                                        RES[  IS_TMP_VAR ~7 ]       OP1[  IS_VAR $6 ] OP2[ ,  IS_CONST (268435431) 'headers' ]
+  587     9*       < 22> ASSIGN                                                    OP1[  IS_CV !4 ] OP2[ ,  IS_TMP_VAR ~7 ]
+  591    10*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         11*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435426) 'League%5COAuth2%5CClient%5CProvider%5Carray_merge_recursive' ]
+         12*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !4 ] OP2[  IS_UNUSED  ]
+         13*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         14*       < 60> DO_FCALL                                      0   RES[  IS_VAR $9 ]       OP1[  IS_UNUSED  ]
+         15*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_VAR $9 ]
+  592    16*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         17*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435417) 'getRequestFactory' ]
+         18*       < 60> DO_FCALL                                      0   RES[  IS_VAR $11 ]      OP1[  IS_UNUSED  ]
+         19*       < 22> ASSIGN                                                    OP1[  IS_CV !5 ] OP2[ ,  IS_VAR $11 ]
+  594    20*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         21*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !5 ] OP2[ ,  IS_CONST (268435411) 'getRequestWithOptions' ]
+         22*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         23*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         24*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         25*       < 60> DO_FCALL                                      0   RES[  IS_VAR $13 ]      OP1[  IS_UNUSED  ]
+         26*       < 62> RETURN                                                    OP1[  IS_VAR $13 ]
+  595    27*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         28*       < 62> RETURN                                                    OP1[  IS_CONST (268435399) null ]
+
+End of function createrequest
+
+Function getresponse:
+[+]Function Source Class Name: League\OAuth2\Client\Provider\AbstractProvider
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:request
+[*]type:Psr\Http\Message\RequestInterface
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\league\oauth2-client\src\Provider\AbstractProvider.php
+function name:  getResponse
+number of ops:  10
+compiled vars:  !0 = $request
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  606     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  608     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435447) 'getHttpClient' ]
+          3*       < 60> DO_FCALL                                      0   RES[  IS_VAR $1 ]       OP1[  IS_UNUSED  ]
+          4*       <112> INIT_METHOD_CALL                                          OP1[  IS_VAR $1 ] OP2[ ,  IS_CONST (268435445) 'send' ]
+          5*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          6*       < 60> DO_FCALL                                      0   RES[  IS_VAR $2 ]       OP1[  IS_UNUSED  ]
+          7*       < 62> RETURN                                                    OP1[  IS_VAR $2 ]
+  609     8*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          9*       < 62> RETURN                                                    OP1[  IS_CONST (268435437) null ]
+
+End of function getresponse
+
+Function getparsedresponse:
+[+]Function Source Class Name: League\OAuth2\Client\Provider\AbstractProvider
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:request
+[*]type:Psr\Http\Message\RequestInterface
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\league\oauth2-client\src\Provider\AbstractProvider.php
+function name:  getParsedResponse
+number of ops:  27
+compiled vars:  !0 = $request, !1 = $response, !2 = $e, !3 = $parsed
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  618     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  620     1*       <  0> NOP                                                      
+  621     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435439) 'getResponse' ]
+          4*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          5*       < 60> DO_FCALL                                      0   RES[  IS_VAR $4 ]       OP1[  IS_UNUSED  ]
+          6*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_VAR $4 ]
+          7*       < 42> JMP                                                       OP1[ ->13 ]
+  622     8*       <107> CATCH                                       last  RES[  IS_CV !2 ]       OP1[  IS_CONST (268435431) 'GuzzleHttp%5CException%5CBadResponseException' ]
+  623     9*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         10*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435429) 'getResponse' ]
+         11*       < 60> DO_FCALL                                      0   RES[  IS_VAR $6 ]       OP1[  IS_UNUSED  ]
+         12*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_VAR $6 ]
+  626    13*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         14*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435423) 'parseResponse' ]
+         15*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         16*       < 60> DO_FCALL                                      0   RES[  IS_VAR $8 ]       OP1[  IS_UNUSED  ]
+         17*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_VAR $8 ]
+  628    18*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         19*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435415) 'checkResponse' ]
+         20*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         21*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         22*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  630    23*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         24*       < 62> RETURN                                                    OP1[  IS_CV !3 ]
+  631    25*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         26*       < 62> RETURN                                                    OP1[  IS_CONST (268435403) null ]
+
+End of function getparsedresponse
+
+Function parsejson:
+[+]Function Source Class Name: League\OAuth2\Client\Provider\AbstractProvider
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:content
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\league\oauth2-client\src\Provider\AbstractProvider.php
+function name:  parseJson
+number of ops:  28
+compiled vars:  !0 = $content
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  640     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  642     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435432) 'League%5COAuth2%5CClient%5CProvider%5Cjson_decode' ]
+          3*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          4*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435431) <true> ] OP2[  IS_UNUSED  ]
+          5*       < 60> DO_FCALL                                      0   RES[  IS_VAR $1 ]       OP1[  IS_UNUSED  ]
+          6*       < 22> ASSIGN                                                    OP1[  IS_CV !0 ] OP2[ ,  IS_VAR $1 ]
+  644     7*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          8*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435424) 'League%5COAuth2%5CClient%5CProvider%5Cjson_last_error' ]
+          9*       < 60> DO_FCALL                                      0   RES[  IS_VAR $3 ]       OP1[  IS_UNUSED  ]
+         10*       < 99> FETCH_CONSTANT                                    RES[  IS_TMP_VAR ~4 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435423) 'League%5COAuth2%5CClient%5CProvider%5CJSON_ERROR_NONE' ]
+         11*       < 17> IS_NOT_IDENTICAL                                  RES[  IS_TMP_VAR ~5 ]       OP1[  IS_VAR $3 ] OP2[ ,  IS_TMP_VAR ~4 ]
+         12*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~5 ] OP2[ , ->24 ]
+  645    13*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         14*       < 68> NEW                                               RES[  IS_VAR $6 ]       OP1[ 'UnexpectedValueException' ]
+         15*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435418) 'League%5COAuth2%5CClient%5CProvider%5Csprintf' ]
+  646    16*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435419) 'Failed+to+parse+JSON+response%3A+%25s' ] OP2[  IS_UNUSED  ]
+  647    17*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435418) 'League%5COAuth2%5CClient%5CProvider%5Cjson_last_error_msg' ]
+         18*       < 60> DO_FCALL                                      0   RES[  IS_VAR $7 ]       OP1[  IS_UNUSED  ]
+         19*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $7 ] OP2[  IS_UNUSED  ]
+         20*       < 60> DO_FCALL                                      0   RES[  IS_VAR $8 ]       OP1[  IS_UNUSED  ]
+         21*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $8 ] OP2[  IS_UNUSED  ]
+         22*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         23*       <108> THROW                                         0           OP1[  IS_VAR $6 ] OP2[  IS_UNUSED  ]
+  651    24*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         25*       < 62> RETURN                                                    OP1[  IS_CV !0 ]
+  652    26*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         27*       < 62> RETURN                                                    OP1[  IS_CONST (268435401) null ]
+
+End of function parsejson
+
+Function getcontenttype:
+[+]Function Source Class Name: League\OAuth2\Client\Provider\AbstractProvider
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:response
+[*]type:Psr\Http\Message\ResponseInterface
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\league\oauth2-client\src\Provider\AbstractProvider.php
+function name:  getContentType
+number of ops:  13
+compiled vars:  !0 = $response
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  660     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  662     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435444) 'League%5COAuth2%5CClient%5CProvider%5Cjoin' ]
+          3*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435445) '%3B' ] OP2[  IS_UNUSED  ]
+          4*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435444) 'getHeader' ]
+          5*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435444) 'content-type' ] OP2[  IS_UNUSED  ]
+          6*       < 60> DO_FCALL                                      0   RES[  IS_VAR $1 ]       OP1[  IS_UNUSED  ]
+          7*       < 51> CAST                                          7   RES[  IS_TMP_VAR ~2 ]       OP1[  IS_VAR $1 ] OP2[  IS_UNUSED  ]
+          8*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~2 ] OP2[  IS_UNUSED  ]
+          9*       < 60> DO_FCALL                                      0   RES[  IS_VAR $3 ]       OP1[  IS_UNUSED  ]
+         10*       < 62> RETURN                                                    OP1[  IS_VAR $3 ]
+  663    11*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         12*       < 62> RETURN                                                    OP1[  IS_CONST (268435431) null ]
+
+End of function getcontenttype
+
+Function parseresponse:
+[+]Function Source Class Name: League\OAuth2\Client\Provider\AbstractProvider
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:response
+[*]type:Psr\Http\Message\ResponseInterface
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\league\oauth2-client\src\Provider\AbstractProvider.php
+function name:  parseResponse
+number of ops:  58
+compiled vars:  !0 = $response, !1 = $content, !2 = $type, !3 = $parsed, !4 = $e
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  672     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  674     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435425) 'getBody' ]
+          3*       < 60> DO_FCALL                                      0   RES[  IS_VAR $5 ]       OP1[  IS_UNUSED  ]
+          4*       < 51> CAST                                          6   RES[  IS_TMP_VAR ~6 ]       OP1[  IS_VAR $5 ] OP2[  IS_UNUSED  ]
+          5*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_TMP_VAR ~6 ]
+  675     6*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          7*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435417) 'getContentType' ]
+          8*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          9*       < 60> DO_FCALL                                      0   RES[  IS_VAR $8 ]       OP1[  IS_UNUSED  ]
+         10*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_VAR $8 ]
+  677    11*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         12*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435409) 'League%5COAuth2%5CClient%5CProvider%5Cstrpos' ]
+         13*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         14*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435408) 'urlencoded' ] OP2[  IS_UNUSED  ]
+         15*       < 60> DO_FCALL                                      0   RES[  IS_VAR $10 ]      OP1[  IS_UNUSED  ]
+         16*       <123> TYPE_CHECK                                  1018   RES[  IS_TMP_VAR ~11 ]      OP1[  IS_VAR $10 ] OP2[  IS_UNUSED  ]
+         17*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~11 ] OP2[ , ->25 ]
+  678    18*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         19*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435399) 'League%5COAuth2%5CClient%5CProvider%5Cparse_str' ]
+         20*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         21*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         22*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  679    23*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         24*       < 62> RETURN                                                    OP1[  IS_CV !3 ]
+  685    25*       <  0> NOP                                                      
+  686    26*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         27*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435386) 'parseJson' ]
+         28*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         29*       < 60> DO_FCALL                                      0   RES[  IS_VAR $13 ]      OP1[  IS_UNUSED  ]
+         30*       < 62> RETURN                                                    OP1[  IS_VAR $13 ]
+         31*       < 42> JMP                                                       OP1[ ->56 ]
+  687    32*       <107> CATCH                                       last  RES[  IS_CV !4 ]       OP1[  IS_CONST (268435378) 'UnexpectedValueException' ]
+  688    33*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         34*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435376) 'League%5COAuth2%5CClient%5CProvider%5Cstrpos' ]
+         35*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         36*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435375) 'json' ] OP2[  IS_UNUSED  ]
+         37*       < 60> DO_FCALL                                      0   RES[  IS_VAR $14 ]      OP1[  IS_UNUSED  ]
+         38*       <123> TYPE_CHECK                                  1018   RES[  IS_TMP_VAR ~15 ]      OP1[  IS_VAR $14 ] OP2[  IS_UNUSED  ]
+         39*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~15 ] OP2[ , ->42 ]
+  689    40*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         41*       <108> THROW                                         0           OP1[  IS_CV !4 ] OP2[  IS_UNUSED  ]
+  692    42*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         43*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435362) 'getStatusCode' ]
+         44*       < 60> DO_FCALL                                      0   RES[  IS_VAR $16 ]      OP1[  IS_UNUSED  ]
+         45*       < 18> IS_EQUAL                                          RES[  IS_TMP_VAR ~17 ]      OP1[  IS_VAR $16 ] OP2[ ,  IS_CONST (268435360) 500 ]
+         46*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~17 ] OP2[ , ->54 ]
+  693    47*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         48*       < 68> NEW                                               RES[  IS_VAR $18 ]      OP1[ 'UnexpectedValueException' ]
+  694    49*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435355) 'An+OAuth+server+error+was+encountered+that+did+not+contain+a+JSON+body' ] OP2[  IS_UNUSED  ]
+  695    50*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435354) 0 ] OP2[  IS_UNUSED  ]
+  694    51*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !4 ] OP2[  IS_UNUSED  ]
+         52*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         53*       <108> THROW                                         0           OP1[  IS_VAR $18 ] OP2[  IS_UNUSED  ]
+  700    54*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         55*       < 62> RETURN                                                    OP1[  IS_CV !1 ]
+  702    56*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         57*       < 62> RETURN                                                    OP1[  IS_CONST (268435341) null ]
+
+End of function parseresponse
+
+Function checkresponse:
+[+]Function Source Class Name: League\OAuth2\Client\Provider\AbstractProvider
+[*]Start of arg_info extract:
+[*]arg_info num_args:2
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:response
+[*]type:Psr\Http\Message\ResponseInterface
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:data
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\league\oauth2-client\src\Provider\AbstractProvider.php
+function name:  checkResponse
+number of ops:  4
+compiled vars:  !0 = $response, !1 = $data
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  712     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 63> RECV                                              RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ]
+          2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       < 62> RETURN                                                    OP1[  IS_CONST (268435449) null ]
+
+End of function checkresponse
+
+Function prepareaccesstokenresponse:
+[+]Function Source Class Name: League\OAuth2\Client\Provider\AbstractProvider
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:result
+[*]type:array
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\league\oauth2-client\src\Provider\AbstractProvider.php
+function name:  prepareAccessTokenResponse
+number of ops:  19
+compiled vars:  !0 = $result
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  723     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  725     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435444) 'getAccessTokenResourceOwnerId' ]
+          3*       < 60> DO_FCALL                                      0   RES[  IS_VAR $1 ]       OP1[  IS_UNUSED  ]
+          4*       <123> TYPE_CHECK                                  1020   RES[  IS_TMP_VAR ~2 ]       OP1[  IS_VAR $1 ] OP2[  IS_UNUSED  ]
+          5*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~2 ] OP2[ , ->15 ]
+  726     6*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          7*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435437) 'getValueByKey' ]
+  727     8*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+  728     9*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435435) 'getAccessTokenResourceOwnerId' ]
+         10*       < 60> DO_FCALL                                      0   RES[  IS_VAR $4 ]       OP1[  IS_UNUSED  ]
+         11*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $4 ] OP2[  IS_UNUSED  ]
+         12*       < 60> DO_FCALL                                      0   RES[  IS_VAR $5 ]       OP1[  IS_UNUSED  ]
+  726    13*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435424) 'resource_owner_id' ]
+  728    14*       <137> OP_DATA                                                   OP1[  IS_VAR $5 ] OP2[  IS_UNUSED  ]
+  731    15*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         16*       < 62> RETURN                                                    OP1[  IS_CV !0 ]
+  732    17*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         18*       < 62> RETURN                                                    OP1[  IS_CONST (268435419) null ]
+
+End of function prepareaccesstokenresponse
+
+Function createaccesstoken:
+[+]Function Source Class Name: League\OAuth2\Client\Provider\AbstractProvider
+[*]Start of arg_info extract:
+[*]arg_info num_args:2
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:response
+[*]type:array
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:grant
+[*]type:League\OAuth2\Client\Grant\AbstractGrant
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\league\oauth2-client\src\Provider\AbstractProvider.php
+function name:  createAccessToken
+number of ops:  9
+compiled vars:  !0 = $response, !1 = $grant
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  744     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 63> RECV                                              RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ]
+  746     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       < 68> NEW                                               RES[  IS_VAR $2 ]       OP1[ 'League%5COAuth2%5CClient%5CToken%5CAccessToken' ]
+          4*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          5*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+          6*       < 62> RETURN                                                    OP1[  IS_VAR $2 ]
+  747     7*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          8*       < 62> RETURN                                                    OP1[  IS_CONST (268435439) null ]
+
+End of function createaccesstoken
+
+Function createresourceowner:
+[+]Function Source Class Name: League\OAuth2\Client\Provider\AbstractProvider
+[*]Start of arg_info extract:
+[*]arg_info num_args:2
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:response
+[*]type:array
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:token
+[*]type:League\OAuth2\Client\Token\AccessToken
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\league\oauth2-client\src\Provider\AbstractProvider.php
+function name:  createResourceOwner
+number of ops:  4
+compiled vars:  !0 = $response, !1 = $token
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  757     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 63> RECV                                              RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ]
+          2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       < 62> RETURN                                                    OP1[  IS_CONST (268435449) null ]
+
+End of function createresourceowner
+
+Function getresourceowner:
+[+]Function Source Class Name: League\OAuth2\Client\Provider\AbstractProvider
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:token
+[*]type:League\OAuth2\Client\Token\AccessToken
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\league\oauth2-client\src\Provider\AbstractProvider.php
+function name:  getResourceOwner
+number of ops:  14
+compiled vars:  !0 = $token, !1 = $response
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  765     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  767     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435447) 'fetchResourceOwnerDetails' ]
+          3*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          4*       < 60> DO_FCALL                                      0   RES[  IS_VAR $2 ]       OP1[  IS_UNUSED  ]
+          5*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_VAR $2 ]
+  769     6*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          7*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435439) 'createResourceOwner' ]
+          8*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+          9*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         10*       < 60> DO_FCALL                                      0   RES[  IS_VAR $4 ]       OP1[  IS_UNUSED  ]
+         11*       < 62> RETURN                                                    OP1[  IS_VAR $4 ]
+  770    12*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         13*       < 62> RETURN                                                    OP1[  IS_CONST (268435429) null ]
+
+End of function getresourceowner
+
+Function fetchresourceownerdetails:
+[+]Function Source Class Name: League\OAuth2\Client\Provider\AbstractProvider
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:token
+[*]type:League\OAuth2\Client\Token\AccessToken
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\league\oauth2-client\src\Provider\AbstractProvider.php
+function name:  fetchResourceOwnerDetails
+number of ops:  34
+compiled vars:  !0 = $token, !1 = $url, !2 = $request, !3 = $response
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  778     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  780     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435438) 'getResourceOwnerDetailsUrl' ]
+          3*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          4*       < 60> DO_FCALL                                      0   RES[  IS_VAR $4 ]       OP1[  IS_UNUSED  ]
+          5*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_VAR $4 ]
+  782     6*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          7*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435430) 'getAuthenticatedRequest' ]
+          8*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~6 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435430) 'METHOD_GET' ]
+          9*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~6 ] OP2[  IS_UNUSED  ]
+         10*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         11*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         12*       < 60> DO_FCALL                                      0   RES[  IS_VAR $7 ]       OP1[  IS_UNUSED  ]
+         13*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_VAR $7 ]
+  784    14*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         15*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435417) 'getParsedResponse' ]
+         16*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         17*       < 60> DO_FCALL                                      0   RES[  IS_VAR $9 ]       OP1[  IS_UNUSED  ]
+         18*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_VAR $9 ]
+  786    19*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         20*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435409) 'League%5COAuth2%5CClient%5CProvider%5Cis_array' ]
+         21*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         22*       < 60> DO_FCALL                                      0   RES[  IS_VAR $11 ]      OP1[  IS_UNUSED  ]
+         23*       <123> TYPE_CHECK                                    4   RES[  IS_TMP_VAR ~12 ]      OP1[  IS_VAR $11 ] OP2[  IS_UNUSED  ]
+         24*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~12 ] OP2[ , ->30 ]
+  787    25*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         26*       < 68> NEW                                               RES[  IS_VAR $13 ]      OP1[ 'UnexpectedValueException' ]
+  788    27*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435400) 'Invalid+response+received+from+Authorization+Server.+Expected+JSON.' ] OP2[  IS_UNUSED  ]
+         28*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         29*       <108> THROW                                         0           OP1[  IS_VAR $13 ] OP2[  IS_UNUSED  ]
+  792    30*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         31*       < 62> RETURN                                                    OP1[  IS_CV !3 ]
+  793    32*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         33*       < 62> RETURN                                                    OP1[  IS_CONST (268435389) null ]
+
+End of function fetchresourceownerdetails
+
+Function getdefaultheaders:
+[+]Function Source Class Name: League\OAuth2\Client\Provider\AbstractProvider
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\league\oauth2-client\src\Provider\AbstractProvider.php
+function name:  getDefaultHeaders
+number of ops:  4
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  804     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 62> RETURN                                                    OP1[  IS_CONST (268435452) <array> ]
+  805     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       < 62> RETURN                                                    OP1[  IS_CONST (268435449) null ]
+
+End of function getdefaultheaders
+
+Function getauthorizationheaders:
+[+]Function Source Class Name: League\OAuth2\Client\Provider\AbstractProvider
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:token
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\league\oauth2-client\src\Provider\AbstractProvider.php
+function name:  getAuthorizationHeaders
+number of ops:  5
+compiled vars:  !0 = $token
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  819     0*       < 64> RECV_INIT                                         RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435453) null ]
+  821     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 62> RETURN                                                    OP1[  IS_CONST (268435450) <array> ]
+  822     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       < 62> RETURN                                                    OP1[  IS_CONST (268435447) null ]
+
+End of function getauthorizationheaders
+
+Function getheaders:
+[+]Function Source Class Name: League\OAuth2\Client\Provider\AbstractProvider
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:token
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\league\oauth2-client\src\Provider\AbstractProvider.php
+function name:  getHeaders
+number of ops:  20
+compiled vars:  !0 = $token
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  832     0*       < 64> RECV_INIT                                         RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435445) null ]
+  834     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 43> JMPZ                                                      OP1[  IS_CV !0 ] OP2[ , ->14 ]
+  835     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435438) 'League%5COAuth2%5CClient%5CProvider%5Carray_merge' ]
+  836     5*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435439) 'getDefaultHeaders' ]
+          6*       < 60> DO_FCALL                                      0   RES[  IS_VAR $1 ]       OP1[  IS_UNUSED  ]
+          7*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $1 ] OP2[  IS_UNUSED  ]
+  837     8*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435435) 'getAuthorizationHeaders' ]
+          9*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         10*       < 60> DO_FCALL                                      0   RES[  IS_VAR $2 ]       OP1[  IS_UNUSED  ]
+         11*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $2 ] OP2[  IS_UNUSED  ]
+         12*       < 60> DO_FCALL                                      0   RES[  IS_VAR $3 ]       OP1[  IS_UNUSED  ]
+         13*       < 62> RETURN                                                    OP1[  IS_VAR $3 ]
+  841    14*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         15*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435423) 'getDefaultHeaders' ]
+         16*       < 60> DO_FCALL                                      0   RES[  IS_VAR $4 ]       OP1[  IS_UNUSED  ]
+         17*       < 62> RETURN                                                    OP1[  IS_VAR $4 ]
+  842    18*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         19*       < 62> RETURN                                                    OP1[  IS_CONST (268435417) null ]
+
+End of function getheaders
+
+End of class League\OAuth2\Client\Provider\AbstractProvider.
+

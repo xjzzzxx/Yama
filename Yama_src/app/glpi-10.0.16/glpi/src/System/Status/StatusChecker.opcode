@@ -1,0 +1,1759 @@
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\System\Status\StatusChecker.php
+function name:  (null)
+number of ops:  9
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   36     0*       <  0> NOP                                                      
+   38     1*       <  0> NOP                                                      
+   39     2*       <  0> NOP                                                      
+   40     3*       <  0> NOP                                                      
+   41     4*       <  0> NOP                                                      
+   42     5*       <  0> NOP                                                      
+   43     6*       <  0> NOP                                                      
+  678     7*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          8*       < 62> RETURN                                                    OP1[  IS_CONST (268435439) 1 ]
+
+Function %00glpi%5Csystem%5Cstatus%5C%7Bclosure%7DG%3A%5Cdesktop%5CYama%5Capp%5Cglpi-10.0.16%5Cglpi%5Csrc%5CSystem%5CStatus%5CStatusChecker.php%3A489%240:
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:crontask
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\System\Status\StatusChecker.php
+function name:  Glpi\System\Status\{closure}
+number of ops:  8
+compiled vars:  !0 = $crontask
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  489     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  490     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~1 ]       OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435447) 'state' ]
+          3*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~2 ]       OP1[  IS_CONST (268435447) 'CronTask' ] OP2[ ,  IS_CONST (268435446) 'STATE_RUNNING' ]
+          4*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~3 ]       OP1[  IS_TMP_VAR ~1 ] OP2[ ,  IS_TMP_VAR ~2 ]
+          5*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~3 ]
+  491     6*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          7*       < 62> RETURN                                                    OP1[  IS_CONST (268435441) null ]
+
+End of function %00glpi%5Csystem%5Cstatus%5C%7Bclosure%7DG%3A%5Cdesktop%5CYama%5Capp%5Cglpi-10.0.16%5Cglpi%5Csrc%5CSystem%5CStatus%5CStatusChecker.php%3A489%240
+
+Class Glpi\System\Status\StatusChecker:
+[+]Class Parent Name: NULL
+End Trait extract
+Start Properties extract:
+Properties: NULL
+End Properties extract
+
+Function getservices:
+[+]Function Source Class Name: Glpi\System\Status\StatusChecker
+[*]Start of arg_info extract:
+[*]arg_info num_args:0
+[*]Function return type:array
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\System\Status\StatusChecker.php
+function name:  getServices
+number of ops:  5
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   82     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 62> RETURN                                                    OP1[  IS_CONST (268435364) <array> ]
+   91     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       < 62> RETURN                                                    OP1[  IS_CONST (268435359) null ]
+
+End of function getservices
+
+Function calculateglobalstatus:
+[+]Function Source Class Name: Glpi\System\Status\StatusChecker
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:status
+[*]type:array
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\System\Status\StatusChecker.php
+function name:  calculateGlobalStatus
+number of ops:  37
+compiled vars:  !0 = $status, !1 = $statuses, !2 = $global_status
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  100     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  102     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435434) 'Glpi%5CSystem%5CStatus%5Carray_column' ]
+          3*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          4*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435433) 'status' ] OP2[  IS_UNUSED  ]
+          5*       < 60> DO_FCALL                                      0   RES[  IS_VAR $3 ]       OP1[  IS_UNUSED  ]
+          6*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_VAR $3 ]
+  103     7*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          8*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~5 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435426) 'STATUS_OK' ]
+          9*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_TMP_VAR ~5 ]
+  104    10*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         11*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435421) 'Glpi%5CSystem%5CStatus%5Cin_array' ]
+         12*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~7 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435422) 'STATUS_PROBLEM' ]
+         13*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~7 ] OP2[  IS_UNUSED  ]
+         14*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         15*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435417) <true> ] OP2[  IS_UNUSED  ]
+         16*       < 60> DO_FCALL                                      0   RES[  IS_VAR $8 ]       OP1[  IS_UNUSED  ]
+         17*       < 43> JMPZ                                                      OP1[  IS_VAR $8 ] OP2[ , ->22 ]
+  105    18*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         19*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~9 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435410) 'STATUS_PROBLEM' ]
+         20*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_TMP_VAR ~9 ]
+         21*       < 42> JMP                                                       OP1[ ->33 ]
+  106    22*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         23*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435403) 'Glpi%5CSystem%5CStatus%5Cin_array' ]
+         24*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~11 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435404) 'STATUS_WARNING' ]
+         25*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~11 ] OP2[  IS_UNUSED  ]
+         26*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         27*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435399) <true> ] OP2[  IS_UNUSED  ]
+         28*       < 60> DO_FCALL                                      0   RES[  IS_VAR $12 ]      OP1[  IS_UNUSED  ]
+         29*       < 43> JMPZ                                                      OP1[  IS_VAR $12 ] OP2[ , ->33 ]
+  107    30*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         31*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~13 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435392) 'STATUS_WARNING' ]
+         32*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_TMP_VAR ~13 ]
+  109    33*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         34*       < 62> RETURN                                                    OP1[  IS_CV !2 ]
+  110    35*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         36*       < 62> RETURN                                                    OP1[  IS_CONST (268435383) null ]
+
+End of function calculateglobalstatus
+
+Function getservicestatus:
+[+]Function Source Class Name: Glpi\System\Status\StatusChecker
+[*]Start of arg_info extract:
+[*]arg_info num_args:3
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:service
+[*]type:?string
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:public_only
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**2**
+[*]name:as_array
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\System\Status\StatusChecker.php
+function name:  getServiceStatus
+number of ops:  102
+compiled vars:  !0 = $service, !1 = $public_only, !2 = $as_array, !3 = $services, !4 = $status, !5 = $service_check_method, !6 = $name, !7 = $service_status
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  123     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 64> RECV_INIT                                         RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435415) <true> ]
+          2*       < 64> RECV_INIT                                         RES[  IS_CV !2 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435414) <true> ]
+  125     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       <113> INIT_STATIC_METHOD_CALL      self                         OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435411) 'getServices' ]
+          5*       < 60> DO_FCALL                                      0   RES[  IS_VAR $8 ]       OP1[  IS_UNUSED  ]
+          6*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_VAR $8 ]
+  126     7*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          8*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~10 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435405) 'all' ]
+          9*       < 47> JMPNZ_EX                                          RES[  IS_TMP_VAR ~10 ]      OP1[  IS_TMP_VAR ~10 ] OP2[ , ->12 ]
+         10*       <123> TYPE_CHECK                                    2   RES[  IS_TMP_VAR ~11 ]      OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         11*       < 52> BOOL                                              RES[  IS_TMP_VAR ~10 ]      OP1[  IS_TMP_VAR ~11 ]
+         12*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~10 ] OP2[ , ->51 ]
+  129    13*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         14*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~12 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435394) 'STATUS_OK' ]
+         15*       < 71> INIT_ARRAY                                        RES[  IS_TMP_VAR ~13 ]      OP1[  IS_TMP_VAR ~12 ] OP2[ ,  IS_CONST (268435393) 'status' ]
+         16*       < 71> INIT_ARRAY                                        RES[  IS_TMP_VAR ~14 ]      OP1[  IS_TMP_VAR ~13 ] OP2[ ,  IS_CONST (268435392) 'glpi' ]
+  127    17*       < 22> ASSIGN                                                    OP1[  IS_CV !4 ] OP2[ ,  IS_TMP_VAR ~14 ]
+  132    18*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         19*       < 77> FE_RESET_R                                        RES[  IS_VAR $16 ]      OP1[  IS_CV !3 ] OP2[ , ->33 ]
+         20*       < 78> FE_FETCH_R                                        RES[  IS_TMP_VAR ~17 ]      OP1[  IS_VAR $16 ] OP2[ ,  IS_CV !5 ] EXT_JMP_REL[ , ->33 ]
+         21*       < 22> ASSIGN                                                    OP1[  IS_CV !6 ] OP2[ ,  IS_TMP_VAR ~17 ]
+  133    22*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         23*       <113> INIT_STATIC_METHOD_CALL      self                         OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435379) 'getServiceStatus' ]
+         24*       <117> SEND_VAR                                                  OP1[  IS_CV !6 ] OP2[  IS_UNUSED  ]
+         25*       <117> SEND_VAR                                                  OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         26*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435375) <true> ]
+         27*       < 60> DO_FCALL                                      0   RES[  IS_VAR $19 ]      OP1[  IS_UNUSED  ]
+         28*       < 22> ASSIGN                                                    OP1[  IS_CV !7 ] OP2[ ,  IS_VAR $19 ]
+  134    29*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         30*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !4 ] OP2[ ,  IS_CV !6 ]
+         31*       <137> OP_DATA                                                   OP1[  IS_CV !7 ] OP2[  IS_UNUSED  ]
+  132    32*       < 42> JMP                                                       OP1[ ->20 ]
+         33*       <127> FE_FREE                                                   OP1[  IS_VAR $16 ] OP2[  IS_UNUSED  ]
+  137    34*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         35*       <113> INIT_STATIC_METHOD_CALL      self                         OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435360) 'calculateGlobalStatus' ]
+         36*       <117> SEND_VAR                                                  OP1[  IS_CV !4 ] OP2[  IS_UNUSED  ]
+         37*       < 60> DO_FCALL                                      0   RES[  IS_VAR $24 ]      OP1[  IS_UNUSED  ]
+         38*       < 84> FETCH_DIM_W                                       RES[  IS_VAR $22 ]      OP1[  IS_CV !4 ] OP2[ ,  IS_CONST (268435352) 'glpi' ]
+         39*       < 23> ASSIGN_DIM                                                OP1[  IS_VAR $22 ] OP2[ ,  IS_CONST (268435351) 'status' ]
+         40*       <137> OP_DATA                                                   OP1[  IS_VAR $24 ] OP2[  IS_UNUSED  ]
+  139    41*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         42*       < 43> JMPZ                                                      OP1[  IS_CV !2 ] OP2[ , ->46 ]
+  140    43*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         44*       < 62> RETURN                                                    OP1[  IS_CV !4 ]
+         45*       < 42> JMP                                                       OP1[ ->51 ]
+  142    46*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         47*       <113> INIT_STATIC_METHOD_CALL      self                         OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435338) 'getPlaintextOutput' ]
+         48*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !4 ] OP2[  IS_UNUSED  ]
+         49*       < 60> DO_FCALL                                      0   RES[  IS_VAR $25 ]      OP1[  IS_UNUSED  ]
+         50*       < 62> RETURN                                                    OP1[  IS_VAR $25 ]
+  146    51*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         52*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435330) 'Glpi%5CSystem%5CStatus%5Carray_key_exists' ]
+         53*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         54*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         55*       < 60> DO_FCALL                                      0   RES[  IS_VAR $26 ]      OP1[  IS_UNUSED  ]
+         56*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~27 ]      OP1[  IS_VAR $26 ]
+         57*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~27 ] OP2[ , ->64 ]
+  147    58*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         59*       < 43> JMPZ                                                      OP1[  IS_CV !2 ] OP2[ , ->62 ]
+         60*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~28 ]      OP1[  IS_CONST (268435317) <array> ]
+         61*       < 42> JMP                                                       OP1[ ->63 ]
+         62*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~28 ]      OP1[  IS_CONST (268435314) '' ]
+         63*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~28 ]
+  149    64*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         65*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~29 ]      OP1[  IS_CV !3 ] OP2[ ,  IS_CV !0 ]
+         66*       < 22> ASSIGN                                                    OP1[  IS_CV !5 ] OP2[ ,  IS_TMP_VAR ~29 ]
+  150    67*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         68*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435303) 'Glpi%5CSystem%5CStatus%5Cmethod_exists' ]
+         69*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         70*       < 93> FETCH_DIM_FUNC_ARG                                RES[  IS_VAR $31 ]      OP1[  IS_CV !5 ] OP2[ ,  IS_CONST (268435302) 0 ]
+         71*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $31 ] OP2[  IS_UNUSED  ]
+         72*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         73*       < 93> FETCH_DIM_FUNC_ARG                                RES[  IS_VAR $32 ]      OP1[  IS_CV !5 ] OP2[ ,  IS_CONST (268435297) 1 ]
+         74*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $32 ] OP2[  IS_UNUSED  ]
+         75*       < 60> DO_FCALL                                      0   RES[  IS_VAR $33 ]      OP1[  IS_UNUSED  ]
+         76*       < 43> JMPZ                                                      OP1[  IS_VAR $33 ] OP2[ , ->94 ]
+  151    77*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         78*       <128> INIT_DYNAMIC_CALL                                         OP1[  IS_UNUSED  ] OP2[  IS_CV !5 ]
+         79*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         80*       < 60> DO_FCALL                                      0   RES[  IS_VAR $34 ]      OP1[  IS_UNUSED  ]
+         81*       < 22> ASSIGN                                                    OP1[  IS_CV !7 ] OP2[ ,  IS_VAR $34 ]
+  152    82*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         83*       < 43> JMPZ                                                      OP1[  IS_CV !2 ] OP2[ , ->86 ]
+  153    84*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         85*       < 62> RETURN                                                    OP1[  IS_CV !7 ]
+  155    86*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         87*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435270) 'Glpi%5CSystem%5CStatus%5Cstrtoupper' ]
+         88*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         89*       < 60> DO_FCALL                                      0   RES[  IS_VAR $36 ]      OP1[  IS_UNUSED  ]
+         90*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~37 ]      OP1[  IS_VAR $36 ] OP2[ ,  IS_CONST (268435267) '_' ]
+         91*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~38 ]      OP1[  IS_CV !7 ] OP2[ ,  IS_CONST (268435266) 'status' ]
+         92*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~39 ]      OP1[  IS_TMP_VAR ~37 ] OP2[ ,  IS_TMP_VAR ~38 ]
+         93*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~39 ]
+  157    94*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         95*       < 43> JMPZ                                                      OP1[  IS_CV !2 ] OP2[ , ->98 ]
+         96*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~40 ]      OP1[  IS_CONST (268435257) <array> ]
+         97*       < 42> JMP                                                       OP1[ ->99 ]
+         98*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~40 ]      OP1[  IS_CONST (268435254) '' ]
+         99*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~40 ]
+  158   100*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        101*       < 62> RETURN                                                    OP1[  IS_CONST (268435249) null ]
+
+End of function getservicestatus
+
+Function getdbstatus:
+[+]Function Source Class Name: Glpi\System\Status\StatusChecker
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:array
+
+[*]ArgInfoNo**0**
+[*]name:public_only
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]Key: status, Value: NULL, Type: 1
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\System\Status\StatusChecker.php
+function name:  getDBStatus
+number of ops:  172
+compiled vars:  !0 = $public_only, !1 = $status, !2 = $DBslave, !3 = $hosts, !4 = $name, !5 = $num, !6 = $diff
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  164     0*       < 64> RECV_INIT                                         RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435344) <true> ]
+  166     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       <183> BIND_STATIC                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+  168     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       <123> TYPE_CHECK                                    2   RES[  IS_TMP_VAR ~7 ]       OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+          5*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~7 ] OP2[ , ->158 ]
+  170     6*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          7*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~8 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435331) 'STATUS_OK' ]
+          8*       < 71> INIT_ARRAY                                        RES[  IS_TMP_VAR ~9 ]       OP1[  IS_TMP_VAR ~8 ] OP2[ ,  IS_CONST (268435330) 'status' ]
+  172     9*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~10 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435329) 'STATUS_OK' ]
+         10*       < 71> INIT_ARRAY                                        RES[  IS_TMP_VAR ~11 ]      OP1[  IS_TMP_VAR ~10 ] OP2[ ,  IS_CONST (268435328) 'status' ]
+         11*       < 72> ADD_ARRAY_ELEMENT                                 RES[  IS_TMP_VAR ~9 ]       OP1[  IS_TMP_VAR ~11 ] OP2[ ,  IS_CONST (268435327) 'master' ]
+  175    12*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~12 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435326) 'STATUS_NO_DATA' ]
+         13*       < 71> INIT_ARRAY                                        RES[  IS_TMP_VAR ~13 ]      OP1[  IS_TMP_VAR ~12 ] OP2[ ,  IS_CONST (268435325) 'status' ]
+  170    14*       < 72> ADD_ARRAY_ELEMENT                                 RES[  IS_TMP_VAR ~13 ]      OP1[  IS_CONST (268435324) <array> ] OP2[ ,  IS_CONST (268435325) 'servers' ]
+         15*       < 72> ADD_ARRAY_ELEMENT                                 RES[  IS_TMP_VAR ~9 ]       OP1[  IS_TMP_VAR ~13 ] OP2[ ,  IS_CONST (268435324) 'slaves' ]
+  169    16*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_TMP_VAR ~9 ]
+  180    17*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         18*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435319) 'DBConnection' ] OP2[ ,  IS_CONST (268435321) 'isDBSlaveActive' ]
+         19*       < 60> DO_FCALL                                      0   RES[  IS_VAR $15 ]      OP1[  IS_UNUSED  ]
+         20*       < 43> JMPZ                                                      OP1[  IS_VAR $15 ] OP2[ , ->134 ]
+  181    21*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         22*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435315) 'DBConnection' ] OP2[ ,  IS_CONST (268435317) 'getDBSlaveConf' ]
+         23*       < 60> DO_FCALL                                      0   RES[  IS_VAR $16 ]      OP1[  IS_UNUSED  ]
+         24*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_VAR $16 ]
+  182    25*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         26*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435311) 'Glpi%5CSystem%5CStatus%5Cis_array' ]
+         27*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         28*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $18 ]      OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435310) 'dbhost' ]
+         29*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $18 ] OP2[  IS_UNUSED  ]
+         30*       < 60> DO_FCALL                                      0   RES[  IS_VAR $19 ]      OP1[  IS_UNUSED  ]
+         31*       < 43> JMPZ                                                      OP1[  IS_VAR $19 ] OP2[ , ->36 ]
+  183    32*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         33*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~20 ]      OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435301) 'dbhost' ]
+         34*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_TMP_VAR ~20 ]
+         35*       < 42> JMP                                                       OP1[ ->40 ]
+  185    36*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         37*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~22 ]      OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435294) 'dbhost' ]
+         38*       < 71> INIT_ARRAY                                        RES[  IS_TMP_VAR ~23 ]      OP1[  IS_TMP_VAR ~22 ] OP2[  IS_UNUSED  ]
+         39*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_TMP_VAR ~23 ]
+  188    40*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         41*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435287) 'Glpi%5CSystem%5CStatus%5Ccount' ]
+         42*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         43*       < 60> DO_FCALL                                      0   RES[  IS_VAR $25 ]      OP1[  IS_UNUSED  ]
+         44*       < 43> JMPZ                                                      OP1[  IS_VAR $25 ] OP2[ , ->50 ]
+  189    45*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         46*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~28 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435282) 'STATUS_OK' ]
+         47*       < 84> FETCH_DIM_W                                       RES[  IS_VAR $26 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435278) 'slaves' ]
+         48*       < 23> ASSIGN_DIM                                                OP1[  IS_VAR $26 ] OP2[ ,  IS_CONST (268435277) 'status' ]
+         49*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~28 ] OP2[  IS_UNUSED  ]
+  192    50*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         51*       < 77> FE_RESET_R                                        RES[  IS_VAR $29 ]      OP1[  IS_CV !3 ] OP2[ , ->133 ]
+         52*       < 78> FE_FETCH_R                                        RES[  IS_TMP_VAR ~30 ]      OP1[  IS_VAR $29 ] OP2[ ,  IS_CV !4 ] EXT_JMP_REL[ , ->133 ]
+         53*       < 22> ASSIGN                                                    OP1[  IS_CV !5 ] OP2[ ,  IS_TMP_VAR ~30 ]
+  193    54*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         55*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435265) 'DBConnection' ] OP2[ ,  IS_CONST (268435267) 'getReplicateDelay' ]
+         56*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !5 ] OP2[  IS_UNUSED  ]
+         57*       < 60> DO_FCALL                                      0   RES[  IS_VAR $32 ]      OP1[  IS_UNUSED  ]
+         58*       < 22> ASSIGN                                                    OP1[  IS_CV !6 ] OP2[ ,  IS_VAR $32 ]
+  194    59*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         60*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435259) 'Glpi%5CSystem%5CStatus%5Cabs' ]
+         61*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !6 ] OP2[  IS_UNUSED  ]
+         62*       < 60> DO_FCALL                                      0   RES[  IS_VAR $34 ]      OP1[  IS_UNUSED  ]
+         63*       < 20> IS_SMALLER                                        RES[  IS_TMP_VAR ~35 ]      OP1[  IS_CONST (268435256) 1000000000 ] OP2[ ,  IS_VAR $34 ]
+         64*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~35 ] OP2[ , ->88 ]
+  196    65*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         66*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~39 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435253) 'STATUS_PROBLEM' ]
+         67*       < 71> INIT_ARRAY                                        RES[  IS_TMP_VAR ~40 ]      OP1[  IS_TMP_VAR ~39 ] OP2[ ,  IS_CONST (268435252) 'status' ]
+  197    68*       < 72> ADD_ARRAY_ELEMENT                                 RES[  IS_TMP_VAR ~40 ]      OP1[  IS_CONST (268435251) '-1' ] OP2[ ,  IS_CONST (268435252) 'replication_delay' ]
+  198    69*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435251) 'Glpi%5CSystem%5CStatus%5C_x' ]
+         70*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435252) 'glpi_status' ] OP2[  IS_UNUSED  ]
+         71*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435251) 'Replication+delay+is+too+high' ] OP2[  IS_UNUSED  ]
+         72*       < 60> DO_FCALL                                      0   RES[  IS_VAR $41 ]      OP1[  IS_UNUSED  ]
+         73*       < 72> ADD_ARRAY_ELEMENT                                 RES[  IS_TMP_VAR ~40 ]      OP1[  IS_VAR $41 ] OP2[ ,  IS_CONST (268435248) 'status_msg' ]
+  195    74*       < 84> FETCH_DIM_W                                       RES[  IS_VAR $36 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435235) 'slaves' ]
+         75*       < 84> FETCH_DIM_W                                       RES[  IS_VAR $37 ]      OP1[  IS_VAR $36 ] OP2[ ,  IS_CONST (268435234) 'servers' ]
+         76*       < 23> ASSIGN_DIM                                                OP1[  IS_VAR $37 ] OP2[ ,  IS_CV !5 ]
+  198    77*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~40 ] OP2[  IS_UNUSED  ]
+  200    78*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         79*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~44 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435239) 'STATUS_PROBLEM' ]
+         80*       < 84> FETCH_DIM_W                                       RES[  IS_VAR $42 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435235) 'slaves' ]
+         81*       < 23> ASSIGN_DIM                                                OP1[  IS_VAR $42 ] OP2[ ,  IS_CONST (268435234) 'status' ]
+         82*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~44 ] OP2[  IS_UNUSED  ]
+  201    83*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         84*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~46 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435231) 'STATUS_PROBLEM' ]
+         85*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435228) 'status' ]
+         86*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~46 ] OP2[  IS_UNUSED  ]
+         87*       < 42> JMP                                                       OP1[ ->132 ]
+  202    88*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         89*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435222) 'Glpi%5CSystem%5CStatus%5Cabs' ]
+         90*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !6 ] OP2[  IS_UNUSED  ]
+         91*       < 60> DO_FCALL                                      0   RES[  IS_VAR $47 ]      OP1[  IS_UNUSED  ]
+         92*       < 99> FETCH_CONSTANT                                    RES[  IS_TMP_VAR ~48 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435219) 'Glpi%5CSystem%5CStatus%5CHOUR_TIMESTAMP' ]
+         93*       < 20> IS_SMALLER                                        RES[  IS_TMP_VAR ~49 ]      OP1[  IS_TMP_VAR ~48 ] OP2[ ,  IS_VAR $47 ]
+         94*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~49 ] OP2[ , ->121 ]
+  204    95*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         96*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~53 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435216) 'STATUS_PROBLEM' ]
+         97*       < 71> INIT_ARRAY                                        RES[  IS_TMP_VAR ~54 ]      OP1[  IS_TMP_VAR ~53 ] OP2[ ,  IS_CONST (268435215) 'status' ]
+  205    98*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435214) 'Glpi%5CSystem%5CStatus%5Cabs' ]
+         99*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !6 ] OP2[  IS_UNUSED  ]
+        100*       < 60> DO_FCALL                                      0   RES[  IS_VAR $55 ]      OP1[  IS_UNUSED  ]
+        101*       < 72> ADD_ARRAY_ELEMENT                                 RES[  IS_TMP_VAR ~54 ]      OP1[  IS_VAR $55 ] OP2[ ,  IS_CONST (268435211) 'replication_delay' ]
+  206   102*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435210) 'Glpi%5CSystem%5CStatus%5C_x' ]
+        103*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435211) 'glpi_status' ] OP2[  IS_UNUSED  ]
+        104*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435210) 'Replication+delay+is+too+high' ] OP2[  IS_UNUSED  ]
+        105*       < 60> DO_FCALL                                      0   RES[  IS_VAR $56 ]      OP1[  IS_UNUSED  ]
+        106*       < 72> ADD_ARRAY_ELEMENT                                 RES[  IS_TMP_VAR ~54 ]      OP1[  IS_VAR $56 ] OP2[ ,  IS_CONST (268435207) 'status_msg' ]
+  203   107*       < 84> FETCH_DIM_W                                       RES[  IS_VAR $50 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435192) 'slaves' ]
+        108*       < 84> FETCH_DIM_W                                       RES[  IS_VAR $51 ]      OP1[  IS_VAR $50 ] OP2[ ,  IS_CONST (268435191) 'servers' ]
+        109*       < 23> ASSIGN_DIM                                                OP1[  IS_VAR $51 ] OP2[ ,  IS_CV !5 ]
+  206   110*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~54 ] OP2[  IS_UNUSED  ]
+  208   111*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        112*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~59 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435198) 'STATUS_PROBLEM' ]
+        113*       < 84> FETCH_DIM_W                                       RES[  IS_VAR $57 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435194) 'slaves' ]
+        114*       < 23> ASSIGN_DIM                                                OP1[  IS_VAR $57 ] OP2[ ,  IS_CONST (268435193) 'status' ]
+        115*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~59 ] OP2[  IS_UNUSED  ]
+  209   116*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        117*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~61 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435190) 'STATUS_PROBLEM' ]
+        118*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435187) 'status' ]
+        119*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~61 ] OP2[  IS_UNUSED  ]
+        120*       < 42> JMP                                                       OP1[ ->132 ]
+  212   121*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        122*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~65 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435183) 'STATUS_OK' ]
+        123*       < 71> INIT_ARRAY                                        RES[  IS_TMP_VAR ~66 ]      OP1[  IS_TMP_VAR ~65 ] OP2[ ,  IS_CONST (268435182) 'status' ]
+  213   124*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435181) 'Glpi%5CSystem%5CStatus%5Cabs' ]
+        125*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !6 ] OP2[  IS_UNUSED  ]
+        126*       < 60> DO_FCALL                                      0   RES[  IS_VAR $67 ]      OP1[  IS_UNUSED  ]
+        127*       < 72> ADD_ARRAY_ELEMENT                                 RES[  IS_TMP_VAR ~66 ]      OP1[  IS_VAR $67 ] OP2[ ,  IS_CONST (268435178) 'replication_delay' ]
+  211   128*       < 84> FETCH_DIM_W                                       RES[  IS_VAR $62 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435169) 'slaves' ]
+        129*       < 84> FETCH_DIM_W                                       RES[  IS_VAR $63 ]      OP1[  IS_VAR $62 ] OP2[ ,  IS_CONST (268435168) 'servers' ]
+        130*       < 23> ASSIGN_DIM                                                OP1[  IS_VAR $63 ] OP2[ ,  IS_CV !5 ]
+  213   131*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~66 ] OP2[  IS_UNUSED  ]
+  192   132*       < 42> JMP                                                       OP1[ ->52 ]
+        133*       <127> FE_FREE                                                   OP1[  IS_VAR $29 ] OP2[  IS_UNUSED  ]
+  220   134*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        135*       < 57> BEGIN_SILENCE                                     RES[  IS_TMP_VAR ~68 ]      OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        136*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435161) 'DBConnection' ] OP2[ ,  IS_CONST (268435163) 'establishDBConnection' ]
+        137*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435163) <false> ] OP2[  IS_UNUSED  ]
+        138*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435162) <true> ] OP2[  IS_UNUSED  ]
+        139*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435161) <false> ] OP2[  IS_UNUSED  ]
+        140*       < 60> DO_FCALL                                      0   RES[  IS_VAR $69 ]      OP1[  IS_UNUSED  ]
+        141*       < 58> END_SILENCE                                               OP1[  IS_TMP_VAR ~68 ] OP2[  IS_UNUSED  ]
+        142*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~70 ]      OP1[  IS_VAR $69 ]
+        143*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~70 ] OP2[ , ->158 ]
+  222   144*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        145*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~72 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435151) 'STATUS_PROBLEM' ]
+        146*       < 71> INIT_ARRAY                                        RES[  IS_TMP_VAR ~73 ]      OP1[  IS_TMP_VAR ~72 ] OP2[ ,  IS_CONST (268435150) 'status' ]
+  223   147*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435149) 'Glpi%5CSystem%5CStatus%5C_x' ]
+        148*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435150) 'glpi_status' ] OP2[  IS_UNUSED  ]
+        149*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435149) 'Unable+to+connect+to+the+main+database' ] OP2[  IS_UNUSED  ]
+        150*       < 60> DO_FCALL                                      0   RES[  IS_VAR $74 ]      OP1[  IS_UNUSED  ]
+        151*       < 72> ADD_ARRAY_ELEMENT                                 RES[  IS_TMP_VAR ~73 ]      OP1[  IS_VAR $74 ] OP2[ ,  IS_CONST (268435146) 'status_msg' ]
+  221   152*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435136) 'master' ]
+  223   153*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~73 ] OP2[  IS_UNUSED  ]
+  225   154*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        155*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~76 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435140) 'STATUS_PROBLEM' ]
+        156*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435137) 'status' ]
+        157*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~76 ] OP2[  IS_UNUSED  ]
+  230   158*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        159*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~78 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435134) 'master' ]
+        160*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435131) 'main' ]
+        161*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~78 ] OP2[  IS_UNUSED  ]
+  231   162*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        163*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~80 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435128) 'slaves' ]
+        164*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435125) 'replicas' ]
+        165*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~80 ] OP2[  IS_UNUSED  ]
+  233   166*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        167*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+        168*       < 62> RETURN                                                    OP1[  IS_CV !1 ]
+  234   169*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        170*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        171*       < 62> RETURN                                                    OP1[  IS_CONST (268435113) null ]
+
+End of function getdbstatus
+
+Function isdbavailable:
+[+]Function Source Class Name: Glpi\System\Status\StatusChecker
+[*]Start of arg_info extract:
+[*]arg_info num_args:0
+[*]Function return type:bool
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]Key: db_ok, Value: NULL, Type: 1
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\System\Status\StatusChecker.php
+function name:  isDBAvailable
+number of ops:  27
+compiled vars:  !0 = $db_ok, !1 = $status
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  238     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       <183> BIND_STATIC                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+  240     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       <123> TYPE_CHECK                                    2   RES[  IS_TMP_VAR ~2 ]       OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          4*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~2 ] OP2[ , ->21 ]
+  241     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       <113> INIT_STATIC_METHOD_CALL      self                         OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435435) 'getDBStatus' ]
+          7*       < 60> DO_FCALL                                      0   RES[  IS_VAR $3 ]       OP1[  IS_UNUSED  ]
+          8*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_VAR $3 ]
+  242     9*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         10*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~5 ]       OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435429) 'main' ]
+         11*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~6 ]       OP1[  IS_TMP_VAR ~5 ] OP2[ ,  IS_CONST (268435428) 'status' ]
+         12*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~7 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435427) 'STATUS_OK' ]
+         13*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~8 ]       OP1[  IS_TMP_VAR ~6 ] OP2[ ,  IS_TMP_VAR ~7 ]
+         14*       < 47> JMPNZ_EX                                          RES[  IS_TMP_VAR ~8 ]       OP1[  IS_TMP_VAR ~8 ] OP2[ , ->20 ]
+         15*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~9 ]       OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435422) 'replicas' ]
+         16*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~10 ]      OP1[  IS_TMP_VAR ~9 ] OP2[ ,  IS_CONST (268435421) 'status' ]
+         17*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~11 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435420) 'STATUS_OK' ]
+         18*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~12 ]      OP1[  IS_TMP_VAR ~10 ] OP2[ ,  IS_TMP_VAR ~11 ]
+         19*       < 52> BOOL                                              RES[  IS_TMP_VAR ~8 ]       OP1[  IS_TMP_VAR ~12 ]
+         20*       < 22> ASSIGN                                                    OP1[  IS_CV !0 ] OP2[ ,  IS_TMP_VAR ~8 ]
+  245    21*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         22*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         23*       < 62> RETURN                                                    OP1[  IS_CV !0 ]
+  246    24*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         25*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         26*       < 62> RETURN                                                    OP1[  IS_CONST (268435403) null ]
+
+End of function isdbavailable
+
+Function getldapstatus:
+[+]Function Source Class Name: Glpi\System\Status\StatusChecker
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:array
+
+[*]ArgInfoNo**0**
+[*]name:public_only
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]Key: status, Value: NULL, Type: 1
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\System\Status\StatusChecker.php
+function name:  getLDAPStatus
+number of ops:  137
+compiled vars:  !0 = $public_only, !1 = $status, !2 = $ldap_methods, !3 = $total_servers, !4 = $total_error, !5 = $global_status, !6 = $message, !7 = $method, !8 = $ldap, !9 = $e
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  252     0*       < 64> RECV_INIT                                         RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435380) <true> ]
+  254     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       <183> BIND_STATIC                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+  256     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       <123> TYPE_CHECK                                    2   RES[  IS_TMP_VAR ~10 ]      OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+          5*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~10 ] OP2[ , ->131 ]
+  258     6*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          7*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~11 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435367) 'STATUS_NO_DATA' ]
+          8*       < 71> INIT_ARRAY                                        RES[  IS_TMP_VAR ~12 ]      OP1[  IS_TMP_VAR ~11 ] OP2[ ,  IS_CONST (268435366) 'status' ]
+          9*       < 72> ADD_ARRAY_ELEMENT                                 RES[  IS_TMP_VAR ~12 ]      OP1[  IS_CONST (268435365) <array> ] OP2[ ,  IS_CONST (268435366) 'servers' ]
+  257    10*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_TMP_VAR ~12 ]
+  261    11*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         12*       <113> INIT_STATIC_METHOD_CALL      self                         OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435361) 'isDBAvailable' ]
+         13*       < 60> DO_FCALL                                      0   RES[  IS_VAR $14 ]      OP1[  IS_UNUSED  ]
+         14*       < 43> JMPZ                                                      OP1[  IS_VAR $14 ] OP2[ , ->131 ]
+  263    15*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         16*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435355) 'Glpi%5CSystem%5CStatus%5CgetAllDataFromTable' ]
+         17*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435356) 'glpi_authldaps' ] OP2[  IS_UNUSED  ]
+         18*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435355) <array> ] OP2[  IS_UNUSED  ]
+         19*       < 60> DO_FCALL                                      0   RES[  IS_VAR $15 ]      OP1[  IS_UNUSED  ]
+         20*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_VAR $15 ]
+  265    21*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         22*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435348) 'Glpi%5CSystem%5CStatus%5Ccount' ]
+         23*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         24*       < 60> DO_FCALL                                      0   RES[  IS_VAR $17 ]      OP1[  IS_UNUSED  ]
+         25*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_VAR $17 ]
+  266    26*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         27*       < 22> ASSIGN                                                    OP1[  IS_CV !4 ] OP2[ ,  IS_CONST (268435341) 0 ]
+  267    28*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         29*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~20 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435338) 'STATUS_NO_DATA' ]
+         30*       < 22> ASSIGN                                                    OP1[  IS_CV !5 ] OP2[ ,  IS_TMP_VAR ~20 ]
+  268    31*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         32*       < 22> ASSIGN                                                    OP1[  IS_CV !6 ] OP2[ ,  IS_CONST (268435333) null ]
+  269    33*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         34*       < 20> IS_SMALLER                                        RES[  IS_TMP_VAR ~23 ]      OP1[  IS_CONST (268435330) 0 ] OP2[ ,  IS_CV !3 ]
+         35*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~23 ] OP2[ , ->122 ]
+  270    36*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         37*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~24 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435325) 'STATUS_OK' ]
+         38*       < 22> ASSIGN                                                    OP1[  IS_CV !5 ] OP2[ ,  IS_TMP_VAR ~24 ]
+  271    39*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         40*       < 77> FE_RESET_R                                        RES[  IS_VAR $26 ]      OP1[  IS_CV !2 ] OP2[ , ->103 ]
+         41*       < 78> FE_FETCH_R                                                OP1[  IS_VAR $26 ] OP2[ ,  IS_CV !7 ] EXT_JMP_REL[ , ->103 ]
+  272    42*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         43*       < 22> ASSIGN                                                    OP1[  IS_CV !8 ] OP2[ ,  IS_CONST (268435314) null ]
+  273    44*       <  0> NOP                                                      
+  275    45*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         46*       < 57> BEGIN_SILENCE                                     RES[  IS_TMP_VAR ~28 ]      OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         47*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435307) 'AuthLDAP' ] OP2[ ,  IS_CONST (268435309) 'tryToConnectToServer' ]
+  276    48*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !7 ] OP2[  IS_UNUSED  ]
+         49*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+  277    50*       < 93> FETCH_DIM_FUNC_ARG                                RES[  IS_VAR $29 ]      OP1[  IS_CV !7 ] OP2[ ,  IS_CONST (268435305) 'rootdn' ]
+         51*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $29 ] OP2[  IS_UNUSED  ]
+  278    52*       < 68> NEW                                               RES[  IS_VAR $30 ]      OP1[ 'GLPIKey' ]
+         53*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         54*       <112> INIT_METHOD_CALL                                          OP1[  IS_VAR $30 ] OP2[ ,  IS_CONST (268435300) 'decrypt' ]
+         55*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         56*       < 93> FETCH_DIM_FUNC_ARG                                RES[  IS_VAR $32 ]      OP1[  IS_CV !7 ] OP2[ ,  IS_CONST (268435298) 'rootdn_passwd' ]
+         57*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $32 ] OP2[  IS_UNUSED  ]
+         58*       < 60> DO_FCALL                                      0   RES[  IS_VAR $33 ]      OP1[  IS_UNUSED  ]
+         59*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $33 ] OP2[  IS_UNUSED  ]
+         60*       < 60> DO_FCALL                                      0   RES[  IS_VAR $34 ]      OP1[  IS_UNUSED  ]
+         61*       < 58> END_SILENCE                                               OP1[  IS_TMP_VAR ~28 ] OP2[  IS_UNUSED  ]
+         62*       < 43> JMPZ                                                      OP1[  IS_VAR $34 ] OP2[ , ->71 ]
+  281    63*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         64*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~36 ]      OP1[  IS_CV !7 ] OP2[ ,  IS_CONST (268435284) 'name' ]
+  282    65*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~38 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435283) 'STATUS_OK' ]
+         66*       < 71> INIT_ARRAY                                        RES[  IS_TMP_VAR ~39 ]      OP1[  IS_TMP_VAR ~38 ] OP2[ ,  IS_CONST (268435282) 'status' ]
+  281    67*       < 84> FETCH_DIM_W                                       RES[  IS_VAR $35 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435277) 'servers' ]
+         68*       < 23> ASSIGN_DIM                                                OP1[  IS_VAR $35 ] OP2[ ,  IS_TMP_VAR ~36 ]
+  282    69*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~39 ] OP2[  IS_UNUSED  ]
+         70*       < 42> JMP                                                       OP1[ ->88 ]
+  285    71*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         72*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~41 ]      OP1[  IS_CV !7 ] OP2[ ,  IS_CONST (268435272) 'name' ]
+  286    73*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~43 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435271) 'STATUS_PROBLEM' ]
+         74*       < 71> INIT_ARRAY                                        RES[  IS_TMP_VAR ~44 ]      OP1[  IS_TMP_VAR ~43 ] OP2[ ,  IS_CONST (268435270) 'status' ]
+  287    75*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435269) 'Glpi%5CSystem%5CStatus%5C_x' ]
+         76*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435270) 'glpi_status' ] OP2[  IS_UNUSED  ]
+         77*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435269) 'Unable+to+connect+to+the+LDAP+server' ] OP2[  IS_UNUSED  ]
+         78*       < 60> DO_FCALL                                      0   RES[  IS_VAR $45 ]      OP1[  IS_UNUSED  ]
+         79*       < 72> ADD_ARRAY_ELEMENT                                 RES[  IS_TMP_VAR ~44 ]      OP1[  IS_VAR $45 ] OP2[ ,  IS_CONST (268435266) 'status_msg' ]
+  285    80*       < 84> FETCH_DIM_W                                       RES[  IS_VAR $40 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435255) 'servers' ]
+         81*       < 23> ASSIGN_DIM                                                OP1[  IS_VAR $40 ] OP2[ ,  IS_TMP_VAR ~41 ]
+  287    82*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~44 ] OP2[  IS_UNUSED  ]
+  289    83*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         84*       < 34> PRE_INC                                                   OP1[  IS_CV !4 ]
+  290    85*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         86*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~47 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435253) 'STATUS_PROBLEM' ]
+         87*       < 22> ASSIGN                                                    OP1[  IS_CV !5 ] OP2[ ,  IS_TMP_VAR ~47 ]
+         88*       < 42> JMP                                                       OP1[ ->102 ]
+  292    89*       <107> CATCH                                       last  RES[  IS_CV !9 ]       OP1[  IS_CONST (268435248) 'RuntimeException' ]
+  294    90*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         91*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~50 ]      OP1[  IS_CV !7 ] OP2[ ,  IS_CONST (268435247) 'name' ]
+  295    92*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~52 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435246) 'STATUS_PROBLEM' ]
+         93*       < 71> INIT_ARRAY                                        RES[  IS_TMP_VAR ~53 ]      OP1[  IS_TMP_VAR ~52 ] OP2[ ,  IS_CONST (268435245) 'status' ]
+  294    94*       < 84> FETCH_DIM_W                                       RES[  IS_VAR $49 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435240) 'servers' ]
+         95*       < 23> ASSIGN_DIM                                                OP1[  IS_VAR $49 ] OP2[ ,  IS_TMP_VAR ~50 ]
+  295    96*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~53 ] OP2[  IS_UNUSED  ]
+  297    97*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         98*       < 34> PRE_INC                                                   OP1[  IS_CV !4 ]
+  298    99*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        100*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~55 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435232) 'STATUS_PROBLEM' ]
+        101*       < 22> ASSIGN                                                    OP1[  IS_CV !5 ] OP2[ ,  IS_TMP_VAR ~55 ]
+  271   102*       < 42> JMP                                                       OP1[ ->41 ]
+        103*       <127> FE_FREE                                                   OP1[  IS_VAR $26 ] OP2[  IS_UNUSED  ]
+  302   104*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        105*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~57 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435223) 'STATUS_OK' ]
+        106*       < 17> IS_NOT_IDENTICAL                                  RES[  IS_TMP_VAR ~58 ]      OP1[  IS_CV !5 ] OP2[ ,  IS_TMP_VAR ~57 ]
+        107*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~58 ] OP2[ , ->122 ]
+  303   108*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        109*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435216) 'Glpi%5CSystem%5CStatus%5Csprintf' ]
+        110*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435217) 'Glpi%5CSystem%5CStatus%5C_x' ]
+        111*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435218) 'glpi_status' ] OP2[  IS_UNUSED  ]
+        112*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435217) 'OK%3A+%25d%2C+WARNING%3A+%25d%2C+PROBLEM%3A+%25d%2C+TOTAL%3A+%25d' ] OP2[  IS_UNUSED  ]
+        113*       < 60> DO_FCALL                                      0   RES[  IS_VAR $59 ]      OP1[  IS_UNUSED  ]
+        114*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $59 ] OP2[  IS_UNUSED  ]
+        115*       <  2> SUB                                               RES[  IS_TMP_VAR ~60 ]      OP1[  IS_CV !3 ] OP2[ ,  IS_CV !4 ]
+        116*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~60 ] OP2[  IS_UNUSED  ]
+        117*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435208) 0 ] OP2[  IS_UNUSED  ]
+        118*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !4 ] OP2[  IS_UNUSED  ]
+        119*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+        120*       < 60> DO_FCALL                                      0   RES[  IS_VAR $61 ]      OP1[  IS_UNUSED  ]
+        121*       < 22> ASSIGN                                                    OP1[  IS_CV !6 ] OP2[ ,  IS_VAR $61 ]
+  306   122*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        123*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435197) 'status' ]
+        124*       <137> OP_DATA                                                   OP1[  IS_CV !5 ] OP2[  IS_UNUSED  ]
+  307   125*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        126*       <123> TYPE_CHECK                                  1020   RES[  IS_TMP_VAR ~64 ]      OP1[  IS_CV !6 ] OP2[  IS_UNUSED  ]
+        127*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~64 ] OP2[ , ->131 ]
+  308   128*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        129*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435186) 'status_msg' ]
+        130*       <137> OP_DATA                                                   OP1[  IS_CV !6 ] OP2[  IS_UNUSED  ]
+  313   131*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        132*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+        133*       < 62> RETURN                                                    OP1[  IS_CV !1 ]
+  314   134*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        135*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        136*       < 62> RETURN                                                    OP1[  IS_CONST (268435173) null ]
+
+End of function getldapstatus
+
+Function getimapstatus:
+[+]Function Source Class Name: Glpi\System\Status\StatusChecker
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:array
+
+[*]ArgInfoNo**0**
+[*]name:public_only
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]Key: status, Value: NULL, Type: 1
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\System\Status\StatusChecker.php
+function name:  getIMAPStatus
+number of ops:  152
+compiled vars:  !0 = $public_only, !1 = $status, !2 = $imap_methods, !3 = $total_servers, !4 = $total_error, !5 = $global_status, !6 = $message, !7 = $method, !8 = $param, !9 = $host, !10 = $fp, !11 = $errno, !12 = $errstr
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  320     0*       < 64> RECV_INIT                                         RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435377) <true> ]
+  322     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       <183> BIND_STATIC                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+  324     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       <123> TYPE_CHECK                                    2   RES[  IS_TMP_VAR ~13 ]      OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+          5*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~13 ] OP2[ , ->146 ]
+  326     6*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          7*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~14 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435364) 'STATUS_NO_DATA' ]
+          8*       < 71> INIT_ARRAY                                        RES[  IS_TMP_VAR ~15 ]      OP1[  IS_TMP_VAR ~14 ] OP2[ ,  IS_CONST (268435363) 'status' ]
+          9*       < 72> ADD_ARRAY_ELEMENT                                 RES[  IS_TMP_VAR ~15 ]      OP1[  IS_CONST (268435362) <array> ] OP2[ ,  IS_CONST (268435363) 'servers' ]
+  325    10*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_TMP_VAR ~15 ]
+  329    11*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         12*       <113> INIT_STATIC_METHOD_CALL      self                         OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435358) 'isDBAvailable' ]
+         13*       < 60> DO_FCALL                                      0   RES[  IS_VAR $17 ]      OP1[  IS_UNUSED  ]
+         14*       < 43> JMPZ                                                      OP1[  IS_VAR $17 ] OP2[ , ->146 ]
+  331    15*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         16*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435352) 'Glpi%5CSystem%5CStatus%5CgetAllDataFromTable' ]
+         17*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435353) 'glpi_authmails' ] OP2[  IS_UNUSED  ]
+         18*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435352) <array> ] OP2[  IS_UNUSED  ]
+         19*       < 60> DO_FCALL                                      0   RES[  IS_VAR $18 ]      OP1[  IS_UNUSED  ]
+         20*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_VAR $18 ]
+  333    21*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         22*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435345) 'Glpi%5CSystem%5CStatus%5Ccount' ]
+         23*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         24*       < 60> DO_FCALL                                      0   RES[  IS_VAR $20 ]      OP1[  IS_UNUSED  ]
+         25*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_VAR $20 ]
+  334    26*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         27*       < 22> ASSIGN                                                    OP1[  IS_CV !4 ] OP2[ ,  IS_CONST (268435338) 0 ]
+  335    28*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         29*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~23 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435335) 'STATUS_NO_DATA' ]
+         30*       < 22> ASSIGN                                                    OP1[  IS_CV !5 ] OP2[ ,  IS_TMP_VAR ~23 ]
+  336    31*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         32*       < 22> ASSIGN                                                    OP1[  IS_CV !6 ] OP2[ ,  IS_CONST (268435330) null ]
+  337    33*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         34*       < 20> IS_SMALLER                                        RES[  IS_TMP_VAR ~26 ]      OP1[  IS_CONST (268435327) 0 ] OP2[ ,  IS_CV !3 ]
+         35*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~26 ] OP2[ , ->137 ]
+  338    36*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         37*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~27 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435322) 'STATUS_OK' ]
+         38*       < 22> ASSIGN                                                    OP1[  IS_CV !5 ] OP2[ ,  IS_TMP_VAR ~27 ]
+  339    39*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         40*       < 77> FE_RESET_R                                        RES[  IS_VAR $29 ]      OP1[  IS_CV !2 ] OP2[ , ->118 ]
+         41*       < 78> FE_FETCH_R                                                OP1[  IS_VAR $29 ] OP2[ ,  IS_CV !7 ] EXT_JMP_REL[ , ->118 ]
+  340    42*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         43*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435311) 'Toolbox' ] OP2[ ,  IS_CONST (268435313) 'parseMailServerConnectString' ]
+         44*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         45*       < 93> FETCH_DIM_FUNC_ARG                                RES[  IS_VAR $30 ]      OP1[  IS_CV !7 ] OP2[ ,  IS_CONST (268435311) 'connect_string' ]
+         46*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $30 ] OP2[  IS_UNUSED  ]
+         47*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435308) <true> ] OP2[  IS_UNUSED  ]
+         48*       < 60> DO_FCALL                                      0   RES[  IS_VAR $31 ]      OP1[  IS_UNUSED  ]
+         49*       < 22> ASSIGN                                                    OP1[  IS_CV !8 ] OP2[ ,  IS_VAR $31 ]
+  341    50*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         51*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~33 ]      OP1[  IS_CV !8 ] OP2[ ,  IS_CONST (268435301) 'ssl' ]
+         52*       <123> TYPE_CHECK                                    8   RES[  IS_TMP_VAR ~34 ]      OP1[  IS_TMP_VAR ~33 ] OP2[  IS_UNUSED  ]
+         53*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~34 ] OP2[ , ->59 ]
+  342    54*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         55*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~35 ]      OP1[  IS_CV !8 ] OP2[ ,  IS_CONST (268435294) 'address' ]
+         56*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~36 ]      OP1[  IS_CONST (268435293) 'ssl%3A%2F%2F' ] OP2[ ,  IS_TMP_VAR ~35 ]
+         57*       < 22> ASSIGN                                                    OP1[  IS_CV !9 ] OP2[ ,  IS_TMP_VAR ~36 ]
+         58*       < 42> JMP                                                       OP1[ ->71 ]
+  343    59*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         60*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~38 ]      OP1[  IS_CV !8 ] OP2[ ,  IS_CONST (268435286) 'tls' ]
+         61*       <123> TYPE_CHECK                                    8   RES[  IS_TMP_VAR ~39 ]      OP1[  IS_TMP_VAR ~38 ] OP2[  IS_UNUSED  ]
+         62*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~39 ] OP2[ , ->68 ]
+  344    63*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         64*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~40 ]      OP1[  IS_CV !8 ] OP2[ ,  IS_CONST (268435279) 'address' ]
+         65*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~41 ]      OP1[  IS_CONST (268435278) 'tls%3A%2F%2F' ] OP2[ ,  IS_TMP_VAR ~40 ]
+         66*       < 22> ASSIGN                                                    OP1[  IS_CV !9 ] OP2[ ,  IS_TMP_VAR ~41 ]
+         67*       < 42> JMP                                                       OP1[ ->71 ]
+  346    68*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         69*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~43 ]      OP1[  IS_CV !8 ] OP2[ ,  IS_CONST (268435271) 'address' ]
+         70*       < 22> ASSIGN                                                    OP1[  IS_CV !9 ] OP2[ ,  IS_TMP_VAR ~43 ]
+  348    71*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         72*       < 57> BEGIN_SILENCE                                     RES[  IS_TMP_VAR ~45 ]      OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         73*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435264) 'Glpi%5CSystem%5CStatus%5Cfsockopen' ]
+         74*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !9 ] OP2[  IS_UNUSED  ]
+         75*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         76*       < 93> FETCH_DIM_FUNC_ARG                                RES[  IS_VAR $46 ]      OP1[  IS_CV !8 ] OP2[ ,  IS_CONST (268435261) 'port' ]
+         77*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $46 ] OP2[  IS_UNUSED  ]
+         78*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !11 ] OP2[  IS_UNUSED  ]
+         79*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !12 ] OP2[  IS_UNUSED  ]
+         80*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435254) 1 ] OP2[  IS_UNUSED  ]
+         81*       < 60> DO_FCALL                                      0   RES[  IS_VAR $47 ]      OP1[  IS_UNUSED  ]
+         82*       < 58> END_SILENCE                                               OP1[  IS_TMP_VAR ~45 ] OP2[  IS_UNUSED  ]
+         83*       < 22> ASSIGN                                            RES[  IS_TMP_VAR ~48 ]      OP1[  IS_CV !10 ] OP2[ ,  IS_VAR $47 ]
+         84*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~48 ] OP2[ , ->93 ]
+  349    85*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         86*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~50 ]      OP1[  IS_CV !7 ] OP2[ ,  IS_CONST (268435244) 'name' ]
+  350    87*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~52 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435243) 'STATUS_OK' ]
+         88*       < 71> INIT_ARRAY                                        RES[  IS_TMP_VAR ~53 ]      OP1[  IS_TMP_VAR ~52 ] OP2[ ,  IS_CONST (268435242) 'status' ]
+  349    89*       < 84> FETCH_DIM_W                                       RES[  IS_VAR $49 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435237) 'servers' ]
+         90*       < 23> ASSIGN_DIM                                                OP1[  IS_VAR $49 ] OP2[ ,  IS_TMP_VAR ~50 ]
+  350    91*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~53 ] OP2[  IS_UNUSED  ]
+         92*       < 42> JMP                                                       OP1[ ->110 ]
+  353    93*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         94*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~55 ]      OP1[  IS_CV !7 ] OP2[ ,  IS_CONST (268435232) 'name' ]
+  354    95*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~57 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435231) 'STATUS_PROBLEM' ]
+         96*       < 71> INIT_ARRAY                                        RES[  IS_TMP_VAR ~58 ]      OP1[  IS_TMP_VAR ~57 ] OP2[ ,  IS_CONST (268435230) 'status' ]
+  355    97*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435229) 'Glpi%5CSystem%5CStatus%5C_x' ]
+         98*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435230) 'glpi_status' ] OP2[  IS_UNUSED  ]
+         99*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435229) 'Unable+to+connect+to+the+IMAP+server' ] OP2[  IS_UNUSED  ]
+        100*       < 60> DO_FCALL                                      0   RES[  IS_VAR $59 ]      OP1[  IS_UNUSED  ]
+        101*       < 72> ADD_ARRAY_ELEMENT                                 RES[  IS_TMP_VAR ~58 ]      OP1[  IS_VAR $59 ] OP2[ ,  IS_CONST (268435226) 'status_msg' ]
+  353   102*       < 84> FETCH_DIM_W                                       RES[  IS_VAR $54 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435215) 'servers' ]
+        103*       < 23> ASSIGN_DIM                                                OP1[  IS_VAR $54 ] OP2[ ,  IS_TMP_VAR ~55 ]
+  355   104*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~58 ] OP2[  IS_UNUSED  ]
+  357   105*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        106*       < 34> PRE_INC                                                   OP1[  IS_CV !4 ]
+  358   107*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        108*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~61 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435213) 'STATUS_PROBLEM' ]
+        109*       < 22> ASSIGN                                                    OP1[  IS_CV !5 ] OP2[ ,  IS_TMP_VAR ~61 ]
+  360   110*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        111*       <123> TYPE_CHECK                                  1018   RES[  IS_TMP_VAR ~63 ]      OP1[  IS_CV !10 ] OP2[  IS_UNUSED  ]
+        112*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~63 ] OP2[ , ->117 ]
+  361   113*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        114*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435202) 'Glpi%5CSystem%5CStatus%5Cfclose' ]
+        115*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !10 ] OP2[  IS_UNUSED  ]
+        116*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  339   117*       < 42> JMP                                                       OP1[ ->41 ]
+        118*       <127> FE_FREE                                                   OP1[  IS_VAR $29 ] OP2[  IS_UNUSED  ]
+  364   119*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        120*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~65 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435193) 'STATUS_OK' ]
+        121*       < 17> IS_NOT_IDENTICAL                                  RES[  IS_TMP_VAR ~66 ]      OP1[  IS_CV !5 ] OP2[ ,  IS_TMP_VAR ~65 ]
+        122*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~66 ] OP2[ , ->137 ]
+  365   123*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        124*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435186) 'Glpi%5CSystem%5CStatus%5Csprintf' ]
+        125*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435187) 'Glpi%5CSystem%5CStatus%5C_x' ]
+        126*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435188) 'glpi_status' ] OP2[  IS_UNUSED  ]
+        127*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435187) 'OK%3A+%25d%2C+WARNING%3A+%25d%2C+PROBLEM%3A+%25d%2C+TOTAL%3A+%25d' ] OP2[  IS_UNUSED  ]
+        128*       < 60> DO_FCALL                                      0   RES[  IS_VAR $67 ]      OP1[  IS_UNUSED  ]
+        129*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $67 ] OP2[  IS_UNUSED  ]
+        130*       <  2> SUB                                               RES[  IS_TMP_VAR ~68 ]      OP1[  IS_CV !3 ] OP2[ ,  IS_CV !4 ]
+        131*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~68 ] OP2[  IS_UNUSED  ]
+        132*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435178) 0 ] OP2[  IS_UNUSED  ]
+        133*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !4 ] OP2[  IS_UNUSED  ]
+        134*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+        135*       < 60> DO_FCALL                                      0   RES[  IS_VAR $69 ]      OP1[  IS_UNUSED  ]
+        136*       < 22> ASSIGN                                                    OP1[  IS_CV !6 ] OP2[ ,  IS_VAR $69 ]
+  368   137*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        138*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435167) 'status' ]
+        139*       <137> OP_DATA                                                   OP1[  IS_CV !5 ] OP2[  IS_UNUSED  ]
+  369   140*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        141*       <123> TYPE_CHECK                                  1020   RES[  IS_TMP_VAR ~72 ]      OP1[  IS_CV !6 ] OP2[  IS_UNUSED  ]
+        142*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~72 ] OP2[ , ->146 ]
+  370   143*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        144*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435156) 'status_msg' ]
+        145*       <137> OP_DATA                                                   OP1[  IS_CV !6 ] OP2[  IS_UNUSED  ]
+  375   146*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        147*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+        148*       < 62> RETURN                                                    OP1[  IS_CV !1 ]
+  376   149*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        150*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        151*       < 62> RETURN                                                    OP1[  IS_CONST (268435143) null ]
+
+End of function getimapstatus
+
+Function getcasstatus:
+[+]Function Source Class Name: Glpi\System\Status\StatusChecker
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:array
+
+[*]ArgInfoNo**0**
+[*]name:public_only
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]Key: status, Value: NULL, Type: 1
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\System\Status\StatusChecker.php
+function name:  getCASStatus
+number of ops:  79
+compiled vars:  !0 = $public_only, !1 = $CFG_GLPI, !2 = $status, !3 = $url, !4 = $data
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  382     0*       < 64> RECV_INIT                                         RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435422) <true> ]
+  385     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       <168> BIND_GLOBAL                                               OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435419) 'CFG_GLPI' ]
+  387     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       <183> BIND_STATIC                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+  389     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       <123> TYPE_CHECK                                    2   RES[  IS_TMP_VAR ~5 ]       OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+          7*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~5 ] OP2[ , ->73 ]
+  390     8*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          9*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~7 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435407) 'STATUS_NO_DATA' ]
+         10*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435404) 'status' ]
+         11*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~7 ] OP2[  IS_UNUSED  ]
+  391    12*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         13*       <115> ISSET_ISEMPTY_DIM_OBJ                         1   RES[  IS_TMP_VAR ~8 ]       OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435400) 'cas_host' ]
+         14*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~9 ]       OP1[  IS_TMP_VAR ~8 ]
+         15*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~9 ] OP2[ , ->73 ]
+  392    16*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         17*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~10 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435393) 'cas_host' ]
+         18*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_TMP_VAR ~10 ]
+  393    19*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         20*       <115> ISSET_ISEMPTY_DIM_OBJ                         1   RES[  IS_TMP_VAR ~12 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435388) 'cas_port' ]
+         21*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~13 ]      OP1[  IS_TMP_VAR ~12 ]
+         22*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~13 ] OP2[ , ->28 ]
+  394    23*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         24*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~14 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435381) 'cas_port' ]
+         25*       < 51> CAST                                          4   RES[  IS_TMP_VAR ~15 ]      OP1[  IS_TMP_VAR ~14 ] OP2[  IS_UNUSED  ]
+         26*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~16 ]      OP1[  IS_CONST (268435378) '%3A' ] OP2[ ,  IS_TMP_VAR ~15 ]
+         27*       < 26> ASSIGN_OP                    .=               8           OP1[  IS_CV !3 ] OP2[ ,  IS_TMP_VAR ~16 ]
+  396    28*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         29*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~18 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435373) 'cas_uri' ]
+         30*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~19 ]      OP1[  IS_CONST (268435372) '%2F' ] OP2[ ,  IS_TMP_VAR ~18 ]
+         31*       < 26> ASSIGN_OP                    .=               8           OP1[  IS_CV !3 ] OP2[ ,  IS_TMP_VAR ~19 ]
+  397    32*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         33*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435367) 'Toolbox' ] OP2[ ,  IS_CONST (268435369) 'isUrlSafe' ]
+         34*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         35*       < 60> DO_FCALL                                      0   RES[  IS_VAR $21 ]      OP1[  IS_UNUSED  ]
+         36*       < 43> JMPZ                                                      OP1[  IS_VAR $21 ] OP2[ , ->56 ]
+  398    37*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         38*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435361) 'Toolbox' ] OP2[ ,  IS_CONST (268435363) 'getURLContent' ]
+         39*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         40*       < 60> DO_FCALL                                      0   RES[  IS_VAR $22 ]      OP1[  IS_UNUSED  ]
+         41*       < 22> ASSIGN                                                    OP1[  IS_CV !4 ] OP2[ ,  IS_VAR $22 ]
+  399    42*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         43*       <154> ISSET_ISEMPTY_CV                                  RES[  IS_TMP_VAR ~24 ]      OP1[  IS_CV !4 ] OP2[  IS_UNUSED  ]
+         44*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~25 ]      OP1[  IS_TMP_VAR ~24 ]
+         45*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~25 ] OP2[ , ->51 ]
+  400    46*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         47*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~27 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435348) 'STATUS_OK' ]
+         48*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435345) 'status' ]
+         49*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~27 ] OP2[  IS_UNUSED  ]
+         50*       < 42> JMP                                                       OP1[ ->55 ]
+  402    51*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         52*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~29 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435340) 'STATUS_PROBLEM' ]
+         53*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435337) 'status' ]
+         54*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~29 ] OP2[  IS_UNUSED  ]
+         55*       < 42> JMP                                                       OP1[ ->73 ]
+  405    56*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         57*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~31 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435332) 'STATUS_NO_DATA' ]
+         58*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435329) 'status' ]
+         59*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~31 ] OP2[  IS_UNUSED  ]
+  406    60*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         61*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~32 ]      OP1[  IS_CV !0 ]
+         62*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~32 ] OP2[ , ->73 ]
+  407    63*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         64*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435320) 'Glpi%5CSystem%5CStatus%5Csprintf' ]
+  408    65*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435321) 'Glpi%5CSystem%5CStatus%5C__' ]
+         66*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435322) 'URL+%22%25s%22+is+not+considered+safe+and+cannot+be+fetched+from+GLPI+server.' ] OP2[  IS_UNUSED  ]
+         67*       < 60> DO_FCALL                                      0   RES[  IS_VAR $34 ]      OP1[  IS_UNUSED  ]
+         68*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $34 ] OP2[  IS_UNUSED  ]
+         69*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         70*       < 60> DO_FCALL                                      0   RES[  IS_VAR $35 ]      OP1[  IS_UNUSED  ]
+  407    71*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435305) 'status_msg' ]
+  408    72*       <137> OP_DATA                                                   OP1[  IS_VAR $35 ] OP2[  IS_UNUSED  ]
+  416    73*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         74*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         75*       < 62> RETURN                                                    OP1[  IS_CV !2 ]
+  417    76*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         77*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         78*       < 62> RETURN                                                    OP1[  IS_CONST (268435299) null ]
+
+End of function getcasstatus
+
+Function getmailcollectorstatus:
+[+]Function Source Class Name: Glpi\System\Status\StatusChecker
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:array
+
+[*]ArgInfoNo**0**
+[*]name:public_only
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]Key: status, Value: NULL, Type: 1
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\System\Status\StatusChecker.php
+function name:  getMailCollectorStatus
+number of ops:  119
+compiled vars:  !0 = $public_only, !1 = $status, !2 = $mailcollectors, !3 = $total_servers, !4 = $total_error, !5 = $global_status, !6 = $message, !7 = $mailcol, !8 = $mc, !9 = $e
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  423     0*       < 64> RECV_INIT                                         RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435389) <true> ]
+  425     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       <183> BIND_STATIC                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+  427     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       <123> TYPE_CHECK                                    2   RES[  IS_TMP_VAR ~10 ]      OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+          5*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~10 ] OP2[ , ->113 ]
+  429     6*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          7*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~11 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435376) 'STATUS_NO_DATA' ]
+          8*       < 71> INIT_ARRAY                                        RES[  IS_TMP_VAR ~12 ]      OP1[  IS_TMP_VAR ~11 ] OP2[ ,  IS_CONST (268435375) 'status' ]
+          9*       < 72> ADD_ARRAY_ELEMENT                                 RES[  IS_TMP_VAR ~12 ]      OP1[  IS_CONST (268435374) <array> ] OP2[ ,  IS_CONST (268435375) 'servers' ]
+  428    10*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_TMP_VAR ~12 ]
+  432    11*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         12*       <113> INIT_STATIC_METHOD_CALL      self                         OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435370) 'isDBAvailable' ]
+         13*       < 60> DO_FCALL                                      0   RES[  IS_VAR $14 ]      OP1[  IS_UNUSED  ]
+         14*       < 43> JMPZ                                                      OP1[  IS_VAR $14 ] OP2[ , ->113 ]
+  433    15*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         16*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435364) 'Glpi%5CSystem%5CStatus%5CgetAllDataFromTable' ]
+         17*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435365) 'glpi_mailcollectors' ] OP2[  IS_UNUSED  ]
+         18*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435364) <array> ] OP2[  IS_UNUSED  ]
+         19*       < 60> DO_FCALL                                      0   RES[  IS_VAR $15 ]      OP1[  IS_UNUSED  ]
+         20*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_VAR $15 ]
+  435    21*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         22*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435357) 'Glpi%5CSystem%5CStatus%5Ccount' ]
+         23*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         24*       < 60> DO_FCALL                                      0   RES[  IS_VAR $17 ]      OP1[  IS_UNUSED  ]
+         25*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_VAR $17 ]
+  436    26*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         27*       < 22> ASSIGN                                                    OP1[  IS_CV !4 ] OP2[ ,  IS_CONST (268435350) 0 ]
+  437    28*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         29*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~20 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435347) 'STATUS_NO_DATA' ]
+         30*       < 22> ASSIGN                                                    OP1[  IS_CV !5 ] OP2[ ,  IS_TMP_VAR ~20 ]
+  438    31*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         32*       < 22> ASSIGN                                                    OP1[  IS_CV !6 ] OP2[ ,  IS_CONST (268435342) null ]
+  439    33*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         34*       < 20> IS_SMALLER                                        RES[  IS_TMP_VAR ~23 ]      OP1[  IS_CONST (268435339) 0 ] OP2[ ,  IS_CV !3 ]
+         35*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~23 ] OP2[ , ->104 ]
+  440    36*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         37*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~24 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435334) 'STATUS_OK' ]
+         38*       < 22> ASSIGN                                                    OP1[  IS_CV !5 ] OP2[ ,  IS_TMP_VAR ~24 ]
+  441    39*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         40*       < 68> NEW                                               RES[  IS_VAR $26 ]      OP1[ 'MailCollector' ]
+         41*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         42*       < 22> ASSIGN                                                    OP1[  IS_CV !7 ] OP2[ ,  IS_VAR $26 ]
+  442    43*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         44*       < 77> FE_RESET_R                                        RES[  IS_VAR $29 ]      OP1[  IS_CV !2 ] OP2[ , ->85 ]
+         45*       < 78> FE_FETCH_R                                                OP1[  IS_VAR $29 ] OP2[ ,  IS_CV !8 ] EXT_JMP_REL[ , ->85 ]
+  443    46*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         47*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !7 ] OP2[ ,  IS_CONST (268435317) 'getFromDB' ]
+         48*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         49*       < 93> FETCH_DIM_FUNC_ARG                                RES[  IS_VAR $30 ]      OP1[  IS_CV !8 ] OP2[ ,  IS_CONST (268435315) 'id' ]
+         50*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $30 ] OP2[  IS_UNUSED  ]
+         51*       < 60> DO_FCALL                                      0   RES[  IS_VAR $31 ]      OP1[  IS_UNUSED  ]
+         52*       < 43> JMPZ                                                      OP1[  IS_VAR $31 ] OP2[ , ->84 ]
+  444    53*       <  0> NOP                                                      
+  445    54*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         55*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !7 ] OP2[ ,  IS_CONST (268435304) 'connect' ]
+         56*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  446    57*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         58*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~34 ]      OP1[  IS_CV !8 ] OP2[ ,  IS_CONST (268435301) 'name' ]
+  447    59*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~36 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435300) 'STATUS_OK' ]
+         60*       < 71> INIT_ARRAY                                        RES[  IS_TMP_VAR ~37 ]      OP1[  IS_TMP_VAR ~36 ] OP2[ ,  IS_CONST (268435299) 'status' ]
+  446    61*       < 84> FETCH_DIM_W                                       RES[  IS_VAR $33 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435294) 'servers' ]
+         62*       < 23> ASSIGN_DIM                                                OP1[  IS_VAR $33 ] OP2[ ,  IS_TMP_VAR ~34 ]
+  447    63*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~37 ] OP2[  IS_UNUSED  ]
+         64*       < 42> JMP                                                       OP1[ ->84 ]
+  449    65*       <107> CATCH                                       last  RES[  IS_CV !9 ]       OP1[  IS_CONST (268435290) 'Throwable' ]
+  450    66*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         67*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~39 ]      OP1[  IS_CV !8 ] OP2[ ,  IS_CONST (268435289) 'name' ]
+  451    68*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~41 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435288) 'STATUS_PROBLEM' ]
+         69*       < 71> INIT_ARRAY                                        RES[  IS_TMP_VAR ~42 ]      OP1[  IS_TMP_VAR ~41 ] OP2[ ,  IS_CONST (268435287) 'status' ]
+  452    70*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !9 ] OP2[ ,  IS_CONST (268435286) 'getCode' ]
+         71*       < 60> DO_FCALL                                      0   RES[  IS_VAR $43 ]      OP1[  IS_UNUSED  ]
+         72*       < 72> ADD_ARRAY_ELEMENT                                 RES[  IS_TMP_VAR ~42 ]      OP1[  IS_VAR $43 ] OP2[ ,  IS_CONST (268435284) 'error_code' ]
+  453    73*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !9 ] OP2[ ,  IS_CONST (268435283) 'getMessage' ]
+         74*       < 60> DO_FCALL                                      0   RES[  IS_VAR $44 ]      OP1[  IS_UNUSED  ]
+         75*       < 72> ADD_ARRAY_ELEMENT                                 RES[  IS_TMP_VAR ~42 ]      OP1[  IS_VAR $44 ] OP2[ ,  IS_CONST (268435281) 'status_msg' ]
+  450    76*       < 84> FETCH_DIM_W                                       RES[  IS_VAR $38 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435270) 'servers' ]
+         77*       < 23> ASSIGN_DIM                                                OP1[  IS_VAR $38 ] OP2[ ,  IS_TMP_VAR ~39 ]
+  453    78*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~42 ] OP2[  IS_UNUSED  ]
+  455    79*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         80*       < 34> PRE_INC                                                   OP1[  IS_CV !4 ]
+  456    81*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         82*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~46 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435268) 'STATUS_PROBLEM' ]
+         83*       < 22> ASSIGN                                                    OP1[  IS_CV !5 ] OP2[ ,  IS_TMP_VAR ~46 ]
+  442    84*       < 42> JMP                                                       OP1[ ->45 ]
+         85*       <127> FE_FREE                                                   OP1[  IS_VAR $29 ] OP2[  IS_UNUSED  ]
+  460    86*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         87*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~48 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435259) 'STATUS_OK' ]
+         88*       < 17> IS_NOT_IDENTICAL                                  RES[  IS_TMP_VAR ~49 ]      OP1[  IS_CV !5 ] OP2[ ,  IS_TMP_VAR ~48 ]
+         89*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~49 ] OP2[ , ->104 ]
+  461    90*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         91*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435252) 'Glpi%5CSystem%5CStatus%5Csprintf' ]
+         92*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435253) 'Glpi%5CSystem%5CStatus%5C_x' ]
+         93*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435254) 'glpi_status' ] OP2[  IS_UNUSED  ]
+         94*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435253) 'OK%3A+%25d%2C+WARNING%3A+%25d%2C+PROBLEM%3A+%25d%2C+TOTAL%3A+%25d' ] OP2[  IS_UNUSED  ]
+         95*       < 60> DO_FCALL                                      0   RES[  IS_VAR $50 ]      OP1[  IS_UNUSED  ]
+         96*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $50 ] OP2[  IS_UNUSED  ]
+         97*       <  2> SUB                                               RES[  IS_TMP_VAR ~51 ]      OP1[  IS_CV !3 ] OP2[ ,  IS_CV !4 ]
+         98*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~51 ] OP2[  IS_UNUSED  ]
+         99*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435244) 0 ] OP2[  IS_UNUSED  ]
+        100*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !4 ] OP2[  IS_UNUSED  ]
+        101*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+        102*       < 60> DO_FCALL                                      0   RES[  IS_VAR $52 ]      OP1[  IS_UNUSED  ]
+        103*       < 22> ASSIGN                                                    OP1[  IS_CV !6 ] OP2[ ,  IS_VAR $52 ]
+  464   104*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        105*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435233) 'status' ]
+        106*       <137> OP_DATA                                                   OP1[  IS_CV !5 ] OP2[  IS_UNUSED  ]
+  465   107*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        108*       <123> TYPE_CHECK                                  1020   RES[  IS_TMP_VAR ~55 ]      OP1[  IS_CV !6 ] OP2[  IS_UNUSED  ]
+        109*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~55 ] OP2[ , ->113 ]
+  466   110*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        111*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435222) 'status_msg' ]
+        112*       <137> OP_DATA                                                   OP1[  IS_CV !6 ] OP2[  IS_UNUSED  ]
+  471   113*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        114*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+        115*       < 62> RETURN                                                    OP1[  IS_CV !1 ]
+  472   116*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        117*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        118*       < 62> RETURN                                                    OP1[  IS_CONST (268435209) null ]
+
+End of function getmailcollectorstatus
+
+Function getcrontaskstatus:
+[+]Function Source Class Name: Glpi\System\Status\StatusChecker
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:array
+
+[*]ArgInfoNo**0**
+[*]name:public_only
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]Key: status, Value: NULL, Type: 1
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\System\Status\StatusChecker.php
+function name:  getCronTaskStatus
+number of ops:  114
+compiled vars:  !0 = $public_only, !1 = $status, !2 = $crontasks, !3 = $running, !4 = $stuck_crontasks, !5 = $ct
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  478     0*       < 64> RECV_INIT                                         RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435376) <true> ]
+  480     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       <183> BIND_STATIC                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+  482     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       <123> TYPE_CHECK                                    2   RES[  IS_TMP_VAR ~6 ]       OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+          5*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~6 ] OP2[ , ->108 ]
+  484     6*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          7*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~7 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435363) 'STATUS_NO_DATA' ]
+          8*       < 71> INIT_ARRAY                                        RES[  IS_TMP_VAR ~8 ]       OP1[  IS_TMP_VAR ~7 ] OP2[ ,  IS_CONST (268435362) 'status' ]
+          9*       < 72> ADD_ARRAY_ELEMENT                                 RES[  IS_TMP_VAR ~8 ]       OP1[  IS_CONST (268435361) <array> ] OP2[ ,  IS_CONST (268435362) 'stuck' ]
+  483    10*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_TMP_VAR ~8 ]
+  487    11*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         12*       <113> INIT_STATIC_METHOD_CALL      self                         OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435357) 'isDBAvailable' ]
+         13*       < 60> DO_FCALL                                      0   RES[  IS_VAR $10 ]      OP1[  IS_UNUSED  ]
+         14*       < 43> JMPZ                                                      OP1[  IS_VAR $10 ] OP2[ , ->108 ]
+  488    15*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         16*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435351) 'Glpi%5CSystem%5CStatus%5CgetAllDataFromTable' ]
+         17*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435352) 'glpi_crontasks' ] OP2[  IS_UNUSED  ]
+         18*       < 60> DO_FCALL                                      0   RES[  IS_VAR $11 ]      OP1[  IS_UNUSED  ]
+         19*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_VAR $11 ]
+  489    20*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         21*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435345) 'Glpi%5CSystem%5CStatus%5Ccount' ]
+         22*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435346) 'Glpi%5CSystem%5CStatus%5Carray_filter' ]
+         23*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         24*       <142> DECLARE_LAMBDA_FUNCTION                           RES[  IS_TMP_VAR ~13 ]      OP1[  IS_CONST (268435345) '%00glpi%5Csystem%5Cstatus%5C%7Bclosure%7DG%3A%5Cdesktop%5CYama%5Capp%5Cglpi-10.0.16%5Cglpi%5Csrc%5CSystem%5CStatus%5CStatusChecker.php%3A489%240' ]
+  491    25*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~13 ] OP2[  IS_UNUSED  ]
+         26*       < 60> DO_FCALL                                      0   RES[  IS_VAR $14 ]      OP1[  IS_UNUSED  ]
+         27*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $14 ] OP2[  IS_UNUSED  ]
+         28*       < 60> DO_FCALL                                      0   RES[  IS_VAR $15 ]      OP1[  IS_UNUSED  ]
+  489    29*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_VAR $15 ]
+  492    30*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         31*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435332) 'Glpi%5CSystem%5CStatus%5CgetAllDataFromTable' ]
+  493    32*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435333) 'glpi_crontasks' ] OP2[  IS_UNUSED  ]
+  495    33*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~17 ]      OP1[  IS_CONST (268435333) 'CronTask' ] OP2[ ,  IS_CONST (268435332) 'STATE_RUNNING' ]
+         34*       < 71> INIT_ARRAY                                        RES[  IS_TMP_VAR ~18 ]      OP1[  IS_TMP_VAR ~17 ] OP2[ ,  IS_CONST (268435333) 'state' ]
+  497    35*       < 68> NEW                                               RES[  IS_VAR $19 ]      OP1[ 'QueryExpression' ]
+  498    36*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435332) 'DBmysql' ] OP2[ ,  IS_CONST (268435334) 'quoteName' ]
+         37*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435334) 'lastrun' ] OP2[  IS_UNUSED  ]
+         38*       < 60> DO_FCALL                                      0   RES[  IS_VAR $20 ]      OP1[  IS_UNUSED  ]
+         39*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~21 ]      OP1[  IS_CONST (268435331) '%28unix_timestamp%28' ] OP2[ ,  IS_VAR $20 ]
+         40*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~22 ]      OP1[  IS_TMP_VAR ~21 ] OP2[ ,  IS_CONST (268435330) '%29+%2B+2+%2A+' ]
+  499    41*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435329) 'DBmysql' ] OP2[ ,  IS_CONST (268435331) 'quoteName' ]
+         42*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435331) 'frequency' ] OP2[  IS_UNUSED  ]
+         43*       < 60> DO_FCALL                                      0   RES[  IS_VAR $23 ]      OP1[  IS_UNUSED  ]
+         44*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~24 ]      OP1[  IS_TMP_VAR ~22 ] OP2[ ,  IS_VAR $23 ]
+         45*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~25 ]      OP1[  IS_TMP_VAR ~24 ] OP2[ ,  IS_CONST (268435326) '+%3C+unix_timestamp%28now%28%29%29%29' ]
+         46*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~25 ] OP2[  IS_UNUSED  ]
+         47*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         48*       < 71> INIT_ARRAY                                        RES[  IS_TMP_VAR ~27 ]      OP1[  IS_VAR $19 ] OP2[  IS_UNUSED  ]
+  501    49*       < 68> NEW                                               RES[  IS_VAR $28 ]      OP1[ 'QueryExpression' ]
+  502    50*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435319) 'DBmysql' ] OP2[ ,  IS_CONST (268435321) 'quoteName' ]
+         51*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435321) 'lastrun' ] OP2[  IS_UNUSED  ]
+         52*       < 60> DO_FCALL                                      0   RES[  IS_VAR $29 ]      OP1[  IS_UNUSED  ]
+         53*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~30 ]      OP1[  IS_CONST (268435318) '%28unix_timestamp%28' ] OP2[ ,  IS_VAR $29 ]
+         54*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~31 ]      OP1[  IS_TMP_VAR ~30 ] OP2[ ,  IS_CONST (268435317) '%29+%2B+2+%2A+' ]
+  503    55*       < 99> FETCH_CONSTANT                                    RES[  IS_TMP_VAR ~32 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435316) 'Glpi%5CSystem%5CStatus%5CHOUR_TIMESTAMP' ]
+         56*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~33 ]      OP1[  IS_TMP_VAR ~31 ] OP2[ ,  IS_TMP_VAR ~32 ]
+         57*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~34 ]      OP1[  IS_TMP_VAR ~33 ] OP2[ ,  IS_CONST (268435315) '+%3C+unix_timestamp%28now%28%29%29%29' ]
+         58*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~34 ] OP2[  IS_UNUSED  ]
+         59*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         60*       < 72> ADD_ARRAY_ELEMENT                                 RES[  IS_TMP_VAR ~27 ]      OP1[  IS_VAR $28 ] OP2[  IS_UNUSED  ]
+         61*       < 72> ADD_ARRAY_ELEMENT                                 RES[  IS_TMP_VAR ~18 ]      OP1[  IS_TMP_VAR ~27 ] OP2[ ,  IS_CONST (268435308) 'OR' ]
+         62*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~18 ] OP2[  IS_UNUSED  ]
+         63*       < 60> DO_FCALL                                      0   RES[  IS_VAR $36 ]      OP1[  IS_UNUSED  ]
+  492    64*       < 22> ASSIGN                                                    OP1[  IS_CV !4 ] OP2[ ,  IS_VAR $36 ]
+  508    65*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         66*       < 77> FE_RESET_R                                        RES[  IS_VAR $38 ]      OP1[  IS_CV !4 ] OP2[ , ->74 ]
+         67*       < 78> FE_FETCH_R                                                OP1[  IS_VAR $38 ] OP2[ ,  IS_CV !5 ] EXT_JMP_REL[ , ->74 ]
+  509    68*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         69*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~41 ]      OP1[  IS_CV !5 ] OP2[ ,  IS_CONST (268435294) 'name' ]
+         70*       < 84> FETCH_DIM_W                                       RES[  IS_VAR $39 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435291) 'stuck' ]
+         71*       < 23> ASSIGN_DIM                                                OP1[  IS_VAR $39 ] OP2[  IS_UNUSED  ]
+         72*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~41 ] OP2[  IS_UNUSED  ]
+  508    73*       < 42> JMP                                                       OP1[ ->67 ]
+         74*       <127> FE_FREE                                                   OP1[  IS_VAR $38 ] OP2[  IS_UNUSED  ]
+  511    75*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         76*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435282) 'Glpi%5CSystem%5CStatus%5Ccount' ]
+         77*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         78*       < 93> FETCH_DIM_FUNC_ARG                                RES[  IS_VAR $43 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435281) 'stuck' ]
+         79*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $43 ] OP2[  IS_UNUSED  ]
+         80*       < 60> DO_FCALL                                      0   RES[  IS_VAR $44 ]      OP1[  IS_UNUSED  ]
+         81*       < 43> JMPZ                                                      OP1[  IS_VAR $44 ] OP2[ , ->85 ]
+         82*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~45 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435274) 'STATUS_PROBLEM' ]
+         83*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~46 ]      OP1[  IS_TMP_VAR ~45 ]
+         84*       < 42> JMP                                                       OP1[ ->87 ]
+         85*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~47 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435269) 'STATUS_OK' ]
+         86*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~46 ]      OP1[  IS_TMP_VAR ~47 ]
+         87*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435259) 'status' ]
+         88*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~46 ] OP2[  IS_UNUSED  ]
+  512    89*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         90*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435261) 'Glpi%5CSystem%5CStatus%5Csprintf' ]
+         91*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435262) 'Glpi%5CSystem%5CStatus%5C_x' ]
+         92*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435263) 'glpi_status' ] OP2[  IS_UNUSED  ]
+         93*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435262) 'RUNNING%3A+%25d%2C+STUCK%3A+%25d%2C+TOTAL%3A+%25d' ] OP2[  IS_UNUSED  ]
+         94*       < 60> DO_FCALL                                      0   RES[  IS_VAR $49 ]      OP1[  IS_UNUSED  ]
+         95*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $49 ] OP2[  IS_UNUSED  ]
+         96*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         97*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435255) 'Glpi%5CSystem%5CStatus%5Ccount' ]
+         98*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !4 ] OP2[  IS_UNUSED  ]
+         99*       < 60> DO_FCALL                                      0   RES[  IS_VAR $50 ]      OP1[  IS_UNUSED  ]
+        100*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $50 ] OP2[  IS_UNUSED  ]
+        101*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435250) 'Glpi%5CSystem%5CStatus%5Ccount' ]
+        102*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+        103*       < 60> DO_FCALL                                      0   RES[  IS_VAR $51 ]      OP1[  IS_UNUSED  ]
+        104*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $51 ] OP2[  IS_UNUSED  ]
+        105*       < 60> DO_FCALL                                      0   RES[  IS_VAR $52 ]      OP1[  IS_UNUSED  ]
+        106*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435228) 'status_msg' ]
+        107*       <137> OP_DATA                                                   OP1[  IS_VAR $52 ] OP2[  IS_UNUSED  ]
+  516   108*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        109*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+        110*       < 62> RETURN                                                    OP1[  IS_CV !1 ]
+  517   111*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        112*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        113*       < 62> RETURN                                                    OP1[  IS_CONST (268435229) null ]
+
+End of function getcrontaskstatus
+
+Function getfilesystemstatus:
+[+]Function Source Class Name: Glpi\System\Status\StatusChecker
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:array
+
+[*]ArgInfoNo**0**
+[*]name:public_only
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]Key: status, Value: NULL, Type: 1
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\System\Status\StatusChecker.php
+function name:  getFilesystemStatus
+number of ops:  70
+compiled vars:  !0 = $public_only, !1 = $status
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  523     0*       < 64> RECV_INIT                                         RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435407) <true> ]
+  525     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       <183> BIND_STATIC                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+  527     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       <123> TYPE_CHECK                                    2   RES[  IS_TMP_VAR ~2 ]       OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+          5*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~2 ] OP2[ , ->64 ]
+  529     6*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          7*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~3 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435394) 'STATUS_OK' ]
+          8*       < 71> INIT_ARRAY                                        RES[  IS_TMP_VAR ~4 ]       OP1[  IS_TMP_VAR ~3 ] OP2[ ,  IS_CONST (268435393) 'status' ]
+  531     9*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~5 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435392) 'STATUS_OK' ]
+         10*       < 71> INIT_ARRAY                                        RES[  IS_TMP_VAR ~6 ]       OP1[  IS_TMP_VAR ~5 ] OP2[ ,  IS_CONST (268435391) 'status' ]
+         11*       < 72> ADD_ARRAY_ELEMENT                                 RES[  IS_TMP_VAR ~4 ]       OP1[  IS_TMP_VAR ~6 ] OP2[ ,  IS_CONST (268435390) 'session_dir' ]
+  528    12*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_TMP_VAR ~4 ]
+  535    13*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         14*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435385) 'Glpi%5CSystem%5CStatus%5Cis_dir' ]
+         15*       < 99> FETCH_CONSTANT                                    RES[  IS_TMP_VAR ~8 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435386) 'Glpi%5CSystem%5CStatus%5CGLPI_SESSION_DIR' ]
+         16*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~8 ] OP2[  IS_UNUSED  ]
+         17*       < 60> DO_FCALL                                      0   RES[  IS_VAR $9 ]       OP1[  IS_UNUSED  ]
+         18*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~10 ]      OP1[  IS_VAR $9 ]
+         19*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~10 ] OP2[ , ->39 ]
+  537    20*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         21*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~12 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435378) 'STATUS_PROBLEM' ]
+         22*       < 71> INIT_ARRAY                                        RES[  IS_TMP_VAR ~13 ]      OP1[  IS_TMP_VAR ~12 ] OP2[ ,  IS_CONST (268435377) 'status' ]
+  538    23*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435376) 'Glpi%5CSystem%5CStatus%5Csprintf' ]
+         24*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435377) 'Glpi%5CSystem%5CStatus%5C_x' ]
+         25*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435378) 'glpi_status' ] OP2[  IS_UNUSED  ]
+         26*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435377) '%25s+variable+is+not+a+directory' ] OP2[  IS_UNUSED  ]
+         27*       < 60> DO_FCALL                                      0   RES[  IS_VAR $14 ]      OP1[  IS_UNUSED  ]
+         28*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $14 ] OP2[  IS_UNUSED  ]
+         29*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435372) 'GLPI_SESSION_DIR' ] OP2[  IS_UNUSED  ]
+         30*       < 60> DO_FCALL                                      0   RES[  IS_VAR $15 ]      OP1[  IS_UNUSED  ]
+         31*       < 72> ADD_ARRAY_ELEMENT                                 RES[  IS_TMP_VAR ~13 ]      OP1[  IS_VAR $15 ] OP2[ ,  IS_CONST (268435369) 'status_msg' ]
+  536    32*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435355) 'session_dir' ]
+  538    33*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~13 ] OP2[  IS_UNUSED  ]
+  540    34*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         35*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~17 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435363) 'STATUS_PROBLEM' ]
+         36*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435360) 'status' ]
+         37*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~17 ] OP2[  IS_UNUSED  ]
+         38*       < 42> JMP                                                       OP1[ ->64 ]
+  541    39*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         40*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435354) 'Glpi%5CSystem%5CStatus%5Cis_writable' ]
+         41*       < 99> FETCH_CONSTANT                                    RES[  IS_TMP_VAR ~18 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435355) 'Glpi%5CSystem%5CStatus%5CGLPI_SESSION_DIR' ]
+         42*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~18 ] OP2[  IS_UNUSED  ]
+         43*       < 60> DO_FCALL                                      0   RES[  IS_VAR $19 ]      OP1[  IS_UNUSED  ]
+         44*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~20 ]      OP1[  IS_VAR $19 ]
+         45*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~20 ] OP2[ , ->64 ]
+  543    46*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         47*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~22 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435347) 'STATUS_PROBLEM' ]
+         48*       < 71> INIT_ARRAY                                        RES[  IS_TMP_VAR ~23 ]      OP1[  IS_TMP_VAR ~22 ] OP2[ ,  IS_CONST (268435346) 'status' ]
+  544    49*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435345) 'Glpi%5CSystem%5CStatus%5Csprintf' ]
+         50*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435346) 'Glpi%5CSystem%5CStatus%5C_x' ]
+         51*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435347) 'glpi_status' ] OP2[  IS_UNUSED  ]
+         52*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435346) '%25s+variable+is+not+writable' ] OP2[  IS_UNUSED  ]
+         53*       < 60> DO_FCALL                                      0   RES[  IS_VAR $24 ]      OP1[  IS_UNUSED  ]
+         54*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $24 ] OP2[  IS_UNUSED  ]
+         55*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435341) 'GLPI_SESSION_DIR' ] OP2[  IS_UNUSED  ]
+         56*       < 60> DO_FCALL                                      0   RES[  IS_VAR $25 ]      OP1[  IS_UNUSED  ]
+         57*       < 72> ADD_ARRAY_ELEMENT                                 RES[  IS_TMP_VAR ~23 ]      OP1[  IS_VAR $25 ] OP2[ ,  IS_CONST (268435338) 'status_msg' ]
+  542    58*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435324) 'session_dir' ]
+  544    59*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~23 ] OP2[  IS_UNUSED  ]
+  546    60*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         61*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~27 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435332) 'STATUS_PROBLEM' ]
+         62*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435329) 'status' ]
+         63*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~27 ] OP2[  IS_UNUSED  ]
+  550    64*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         65*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         66*       < 62> RETURN                                                    OP1[  IS_CV !1 ]
+  551    67*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         68*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         69*       < 62> RETURN                                                    OP1[  IS_CONST (268435317) null ]
+
+End of function getfilesystemstatus
+
+Function getpluginsstatus:
+[+]Function Source Class Name: Glpi\System\Status\StatusChecker
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:array
+
+[*]ArgInfoNo**0**
+[*]name:public_only
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]Key: status, Value: NULL, Type: 1
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\System\Status\StatusChecker.php
+function name:  getPluginsStatus
+number of ops:  110
+compiled vars:  !0 = $public_only, !1 = $status, !2 = $plugins, !3 = $plugin, !4 = $param, !5 = $plugin_status, !6 = $statuses, !7 = $all_ok
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  559     0*       < 64> RECV_INIT                                         RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435405) <true> ]
+  561     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       <183> BIND_STATIC                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+  563     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       <123> TYPE_CHECK                                    2   RES[  IS_TMP_VAR ~8 ]       OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+          5*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~8 ] OP2[ , ->66 ]
+  564     6*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          7*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435392) 'Plugin' ] OP2[ ,  IS_CONST (268435394) 'getPlugins' ]
+          8*       < 60> DO_FCALL                                      0   RES[  IS_VAR $9 ]       OP1[  IS_UNUSED  ]
+          9*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_VAR $9 ]
+  565    10*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         11*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435388) <array> ]
+  567    12*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         13*       < 77> FE_RESET_R                                        RES[  IS_VAR $12 ]      OP1[  IS_CV !2 ] OP2[ , ->65 ]
+         14*       < 78> FE_FETCH_R                                                OP1[  IS_VAR $12 ] OP2[ ,  IS_CV !3 ] EXT_JMP_REL[ , ->65 ]
+  570    15*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         16*       < 71> INIT_ARRAY                                        RES[  IS_TMP_VAR ~13 ]      OP1[  IS_CONST (268435379) <true> ] OP2[ ,  IS_CONST (268435380) 'ok' ]
+  571    17*       < 72> ADD_ARRAY_ELEMENT                                 RES[  IS_TMP_VAR ~13 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435379) '_public_only' ]
+  569    18*       < 22> ASSIGN                                                    OP1[  IS_CV !4 ] OP2[ ,  IS_TMP_VAR ~13 ]
+  573    19*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         20*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435374) 'Plugin' ] OP2[ ,  IS_CONST (268435376) 'doOneHook' ]
+         21*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         22*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435374) 'status' ] OP2[  IS_UNUSED  ]
+         23*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !4 ] OP2[  IS_UNUSED  ]
+         24*       < 60> DO_FCALL                                      0   RES[  IS_VAR $15 ]      OP1[  IS_UNUSED  ]
+         25*       < 22> ASSIGN                                                    OP1[  IS_CV !5 ] OP2[ ,  IS_VAR $15 ]
+  574    26*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         27*       <123> TYPE_CHECK                                    2   RES[  IS_TMP_VAR ~17 ]      OP1[  IS_CV !5 ] OP2[  IS_UNUSED  ]
+         28*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~17 ] OP2[ , ->31 ]
+  575    29*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         30*       < 42> JMP                                                       OP1[ ->14 ]
+  577    31*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         32*       < 75> UNSET_DIM                                                 OP1[  IS_CV !5 ] OP2[ ,  IS_CONST (268435355) '_public_only' ]
+  578    33*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         34*       <115> ISSET_ISEMPTY_DIM_OBJ                         0   RES[  IS_TMP_VAR ~18 ]      OP1[  IS_CV !5 ] OP2[ ,  IS_CONST (268435352) 'ok' ]
+         35*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~18 ]      OP1[  IS_TMP_VAR ~18 ] OP2[ , ->44 ]
+         36*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435349) 'Glpi%5CSystem%5CStatus%5Ccount' ]
+         37*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435350) 'Glpi%5CSystem%5CStatus%5Carray_keys' ]
+         38*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !5 ] OP2[  IS_UNUSED  ]
+         39*       < 60> DO_FCALL                                      0   RES[  IS_VAR $19 ]      OP1[  IS_UNUSED  ]
+         40*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $19 ] OP2[  IS_UNUSED  ]
+         41*       < 60> DO_FCALL                                      0   RES[  IS_VAR $20 ]      OP1[  IS_UNUSED  ]
+         42*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~21 ]      OP1[  IS_VAR $20 ] OP2[ ,  IS_CONST (268435343) 1 ]
+         43*       < 52> BOOL                                              RES[  IS_TMP_VAR ~18 ]      OP1[  IS_TMP_VAR ~21 ]
+         44*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~18 ] OP2[ , ->61 ]
+  580    45*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         46*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~23 ]      OP1[  IS_CV !5 ] OP2[ ,  IS_CONST (268435336) 'ok' ]
+         47*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~23 ] OP2[ , ->51 ]
+         48*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~24 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435333) 'STATUS_OK' ]
+         49*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~25 ]      OP1[  IS_TMP_VAR ~24 ]
+         50*       < 42> JMP                                                       OP1[ ->53 ]
+         51*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~26 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435328) 'STATUS_PROBLEM' ]
+         52*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~25 ]      OP1[  IS_TMP_VAR ~26 ]
+         53*       < 71> INIT_ARRAY                                        RES[  IS_TMP_VAR ~27 ]      OP1[  IS_TMP_VAR ~25 ] OP2[ ,  IS_CONST (268435325) 'status' ]
+  581    54*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435324) 'Plugin' ] OP2[ ,  IS_CONST (268435326) 'getPluginFilesVersion' ]
+         55*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         56*       < 60> DO_FCALL                                      0   RES[  IS_VAR $28 ]      OP1[  IS_UNUSED  ]
+         57*       < 72> ADD_ARRAY_ELEMENT                                 RES[  IS_TMP_VAR ~27 ]      OP1[  IS_VAR $28 ] OP2[ ,  IS_CONST (268435322) 'version' ]
+  579    58*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !1 ] OP2[ ,  IS_CV !3 ]
+  581    59*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~27 ] OP2[  IS_UNUSED  ]
+         60*       < 42> JMP                                                       OP1[ ->64 ]
+  584    61*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         62*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !1 ] OP2[ ,  IS_CV !3 ]
+         63*       <137> OP_DATA                                                   OP1[  IS_CV !5 ] OP2[  IS_UNUSED  ]
+  567    64*       < 42> JMP                                                       OP1[ ->14 ]
+         65*       <127> FE_FREE                                                   OP1[  IS_VAR $12 ] OP2[  IS_UNUSED  ]
+  589    66*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         67*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435303) 'Glpi%5CSystem%5CStatus%5Ccount' ]
+         68*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         69*       < 60> DO_FCALL                                      0   RES[  IS_VAR $30 ]      OP1[  IS_UNUSED  ]
+         70*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~31 ]      OP1[  IS_VAR $30 ] OP2[ ,  IS_CONST (268435300) 0 ]
+         71*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~31 ] OP2[ , ->77 ]
+  590    72*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         73*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~33 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435296) 'STATUS_NO_DATA' ]
+         74*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435293) 'status' ]
+         75*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~33 ] OP2[  IS_UNUSED  ]
+         76*       < 42> JMP                                                       OP1[ ->104 ]
+  592    77*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         78*       < 43> JMPZ                                                      OP1[  IS_CV !0 ] OP2[ , ->104 ]
+  595    79*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         80*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435283) 'Glpi%5CSystem%5CStatus%5Carray_column' ]
+         81*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         82*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435282) 'status' ] OP2[  IS_UNUSED  ]
+         83*       < 60> DO_FCALL                                      0   RES[  IS_VAR $34 ]      OP1[  IS_UNUSED  ]
+         84*       < 22> ASSIGN                                                    OP1[  IS_CV !6 ] OP2[ ,  IS_VAR $34 ]
+  596    85*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         86*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435275) 'Glpi%5CSystem%5CStatus%5Cin_array' ]
+         87*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~36 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435276) 'STATUS_PROBLEM' ]
+         88*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~36 ] OP2[  IS_UNUSED  ]
+         89*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !6 ] OP2[  IS_UNUSED  ]
+         90*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435271) <true> ] OP2[  IS_UNUSED  ]
+         91*       < 60> DO_FCALL                                      0   RES[  IS_VAR $37 ]      OP1[  IS_UNUSED  ]
+         92*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~38 ]      OP1[  IS_VAR $37 ]
+         93*       < 22> ASSIGN                                                    OP1[  IS_CV !7 ] OP2[ ,  IS_TMP_VAR ~38 ]
+  597    94*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         95*       < 43> JMPZ                                                      OP1[  IS_CV !7 ] OP2[ , ->99 ]
+         96*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~40 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435260) 'STATUS_OK' ]
+         97*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~41 ]      OP1[  IS_TMP_VAR ~40 ]
+         98*       < 42> JMP                                                       OP1[ ->101 ]
+         99*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~42 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435255) 'STATUS_PROBLEM' ]
+        100*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~41 ]      OP1[  IS_TMP_VAR ~42 ]
+        101*       < 71> INIT_ARRAY                                        RES[  IS_TMP_VAR ~43 ]      OP1[  IS_TMP_VAR ~41 ] OP2[ ,  IS_CONST (268435252) 'status' ]
+        102*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_TMP_VAR ~43 ] OP2[  IS_UNUSED  ]
+        103*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~43 ]
+  601   104*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        105*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+        106*       < 62> RETURN                                                    OP1[  IS_CV !1 ]
+  602   107*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        108*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        109*       < 62> RETURN                                                    OP1[  IS_CONST (268435237) null ]
+
+End of function getpluginsstatus
+
+Function getfullstatus:
+[+]Function Source Class Name: Glpi\System\Status\StatusChecker
+[*]Start of arg_info extract:
+[*]arg_info num_args:2
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:public_only
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:as_array
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\System\Status\StatusChecker.php
+function name:  getFullStatus
+number of ops:  15
+compiled vars:  !0 = $public_only, !1 = $as_array
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  610     0*       < 64> RECV_INIT                                         RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435445) <true> ]
+          1*       < 64> RECV_INIT                                         RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435444) <true> ]
+  612     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435441) 'Toolbox' ] OP2[ ,  IS_CONST (268435443) 'deprecated' ]
+          4*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435443) 'Use+StatusChecker%3A%3AgetServiceStatus+for+service+checks+instead' ] OP2[  IS_UNUSED  ]
+          5*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  613     6*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          7*       <113> INIT_STATIC_METHOD_CALL      self                         OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435438) 'getServiceStatus' ]
+          8*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435438) null ]
+          9*       <117> SEND_VAR                                                  OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         10*       <117> SEND_VAR                                                  OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         11*       < 60> DO_FCALL                                      0   RES[  IS_VAR $3 ]       OP1[  IS_UNUSED  ]
+         12*       < 62> RETURN                                                    OP1[  IS_VAR $3 ]
+  614    13*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         14*       < 62> RETURN                                                    OP1[  IS_CONST (268435427) null ]
+
+End of function getfullstatus
+
+Function getplaintextoutput:
+[+]Function Source Class Name: Glpi\System\Status\StatusChecker
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:string
+
+[*]ArgInfoNo**0**
+[*]name:status
+[*]type:array
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\System\Status\StatusChecker.php
+function name:  getPlaintextOutput
+number of ops:  192
+compiled vars:  !0 = $status, !1 = $output, !2 = $slave_info, !3 = $num, !4 = $ldap_info, !5 = $name, !6 = $imap_info, !7 = $collector_info
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  621     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  624     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435363) '' ]
+  626     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435360) 'Glpi%5CSystem%5CStatus%5Ccount' ]
+          5*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       < 93> FETCH_DIM_FUNC_ARG                                RES[  IS_VAR $9 ]       OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435359) 'db' ]
+          7*       < 93> FETCH_DIM_FUNC_ARG                                RES[  IS_VAR $10 ]      OP1[  IS_VAR $9 ] OP2[ ,  IS_CONST (268435358) 'slaves' ]
+          8*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $10 ] OP2[  IS_UNUSED  ]
+          9*       < 60> DO_FCALL                                      0   RES[  IS_VAR $11 ]      OP1[  IS_UNUSED  ]
+         10*       < 43> JMPZ                                                      OP1[  IS_VAR $11 ] OP2[ , ->29 ]
+  627    11*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         12*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~12 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435349) 'db' ]
+         13*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~13 ]      OP1[  IS_TMP_VAR ~12 ] OP2[ ,  IS_CONST (268435348) 'slaves' ]
+         14*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~14 ]      OP1[  IS_TMP_VAR ~13 ] OP2[ ,  IS_CONST (268435347) 'servers' ]
+         15*       < 77> FE_RESET_R                                        RES[  IS_VAR $15 ]      OP1[  IS_TMP_VAR ~14 ] OP2[ , ->27 ]
+         16*       < 78> FE_FETCH_R                                        RES[  IS_TMP_VAR ~16 ]      OP1[  IS_VAR $15 ] OP2[ ,  IS_CV !2 ] EXT_JMP_REL[ , ->27 ]
+         17*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_TMP_VAR ~16 ]
+  628    18*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         19*       < 54> ROPE_INIT                                     5   RES[  IS_TMP_VAR ~20 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435338) 'GLPI_DBSLAVE_' ]
+         20*       < 55> ROPE_ADD                                      1   RES[  IS_TMP_VAR ~20 ]      OP1[  IS_TMP_VAR ~20 ] OP2[ ,  IS_CV !3 ]
+         21*       < 55> ROPE_ADD                                      2   RES[  IS_TMP_VAR ~20 ]      OP1[  IS_TMP_VAR ~20 ] OP2[ ,  IS_CONST (268435336) '_' ]
+         22*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~18 ]      OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435333) 'status' ]
+         23*       < 55> ROPE_ADD                                      3   RES[  IS_TMP_VAR ~20 ]      OP1[  IS_TMP_VAR ~20 ] OP2[ ,  IS_TMP_VAR ~18 ]
+         24*       < 56> ROPE_END                                      4   RES[  IS_TMP_VAR ~19 ]      OP1[  IS_TMP_VAR ~20 ] OP2[ ,  IS_CONST (268435331) '%0A' ]
+         25*       < 26> ASSIGN_OP                    .=               8           OP1[  IS_CV !1 ] OP2[ ,  IS_TMP_VAR ~19 ]
+  627    26*       < 42> JMP                                                       OP1[ ->16 ]
+         27*       <127> FE_FREE                                                   OP1[  IS_VAR $15 ] OP2[  IS_UNUSED  ]
+         28*       < 42> JMP                                                       OP1[ ->31 ]
+  631    29*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         30*       < 26> ASSIGN_OP                    .=               8           OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435320) 'No+slave+DB%0A' ]
+  633    31*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         32*       < 54> ROPE_INIT                                     3   RES[  IS_TMP_VAR ~29 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435320) 'GLPI_DB_' ]
+         33*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~25 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435315) 'db' ]
+         34*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~26 ]      OP1[  IS_TMP_VAR ~25 ] OP2[ ,  IS_CONST (268435314) 'master' ]
+         35*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~27 ]      OP1[  IS_TMP_VAR ~26 ] OP2[ ,  IS_CONST (268435313) 'status' ]
+         36*       < 55> ROPE_ADD                                      1   RES[  IS_TMP_VAR ~29 ]      OP1[  IS_TMP_VAR ~29 ] OP2[ ,  IS_TMP_VAR ~27 ]
+         37*       < 56> ROPE_END                                      2   RES[  IS_TMP_VAR ~28 ]      OP1[  IS_TMP_VAR ~29 ] OP2[ ,  IS_CONST (268435311) '%0A' ]
+         38*       < 26> ASSIGN_OP                    .=               8           OP1[  IS_CV !1 ] OP2[ ,  IS_TMP_VAR ~28 ]
+  634    39*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         40*       < 54> ROPE_INIT                                     3   RES[  IS_TMP_VAR ~36 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435309) 'GLPI_SESSION_DIR_' ]
+         41*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~32 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435304) 'filesystem' ]
+         42*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~33 ]      OP1[  IS_TMP_VAR ~32 ] OP2[ ,  IS_CONST (268435303) 'session_dir' ]
+         43*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~34 ]      OP1[  IS_TMP_VAR ~33 ] OP2[ ,  IS_CONST (268435302) 'status' ]
+         44*       < 55> ROPE_ADD                                      1   RES[  IS_TMP_VAR ~36 ]      OP1[  IS_TMP_VAR ~36 ] OP2[ ,  IS_TMP_VAR ~34 ]
+         45*       < 56> ROPE_END                                      2   RES[  IS_TMP_VAR ~35 ]      OP1[  IS_TMP_VAR ~36 ] OP2[ ,  IS_CONST (268435300) '%0A' ]
+         46*       < 26> ASSIGN_OP                    .=               8           OP1[  IS_CV !1 ] OP2[ ,  IS_TMP_VAR ~35 ]
+  635    47*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         48*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435295) 'Glpi%5CSystem%5CStatus%5Ccount' ]
+         49*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         50*       < 93> FETCH_DIM_FUNC_ARG                                RES[  IS_VAR $39 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435294) 'ldap' ]
+         51*       < 93> FETCH_DIM_FUNC_ARG                                RES[  IS_VAR $40 ]      OP1[  IS_VAR $39 ] OP2[ ,  IS_CONST (268435293) 'servers' ]
+         52*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $40 ] OP2[  IS_UNUSED  ]
+         53*       < 60> DO_FCALL                                      0   RES[  IS_VAR $41 ]      OP1[  IS_UNUSED  ]
+         54*       < 43> JMPZ                                                      OP1[  IS_VAR $41 ] OP2[ , ->74 ]
+  636    55*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         56*       < 26> ASSIGN_OP                    .=               8           OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435284) 'Check+LDAP+servers%3A' ]
+  637    57*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         58*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~43 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435281) 'ldap' ]
+         59*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~44 ]      OP1[  IS_TMP_VAR ~43 ] OP2[ ,  IS_CONST (268435280) 'servers' ]
+         60*       < 77> FE_RESET_R                                        RES[  IS_VAR $45 ]      OP1[  IS_TMP_VAR ~44 ] OP2[ , ->72 ]
+         61*       < 78> FE_FETCH_R                                        RES[  IS_TMP_VAR ~46 ]      OP1[  IS_VAR $45 ] OP2[ ,  IS_CV !4 ] EXT_JMP_REL[ , ->72 ]
+         62*       < 22> ASSIGN                                                    OP1[  IS_CV !5 ] OP2[ ,  IS_TMP_VAR ~46 ]
+  638    63*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         64*       < 54> ROPE_INIT                                     5   RES[  IS_TMP_VAR ~50 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435271) '+' ]
+         65*       < 55> ROPE_ADD                                      1   RES[  IS_TMP_VAR ~50 ]      OP1[  IS_TMP_VAR ~50 ] OP2[ ,  IS_CV !5 ]
+         66*       < 55> ROPE_ADD                                      2   RES[  IS_TMP_VAR ~50 ]      OP1[  IS_TMP_VAR ~50 ] OP2[ ,  IS_CONST (268435269) '_' ]
+         67*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~48 ]      OP1[  IS_CV !4 ] OP2[ ,  IS_CONST (268435266) 'status' ]
+         68*       < 55> ROPE_ADD                                      3   RES[  IS_TMP_VAR ~50 ]      OP1[  IS_TMP_VAR ~50 ] OP2[ ,  IS_TMP_VAR ~48 ]
+         69*       < 56> ROPE_END                                      4   RES[  IS_TMP_VAR ~49 ]      OP1[  IS_TMP_VAR ~50 ] OP2[ ,  IS_CONST (268435264) '%0A' ]
+         70*       < 26> ASSIGN_OP                    .=               8           OP1[  IS_CV !1 ] OP2[ ,  IS_TMP_VAR ~49 ]
+  637    71*       < 42> JMP                                                       OP1[ ->61 ]
+         72*       <127> FE_FREE                                                   OP1[  IS_VAR $45 ] OP2[  IS_UNUSED  ]
+         73*       < 42> JMP                                                       OP1[ ->76 ]
+  641    74*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         75*       < 26> ASSIGN_OP                    .=               8           OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435253) 'No+LDAP+server%0A' ]
+  643    76*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         77*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435250) 'Glpi%5CSystem%5CStatus%5Ccount' ]
+         78*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         79*       < 93> FETCH_DIM_FUNC_ARG                                RES[  IS_VAR $55 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435249) 'imap' ]
+         80*       < 93> FETCH_DIM_FUNC_ARG                                RES[  IS_VAR $56 ]      OP1[  IS_VAR $55 ] OP2[ ,  IS_CONST (268435248) 'servers' ]
+         81*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $56 ] OP2[  IS_UNUSED  ]
+         82*       < 60> DO_FCALL                                      0   RES[  IS_VAR $57 ]      OP1[  IS_UNUSED  ]
+         83*       < 43> JMPZ                                                      OP1[  IS_VAR $57 ] OP2[ , ->103 ]
+  644    84*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         85*       < 26> ASSIGN_OP                    .=               8           OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435239) 'Check+IMAP+servers%3A' ]
+  645    86*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         87*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~59 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435236) 'imap' ]
+         88*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~60 ]      OP1[  IS_TMP_VAR ~59 ] OP2[ ,  IS_CONST (268435235) 'servers' ]
+         89*       < 77> FE_RESET_R                                        RES[  IS_VAR $61 ]      OP1[  IS_TMP_VAR ~60 ] OP2[ , ->101 ]
+         90*       < 78> FE_FETCH_R                                        RES[  IS_TMP_VAR ~62 ]      OP1[  IS_VAR $61 ] OP2[ ,  IS_CV !6 ] EXT_JMP_REL[ , ->101 ]
+         91*       < 22> ASSIGN                                                    OP1[  IS_CV !5 ] OP2[ ,  IS_TMP_VAR ~62 ]
+  646    92*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         93*       < 54> ROPE_INIT                                     5   RES[  IS_TMP_VAR ~66 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435226) '+' ]
+         94*       < 55> ROPE_ADD                                      1   RES[  IS_TMP_VAR ~66 ]      OP1[  IS_TMP_VAR ~66 ] OP2[ ,  IS_CV !5 ]
+         95*       < 55> ROPE_ADD                                      2   RES[  IS_TMP_VAR ~66 ]      OP1[  IS_TMP_VAR ~66 ] OP2[ ,  IS_CONST (268435224) '_' ]
+         96*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~64 ]      OP1[  IS_CV !6 ] OP2[ ,  IS_CONST (268435221) 'status' ]
+         97*       < 55> ROPE_ADD                                      3   RES[  IS_TMP_VAR ~66 ]      OP1[  IS_TMP_VAR ~66 ] OP2[ ,  IS_TMP_VAR ~64 ]
+         98*       < 56> ROPE_END                                      4   RES[  IS_TMP_VAR ~65 ]      OP1[  IS_TMP_VAR ~66 ] OP2[ ,  IS_CONST (268435219) '%0A' ]
+         99*       < 26> ASSIGN_OP                    .=               8           OP1[  IS_CV !1 ] OP2[ ,  IS_TMP_VAR ~65 ]
+  645   100*       < 42> JMP                                                       OP1[ ->90 ]
+        101*       <127> FE_FREE                                                   OP1[  IS_VAR $61 ] OP2[  IS_UNUSED  ]
+        102*       < 42> JMP                                                       OP1[ ->105 ]
+  649   103*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        104*       < 26> ASSIGN_OP                    .=               8           OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435208) 'No+IMAP+server%0A' ]
+  651   105*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        106*       < 90> FETCH_DIM_IS                                      RES[  IS_TMP_VAR ~71 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435205) 'cas' ]
+        107*       <115> ISSET_ISEMPTY_DIM_OBJ                         0   RES[  IS_TMP_VAR ~72 ]      OP1[  IS_TMP_VAR ~71 ] OP2[ ,  IS_CONST (268435204) 'status' ]
+        108*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~72 ]      OP1[  IS_TMP_VAR ~72 ] OP2[ , ->114 ]
+        109*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~73 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435201) 'cas' ]
+        110*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~74 ]      OP1[  IS_TMP_VAR ~73 ] OP2[ ,  IS_CONST (268435200) 'status' ]
+        111*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~75 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435199) 'STATUS_NO_DATA' ]
+        112*       < 17> IS_NOT_IDENTICAL                                  RES[  IS_TMP_VAR ~76 ]      OP1[  IS_TMP_VAR ~74 ] OP2[ ,  IS_TMP_VAR ~75 ]
+        113*       < 52> BOOL                                              RES[  IS_TMP_VAR ~72 ]      OP1[  IS_TMP_VAR ~76 ]
+        114*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~72 ] OP2[ , ->123 ]
+  652   115*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        116*       < 54> ROPE_INIT                                     3   RES[  IS_TMP_VAR ~80 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435192) 'CAS_SERVER_' ]
+        117*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~77 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435188) 'cas' ]
+        118*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~78 ]      OP1[  IS_TMP_VAR ~77 ] OP2[ ,  IS_CONST (268435187) 'status' ]
+        119*       < 55> ROPE_ADD                                      1   RES[  IS_TMP_VAR ~80 ]      OP1[  IS_TMP_VAR ~80 ] OP2[ ,  IS_TMP_VAR ~78 ]
+        120*       < 56> ROPE_END                                      2   RES[  IS_TMP_VAR ~79 ]      OP1[  IS_TMP_VAR ~80 ] OP2[ ,  IS_CONST (268435185) '%0A' ]
+        121*       < 26> ASSIGN_OP                    .=               8           OP1[  IS_CV !1 ] OP2[ ,  IS_TMP_VAR ~79 ]
+        122*       < 42> JMP                                                       OP1[ ->125 ]
+  654   123*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        124*       < 26> ASSIGN_OP                    .=               8           OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435178) 'No+CAS+server%0A' ]
+  656   125*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        126*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435175) 'Glpi%5CSystem%5CStatus%5Ccount' ]
+        127*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        128*       < 93> FETCH_DIM_FUNC_ARG                                RES[  IS_VAR $84 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435174) 'mail_collectors' ]
+        129*       < 93> FETCH_DIM_FUNC_ARG                                RES[  IS_VAR $85 ]      OP1[  IS_VAR $84 ] OP2[ ,  IS_CONST (268435173) 'servers' ]
+        130*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $85 ] OP2[  IS_UNUSED  ]
+        131*       < 60> DO_FCALL                                      0   RES[  IS_VAR $86 ]      OP1[  IS_UNUSED  ]
+        132*       < 43> JMPZ                                                      OP1[  IS_VAR $86 ] OP2[ , ->152 ]
+  657   133*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        134*       < 26> ASSIGN_OP                    .=               8           OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435164) 'Check+mail+collectors%3A' ]
+  658   135*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        136*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~88 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435161) 'mail_collectors' ]
+        137*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~89 ]      OP1[  IS_TMP_VAR ~88 ] OP2[ ,  IS_CONST (268435160) 'servers' ]
+        138*       < 77> FE_RESET_R                                        RES[  IS_VAR $90 ]      OP1[  IS_TMP_VAR ~89 ] OP2[ , ->150 ]
+        139*       < 78> FE_FETCH_R                                        RES[  IS_TMP_VAR ~91 ]      OP1[  IS_VAR $90 ] OP2[ ,  IS_CV !7 ] EXT_JMP_REL[ , ->150 ]
+        140*       < 22> ASSIGN                                                    OP1[  IS_CV !5 ] OP2[ ,  IS_TMP_VAR ~91 ]
+  659   141*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        142*       < 54> ROPE_INIT                                     5   RES[  IS_TMP_VAR ~95 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435151) '+' ]
+        143*       < 55> ROPE_ADD                                      1   RES[  IS_TMP_VAR ~95 ]      OP1[  IS_TMP_VAR ~95 ] OP2[ ,  IS_CV !5 ]
+        144*       < 55> ROPE_ADD                                      2   RES[  IS_TMP_VAR ~95 ]      OP1[  IS_TMP_VAR ~95 ] OP2[ ,  IS_CONST (268435149) '_' ]
+        145*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~93 ]      OP1[  IS_CV !7 ] OP2[ ,  IS_CONST (268435146) 'status' ]
+        146*       < 55> ROPE_ADD                                      3   RES[  IS_TMP_VAR ~95 ]      OP1[  IS_TMP_VAR ~95 ] OP2[ ,  IS_TMP_VAR ~93 ]
+        147*       < 56> ROPE_END                                      4   RES[  IS_TMP_VAR ~94 ]      OP1[  IS_TMP_VAR ~95 ] OP2[ ,  IS_CONST (268435144) '%0A' ]
+        148*       < 26> ASSIGN_OP                    .=               8           OP1[  IS_CV !1 ] OP2[ ,  IS_TMP_VAR ~94 ]
+  658   149*       < 42> JMP                                                       OP1[ ->139 ]
+        150*       <127> FE_FREE                                                   OP1[  IS_VAR $90 ] OP2[  IS_UNUSED  ]
+        151*       < 42> JMP                                                       OP1[ ->154 ]
+  662   152*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        153*       < 26> ASSIGN_OP                    .=               8           OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435133) 'No+mail+collector%0A' ]
+  664   154*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        155*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435130) 'Glpi%5CSystem%5CStatus%5Ccount' ]
+        156*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        157*       < 93> FETCH_DIM_FUNC_ARG                                RES[  IS_VAR $100 ]     OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435129) 'crontasks' ]
+        158*       < 93> FETCH_DIM_FUNC_ARG                                RES[  IS_VAR $101 ]     OP1[  IS_VAR $100 ] OP2[ ,  IS_CONST (268435128) 'stuck' ]
+        159*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $101 ] OP2[  IS_UNUSED  ]
+        160*       < 60> DO_FCALL                                      0   RES[  IS_VAR $102 ]     OP1[  IS_UNUSED  ]
+        161*       < 43> JMPZ                                                      OP1[  IS_VAR $102 ] OP2[ , ->177 ]
+  665   162*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        163*       < 26> ASSIGN_OP                    .=               8           OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435119) 'Check+crontasks%3A' ]
+  666   164*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        165*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~104 ]     OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435116) 'crontasks' ]
+        166*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~105 ]     OP1[  IS_TMP_VAR ~104 ] OP2[ ,  IS_CONST (268435115) 'stuck' ]
+        167*       < 77> FE_RESET_R                                        RES[  IS_VAR $106 ]     OP1[  IS_TMP_VAR ~105 ] OP2[ , ->175 ]
+        168*       < 78> FE_FETCH_R                                                OP1[  IS_VAR $106 ] OP2[ ,  IS_CV !5 ] EXT_JMP_REL[ , ->175 ]
+  667   169*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        170*       < 54> ROPE_INIT                                     3   RES[  IS_TMP_VAR ~108 ]     OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435108) '+' ]
+        171*       < 55> ROPE_ADD                                      1   RES[  IS_TMP_VAR ~108 ]     OP1[  IS_TMP_VAR ~108 ] OP2[ ,  IS_CV !5 ]
+        172*       < 56> ROPE_END                                      2   RES[  IS_TMP_VAR ~107 ]     OP1[  IS_TMP_VAR ~108 ] OP2[ ,  IS_CONST (268435105) '_PROBLEM%0A' ]
+        173*       < 26> ASSIGN_OP                    .=               8           OP1[  IS_CV !1 ] OP2[ ,  IS_TMP_VAR ~107 ]
+  666   174*       < 42> JMP                                                       OP1[ ->168 ]
+        175*       <127> FE_FREE                                                   OP1[  IS_VAR $106 ] OP2[  IS_UNUSED  ]
+        176*       < 42> JMP                                                       OP1[ ->179 ]
+  670   177*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        178*       < 26> ASSIGN_OP                    .=               8           OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435094) 'Crontasks_OK%0A' ]
+  674   179*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        180*       < 54> ROPE_INIT                                     3   RES[  IS_TMP_VAR ~115 ]     OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435093) '%0AGLPI_' ]
+        181*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~112 ]     OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435089) 'glpi' ]
+        182*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~113 ]     OP1[  IS_TMP_VAR ~112 ] OP2[ ,  IS_CONST (268435088) 'status' ]
+        183*       < 55> ROPE_ADD                                      1   RES[  IS_TMP_VAR ~115 ]     OP1[  IS_TMP_VAR ~115 ] OP2[ ,  IS_TMP_VAR ~113 ]
+        184*       < 56> ROPE_END                                      2   RES[  IS_TMP_VAR ~114 ]     OP1[  IS_TMP_VAR ~115 ] OP2[ ,  IS_CONST (268435086) '%0A' ]
+        185*       < 26> ASSIGN_OP                    .=               8           OP1[  IS_CV !1 ] OP2[ ,  IS_TMP_VAR ~114 ]
+  675   186*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        187*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+        188*       < 62> RETURN                                                    OP1[  IS_CV !1 ]
+  676   189*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        190*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        191*       < 62> RETURN                                                    OP1[  IS_CONST (268435073) null ]
+
+End of function getplaintextoutput
+
+End of class Glpi\System\Status\StatusChecker.
+

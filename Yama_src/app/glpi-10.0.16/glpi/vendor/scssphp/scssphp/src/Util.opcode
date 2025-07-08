@@ -1,0 +1,541 @@
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\scssphp\scssphp\src\Util.php
+function name:  (null)
+number of ops:  5
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   13     0*       <  0> NOP                                                      
+   15     1*       <  0> NOP                                                      
+   16     2*       <  0> NOP                                                      
+  185     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       < 62> RETURN                                                    OP1[  IS_CONST (268435447) 1 ]
+
+Class ScssPhp\ScssPhp\Util:
+[+]Class Parent Name: NULL
+End Trait extract
+Start Properties extract:
+Properties: NULL
+End Properties extract
+
+Function checkrange:
+[+]Function Source Class Name: ScssPhp\ScssPhp\Util
+[*]Start of arg_info extract:
+[*]arg_info num_args:4
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:name
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:range
+[*]type:ScssPhp\ScssPhp\Base\Range
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**2**
+[*]name:value
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**3**
+[*]name:unit
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\scssphp\scssphp\src\Util.php
+function name:  checkRange
+number of ops:  72
+compiled vars:  !0 = $name, !1 = $range, !2 = $value, !3 = $unit, !4 = $val, !5 = $grace
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   41     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 63> RECV                                              RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ]
+          2*       < 63> RECV                                              RES[  IS_CV !2 ]       OP1[  IS_UNUSED  ]
+          3*       < 64> RECV_INIT                                         RES[  IS_CV !3 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435402) '' ]
+   43     4*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          5*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~6 ]       OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435399) 1 ]
+          6*       < 22> ASSIGN                                                    OP1[  IS_CV !4 ] OP2[ ,  IS_TMP_VAR ~6 ]
+   44     7*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          8*       < 68> NEW                                               RES[  IS_VAR $8 ]       OP1[ 'ScssPhp%5CScssPhp%5CBase%5CRange' ]
+          9*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435394) -1.0e-5 ] OP2[  IS_UNUSED  ]
+         10*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435393) 1.0e-5 ] OP2[  IS_UNUSED  ]
+         11*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         12*       < 22> ASSIGN                                                    OP1[  IS_CV !5 ] OP2[ ,  IS_VAR $8 ]
+   46    13*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         14*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435386) 'is_numeric' ]
+         15*       <117> SEND_VAR                                                  OP1[  IS_CV !4 ] OP2[  IS_UNUSED  ]
+         16*       < 60> DO_FCALL                                      0   RES[  IS_VAR $11 ]      OP1[  IS_UNUSED  ]
+         17*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~12 ]      OP1[  IS_VAR $11 ]
+         18*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~12 ] OP2[ , ->28 ]
+   47    19*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         20*       < 68> NEW                                               RES[  IS_VAR $13 ]      OP1[ 'ScssPhp%5CScssPhp%5CException%5CRangeException' ]
+         21*       < 54> ROPE_INIT                                     4   RES[  IS_TMP_VAR ~15 ]      OP1[  IS_UNUSED  ] OP2[  IS_CV !0 ]
+         22*       < 55> ROPE_ADD                                      1   RES[  IS_TMP_VAR ~15 ]      OP1[  IS_TMP_VAR ~15 ] OP2[ ,  IS_CONST (268435373) '+' ]
+         23*       < 55> ROPE_ADD                                      2   RES[  IS_TMP_VAR ~15 ]      OP1[  IS_TMP_VAR ~15 ] OP2[ ,  IS_CV !4 ]
+         24*       < 56> ROPE_END                                      3   RES[  IS_TMP_VAR ~14 ]      OP1[  IS_TMP_VAR ~15 ] OP2[ ,  IS_CONST (268435370) '+is+not+a+number.' ]
+         25*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~14 ] OP2[  IS_UNUSED  ]
+         26*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         27*       <108> THROW                                         0           OP1[  IS_VAR $13 ] OP2[  IS_UNUSED  ]
+   50    28*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         29*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435361) 'includes' ]
+         30*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !4 ] OP2[  IS_UNUSED  ]
+         31*       < 60> DO_FCALL                                      0   RES[  IS_VAR $18 ]      OP1[  IS_UNUSED  ]
+         32*       < 43> JMPZ                                                      OP1[  IS_VAR $18 ] OP2[ , ->35 ]
+   51    33*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         34*       < 62> RETURN                                                    OP1[  IS_CV !4 ]
+   54    35*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         36*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !5 ] OP2[ ,  IS_CONST (268435349) 'includes' ]
+         37*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~19 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435349) 'first' ]
+         38*       <  2> SUB                                               RES[  IS_TMP_VAR ~20 ]      OP1[  IS_CV !4 ] OP2[ ,  IS_TMP_VAR ~19 ]
+         39*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~20 ] OP2[  IS_UNUSED  ]
+         40*       < 60> DO_FCALL                                      0   RES[  IS_VAR $21 ]      OP1[  IS_UNUSED  ]
+         41*       < 43> JMPZ                                                      OP1[  IS_VAR $21 ] OP2[ , ->45 ]
+   55    42*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         43*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~22 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435338) 'first' ]
+         44*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~22 ]
+   58    45*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         46*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !5 ] OP2[ ,  IS_CONST (268435333) 'includes' ]
+         47*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~23 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435333) 'last' ]
+         48*       <  2> SUB                                               RES[  IS_TMP_VAR ~24 ]      OP1[  IS_CV !4 ] OP2[ ,  IS_TMP_VAR ~23 ]
+         49*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~24 ] OP2[  IS_UNUSED  ]
+         50*       < 60> DO_FCALL                                      0   RES[  IS_VAR $25 ]      OP1[  IS_UNUSED  ]
+         51*       < 43> JMPZ                                                      OP1[  IS_VAR $25 ] OP2[ , ->55 ]
+   59    52*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         53*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~26 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435322) 'last' ]
+         54*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~26 ]
+   62    55*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         56*       < 68> NEW                                               RES[  IS_VAR $27 ]      OP1[ 'ScssPhp%5CScssPhp%5CException%5CRangeException' ]
+         57*       < 54> ROPE_INIT                                     8   RES[  IS_TMP_VAR ~31 ]      OP1[  IS_UNUSED  ] OP2[  IS_CV !0 ]
+         58*       < 55> ROPE_ADD                                      1   RES[  IS_TMP_VAR ~31 ]      OP1[  IS_TMP_VAR ~31 ] OP2[ ,  IS_CONST (268435315) '+' ]
+         59*       < 55> ROPE_ADD                                      2   RES[  IS_TMP_VAR ~31 ]      OP1[  IS_TMP_VAR ~31 ] OP2[ ,  IS_CV !4 ]
+         60*       < 55> ROPE_ADD                                      3   RES[  IS_TMP_VAR ~31 ]      OP1[  IS_TMP_VAR ~31 ] OP2[ ,  IS_CONST (268435313) '+must+be+between+' ]
+         61*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~28 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435310) 'first' ]
+         62*       < 55> ROPE_ADD                                      4   RES[  IS_TMP_VAR ~31 ]      OP1[  IS_TMP_VAR ~31 ] OP2[ ,  IS_TMP_VAR ~28 ]
+         63*       < 55> ROPE_ADD                                      5   RES[  IS_TMP_VAR ~31 ]      OP1[  IS_TMP_VAR ~31 ] OP2[ ,  IS_CONST (268435309) '+and+' ]
+         64*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~29 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435306) 'last' ]
+         65*       < 55> ROPE_ADD                                      6   RES[  IS_TMP_VAR ~31 ]      OP1[  IS_TMP_VAR ~31 ] OP2[ ,  IS_TMP_VAR ~29 ]
+         66*       < 56> ROPE_END                                      7   RES[  IS_TMP_VAR ~30 ]      OP1[  IS_TMP_VAR ~31 ] OP2[ ,  IS_CV !3 ]
+         67*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~30 ] OP2[  IS_UNUSED  ]
+         68*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         69*       <108> THROW                                         0           OP1[  IS_VAR $27 ] OP2[  IS_UNUSED  ]
+   63    70*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         71*       < 62> RETURN                                                    OP1[  IS_CONST (268435294) null ]
+
+End of function checkrange
+
+Function encodeuricomponent:
+[+]Function Source Class Name: ScssPhp\ScssPhp\Util
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:string
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\scssphp\scssphp\src\Util.php
+function name:  encodeURIComponent
+number of ops:  14
+compiled vars:  !0 = $string, !1 = $revert
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   72     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+   74     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435403) <array> ]
+   76     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435400) 'ScssPhp%5CScssPhp%5Cstrtr' ]
+          5*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435401) 'ScssPhp%5CScssPhp%5Crawurlencode' ]
+          6*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          7*       < 60> DO_FCALL                                      0   RES[  IS_VAR $3 ]       OP1[  IS_UNUSED  ]
+          8*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $3 ] OP2[  IS_UNUSED  ]
+          9*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         10*       < 60> DO_FCALL                                      0   RES[  IS_VAR $4 ]       OP1[  IS_UNUSED  ]
+         11*       < 62> RETURN                                                    OP1[  IS_VAR $4 ]
+   77    12*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         13*       < 62> RETURN                                                    OP1[  IS_CONST (268435388) null ]
+
+End of function encodeuricomponent
+
+Function mbchr:
+[+]Function Source Class Name: ScssPhp\ScssPhp\Util
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:code
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\scssphp\scssphp\src\Util.php
+function name:  mbChr
+number of ops:  95
+compiled vars:  !0 = $code, !1 = $s
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   86     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+   89     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435404) 'function_exists' ]
+          3*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435403) 'mb_chr' ]
+          4*       < 60> DO_FCALL                                      0   RES[  IS_VAR $2 ]       OP1[  IS_UNUSED  ]
+          5*       < 52> BOOL                                              RES[  IS_TMP_VAR ~3 ]       OP1[  IS_VAR $2 ]
+          6*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~3 ] OP2[ , ->13 ]
+   90     7*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          8*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435394) 'ScssPhp%5CScssPhp%5Cmb_chr' ]
+          9*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         10*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435393) 'UTF-8' ] OP2[  IS_UNUSED  ]
+         11*       < 60> DO_FCALL                                      0   RES[  IS_VAR $4 ]       OP1[  IS_UNUSED  ]
+         12*       < 62> RETURN                                                    OP1[  IS_VAR $4 ]
+   93    13*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         14*       < 26> ASSIGN_OP                    %=               5   RES[  IS_TMP_VAR ~5 ]       OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435386) 2097152 ]
+         15*       < 20> IS_SMALLER                                        RES[  IS_TMP_VAR ~6 ]       OP1[  IS_TMP_VAR ~5 ] OP2[ ,  IS_CONST (268435385) 128 ]
+         16*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~6 ] OP2[ , ->23 ]
+   94    17*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         18*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435380) 'chr' ]
+         19*       <117> SEND_VAR                                                  OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         20*       < 60> DO_FCALL                                      0   RES[  IS_VAR $7 ]       OP1[  IS_UNUSED  ]
+         21*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_VAR $7 ]
+         22*       < 42> JMP                                                       OP1[ ->91 ]
+   95    23*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         24*       < 20> IS_SMALLER                                        RES[  IS_TMP_VAR ~9 ]       OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435369) 2048 ]
+         25*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~9 ] OP2[ , ->40 ]
+   96    26*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         27*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435364) 'chr' ]
+         28*       <  7> SR                                                RES[  IS_TMP_VAR ~10 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435363) 6 ]
+         29*       <  9> BW_OR                                             RES[  IS_TMP_VAR ~11 ]      OP1[  IS_TMP_VAR ~10 ] OP2[ ,  IS_CONST (268435362) 192 ]
+         30*       < 65> SEND_VAL                                                  OP1[  IS_TMP_VAR ~11 ]
+         31*       < 60> DO_FCALL                                      0   RES[  IS_VAR $12 ]      OP1[  IS_UNUSED  ]
+         32*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435357) 'chr' ]
+         33*       < 10> BW_AND                                            RES[  IS_TMP_VAR ~13 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435356) 63 ]
+         34*       <  9> BW_OR                                             RES[  IS_TMP_VAR ~14 ]      OP1[  IS_TMP_VAR ~13 ] OP2[ ,  IS_CONST (268435355) 128 ]
+         35*       < 65> SEND_VAL                                                  OP1[  IS_TMP_VAR ~14 ]
+         36*       < 60> DO_FCALL                                      0   RES[  IS_VAR $15 ]      OP1[  IS_UNUSED  ]
+         37*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~16 ]      OP1[  IS_VAR $12 ] OP2[ ,  IS_VAR $15 ]
+         38*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_TMP_VAR ~16 ]
+         39*       < 42> JMP                                                       OP1[ ->91 ]
+   97    40*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         41*       < 20> IS_SMALLER                                        RES[  IS_TMP_VAR ~18 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435342) 65536 ]
+         42*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~18 ] OP2[ , ->64 ]
+   98    43*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         44*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435337) 'chr' ]
+         45*       <  7> SR                                                RES[  IS_TMP_VAR ~19 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435336) 12 ]
+         46*       <  9> BW_OR                                             RES[  IS_TMP_VAR ~20 ]      OP1[  IS_TMP_VAR ~19 ] OP2[ ,  IS_CONST (268435335) 224 ]
+         47*       < 65> SEND_VAL                                                  OP1[  IS_TMP_VAR ~20 ]
+         48*       < 60> DO_FCALL                                      0   RES[  IS_VAR $21 ]      OP1[  IS_UNUSED  ]
+         49*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435330) 'chr' ]
+         50*       <  7> SR                                                RES[  IS_TMP_VAR ~22 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435329) 6 ]
+         51*       < 10> BW_AND                                            RES[  IS_TMP_VAR ~23 ]      OP1[  IS_TMP_VAR ~22 ] OP2[ ,  IS_CONST (268435328) 63 ]
+         52*       <  9> BW_OR                                             RES[  IS_TMP_VAR ~24 ]      OP1[  IS_TMP_VAR ~23 ] OP2[ ,  IS_CONST (268435327) 128 ]
+         53*       < 65> SEND_VAL                                                  OP1[  IS_TMP_VAR ~24 ]
+         54*       < 60> DO_FCALL                                      0   RES[  IS_VAR $25 ]      OP1[  IS_UNUSED  ]
+         55*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~26 ]      OP1[  IS_VAR $21 ] OP2[ ,  IS_VAR $25 ]
+         56*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435320) 'chr' ]
+         57*       < 10> BW_AND                                            RES[  IS_TMP_VAR ~27 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435319) 63 ]
+         58*       <  9> BW_OR                                             RES[  IS_TMP_VAR ~28 ]      OP1[  IS_TMP_VAR ~27 ] OP2[ ,  IS_CONST (268435318) 128 ]
+         59*       < 65> SEND_VAL                                                  OP1[  IS_TMP_VAR ~28 ]
+         60*       < 60> DO_FCALL                                      0   RES[  IS_VAR $29 ]      OP1[  IS_UNUSED  ]
+         61*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~30 ]      OP1[  IS_TMP_VAR ~26 ] OP2[ ,  IS_VAR $29 ]
+         62*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_TMP_VAR ~30 ]
+         63*       < 42> JMP                                                       OP1[ ->91 ]
+  100    64*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         65*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435305) 'chr' ]
+         66*       <  7> SR                                                RES[  IS_TMP_VAR ~32 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435304) 18 ]
+         67*       <  9> BW_OR                                             RES[  IS_TMP_VAR ~33 ]      OP1[  IS_TMP_VAR ~32 ] OP2[ ,  IS_CONST (268435303) 240 ]
+         68*       < 65> SEND_VAL                                                  OP1[  IS_TMP_VAR ~33 ]
+         69*       < 60> DO_FCALL                                      0   RES[  IS_VAR $34 ]      OP1[  IS_UNUSED  ]
+         70*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435298) 'chr' ]
+         71*       <  7> SR                                                RES[  IS_TMP_VAR ~35 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435297) 12 ]
+         72*       < 10> BW_AND                                            RES[  IS_TMP_VAR ~36 ]      OP1[  IS_TMP_VAR ~35 ] OP2[ ,  IS_CONST (268435296) 63 ]
+         73*       <  9> BW_OR                                             RES[  IS_TMP_VAR ~37 ]      OP1[  IS_TMP_VAR ~36 ] OP2[ ,  IS_CONST (268435295) 128 ]
+         74*       < 65> SEND_VAL                                                  OP1[  IS_TMP_VAR ~37 ]
+         75*       < 60> DO_FCALL                                      0   RES[  IS_VAR $38 ]      OP1[  IS_UNUSED  ]
+         76*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~39 ]      OP1[  IS_VAR $34 ] OP2[ ,  IS_VAR $38 ]
+  101    77*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435288) 'chr' ]
+         78*       <  7> SR                                                RES[  IS_TMP_VAR ~40 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435287) 6 ]
+         79*       < 10> BW_AND                                            RES[  IS_TMP_VAR ~41 ]      OP1[  IS_TMP_VAR ~40 ] OP2[ ,  IS_CONST (268435286) 63 ]
+         80*       <  9> BW_OR                                             RES[  IS_TMP_VAR ~42 ]      OP1[  IS_TMP_VAR ~41 ] OP2[ ,  IS_CONST (268435285) 128 ]
+         81*       < 65> SEND_VAL                                                  OP1[  IS_TMP_VAR ~42 ]
+         82*       < 60> DO_FCALL                                      0   RES[  IS_VAR $43 ]      OP1[  IS_UNUSED  ]
+         83*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~44 ]      OP1[  IS_TMP_VAR ~39 ] OP2[ ,  IS_VAR $43 ]
+         84*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435278) 'chr' ]
+         85*       < 10> BW_AND                                            RES[  IS_TMP_VAR ~45 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435277) 63 ]
+         86*       <  9> BW_OR                                             RES[  IS_TMP_VAR ~46 ]      OP1[  IS_TMP_VAR ~45 ] OP2[ ,  IS_CONST (268435276) 128 ]
+         87*       < 65> SEND_VAL                                                  OP1[  IS_TMP_VAR ~46 ]
+         88*       < 60> DO_FCALL                                      0   RES[  IS_VAR $47 ]      OP1[  IS_UNUSED  ]
+         89*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~48 ]      OP1[  IS_TMP_VAR ~44 ] OP2[ ,  IS_VAR $47 ]
+  100    90*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_TMP_VAR ~48 ]
+  104    91*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         92*       < 62> RETURN                                                    OP1[  IS_CV !1 ]
+  105    93*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         94*       < 62> RETURN                                                    OP1[  IS_CONST (268435261) null ]
+
+End of function mbchr
+
+Function mbstrlen:
+[+]Function Source Class Name: ScssPhp\ScssPhp\Util
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:string
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\scssphp\scssphp\src\Util.php
+function name:  mbStrlen
+number of ops:  33
+compiled vars:  !0 = $string
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  113     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  116     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435416) 'function_exists' ]
+          3*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435415) 'mb_strlen' ]
+          4*       < 60> DO_FCALL                                      0   RES[  IS_VAR $1 ]       OP1[  IS_UNUSED  ]
+          5*       < 43> JMPZ                                                      OP1[  IS_VAR $1 ] OP2[ , ->12 ]
+  117     6*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          7*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435408) 'ScssPhp%5CScssPhp%5Cmb_strlen' ]
+          8*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          9*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435407) 'UTF-8' ] OP2[  IS_UNUSED  ]
+         10*       < 60> DO_FCALL                                      0   RES[  IS_VAR $2 ]       OP1[  IS_UNUSED  ]
+         11*       < 62> RETURN                                                    OP1[  IS_VAR $2 ]
+  120    12*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         13*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435400) 'function_exists' ]
+         14*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435399) 'iconv_strlen' ]
+         15*       < 60> DO_FCALL                                      0   RES[  IS_VAR $3 ]       OP1[  IS_UNUSED  ]
+         16*       < 43> JMPZ                                                      OP1[  IS_VAR $3 ] OP2[ , ->26 ]
+  121    17*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         18*       < 57> BEGIN_SILENCE                                     RES[  IS_TMP_VAR ~4 ]       OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         19*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435390) 'ScssPhp%5CScssPhp%5Ciconv_strlen' ]
+         20*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         21*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435389) 'UTF-8' ] OP2[  IS_UNUSED  ]
+         22*       < 60> DO_FCALL                                      0   RES[  IS_VAR $5 ]       OP1[  IS_UNUSED  ]
+         23*       < 58> END_SILENCE                                               OP1[  IS_TMP_VAR ~4 ] OP2[  IS_UNUSED  ]
+         24*       < 51> CAST                                          4   RES[  IS_TMP_VAR ~6 ]       OP1[  IS_VAR $5 ] OP2[  IS_UNUSED  ]
+         25*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~6 ]
+  124    26*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         27*       < 68> NEW                                               RES[  IS_VAR $7 ]       OP1[ 'LogicException' ]
+         28*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435378) 'Either+mbstring+%28recommended%29+or+iconv+is+necessary+to+use+Scssphp.' ] OP2[  IS_UNUSED  ]
+         29*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         30*       <108> THROW                                         0           OP1[  IS_VAR $7 ] OP2[  IS_UNUSED  ]
+  125    31*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         32*       < 62> RETURN                                                    OP1[  IS_CONST (268435371) null ]
+
+End of function mbstrlen
+
+Function mbsubstr:
+[+]Function Source Class Name: ScssPhp\ScssPhp\Util
+[*]Start of arg_info extract:
+[*]arg_info num_args:3
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:string
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:start
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**2**
+[*]name:length
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\scssphp\scssphp\src\Util.php
+function name:  mbSubstr
+number of ops:  72
+compiled vars:  !0 = $string, !1 = $start, !2 = $length
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  134     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 63> RECV                                              RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ]
+          2*       < 64> RECV_INIT                                         RES[  IS_CV !2 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435394) null ]
+  137     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435391) 'function_exists' ]
+          5*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435390) 'mb_substr' ]
+          6*       < 60> DO_FCALL                                      0   RES[  IS_VAR $3 ]       OP1[  IS_UNUSED  ]
+          7*       < 43> JMPZ                                                      OP1[  IS_VAR $3 ] OP2[ , ->16 ]
+  138     8*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          9*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435383) 'ScssPhp%5CScssPhp%5Cmb_substr' ]
+         10*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         11*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         12*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         13*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435378) 'UTF-8' ] OP2[  IS_UNUSED  ]
+         14*       < 60> DO_FCALL                                      0   RES[  IS_VAR $4 ]       OP1[  IS_UNUSED  ]
+         15*       < 62> RETURN                                                    OP1[  IS_VAR $4 ]
+  141    16*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         17*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435371) 'function_exists' ]
+         18*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435370) 'iconv_substr' ]
+         19*       < 60> DO_FCALL                                      0   RES[  IS_VAR $5 ]       OP1[  IS_UNUSED  ]
+         20*       < 43> JMPZ                                                      OP1[  IS_VAR $5 ] OP2[ , ->65 ]
+  142    21*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         22*       < 20> IS_SMALLER                                        RES[  IS_TMP_VAR ~6 ]       OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435363) 0 ]
+         23*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~6 ] OP2[ , ->35 ]
+  143    24*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         25*       <113> INIT_STATIC_METHOD_CALL      static                       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435358) 'mbStrlen' ]
+         26*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         27*       < 60> DO_FCALL                                      0   RES[  IS_VAR $7 ]       OP1[  IS_UNUSED  ]
+         28*       <  1> ADD                                               RES[  IS_TMP_VAR ~8 ]       OP1[  IS_VAR $7 ] OP2[ ,  IS_CV !1 ]
+         29*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_TMP_VAR ~8 ]
+  144    30*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         31*       < 20> IS_SMALLER                                        RES[  IS_TMP_VAR ~10 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435348) 0 ]
+         32*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~10 ] OP2[ , ->35 ]
+  145    33*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         34*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435343) 0 ]
+  149    35*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         36*       <123> TYPE_CHECK                                    2   RES[  IS_TMP_VAR ~12 ]      OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         37*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~12 ] OP2[ , ->41 ]
+  150    38*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         39*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435334) 2147483647 ]
+         40*       < 42> JMP                                                       OP1[ ->56 ]
+  151    41*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         42*       < 20> IS_SMALLER                                        RES[  IS_TMP_VAR ~14 ]      OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435329) 0 ]
+         43*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~14 ] OP2[ , ->56 ]
+  152    44*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         45*       <113> INIT_STATIC_METHOD_CALL      static                       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435324) 'mbStrlen' ]
+         46*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         47*       < 60> DO_FCALL                                      0   RES[  IS_VAR $15 ]      OP1[  IS_UNUSED  ]
+         48*       <  1> ADD                                               RES[  IS_TMP_VAR ~16 ]      OP1[  IS_VAR $15 ] OP2[ ,  IS_CV !2 ]
+         49*       <  2> SUB                                               RES[  IS_TMP_VAR ~17 ]      OP1[  IS_TMP_VAR ~16 ] OP2[ ,  IS_CV !1 ]
+         50*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_TMP_VAR ~17 ]
+  153    51*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         52*       < 20> IS_SMALLER                                        RES[  IS_TMP_VAR ~19 ]      OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435312) 0 ]
+         53*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~19 ] OP2[ , ->56 ]
+  154    54*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         55*       < 62> RETURN                                                    OP1[  IS_CONST (268435307) '' ]
+  158    56*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         57*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435304) 'ScssPhp%5CScssPhp%5Ciconv_substr' ]
+         58*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         59*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         60*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         61*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435299) 'UTF-8' ] OP2[  IS_UNUSED  ]
+         62*       < 60> DO_FCALL                                      0   RES[  IS_VAR $20 ]      OP1[  IS_UNUSED  ]
+         63*       < 51> CAST                                          6   RES[  IS_TMP_VAR ~21 ]      OP1[  IS_VAR $20 ] OP2[  IS_UNUSED  ]
+         64*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~21 ]
+  161    65*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         66*       < 68> NEW                                               RES[  IS_VAR $22 ]      OP1[ 'LogicException' ]
+         67*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435290) 'Either+mbstring+%28recommended%29+or+iconv+is+necessary+to+use+Scssphp.' ] OP2[  IS_UNUSED  ]
+         68*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         69*       <108> THROW                                         0           OP1[  IS_VAR $22 ] OP2[  IS_UNUSED  ]
+  162    70*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         71*       < 62> RETURN                                                    OP1[  IS_CONST (268435283) null ]
+
+End of function mbsubstr
+
+Function mbstrpos:
+[+]Function Source Class Name: ScssPhp\ScssPhp\Util
+[*]Start of arg_info extract:
+[*]arg_info num_args:3
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:haystack
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:needle
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**2**
+[*]name:offset
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\scssphp\scssphp\src\Util.php
+function name:  mbStrpos
+number of ops:  36
+compiled vars:  !0 = $haystack, !1 = $needle, !2 = $offset
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  172     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 63> RECV                                              RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ]
+          2*       < 64> RECV_INIT                                         RES[  IS_CV !2 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435415) 0 ]
+  174     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435412) 'function_exists' ]
+          5*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435411) 'mb_strpos' ]
+          6*       < 60> DO_FCALL                                      0   RES[  IS_VAR $3 ]       OP1[  IS_UNUSED  ]
+          7*       < 43> JMPZ                                                      OP1[  IS_VAR $3 ] OP2[ , ->16 ]
+  175     8*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          9*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435404) 'ScssPhp%5CScssPhp%5Cmb_strpos' ]
+         10*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         11*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         12*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         13*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435399) 'UTF-8' ] OP2[  IS_UNUSED  ]
+         14*       < 60> DO_FCALL                                      0   RES[  IS_VAR $4 ]       OP1[  IS_UNUSED  ]
+         15*       < 62> RETURN                                                    OP1[  IS_VAR $4 ]
+  178    16*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         17*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435392) 'function_exists' ]
+         18*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435391) 'iconv_strpos' ]
+         19*       < 60> DO_FCALL                                      0   RES[  IS_VAR $5 ]       OP1[  IS_UNUSED  ]
+         20*       < 43> JMPZ                                                      OP1[  IS_VAR $5 ] OP2[ , ->29 ]
+  179    21*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         22*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435384) 'ScssPhp%5CScssPhp%5Ciconv_strpos' ]
+         23*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         24*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         25*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         26*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435379) 'UTF-8' ] OP2[  IS_UNUSED  ]
+         27*       < 60> DO_FCALL                                      0   RES[  IS_VAR $6 ]       OP1[  IS_UNUSED  ]
+         28*       < 62> RETURN                                                    OP1[  IS_VAR $6 ]
+  182    29*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         30*       < 68> NEW                                               RES[  IS_VAR $7 ]       OP1[ 'LogicException' ]
+         31*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435372) 'Either+mbstring+%28recommended%29+or+iconv+is+necessary+to+use+Scssphp.' ] OP2[  IS_UNUSED  ]
+         32*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         33*       <108> THROW                                         0           OP1[  IS_VAR $7 ] OP2[  IS_UNUSED  ]
+  183    34*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         35*       < 62> RETURN                                                    OP1[  IS_CONST (268435365) null ]
+
+End of function mbstrpos
+
+End of class ScssPhp\ScssPhp\Util.
+

@@ -1,0 +1,18 @@
+<?php
+class Foo
+{
+    static $b = 'safe';
+    function __construct($b){
+        self::$b = $b;
+    }
+    function baz()
+    {
+        // $b has the input, XSS Vulnerability
+        echo self::$b;
+    }
+}
+$b = $_GET["p1"];
+// $test = new Foo($b);
+//it will create new object and call the function baz.
+array(new Foo($b), "baz")();
+// array($test, "baz")();

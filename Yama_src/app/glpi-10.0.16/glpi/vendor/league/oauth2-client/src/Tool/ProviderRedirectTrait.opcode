@@ -1,0 +1,282 @@
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\league\oauth2-client\src\Tool\ProviderRedirectTrait.php
+function name:  (null)
+number of ops:  8
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+    3     0*       <  0> NOP                                                      
+    5     1*       <  0> NOP                                                      
+    6     2*       <  0> NOP                                                      
+    7     3*       <  0> NOP                                                      
+    8     4*       <  0> NOP                                                      
+    9     5*       <  0> NOP                                                      
+  123     6*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          7*       < 62> RETURN                                                    OP1[  IS_CONST (268435441) 1 ]
+
+Class League\OAuth2\Client\Tool\ProviderRedirectTrait:
+[+]Class Parent Name: NULL
+End Trait extract
+Start Properties extract:
+Key: redirectLimit, Value: 2, Type: Normal
+End Properties extract.
+
+Function followrequestredirects:
+[+]Function Source Class Name: League\OAuth2\Client\Tool\ProviderRedirectTrait
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:request
+[*]type:Psr\Http\Message\RequestInterface
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\league\oauth2-client\src\Tool\ProviderRedirectTrait.php
+function name:  followRequestRedirects
+number of ops:  48
+compiled vars:  !0 = $request, !1 = $response, !2 = $attempts, !3 = $redirectUrl
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   28     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+   30     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435423) null ]
+   31     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435420) 0 ]
+   33     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       < 42> JMP                                                       OP1[ ->41 ]
+   34     7*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          8*       < 34> PRE_INC                                                   OP1[  IS_CV !2 ]
+   35     9*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         10*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435409) 'getHttpClient' ]
+         11*       < 60> DO_FCALL                                      0   RES[  IS_VAR $7 ]       OP1[  IS_UNUSED  ]
+         12*       <112> INIT_METHOD_CALL                                          OP1[  IS_VAR $7 ] OP2[ ,  IS_CONST (268435407) 'send' ]
+         13*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+   36    14*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435405) <array> ] OP2[  IS_UNUSED  ]
+         15*       < 60> DO_FCALL                                      0   RES[  IS_VAR $8 ]       OP1[  IS_UNUSED  ]
+   35    16*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_VAR $8 ]
+   39    17*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         18*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435398) 'isRedirect' ]
+         19*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         20*       < 60> DO_FCALL                                      0   RES[  IS_VAR $10 ]      OP1[  IS_UNUSED  ]
+         21*       < 43> JMPZ                                                      OP1[  IS_VAR $10 ] OP2[ , ->39 ]
+   40    22*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         23*       < 68> NEW                                               RES[  IS_VAR $11 ]      OP1[ 'GuzzleHttp%5CPsr7%5CUri' ]
+         24*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         25*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435388) 'getHeader' ]
+         26*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435388) 'Location' ] OP2[  IS_UNUSED  ]
+         27*       < 60> DO_FCALL                                      0   RES[  IS_VAR $12 ]      OP1[  IS_UNUSED  ]
+         28*       <156> SEPARATE                                          RES[  IS_VAR $12 ]      OP1[  IS_VAR $12 ]
+         29*       < 93> FETCH_DIM_FUNC_ARG                                RES[  IS_VAR $13 ]      OP1[  IS_VAR $12 ] OP2[ ,  IS_CONST (268435383) 0 ]
+         30*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $13 ] OP2[  IS_UNUSED  ]
+         31*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         32*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_VAR $11 ]
+   41    33*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         34*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435374) 'withUri' ]
+         35*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         36*       < 60> DO_FCALL                                      0   RES[  IS_VAR $16 ]      OP1[  IS_UNUSED  ]
+         37*       < 22> ASSIGN                                                    OP1[  IS_CV !0 ] OP2[ ,  IS_VAR $16 ]
+         38*       < 42> JMP                                                       OP1[ ->41 ]
+   43    39*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         40*       < 42> JMP                                                       OP1[ ->44 ]
+   33    41*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~18 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435362) 'redirectLimit' ]
+         42*       < 20> IS_SMALLER                                        RES[  ]         OP1[  IS_CV !2 ] OP2[ ,  IS_TMP_VAR ~18 ]
+         43*       < 44> JMPNZ                                                     OP1[  IS_TMP_VAR ~19 ] OP2[ , ->7 ]
+   47    44*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         45*       < 62> RETURN                                                    OP1[  IS_CV !1 ]
+   48    46*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         47*       < 62> RETURN                                                    OP1[  IS_CONST (268435351) null ]
+
+End of function followrequestredirects
+
+Function gethttpclient:
+[+]Function Source Class Name: League\OAuth2\Client\Tool\ProviderRedirectTrait
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\league\oauth2-client\src\Tool\ProviderRedirectTrait.php
+function name:  getHttpClient
+number of ops:  2
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   55     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 62> RETURN                                                    OP1[  IS_CONST (268435453) null ]
+
+End of function gethttpclient
+
+Function getredirectlimit:
+[+]Function Source Class Name: League\OAuth2\Client\Tool\ProviderRedirectTrait
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\league\oauth2-client\src\Tool\ProviderRedirectTrait.php
+function name:  getRedirectLimit
+number of ops:  5
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   64     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435452) 'redirectLimit' ]
+          2*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~0 ]
+   65     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       < 62> RETURN                                                    OP1[  IS_CONST (268435447) null ]
+
+End of function getredirectlimit
+
+Function isredirect:
+[+]Function Source Class Name: League\OAuth2\Client\Tool\ProviderRedirectTrait
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:response
+[*]type:Psr\Http\Message\ResponseInterface
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\league\oauth2-client\src\Tool\ProviderRedirectTrait.php
+function name:  isRedirect
+number of ops:  18
+compiled vars:  !0 = $response, !1 = $statusCode
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   74     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+   76     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435444) 'getStatusCode' ]
+          3*       < 60> DO_FCALL                                      0   RES[  IS_VAR $2 ]       OP1[  IS_UNUSED  ]
+          4*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_VAR $2 ]
+   78     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       < 20> IS_SMALLER                                        RES[  IS_TMP_VAR ~4 ]       OP1[  IS_CONST (268435438) 300 ] OP2[ ,  IS_CV !1 ]
+          7*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~4 ]       OP1[  IS_TMP_VAR ~4 ] OP2[ , ->10 ]
+          8*       < 20> IS_SMALLER                                        RES[  IS_TMP_VAR ~5 ]       OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435435) 400 ]
+          9*       < 52> BOOL                                              RES[  IS_TMP_VAR ~4 ]       OP1[  IS_TMP_VAR ~5 ]
+         10*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~4 ]       OP1[  IS_TMP_VAR ~4 ] OP2[ , ->15 ]
+         11*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435430) 'hasHeader' ]
+         12*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435430) 'Location' ] OP2[  IS_UNUSED  ]
+         13*       < 60> DO_FCALL                                      0   RES[  IS_VAR $6 ]       OP1[  IS_UNUSED  ]
+         14*       < 52> BOOL                                              RES[  IS_TMP_VAR ~4 ]       OP1[  IS_VAR $6 ]
+         15*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~4 ]
+   79    16*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         17*       < 62> RETURN                                                    OP1[  IS_CONST (268435421) null ]
+
+End of function isredirect
+
+Function getresponse:
+[+]Function Source Class Name: League\OAuth2\Client\Tool\ProviderRedirectTrait
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:request
+[*]type:Psr\Http\Message\RequestInterface
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\league\oauth2-client\src\Tool\ProviderRedirectTrait.php
+function name:  getResponse
+number of ops:  17
+compiled vars:  !0 = $request, !1 = $response, !2 = $e
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   90     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+   92     1*       <  0> NOP                                                      
+   93     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435443) 'followRequestRedirects' ]
+          4*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          5*       < 60> DO_FCALL                                      0   RES[  IS_VAR $3 ]       OP1[  IS_UNUSED  ]
+          6*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_VAR $3 ]
+          7*       < 42> JMP                                                       OP1[ ->13 ]
+   94     8*       <107> CATCH                                       last  RES[  IS_CV !2 ]       OP1[  IS_CONST (268435435) 'GuzzleHttp%5CException%5CBadResponseException' ]
+   95     9*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         10*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435433) 'getResponse' ]
+         11*       < 60> DO_FCALL                                      0   RES[  IS_VAR $5 ]       OP1[  IS_UNUSED  ]
+         12*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_VAR $5 ]
+   98    13*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         14*       < 62> RETURN                                                    OP1[  IS_CV !1 ]
+   99    15*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         16*       < 62> RETURN                                                    OP1[  IS_CONST (268435423) null ]
+
+End of function getresponse
+
+Function setredirectlimit:
+[+]Function Source Class Name: League\OAuth2\Client\Tool\ProviderRedirectTrait
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:limit
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\league\oauth2-client\src\Tool\ProviderRedirectTrait.php
+function name:  setRedirectLimit
+number of ops:  28
+compiled vars:  !0 = $limit
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  108     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  110     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435440) 'League%5COAuth2%5CClient%5CTool%5Cis_int' ]
+          3*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          4*       < 60> DO_FCALL                                      0   RES[  IS_VAR $1 ]       OP1[  IS_UNUSED  ]
+          5*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~2 ]       OP1[  IS_VAR $1 ]
+          6*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~2 ] OP2[ , ->12 ]
+  111     7*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          8*       < 68> NEW                                               RES[  IS_VAR $3 ]       OP1[ 'InvalidArgumentException' ]
+          9*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435431) 'redirectLimit+must+be+an+integer.' ] OP2[  IS_UNUSED  ]
+         10*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         11*       <108> THROW                                         0           OP1[  IS_VAR $3 ] OP2[  IS_UNUSED  ]
+  114    12*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         13*       < 20> IS_SMALLER                                        RES[  IS_TMP_VAR ~5 ]       OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435424) 1 ]
+         14*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~5 ] OP2[ , ->20 ]
+  115    15*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         16*       < 68> NEW                                               RES[  IS_VAR $6 ]       OP1[ 'InvalidArgumentException' ]
+         17*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435419) 'redirectLimit+must+be+greater+than+or+equal+to+one.' ] OP2[  IS_UNUSED  ]
+         18*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         19*       <108> THROW                                         0           OP1[  IS_VAR $6 ] OP2[  IS_UNUSED  ]
+  118    20*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         21*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435412) 'redirectLimit' ]
+         22*       <137> OP_DATA                                                   OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+  120    23*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         24*       <184> FETCH_THIS                                        RES[  IS_TMP_VAR ~9 ]       OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         25*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~9 ]
+  121    26*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         27*       < 62> RETURN                                                    OP1[  IS_CONST (268435401) null ]
+
+End of function setredirectlimit
+
+End of class League\OAuth2\Client\Tool\ProviderRedirectTrait.
+

@@ -1,0 +1,1296 @@
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\guzzlehttp\guzzle\src\Cookie\SetCookie.php
+function name:  (null)
+number of ops:  5
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+    3     0*       <  0> NOP                                                      
+   13     1*       <  0> NOP                                                      
+    8     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       <144> DECLARE_CLASS                                             OP1[  IS_CONST (268435447) 'guzzlehttp%5Ccookie%5Csetcookie' ] OP2[  IS_UNUSED  ]
+  447     4*       < 62> RETURN                                                    OP1[  IS_CONST (268435447) 1 ]
+
+Class GuzzleHttp\Cookie\SetCookie:
+[+]Class Parent Name: NULL
+End Trait extract
+Start Properties extract:
+Key: defaults, Value: UNINIT, Type: Normal
+End Properties extract.
+
+Function fromstring:
+[+]Function Source Class Name: GuzzleHttp\Cookie\SetCookie
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:self
+
+[*]ArgInfoNo**0**
+[*]name:cookie
+[*]type:string
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\guzzlehttp\guzzle\src\Cookie\SetCookie.php
+function name:  fromString
+number of ops:  110
+compiled vars:  !0 = $cookie, !1 = $data, !2 = $pieces, !3 = $part, !4 = $cookieParts, !5 = $key, !6 = $value, !7 = $search
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   35     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+   38     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       <173> FETCH_STATIC_PROP_R          unknown              RES[  IS_TMP_VAR ~8 ]       OP1[  IS_CONST (268435425) 'defaults' ] OP2[  IS_UNUSED  ]
+          3*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_TMP_VAR ~8 ]
+   40     4*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          5*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435420) 'array_filter' ]
+          6*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435419) 'array_map' ]
+          7*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435418) 'trim' ]
+          8*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435417) 'explode' ]
+          9*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435416) '%3B' ]
+         10*       <117> SEND_VAR                                                  OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         11*       < 60> DO_FCALL                                      0   RES[  IS_VAR $10 ]      OP1[  IS_UNUSED  ]
+         12*       <117> SEND_VAR                                                  OP1[  IS_VAR $10 ] OP2[  IS_UNUSED  ]
+         13*       < 60> DO_FCALL                                      0   RES[  IS_VAR $11 ]      OP1[  IS_UNUSED  ]
+         14*       <117> SEND_VAR                                                  OP1[  IS_VAR $11 ] OP2[  IS_UNUSED  ]
+         15*       < 60> DO_FCALL                                      0   RES[  IS_VAR $12 ]      OP1[  IS_UNUSED  ]
+         16*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_VAR $12 ]
+   42    17*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         18*       <115> ISSET_ISEMPTY_DIM_OBJ                         0   RES[  IS_TMP_VAR ~14 ]      OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435399) 0 ]
+         19*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~15 ]      OP1[  IS_TMP_VAR ~14 ]
+         20*       < 47> JMPNZ_EX                                          RES[  IS_TMP_VAR ~15 ]      OP1[  IS_TMP_VAR ~15 ] OP2[ , ->28 ]
+         21*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435394) 'strpos' ]
+         22*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~16 ]      OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435393) 0 ]
+         23*       < 65> SEND_VAL                                                  OP1[  IS_TMP_VAR ~16 ]
+         24*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435390) '%3D' ]
+         25*       < 60> DO_FCALL                                      0   RES[  IS_VAR $17 ]      OP1[  IS_UNUSED  ]
+         26*       <123> TYPE_CHECK                                    4   RES[  IS_TMP_VAR ~18 ]      OP1[  IS_VAR $17 ] OP2[  IS_UNUSED  ]
+         27*       < 52> BOOL                                              RES[  IS_TMP_VAR ~15 ]      OP1[  IS_TMP_VAR ~18 ]
+         28*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~15 ] OP2[ , ->35 ]
+   43    29*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         30*       < 68> NEW                          self                 RES[  IS_VAR $19 ]     
+         31*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         32*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         33*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_VAR $19 ] OP2[  IS_UNUSED  ]
+         34*       < 62> RETURN                                                    OP1[  IS_VAR $19 ]
+   47    35*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         36*       < 77> FE_RESET_R                                        RES[  IS_VAR $21 ]      OP1[  IS_CV !2 ] OP2[ , ->100 ]
+         37*       < 78> FE_FETCH_R                                                OP1[  IS_VAR $21 ] OP2[ ,  IS_CV !3 ] EXT_JMP_REL[ , ->100 ]
+   48    38*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         39*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435361) 'explode' ]
+         40*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435360) '%3D' ]
+         41*       <117> SEND_VAR                                                  OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         42*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435357) 2 ]
+         43*       < 60> DO_FCALL                                      0   RES[  IS_VAR $22 ]      OP1[  IS_UNUSED  ]
+         44*       < 22> ASSIGN                                                    OP1[  IS_CV !4 ] OP2[ ,  IS_VAR $22 ]
+   49    45*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         46*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435350) 'trim' ]
+         47*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~24 ]      OP1[  IS_CV !4 ] OP2[ ,  IS_CONST (268435349) 0 ]
+         48*       < 65> SEND_VAL                                                  OP1[  IS_TMP_VAR ~24 ]
+         49*       < 60> DO_FCALL                                      0   RES[  IS_VAR $25 ]      OP1[  IS_UNUSED  ]
+         50*       < 22> ASSIGN                                                    OP1[  IS_CV !5 ] OP2[ ,  IS_VAR $25 ]
+   50    51*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         52*       <115> ISSET_ISEMPTY_DIM_OBJ                         0   RES[  IS_TMP_VAR ~27 ]      OP1[  IS_CV !4 ] OP2[ ,  IS_CONST (268435340) 1 ]
+         53*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~27 ] OP2[ , ->61 ]
+   51    54*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435337) 'trim' ]
+         55*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~28 ]      OP1[  IS_CV !4 ] OP2[ ,  IS_CONST (268435336) 1 ]
+         56*       < 65> SEND_VAL                                                  OP1[  IS_TMP_VAR ~28 ]
+         57*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435333) '+%0A%0D%09%00%0B' ]
+         58*       < 60> DO_FCALL                                      0   RES[  IS_VAR $29 ]      OP1[  IS_UNUSED  ]
+         59*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~30 ]      OP1[  IS_VAR $29 ]
+         60*       < 42> JMP                                                       OP1[ ->62 ]
+   52    61*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~30 ]      OP1[  IS_CONST (268435326) <true> ]
+   50    62*       < 22> ASSIGN                                                    OP1[  IS_CV !6 ] OP2[ ,  IS_TMP_VAR ~30 ]
+   55    63*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         64*       <115> ISSET_ISEMPTY_DIM_OBJ                         0   RES[  IS_TMP_VAR ~32 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435321) 'Name' ]
+         65*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~33 ]      OP1[  IS_TMP_VAR ~32 ]
+         66*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~33 ] OP2[ , ->74 ]
+   56    67*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         68*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435314) 'Name' ]
+         69*       <137> OP_DATA                                                   OP1[  IS_CV !5 ] OP2[  IS_UNUSED  ]
+   57    70*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         71*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435309) 'Value' ]
+         72*       <137> OP_DATA                                                   OP1[  IS_CV !6 ] OP2[  IS_UNUSED  ]
+         73*       < 42> JMP                                                       OP1[ ->99 ]
+   59    74*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         75*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435302) 'array_keys' ]
+         76*       <173> FETCH_STATIC_PROP_R          unknown              RES[  IS_TMP_VAR ~36 ]      OP1[  IS_CONST (268435301) 'defaults' ] OP2[  IS_UNUSED  ]
+         77*       < 65> SEND_VAL                                                  OP1[  IS_TMP_VAR ~36 ]
+         78*       < 60> DO_FCALL                                      0   RES[  IS_VAR $37 ]      OP1[  IS_UNUSED  ]
+         79*       < 77> FE_RESET_R                                        RES[  IS_VAR $38 ]      OP1[  IS_VAR $37 ] OP2[ , ->95 ]
+         80*       < 78> FE_FETCH_R                                                OP1[  IS_VAR $38 ] OP2[ ,  IS_CV !7 ] EXT_JMP_REL[ , ->95 ]
+   60    81*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         82*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435290) 'strcasecmp' ]
+         83*       <117> SEND_VAR                                                  OP1[  IS_CV !7 ] OP2[  IS_UNUSED  ]
+         84*       <117> SEND_VAR                                                  OP1[  IS_CV !5 ] OP2[  IS_UNUSED  ]
+         85*       < 60> DO_FCALL                                      0   RES[  IS_VAR $39 ]      OP1[  IS_UNUSED  ]
+         86*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~40 ]      OP1[  IS_VAR $39 ]
+         87*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~40 ] OP2[ , ->94 ]
+   61    88*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         89*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !1 ] OP2[ ,  IS_CV !7 ]
+         90*       <137> OP_DATA                                                   OP1[  IS_CV !6 ] OP2[  IS_UNUSED  ]
+   62    91*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         92*       <127> FE_FREE                                                   OP1[  IS_VAR $38 ] OP2[  IS_UNUSED  ]
+         93*       < 42> JMP                                                       OP1[ ->37 ]
+   59    94*       < 42> JMP                                                       OP1[ ->80 ]
+         95*       <127> FE_FREE                                                   OP1[  IS_VAR $38 ] OP2[  IS_UNUSED  ]
+   65    96*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         97*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !1 ] OP2[ ,  IS_CV !5 ]
+         98*       <137> OP_DATA                                                   OP1[  IS_CV !6 ] OP2[  IS_UNUSED  ]
+   47    99*       < 42> JMP                                                       OP1[ ->37 ]
+        100*       <127> FE_FREE                                                   OP1[  IS_VAR $21 ] OP2[  IS_UNUSED  ]
+   69   101*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        102*       < 68> NEW                          self                 RES[  IS_VAR $43 ]     
+        103*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+        104*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+        105*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_VAR $43 ] OP2[  IS_UNUSED  ]
+        106*       < 62> RETURN                                                    OP1[  IS_VAR $43 ]
+   70   107*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        108*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        109*       < 62> RETURN                                                    OP1[  IS_CONST (268435237) null ]
+
+End of function fromstring
+
+Function __construct:
+[+]Function Source Class Name: GuzzleHttp\Cookie\SetCookie
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:data
+[*]type:array
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\guzzlehttp\guzzle\src\Cookie\SetCookie.php
+function name:  __construct
+number of ops:  56
+compiled vars:  !0 = $data, !1 = $replaced, !2 = $expires
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   75     0*       < 64> RECV_INIT                                         RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435430) <array> ]
+   78     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435427) 'array_replace' ]
+          3*       <173> FETCH_STATIC_PROP_R          global lock          RES[  IS_TMP_VAR ~3 ]       OP1[  IS_CONST (268435426) 'defaults' ] OP2[  IS_UNUSED  ]
+          4*       < 65> SEND_VAL                                                  OP1[  IS_TMP_VAR ~3 ]
+          5*       <117> SEND_VAR                                                  OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          6*       < 60> DO_FCALL                                      0   RES[  IS_VAR $4 ]       OP1[  IS_UNUSED  ]
+          7*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_VAR $4 ]
+   79     8*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          9*       <123> TYPE_CHECK                                    2   RES[  IS_TMP_VAR ~6 ]       OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         10*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~6 ] OP2[ , ->16 ]
+   80    11*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         12*       < 68> NEW                                               RES[  IS_VAR $7 ]       OP1[ 'InvalidArgumentException' ]
+         13*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435409) 'Unable+to+replace+the+default+values+for+the+Cookie.' ] OP2[  IS_UNUSED  ]
+         14*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         15*       <108> THROW                                         0           OP1[  IS_VAR $7 ] OP2[  IS_UNUSED  ]
+   83    16*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         17*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435402) 'data' ]
+         18*       <137> OP_DATA                                                   OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+   85    19*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         20*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435397) 'getExpires' ]
+         21*       < 60> DO_FCALL                                      0   RES[  IS_VAR $10 ]      OP1[  IS_UNUSED  ]
+         22*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~11 ]      OP1[  IS_VAR $10 ]
+         23*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~11 ]      OP1[  IS_TMP_VAR ~11 ] OP2[ , ->27 ]
+         24*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435391) 'getMaxAge' ]
+         25*       < 60> DO_FCALL                                      0   RES[  IS_VAR $12 ]      OP1[  IS_UNUSED  ]
+         26*       < 52> BOOL                                              RES[  IS_TMP_VAR ~11 ]      OP1[  IS_VAR $12 ]
+         27*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~11 ] OP2[ , ->38 ]
+   87    28*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         29*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435383) 'setExpires' ]
+         30*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435383) 'time' ]
+         31*       < 60> DO_FCALL                                      0   RES[  IS_VAR $13 ]      OP1[  IS_UNUSED  ]
+         32*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435380) 'getMaxAge' ]
+         33*       < 60> DO_FCALL                                      0   RES[  IS_VAR $14 ]      OP1[  IS_UNUSED  ]
+         34*       <  1> ADD                                               RES[  IS_TMP_VAR ~15 ]      OP1[  IS_VAR $13 ] OP2[ ,  IS_VAR $14 ]
+         35*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~15 ] OP2[  IS_UNUSED  ]
+         36*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         37*       < 42> JMP                                                       OP1[ ->54 ]
+   88    38*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         39*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435368) 'getExpires' ]
+         40*       < 60> DO_FCALL                                      0   RES[  IS_VAR $17 ]      OP1[  IS_UNUSED  ]
+         41*       < 22> ASSIGN                                            RES[  IS_TMP_VAR ~18 ]      OP1[  IS_CV !2 ] OP2[ ,  IS_VAR $17 ]
+         42*       <123> TYPE_CHECK                                  1020   RES[  IS_TMP_VAR ~19 ]      OP1[  IS_TMP_VAR ~18 ] OP2[  IS_UNUSED  ]
+         43*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~19 ]      OP1[  IS_TMP_VAR ~19 ] OP2[ , ->49 ]
+         44*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435360) 'is_numeric' ]
+         45*       <117> SEND_VAR                                                  OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         46*       < 60> DO_FCALL                                      0   RES[  IS_VAR $20 ]      OP1[  IS_UNUSED  ]
+         47*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~21 ]      OP1[  IS_VAR $20 ]
+         48*       < 52> BOOL                                              RES[  IS_TMP_VAR ~19 ]      OP1[  IS_TMP_VAR ~21 ]
+         49*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~19 ] OP2[ , ->54 ]
+   89    50*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         51*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435347) 'setExpires' ]
+         52*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         53*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+   91    54*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         55*       < 62> RETURN                                                    OP1[  IS_CONST (268435341) null ]
+
+End of function __construct
+
+Function __tostring:
+[+]Function Source Class Name: GuzzleHttp\Cookie\SetCookie
+[*]Start of arg_info extract:
+[*]arg_info num_args:0
+[*]Function return type:string
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\guzzlehttp\guzzle\src\Cookie\SetCookie.php
+function name:  __toString
+number of ops:  63
+compiled vars:  !0 = $str, !1 = $v, !2 = $k
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   95     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~3 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435434) 'data' ]
+          2*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~4 ]       OP1[  IS_TMP_VAR ~3 ] OP2[ ,  IS_CONST (268435433) 'Name' ]
+          3*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~5 ]       OP1[  IS_TMP_VAR ~4 ] OP2[ ,  IS_CONST (268435432) '%3D' ]
+          4*       < 91> FETCH_OBJ_IS                                      RES[  IS_TMP_VAR ~6 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435431) 'data' ]
+          5*       < 90> FETCH_DIM_IS                                      RES[  IS_TMP_VAR ~7 ]       OP1[  IS_TMP_VAR ~6 ] OP2[ ,  IS_CONST (268435430) 'Value' ]
+          6*       <169> COALESCE                                          RES[  IS_TMP_VAR ~8 ]       OP1[  IS_TMP_VAR ~7 ] OP2[ , ->8 ]
+          7*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~8 ]       OP1[  IS_CONST (268435427) '' ]
+          8*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~9 ]       OP1[  IS_TMP_VAR ~5 ] OP2[ ,  IS_TMP_VAR ~8 ]
+          9*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~10 ]      OP1[  IS_TMP_VAR ~9 ] OP2[ ,  IS_CONST (268435424) '%3B+' ]
+         10*       < 22> ASSIGN                                                    OP1[  IS_CV !0 ] OP2[ ,  IS_TMP_VAR ~10 ]
+   96    11*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         12*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~12 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435419) 'data' ]
+         13*       < 77> FE_RESET_R                                        RES[  IS_VAR $13 ]      OP1[  IS_TMP_VAR ~12 ] OP2[ , ->52 ]
+         14*       < 78> FE_FETCH_R                                        RES[  IS_TMP_VAR ~14 ]      OP1[  IS_VAR $13 ] OP2[ ,  IS_CV !1 ] EXT_JMP_REL[ , ->52 ]
+         15*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_TMP_VAR ~14 ]
+   97    16*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         17*       < 17> IS_NOT_IDENTICAL                                  RES[  IS_TMP_VAR ~16 ]      OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435410) 'Name' ]
+         18*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~16 ]      OP1[  IS_TMP_VAR ~16 ] OP2[ , ->21 ]
+         19*       < 17> IS_NOT_IDENTICAL                                  RES[  IS_TMP_VAR ~17 ]      OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435407) 'Value' ]
+         20*       < 52> BOOL                                              RES[  IS_TMP_VAR ~16 ]      OP1[  IS_TMP_VAR ~17 ]
+         21*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~16 ]      OP1[  IS_TMP_VAR ~16 ] OP2[ , ->24 ]
+         22*       <123> TYPE_CHECK                                  1020   RES[  IS_TMP_VAR ~18 ]      OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         23*       < 52> BOOL                                              RES[  IS_TMP_VAR ~16 ]      OP1[  IS_TMP_VAR ~18 ]
+         24*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~16 ]      OP1[  IS_TMP_VAR ~16 ] OP2[ , ->27 ]
+         25*       <123> TYPE_CHECK                                  1018   RES[  IS_TMP_VAR ~19 ]      OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         26*       < 52> BOOL                                              RES[  IS_TMP_VAR ~16 ]      OP1[  IS_TMP_VAR ~19 ]
+         27*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~16 ] OP2[ , ->51 ]
+   98    28*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         29*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~20 ]      OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435388) 'Expires' ]
+         30*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~20 ] OP2[ , ->40 ]
+   99    31*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         32*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435383) 'gmdate' ]
+         33*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435382) 'D%2C+d+M+Y+H%3Ai%3As+%5CG%5CM%5CT' ]
+         34*       <117> SEND_VAR                                                  OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         35*       < 60> DO_FCALL                                      0   RES[  IS_VAR $21 ]      OP1[  IS_UNUSED  ]
+         36*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~22 ]      OP1[  IS_CONST (268435377) 'Expires%3D' ] OP2[ ,  IS_VAR $21 ]
+         37*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~23 ]      OP1[  IS_TMP_VAR ~22 ] OP2[ ,  IS_CONST (268435376) '%3B+' ]
+         38*       < 26> ASSIGN_OP                    .=               8           OP1[  IS_CV !0 ] OP2[ ,  IS_TMP_VAR ~23 ]
+         39*       < 42> JMP                                                       OP1[ ->51 ]
+  101    40*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         41*       <123> TYPE_CHECK                                    8   RES[  IS_TMP_VAR ~25 ]      OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         42*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~25 ] OP2[ , ->45 ]
+         43*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~26 ]      OP1[  IS_CV !2 ]
+         44*       < 42> JMP                                                       OP1[ ->49 ]
+         45*       < 54> ROPE_INIT                                     3   RES[  IS_TMP_VAR ~28 ]      OP1[  IS_UNUSED  ] OP2[  IS_CV !2 ]
+         46*       < 55> ROPE_ADD                                      1   RES[  IS_TMP_VAR ~28 ]      OP1[  IS_TMP_VAR ~28 ] OP2[ ,  IS_CONST (268435359) '%3D' ]
+         47*       < 56> ROPE_END                                      2   RES[  IS_TMP_VAR ~27 ]      OP1[  IS_TMP_VAR ~28 ] OP2[ ,  IS_CV !1 ]
+         48*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~26 ]      OP1[  IS_TMP_VAR ~27 ]
+         49*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~30 ]      OP1[  IS_TMP_VAR ~26 ] OP2[ ,  IS_CONST (268435354) '%3B+' ]
+         50*       < 26> ASSIGN_OP                    .=               8           OP1[  IS_CV !0 ] OP2[ ,  IS_TMP_VAR ~30 ]
+   96    51*       < 42> JMP                                                       OP1[ ->14 ]
+         52*       <127> FE_FREE                                                   OP1[  IS_VAR $13 ] OP2[  IS_UNUSED  ]
+  106    53*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         54*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435345) 'rtrim' ]
+         55*       <117> SEND_VAR                                                  OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         56*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435342) '%3B+' ]
+         57*       < 60> DO_FCALL                                      0   RES[  IS_VAR $32 ]      OP1[  IS_UNUSED  ]
+         58*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_VAR $32 ] OP2[  IS_UNUSED  ]
+         59*       < 62> RETURN                                                    OP1[  IS_VAR $32 ]
+  107    60*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         61*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         62*       < 62> RETURN                                                    OP1[  IS_CONST (268435331) null ]
+
+End of function __tostring
+
+Function toarray:
+[+]Function Source Class Name: GuzzleHttp\Cookie\SetCookie
+[*]Start of arg_info extract:
+[*]arg_info num_args:0
+[*]Function return type:array
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\guzzlehttp\guzzle\src\Cookie\SetCookie.php
+function name:  toArray
+number of ops:  7
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  111     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435452) 'data' ]
+          2*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_TMP_VAR ~0 ] OP2[  IS_UNUSED  ]
+          3*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~0 ]
+  112     4*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          5*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       < 62> RETURN                                                    OP1[  IS_CONST (268435443) null ]
+
+End of function toarray
+
+Function getname:
+[+]Function Source Class Name: GuzzleHttp\Cookie\SetCookie
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\guzzlehttp\guzzle\src\Cookie\SetCookie.php
+function name:  getName
+number of ops:  6
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  121     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435451) 'data' ]
+          2*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~1 ]       OP1[  IS_TMP_VAR ~0 ] OP2[ ,  IS_CONST (268435450) 'Name' ]
+          3*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~1 ]
+  122     4*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          5*       < 62> RETURN                                                    OP1[  IS_CONST (268435445) null ]
+
+End of function getname
+
+Function setname:
+[+]Function Source Class Name: GuzzleHttp\Cookie\SetCookie
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:void
+
+[*]ArgInfoNo**0**
+[*]name:name
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\guzzlehttp\guzzle\src\Cookie\SetCookie.php
+function name:  setName
+number of ops:  22
+compiled vars:  !0 = $name
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  129     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  131     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435438) 'GuzzleHttp%5CCookie%5Cis_string' ]
+          3*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          4*       < 60> DO_FCALL                                      0   RES[  IS_VAR $1 ]       OP1[  IS_UNUSED  ]
+          5*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~2 ]       OP1[  IS_VAR $1 ]
+          6*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~2 ] OP2[ , ->15 ]
+  132     7*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          8*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435429) 'GuzzleHttp%5CCookie%5Ctrigger_deprecation' ]
+          9*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435430) 'guzzlehttp%2Fguzzle' ] OP2[  IS_UNUSED  ]
+         10*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435429) '7.4' ] OP2[  IS_UNUSED  ]
+         11*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435428) 'Not+passing+a+string+to+%25s%3A%3A%25s%28%29+is+deprecated+and+will+cause+an+error+in+8.0.' ] OP2[  IS_UNUSED  ]
+         12*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435427) 'GuzzleHttp%5CCookie%5CSetCookie' ] OP2[  IS_UNUSED  ]
+         13*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435426) 'setName' ] OP2[  IS_UNUSED  ]
+         14*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  135    15*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         16*       < 51> CAST                                          6   RES[  IS_TMP_VAR ~6 ]       OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         17*       < 85> FETCH_OBJ_W                                       RES[  IS_VAR $4 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435419) 'data' ]
+         18*       < 23> ASSIGN_DIM                                                OP1[  IS_VAR $4 ] OP2[ ,  IS_CONST (268435418) 'Name' ]
+         19*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~6 ] OP2[  IS_UNUSED  ]
+  136    20*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         21*       < 62> RETURN                                                    OP1[  IS_CONST (268435413) null ]
+
+End of function setname
+
+Function getvalue:
+[+]Function Source Class Name: GuzzleHttp\Cookie\SetCookie
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\guzzlehttp\guzzle\src\Cookie\SetCookie.php
+function name:  getValue
+number of ops:  6
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  145     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435451) 'data' ]
+          2*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~1 ]       OP1[  IS_TMP_VAR ~0 ] OP2[ ,  IS_CONST (268435450) 'Value' ]
+          3*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~1 ]
+  146     4*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          5*       < 62> RETURN                                                    OP1[  IS_CONST (268435445) null ]
+
+End of function getvalue
+
+Function setvalue:
+[+]Function Source Class Name: GuzzleHttp\Cookie\SetCookie
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:void
+
+[*]ArgInfoNo**0**
+[*]name:value
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\guzzlehttp\guzzle\src\Cookie\SetCookie.php
+function name:  setValue
+number of ops:  22
+compiled vars:  !0 = $value
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  153     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  155     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435438) 'GuzzleHttp%5CCookie%5Cis_string' ]
+          3*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          4*       < 60> DO_FCALL                                      0   RES[  IS_VAR $1 ]       OP1[  IS_UNUSED  ]
+          5*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~2 ]       OP1[  IS_VAR $1 ]
+          6*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~2 ] OP2[ , ->15 ]
+  156     7*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          8*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435429) 'GuzzleHttp%5CCookie%5Ctrigger_deprecation' ]
+          9*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435430) 'guzzlehttp%2Fguzzle' ] OP2[  IS_UNUSED  ]
+         10*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435429) '7.4' ] OP2[  IS_UNUSED  ]
+         11*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435428) 'Not+passing+a+string+to+%25s%3A%3A%25s%28%29+is+deprecated+and+will+cause+an+error+in+8.0.' ] OP2[  IS_UNUSED  ]
+         12*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435427) 'GuzzleHttp%5CCookie%5CSetCookie' ] OP2[  IS_UNUSED  ]
+         13*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435426) 'setValue' ] OP2[  IS_UNUSED  ]
+         14*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  159    15*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         16*       < 51> CAST                                          6   RES[  IS_TMP_VAR ~6 ]       OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         17*       < 85> FETCH_OBJ_W                                       RES[  IS_VAR $4 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435419) 'data' ]
+         18*       < 23> ASSIGN_DIM                                                OP1[  IS_VAR $4 ] OP2[ ,  IS_CONST (268435418) 'Value' ]
+         19*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~6 ] OP2[  IS_UNUSED  ]
+  160    20*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         21*       < 62> RETURN                                                    OP1[  IS_CONST (268435413) null ]
+
+End of function setvalue
+
+Function getdomain:
+[+]Function Source Class Name: GuzzleHttp\Cookie\SetCookie
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\guzzlehttp\guzzle\src\Cookie\SetCookie.php
+function name:  getDomain
+number of ops:  6
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  169     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435451) 'data' ]
+          2*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~1 ]       OP1[  IS_TMP_VAR ~0 ] OP2[ ,  IS_CONST (268435450) 'Domain' ]
+          3*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~1 ]
+  170     4*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          5*       < 62> RETURN                                                    OP1[  IS_CONST (268435445) null ]
+
+End of function getdomain
+
+Function setdomain:
+[+]Function Source Class Name: GuzzleHttp\Cookie\SetCookie
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:void
+
+[*]ArgInfoNo**0**
+[*]name:domain
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\guzzlehttp\guzzle\src\Cookie\SetCookie.php
+function name:  setDomain
+number of ops:  30
+compiled vars:  !0 = $domain
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  177     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  179     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435437) 'GuzzleHttp%5CCookie%5Cis_string' ]
+          3*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          4*       < 60> DO_FCALL                                      0   RES[  IS_VAR $1 ]       OP1[  IS_UNUSED  ]
+          5*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~2 ]       OP1[  IS_VAR $1 ]
+          6*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~2 ]       OP1[  IS_TMP_VAR ~2 ] OP2[ , ->9 ]
+          7*       <123> TYPE_CHECK                                  1020   RES[  IS_TMP_VAR ~3 ]       OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          8*       < 52> BOOL                                              RES[  IS_TMP_VAR ~2 ]       OP1[  IS_TMP_VAR ~3 ]
+          9*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~2 ] OP2[ , ->18 ]
+  180    10*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         11*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435422) 'GuzzleHttp%5CCookie%5Ctrigger_deprecation' ]
+         12*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435423) 'guzzlehttp%2Fguzzle' ] OP2[  IS_UNUSED  ]
+         13*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435422) '7.4' ] OP2[  IS_UNUSED  ]
+         14*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435421) 'Not+passing+a+string+or+null+to+%25s%3A%3A%25s%28%29+is+deprecated+and+will+cause+an+error+in+8.0.' ] OP2[  IS_UNUSED  ]
+         15*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435420) 'GuzzleHttp%5CCookie%5CSetCookie' ] OP2[  IS_UNUSED  ]
+         16*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435419) 'setDomain' ] OP2[  IS_UNUSED  ]
+         17*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  183    18*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         19*       <123> TYPE_CHECK                                    2   RES[  IS_TMP_VAR ~7 ]       OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         20*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~7 ] OP2[ , ->23 ]
+         21*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~8 ]       OP1[  IS_CONST (268435412) null ]
+         22*       < 42> JMP                                                       OP1[ ->25 ]
+         23*       < 51> CAST                                          6   RES[  IS_TMP_VAR ~9 ]       OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         24*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~8 ]       OP1[  IS_TMP_VAR ~9 ]
+         25*       < 85> FETCH_OBJ_W                                       RES[  IS_VAR $5 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435402) 'data' ]
+         26*       < 23> ASSIGN_DIM                                                OP1[  IS_VAR $5 ] OP2[ ,  IS_CONST (268435401) 'Domain' ]
+         27*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~8 ] OP2[  IS_UNUSED  ]
+  184    28*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         29*       < 62> RETURN                                                    OP1[  IS_CONST (268435397) null ]
+
+End of function setdomain
+
+Function getpath:
+[+]Function Source Class Name: GuzzleHttp\Cookie\SetCookie
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\guzzlehttp\guzzle\src\Cookie\SetCookie.php
+function name:  getPath
+number of ops:  6
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  193     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435451) 'data' ]
+          2*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~1 ]       OP1[  IS_TMP_VAR ~0 ] OP2[ ,  IS_CONST (268435450) 'Path' ]
+          3*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~1 ]
+  194     4*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          5*       < 62> RETURN                                                    OP1[  IS_CONST (268435445) null ]
+
+End of function getpath
+
+Function setpath:
+[+]Function Source Class Name: GuzzleHttp\Cookie\SetCookie
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:void
+
+[*]ArgInfoNo**0**
+[*]name:path
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\guzzlehttp\guzzle\src\Cookie\SetCookie.php
+function name:  setPath
+number of ops:  22
+compiled vars:  !0 = $path
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  201     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  203     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435438) 'GuzzleHttp%5CCookie%5Cis_string' ]
+          3*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          4*       < 60> DO_FCALL                                      0   RES[  IS_VAR $1 ]       OP1[  IS_UNUSED  ]
+          5*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~2 ]       OP1[  IS_VAR $1 ]
+          6*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~2 ] OP2[ , ->15 ]
+  204     7*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          8*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435429) 'GuzzleHttp%5CCookie%5Ctrigger_deprecation' ]
+          9*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435430) 'guzzlehttp%2Fguzzle' ] OP2[  IS_UNUSED  ]
+         10*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435429) '7.4' ] OP2[  IS_UNUSED  ]
+         11*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435428) 'Not+passing+a+string+to+%25s%3A%3A%25s%28%29+is+deprecated+and+will+cause+an+error+in+8.0.' ] OP2[  IS_UNUSED  ]
+         12*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435427) 'GuzzleHttp%5CCookie%5CSetCookie' ] OP2[  IS_UNUSED  ]
+         13*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435426) 'setPath' ] OP2[  IS_UNUSED  ]
+         14*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  207    15*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         16*       < 51> CAST                                          6   RES[  IS_TMP_VAR ~6 ]       OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         17*       < 85> FETCH_OBJ_W                                       RES[  IS_VAR $4 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435419) 'data' ]
+         18*       < 23> ASSIGN_DIM                                                OP1[  IS_VAR $4 ] OP2[ ,  IS_CONST (268435418) 'Path' ]
+         19*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~6 ] OP2[  IS_UNUSED  ]
+  208    20*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         21*       < 62> RETURN                                                    OP1[  IS_CONST (268435413) null ]
+
+End of function setpath
+
+Function getmaxage:
+[+]Function Source Class Name: GuzzleHttp\Cookie\SetCookie
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\guzzlehttp\guzzle\src\Cookie\SetCookie.php
+function name:  getMaxAge
+number of ops:  14
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  217     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435448) 'data' ]
+          2*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~1 ]       OP1[  IS_TMP_VAR ~0 ] OP2[ ,  IS_CONST (268435447) 'Max-Age' ]
+          3*       <123> TYPE_CHECK                                    2   RES[  IS_TMP_VAR ~2 ]       OP1[  IS_TMP_VAR ~1 ] OP2[  IS_UNUSED  ]
+          4*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~2 ] OP2[ , ->7 ]
+          5*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~3 ]       OP1[  IS_CONST (268435442) null ]
+          6*       < 42> JMP                                                       OP1[ ->11 ]
+          7*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~4 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435439) 'data' ]
+          8*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~5 ]       OP1[  IS_TMP_VAR ~4 ] OP2[ ,  IS_CONST (268435438) 'Max-Age' ]
+          9*       < 51> CAST                                          4   RES[  IS_TMP_VAR ~6 ]       OP1[  IS_TMP_VAR ~5 ] OP2[  IS_UNUSED  ]
+         10*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~3 ]       OP1[  IS_TMP_VAR ~6 ]
+         11*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~3 ]
+  218    12*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         13*       < 62> RETURN                                                    OP1[  IS_CONST (268435429) null ]
+
+End of function getmaxage
+
+Function setmaxage:
+[+]Function Source Class Name: GuzzleHttp\Cookie\SetCookie
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:void
+
+[*]ArgInfoNo**0**
+[*]name:maxAge
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\guzzlehttp\guzzle\src\Cookie\SetCookie.php
+function name:  setMaxAge
+number of ops:  30
+compiled vars:  !0 = $maxAge
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  225     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  227     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435437) 'GuzzleHttp%5CCookie%5Cis_int' ]
+          3*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          4*       < 60> DO_FCALL                                      0   RES[  IS_VAR $1 ]       OP1[  IS_UNUSED  ]
+          5*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~2 ]       OP1[  IS_VAR $1 ]
+          6*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~2 ]       OP1[  IS_TMP_VAR ~2 ] OP2[ , ->9 ]
+          7*       <123> TYPE_CHECK                                  1020   RES[  IS_TMP_VAR ~3 ]       OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          8*       < 52> BOOL                                              RES[  IS_TMP_VAR ~2 ]       OP1[  IS_TMP_VAR ~3 ]
+          9*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~2 ] OP2[ , ->18 ]
+  228    10*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         11*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435422) 'GuzzleHttp%5CCookie%5Ctrigger_deprecation' ]
+         12*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435423) 'guzzlehttp%2Fguzzle' ] OP2[  IS_UNUSED  ]
+         13*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435422) '7.4' ] OP2[  IS_UNUSED  ]
+         14*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435421) 'Not+passing+an+int+or+null+to+%25s%3A%3A%25s%28%29+is+deprecated+and+will+cause+an+error+in+8.0.' ] OP2[  IS_UNUSED  ]
+         15*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435420) 'GuzzleHttp%5CCookie%5CSetCookie' ] OP2[  IS_UNUSED  ]
+         16*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435419) 'setMaxAge' ] OP2[  IS_UNUSED  ]
+         17*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  231    18*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         19*       <123> TYPE_CHECK                                    2   RES[  IS_TMP_VAR ~7 ]       OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         20*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~7 ] OP2[ , ->23 ]
+         21*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~8 ]       OP1[  IS_CONST (268435412) null ]
+         22*       < 42> JMP                                                       OP1[ ->25 ]
+         23*       < 51> CAST                                          4   RES[  IS_TMP_VAR ~9 ]       OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         24*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~8 ]       OP1[  IS_TMP_VAR ~9 ]
+         25*       < 85> FETCH_OBJ_W                                       RES[  IS_VAR $5 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435402) 'data' ]
+         26*       < 23> ASSIGN_DIM                                                OP1[  IS_VAR $5 ] OP2[ ,  IS_CONST (268435401) 'Max-Age' ]
+         27*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~8 ] OP2[  IS_UNUSED  ]
+  232    28*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         29*       < 62> RETURN                                                    OP1[  IS_CONST (268435397) null ]
+
+End of function setmaxage
+
+Function getexpires:
+[+]Function Source Class Name: GuzzleHttp\Cookie\SetCookie
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\guzzlehttp\guzzle\src\Cookie\SetCookie.php
+function name:  getExpires
+number of ops:  6
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  241     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435451) 'data' ]
+          2*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~1 ]       OP1[  IS_TMP_VAR ~0 ] OP2[ ,  IS_CONST (268435450) 'Expires' ]
+          3*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~1 ]
+  242     4*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          5*       < 62> RETURN                                                    OP1[  IS_CONST (268435445) null ]
+
+End of function getexpires
+
+Function setexpires:
+[+]Function Source Class Name: GuzzleHttp\Cookie\SetCookie
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:void
+
+[*]ArgInfoNo**0**
+[*]name:timestamp
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\guzzlehttp\guzzle\src\Cookie\SetCookie.php
+function name:  setExpires
+number of ops:  47
+compiled vars:  !0 = $timestamp
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  249     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  251     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435432) 'GuzzleHttp%5CCookie%5Cis_int' ]
+          3*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          4*       < 60> DO_FCALL                                      0   RES[  IS_VAR $1 ]       OP1[  IS_UNUSED  ]
+          5*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~2 ]       OP1[  IS_VAR $1 ]
+          6*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~2 ]       OP1[  IS_TMP_VAR ~2 ] OP2[ , ->12 ]
+          7*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435425) 'GuzzleHttp%5CCookie%5Cis_string' ]
+          8*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          9*       < 60> DO_FCALL                                      0   RES[  IS_VAR $3 ]       OP1[  IS_UNUSED  ]
+         10*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~4 ]       OP1[  IS_VAR $3 ]
+         11*       < 52> BOOL                                              RES[  IS_TMP_VAR ~2 ]       OP1[  IS_TMP_VAR ~4 ]
+         12*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~2 ]       OP1[  IS_TMP_VAR ~2 ] OP2[ , ->15 ]
+         13*       <123> TYPE_CHECK                                  1020   RES[  IS_TMP_VAR ~5 ]       OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         14*       < 52> BOOL                                              RES[  IS_TMP_VAR ~2 ]       OP1[  IS_TMP_VAR ~5 ]
+         15*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~2 ] OP2[ , ->24 ]
+  252    16*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         17*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435408) 'GuzzleHttp%5CCookie%5Ctrigger_deprecation' ]
+         18*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435409) 'guzzlehttp%2Fguzzle' ] OP2[  IS_UNUSED  ]
+         19*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435408) '7.4' ] OP2[  IS_UNUSED  ]
+         20*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435407) 'Not+passing+an+int%2C+string+or+null+to+%25s%3A%3A%25s%28%29+is+deprecated+and+will+cause+an+error+in+8.0.' ] OP2[  IS_UNUSED  ]
+         21*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435406) 'GuzzleHttp%5CCookie%5CSetCookie' ] OP2[  IS_UNUSED  ]
+         22*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435405) 'setExpires' ] OP2[  IS_UNUSED  ]
+         23*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  255    24*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         25*       <123> TYPE_CHECK                                    2   RES[  IS_TMP_VAR ~9 ]       OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         26*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~9 ] OP2[ , ->29 ]
+         27*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~10 ]      OP1[  IS_CONST (268435398) null ]
+         28*       < 42> JMP                                                       OP1[ ->42 ]
+         29*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435395) 'is_numeric' ]
+         30*       <117> SEND_VAR                                                  OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         31*       < 60> DO_FCALL                                      0   RES[  IS_VAR $11 ]      OP1[  IS_UNUSED  ]
+         32*       < 43> JMPZ                                                      OP1[  IS_VAR $11 ] OP2[ , ->36 ]
+         33*       < 51> CAST                                          4   RES[  IS_TMP_VAR ~12 ]      OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         34*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~13 ]      OP1[  IS_TMP_VAR ~12 ]
+         35*       < 42> JMP                                                       OP1[ ->41 ]
+         36*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435382) 'strtotime' ]
+         37*       < 51> CAST                                          6   RES[  IS_TMP_VAR ~14 ]      OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         38*       < 65> SEND_VAL                                                  OP1[  IS_TMP_VAR ~14 ]
+         39*       < 60> DO_FCALL                                      0   RES[  IS_VAR $15 ]      OP1[  IS_UNUSED  ]
+         40*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~13 ]      OP1[  IS_VAR $15 ]
+         41*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~10 ]      OP1[  IS_TMP_VAR ~13 ]
+         42*       < 85> FETCH_OBJ_W                                       RES[  IS_VAR $7 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435366) 'data' ]
+         43*       < 23> ASSIGN_DIM                                                OP1[  IS_VAR $7 ] OP2[ ,  IS_CONST (268435365) 'Expires' ]
+         44*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~10 ] OP2[  IS_UNUSED  ]
+  256    45*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         46*       < 62> RETURN                                                    OP1[  IS_CONST (268435363) null ]
+
+End of function setexpires
+
+Function getsecure:
+[+]Function Source Class Name: GuzzleHttp\Cookie\SetCookie
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\guzzlehttp\guzzle\src\Cookie\SetCookie.php
+function name:  getSecure
+number of ops:  6
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  265     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435451) 'data' ]
+          2*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~1 ]       OP1[  IS_TMP_VAR ~0 ] OP2[ ,  IS_CONST (268435450) 'Secure' ]
+          3*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~1 ]
+  266     4*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          5*       < 62> RETURN                                                    OP1[  IS_CONST (268435445) null ]
+
+End of function getsecure
+
+Function setsecure:
+[+]Function Source Class Name: GuzzleHttp\Cookie\SetCookie
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:void
+
+[*]ArgInfoNo**0**
+[*]name:secure
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\guzzlehttp\guzzle\src\Cookie\SetCookie.php
+function name:  setSecure
+number of ops:  22
+compiled vars:  !0 = $secure
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  273     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  275     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435438) 'GuzzleHttp%5CCookie%5Cis_bool' ]
+          3*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          4*       < 60> DO_FCALL                                      0   RES[  IS_VAR $1 ]       OP1[  IS_UNUSED  ]
+          5*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~2 ]       OP1[  IS_VAR $1 ]
+          6*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~2 ] OP2[ , ->15 ]
+  276     7*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          8*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435429) 'GuzzleHttp%5CCookie%5Ctrigger_deprecation' ]
+          9*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435430) 'guzzlehttp%2Fguzzle' ] OP2[  IS_UNUSED  ]
+         10*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435429) '7.4' ] OP2[  IS_UNUSED  ]
+         11*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435428) 'Not+passing+a+bool+to+%25s%3A%3A%25s%28%29+is+deprecated+and+will+cause+an+error+in+8.0.' ] OP2[  IS_UNUSED  ]
+         12*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435427) 'GuzzleHttp%5CCookie%5CSetCookie' ] OP2[  IS_UNUSED  ]
+         13*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435426) 'setSecure' ] OP2[  IS_UNUSED  ]
+         14*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  279    15*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         16*       < 52> BOOL                                              RES[  IS_TMP_VAR ~6 ]       OP1[  IS_CV !0 ]
+         17*       < 85> FETCH_OBJ_W                                       RES[  IS_VAR $4 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435419) 'data' ]
+         18*       < 23> ASSIGN_DIM                                                OP1[  IS_VAR $4 ] OP2[ ,  IS_CONST (268435418) 'Secure' ]
+         19*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~6 ] OP2[  IS_UNUSED  ]
+  280    20*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         21*       < 62> RETURN                                                    OP1[  IS_CONST (268435413) null ]
+
+End of function setsecure
+
+Function getdiscard:
+[+]Function Source Class Name: GuzzleHttp\Cookie\SetCookie
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\guzzlehttp\guzzle\src\Cookie\SetCookie.php
+function name:  getDiscard
+number of ops:  6
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  289     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435451) 'data' ]
+          2*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~1 ]       OP1[  IS_TMP_VAR ~0 ] OP2[ ,  IS_CONST (268435450) 'Discard' ]
+          3*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~1 ]
+  290     4*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          5*       < 62> RETURN                                                    OP1[  IS_CONST (268435445) null ]
+
+End of function getdiscard
+
+Function setdiscard:
+[+]Function Source Class Name: GuzzleHttp\Cookie\SetCookie
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:void
+
+[*]ArgInfoNo**0**
+[*]name:discard
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\guzzlehttp\guzzle\src\Cookie\SetCookie.php
+function name:  setDiscard
+number of ops:  22
+compiled vars:  !0 = $discard
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  297     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  299     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435438) 'GuzzleHttp%5CCookie%5Cis_bool' ]
+          3*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          4*       < 60> DO_FCALL                                      0   RES[  IS_VAR $1 ]       OP1[  IS_UNUSED  ]
+          5*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~2 ]       OP1[  IS_VAR $1 ]
+          6*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~2 ] OP2[ , ->15 ]
+  300     7*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          8*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435429) 'GuzzleHttp%5CCookie%5Ctrigger_deprecation' ]
+          9*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435430) 'guzzlehttp%2Fguzzle' ] OP2[  IS_UNUSED  ]
+         10*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435429) '7.4' ] OP2[  IS_UNUSED  ]
+         11*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435428) 'Not+passing+a+bool+to+%25s%3A%3A%25s%28%29+is+deprecated+and+will+cause+an+error+in+8.0.' ] OP2[  IS_UNUSED  ]
+         12*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435427) 'GuzzleHttp%5CCookie%5CSetCookie' ] OP2[  IS_UNUSED  ]
+         13*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435426) 'setDiscard' ] OP2[  IS_UNUSED  ]
+         14*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  303    15*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         16*       < 52> BOOL                                              RES[  IS_TMP_VAR ~6 ]       OP1[  IS_CV !0 ]
+         17*       < 85> FETCH_OBJ_W                                       RES[  IS_VAR $4 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435419) 'data' ]
+         18*       < 23> ASSIGN_DIM                                                OP1[  IS_VAR $4 ] OP2[ ,  IS_CONST (268435418) 'Discard' ]
+         19*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~6 ] OP2[  IS_UNUSED  ]
+  304    20*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         21*       < 62> RETURN                                                    OP1[  IS_CONST (268435413) null ]
+
+End of function setdiscard
+
+Function gethttponly:
+[+]Function Source Class Name: GuzzleHttp\Cookie\SetCookie
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\guzzlehttp\guzzle\src\Cookie\SetCookie.php
+function name:  getHttpOnly
+number of ops:  6
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  313     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435451) 'data' ]
+          2*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~1 ]       OP1[  IS_TMP_VAR ~0 ] OP2[ ,  IS_CONST (268435450) 'HttpOnly' ]
+          3*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~1 ]
+  314     4*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          5*       < 62> RETURN                                                    OP1[  IS_CONST (268435445) null ]
+
+End of function gethttponly
+
+Function sethttponly:
+[+]Function Source Class Name: GuzzleHttp\Cookie\SetCookie
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:void
+
+[*]ArgInfoNo**0**
+[*]name:httpOnly
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\guzzlehttp\guzzle\src\Cookie\SetCookie.php
+function name:  setHttpOnly
+number of ops:  22
+compiled vars:  !0 = $httpOnly
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  321     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  323     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435438) 'GuzzleHttp%5CCookie%5Cis_bool' ]
+          3*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          4*       < 60> DO_FCALL                                      0   RES[  IS_VAR $1 ]       OP1[  IS_UNUSED  ]
+          5*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~2 ]       OP1[  IS_VAR $1 ]
+          6*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~2 ] OP2[ , ->15 ]
+  324     7*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          8*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435429) 'GuzzleHttp%5CCookie%5Ctrigger_deprecation' ]
+          9*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435430) 'guzzlehttp%2Fguzzle' ] OP2[  IS_UNUSED  ]
+         10*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435429) '7.4' ] OP2[  IS_UNUSED  ]
+         11*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435428) 'Not+passing+a+bool+to+%25s%3A%3A%25s%28%29+is+deprecated+and+will+cause+an+error+in+8.0.' ] OP2[  IS_UNUSED  ]
+         12*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435427) 'GuzzleHttp%5CCookie%5CSetCookie' ] OP2[  IS_UNUSED  ]
+         13*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435426) 'setHttpOnly' ] OP2[  IS_UNUSED  ]
+         14*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  327    15*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         16*       < 52> BOOL                                              RES[  IS_TMP_VAR ~6 ]       OP1[  IS_CV !0 ]
+         17*       < 85> FETCH_OBJ_W                                       RES[  IS_VAR $4 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435419) 'data' ]
+         18*       < 23> ASSIGN_DIM                                                OP1[  IS_VAR $4 ] OP2[ ,  IS_CONST (268435418) 'HttpOnly' ]
+         19*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~6 ] OP2[  IS_UNUSED  ]
+  328    20*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         21*       < 62> RETURN                                                    OP1[  IS_CONST (268435413) null ]
+
+End of function sethttponly
+
+Function matchespath:
+[+]Function Source Class Name: GuzzleHttp\Cookie\SetCookie
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:bool
+
+[*]ArgInfoNo**0**
+[*]name:requestPath
+[*]type:string
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\guzzlehttp\guzzle\src\Cookie\SetCookie.php
+function name:  matchesPath
+number of ops:  45
+compiled vars:  !0 = $requestPath, !1 = $cookiePath
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  345     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  347     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435436) 'getPath' ]
+          3*       < 60> DO_FCALL                                      0   RES[  IS_VAR $2 ]       OP1[  IS_UNUSED  ]
+          4*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_VAR $2 ]
+  350     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~4 ]       OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435430) '%2F' ]
+          7*       < 47> JMPNZ_EX                                          RES[  IS_TMP_VAR ~4 ]       OP1[  IS_TMP_VAR ~4 ] OP2[ , ->10 ]
+          8*       < 18> IS_EQUAL                                          RES[  IS_TMP_VAR ~5 ]       OP1[  IS_CV !1 ] OP2[ ,  IS_CV !0 ]
+          9*       < 52> BOOL                                              RES[  IS_TMP_VAR ~4 ]       OP1[  IS_TMP_VAR ~5 ]
+         10*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~4 ] OP2[ , ->13 ]
+  351    11*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         12*       < 62> RETURN                                                    OP1[  IS_CONST (268435419) <true> ]
+  355    13*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         14*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435416) 'strpos' ]
+         15*       <117> SEND_VAR                                                  OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         16*       <117> SEND_VAR                                                  OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         17*       < 60> DO_FCALL                                      0   RES[  IS_VAR $6 ]       OP1[  IS_UNUSED  ]
+         18*       < 17> IS_NOT_IDENTICAL                                  RES[  IS_TMP_VAR ~7 ]       OP1[  IS_VAR $6 ] OP2[ ,  IS_CONST (268435409) 0 ]
+         19*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~7 ] OP2[ , ->22 ]
+  356    20*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         21*       < 62> RETURN                                                    OP1[  IS_CONST (268435404) <false> ]
+  360    22*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         23*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435401) 'substr' ]
+         24*       <117> SEND_VAR                                                  OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         25*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435398) -1 ]
+         26*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435397) 1 ]
+         27*       < 60> DO_FCALL                                      0   RES[  IS_VAR $8 ]       OP1[  IS_UNUSED  ]
+         28*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~9 ]       OP1[  IS_VAR $8 ] OP2[ ,  IS_CONST (268435394) '%2F' ]
+         29*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~9 ] OP2[ , ->32 ]
+  361    30*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         31*       < 62> RETURN                                                    OP1[  IS_CONST (268435389) <true> ]
+  365    32*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         33*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435386) 'substr' ]
+         34*       <117> SEND_VAR                                                  OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         35*       <121> STRLEN                                            RES[  IS_TMP_VAR ~10 ]      OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         36*       < 65> SEND_VAL                                                  OP1[  IS_TMP_VAR ~10 ]
+         37*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435379) 1 ]
+         38*       < 60> DO_FCALL                                      0   RES[  IS_VAR $11 ]      OP1[  IS_UNUSED  ]
+         39*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~12 ]      OP1[  IS_VAR $11 ] OP2[ ,  IS_CONST (268435376) '%2F' ]
+         40*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_TMP_VAR ~12 ] OP2[  IS_UNUSED  ]
+         41*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~12 ]
+  366    42*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         43*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         44*       < 62> RETURN                                                    OP1[  IS_CONST (268435367) null ]
+
+End of function matchespath
+
+Function matchesdomain:
+[+]Function Source Class Name: GuzzleHttp\Cookie\SetCookie
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:bool
+
+[*]ArgInfoNo**0**
+[*]name:domain
+[*]type:string
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\guzzlehttp\guzzle\src\Cookie\SetCookie.php
+function name:  matchesDomain
+number of ops:  57
+compiled vars:  !0 = $domain, !1 = $cookieDomain
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  373     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  375     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435434) 'getDomain' ]
+          3*       < 60> DO_FCALL                                      0   RES[  IS_VAR $2 ]       OP1[  IS_UNUSED  ]
+          4*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_VAR $2 ]
+  376     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       <123> TYPE_CHECK                                    2   RES[  IS_TMP_VAR ~4 ]       OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+          7*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~4 ] OP2[ , ->10 ]
+  377     8*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          9*       < 62> RETURN                                                    OP1[  IS_CONST (268435422) <true> ]
+  382    10*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         11*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435419) 'ltrim' ]
+         12*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435418) 'strtolower' ]
+         13*       <117> SEND_VAR                                                  OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         14*       < 60> DO_FCALL                                      0   RES[  IS_VAR $5 ]       OP1[  IS_UNUSED  ]
+         15*       <117> SEND_VAR                                                  OP1[  IS_VAR $5 ] OP2[  IS_UNUSED  ]
+         16*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435411) '.' ]
+         17*       < 60> DO_FCALL                                      0   RES[  IS_VAR $6 ]       OP1[  IS_UNUSED  ]
+         18*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_VAR $6 ]
+  384    19*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         20*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435404) 'strtolower' ]
+         21*       <117> SEND_VAR                                                  OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         22*       < 60> DO_FCALL                                      0   RES[  IS_VAR $8 ]       OP1[  IS_UNUSED  ]
+         23*       < 22> ASSIGN                                                    OP1[  IS_CV !0 ] OP2[ ,  IS_VAR $8 ]
+  387    24*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         25*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~10 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435395) '' ]
+         26*       < 47> JMPNZ_EX                                          RES[  IS_TMP_VAR ~10 ]      OP1[  IS_TMP_VAR ~10 ] OP2[ , ->29 ]
+         27*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~11 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CV !1 ]
+         28*       < 52> BOOL                                              RES[  IS_TMP_VAR ~10 ]      OP1[  IS_TMP_VAR ~11 ]
+         29*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~10 ] OP2[ , ->32 ]
+  388    30*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         31*       < 62> RETURN                                                    OP1[  IS_CONST (268435384) <true> ]
+  393    32*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         33*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435381) 'filter_var' ]
+         34*       <117> SEND_VAR                                                  OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         35*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435378) 275 ]
+         36*       < 60> DO_FCALL                                      0   RES[  IS_VAR $12 ]      OP1[  IS_UNUSED  ]
+         37*       < 43> JMPZ                                                      OP1[  IS_VAR $12 ] OP2[ , ->40 ]
+  394    38*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         39*       < 62> RETURN                                                    OP1[  IS_CONST (268435371) <false> ]
+  397    40*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         41*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435368) 'preg_match' ]
+         42*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435367) 'preg_quote' ]
+         43*       <117> SEND_VAR                                                  OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         44*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435364) '%2F' ]
+         45*       < 60> DO_FCALL                                      0   RES[  IS_VAR $13 ]      OP1[  IS_UNUSED  ]
+         46*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~14 ]      OP1[  IS_CONST (268435361) '%2F%5C.' ] OP2[ ,  IS_VAR $13 ]
+         47*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~15 ]      OP1[  IS_TMP_VAR ~14 ] OP2[ ,  IS_CONST (268435360) '%24%2F' ]
+         48*       < 65> SEND_VAL                                                  OP1[  IS_TMP_VAR ~15 ]
+         49*       <117> SEND_VAR                                                  OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         50*       < 60> DO_FCALL                                      0   RES[  IS_VAR $16 ]      OP1[  IS_UNUSED  ]
+         51*       < 52> BOOL                                              RES[  IS_TMP_VAR ~17 ]      OP1[  IS_VAR $16 ]
+         52*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_TMP_VAR ~17 ] OP2[  IS_UNUSED  ]
+         53*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~17 ]
+  398    54*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         55*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         56*       < 62> RETURN                                                    OP1[  IS_CONST (268435343) null ]
+
+End of function matchesdomain
+
+Function isexpired:
+[+]Function Source Class Name: GuzzleHttp\Cookie\SetCookie
+[*]Start of arg_info extract:
+[*]arg_info num_args:0
+[*]Function return type:bool
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\guzzlehttp\guzzle\src\Cookie\SetCookie.php
+function name:  isExpired
+number of ops:  16
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  405     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435448) 'getExpires' ]
+          2*       < 60> DO_FCALL                                      0   RES[  IS_VAR $0 ]       OP1[  IS_UNUSED  ]
+          3*       <123> TYPE_CHECK                                  1020   RES[  IS_TMP_VAR ~1 ]       OP1[  IS_VAR $0 ] OP2[  IS_UNUSED  ]
+          4*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~1 ]       OP1[  IS_TMP_VAR ~1 ] OP2[ , ->11 ]
+          5*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435442) 'time' ]
+          6*       < 60> DO_FCALL                                      0   RES[  IS_VAR $2 ]       OP1[  IS_UNUSED  ]
+          7*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435439) 'getExpires' ]
+          8*       < 60> DO_FCALL                                      0   RES[  IS_VAR $3 ]       OP1[  IS_UNUSED  ]
+          9*       < 20> IS_SMALLER                                        RES[  IS_TMP_VAR ~4 ]       OP1[  IS_VAR $3 ] OP2[ ,  IS_VAR $2 ]
+         10*       < 52> BOOL                                              RES[  IS_TMP_VAR ~1 ]       OP1[  IS_TMP_VAR ~4 ]
+         11*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_TMP_VAR ~1 ] OP2[  IS_UNUSED  ]
+         12*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~1 ]
+  406    13*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         14*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         15*       < 62> RETURN                                                    OP1[  IS_CONST (268435425) null ]
+
+End of function isexpired
+
+Function validate:
+[+]Function Source Class Name: GuzzleHttp\Cookie\SetCookie
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\guzzlehttp\guzzle\src\Cookie\SetCookie.php
+function name:  validate
+number of ops:  42
+compiled vars:  !0 = $name, !1 = $value, !2 = $domain
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  415     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435438) 'getName' ]
+          2*       < 60> DO_FCALL                                      0   RES[  IS_VAR $3 ]       OP1[  IS_UNUSED  ]
+          3*       < 22> ASSIGN                                                    OP1[  IS_CV !0 ] OP2[ ,  IS_VAR $3 ]
+  416     4*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          5*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~5 ]       OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435432) '' ]
+          6*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~5 ] OP2[ , ->9 ]
+  417     7*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          8*       < 62> RETURN                                                    OP1[  IS_CONST (268435427) 'The+cookie+name+must+not+be+empty' ]
+  421     9*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         10*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435424) 'preg_match' ]
+  422    11*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435423) '%2F%5B%5Cx00-%5Cx20%5Cx22%5Cx28-%5Cx29%5Cx2c%5Cx2f%5Cx3a-%5Cx40%5Cx5c%5Cx7b%5Cx7d%5Cx7f%5D%2F' ]
+  423    12*       <117> SEND_VAR                                                  OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         13*       < 60> DO_FCALL                                      0   RES[  IS_VAR $6 ]       OP1[  IS_UNUSED  ]
+         14*       < 43> JMPZ                                                      OP1[  IS_VAR $6 ] OP2[ , ->17 ]
+  427    15*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         16*       < 62> RETURN                                                    OP1[  IS_CONST (268435414) 'Cookie+name+must+not+contain+invalid+characters%3A+ASCII+Control+characters+%280-31%3B127%29%2C+space%2C+tab+and+the+following+characters%3A+%28%29%3C%3E%40%2C%3B%3A%5C%22%2F%3F%3D%7B%7D' ]
+  432    17*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         18*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435411) 'getValue' ]
+         19*       < 60> DO_FCALL                                      0   RES[  IS_VAR $7 ]       OP1[  IS_UNUSED  ]
+         20*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_VAR $7 ]
+  433    21*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         22*       <123> TYPE_CHECK                                    2   RES[  IS_TMP_VAR ~9 ]       OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         23*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~9 ] OP2[ , ->26 ]
+  434    24*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         25*       < 62> RETURN                                                    OP1[  IS_CONST (268435399) 'The+cookie+value+must+not+be+empty' ]
+  439    26*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         27*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435396) 'getDomain' ]
+         28*       < 60> DO_FCALL                                      0   RES[  IS_VAR $10 ]      OP1[  IS_UNUSED  ]
+         29*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_VAR $10 ]
+  440    30*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         31*       <123> TYPE_CHECK                                    2   RES[  IS_TMP_VAR ~12 ]      OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         32*       < 47> JMPNZ_EX                                          RES[  IS_TMP_VAR ~12 ]      OP1[  IS_TMP_VAR ~12 ] OP2[ , ->35 ]
+         33*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~13 ]      OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435386) '' ]
+         34*       < 52> BOOL                                              RES[  IS_TMP_VAR ~12 ]      OP1[  IS_TMP_VAR ~13 ]
+         35*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~12 ] OP2[ , ->38 ]
+  441    36*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         37*       < 62> RETURN                                                    OP1[  IS_CONST (268435379) 'The+cookie+domain+must+not+be+empty' ]
+  444    38*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         39*       < 62> RETURN                                                    OP1[  IS_CONST (268435376) <true> ]
+  445    40*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         41*       < 62> RETURN                                                    OP1[  IS_CONST (268435373) null ]
+
+End of function validate
+
+End of class GuzzleHttp\Cookie\SetCookie.
+

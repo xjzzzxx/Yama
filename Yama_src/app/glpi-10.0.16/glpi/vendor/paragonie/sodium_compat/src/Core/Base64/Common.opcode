@@ -1,0 +1,591 @@
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\paragonie\sodium_compat\src\Core\Base64\Common.php
+function name:  (null)
+number of ops:  1
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  214     0*       < 62> RETURN                                                    OP1[  IS_CONST (268435455) 1 ]
+
+Class ParagonIE_Sodium_Core_Base64_Common:
+[+]Class Parent Name: NULL
+End Trait extract
+Start Properties extract:
+Properties: NULL
+End Properties extract
+
+Function encode:
+[+]Function Source Class Name: ParagonIE_Sodium_Core_Base64_Common
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:src
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\paragonie\sodium_compat\src\Core\Base64\Common.php
+function name:  encode
+number of ops:  9
+compiled vars:  !0 = $src
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   24     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+   26     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       <113> INIT_STATIC_METHOD_CALL      self                         OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435448) 'doEncode' ]
+          3*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          4*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435446) <true> ] OP2[  IS_UNUSED  ]
+          5*       < 60> DO_FCALL                                      0   RES[  IS_VAR $1 ]       OP1[  IS_UNUSED  ]
+          6*       < 62> RETURN                                                    OP1[  IS_VAR $1 ]
+   27     7*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          8*       < 62> RETURN                                                    OP1[  IS_CONST (268435439) null ]
+
+End of function encode
+
+Function encodeunpadded:
+[+]Function Source Class Name: ParagonIE_Sodium_Core_Base64_Common
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:src
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\paragonie\sodium_compat\src\Core\Base64\Common.php
+function name:  encodeUnpadded
+number of ops:  9
+compiled vars:  !0 = $src
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   38     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+   40     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       <113> INIT_STATIC_METHOD_CALL      self                         OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435448) 'doEncode' ]
+          3*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          4*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435446) <false> ] OP2[  IS_UNUSED  ]
+          5*       < 60> DO_FCALL                                      0   RES[  IS_VAR $1 ]       OP1[  IS_UNUSED  ]
+          6*       < 62> RETURN                                                    OP1[  IS_VAR $1 ]
+   41     7*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          8*       < 62> RETURN                                                    OP1[  IS_CONST (268435439) null ]
+
+End of function encodeunpadded
+
+Function doencode:
+[+]Function Source Class Name: ParagonIE_Sodium_Core_Base64_Common
+[*]Start of arg_info extract:
+[*]arg_info num_args:2
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:src
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:pad
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\paragonie\sodium_compat\src\Core\Base64\Common.php
+function name:  doEncode
+number of ops:  134
+compiled vars:  !0 = $src, !1 = $pad, !2 = $dest, !3 = $srcLen, !4 = $i, !5 = $chunk, !6 = $b0, !7 = $b1, !8 = $b2
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   49     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 64> RECV_INIT                                         RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435388) <true> ]
+   51     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435385) '' ]
+   52     4*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          5*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435382) 'ParagonIE_Sodium_Core_Util' ] OP2[ ,  IS_CONST (268435384) 'strlen' ]
+          6*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          7*       < 60> DO_FCALL                                      0   RES[  IS_VAR $10 ]      OP1[  IS_UNUSED  ]
+          8*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_VAR $10 ]
+   54     9*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         10*       < 22> ASSIGN                                                    OP1[  IS_CV !4 ] OP2[ ,  IS_CONST (268435376) 0 ]
+         11*       < 42> JMP                                                       OP1[ ->60 ]
+   56    12*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         13*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435371) 'unpack' ]
+         14*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435370) 'C%2A' ]
+         15*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435369) 'ParagonIE_Sodium_Core_Util' ] OP2[ ,  IS_CONST (268435371) 'substr' ]
+         16*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         17*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !4 ] OP2[  IS_UNUSED  ]
+         18*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435367) 3 ] OP2[  IS_UNUSED  ]
+         19*       < 60> DO_FCALL                                      0   RES[  IS_VAR $13 ]      OP1[  IS_UNUSED  ]
+         20*       <117> SEND_VAR                                                  OP1[  IS_VAR $13 ] OP2[  IS_UNUSED  ]
+         21*       < 60> DO_FCALL                                      0   RES[  IS_VAR $14 ]      OP1[  IS_UNUSED  ]
+         22*       < 22> ASSIGN                                                    OP1[  IS_CV !5 ] OP2[ ,  IS_VAR $14 ]
+   57    23*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         24*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~16 ]      OP1[  IS_CV !5 ] OP2[ ,  IS_CONST (268435356) 1 ]
+         25*       < 22> ASSIGN                                                    OP1[  IS_CV !6 ] OP2[ ,  IS_TMP_VAR ~16 ]
+   58    26*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         27*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~18 ]      OP1[  IS_CV !5 ] OP2[ ,  IS_CONST (268435351) 2 ]
+         28*       < 22> ASSIGN                                                    OP1[  IS_CV !7 ] OP2[ ,  IS_TMP_VAR ~18 ]
+   59    29*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         30*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~20 ]      OP1[  IS_CV !5 ] OP2[ ,  IS_CONST (268435346) 3 ]
+         31*       < 22> ASSIGN                                                    OP1[  IS_CV !8 ] OP2[ ,  IS_TMP_VAR ~20 ]
+   62    32*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         33*       <113> INIT_STATIC_METHOD_CALL      self                         OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435341) 'encode6Bits' ]
+         34*       <  7> SR                                                RES[  IS_TMP_VAR ~22 ]      OP1[  IS_CV !6 ] OP2[ ,  IS_CONST (268435341) 2 ]
+         35*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~22 ] OP2[  IS_UNUSED  ]
+         36*       < 60> DO_FCALL                                      0   RES[  IS_VAR $23 ]      OP1[  IS_UNUSED  ]
+   63    37*       <113> INIT_STATIC_METHOD_CALL      self                         OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435336) 'encode6Bits' ]
+         38*       <  6> SL                                                RES[  IS_TMP_VAR ~24 ]      OP1[  IS_CV !6 ] OP2[ ,  IS_CONST (268435336) 4 ]
+         39*       <  7> SR                                                RES[  IS_TMP_VAR ~25 ]      OP1[  IS_CV !7 ] OP2[ ,  IS_CONST (268435335) 4 ]
+         40*       <  9> BW_OR                                             RES[  IS_TMP_VAR ~26 ]      OP1[  IS_TMP_VAR ~24 ] OP2[ ,  IS_TMP_VAR ~25 ]
+         41*       < 10> BW_AND                                            RES[  IS_TMP_VAR ~27 ]      OP1[  IS_TMP_VAR ~26 ] OP2[ ,  IS_CONST (268435332) 63 ]
+         42*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~27 ] OP2[  IS_UNUSED  ]
+         43*       < 60> DO_FCALL                                      0   RES[  IS_VAR $28 ]      OP1[  IS_UNUSED  ]
+         44*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~29 ]      OP1[  IS_VAR $23 ] OP2[ ,  IS_VAR $28 ]
+   64    45*       <113> INIT_STATIC_METHOD_CALL      self                         OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435325) 'encode6Bits' ]
+         46*       <  6> SL                                                RES[  IS_TMP_VAR ~30 ]      OP1[  IS_CV !7 ] OP2[ ,  IS_CONST (268435325) 2 ]
+         47*       <  7> SR                                                RES[  IS_TMP_VAR ~31 ]      OP1[  IS_CV !8 ] OP2[ ,  IS_CONST (268435324) 6 ]
+         48*       <  9> BW_OR                                             RES[  IS_TMP_VAR ~32 ]      OP1[  IS_TMP_VAR ~30 ] OP2[ ,  IS_TMP_VAR ~31 ]
+         49*       < 10> BW_AND                                            RES[  IS_TMP_VAR ~33 ]      OP1[  IS_TMP_VAR ~32 ] OP2[ ,  IS_CONST (268435321) 63 ]
+         50*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~33 ] OP2[  IS_UNUSED  ]
+         51*       < 60> DO_FCALL                                      0   RES[  IS_VAR $34 ]      OP1[  IS_UNUSED  ]
+         52*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~35 ]      OP1[  IS_TMP_VAR ~29 ] OP2[ ,  IS_VAR $34 ]
+   65    53*       <113> INIT_STATIC_METHOD_CALL      self                         OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435314) 'encode6Bits' ]
+         54*       < 10> BW_AND                                            RES[  IS_TMP_VAR ~36 ]      OP1[  IS_CV !8 ] OP2[ ,  IS_CONST (268435314) 63 ]
+         55*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~36 ] OP2[  IS_UNUSED  ]
+         56*       < 60> DO_FCALL                                      0   RES[  IS_VAR $37 ]      OP1[  IS_UNUSED  ]
+         57*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~38 ]      OP1[  IS_TMP_VAR ~35 ] OP2[ ,  IS_VAR $37 ]
+         58*       < 26> ASSIGN_OP                    .=               8           OP1[  IS_CV !2 ] OP2[ ,  IS_TMP_VAR ~38 ]
+   54    59*       < 26> ASSIGN_OP                    +=               1           OP1[  IS_CV !4 ] OP2[ ,  IS_CONST (268435305) 3 ]
+         60*       <  1> ADD                                               RES[  IS_TMP_VAR ~41 ]      OP1[  IS_CV !4 ] OP2[ ,  IS_CONST (268435304) 3 ]
+         61*       < 21> IS_SMALLER_OR_EQUAL                               RES[  IS_TMP_VAR ~42 ]      OP1[  IS_TMP_VAR ~41 ] OP2[ ,  IS_CV !3 ]
+         62*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         63*       < 44> JMPNZ                                                     OP1[  IS_TMP_VAR ~42 ] OP2[ , ->12 ]
+   68    64*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         65*       < 20> IS_SMALLER                                        RES[  IS_TMP_VAR ~43 ]      OP1[  IS_CV !4 ] OP2[ ,  IS_CV !3 ]
+         66*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~43 ] OP2[ , ->130 ]
+   70    67*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         68*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435289) 'unpack' ]
+         69*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435288) 'C%2A' ]
+         70*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435287) 'ParagonIE_Sodium_Core_Util' ] OP2[ ,  IS_CONST (268435289) 'substr' ]
+         71*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         72*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !4 ] OP2[  IS_UNUSED  ]
+         73*       <  2> SUB                                               RES[  IS_TMP_VAR ~44 ]      OP1[  IS_CV !3 ] OP2[ ,  IS_CV !4 ]
+         74*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~44 ] OP2[  IS_UNUSED  ]
+         75*       < 60> DO_FCALL                                      0   RES[  IS_VAR $45 ]      OP1[  IS_UNUSED  ]
+         76*       <117> SEND_VAR                                                  OP1[  IS_VAR $45 ] OP2[  IS_UNUSED  ]
+         77*       < 60> DO_FCALL                                      0   RES[  IS_VAR $46 ]      OP1[  IS_UNUSED  ]
+         78*       < 22> ASSIGN                                                    OP1[  IS_CV !5 ] OP2[ ,  IS_VAR $46 ]
+   71    79*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         80*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~48 ]      OP1[  IS_CV !5 ] OP2[ ,  IS_CONST (268435271) 1 ]
+         81*       < 22> ASSIGN                                                    OP1[  IS_CV !6 ] OP2[ ,  IS_TMP_VAR ~48 ]
+   72    82*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         83*       <  1> ADD                                               RES[  IS_TMP_VAR ~50 ]      OP1[  IS_CV !4 ] OP2[ ,  IS_CONST (268435266) 1 ]
+         84*       < 20> IS_SMALLER                                        RES[  IS_TMP_VAR ~51 ]      OP1[  IS_TMP_VAR ~50 ] OP2[ ,  IS_CV !3 ]
+         85*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~51 ] OP2[ , ->114 ]
+   73    86*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         87*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~52 ]      OP1[  IS_CV !5 ] OP2[ ,  IS_CONST (268435259) 2 ]
+         88*       < 22> ASSIGN                                                    OP1[  IS_CV !7 ] OP2[ ,  IS_TMP_VAR ~52 ]
+   75    89*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         90*       <113> INIT_STATIC_METHOD_CALL      self                         OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435254) 'encode6Bits' ]
+         91*       <  7> SR                                                RES[  IS_TMP_VAR ~54 ]      OP1[  IS_CV !6 ] OP2[ ,  IS_CONST (268435254) 2 ]
+         92*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~54 ] OP2[  IS_UNUSED  ]
+         93*       < 60> DO_FCALL                                      0   RES[  IS_VAR $55 ]      OP1[  IS_UNUSED  ]
+   76    94*       <113> INIT_STATIC_METHOD_CALL      self                         OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435249) 'encode6Bits' ]
+         95*       <  6> SL                                                RES[  IS_TMP_VAR ~56 ]      OP1[  IS_CV !6 ] OP2[ ,  IS_CONST (268435249) 4 ]
+         96*       <  7> SR                                                RES[  IS_TMP_VAR ~57 ]      OP1[  IS_CV !7 ] OP2[ ,  IS_CONST (268435248) 4 ]
+         97*       <  9> BW_OR                                             RES[  IS_TMP_VAR ~58 ]      OP1[  IS_TMP_VAR ~56 ] OP2[ ,  IS_TMP_VAR ~57 ]
+         98*       < 10> BW_AND                                            RES[  IS_TMP_VAR ~59 ]      OP1[  IS_TMP_VAR ~58 ] OP2[ ,  IS_CONST (268435245) 63 ]
+         99*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~59 ] OP2[  IS_UNUSED  ]
+        100*       < 60> DO_FCALL                                      0   RES[  IS_VAR $60 ]      OP1[  IS_UNUSED  ]
+        101*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~61 ]      OP1[  IS_VAR $55 ] OP2[ ,  IS_VAR $60 ]
+   77   102*       <113> INIT_STATIC_METHOD_CALL      self                         OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435238) 'encode6Bits' ]
+        103*       <  6> SL                                                RES[  IS_TMP_VAR ~62 ]      OP1[  IS_CV !7 ] OP2[ ,  IS_CONST (268435238) 2 ]
+        104*       < 10> BW_AND                                            RES[  IS_TMP_VAR ~63 ]      OP1[  IS_TMP_VAR ~62 ] OP2[ ,  IS_CONST (268435237) 63 ]
+        105*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~63 ] OP2[  IS_UNUSED  ]
+        106*       < 60> DO_FCALL                                      0   RES[  IS_VAR $64 ]      OP1[  IS_UNUSED  ]
+        107*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~65 ]      OP1[  IS_TMP_VAR ~61 ] OP2[ ,  IS_VAR $64 ]
+        108*       < 26> ASSIGN_OP                    .=               8           OP1[  IS_CV !2 ] OP2[ ,  IS_TMP_VAR ~65 ]
+   78   109*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        110*       < 43> JMPZ                                                      OP1[  IS_CV !1 ] OP2[ , ->113 ]
+   79   111*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        112*       < 26> ASSIGN_OP                    .=               8           OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435222) '%3D' ]
+        113*       < 42> JMP                                                       OP1[ ->130 ]
+   83   114*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        115*       <113> INIT_STATIC_METHOD_CALL      self                         OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435217) 'encode6Bits' ]
+        116*       <  7> SR                                                RES[  IS_TMP_VAR ~68 ]      OP1[  IS_CV !6 ] OP2[ ,  IS_CONST (268435217) 2 ]
+        117*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~68 ] OP2[  IS_UNUSED  ]
+        118*       < 60> DO_FCALL                                      0   RES[  IS_VAR $69 ]      OP1[  IS_UNUSED  ]
+   84   119*       <113> INIT_STATIC_METHOD_CALL      self                         OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435212) 'encode6Bits' ]
+        120*       <  6> SL                                                RES[  IS_TMP_VAR ~70 ]      OP1[  IS_CV !6 ] OP2[ ,  IS_CONST (268435212) 4 ]
+        121*       < 10> BW_AND                                            RES[  IS_TMP_VAR ~71 ]      OP1[  IS_TMP_VAR ~70 ] OP2[ ,  IS_CONST (268435211) 63 ]
+        122*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~71 ] OP2[  IS_UNUSED  ]
+        123*       < 60> DO_FCALL                                      0   RES[  IS_VAR $72 ]      OP1[  IS_UNUSED  ]
+        124*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~73 ]      OP1[  IS_VAR $69 ] OP2[ ,  IS_VAR $72 ]
+        125*       < 26> ASSIGN_OP                    .=               8           OP1[  IS_CV !2 ] OP2[ ,  IS_TMP_VAR ~73 ]
+   85   126*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        127*       < 43> JMPZ                                                      OP1[  IS_CV !1 ] OP2[ , ->130 ]
+   86   128*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        129*       < 26> ASSIGN_OP                    .=               8           OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435196) '%3D%3D' ]
+   90   130*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        131*       < 62> RETURN                                                    OP1[  IS_CV !2 ]
+   91   132*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        133*       < 62> RETURN                                                    OP1[  IS_CONST (268435189) null ]
+
+End of function doencode
+
+Function decode:
+[+]Function Source Class Name: ParagonIE_Sodium_Core_Base64_Common
+[*]Start of arg_info extract:
+[*]arg_info num_args:2
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:src
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:strictPadding
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\paragonie\sodium_compat\src\Core\Base64\Common.php
+function name:  decode
+number of ops:  248
+compiled vars:  !0 = $src, !1 = $strictPadding, !2 = $srcLen, !3 = $err, !4 = $dest, !5 = $i, !6 = $chunk, !7 = $c0, !8 = $c1, !9 = $c2, !10 = $c3, !11 = $check
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  105     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 64> RECV_INIT                                         RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435349) <false> ]
+  108     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435346) 'ParagonIE_Sodium_Core_Util' ] OP2[ ,  IS_CONST (268435348) 'strlen' ]
+          4*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          5*       < 60> DO_FCALL                                      0   RES[  IS_VAR $12 ]      OP1[  IS_UNUSED  ]
+          6*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_VAR $12 ]
+  109     7*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          8*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~14 ]      OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435340) 0 ]
+          9*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~14 ] OP2[ , ->12 ]
+  110    10*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         11*       < 62> RETURN                                                    OP1[  IS_CONST (268435335) '' ]
+  113    12*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         13*       < 43> JMPZ                                                      OP1[  IS_CV !1 ] OP2[ , ->52 ]
+  114    14*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         15*       < 10> BW_AND                                            RES[  IS_TMP_VAR ~15 ]      OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435328) 3 ]
+         16*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~16 ]      OP1[  IS_TMP_VAR ~15 ] OP2[ ,  IS_CONST (268435327) 0 ]
+         17*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~16 ] OP2[ , ->32 ]
+  115    18*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         19*       <  2> SUB                                               RES[  IS_TMP_VAR ~17 ]      OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435322) 1 ]
+         20*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~18 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_TMP_VAR ~17 ]
+         21*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~19 ]      OP1[  IS_TMP_VAR ~18 ] OP2[ ,  IS_CONST (268435319) '%3D' ]
+         22*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~19 ] OP2[ , ->32 ]
+  116    23*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         24*       < 35> PRE_DEC                                                   OP1[  IS_CV !2 ]
+  117    25*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         26*       <  2> SUB                                               RES[  IS_TMP_VAR ~21 ]      OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435310) 1 ]
+         27*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~22 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_TMP_VAR ~21 ]
+         28*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~23 ]      OP1[  IS_TMP_VAR ~22 ] OP2[ ,  IS_CONST (268435307) '%3D' ]
+         29*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~23 ] OP2[ , ->32 ]
+  118    30*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         31*       < 35> PRE_DEC                                                   OP1[  IS_CV !2 ]
+  122    32*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         33*       < 10> BW_AND                                            RES[  IS_TMP_VAR ~25 ]      OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435298) 3 ]
+         34*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~26 ]      OP1[  IS_TMP_VAR ~25 ] OP2[ ,  IS_CONST (268435297) 1 ]
+         35*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~26 ] OP2[ , ->41 ]
+  123    36*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         37*       < 68> NEW                                               RES[  IS_VAR $27 ]      OP1[ 'RangeException' ]
+  124    38*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435292) 'Incorrect+padding' ] OP2[  IS_UNUSED  ]
+         39*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         40*       <108> THROW                                         0           OP1[  IS_VAR $27 ] OP2[  IS_UNUSED  ]
+  127    41*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         42*       <  2> SUB                                               RES[  IS_TMP_VAR ~29 ]      OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435285) 1 ]
+         43*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~30 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_TMP_VAR ~29 ]
+         44*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~31 ]      OP1[  IS_TMP_VAR ~30 ] OP2[ ,  IS_CONST (268435282) '%3D' ]
+         45*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~31 ] OP2[ , ->51 ]
+  128    46*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         47*       < 68> NEW                                               RES[  IS_VAR $32 ]      OP1[ 'RangeException' ]
+  129    48*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435277) 'Incorrect+padding' ] OP2[  IS_UNUSED  ]
+         49*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         50*       <108> THROW                                         0           OP1[  IS_VAR $32 ] OP2[  IS_UNUSED  ]
+         51*       < 42> JMP                                                       OP1[ ->63 ]
+  133    52*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         53*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435268) 'rtrim' ]
+         54*       <117> SEND_VAR                                                  OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         55*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435265) '%3D' ]
+         56*       < 60> DO_FCALL                                      0   RES[  IS_VAR $34 ]      OP1[  IS_UNUSED  ]
+         57*       < 22> ASSIGN                                                    OP1[  IS_CV !0 ] OP2[ ,  IS_VAR $34 ]
+  134    58*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         59*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435258) 'ParagonIE_Sodium_Core_Util' ] OP2[ ,  IS_CONST (268435260) 'strlen' ]
+         60*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         61*       < 60> DO_FCALL                                      0   RES[  IS_VAR $36 ]      OP1[  IS_UNUSED  ]
+         62*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_VAR $36 ]
+  137    63*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         64*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435252) 0 ]
+  138    65*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         66*       < 22> ASSIGN                                                    OP1[  IS_CV !4 ] OP2[ ,  IS_CONST (268435249) '' ]
+  140    67*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         68*       < 22> ASSIGN                                                    OP1[  IS_CV !5 ] OP2[ ,  IS_CONST (268435246) 0 ]
+         69*       < 42> JMP                                                       OP1[ ->135 ]
+  142    70*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         71*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435241) 'unpack' ]
+         72*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435240) 'C%2A' ]
+         73*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435239) 'ParagonIE_Sodium_Core_Util' ] OP2[ ,  IS_CONST (268435241) 'substr' ]
+         74*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         75*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !5 ] OP2[  IS_UNUSED  ]
+         76*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435237) 4 ] OP2[  IS_UNUSED  ]
+         77*       < 60> DO_FCALL                                      0   RES[  IS_VAR $41 ]      OP1[  IS_UNUSED  ]
+         78*       <117> SEND_VAR                                                  OP1[  IS_VAR $41 ] OP2[  IS_UNUSED  ]
+         79*       < 60> DO_FCALL                                      0   RES[  IS_VAR $42 ]      OP1[  IS_UNUSED  ]
+         80*       < 22> ASSIGN                                                    OP1[  IS_CV !6 ] OP2[ ,  IS_VAR $42 ]
+  143    81*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         82*       <113> INIT_STATIC_METHOD_CALL      self                         OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435226) 'decode6Bits' ]
+         83*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         84*       < 93> FETCH_DIM_FUNC_ARG                                RES[  IS_VAR $44 ]      OP1[  IS_CV !6 ] OP2[ ,  IS_CONST (268435224) 1 ]
+         85*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $44 ] OP2[  IS_UNUSED  ]
+         86*       < 60> DO_FCALL                                      0   RES[  IS_VAR $45 ]      OP1[  IS_UNUSED  ]
+         87*       < 22> ASSIGN                                                    OP1[  IS_CV !7 ] OP2[ ,  IS_VAR $45 ]
+  144    88*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         89*       <113> INIT_STATIC_METHOD_CALL      self                         OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435215) 'decode6Bits' ]
+         90*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         91*       < 93> FETCH_DIM_FUNC_ARG                                RES[  IS_VAR $47 ]      OP1[  IS_CV !6 ] OP2[ ,  IS_CONST (268435213) 2 ]
+         92*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $47 ] OP2[  IS_UNUSED  ]
+         93*       < 60> DO_FCALL                                      0   RES[  IS_VAR $48 ]      OP1[  IS_UNUSED  ]
+         94*       < 22> ASSIGN                                                    OP1[  IS_CV !8 ] OP2[ ,  IS_VAR $48 ]
+  145    95*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         96*       <113> INIT_STATIC_METHOD_CALL      self                         OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435204) 'decode6Bits' ]
+         97*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         98*       < 93> FETCH_DIM_FUNC_ARG                                RES[  IS_VAR $50 ]      OP1[  IS_CV !6 ] OP2[ ,  IS_CONST (268435202) 3 ]
+         99*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $50 ] OP2[  IS_UNUSED  ]
+        100*       < 60> DO_FCALL                                      0   RES[  IS_VAR $51 ]      OP1[  IS_UNUSED  ]
+        101*       < 22> ASSIGN                                                    OP1[  IS_CV !9 ] OP2[ ,  IS_VAR $51 ]
+  146   102*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        103*       <113> INIT_STATIC_METHOD_CALL      self                         OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435193) 'decode6Bits' ]
+        104*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        105*       < 93> FETCH_DIM_FUNC_ARG                                RES[  IS_VAR $53 ]      OP1[  IS_CV !6 ] OP2[ ,  IS_CONST (268435191) 4 ]
+        106*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $53 ] OP2[  IS_UNUSED  ]
+        107*       < 60> DO_FCALL                                      0   RES[  IS_VAR $54 ]      OP1[  IS_UNUSED  ]
+        108*       < 22> ASSIGN                                                    OP1[  IS_CV !10 ] OP2[ ,  IS_VAR $54 ]
+  148   109*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        110*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435182) 'pack' ]
+  149   111*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435181) 'CCC' ]
+  150   112*       <  6> SL                                                RES[  IS_TMP_VAR ~56 ]      OP1[  IS_CV !7 ] OP2[ ,  IS_CONST (268435180) 2 ]
+        113*       <  7> SR                                                RES[  IS_TMP_VAR ~57 ]      OP1[  IS_CV !8 ] OP2[ ,  IS_CONST (268435179) 4 ]
+        114*       <  9> BW_OR                                             RES[  IS_TMP_VAR ~58 ]      OP1[  IS_TMP_VAR ~56 ] OP2[ ,  IS_TMP_VAR ~57 ]
+        115*       < 10> BW_AND                                            RES[  IS_TMP_VAR ~59 ]      OP1[  IS_TMP_VAR ~58 ] OP2[ ,  IS_CONST (268435176) 255 ]
+        116*       < 65> SEND_VAL                                                  OP1[  IS_TMP_VAR ~59 ]
+  151   117*       <  6> SL                                                RES[  IS_TMP_VAR ~60 ]      OP1[  IS_CV !8 ] OP2[ ,  IS_CONST (268435173) 4 ]
+        118*       <  7> SR                                                RES[  IS_TMP_VAR ~61 ]      OP1[  IS_CV !9 ] OP2[ ,  IS_CONST (268435172) 2 ]
+        119*       <  9> BW_OR                                             RES[  IS_TMP_VAR ~62 ]      OP1[  IS_TMP_VAR ~60 ] OP2[ ,  IS_TMP_VAR ~61 ]
+        120*       < 10> BW_AND                                            RES[  IS_TMP_VAR ~63 ]      OP1[  IS_TMP_VAR ~62 ] OP2[ ,  IS_CONST (268435169) 255 ]
+        121*       < 65> SEND_VAL                                                  OP1[  IS_TMP_VAR ~63 ]
+  152   122*       <  6> SL                                                RES[  IS_TMP_VAR ~64 ]      OP1[  IS_CV !9 ] OP2[ ,  IS_CONST (268435166) 6 ]
+        123*       <  9> BW_OR                                             RES[  IS_TMP_VAR ~65 ]      OP1[  IS_CV !10 ] OP2[ ,  IS_TMP_VAR ~64 ]
+        124*       < 10> BW_AND                                            RES[  IS_TMP_VAR ~66 ]      OP1[  IS_TMP_VAR ~65 ] OP2[ ,  IS_CONST (268435163) 255 ]
+        125*       < 65> SEND_VAL                                                  OP1[  IS_TMP_VAR ~66 ]
+        126*       < 60> DO_FCALL                                      0   RES[  IS_VAR $67 ]      OP1[  IS_UNUSED  ]
+        127*       < 26> ASSIGN_OP                    .=               8           OP1[  IS_CV !4 ] OP2[ ,  IS_VAR $67 ]
+  154   128*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        129*       <  9> BW_OR                                             RES[  IS_TMP_VAR ~69 ]      OP1[  IS_CV !7 ] OP2[ ,  IS_CV !8 ]
+        130*       <  9> BW_OR                                             RES[  IS_TMP_VAR ~70 ]      OP1[  IS_CV !9 ] OP2[ ,  IS_TMP_VAR ~69 ]
+        131*       <  9> BW_OR                                             RES[  IS_TMP_VAR ~71 ]      OP1[  IS_CV !10 ] OP2[ ,  IS_TMP_VAR ~70 ]
+        132*       <  7> SR                                                RES[  IS_TMP_VAR ~72 ]      OP1[  IS_TMP_VAR ~71 ] OP2[ ,  IS_CONST (268435148) 8 ]
+        133*       < 26> ASSIGN_OP                    |=               9           OP1[  IS_CV !3 ] OP2[ ,  IS_TMP_VAR ~72 ]
+  140   134*       < 26> ASSIGN_OP                    +=               1           OP1[  IS_CV !5 ] OP2[ ,  IS_CONST (268435145) 4 ]
+        135*       <  1> ADD                                               RES[  IS_TMP_VAR ~75 ]      OP1[  IS_CV !5 ] OP2[ ,  IS_CONST (268435144) 4 ]
+        136*       < 21> IS_SMALLER_OR_EQUAL                               RES[  IS_TMP_VAR ~76 ]      OP1[  IS_TMP_VAR ~75 ] OP2[ ,  IS_CV !2 ]
+        137*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        138*       < 44> JMPNZ                                                     OP1[  IS_TMP_VAR ~76 ] OP2[ , ->70 ]
+  157   139*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        140*       < 20> IS_SMALLER                                        RES[  IS_TMP_VAR ~77 ]      OP1[  IS_CV !5 ] OP2[ ,  IS_CV !2 ]
+        141*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~77 ] OP2[ , ->233 ]
+  159   142*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        143*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435129) 'unpack' ]
+        144*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435128) 'C%2A' ]
+        145*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435127) 'ParagonIE_Sodium_Core_Util' ] OP2[ ,  IS_CONST (268435129) 'substr' ]
+        146*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+        147*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !5 ] OP2[  IS_UNUSED  ]
+        148*       <  2> SUB                                               RES[  IS_TMP_VAR ~78 ]      OP1[  IS_CV !2 ] OP2[ ,  IS_CV !5 ]
+        149*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~78 ] OP2[  IS_UNUSED  ]
+        150*       < 60> DO_FCALL                                      0   RES[  IS_VAR $79 ]      OP1[  IS_UNUSED  ]
+        151*       <117> SEND_VAR                                                  OP1[  IS_VAR $79 ] OP2[  IS_UNUSED  ]
+        152*       < 60> DO_FCALL                                      0   RES[  IS_VAR $80 ]      OP1[  IS_UNUSED  ]
+        153*       < 22> ASSIGN                                                    OP1[  IS_CV !6 ] OP2[ ,  IS_VAR $80 ]
+  160   154*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        155*       <113> INIT_STATIC_METHOD_CALL      self                         OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435111) 'decode6Bits' ]
+        156*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        157*       < 93> FETCH_DIM_FUNC_ARG                                RES[  IS_VAR $82 ]      OP1[  IS_CV !6 ] OP2[ ,  IS_CONST (268435109) 1 ]
+        158*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $82 ] OP2[  IS_UNUSED  ]
+        159*       < 60> DO_FCALL                                      0   RES[  IS_VAR $83 ]      OP1[  IS_UNUSED  ]
+        160*       < 22> ASSIGN                                                    OP1[  IS_CV !7 ] OP2[ ,  IS_VAR $83 ]
+  162   161*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        162*       <  1> ADD                                               RES[  IS_TMP_VAR ~85 ]      OP1[  IS_CV !5 ] OP2[ ,  IS_CONST (268435100) 2 ]
+        163*       < 20> IS_SMALLER                                        RES[  IS_TMP_VAR ~86 ]      OP1[  IS_TMP_VAR ~85 ] OP2[ ,  IS_CV !2 ]
+        164*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~86 ] OP2[ , ->200 ]
+  163   165*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        166*       <113> INIT_STATIC_METHOD_CALL      self                         OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435093) 'decode6Bits' ]
+        167*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        168*       < 93> FETCH_DIM_FUNC_ARG                                RES[  IS_VAR $87 ]      OP1[  IS_CV !6 ] OP2[ ,  IS_CONST (268435091) 2 ]
+        169*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $87 ] OP2[  IS_UNUSED  ]
+        170*       < 60> DO_FCALL                                      0   RES[  IS_VAR $88 ]      OP1[  IS_UNUSED  ]
+        171*       < 22> ASSIGN                                                    OP1[  IS_CV !8 ] OP2[ ,  IS_VAR $88 ]
+  164   172*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        173*       <113> INIT_STATIC_METHOD_CALL      self                         OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435082) 'decode6Bits' ]
+        174*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        175*       < 93> FETCH_DIM_FUNC_ARG                                RES[  IS_VAR $90 ]      OP1[  IS_CV !6 ] OP2[ ,  IS_CONST (268435080) 3 ]
+        176*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $90 ] OP2[  IS_UNUSED  ]
+        177*       < 60> DO_FCALL                                      0   RES[  IS_VAR $91 ]      OP1[  IS_UNUSED  ]
+        178*       < 22> ASSIGN                                                    OP1[  IS_CV !9 ] OP2[ ,  IS_VAR $91 ]
+  165   179*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        180*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435071) 'pack' ]
+  166   181*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435070) 'CC' ]
+  167   182*       <  6> SL                                                RES[  IS_TMP_VAR ~93 ]      OP1[  IS_CV !7 ] OP2[ ,  IS_CONST (268435069) 2 ]
+        183*       <  7> SR                                                RES[  IS_TMP_VAR ~94 ]      OP1[  IS_CV !8 ] OP2[ ,  IS_CONST (268435068) 4 ]
+        184*       <  9> BW_OR                                             RES[  IS_TMP_VAR ~95 ]      OP1[  IS_TMP_VAR ~93 ] OP2[ ,  IS_TMP_VAR ~94 ]
+        185*       < 10> BW_AND                                            RES[  IS_TMP_VAR ~96 ]      OP1[  IS_TMP_VAR ~95 ] OP2[ ,  IS_CONST (268435065) 255 ]
+        186*       < 65> SEND_VAL                                                  OP1[  IS_TMP_VAR ~96 ]
+  168   187*       <  6> SL                                                RES[  IS_TMP_VAR ~97 ]      OP1[  IS_CV !8 ] OP2[ ,  IS_CONST (268435062) 4 ]
+        188*       <  7> SR                                                RES[  IS_TMP_VAR ~98 ]      OP1[  IS_CV !9 ] OP2[ ,  IS_CONST (268435061) 2 ]
+        189*       <  9> BW_OR                                             RES[  IS_TMP_VAR ~99 ]      OP1[  IS_TMP_VAR ~97 ] OP2[ ,  IS_TMP_VAR ~98 ]
+        190*       < 10> BW_AND                                            RES[  IS_TMP_VAR ~100 ]     OP1[  IS_TMP_VAR ~99 ] OP2[ ,  IS_CONST (268435058) 255 ]
+        191*       < 65> SEND_VAL                                                  OP1[  IS_TMP_VAR ~100 ]
+        192*       < 60> DO_FCALL                                      0   RES[  IS_VAR $101 ]     OP1[  IS_UNUSED  ]
+        193*       < 26> ASSIGN_OP                    .=               8           OP1[  IS_CV !4 ] OP2[ ,  IS_VAR $101 ]
+  170   194*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        195*       <  9> BW_OR                                             RES[  IS_TMP_VAR ~103 ]     OP1[  IS_CV !7 ] OP2[ ,  IS_CV !8 ]
+        196*       <  9> BW_OR                                             RES[  IS_TMP_VAR ~104 ]     OP1[  IS_CV !9 ] OP2[ ,  IS_TMP_VAR ~103 ]
+        197*       <  7> SR                                                RES[  IS_TMP_VAR ~105 ]     OP1[  IS_TMP_VAR ~104 ] OP2[ ,  IS_CONST (268435045) 8 ]
+        198*       < 26> ASSIGN_OP                    |=               9           OP1[  IS_CV !3 ] OP2[ ,  IS_TMP_VAR ~105 ]
+        199*       < 42> JMP                                                       OP1[ ->233 ]
+  171   200*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        201*       <  1> ADD                                               RES[  IS_TMP_VAR ~107 ]     OP1[  IS_CV !5 ] OP2[ ,  IS_CONST (268435038) 1 ]
+        202*       < 20> IS_SMALLER                                        RES[  IS_TMP_VAR ~108 ]     OP1[  IS_TMP_VAR ~107 ] OP2[ ,  IS_CV !2 ]
+        203*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~108 ] OP2[ , ->226 ]
+  172   204*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        205*       <113> INIT_STATIC_METHOD_CALL      self                         OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435031) 'decode6Bits' ]
+        206*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        207*       < 93> FETCH_DIM_FUNC_ARG                                RES[  IS_VAR $109 ]     OP1[  IS_CV !6 ] OP2[ ,  IS_CONST (268435029) 2 ]
+        208*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $109 ] OP2[  IS_UNUSED  ]
+        209*       < 60> DO_FCALL                                      0   RES[  IS_VAR $110 ]     OP1[  IS_UNUSED  ]
+        210*       < 22> ASSIGN                                                    OP1[  IS_CV !8 ] OP2[ ,  IS_VAR $110 ]
+  173   211*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        212*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435020) 'pack' ]
+  174   213*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435019) 'C' ]
+  175   214*       <  6> SL                                                RES[  IS_TMP_VAR ~112 ]     OP1[  IS_CV !7 ] OP2[ ,  IS_CONST (268435018) 2 ]
+        215*       <  7> SR                                                RES[  IS_TMP_VAR ~113 ]     OP1[  IS_CV !8 ] OP2[ ,  IS_CONST (268435017) 4 ]
+        216*       <  9> BW_OR                                             RES[  IS_TMP_VAR ~114 ]     OP1[  IS_TMP_VAR ~112 ] OP2[ ,  IS_TMP_VAR ~113 ]
+        217*       < 10> BW_AND                                            RES[  IS_TMP_VAR ~115 ]     OP1[  IS_TMP_VAR ~114 ] OP2[ ,  IS_CONST (268435014) 255 ]
+        218*       < 65> SEND_VAL                                                  OP1[  IS_TMP_VAR ~115 ]
+        219*       < 60> DO_FCALL                                      0   RES[  IS_VAR $116 ]     OP1[  IS_UNUSED  ]
+        220*       < 26> ASSIGN_OP                    .=               8           OP1[  IS_CV !4 ] OP2[ ,  IS_VAR $116 ]
+  177   221*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        222*       <  9> BW_OR                                             RES[  IS_TMP_VAR ~118 ]     OP1[  IS_CV !7 ] OP2[ ,  IS_CV !8 ]
+        223*       <  7> SR                                                RES[  IS_TMP_VAR ~119 ]     OP1[  IS_TMP_VAR ~118 ] OP2[ ,  IS_CONST (268435003) 8 ]
+        224*       < 26> ASSIGN_OP                    |=               9           OP1[  IS_CV !3 ] OP2[ ,  IS_TMP_VAR ~119 ]
+        225*       < 42> JMP                                                       OP1[ ->233 ]
+  178   226*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        227*       < 20> IS_SMALLER                                        RES[  IS_TMP_VAR ~121 ]     OP1[  IS_CV !5 ] OP2[ ,  IS_CV !2 ]
+        228*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~121 ]     OP1[  IS_TMP_VAR ~121 ] OP2[ , ->230 ]
+        229*       < 52> BOOL                                              RES[  IS_TMP_VAR ~121 ]     OP1[  IS_CV !1 ]
+        230*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~121 ] OP2[ , ->233 ]
+  179   231*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        232*       < 26> ASSIGN_OP                    |=               9           OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268434986) 1 ]
+  183   233*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        234*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~123 ]     OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268434983) 0 ]
+        235*       < 22> ASSIGN                                                    OP1[  IS_CV !11 ] OP2[ ,  IS_TMP_VAR ~123 ]
+  184   236*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        237*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~125 ]     OP1[  IS_CV !11 ]
+        238*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~125 ] OP2[ , ->244 ]
+  185   239*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        240*       < 68> NEW                                               RES[  IS_VAR $126 ]     OP1[ 'RangeException' ]
+  186   241*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268434972) 'Base64%3A%3Adecode%28%29+only+expects+characters+in+the+correct+base64+alphabet' ] OP2[  IS_UNUSED  ]
+        242*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+        243*       <108> THROW                                         0           OP1[  IS_VAR $126 ] OP2[  IS_UNUSED  ]
+  189   244*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        245*       < 62> RETURN                                                    OP1[  IS_CV !4 ]
+  190   246*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        247*       < 62> RETURN                                                    OP1[  IS_CONST (268434961) null ]
+
+End of function decode
+
+Function decode6bits:
+[+]Function Source Class Name: ParagonIE_Sodium_Core_Base64_Common
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:src
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\paragonie\sodium_compat\src\Core\Base64\Common.php
+function name:  decode6Bits
+number of ops:  3
+compiled vars:  !0 = $src
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  203     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 62> RETURN                                                    OP1[  IS_CONST (268435451) null ]
+
+End of function decode6bits
+
+Function encode6bits:
+[+]Function Source Class Name: ParagonIE_Sodium_Core_Base64_Common
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:src
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\paragonie\sodium_compat\src\Core\Base64\Common.php
+function name:  encode6Bits
+number of ops:  3
+compiled vars:  !0 = $src
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  212     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 62> RETURN                                                    OP1[  IS_CONST (268435451) null ]
+
+End of function encode6bits
+
+End of class ParagonIE_Sodium_Core_Base64_Common.
+

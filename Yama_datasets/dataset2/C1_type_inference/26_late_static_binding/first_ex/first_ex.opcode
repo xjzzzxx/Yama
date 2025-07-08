@@ -1,0 +1,162 @@
+filename:       E:\【我的开源项目】\Yama\Yama_datasets\dataset2\C1_type_inference\26_late_static_binding\first_ex\first_ex.php
+function name:  (null)
+number of ops:  9
+compiled vars:  !0 = $b
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   17     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 80> FETCH_R                      global               RES[  IS_TMP_VAR ~1 ]       OP1[  IS_CONST (268435447) '_GET' ]
+          2*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~2 ]       OP1[  IS_TMP_VAR ~1 ] OP2[ ,  IS_CONST (268435446) 'p1' ]
+          3*       < 22> ASSIGN                                                    OP1[  IS_CV !0 ] OP2[ ,  IS_TMP_VAR ~2 ]
+   18     4*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          5*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435441) 'B' ] OP2[ ,  IS_CONST (268435443) 'test' ]
+          6*       <117> SEND_VAR                                                  OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          7*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+   20     8*       < 62> RETURN                                                    OP1[  IS_CONST (268435439) 1 ]
+
+Class A:
+[+]Class Parent Name: NULL
+End Trait extract
+Start Properties extract:
+Properties: NULL
+End Properties extract
+
+Function who:
+[+]Function Source Class Name: A
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:b
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       E:\【我的开源项目】\Yama\Yama_datasets\dataset2\C1_type_inference\26_late_static_binding\first_ex\first_ex.php
+function name:  who
+number of ops:  5
+compiled vars:  !0 = $b
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+    3     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+    4     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       <136> ECHO                                                      OP1[  IS_CONST (268435450) 'safe' ]
+    5     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       < 62> RETURN                                                    OP1[  IS_CONST (268435447) null ]
+
+End of function who
+
+Function test:
+[+]Function Source Class Name: A
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:b
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       E:\【我的开源项目】\Yama\Yama_datasets\dataset2\C1_type_inference\26_late_static_binding\first_ex\first_ex.php
+function name:  test
+number of ops:  7
+compiled vars:  !0 = $b
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+    6     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+    7     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       <113> INIT_STATIC_METHOD_CALL      static                       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435449) 'who' ]
+          3*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          4*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+    8     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       < 62> RETURN                                                    OP1[  IS_CONST (268435443) null ]
+
+End of function test
+
+End of class A.
+
+Class B:
+[+]Class Parent Name: A
+End Trait extract
+Start Properties extract:
+Properties: NULL
+End Properties extract
+
+Function who:
+[+]Function Source Class Name: B
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:b
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       E:\【我的开源项目】\Yama\Yama_datasets\dataset2\C1_type_inference\26_late_static_binding\first_ex\first_ex.php
+function name:  who
+number of ops:  5
+compiled vars:  !0 = $b
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   12     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+   13     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       <136> ECHO                                                      OP1[  IS_CV !0 ]
+   14     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       < 62> RETURN                                                    OP1[  IS_CONST (268435447) null ]
+
+End of function who
+
+Function test:
+[+]Function Source Class Name: A
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:b
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       E:\【我的开源项目】\Yama\Yama_datasets\dataset2\C1_type_inference\26_late_static_binding\first_ex\first_ex.php
+function name:  test
+number of ops:  7
+compiled vars:  !0 = $b
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+    6     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+    7     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       <113> INIT_STATIC_METHOD_CALL      static                       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435449) 'who' ]
+          3*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          4*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+    8     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       < 62> RETURN                                                    OP1[  IS_CONST (268435443) null ]
+
+End of function test
+
+End of class B.
+

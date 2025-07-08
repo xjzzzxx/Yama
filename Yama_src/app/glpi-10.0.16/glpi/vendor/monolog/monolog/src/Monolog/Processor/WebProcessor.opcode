@@ -1,0 +1,270 @@
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\monolog\monolog\src\Monolog\Processor\WebProcessor.php
+function name:  (null)
+number of ops:  6
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+    1     0*       <  0> NOP                                                      
+   12     1*       <  0> NOP                                                      
+   24     2*       <  0> NOP                                                      
+   19     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       <144> DECLARE_CLASS                                             OP1[  IS_CONST (268435445) 'monolog%5Cprocessor%5Cwebprocessor' ] OP2[  IS_UNUSED  ]
+  112     5*       < 62> RETURN                                                    OP1[  IS_CONST (268435445) 1 ]
+
+Class Monolog\Processor\WebProcessor:
+[+]Class Parent Name: NULL
+End Trait extract
+Start Properties extract:
+Key: serverData, Value: UNINIT, Type: Normal
+End Properties extract.
+
+Function __construct:
+[+]Function Source Class Name: Monolog\Processor\WebProcessor
+[*]Start of arg_info extract:
+[*]arg_info num_args:2
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:serverData
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:extraFields
+[*]type:?array
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\monolog\monolog\src\Monolog\Processor\WebProcessor.php
+function name:  __construct
+number of ops:  75
+compiled vars:  !0 = $serverData, !1 = $extraFields, !2 = $defaultEnabled, !3 = $fieldName
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   46     0*       < 64> RECV_INIT                                         RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435411) null ]
+          1*       < 64> RECV_INIT                                         RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435410) null ]
+   48     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       <123> TYPE_CHECK                                    2   RES[  IS_TMP_VAR ~4 ]       OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          4*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~4 ] OP2[ , ->11 ]
+   49     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       < 83> FETCH_W                      global               RES[  IS_VAR $6 ]       OP1[  IS_CONST (268435402) '_SERVER' ]
+          7*       <140> MAKE_REF                                          RES[  IS_VAR $7 ]       OP1[  IS_VAR $6 ]
+          8*       < 32> ASSIGN_OBJ_REF                                            OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435397) 'serverData' ]
+          9*       <137> OP_DATA                                                   OP1[  IS_VAR $7 ] OP2[  IS_UNUSED  ]
+         10*       < 42> JMP                                                       OP1[ ->28 ]
+   50    11*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         12*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435391) 'Monolog%5CProcessor%5Cis_array' ]
+         13*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         14*       < 60> DO_FCALL                                      0   RES[  IS_VAR $8 ]       OP1[  IS_UNUSED  ]
+         15*       < 47> JMPNZ_EX                                          RES[  IS_TMP_VAR ~9 ]       OP1[  IS_VAR $8 ] OP2[ , ->18 ]
+         16*       <138> INSTANCEOF                                        RES[  IS_TMP_VAR ~10 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435386) 'ArrayAccess' ]
+         17*       < 52> BOOL                                              RES[  IS_TMP_VAR ~9 ]       OP1[  IS_TMP_VAR ~10 ]
+         18*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~9 ] OP2[ , ->23 ]
+   51    19*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         20*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435380) 'serverData' ]
+         21*       <137> OP_DATA                                                   OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         22*       < 42> JMP                                                       OP1[ ->28 ]
+   53    23*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         24*       < 68> NEW                                               RES[  IS_VAR $12 ]      OP1[ 'UnexpectedValueException' ]
+         25*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435373) '%24serverData+must+be+an+array+or+object+implementing+ArrayAccess.' ] OP2[  IS_UNUSED  ]
+         26*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         27*       <108> THROW                                         0           OP1[  IS_VAR $12 ] OP2[  IS_UNUSED  ]
+   56    28*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         29*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435366) <array> ]
+   57    30*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         31*       < 91> FETCH_OBJ_IS                                      RES[  IS_TMP_VAR ~15 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435363) 'serverData' ]
+         32*       <115> ISSET_ISEMPTY_DIM_OBJ                         0   RES[  IS_TMP_VAR ~16 ]      OP1[  IS_TMP_VAR ~15 ] OP2[ ,  IS_CONST (268435362) 'UNIQUE_ID' ]
+         33*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~16 ] OP2[ , ->41 ]
+   58    34*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         35*       < 85> FETCH_OBJ_W                                       RES[  IS_VAR $17 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435357) 'extraFields' ]
+         36*       < 23> ASSIGN_DIM                                                OP1[  IS_VAR $17 ] OP2[ ,  IS_CONST (268435356) 'unique_id' ]
+         37*       <137> OP_DATA                                                   OP1[  IS_CONST (268435355) 'UNIQUE_ID' ] OP2[  IS_UNUSED  ]
+   59    38*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         39*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         40*       <137> OP_DATA                                                   OP1[  IS_CONST (268435350) 'unique_id' ] OP2[  IS_UNUSED  ]
+   62    41*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         42*       <123> TYPE_CHECK                                    2   RES[  IS_TMP_VAR ~20 ]      OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         43*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~20 ] OP2[ , ->46 ]
+   63    44*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         45*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_CV !2 ]
+   65    46*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         47*       <115> ISSET_ISEMPTY_DIM_OBJ                         0   RES[  IS_TMP_VAR ~22 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435337) 0 ]
+         48*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~22 ] OP2[ , ->70 ]
+   66    49*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         50*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435332) 'Monolog%5CProcessor%5Carray_keys' ]
+         51*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         52*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $23 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435331) 'extraFields' ]
+         53*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $23 ] OP2[  IS_UNUSED  ]
+         54*       < 60> DO_FCALL                                      0   RES[  IS_VAR $24 ]      OP1[  IS_UNUSED  ]
+         55*       < 77> FE_RESET_R                                        RES[  IS_VAR $25 ]      OP1[  IS_VAR $24 ] OP2[ , ->68 ]
+         56*       < 78> FE_FETCH_R                                                OP1[  IS_VAR $25 ] OP2[ ,  IS_CV !3 ] EXT_JMP_REL[ , ->68 ]
+   67    57*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         58*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435320) 'Monolog%5CProcessor%5Cin_array' ]
+         59*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         60*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         61*       < 60> DO_FCALL                                      0   RES[  IS_VAR $26 ]      OP1[  IS_UNUSED  ]
+         62*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~27 ]      OP1[  IS_VAR $26 ]
+         63*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~27 ] OP2[ , ->67 ]
+   68    64*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         65*       < 97> FETCH_OBJ_UNSET                                   RES[  IS_VAR $28 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435309) 'extraFields' ]
+         66*       < 75> UNSET_DIM                                                 OP1[  IS_VAR $28 ] OP2[ ,  IS_CV !3 ]
+   66    67*       < 42> JMP                                                       OP1[ ->56 ]
+         68*       <127> FE_FREE                                                   OP1[  IS_VAR $25 ] OP2[  IS_UNUSED  ]
+         69*       < 42> JMP                                                       OP1[ ->73 ]
+   72    70*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         71*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435298) 'extraFields' ]
+         72*       <137> OP_DATA                                                   OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+   74    73*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         74*       < 62> RETURN                                                    OP1[  IS_CONST (268435293) null ]
+
+End of function __construct
+
+Function __invoke:
+[+]Function Source Class Name: Monolog\Processor\WebProcessor
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:array
+
+[*]ArgInfoNo**0**
+[*]name:record
+[*]type:array
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\monolog\monolog\src\Monolog\Processor\WebProcessor.php
+function name:  __invoke
+number of ops:  23
+compiled vars:  !0 = $record
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   79     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+   83     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 91> FETCH_OBJ_IS                                      RES[  IS_TMP_VAR ~1 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435445) 'serverData' ]
+          3*       <115> ISSET_ISEMPTY_DIM_OBJ                         0   RES[  IS_TMP_VAR ~2 ]       OP1[  IS_TMP_VAR ~1 ] OP2[ ,  IS_CONST (268435444) 'REQUEST_URI' ]
+          4*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~3 ]       OP1[  IS_TMP_VAR ~2 ]
+          5*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~3 ] OP2[ , ->9 ]
+   84     6*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          7*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          8*       < 62> RETURN                                                    OP1[  IS_CV !0 ]
+   87     9*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         10*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435432) 'appendExtraFields' ]
+         11*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         12*       < 93> FETCH_DIM_FUNC_ARG                                RES[  IS_VAR $5 ]       OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435430) 'extra' ]
+         13*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $5 ] OP2[  IS_UNUSED  ]
+         14*       < 60> DO_FCALL                                      0   RES[  IS_VAR $6 ]       OP1[  IS_UNUSED  ]
+         15*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435421) 'extra' ]
+         16*       <137> OP_DATA                                                   OP1[  IS_VAR $6 ] OP2[  IS_UNUSED  ]
+   89    17*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         18*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         19*       < 62> RETURN                                                    OP1[  IS_CV !0 ]
+   90    20*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         21*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         22*       < 62> RETURN                                                    OP1[  IS_CONST (268435411) null ]
+
+End of function __invoke
+
+Function addextrafield:
+[+]Function Source Class Name: Monolog\Processor\WebProcessor
+[*]Start of arg_info extract:
+[*]arg_info num_args:2
+[*]Function return type:self
+
+[*]ArgInfoNo**0**
+[*]name:extraName
+[*]type:string
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:serverName
+[*]type:string
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\monolog\monolog\src\Monolog\Processor\WebProcessor.php
+function name:  addExtraField
+number of ops:  13
+compiled vars:  !0 = $extraName, !1 = $serverName
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   92     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 63> RECV                                              RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ]
+   94     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       < 85> FETCH_OBJ_W                                       RES[  IS_VAR $2 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435448) 'extraFields' ]
+          4*       < 23> ASSIGN_DIM                                                OP1[  IS_VAR $2 ] OP2[ ,  IS_CV !0 ]
+          5*       <137> OP_DATA                                                   OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+   96     6*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          7*       <184> FETCH_THIS                                        RES[  IS_TMP_VAR ~4 ]       OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          8*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_TMP_VAR ~4 ] OP2[  IS_UNUSED  ]
+          9*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~4 ]
+   97    10*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         11*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         12*       < 62> RETURN                                                    OP1[  IS_CONST (268435431) null ]
+
+End of function addextrafield
+
+Function appendextrafields:
+[+]Function Source Class Name: Monolog\Processor\WebProcessor
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:array
+
+[*]ArgInfoNo**0**
+[*]name:extra
+[*]type:array
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\monolog\monolog\src\Monolog\Processor\WebProcessor.php
+function name:  appendExtraFields
+number of ops:  21
+compiled vars:  !0 = $extra, !1 = $serverName, !2 = $extraName
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  103     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  105     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~3 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435448) 'extraFields' ]
+          3*       < 77> FE_RESET_R                                        RES[  IS_VAR $4 ]       OP1[  IS_TMP_VAR ~3 ] OP2[ , ->14 ]
+          4*       < 78> FE_FETCH_R                                        RES[  IS_TMP_VAR ~5 ]       OP1[  IS_VAR $4 ] OP2[ ,  IS_CV !1 ] EXT_JMP_REL[ , ->14 ]
+          5*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_TMP_VAR ~5 ]
+  106     6*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          7*       < 91> FETCH_OBJ_IS                                      RES[  IS_TMP_VAR ~8 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435439) 'serverData' ]
+          8*       < 90> FETCH_DIM_IS                                      RES[  IS_TMP_VAR ~9 ]       OP1[  IS_TMP_VAR ~8 ] OP2[ ,  IS_CV !1 ]
+          9*       <169> COALESCE                                          RES[  IS_TMP_VAR ~10 ]      OP1[  IS_TMP_VAR ~9 ] OP2[ , ->11 ]
+         10*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~10 ]      OP1[  IS_CONST (268435434) null ]
+         11*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !0 ] OP2[ ,  IS_CV !2 ]
+         12*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~10 ] OP2[  IS_UNUSED  ]
+  105    13*       < 42> JMP                                                       OP1[ ->4 ]
+         14*       <127> FE_FREE                                                   OP1[  IS_VAR $4 ] OP2[  IS_UNUSED  ]
+  109    15*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         16*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         17*       < 62> RETURN                                                    OP1[  IS_CV !0 ]
+  110    18*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         19*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         20*       < 62> RETURN                                                    OP1[  IS_CONST (268435415) null ]
+
+End of function appendextrafields
+
+End of class Monolog\Processor\WebProcessor.
+

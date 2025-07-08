@@ -1,0 +1,784 @@
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\laminas\laminas-validator\src\Barcode\AbstractAdapter.php
+function name:  (null)
+number of ops:  12
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+    3     0*       <  0> NOP                                                      
+    5     1*       <  0> NOP                                                      
+    6     2*       <  0> NOP                                                      
+    7     3*       <  0> NOP                                                      
+    8     4*       <  0> NOP                                                      
+    9     5*       <  0> NOP                                                      
+   10     6*       <  0> NOP                                                      
+   11     7*       <  0> NOP                                                      
+   12     8*       <  0> NOP                                                      
+   14     9*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         10*       <144> DECLARE_CLASS                                             OP1[  IS_CONST (268435433) 'laminas%5Cvalidator%5Cbarcode%5Cabstractadapter' ] OP2[  IS_UNUSED  ]
+  313    11*       < 62> RETURN                                                    OP1[  IS_CONST (268435433) 1 ]
+
+Class Laminas\Validator\Barcode\AbstractAdapter:
+[+]Class Parent Name: NULL
+End Trait extract
+Start Properties extract:
+End Properties extract.
+
+Function hasvalidlength:
+[+]Function Source Class Name: Laminas\Validator\Barcode\AbstractAdapter
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:value
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\laminas\laminas-validator\src\Barcode\AbstractAdapter.php
+function name:  hasValidLength
+number of ops:  68
+compiled vars:  !0 = $value, !1 = $fixum, !2 = $length, !3 = $count
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   34     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+   36     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       <123> TYPE_CHECK                                   64   RES[  IS_TMP_VAR ~4 ]       OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          3*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~5 ]       OP1[  IS_TMP_VAR ~4 ]
+          4*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~5 ] OP2[ , ->7 ]
+   37     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       < 62> RETURN                                                    OP1[  IS_CONST (268435426) <false> ]
+   40     7*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          8*       <121> STRLEN                                            RES[  IS_TMP_VAR ~6 ]       OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          9*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_TMP_VAR ~6 ]
+   41    10*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         11*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435417) 'getLength' ]
+         12*       < 60> DO_FCALL                                      0   RES[  IS_VAR $8 ]       OP1[  IS_UNUSED  ]
+         13*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_VAR $8 ]
+   43    14*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         15*       <123> TYPE_CHECK                                  128   RES[  IS_TMP_VAR ~10 ]      OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         16*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~10 ] OP2[ , ->36 ]
+   44    17*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         18*       < 77> FE_RESET_R                                        RES[  IS_VAR $11 ]      OP1[  IS_CV !2 ] OP2[ , ->33 ]
+         19*       < 78> FE_FETCH_R                                                OP1[  IS_VAR $11 ] OP2[ ,  IS_CV !0 ] EXT_JMP_REL[ , ->33 ]
+   45    20*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         21*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~12 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CV !0 ]
+         22*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~12 ] OP2[ , ->26 ]
+   46    23*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         24*       <127> FE_FREE                                                   OP1[  IS_VAR $11 ] OP2[  IS_UNUSED  ]
+         25*       < 62> RETURN                                                    OP1[  IS_CONST (268435391) <true> ]
+   49    26*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         27*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~13 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435388) -1 ]
+         28*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~13 ] OP2[ , ->32 ]
+   50    29*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         30*       <127> FE_FREE                                                   OP1[  IS_VAR $11 ] OP2[  IS_UNUSED  ]
+         31*       < 62> RETURN                                                    OP1[  IS_CONST (268435381) <true> ]
+   44    32*       < 42> JMP                                                       OP1[ ->19 ]
+         33*       <127> FE_FREE                                                   OP1[  IS_VAR $11 ] OP2[  IS_UNUSED  ]
+   54    34*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         35*       < 62> RETURN                                                    OP1[  IS_CONST (268435374) <false> ]
+   57    36*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         37*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~14 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CV !2 ]
+         38*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~14 ] OP2[ , ->41 ]
+   58    39*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         40*       < 62> RETURN                                                    OP1[  IS_CONST (268435365) <true> ]
+   61    41*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         42*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~15 ]      OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435362) -1 ]
+         43*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~15 ] OP2[ , ->46 ]
+   62    44*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         45*       < 62> RETURN                                                    OP1[  IS_CONST (268435357) <true> ]
+   65    46*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         47*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~16 ]      OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435354) 'even' ]
+         48*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~16 ] OP2[ , ->55 ]
+   66    49*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         50*       <  5> MOD                                               RES[  IS_TMP_VAR ~17 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435349) 2 ]
+         51*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_TMP_VAR ~17 ]
+   67    52*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         53*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~19 ]      OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435344) 0 ]
+         54*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~19 ]
+   70    55*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         56*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~20 ]      OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435339) 'odd' ]
+         57*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~20 ] OP2[ , ->64 ]
+   71    58*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         59*       <  5> MOD                                               RES[  IS_TMP_VAR ~21 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435334) 2 ]
+         60*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_TMP_VAR ~21 ]
+   72    61*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         62*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~23 ]      OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435329) 1 ]
+         63*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~23 ]
+   75    64*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         65*       < 62> RETURN                                                    OP1[  IS_CONST (268435324) <false> ]
+   76    66*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         67*       < 62> RETURN                                                    OP1[  IS_CONST (268435321) null ]
+
+End of function hasvalidlength
+
+Function hasvalidcharacters:
+[+]Function Source Class Name: Laminas\Validator\Barcode\AbstractAdapter
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:value
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\laminas\laminas-validator\src\Barcode\AbstractAdapter.php
+function name:  hasValidCharacters
+number of ops:  59
+compiled vars:  !0 = $value, !1 = $characters, !2 = $x, !3 = $chars, !4 = $char
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   84     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+   86     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       <123> TYPE_CHECK                                   64   RES[  IS_TMP_VAR ~5 ]       OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          3*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~6 ]       OP1[  IS_TMP_VAR ~5 ]
+          4*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~6 ] OP2[ , ->7 ]
+   87     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       < 62> RETURN                                                    OP1[  IS_CONST (268435428) <false> ]
+   90     7*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          8*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435425) 'getCharacters' ]
+          9*       < 60> DO_FCALL                                      0   RES[  IS_VAR $7 ]       OP1[  IS_UNUSED  ]
+         10*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_VAR $7 ]
+   91    11*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         12*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~9 ]       OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435419) 128 ]
+         13*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~9 ] OP2[ , ->32 ]
+   92    14*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         15*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435414) 0 ]
+         16*       < 42> JMP                                                       OP1[ ->28 ]
+   93    17*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         18*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435409) 'str_replace' ]
+         19*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435408) 'chr' ]
+         20*       <117> SEND_VAR                                                  OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         21*       < 60> DO_FCALL                                      0   RES[  IS_VAR $11 ]      OP1[  IS_UNUSED  ]
+         22*       <117> SEND_VAR                                                  OP1[  IS_VAR $11 ] OP2[  IS_UNUSED  ]
+         23*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435401) '' ]
+         24*       <117> SEND_VAR                                                  OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         25*       < 60> DO_FCALL                                      0   RES[  IS_VAR $12 ]      OP1[  IS_UNUSED  ]
+         26*       < 22> ASSIGN                                                    OP1[  IS_CV !0 ] OP2[ ,  IS_VAR $12 ]
+   92    27*       < 34> PRE_INC                                                   OP1[  IS_CV !2 ]
+         28*       < 20> IS_SMALLER                                        RES[  IS_TMP_VAR ~15 ]      OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435392) 128 ]
+         29*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         30*       < 44> JMPNZ                                                     OP1[  IS_TMP_VAR ~15 ] OP2[ , ->17 ]
+         31*       < 42> JMP                                                       OP1[ ->49 ]
+   96    32*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         33*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435383) 'str_split' ]
+         34*       <117> SEND_VAR                                                  OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         35*       < 60> DO_FCALL                                      0   RES[  IS_VAR $16 ]      OP1[  IS_UNUSED  ]
+         36*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_VAR $16 ]
+   97    37*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         38*       < 77> FE_RESET_R                                        RES[  IS_VAR $18 ]      OP1[  IS_CV !3 ] OP2[ , ->48 ]
+         39*       < 78> FE_FETCH_R                                                OP1[  IS_VAR $18 ] OP2[ ,  IS_CV !4 ] EXT_JMP_REL[ , ->48 ]
+   98    40*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         41*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435368) 'str_replace' ]
+         42*       <117> SEND_VAR                                                  OP1[  IS_CV !4 ] OP2[  IS_UNUSED  ]
+         43*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435365) '' ]
+         44*       <117> SEND_VAR                                                  OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         45*       < 60> DO_FCALL                                      0   RES[  IS_VAR $19 ]      OP1[  IS_UNUSED  ]
+         46*       < 22> ASSIGN                                                    OP1[  IS_CV !0 ] OP2[ ,  IS_VAR $19 ]
+   97    47*       < 42> JMP                                                       OP1[ ->39 ]
+         48*       <127> FE_FREE                                                   OP1[  IS_VAR $18 ] OP2[  IS_UNUSED  ]
+  102    49*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         50*       <121> STRLEN                                            RES[  IS_TMP_VAR ~21 ]      OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         51*       < 20> IS_SMALLER                                        RES[  IS_TMP_VAR ~22 ]      OP1[  IS_CONST (268435350) 0 ] OP2[ ,  IS_TMP_VAR ~21 ]
+         52*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~22 ] OP2[ , ->55 ]
+  103    53*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         54*       < 62> RETURN                                                    OP1[  IS_CONST (268435345) <false> ]
+  106    55*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         56*       < 62> RETURN                                                    OP1[  IS_CONST (268435342) <true> ]
+  107    57*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         58*       < 62> RETURN                                                    OP1[  IS_CONST (268435339) null ]
+
+End of function hasvalidcharacters
+
+Function hasvalidchecksum:
+[+]Function Source Class Name: Laminas\Validator\Barcode\AbstractAdapter
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:value
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\laminas\laminas-validator\src\Barcode\AbstractAdapter.php
+function name:  hasValidChecksum
+number of ops:  25
+compiled vars:  !0 = $value, !1 = $checksum
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  115     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  117     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435447) 'getChecksum' ]
+          3*       < 60> DO_FCALL                                      0   RES[  IS_VAR $2 ]       OP1[  IS_UNUSED  ]
+          4*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_VAR $2 ]
+  118     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       <154> ISSET_ISEMPTY_CV                                  RES[  IS_TMP_VAR ~4 ]       OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+          7*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~5 ]       OP1[  IS_TMP_VAR ~4 ]
+          8*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~5 ] OP2[ , ->21 ]
+  119     9*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         10*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435433) 'method_exists' ]
+         11*       <184> FETCH_THIS                                        RES[  IS_TMP_VAR ~6 ]       OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         12*       < 65> SEND_VAL                                                  OP1[  IS_TMP_VAR ~6 ]
+         13*       <117> SEND_VAR                                                  OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         14*       < 60> DO_FCALL                                      0   RES[  IS_VAR $7 ]       OP1[  IS_UNUSED  ]
+         15*       < 43> JMPZ                                                      OP1[  IS_VAR $7 ] OP2[ , ->21 ]
+  120    16*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         17*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CV !1 ]
+         18*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         19*       < 60> DO_FCALL                                      0   RES[  IS_VAR $8 ]       OP1[  IS_UNUSED  ]
+         20*       < 62> RETURN                                                    OP1[  IS_VAR $8 ]
+  124    21*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         22*       < 62> RETURN                                                    OP1[  IS_CONST (268435410) <false> ]
+  125    23*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         24*       < 62> RETURN                                                    OP1[  IS_CONST (268435407) null ]
+
+End of function hasvalidchecksum
+
+Function getlength:
+[+]Function Source Class Name: Laminas\Validator\Barcode\AbstractAdapter
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\laminas\laminas-validator\src\Barcode\AbstractAdapter.php
+function name:  getLength
+number of ops:  6
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  134     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435451) 'options' ]
+          2*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~1 ]       OP1[  IS_TMP_VAR ~0 ] OP2[ ,  IS_CONST (268435450) 'length' ]
+          3*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~1 ]
+  135     4*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          5*       < 62> RETURN                                                    OP1[  IS_CONST (268435445) null ]
+
+End of function getlength
+
+Function getcharacters:
+[+]Function Source Class Name: Laminas\Validator\Barcode\AbstractAdapter
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\laminas\laminas-validator\src\Barcode\AbstractAdapter.php
+function name:  getCharacters
+number of ops:  6
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  144     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435451) 'options' ]
+          2*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~1 ]       OP1[  IS_TMP_VAR ~0 ] OP2[ ,  IS_CONST (268435450) 'characters' ]
+          3*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~1 ]
+  145     4*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          5*       < 62> RETURN                                                    OP1[  IS_CONST (268435445) null ]
+
+End of function getcharacters
+
+Function getchecksum:
+[+]Function Source Class Name: Laminas\Validator\Barcode\AbstractAdapter
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\laminas\laminas-validator\src\Barcode\AbstractAdapter.php
+function name:  getChecksum
+number of ops:  6
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  154     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435451) 'options' ]
+          2*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~1 ]       OP1[  IS_TMP_VAR ~0 ] OP2[ ,  IS_CONST (268435450) 'checksum' ]
+          3*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~1 ]
+  155     4*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          5*       < 62> RETURN                                                    OP1[  IS_CONST (268435445) null ]
+
+End of function getchecksum
+
+Function setchecksum:
+[+]Function Source Class Name: Laminas\Validator\Barcode\AbstractAdapter
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:checksum
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\laminas\laminas-validator\src\Barcode\AbstractAdapter.php
+function name:  setChecksum
+number of ops:  10
+compiled vars:  !0 = $checksum
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  163     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  165     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 85> FETCH_OBJ_W                                       RES[  IS_VAR $1 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435449) 'options' ]
+          3*       < 23> ASSIGN_DIM                                                OP1[  IS_VAR $1 ] OP2[ ,  IS_CONST (268435448) 'checksum' ]
+          4*       <137> OP_DATA                                                   OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+  166     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       <184> FETCH_THIS                                        RES[  IS_TMP_VAR ~3 ]       OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          7*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~3 ]
+  167     8*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          9*       < 62> RETURN                                                    OP1[  IS_CONST (268435437) null ]
+
+End of function setchecksum
+
+Function usechecksum:
+[+]Function Source Class Name: Laminas\Validator\Barcode\AbstractAdapter
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:check
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\laminas\laminas-validator\src\Barcode\AbstractAdapter.php
+function name:  useChecksum
+number of ops:  18
+compiled vars:  !0 = $check
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  175     0*       < 64> RECV_INIT                                         RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435450) null ]
+  177     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       <123> TYPE_CHECK                                    2   RES[  IS_TMP_VAR ~1 ]       OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          3*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~1 ] OP2[ , ->8 ]
+  178     4*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          5*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~2 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435441) 'options' ]
+          6*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~3 ]       OP1[  IS_TMP_VAR ~2 ] OP2[ ,  IS_CONST (268435440) 'useChecksum' ]
+          7*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~3 ]
+  181     8*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          9*       < 52> BOOL                                              RES[  IS_TMP_VAR ~6 ]       OP1[  IS_CV !0 ]
+         10*       < 85> FETCH_OBJ_W                                       RES[  IS_VAR $4 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435433) 'options' ]
+         11*       < 23> ASSIGN_DIM                                                OP1[  IS_VAR $4 ] OP2[ ,  IS_CONST (268435432) 'useChecksum' ]
+         12*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~6 ] OP2[  IS_UNUSED  ]
+  182    13*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         14*       <184> FETCH_THIS                                        RES[  IS_TMP_VAR ~7 ]       OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         15*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~7 ]
+  183    16*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         17*       < 62> RETURN                                                    OP1[  IS_CONST (268435421) null ]
+
+End of function usechecksum
+
+Function setlength:
+[+]Function Source Class Name: Laminas\Validator\Barcode\AbstractAdapter
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:length
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\laminas\laminas-validator\src\Barcode\AbstractAdapter.php
+function name:  setLength
+number of ops:  10
+compiled vars:  !0 = $length
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  191     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  193     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 85> FETCH_OBJ_W                                       RES[  IS_VAR $1 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435449) 'options' ]
+          3*       < 23> ASSIGN_DIM                                                OP1[  IS_VAR $1 ] OP2[ ,  IS_CONST (268435448) 'length' ]
+          4*       <137> OP_DATA                                                   OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+  194     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       <184> FETCH_THIS                                        RES[  IS_TMP_VAR ~3 ]       OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          7*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~3 ]
+  195     8*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          9*       < 62> RETURN                                                    OP1[  IS_CONST (268435437) null ]
+
+End of function setlength
+
+Function setcharacters:
+[+]Function Source Class Name: Laminas\Validator\Barcode\AbstractAdapter
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:characters
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\laminas\laminas-validator\src\Barcode\AbstractAdapter.php
+function name:  setCharacters
+number of ops:  10
+compiled vars:  !0 = $characters
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  203     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  205     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 85> FETCH_OBJ_W                                       RES[  IS_VAR $1 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435449) 'options' ]
+          3*       < 23> ASSIGN_DIM                                                OP1[  IS_VAR $1 ] OP2[ ,  IS_CONST (268435448) 'characters' ]
+          4*       <137> OP_DATA                                                   OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+  206     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       <184> FETCH_THIS                                        RES[  IS_TMP_VAR ~3 ]       OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          7*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~3 ]
+  207     8*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          9*       < 62> RETURN                                                    OP1[  IS_CONST (268435437) null ]
+
+End of function setcharacters
+
+Function gtin:
+[+]Function Source Class Name: Laminas\Validator\Barcode\AbstractAdapter
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:value
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\laminas\laminas-validator\src\Barcode\AbstractAdapter.php
+function name:  gtin
+number of ops:  54
+compiled vars:  !0 = $value, !1 = $barcode, !2 = $sum, !3 = $length, !4 = $i, !5 = $calc, !6 = $checksum
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  216     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  218     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435437) 'substr' ]
+          3*       <117> SEND_VAR                                                  OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          4*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435434) 0 ]
+          5*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435433) -1 ]
+          6*       < 60> DO_FCALL                                      0   RES[  IS_VAR $7 ]       OP1[  IS_UNUSED  ]
+          7*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_VAR $7 ]
+  219     8*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          9*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435426) 0 ]
+  220    10*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         11*       <121> STRLEN                                            RES[  IS_TMP_VAR ~10 ]      OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         12*       <  2> SUB                                               RES[  IS_TMP_VAR ~11 ]      OP1[  IS_TMP_VAR ~10 ] OP2[ ,  IS_CONST (268435421) 1 ]
+         13*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_TMP_VAR ~11 ]
+  222    14*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         15*       < 22> ASSIGN                                                    OP1[  IS_CV !4 ] OP2[ ,  IS_CONST (268435416) 0 ]
+         16*       < 42> JMP                                                       OP1[ ->32 ]
+  223    17*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         18*       <  5> MOD                                               RES[  IS_TMP_VAR ~14 ]      OP1[  IS_CV !4 ] OP2[ ,  IS_CONST (268435411) 2 ]
+         19*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~15 ]      OP1[  IS_TMP_VAR ~14 ] OP2[ ,  IS_CONST (268435410) 0 ]
+         20*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~15 ] OP2[ , ->27 ]
+  224    21*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         22*       <  2> SUB                                               RES[  IS_TMP_VAR ~16 ]      OP1[  IS_CV !3 ] OP2[ ,  IS_CV !4 ]
+         23*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~17 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_TMP_VAR ~16 ]
+         24*       <  3> MUL                                               RES[  IS_TMP_VAR ~18 ]      OP1[  IS_TMP_VAR ~17 ] OP2[ ,  IS_CONST (268435401) 3 ]
+         25*       < 26> ASSIGN_OP                    +=               1           OP1[  IS_CV !2 ] OP2[ ,  IS_TMP_VAR ~18 ]
+         26*       < 42> JMP                                                       OP1[ ->31 ]
+  226    27*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         28*       <  2> SUB                                               RES[  IS_TMP_VAR ~20 ]      OP1[  IS_CV !3 ] OP2[ ,  IS_CV !4 ]
+         29*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~21 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_TMP_VAR ~20 ]
+         30*       < 26> ASSIGN_OP                    +=               1           OP1[  IS_CV !2 ] OP2[ ,  IS_TMP_VAR ~21 ]
+  222    31*       < 34> PRE_INC                                                   OP1[  IS_CV !4 ]
+         32*       < 21> IS_SMALLER_OR_EQUAL                               RES[  IS_TMP_VAR ~24 ]      OP1[  IS_CV !4 ] OP2[ ,  IS_CV !3 ]
+         33*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         34*       < 44> JMPNZ                                                     OP1[  IS_TMP_VAR ~24 ] OP2[ , ->17 ]
+  230    35*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         36*       <  5> MOD                                               RES[  IS_TMP_VAR ~25 ]      OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435378) 10 ]
+         37*       < 22> ASSIGN                                                    OP1[  IS_CV !5 ] OP2[ ,  IS_TMP_VAR ~25 ]
+  231    38*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         39*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~27 ]      OP1[  IS_CV !5 ] OP2[ ,  IS_CONST (268435373) 0 ]
+         40*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~27 ] OP2[ , ->43 ]
+         41*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~28 ]      OP1[  IS_CONST (268435370) 0 ]
+         42*       < 42> JMP                                                       OP1[ ->45 ]
+         43*       <  2> SUB                                               RES[  IS_TMP_VAR ~29 ]      OP1[  IS_CONST (268435367) 10 ] OP2[ ,  IS_CV !5 ]
+         44*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~28 ]      OP1[  IS_TMP_VAR ~29 ]
+         45*       < 22> ASSIGN                                                    OP1[  IS_CV !6 ] OP2[ ,  IS_TMP_VAR ~28 ]
+  233    46*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         47*       <  1> ADD                                               RES[  IS_TMP_VAR ~31 ]      OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435360) 1 ]
+         48*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~32 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_TMP_VAR ~31 ]
+         49*       < 51> CAST                                          6   RES[  IS_TMP_VAR ~33 ]      OP1[  IS_CV !6 ] OP2[  IS_UNUSED  ]
+         50*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~34 ]      OP1[  IS_TMP_VAR ~32 ] OP2[ ,  IS_TMP_VAR ~33 ]
+         51*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~34 ]
+  234    52*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         53*       < 62> RETURN                                                    OP1[  IS_CONST (268435349) null ]
+
+End of function gtin
+
+Function identcode:
+[+]Function Source Class Name: Laminas\Validator\Barcode\AbstractAdapter
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:value
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\laminas\laminas-validator\src\Barcode\AbstractAdapter.php
+function name:  identcode
+number of ops:  55
+compiled vars:  !0 = $value, !1 = $barcode, !2 = $sum, !3 = $length, !4 = $i, !5 = $calc, !6 = $checksum
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  243     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  245     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435436) 'substr' ]
+          3*       <117> SEND_VAR                                                  OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          4*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435433) 0 ]
+          5*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435432) -1 ]
+          6*       < 60> DO_FCALL                                      0   RES[  IS_VAR $7 ]       OP1[  IS_UNUSED  ]
+          7*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_VAR $7 ]
+  246     8*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          9*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435425) 0 ]
+  247    10*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         11*       <121> STRLEN                                            RES[  IS_TMP_VAR ~10 ]      OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         12*       <  2> SUB                                               RES[  IS_TMP_VAR ~11 ]      OP1[  IS_TMP_VAR ~10 ] OP2[ ,  IS_CONST (268435420) 2 ]
+         13*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_TMP_VAR ~11 ]
+  249    14*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         15*       < 22> ASSIGN                                                    OP1[  IS_CV !4 ] OP2[ ,  IS_CONST (268435415) 0 ]
+         16*       < 42> JMP                                                       OP1[ ->33 ]
+  250    17*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         18*       <  5> MOD                                               RES[  IS_TMP_VAR ~14 ]      OP1[  IS_CV !4 ] OP2[ ,  IS_CONST (268435410) 2 ]
+         19*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~15 ]      OP1[  IS_TMP_VAR ~14 ] OP2[ ,  IS_CONST (268435409) 0 ]
+         20*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~15 ] OP2[ , ->27 ]
+  251    21*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         22*       <  2> SUB                                               RES[  IS_TMP_VAR ~16 ]      OP1[  IS_CV !3 ] OP2[ ,  IS_CV !4 ]
+         23*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~17 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_TMP_VAR ~16 ]
+         24*       <  3> MUL                                               RES[  IS_TMP_VAR ~18 ]      OP1[  IS_TMP_VAR ~17 ] OP2[ ,  IS_CONST (268435400) 4 ]
+         25*       < 26> ASSIGN_OP                    +=               1           OP1[  IS_CV !2 ] OP2[ ,  IS_TMP_VAR ~18 ]
+         26*       < 42> JMP                                                       OP1[ ->32 ]
+  253    27*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         28*       <  2> SUB                                               RES[  IS_TMP_VAR ~20 ]      OP1[  IS_CV !3 ] OP2[ ,  IS_CV !4 ]
+         29*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~21 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_TMP_VAR ~20 ]
+         30*       <  3> MUL                                               RES[  IS_TMP_VAR ~22 ]      OP1[  IS_TMP_VAR ~21 ] OP2[ ,  IS_CONST (268435389) 9 ]
+         31*       < 26> ASSIGN_OP                    +=               1           OP1[  IS_CV !2 ] OP2[ ,  IS_TMP_VAR ~22 ]
+  249    32*       < 34> PRE_INC                                                   OP1[  IS_CV !4 ]
+         33*       < 21> IS_SMALLER_OR_EQUAL                               RES[  IS_TMP_VAR ~25 ]      OP1[  IS_CV !4 ] OP2[ ,  IS_CV !3 ]
+         34*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         35*       < 44> JMPNZ                                                     OP1[  IS_TMP_VAR ~25 ] OP2[ , ->17 ]
+  257    36*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         37*       <  5> MOD                                               RES[  IS_TMP_VAR ~26 ]      OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435376) 10 ]
+         38*       < 22> ASSIGN                                                    OP1[  IS_CV !5 ] OP2[ ,  IS_TMP_VAR ~26 ]
+  258    39*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         40*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~28 ]      OP1[  IS_CV !5 ] OP2[ ,  IS_CONST (268435371) 0 ]
+         41*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~28 ] OP2[ , ->44 ]
+         42*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~29 ]      OP1[  IS_CONST (268435368) 0 ]
+         43*       < 42> JMP                                                       OP1[ ->46 ]
+         44*       <  2> SUB                                               RES[  IS_TMP_VAR ~30 ]      OP1[  IS_CONST (268435365) 10 ] OP2[ ,  IS_CV !5 ]
+         45*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~29 ]      OP1[  IS_TMP_VAR ~30 ]
+         46*       < 22> ASSIGN                                                    OP1[  IS_CV !6 ] OP2[ ,  IS_TMP_VAR ~29 ]
+  260    47*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         48*       <  1> ADD                                               RES[  IS_TMP_VAR ~32 ]      OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435358) 1 ]
+         49*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~33 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_TMP_VAR ~32 ]
+         50*       < 51> CAST                                          6   RES[  IS_TMP_VAR ~34 ]      OP1[  IS_CV !6 ] OP2[  IS_UNUSED  ]
+         51*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~35 ]      OP1[  IS_TMP_VAR ~33 ] OP2[ ,  IS_TMP_VAR ~34 ]
+         52*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~35 ]
+  261    53*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         54*       < 62> RETURN                                                    OP1[  IS_CONST (268435347) null ]
+
+End of function identcode
+
+Function code25:
+[+]Function Source Class Name: Laminas\Validator\Barcode\AbstractAdapter
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:value
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\laminas\laminas-validator\src\Barcode\AbstractAdapter.php
+function name:  code25
+number of ops:  52
+compiled vars:  !0 = $value, !1 = $barcode, !2 = $sum, !3 = $length, !4 = $i, !5 = $calc, !6 = $checksum
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  270     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  272     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435437) 'substr' ]
+          3*       <117> SEND_VAR                                                  OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          4*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435434) 0 ]
+          5*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435433) -1 ]
+          6*       < 60> DO_FCALL                                      0   RES[  IS_VAR $7 ]       OP1[  IS_UNUSED  ]
+          7*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_VAR $7 ]
+  273     8*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          9*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435426) 0 ]
+  274    10*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         11*       <121> STRLEN                                            RES[  IS_TMP_VAR ~10 ]      OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         12*       <  2> SUB                                               RES[  IS_TMP_VAR ~11 ]      OP1[  IS_TMP_VAR ~10 ] OP2[ ,  IS_CONST (268435421) 1 ]
+         13*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_TMP_VAR ~11 ]
+  276    14*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         15*       < 22> ASSIGN                                                    OP1[  IS_CV !4 ] OP2[ ,  IS_CONST (268435416) 0 ]
+         16*       < 42> JMP                                                       OP1[ ->30 ]
+  277    17*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         18*       <  5> MOD                                               RES[  IS_TMP_VAR ~14 ]      OP1[  IS_CV !4 ] OP2[ ,  IS_CONST (268435411) 2 ]
+         19*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~15 ]      OP1[  IS_TMP_VAR ~14 ] OP2[ ,  IS_CONST (268435410) 0 ]
+         20*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~15 ] OP2[ , ->26 ]
+  278    21*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         22*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~16 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CV !4 ]
+         23*       <  3> MUL                                               RES[  IS_TMP_VAR ~17 ]      OP1[  IS_TMP_VAR ~16 ] OP2[ ,  IS_CONST (268435403) 3 ]
+         24*       < 26> ASSIGN_OP                    +=               1           OP1[  IS_CV !2 ] OP2[ ,  IS_TMP_VAR ~17 ]
+         25*       < 42> JMP                                                       OP1[ ->29 ]
+  280    26*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         27*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~19 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CV !4 ]
+         28*       < 26> ASSIGN_OP                    +=               1           OP1[  IS_CV !2 ] OP2[ ,  IS_TMP_VAR ~19 ]
+  276    29*       < 34> PRE_INC                                                   OP1[  IS_CV !4 ]
+         30*       < 21> IS_SMALLER_OR_EQUAL                               RES[  IS_TMP_VAR ~22 ]      OP1[  IS_CV !4 ] OP2[ ,  IS_CV !3 ]
+         31*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         32*       < 44> JMPNZ                                                     OP1[  IS_TMP_VAR ~22 ] OP2[ , ->17 ]
+  284    33*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         34*       <  5> MOD                                               RES[  IS_TMP_VAR ~23 ]      OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435382) 10 ]
+         35*       < 22> ASSIGN                                                    OP1[  IS_CV !5 ] OP2[ ,  IS_TMP_VAR ~23 ]
+  285    36*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         37*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~25 ]      OP1[  IS_CV !5 ] OP2[ ,  IS_CONST (268435377) 0 ]
+         38*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~25 ] OP2[ , ->41 ]
+         39*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~26 ]      OP1[  IS_CONST (268435374) 0 ]
+         40*       < 42> JMP                                                       OP1[ ->43 ]
+         41*       <  2> SUB                                               RES[  IS_TMP_VAR ~27 ]      OP1[  IS_CONST (268435371) 10 ] OP2[ ,  IS_CV !5 ]
+         42*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~26 ]      OP1[  IS_TMP_VAR ~27 ]
+         43*       < 22> ASSIGN                                                    OP1[  IS_CV !6 ] OP2[ ,  IS_TMP_VAR ~26 ]
+  287    44*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         45*       <  1> ADD                                               RES[  IS_TMP_VAR ~29 ]      OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435364) 1 ]
+         46*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~30 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_TMP_VAR ~29 ]
+         47*       < 51> CAST                                          6   RES[  IS_TMP_VAR ~31 ]      OP1[  IS_CV !6 ] OP2[  IS_UNUSED  ]
+         48*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~32 ]      OP1[  IS_TMP_VAR ~30 ] OP2[ ,  IS_TMP_VAR ~31 ]
+         49*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~32 ]
+  288    50*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         51*       < 62> RETURN                                                    OP1[  IS_CONST (268435353) null ]
+
+End of function code25
+
+Function postnet:
+[+]Function Source Class Name: Laminas\Validator\Barcode\AbstractAdapter
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:value
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\laminas\laminas-validator\src\Barcode\AbstractAdapter.php
+function name:  postnet
+number of ops:  38
+compiled vars:  !0 = $value, !1 = $checksum, !2 = $values, !3 = $check, !4 = $row
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  297     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  299     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435441) 'substr' ]
+          3*       <117> SEND_VAR                                                  OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          4*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435438) -1 ]
+          5*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435437) 1 ]
+          6*       < 60> DO_FCALL                                      0   RES[  IS_VAR $5 ]       OP1[  IS_UNUSED  ]
+          7*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_VAR $5 ]
+  300     8*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          9*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435430) 'str_split' ]
+         10*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435429) 'substr' ]
+         11*       <117> SEND_VAR                                                  OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         12*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435426) 0 ]
+         13*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435425) -1 ]
+         14*       < 60> DO_FCALL                                      0   RES[  IS_VAR $7 ]       OP1[  IS_UNUSED  ]
+         15*       <117> SEND_VAR                                                  OP1[  IS_VAR $7 ] OP2[  IS_UNUSED  ]
+         16*       < 60> DO_FCALL                                      0   RES[  IS_VAR $8 ]       OP1[  IS_UNUSED  ]
+         17*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_VAR $8 ]
+  302    18*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         19*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435414) 0 ]
+  303    20*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         21*       < 77> FE_RESET_R                                        RES[  IS_VAR $11 ]      OP1[  IS_CV !2 ] OP2[ , ->26 ]
+         22*       < 78> FE_FETCH_R                                                OP1[  IS_VAR $11 ] OP2[ ,  IS_CV !4 ] EXT_JMP_REL[ , ->26 ]
+  304    23*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         24*       < 26> ASSIGN_OP                    +=               1           OP1[  IS_CV !3 ] OP2[ ,  IS_CV !4 ]
+  303    25*       < 42> JMP                                                       OP1[ ->22 ]
+         26*       <127> FE_FREE                                                   OP1[  IS_VAR $11 ] OP2[  IS_UNUSED  ]
+  307    27*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         28*       < 26> ASSIGN_OP                    %=               5           OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435397) 10 ]
+  308    29*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         30*       <  2> SUB                                               RES[  IS_TMP_VAR ~14 ]      OP1[  IS_CONST (268435394) 10 ] OP2[ ,  IS_CV !3 ]
+         31*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_TMP_VAR ~14 ]
+  310    32*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         33*       < 51> CAST                                          6   RES[  IS_TMP_VAR ~16 ]      OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         34*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~17 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_TMP_VAR ~16 ]
+         35*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~17 ]
+  311    36*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         37*       < 62> RETURN                                                    OP1[  IS_CONST (268435381) null ]
+
+End of function postnet
+
+End of class Laminas\Validator\Barcode\AbstractAdapter.
+

@@ -1,0 +1,221 @@
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\sabre\vobject\lib\TimezoneGuesser\FindFromTimezoneMap.php
+function name:  (null)
+number of ops:  7
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+    3     0*       <  0> NOP                                                      
+    5     1*       <  0> NOP                                                      
+    7     2*       <  0> NOP                                                      
+   14     3*       <  0> NOP                                                      
+   12     4*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          5*       <144> DECLARE_CLASS                                             OP1[  IS_CONST (268435438) 'sabre%5Cvobject%5Ctimezoneguesser%5Cfindfromtimezonemap' ] OP2[  IS_UNUSED  ]
+   79     6*       < 62> RETURN                                                    OP1[  IS_CONST (268435438) 1 ]
+
+Class Sabre\VObject\TimezoneGuesser\FindFromTimezoneMap:
+[+]Class Parent Name: NULL
+End Trait extract
+Start Properties extract:
+End Properties extract.
+
+Function find:
+[+]Function Source Class Name: Sabre\VObject\TimezoneGuesser\FindFromTimezoneMap
+[*]Start of arg_info extract:
+[*]arg_info num_args:2
+[*]Function return type:?DateTimeZone
+
+[*]ArgInfoNo**0**
+[*]name:tzid
+[*]type:string
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:failIfUncertain
+[*]type:bool
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\sabre\vobject\lib\TimezoneGuesser\FindFromTimezoneMap.php
+function name:  find
+number of ops:  55
+compiled vars:  !0 = $tzid, !1 = $failIfUncertain, !2 = $pattern, !3 = $matches, !4 = $tzidAlternate
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   21     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 64> RECV_INIT                                         RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435405) <false> ]
+   24     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435402) 'hasTzInMap' ]
+          4*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          5*       < 60> DO_FCALL                                      0   RES[  IS_VAR $5 ]       OP1[  IS_UNUSED  ]
+          6*       < 43> JMPZ                                                      OP1[  IS_VAR $5 ] OP2[ , ->16 ]
+   25     7*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          8*       < 68> NEW                                               RES[  IS_VAR $6 ]       OP1[ 'DateTimeZone' ]
+          9*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435394) 'getTzFromMap' ]
+         10*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         11*       < 60> DO_FCALL                                      0   RES[  IS_VAR $7 ]       OP1[  IS_UNUSED  ]
+         12*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $7 ] OP2[  IS_UNUSED  ]
+         13*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         14*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_VAR $6 ] OP2[  IS_UNUSED  ]
+         15*       < 62> RETURN                                                    OP1[  IS_VAR $6 ]
+   31    16*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         17*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~9 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435380) 'patterns' ]
+         18*       < 77> FE_RESET_R                                        RES[  IS_VAR $10 ]      OP1[  IS_TMP_VAR ~9 ] OP2[ , ->49 ]
+         19*       < 78> FE_FETCH_R                                                OP1[  IS_VAR $10 ] OP2[ ,  IS_CV !2 ] EXT_JMP_REL[ , ->49 ]
+   32    20*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         21*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435373) 'Sabre%5CVObject%5CTimezoneGuesser%5Cpreg_match' ]
+         22*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         23*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         24*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         25*       < 60> DO_FCALL                                      0   RES[  IS_VAR $11 ]      OP1[  IS_UNUSED  ]
+         26*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~12 ]      OP1[  IS_VAR $11 ]
+         27*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~12 ] OP2[ , ->30 ]
+   33    28*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         29*       < 42> JMP                                                       OP1[ ->19 ]
+   35    30*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         31*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~13 ]      OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435356) 3 ]
+         32*       < 22> ASSIGN                                                    OP1[  IS_CV !4 ] OP2[ ,  IS_TMP_VAR ~13 ]
+   36    33*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         34*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435351) 'hasTzInMap' ]
+         35*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !4 ] OP2[  IS_UNUSED  ]
+         36*       < 60> DO_FCALL                                      0   RES[  IS_VAR $15 ]      OP1[  IS_UNUSED  ]
+         37*       < 43> JMPZ                                                      OP1[  IS_VAR $15 ] OP2[ , ->48 ]
+   37    38*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         39*       < 68> NEW                                               RES[  IS_VAR $16 ]      OP1[ 'DateTimeZone' ]
+         40*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435343) 'getTzFromMap' ]
+         41*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !4 ] OP2[  IS_UNUSED  ]
+         42*       < 60> DO_FCALL                                      0   RES[  IS_VAR $17 ]      OP1[  IS_UNUSED  ]
+         43*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $17 ] OP2[  IS_UNUSED  ]
+         44*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         45*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_VAR $16 ] OP2[  IS_UNUSED  ]
+         46*       <127> FE_FREE                                                   OP1[  IS_VAR $10 ] OP2[  IS_UNUSED  ]
+         47*       < 62> RETURN                                                    OP1[  IS_VAR $16 ]
+   31    48*       < 42> JMP                                                       OP1[ ->19 ]
+         49*       <127> FE_FREE                                                   OP1[  IS_VAR $10 ] OP2[  IS_UNUSED  ]
+   41    50*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         51*       < 62> RETURN                                                    OP1[  IS_CONST (268435323) null ]
+   42    52*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         53*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         54*       < 62> RETURN                                                    OP1[  IS_CONST (268435318) null ]
+
+End of function find
+
+Function gettzmaps:
+[+]Function Source Class Name: Sabre\VObject\TimezoneGuesser\FindFromTimezoneMap
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\sabre\vobject\lib\TimezoneGuesser\FindFromTimezoneMap.php
+function name:  getTzMaps
+number of ops:  22
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   57     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435394) 'map' ]
+          2*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~1 ]       OP1[  IS_TMP_VAR ~0 ] OP2[ ,  IS_CONST (268435393) <array> ]
+          3*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~1 ] OP2[ , ->17 ]
+   58     4*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          5*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435389) 'Sabre%5CVObject%5CTimezoneGuesser%5Carray_merge' ]
+   59     6*       < 73> INCLUDE_OR_EVAL                                   RES[  IS_VAR $3 ]       OP1[  IS_CONST (268435390) 'G%3A%5Cdesktop%5CYama%5Capp%5Cglpi-10.0.16%5Cglpi%5Cvendor%5Csabre%5Cvobject%5Clib%5CTimezoneGuesser%2F..%2Ftimezonedata%2Fwindowszones.php' ] OP2[ INCLUDE ]
+          7*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $3 ] OP2[  IS_UNUSED  ]
+   60     8*       < 73> INCLUDE_OR_EVAL                                   RES[  IS_VAR $4 ]       OP1[  IS_CONST (268435387) 'G%3A%5Cdesktop%5CYama%5Capp%5Cglpi-10.0.16%5Cglpi%5Cvendor%5Csabre%5Cvobject%5Clib%5CTimezoneGuesser%2F..%2Ftimezonedata%2Flotuszones.php' ] OP2[ INCLUDE ]
+          9*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $4 ] OP2[  IS_UNUSED  ]
+   61    10*       < 73> INCLUDE_OR_EVAL                                   RES[  IS_VAR $5 ]       OP1[  IS_CONST (268435384) 'G%3A%5Cdesktop%5CYama%5Capp%5Cglpi-10.0.16%5Cglpi%5Cvendor%5Csabre%5Cvobject%5Clib%5CTimezoneGuesser%2F..%2Ftimezonedata%2Fexchangezones.php' ] OP2[ INCLUDE ]
+         11*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $5 ] OP2[  IS_UNUSED  ]
+   62    12*       < 73> INCLUDE_OR_EVAL                                   RES[  IS_VAR $6 ]       OP1[  IS_CONST (268435381) 'G%3A%5Cdesktop%5CYama%5Capp%5Cglpi-10.0.16%5Cglpi%5Cvendor%5Csabre%5Cvobject%5Clib%5CTimezoneGuesser%2F..%2Ftimezonedata%2Fphp-workaround.php' ] OP2[ INCLUDE ]
+         13*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $6 ] OP2[  IS_UNUSED  ]
+         14*       < 60> DO_FCALL                                      0   RES[  IS_VAR $7 ]       OP1[  IS_UNUSED  ]
+   58    15*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435368) 'map' ]
+   62    16*       <137> OP_DATA                                                   OP1[  IS_VAR $7 ] OP2[  IS_UNUSED  ]
+   66    17*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         18*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~8 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435370) 'map' ]
+         19*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~8 ]
+   67    20*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         21*       < 62> RETURN                                                    OP1[  IS_CONST (268435365) null ]
+
+End of function gettzmaps
+
+Function gettzfrommap:
+[+]Function Source Class Name: Sabre\VObject\TimezoneGuesser\FindFromTimezoneMap
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:string
+
+[*]ArgInfoNo**0**
+[*]name:tzid
+[*]type:string
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\sabre\vobject\lib\TimezoneGuesser\FindFromTimezoneMap.php
+function name:  getTzFromMap
+number of ops:  10
+compiled vars:  !0 = $tzid
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   69     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+   71     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435444) 'getTzMaps' ]
+          3*       < 60> DO_FCALL                                      0   RES[  IS_VAR $1 ]       OP1[  IS_UNUSED  ]
+          4*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~2 ]       OP1[  IS_VAR $1 ] OP2[ ,  IS_CV !0 ]
+          5*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_TMP_VAR ~2 ] OP2[  IS_UNUSED  ]
+          6*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~2 ]
+   72     7*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          8*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          9*       < 62> RETURN                                                    OP1[  IS_CONST (268435432) null ]
+
+End of function gettzfrommap
+
+Function hastzinmap:
+[+]Function Source Class Name: Sabre\VObject\TimezoneGuesser\FindFromTimezoneMap
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:bool
+
+[*]ArgInfoNo**0**
+[*]name:tzid
+[*]type:string
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\sabre\vobject\lib\TimezoneGuesser\FindFromTimezoneMap.php
+function name:  hasTzInMap
+number of ops:  10
+compiled vars:  !0 = $tzid
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   74     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+   76     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435444) 'getTzMaps' ]
+          3*       < 60> DO_FCALL                                      0   RES[  IS_VAR $1 ]       OP1[  IS_UNUSED  ]
+          4*       <115> ISSET_ISEMPTY_DIM_OBJ                         0   RES[  IS_TMP_VAR ~2 ]       OP1[  IS_VAR $1 ] OP2[ ,  IS_CV !0 ]
+          5*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_TMP_VAR ~2 ] OP2[  IS_UNUSED  ]
+          6*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~2 ]
+   77     7*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          8*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          9*       < 62> RETURN                                                    OP1[  IS_CONST (268435432) null ]
+
+End of function hastzinmap
+
+End of class Sabre\VObject\TimezoneGuesser\FindFromTimezoneMap.
+

@@ -1,0 +1,320 @@
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\Http\Firewall.php
+function name:  (null)
+number of ops:  6
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   36     0*       <  0> NOP                                                      
+   38     1*       <  0> NOP                                                      
+   90     2*       <  0> NOP                                                      
+   96     3*       <  0> NOP                                                      
+  205     4*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          5*       < 62> RETURN                                                    OP1[  IS_CONST (268435445) 1 ]
+
+Class Glpi\Http\Firewall:
+[+]Class Parent Name: NULL
+End Trait extract
+Start Properties extract:
+End Properties extract.
+
+Function __construct:
+[+]Function Source Class Name: Glpi\Http\Firewall
+[*]Start of arg_info extract:
+[*]arg_info num_args:3
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:path_prefix
+[*]type:string
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:root_dir
+[*]type:string
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**2**
+[*]name:plugins_dirs
+[*]type:array
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\Http\Firewall.php
+function name:  __construct
+number of ops:  14
+compiled vars:  !0 = $path_prefix, !1 = $root_dir, !2 = $plugins_dirs
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  109     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 64> RECV_INIT                                         RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435444) <const ast> ]
+          2*       < 64> RECV_INIT                                         RES[  IS_CV !2 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435443) <const ast> ]
+  111     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435440) 'path_prefix' ]
+          5*       <137> OP_DATA                                                   OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+  112     6*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          7*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435435) 'root_dir' ]
+          8*       <137> OP_DATA                                                   OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+  113     9*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         10*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435430) 'plugins_dirs' ]
+         11*       <137> OP_DATA                                                   OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+  114    12*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         13*       < 62> RETURN                                                    OP1[  IS_CONST (268435425) null ]
+
+End of function __construct
+
+Function applystrategy:
+[+]Function Source Class Name: Glpi\Http\Firewall
+[*]Start of arg_info extract:
+[*]arg_info num_args:2
+[*]Function return type:void
+
+[*]ArgInfoNo**0**
+[*]name:path
+[*]type:string
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:strategy
+[*]type:?string
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\Http\Firewall.php
+function name:  applyStrategy
+number of ops:  63
+compiled vars:  !0 = $path, !1 = $strategy
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  123     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 64> RECV_INIT                                         RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435419) null ]
+  125     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       <123> TYPE_CHECK                                    2   RES[  IS_TMP_VAR ~2 ]       OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+          4*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~2 ] OP2[ , ->10 ]
+  126     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435410) 'computeDefaultStrategy' ]
+          7*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          8*       < 60> DO_FCALL                                      0   RES[  IS_VAR $3 ]       OP1[  IS_UNUSED  ]
+          9*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_VAR $3 ]
+  130    10*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         11*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~6 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435402) 'STRATEGY_AUTHENTICATED' ]
+         12*       < 18> IS_EQUAL                                          RES[  ]         OP1[  IS_CV !1 ] OP2[ ,  IS_TMP_VAR ~6 ]
+         13*       < 44> JMPNZ                                                     OP1[  IS_TMP_VAR ~5 ] OP2[ , ->27 ]
+  133    14*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~7 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435397) 'STRATEGY_CENTRAL_ACCESS' ]
+         15*       < 18> IS_EQUAL                                          RES[  ]         OP1[  IS_CV !1 ] OP2[ ,  IS_TMP_VAR ~7 ]
+         16*       < 44> JMPNZ                                                     OP1[  IS_TMP_VAR ~5 ] OP2[ , ->32 ]
+  136    17*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~8 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435392) 'STRATEGY_HELPDESK_ACCESS' ]
+         18*       < 18> IS_EQUAL                                          RES[  ]         OP1[  IS_CV !1 ] OP2[ ,  IS_TMP_VAR ~8 ]
+         19*       < 44> JMPNZ                                                     OP1[  IS_TMP_VAR ~5 ] OP2[ , ->37 ]
+  139    20*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~9 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435387) 'STRATEGY_FAQ_ACCESS' ]
+         21*       < 18> IS_EQUAL                                          RES[  ]         OP1[  IS_CV !1 ] OP2[ ,  IS_TMP_VAR ~9 ]
+         22*       < 44> JMPNZ                                                     OP1[  IS_TMP_VAR ~5 ] OP2[ , ->42 ]
+  142    23*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~10 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435382) 'STRATEGY_NO_CHECK' ]
+         24*       < 18> IS_EQUAL                                          RES[  ]         OP1[  IS_CV !1 ] OP2[ ,  IS_TMP_VAR ~10 ]
+         25*       < 44> JMPNZ                                                     OP1[  IS_TMP_VAR ~5 ] OP2[ , ->47 ]
+         26*       < 42> JMP                                                       OP1[ ->49 ]
+  131    27*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         28*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435373) 'Session' ] OP2[ ,  IS_CONST (268435375) 'checkLoginUser' ]
+         29*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  132    30*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         31*       < 42> JMP                                                       OP1[ ->61 ]
+  134    32*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         33*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435367) 'Session' ] OP2[ ,  IS_CONST (268435369) 'checkCentralAccess' ]
+         34*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  135    35*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         36*       < 42> JMP                                                       OP1[ ->61 ]
+  137    37*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         38*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435361) 'Session' ] OP2[ ,  IS_CONST (268435363) 'checkHelpdeskAccess' ]
+         39*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  138    40*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         41*       < 42> JMP                                                       OP1[ ->61 ]
+  140    42*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         43*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435355) 'Session' ] OP2[ ,  IS_CONST (268435357) 'checkFaqAccess' ]
+         44*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  141    45*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         46*       < 42> JMP                                                       OP1[ ->61 ]
+  144    47*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         48*       < 42> JMP                                                       OP1[ ->61 ]
+  146    49*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         50*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435345) 'Glpi%5CHttp%5Ctrigger_error' ]
+         51*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435346) 'Glpi%5CHttp%5Csprintf' ]
+         52*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435347) 'Invalid+%60%25s%60+strategy.' ] OP2[  IS_UNUSED  ]
+         53*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         54*       < 60> DO_FCALL                                      0   RES[  IS_VAR $15 ]      OP1[  IS_UNUSED  ]
+         55*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $15 ] OP2[  IS_UNUSED  ]
+         56*       < 99> FETCH_CONSTANT                                    RES[  IS_TMP_VAR ~16 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435340) 'Glpi%5CHttp%5CE_USER_WARNING' ]
+         57*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~16 ] OP2[  IS_UNUSED  ]
+         58*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  147    59*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         60*       < 42> JMP                                                       OP1[ ->61 ]
+  149    61*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         62*       < 62> RETURN                                                    OP1[  IS_CONST (268435331) null ]
+
+End of function applystrategy
+
+Function computedefaultstrategy:
+[+]Function Source Class Name: Glpi\Http\Firewall
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:string
+
+[*]ArgInfoNo**0**
+[*]name:path
+[*]type:string
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\Http\Firewall.php
+function name:  computeDefaultStrategy
+number of ops:  76
+compiled vars:  !0 = $path, !1 = $plugins_dir, !2 = $relative_path
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  157     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  161     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435410) 'Glpi%5CHttp%5Cstr_starts_with' ]
+          3*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          4*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~3 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435409) 'path_prefix' ]
+          5*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~4 ]       OP1[  IS_TMP_VAR ~3 ] OP2[ ,  IS_CONST (268435408) '%2Fajax%2F' ]
+          6*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~4 ] OP2[  IS_UNUSED  ]
+          7*       < 60> DO_FCALL                                      0   RES[  IS_VAR $5 ]       OP1[  IS_UNUSED  ]
+          8*       < 47> JMPNZ_EX                                          RES[  IS_TMP_VAR ~6 ]       OP1[  IS_VAR $5 ] OP2[ , ->16 ]
+  162     9*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435401) 'Glpi%5CHttp%5Cstr_starts_with' ]
+         10*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         11*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~7 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435400) 'path_prefix' ]
+         12*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~8 ]       OP1[  IS_TMP_VAR ~7 ] OP2[ ,  IS_CONST (268435399) '%2Ffront%2F' ]
+         13*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~8 ] OP2[  IS_UNUSED  ]
+         14*       < 60> DO_FCALL                                      0   RES[  IS_VAR $9 ]       OP1[  IS_UNUSED  ]
+         15*       < 52> BOOL                                              RES[  IS_TMP_VAR ~6 ]       OP1[  IS_VAR $9 ]
+         16*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~6 ] OP2[ , ->21 ]
+  164    17*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         18*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~10 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435388) 'STRATEGY_DEFAULT_FOR_CORE' ]
+         19*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_TMP_VAR ~10 ] OP2[  IS_UNUSED  ]
+         20*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~10 ]
+  168    21*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         22*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~11 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435381) 'plugins_dirs' ]
+         23*       < 77> FE_RESET_R                                        RES[  IS_VAR $12 ]      OP1[  IS_TMP_VAR ~11 ] OP2[ , ->68 ]
+         24*       < 78> FE_FETCH_R                                                OP1[  IS_VAR $12 ] OP2[ ,  IS_CV !1 ] EXT_JMP_REL[ , ->68 ]
+  169    25*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         26*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435374) 'Glpi%5CHttp%5Cpreg_replace' ]
+  170    27*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435375) 'Glpi%5CHttp%5Cpreg_quote' ]
+         28*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435376) 'normalizePath' ]
+         29*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         30*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $13 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435374) 'root_dir' ]
+         31*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $13 ] OP2[  IS_UNUSED  ]
+         32*       < 60> DO_FCALL                                      0   RES[  IS_VAR $14 ]      OP1[  IS_UNUSED  ]
+         33*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $14 ] OP2[  IS_UNUSED  ]
+         34*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435367) '%2F' ] OP2[  IS_UNUSED  ]
+         35*       < 60> DO_FCALL                                      0   RES[  IS_VAR $15 ]      OP1[  IS_UNUSED  ]
+         36*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~16 ]      OP1[  IS_CONST (268435364) '%2F%5E' ] OP2[ ,  IS_VAR $15 ]
+         37*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~17 ]      OP1[  IS_TMP_VAR ~16 ] OP2[ ,  IS_CONST (268435363) '%2F' ]
+         38*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~17 ] OP2[  IS_UNUSED  ]
+  171    39*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435360) '' ] OP2[  IS_UNUSED  ]
+  172    40*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435359) 'normalizePath' ]
+         41*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         42*       < 60> DO_FCALL                                      0   RES[  IS_VAR $18 ]      OP1[  IS_UNUSED  ]
+         43*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $18 ] OP2[  IS_UNUSED  ]
+         44*       < 60> DO_FCALL                                      0   RES[  IS_VAR $19 ]      OP1[  IS_UNUSED  ]
+  169    45*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_VAR $19 ]
+  175    46*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         47*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435347) 'Glpi%5CHttp%5Cpreg_match' ]
+         48*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435348) 'Glpi%5CHttp%5Cpreg_quote' ]
+         49*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~21 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435349) 'path_prefix' ]
+         50*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~22 ]      OP1[  IS_TMP_VAR ~21 ] OP2[ ,  IS_CV !2 ]
+         51*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~22 ] OP2[  IS_UNUSED  ]
+         52*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435344) '%2F' ] OP2[  IS_UNUSED  ]
+         53*       < 60> DO_FCALL                                      0   RES[  IS_VAR $23 ]      OP1[  IS_UNUSED  ]
+         54*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~24 ]      OP1[  IS_CONST (268435341) '%2F%5E' ] OP2[ ,  IS_VAR $23 ]
+         55*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~25 ]      OP1[  IS_TMP_VAR ~24 ] OP2[ ,  IS_CONST (268435340) '%5C%2F%5B%5E%5C%2F%5D%2B%5C%2F%28ajax%7Cfront%29%5C%2F' ]
+         56*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~26 ]      OP1[  IS_TMP_VAR ~25 ] OP2[ ,  IS_CONST (268435339) '%2F' ]
+         57*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~26 ] OP2[  IS_UNUSED  ]
+         58*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         59*       < 60> DO_FCALL                                      0   RES[  IS_VAR $27 ]      OP1[  IS_UNUSED  ]
+         60*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~28 ]      OP1[  IS_VAR $27 ] OP2[ ,  IS_CONST (268435332) 1 ]
+         61*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~28 ] OP2[ , ->67 ]
+  177    62*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         63*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~29 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435327) 'STRATEGY_DEFAULT_FOR_PLUGINS' ]
+         64*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_TMP_VAR ~29 ] OP2[  IS_UNUSED  ]
+         65*       <127> FE_FREE                                                   OP1[  IS_VAR $12 ] OP2[  IS_UNUSED  ]
+         66*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~29 ]
+  168    67*       < 42> JMP                                                       OP1[ ->24 ]
+         68*       <127> FE_FREE                                                   OP1[  IS_VAR $12 ] OP2[  IS_UNUSED  ]
+  182    69*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         70*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~30 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435314) 'STRATEGY_NO_CHECK' ]
+         71*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_TMP_VAR ~30 ] OP2[  IS_UNUSED  ]
+         72*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~30 ]
+  183    73*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         74*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         75*       < 62> RETURN                                                    OP1[  IS_CONST (268435305) null ]
+
+End of function computedefaultstrategy
+
+Function normalizepath:
+[+]Function Source Class Name: Glpi\Http\Firewall
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:string
+
+[*]ArgInfoNo**0**
+[*]name:path
+[*]type:string
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\Http\Firewall.php
+function name:  normalizePath
+number of ops:  24
+compiled vars:  !0 = $path, !1 = $realpath
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  191     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  193     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435443) 'Glpi%5CHttp%5Crealpath' ]
+          3*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          4*       < 60> DO_FCALL                                      0   RES[  IS_VAR $2 ]       OP1[  IS_UNUSED  ]
+          5*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_VAR $2 ]
+  194     6*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          7*       <123> TYPE_CHECK                                  1018   RES[  IS_TMP_VAR ~4 ]       OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+          8*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~4 ] OP2[ , ->11 ]
+  197     9*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         10*       < 22> ASSIGN                                                    OP1[  IS_CV !0 ] OP2[ ,  IS_CV !1 ]
+  201    11*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         12*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435426) 'Glpi%5CHttp%5Cpreg_replace' ]
+         13*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435427) '%2F%5C%5C%2F' ] OP2[  IS_UNUSED  ]
+         14*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435426) '%2F' ] OP2[  IS_UNUSED  ]
+         15*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         16*       < 60> DO_FCALL                                      0   RES[  IS_VAR $6 ]       OP1[  IS_UNUSED  ]
+         17*       < 22> ASSIGN                                                    OP1[  IS_CV !0 ] OP2[ ,  IS_VAR $6 ]
+  202    18*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         19*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         20*       < 62> RETURN                                                    OP1[  IS_CV !0 ]
+  203    21*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         22*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         23*       < 62> RETURN                                                    OP1[  IS_CONST (268435409) null ]
+
+End of function normalizepath
+
+End of class Glpi\Http\Firewall.
+

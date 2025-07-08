@@ -1,0 +1,66 @@
+filename:       E:\【我的开源项目】\Yama\Yama_datasets\dataset2\C1_type_inference\49_static_instance\49_static_instance.php
+function name:  (null)
+number of ops:  16
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+    4     0*       <  0> NOP                                                      
+    5     1*       <  0> NOP                                                      
+   15     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435437) 'Myclass' ] OP2[ ,  IS_CONST (268435439) 'oneInstance' ]
+          4*       < 60> DO_FCALL                                      0   RES[  IS_VAR $0 ]       OP1[  IS_UNUSED  ]
+          5*       <156> SEPARATE                                          RES[  IS_VAR $0 ]       OP1[  IS_VAR $0 ]
+          6*       < 80> FETCH_R                      global               RES[  IS_TMP_VAR ~2 ]       OP1[  IS_CONST (268435436) '_GET' ]
+          7*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~3 ]       OP1[  IS_TMP_VAR ~2 ] OP2[ ,  IS_CONST (268435435) 'p1' ]
+          8*       < 24> ASSIGN_OBJ                                                OP1[  IS_VAR $0 ] OP2[ ,  IS_CONST (268435431) 'x' ]
+          9*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~3 ] OP2[  IS_UNUSED  ]
+   16    10*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         11*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435428) 'Myclass' ] OP2[ ,  IS_CONST (268435430) 'oneInstance' ]
+         12*       < 60> DO_FCALL                                      0   RES[  IS_VAR $4 ]       OP1[  IS_UNUSED  ]
+         13*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~5 ]       OP1[  IS_VAR $4 ] OP2[ ,  IS_CONST (268435428) 'x' ]
+         14*       <136> ECHO                                                      OP1[  IS_TMP_VAR ~5 ]
+   17    15*       < 62> RETURN                                                    OP1[  IS_CONST (268435425) 1 ]
+
+Class Myclass:
+[+]Class Parent Name: NULL
+End Trait extract
+Start Properties extract:
+Key: instance, Value: UNINIT, Type: Normal
+Key: x, Value: UNINIT, Type: Static
+End Properties extract.
+
+Function oneinstance:
+[+]Function Source Class Name: Myclass
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       E:\【我的开源项目】\Yama\Yama_datasets\dataset2\C1_type_inference\49_static_instance\49_static_instance.php
+function name:  oneInstance
+number of ops:  15
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+    9     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       <173> FETCH_STATIC_PROP_R          unknown              RES[  IS_TMP_VAR ~0 ]       OP1[  IS_CONST (268435450) 'instance' ] OP2[  IS_UNUSED  ]
+          2*       <138> INSTANCEOF                                        RES[  IS_TMP_VAR ~1 ]       OP1[  IS_TMP_VAR ~0 ] OP2[  IS_UNUSED  ]
+          3*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~2 ]       OP1[  IS_TMP_VAR ~1 ]
+          4*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~2 ] OP2[ , ->10 ]
+   10     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       < 68> NEW                          self                 RES[  IS_VAR $4 ]      
+          7*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+          8*       < 25> ASSIGN_STATIC_PROP                                        OP1[  IS_CONST (268435437) 'instance' ] OP2[  IS_UNUSED  ]
+          9*       <137> OP_DATA                                                   OP1[  IS_VAR $4 ] OP2[  IS_UNUSED  ]
+   12    10*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         11*       <173> FETCH_STATIC_PROP_R          unknown              RES[  IS_TMP_VAR ~6 ]       OP1[  IS_CONST (268435432) 'instance' ] OP2[  IS_UNUSED  ]
+         12*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~6 ]
+   13    13*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         14*       < 62> RETURN                                                    OP1[  IS_CONST (268435427) null ]
+
+End of function oneinstance
+
+End of class Myclass.
+

@@ -1,0 +1,303 @@
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\symfony\cache\Marshaller\TagAwareMarshaller.php
+function name:  (null)
+number of ops:  4
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   12     0*       <  0> NOP                                                      
+   19     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       <144> DECLARE_CLASS                                             OP1[  IS_CONST (268435444) 'symfony%5Ccomponent%5Ccache%5Cmarshaller%5Ctagawaremarshaller' ] OP2[  IS_UNUSED  ]
+   90     3*       < 62> RETURN                                                    OP1[  IS_CONST (268435444) 1 ]
+
+Class Symfony\Component\Cache\Marshaller\TagAwareMarshaller:
+[+]Class Parent Name: NULL
+End Trait extract
+Start Properties extract:
+Key: marshaller, Value: UNINIT, Type: Normal
+End Properties extract.
+
+Function __construct:
+[+]Function Source Class Name: Symfony\Component\Cache\Marshaller\TagAwareMarshaller
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:marshaller
+[*]type:?Symfony\Component\Cache\Marshaller\MarshallerInterface
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\symfony\cache\Marshaller\TagAwareMarshaller.php
+function name:  __construct
+number of ops:  10
+compiled vars:  !0 = $marshaller
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   23     0*       < 64> RECV_INIT                                         RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435443) null ]
+   25     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       <169> COALESCE                                          RES[  IS_TMP_VAR ~2 ]       OP1[  IS_CV !0 ] OP2[ , ->6 ]
+          3*       < 68> NEW                                               RES[  IS_VAR $3 ]       OP1[ 'Symfony%5CComponent%5CCache%5CMarshaller%5CDefaultMarshaller' ]
+          4*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+          5*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~2 ]       OP1[  IS_VAR $3 ]
+          6*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435432) 'marshaller' ]
+          7*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~2 ] OP2[  IS_UNUSED  ]
+   26     8*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          9*       < 62> RETURN                                                    OP1[  IS_CONST (268435429) null ]
+
+End of function __construct
+
+Function marshall:
+[+]Function Source Class Name: Symfony\Component\Cache\Marshaller\TagAwareMarshaller
+[*]Start of arg_info extract:
+[*]arg_info num_args:2
+[*]Function return type:array
+
+[*]ArgInfoNo**0**
+[*]name:values
+[*]type:array
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:failed
+[*]type:?array
+[*]is_ref:1
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\symfony\cache\Marshaller\TagAwareMarshaller.php
+function name:  marshall
+number of ops:  107
+compiled vars:  !0 = $values, !1 = $failed, !2 = $notSerialized, !3 = $serialized, !4 = $value, !5 = $id, !6 = $v, !7 = $f
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   31     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 63> RECV                                              RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ]
+   33     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       < 22> ASSIGN                                            RES[  IS_TMP_VAR ~8 ]       OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435381) <array> ]
+          4*       < 22> ASSIGN                                            RES[  IS_TMP_VAR ~9 ]       OP1[  IS_CV !2 ] OP2[ ,  IS_TMP_VAR ~8 ]
+          5*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_TMP_VAR ~9 ]
+   35     6*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          7*       < 77> FE_RESET_R                                        RES[  IS_VAR $11 ]      OP1[  IS_CV !0 ] OP2[ , ->85 ]
+          8*       < 78> FE_FETCH_R                                        RES[  IS_TMP_VAR ~12 ]      OP1[  IS_VAR $11 ] OP2[ ,  IS_CV !4 ] EXT_JMP_REL[ , ->85 ]
+          9*       < 22> ASSIGN                                                    OP1[  IS_CV !5 ] OP2[ ,  IS_TMP_VAR ~12 ]
+   36    10*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         11*       <123> TYPE_CHECK                                  128   RES[  IS_TMP_VAR ~14 ]      OP1[  IS_CV !4 ] OP2[  IS_UNUSED  ]
+         12*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~14 ]      OP1[  IS_TMP_VAR ~14 ] OP2[ , ->18 ]
+         13*       < 90> FETCH_DIM_IS                                      RES[  IS_TMP_VAR ~15 ]      OP1[  IS_CV !4 ] OP2[ ,  IS_CONST (268435362) 'tags' ]
+         14*       <169> COALESCE                                          RES[  IS_TMP_VAR ~16 ]      OP1[  IS_TMP_VAR ~15 ] OP2[ , ->16 ]
+         15*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~16 ]      OP1[  IS_CONST (268435359) null ]
+         16*       <123> TYPE_CHECK                                  128   RES[  IS_TMP_VAR ~17 ]      OP1[  IS_TMP_VAR ~16 ] OP2[  IS_UNUSED  ]
+         17*       < 52> BOOL                                              RES[  IS_TMP_VAR ~14 ]      OP1[  IS_TMP_VAR ~17 ]
+         18*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~14 ]      OP1[  IS_TMP_VAR ~14 ] OP2[ , ->21 ]
+         19*       <194> ARRAY_KEY_EXISTS                                  RES[  IS_TMP_VAR ~18 ]      OP1[  IS_CONST (268435352) 'value' ] OP2[ ,  IS_CV !4 ]
+         20*       < 52> BOOL                                              RES[  IS_TMP_VAR ~14 ]      OP1[  IS_TMP_VAR ~18 ]
+         21*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~14 ]      OP1[  IS_TMP_VAR ~14 ] OP2[ , ->35 ]
+         22*       <190> COUNT                                             RES[  IS_TMP_VAR ~19 ]      OP1[  IS_CV !4 ] OP2[  IS_UNUSED  ]
+         23*       < 90> FETCH_DIM_IS                                      RES[  IS_TMP_VAR ~20 ]      OP1[  IS_CV !4 ] OP2[ ,  IS_CONST (268435345) 'meta' ]
+         24*       <169> COALESCE                                          RES[  IS_TMP_VAR ~21 ]      OP1[  IS_TMP_VAR ~20 ] OP2[ , ->26 ]
+         25*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~21 ]      OP1[  IS_CONST (268435342) null ]
+         26*       <123> TYPE_CHECK                                   64   RES[  IS_TMP_VAR ~22 ]      OP1[  IS_TMP_VAR ~21 ] OP2[  IS_UNUSED  ]
+         27*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~22 ]      OP1[  IS_TMP_VAR ~22 ] OP2[ , ->32 ]
+         28*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~23 ]      OP1[  IS_CV !4 ] OP2[ ,  IS_CONST (268435337) 'meta' ]
+         29*       <121> STRLEN                                            RES[  IS_TMP_VAR ~24 ]      OP1[  IS_TMP_VAR ~23 ] OP2[  IS_UNUSED  ]
+         30*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~25 ]      OP1[  IS_TMP_VAR ~24 ] OP2[ ,  IS_CONST (268435334) 8 ]
+         31*       < 52> BOOL                                              RES[  IS_TMP_VAR ~22 ]      OP1[  IS_TMP_VAR ~25 ]
+         32*       <  1> ADD                                               RES[  IS_TMP_VAR ~26 ]      OP1[  IS_CONST (268435331) 2 ] OP2[ ,  IS_TMP_VAR ~22 ]
+         33*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~27 ]      OP1[  IS_TMP_VAR ~19 ] OP2[ ,  IS_TMP_VAR ~26 ]
+         34*       < 52> BOOL                                              RES[  IS_TMP_VAR ~14 ]      OP1[  IS_TMP_VAR ~27 ]
+         35*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~14 ] OP2[ , ->81 ]
+   40    36*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         37*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~28 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435322) 'marshaller' ]
+         38*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~28 ] OP2[ ,  IS_CONST (268435321) 'marshall' ]
+         39*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !4 ] OP2[  IS_UNUSED  ]
+         40*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !7 ] OP2[  IS_UNUSED  ]
+         41*       < 60> DO_FCALL                                      0   RES[  IS_VAR $29 ]      OP1[  IS_UNUSED  ]
+         42*       < 22> ASSIGN                                                    OP1[  IS_CV !6 ] OP2[ ,  IS_VAR $29 ]
+   42    43*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         44*       < 43> JMPZ                                                      OP1[  IS_CV !7 ] OP2[ , ->51 ]
+   43    45*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         46*       < 22> ASSIGN                                                    OP1[  IS_CV !7 ] OP2[ ,  IS_CONST (268435307) <array> ]
+   44    47*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         48*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         49*       <137> OP_DATA                                                   OP1[  IS_CV !5 ] OP2[  IS_UNUSED  ]
+         50*       < 42> JMP                                                       OP1[ ->80 ]
+   46    51*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         52*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~33 ]      OP1[  IS_CV !4 ] OP2[ ,  IS_CONST (268435296) 'tags' ]
+         53*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~34 ]      OP1[  IS_TMP_VAR ~33 ] OP2[ ,  IS_CONST (268435295) <array> ]
+         54*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~34 ] OP2[ , ->58 ]
+   47    55*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         56*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !6 ] OP2[ ,  IS_CONST (268435290) 'tags' ]
+         57*       <137> OP_DATA                                                   OP1[  IS_CONST (268435289) '' ] OP2[  IS_UNUSED  ]
+   50    58*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         59*       < 90> FETCH_DIM_IS                                      RES[  IS_TMP_VAR ~37 ]      OP1[  IS_CV !4 ] OP2[ ,  IS_CONST (268435286) 'meta' ]
+         60*       <169> COALESCE                                          RES[  IS_TMP_VAR ~38 ]      OP1[  IS_TMP_VAR ~37 ] OP2[ , ->62 ]
+         61*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~38 ]      OP1[  IS_CONST (268435283) '%00%00%00%00%00%00%00%00' ]
+         62*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~39 ]      OP1[  IS_CONST (268435282) '%9D' ] OP2[ ,  IS_TMP_VAR ~38 ]
+         63*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435281) 'Symfony%5CComponent%5CCache%5CMarshaller%5Cpack' ]
+         64*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435282) 'N' ] OP2[  IS_UNUSED  ]
+         65*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~40 ]      OP1[  IS_CV !6 ] OP2[ ,  IS_CONST (268435281) 'tags' ]
+         66*       <121> STRLEN                                            RES[  IS_TMP_VAR ~41 ]      OP1[  IS_TMP_VAR ~40 ] OP2[  IS_UNUSED  ]
+         67*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~41 ] OP2[  IS_UNUSED  ]
+         68*       < 60> DO_FCALL                                      0   RES[  IS_VAR $42 ]      OP1[  IS_UNUSED  ]
+         69*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~43 ]      OP1[  IS_TMP_VAR ~39 ] OP2[ ,  IS_VAR $42 ]
+         70*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~44 ]      OP1[  IS_CV !6 ] OP2[ ,  IS_CONST (268435272) 'tags' ]
+         71*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~45 ]      OP1[  IS_TMP_VAR ~43 ] OP2[ ,  IS_TMP_VAR ~44 ]
+         72*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~46 ]      OP1[  IS_CV !6 ] OP2[ ,  IS_CONST (268435269) 'value' ]
+         73*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~47 ]      OP1[  IS_TMP_VAR ~45 ] OP2[ ,  IS_TMP_VAR ~46 ]
+         74*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !3 ] OP2[ ,  IS_CV !5 ]
+         75*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~47 ] OP2[  IS_UNUSED  ]
+   51    76*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         77*       < 84> FETCH_DIM_W                                       RES[  IS_VAR $48 ]      OP1[  IS_CV !3 ] OP2[ ,  IS_CV !5 ]
+         78*       < 23> ASSIGN_DIM                                                OP1[  IS_VAR $48 ] OP2[ ,  IS_CONST (268435258) 9 ]
+         79*       <137> OP_DATA                                                   OP1[  IS_CONST (268435257) '_' ] OP2[  IS_UNUSED  ]
+         80*       < 42> JMP                                                       OP1[ ->84 ]
+   55    81*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         82*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !2 ] OP2[ ,  IS_CV !5 ]
+         83*       <137> OP_DATA                                                   OP1[  IS_CV !4 ] OP2[  IS_UNUSED  ]
+   35    84*       < 42> JMP                                                       OP1[ ->8 ]
+         85*       <127> FE_FREE                                                   OP1[  IS_VAR $11 ] OP2[  IS_UNUSED  ]
+   59    86*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         87*       < 43> JMPZ                                                      OP1[  IS_CV !2 ] OP2[ , ->101 ]
+   60    88*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         89*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~51 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435238) 'marshaller' ]
+         90*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~51 ] OP2[ ,  IS_CONST (268435237) 'marshall' ]
+         91*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         92*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !7 ] OP2[  IS_UNUSED  ]
+         93*       < 60> DO_FCALL                                      0   RES[  IS_VAR $52 ]      OP1[  IS_UNUSED  ]
+         94*       < 26> ASSIGN_OP                    +=               1           OP1[  IS_CV !3 ] OP2[ ,  IS_VAR $52 ]
+   61    95*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         96*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435227) 'Symfony%5CComponent%5CCache%5CMarshaller%5Carray_merge' ]
+         97*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         98*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !7 ] OP2[  IS_UNUSED  ]
+         99*       < 60> DO_FCALL                                      0   RES[  IS_VAR $54 ]      OP1[  IS_UNUSED  ]
+        100*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_VAR $54 ]
+   64   101*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        102*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+        103*       < 62> RETURN                                                    OP1[  IS_CV !3 ]
+   65   104*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        105*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        106*       < 62> RETURN                                                    OP1[  IS_CONST (268435210) null ]
+
+End of function marshall
+
+Function unmarshall:
+[+]Function Source Class Name: Symfony\Component\Cache\Marshaller\TagAwareMarshaller
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:value
+[*]type:string
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\symfony\cache\Marshaller\TagAwareMarshaller.php
+function name:  unmarshall
+number of ops:  82
+compiled vars:  !0 = $value, !1 = $meta, !2 = $tagLen
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   70     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+   73     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       <121> STRLEN                                            RES[  IS_TMP_VAR ~3 ]       OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          3*       < 21> IS_SMALLER_OR_EQUAL                               RES[  IS_TMP_VAR ~4 ]       OP1[  IS_TMP_VAR ~3 ] OP2[ ,  IS_CONST (268435336) 13 ]
+          4*       < 47> JMPNZ_EX                                          RES[  IS_TMP_VAR ~4 ]       OP1[  IS_TMP_VAR ~4 ] OP2[ , ->8 ]
+          5*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~5 ]       OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435333) 0 ]
+          6*       < 17> IS_NOT_IDENTICAL                                  RES[  IS_TMP_VAR ~6 ]       OP1[  IS_TMP_VAR ~5 ] OP2[ ,  IS_CONST (268435332) '%9D' ]
+          7*       < 52> BOOL                                              RES[  IS_TMP_VAR ~4 ]       OP1[  IS_TMP_VAR ~6 ]
+          8*       < 47> JMPNZ_EX                                          RES[  IS_TMP_VAR ~4 ]       OP1[  IS_TMP_VAR ~4 ] OP2[ , ->12 ]
+          9*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~7 ]       OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435327) 5 ]
+         10*       < 17> IS_NOT_IDENTICAL                                  RES[  IS_TMP_VAR ~8 ]       OP1[  IS_TMP_VAR ~7 ] OP2[ ,  IS_CONST (268435326) '%00' ]
+         11*       < 52> BOOL                                              RES[  IS_TMP_VAR ~4 ]       OP1[  IS_TMP_VAR ~8 ]
+         12*       < 47> JMPNZ_EX                                          RES[  IS_TMP_VAR ~4 ]       OP1[  IS_TMP_VAR ~4 ] OP2[ , ->16 ]
+         13*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~9 ]       OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435321) 9 ]
+         14*       < 17> IS_NOT_IDENTICAL                                  RES[  IS_TMP_VAR ~10 ]      OP1[  IS_TMP_VAR ~9 ] OP2[ ,  IS_CONST (268435320) '_' ]
+         15*       < 52> BOOL                                              RES[  IS_TMP_VAR ~4 ]       OP1[  IS_TMP_VAR ~10 ]
+         16*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~4 ] OP2[ , ->23 ]
+   74    17*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         18*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~11 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435313) 'marshaller' ]
+         19*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~11 ] OP2[ ,  IS_CONST (268435312) 'unmarshall' ]
+         20*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         21*       < 60> DO_FCALL                                      0   RES[  IS_VAR $12 ]      OP1[  IS_UNUSED  ]
+         22*       < 62> RETURN                                                    OP1[  IS_VAR $12 ]
+   78    23*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         24*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435304) 'Symfony%5CComponent%5CCache%5CMarshaller%5Csubstr' ]
+         25*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         26*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435303) 1 ] OP2[  IS_UNUSED  ]
+         27*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435302) 12 ] OP2[  IS_UNUSED  ]
+         28*       < 60> DO_FCALL                                      0   RES[  IS_VAR $13 ]      OP1[  IS_UNUSED  ]
+         29*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_VAR $13 ]
+   79    30*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         31*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435295) 8 ]
+         32*       <137> OP_DATA                                                   OP1[  IS_CONST (268435294) '%00' ] OP2[  IS_UNUSED  ]
+   80    33*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         34*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435291) 'Symfony%5CComponent%5CCache%5CMarshaller%5Cunpack' ]
+         35*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435292) 'Nlen' ] OP2[  IS_UNUSED  ]
+         36*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         37*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435289) 8 ] OP2[  IS_UNUSED  ]
+         38*       < 60> DO_FCALL                                      0   RES[  IS_VAR $16 ]      OP1[  IS_UNUSED  ]
+         39*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~17 ]      OP1[  IS_VAR $16 ] OP2[ ,  IS_CONST (268435286) 'len' ]
+         40*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_TMP_VAR ~17 ]
+   81    41*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         42*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435281) 'Symfony%5CComponent%5CCache%5CMarshaller%5Csubstr' ]
+         43*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         44*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435280) 0 ] OP2[  IS_UNUSED  ]
+         45*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435279) 8 ] OP2[  IS_UNUSED  ]
+         46*       < 60> DO_FCALL                                      0   RES[  IS_VAR $19 ]      OP1[  IS_UNUSED  ]
+         47*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_VAR $19 ]
+   84    48*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         49*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~21 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435272) 'marshaller' ]
+         50*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~21 ] OP2[ ,  IS_CONST (268435271) 'unmarshall' ]
+         51*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435271) 'Symfony%5CComponent%5CCache%5CMarshaller%5Csubstr' ]
+         52*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         53*       <  1> ADD                                               RES[  IS_TMP_VAR ~22 ]      OP1[  IS_CONST (268435270) 13 ] OP2[ ,  IS_CV !2 ]
+         54*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~22 ] OP2[  IS_UNUSED  ]
+         55*       < 60> DO_FCALL                                      0   RES[  IS_VAR $23 ]      OP1[  IS_UNUSED  ]
+         56*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $23 ] OP2[  IS_UNUSED  ]
+         57*       < 60> DO_FCALL                                      0   RES[  IS_VAR $24 ]      OP1[  IS_UNUSED  ]
+         58*       < 71> INIT_ARRAY                                        RES[  IS_TMP_VAR ~25 ]      OP1[  IS_VAR $24 ] OP2[ ,  IS_CONST (268435261) 'value' ]
+   85    59*       < 43> JMPZ                                                      OP1[  IS_CV !2 ] OP2[ , ->71 ]
+         60*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~26 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435258) 'marshaller' ]
+         61*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~26 ] OP2[ ,  IS_CONST (268435257) 'unmarshall' ]
+         62*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435257) 'Symfony%5CComponent%5CCache%5CMarshaller%5Csubstr' ]
+         63*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         64*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435256) 13 ] OP2[  IS_UNUSED  ]
+         65*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         66*       < 60> DO_FCALL                                      0   RES[  IS_VAR $27 ]      OP1[  IS_UNUSED  ]
+         67*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $27 ] OP2[  IS_UNUSED  ]
+         68*       < 60> DO_FCALL                                      0   RES[  IS_VAR $28 ]      OP1[  IS_UNUSED  ]
+         69*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~29 ]      OP1[  IS_VAR $28 ]
+         70*       < 42> JMP                                                       OP1[ ->72 ]
+   84    71*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~29 ]      OP1[  IS_CONST (268435243) <array> ]
+         72*       < 72> ADD_ARRAY_ELEMENT                                 RES[  IS_TMP_VAR ~25 ]      OP1[  IS_TMP_VAR ~29 ] OP2[ ,  IS_CONST (268435242) 'tags' ]
+   86    73*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~30 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435241) '%00%00%00%00%00%00%00%00' ]
+         74*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~30 ] OP2[ , ->77 ]
+   84    75*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~31 ]      OP1[  IS_CONST (268435238) null ]
+         76*       < 42> JMP                                                       OP1[ ->78 ]
+   86    77*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~31 ]      OP1[  IS_CV !1 ]
+         78*       < 72> ADD_ARRAY_ELEMENT                                 RES[  IS_TMP_VAR ~25 ]      OP1[  IS_TMP_VAR ~31 ] OP2[ ,  IS_CONST (268435233) 'meta' ]
+         79*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~25 ]
+   88    80*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         81*       < 62> RETURN                                                    OP1[  IS_CONST (268435228) null ]
+
+End of function unmarshall
+
+End of class Symfony\Component\Cache\Marshaller\TagAwareMarshaller.
+

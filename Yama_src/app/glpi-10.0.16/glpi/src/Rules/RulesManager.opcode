@@ -1,0 +1,160 @@
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\Rules\RulesManager.php
+function name:  (null)
+number of ops:  5
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   36     0*       <  0> NOP                                                      
+   38     1*       <  0> NOP                                                      
+   39     2*       <  0> NOP                                                      
+  100     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       < 62> RETURN                                                    OP1[  IS_CONST (268435447) 1 ]
+
+Class Glpi\Rules\RulesManager:
+[+]Class Parent Name: NULL
+End Trait extract
+Start Properties extract:
+Properties: NULL
+End Properties extract
+
+Function initializerules:
+[+]Function Source Class Name: Glpi\Rules\RulesManager
+[*]Start of arg_info extract:
+[*]arg_info num_args:0
+[*]Function return type:void
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\Rules\RulesManager.php
+function name:  initializeRules
+number of ops:  119
+compiled vars:  !0 = $CFG_GLPI, !1 = $rulecollections_types, !2 = $itemtype, !3 = $rulecollection, !4 = $initialized_collections, !5 = $rulecollection_type, !6 = $ruleclass
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   50     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       <168> BIND_GLOBAL                                               OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435381) 'CFG_GLPI' ]
+   52     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~7 ]       OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435378) 'rulecollections_types' ]
+          4*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_TMP_VAR ~7 ]
+   54     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~9 ]       OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435373) 'dictionnary_types' ]
+          7*       < 77> FE_RESET_R                                        RES[  IS_VAR $10 ]      OP1[  IS_TMP_VAR ~9 ] OP2[ , ->24 ]
+          8*       < 78> FE_FETCH_R                                                OP1[  IS_VAR $10 ] OP2[ ,  IS_CV !2 ] EXT_JMP_REL[ , ->24 ]
+   55     9*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         10*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435366) 'RuleCollection' ] OP2[ ,  IS_CONST (268435368) 'getClassByType' ]
+         11*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         12*       < 60> DO_FCALL                                      0   RES[  IS_VAR $11 ]      OP1[  IS_UNUSED  ]
+         13*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_VAR $11 ]
+   56    14*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         15*       <138> INSTANCEOF                                        RES[  IS_TMP_VAR ~13 ]      OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435360) 'RuleCollection' ]
+         16*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~13 ] OP2[ , ->23 ]
+   57    17*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         18*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435356) 'Glpi%5CRules%5Cget_class' ]
+         19*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         20*       < 60> DO_FCALL                                      0   RES[  IS_VAR $15 ]      OP1[  IS_UNUSED  ]
+         21*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         22*       <137> OP_DATA                                                   OP1[  IS_VAR $15 ] OP2[  IS_UNUSED  ]
+   54    23*       < 42> JMP                                                       OP1[ ->8 ]
+         24*       <127> FE_FREE                                                   OP1[  IS_VAR $10 ] OP2[  IS_UNUSED  ]
+   61    25*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         26*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435343) 'Glpi%5CRules%5Cjson_decode' ]
+   62    27*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435344) 'Config' ] OP2[ ,  IS_CONST (268435346) 'getConfigurationValue' ]
+         28*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435346) 'core' ] OP2[  IS_UNUSED  ]
+         29*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435345) 'initialized_rules_collections' ] OP2[  IS_UNUSED  ]
+         30*       < 60> DO_FCALL                                      0   RES[  IS_VAR $16 ]      OP1[  IS_UNUSED  ]
+         31*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $16 ] OP2[  IS_UNUSED  ]
+   63    32*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435340) <true> ] OP2[  IS_UNUSED  ]
+         33*       < 60> DO_FCALL                                      0   RES[  IS_VAR $17 ]      OP1[  IS_UNUSED  ]
+   61    34*       < 22> ASSIGN                                                    OP1[  IS_CV !4 ] OP2[ ,  IS_VAR $17 ]
+   65    35*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         36*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435333) 'Glpi%5CRules%5Cis_array' ]
+         37*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !4 ] OP2[  IS_UNUSED  ]
+         38*       < 60> DO_FCALL                                      0   RES[  IS_VAR $19 ]      OP1[  IS_UNUSED  ]
+         39*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~20 ]      OP1[  IS_VAR $19 ]
+         40*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~20 ] OP2[ , ->43 ]
+   69    41*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         42*       < 22> ASSIGN                                                    OP1[  IS_CV !4 ] OP2[ ,  IS_CONST (268435324) <array> ]
+   72    43*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         44*       < 77> FE_RESET_R                                        RES[  IS_VAR $22 ]      OP1[  IS_CV !1 ] OP2[ , ->116 ]
+         45*       < 78> FE_FETCH_R                                                OP1[  IS_VAR $22 ] OP2[ ,  IS_CV !5 ] EXT_JMP_REL[ , ->116 ]
+   74    46*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         47*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435315) 'Glpi%5CRules%5Cis_a' ]
+         48*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !5 ] OP2[  IS_UNUSED  ]
+         49*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435314) 'RuleCollection' ] OP2[  IS_UNUSED  ]
+         50*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435313) <true> ] OP2[  IS_UNUSED  ]
+         51*       < 60> DO_FCALL                                      0   RES[  IS_VAR $23 ]      OP1[  IS_UNUSED  ]
+         52*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~24 ]      OP1[  IS_VAR $23 ]
+         53*       < 47> JMPNZ_EX                                          RES[  IS_TMP_VAR ~24 ]      OP1[  IS_TMP_VAR ~24 ] OP2[ , ->59 ]
+   75    54*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435306) 'Glpi%5CRules%5Cin_array' ]
+         55*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !5 ] OP2[  IS_UNUSED  ]
+         56*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !4 ] OP2[  IS_UNUSED  ]
+         57*       < 60> DO_FCALL                                      0   RES[  IS_VAR $25 ]      OP1[  IS_UNUSED  ]
+         58*       < 52> BOOL                                              RES[  IS_TMP_VAR ~24 ]      OP1[  IS_VAR $25 ]
+         59*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~24 ] OP2[ , ->62 ]
+   77    60*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         61*       < 42> JMP                                                       OP1[ ->45 ]
+   80    62*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         63*       <109> FETCH_CLASS                                   0   RES[  IS_VAR $26 ]      OP2[  IS_CV !5 ]
+         64*       < 68> NEW                                               RES[  IS_VAR $27 ]      OP1[  IS_VAR $26 ]
+         65*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         66*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_VAR $27 ]
+   81    67*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         68*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435281) 'getRuleClass' ]
+         69*       < 60> DO_FCALL                                      0   RES[  IS_VAR $30 ]      OP1[  IS_UNUSED  ]
+         70*       < 22> ASSIGN                                                    OP1[  IS_CV !6 ] OP2[ ,  IS_VAR $30 ]
+   82    71*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         72*       <138> INSTANCEOF                                        RES[  IS_TMP_VAR ~32 ]      OP1[  IS_CV !6 ] OP2[ ,  IS_CONST (268435275) 'Rule' ]
+         73*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~33 ]      OP1[  IS_TMP_VAR ~32 ]
+         74*       < 47> JMPNZ_EX                                          RES[  IS_TMP_VAR ~33 ]      OP1[  IS_TMP_VAR ~33 ] OP2[ , ->79 ]
+         75*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !6 ] OP2[ ,  IS_CONST (268435271) 'hasDefaultRules' ]
+         76*       < 60> DO_FCALL                                      0   RES[  IS_VAR $34 ]      OP1[  IS_UNUSED  ]
+         77*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~35 ]      OP1[  IS_VAR $34 ]
+         78*       < 52> BOOL                                              RES[  IS_TMP_VAR ~33 ]      OP1[  IS_TMP_VAR ~35 ]
+         79*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~33 ] OP2[ , ->82 ]
+   83    80*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         81*       < 42> JMP                                                       OP1[ ->45 ]
+   86    82*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         83*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435257) 'Glpi%5CRules%5CcountElementsInTable' ]
+         84*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435258) 'Rule' ] OP2[ ,  IS_CONST (268435260) 'getTable' ]
+         85*       < 60> DO_FCALL                                      0   RES[  IS_VAR $36 ]      OP1[  IS_UNUSED  ]
+         86*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $36 ] OP2[  IS_UNUSED  ]
+         87*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !6 ] OP2[ ,  IS_CONST (268435256) 'getType' ]
+         88*       < 60> DO_FCALL                                      0   RES[  IS_VAR $37 ]      OP1[  IS_UNUSED  ]
+         89*       < 71> INIT_ARRAY                                        RES[  IS_TMP_VAR ~38 ]      OP1[  IS_VAR $37 ] OP2[ ,  IS_CONST (268435254) 'sub_type' ]
+         90*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~38 ] OP2[  IS_UNUSED  ]
+         91*       < 60> DO_FCALL                                      0   RES[  IS_VAR $39 ]      OP1[  IS_UNUSED  ]
+         92*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~40 ]      OP1[  IS_VAR $39 ] OP2[ ,  IS_CONST (268435249) 0 ]
+         93*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~40 ] OP2[ , ->100 ]
+   87    94*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         95*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !6 ] OP2[ ,  IS_CONST (268435244) 'initRules' ]
+         96*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435244) <false> ] OP2[  IS_UNUSED  ]
+         97*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435243) <false> ] OP2[  IS_UNUSED  ]
+         98*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435242) <false> ] OP2[  IS_UNUSED  ]
+         99*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+   92   100*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        101*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435237) 'Glpi%5CRules%5Cget_class' ]
+        102*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+        103*       < 60> DO_FCALL                                      0   RES[  IS_VAR $43 ]      OP1[  IS_UNUSED  ]
+        104*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !4 ] OP2[  IS_UNUSED  ]
+        105*       <137> OP_DATA                                                   OP1[  IS_VAR $43 ] OP2[  IS_UNUSED  ]
+   93   106*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        107*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435228) 'Config' ] OP2[ ,  IS_CONST (268435230) 'setConfigurationValues' ]
+   94   108*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435230) 'core' ] OP2[  IS_UNUSED  ]
+   95   109*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435229) 'Glpi%5CRules%5Cjson_encode' ]
+        110*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !4 ] OP2[  IS_UNUSED  ]
+        111*       < 60> DO_FCALL                                      0   RES[  IS_VAR $44 ]      OP1[  IS_UNUSED  ]
+        112*       < 71> INIT_ARRAY                                        RES[  IS_TMP_VAR ~45 ]      OP1[  IS_VAR $44 ] OP2[ ,  IS_CONST (268435226) 'initialized_rules_collections' ]
+        113*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~45 ] OP2[  IS_UNUSED  ]
+        114*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+   72   115*       < 42> JMP                                                       OP1[ ->45 ]
+        116*       <127> FE_FREE                                                   OP1[  IS_VAR $22 ] OP2[  IS_UNUSED  ]
+   98   117*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        118*       < 62> RETURN                                                    OP1[  IS_CONST (268435215) null ]
+
+End of function initializerules
+
+End of class Glpi\Rules\RulesManager.
+

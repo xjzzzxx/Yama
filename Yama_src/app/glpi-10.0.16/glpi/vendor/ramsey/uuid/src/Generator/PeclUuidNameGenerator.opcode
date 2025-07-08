@@ -1,0 +1,112 @@
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\ramsey\uuid\src\Generator\PeclUuidNameGenerator.php
+function name:  (null)
+number of ops:  10
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   13     0*       <  0> NOP                                                      
+   15     1*       <  0> NOP                                                      
+   17     2*       <  0> NOP                                                      
+   18     3*       <  0> NOP                                                      
+   20     4*       <  0> NOP                                                      
+   21     5*       <  0> NOP                                                      
+   22     6*       <  0> NOP                                                      
+   31     7*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          8*       <144> DECLARE_CLASS                                             OP1[  IS_CONST (268435437) 'ramsey%5Cuuid%5Cgenerator%5Cpecluuidnamegenerator' ] OP2[  IS_UNUSED  ]
+   55     9*       < 62> RETURN                                                    OP1[  IS_CONST (268435437) 1 ]
+
+Class Ramsey\Uuid\Generator\PeclUuidNameGenerator:
+[+]Class Parent Name: NULL
+End Trait extract
+Start Properties extract:
+Properties: NULL
+End Properties extract
+
+Function generate:
+[+]Function Source Class Name: Ramsey\Uuid\Generator\PeclUuidNameGenerator
+[*]Start of arg_info extract:
+[*]arg_info num_args:3
+[*]Function return type:string
+
+[*]ArgInfoNo**0**
+[*]name:ns
+[*]type:Ramsey\Uuid\UuidInterface
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:name
+[*]type:string
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**2**
+[*]name:hashAlgorithm
+[*]type:string
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\ramsey\uuid\src\Generator\PeclUuidNameGenerator.php
+function name:  generate
+number of ops:  48
+compiled vars:  !0 = $ns, !1 = $name, !2 = $hashAlgorithm, !3 = $uuid
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   34     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 63> RECV                                              RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ]
+          2*       < 63> RECV                                              RES[  IS_CV !2 ]       OP1[  IS_UNUSED  ]
+   36     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       <188> SWITCH_STRING                                             OP1[  IS_CV !2 ] OP2[ , [ 'md5':->10, 'sha1':->20, ] ] EXT_JMP_REL[ , ->30 ]
+   37     5*       < 18> IS_EQUAL                                          RES[  ]         OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435417) 'md5' ]
+          6*       < 44> JMPNZ                                                     OP1[  IS_TMP_VAR ~4 ] OP2[ , ->10 ]
+   41     7*       < 18> IS_EQUAL                                          RES[  ]         OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435414) 'sha1' ]
+          8*       < 44> JMPNZ                                                     OP1[  IS_TMP_VAR ~4 ] OP2[ , ->20 ]
+          9*       < 42> JMP                                                       OP1[ ->30 ]
+   38    10*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         11*       < 59> INIT_FCALL_BY_NAME                                        OP2[  IS_CONST (268435407) 'uuid_generate_md5' ]
+         12*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435407) 'toString' ]
+         13*       < 60> DO_FCALL                                      0   RES[  IS_VAR $5 ]       OP1[  IS_UNUSED  ]
+         14*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $5 ] OP2[  IS_UNUSED  ]
+         15*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         16*       < 60> DO_FCALL                                      0   RES[  IS_VAR $6 ]       OP1[  IS_UNUSED  ]
+         17*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_VAR $6 ]
+   40    18*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         19*       < 42> JMP                                                       OP1[ ->39 ]
+   42    20*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         21*       < 59> INIT_FCALL_BY_NAME                                        OP2[  IS_CONST (268435391) 'uuid_generate_sha1' ]
+         22*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435391) 'toString' ]
+         23*       < 60> DO_FCALL                                      0   RES[  IS_VAR $8 ]       OP1[  IS_UNUSED  ]
+         24*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $8 ] OP2[  IS_UNUSED  ]
+         25*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         26*       < 60> DO_FCALL                                      0   RES[  IS_VAR $9 ]       OP1[  IS_UNUSED  ]
+         27*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_VAR $9 ]
+   44    28*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         29*       < 42> JMP                                                       OP1[ ->39 ]
+   46    30*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         31*       < 68> NEW                                               RES[  IS_VAR $11 ]      OP1[ 'Ramsey%5CUuid%5CException%5CNameException' ]
+         32*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435375) 'sprintf' ]
+   47    33*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435374) 'Unable+to+hash+namespace+and+name+with+algorithm+%27%25s%27' ]
+   48    34*       <117> SEND_VAR                                                  OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         35*       < 60> DO_FCALL                                      0   RES[  IS_VAR $12 ]      OP1[  IS_UNUSED  ]
+         36*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $12 ] OP2[  IS_UNUSED  ]
+         37*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         38*       <108> THROW                                         0           OP1[  IS_VAR $11 ] OP2[  IS_UNUSED  ]
+   52    39*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         40*       < 59> INIT_FCALL_BY_NAME                                        OP2[  IS_CONST (268435361) 'uuid_parse' ]
+         41*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         42*       < 60> DO_FCALL                                      0   RES[  IS_VAR $14 ]      OP1[  IS_UNUSED  ]
+         43*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_VAR $14 ] OP2[  IS_UNUSED  ]
+         44*       < 62> RETURN                                                    OP1[  IS_VAR $14 ]
+   53    45*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         46*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         47*       < 62> RETURN                                                    OP1[  IS_CONST (268435349) null ]
+
+End of function generate
+
+End of class Ramsey\Uuid\Generator\PeclUuidNameGenerator.
+

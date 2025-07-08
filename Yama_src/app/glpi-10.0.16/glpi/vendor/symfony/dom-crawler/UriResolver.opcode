@@ -1,0 +1,399 @@
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\symfony\dom-crawler\UriResolver.php
+function name:  (null)
+number of ops:  2
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  137     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 62> RETURN                                                    OP1[  IS_CONST (268435453) 1 ]
+
+Class Symfony\Component\DomCrawler\UriResolver:
+[+]Class Parent Name: NULL
+End Trait extract
+Start Properties extract:
+Properties: NULL
+End Properties extract
+
+Function resolve:
+[+]Function Source Class Name: Symfony\Component\DomCrawler\UriResolver
+[*]Start of arg_info extract:
+[*]arg_info num_args:2
+[*]Function return type:string
+
+[*]ArgInfoNo**0**
+[*]name:uri
+[*]type:string
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:baseUri
+[*]type:?string
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\symfony\dom-crawler\UriResolver.php
+function name:  resolve
+number of ops:  132
+compiled vars:  !0 = $uri, !1 = $baseUri, !2 = $baseUriCleaned, !3 = $path
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   31     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 63> RECV                                              RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ]
+   33     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435293) 'Symfony%5CComponent%5CDomCrawler%5Ctrim' ]
+          4*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          5*       < 60> DO_FCALL                                      0   RES[  IS_VAR $4 ]       OP1[  IS_UNUSED  ]
+          6*       < 22> ASSIGN                                                    OP1[  IS_CV !0 ] OP2[ ,  IS_VAR $4 ]
+   36     7*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          8*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435286) 'Symfony%5CComponent%5CDomCrawler%5Cparse_url' ]
+          9*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         10*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435285) 0 ] OP2[  IS_UNUSED  ]
+         11*       < 60> DO_FCALL                                      0   RES[  IS_VAR $6 ]       OP1[  IS_UNUSED  ]
+         12*       <123> TYPE_CHECK                                  1020   RES[  IS_TMP_VAR ~7 ]       OP1[  IS_VAR $6 ] OP2[  IS_UNUSED  ]
+         13*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~7 ] OP2[ , ->17 ]
+   37    14*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         15*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         16*       < 62> RETURN                                                    OP1[  IS_CV !0 ]
+   40    17*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         18*       <123> TYPE_CHECK                                    2   RES[  IS_TMP_VAR ~8 ]       OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         19*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~8 ] OP2[ , ->25 ]
+   41    20*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         21*       < 68> NEW                                               RES[  IS_VAR $9 ]       OP1[ 'InvalidArgumentException' ]
+         22*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435264) 'The+URI+is+relative%2C+so+you+must+define+its+base+URI+passing+an+absolute+URL.' ] OP2[  IS_UNUSED  ]
+         23*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         24*       <108> THROW                                         0           OP1[  IS_VAR $9 ] OP2[  IS_UNUSED  ]
+   45    25*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         26*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~11 ]      OP1[  IS_CV !0 ]
+         27*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~11 ] OP2[ , ->31 ]
+   46    28*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         29*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         30*       < 62> RETURN                                                    OP1[  IS_CV !1 ]
+   50    31*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         32*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~12 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435245) 0 ]
+         33*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~13 ]      OP1[  IS_TMP_VAR ~12 ] OP2[ ,  IS_CONST (268435244) '%23' ]
+         34*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~13 ] OP2[ , ->42 ]
+   51    35*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         36*       <113> INIT_STATIC_METHOD_CALL      self                         OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435239) 'cleanupAnchor' ]
+         37*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         38*       < 60> DO_FCALL                                      0   RES[  IS_VAR $14 ]      OP1[  IS_UNUSED  ]
+         39*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~15 ]      OP1[  IS_VAR $14 ] OP2[ ,  IS_CV !0 ]
+         40*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_TMP_VAR ~15 ] OP2[  IS_UNUSED  ]
+         41*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~15 ]
+   54    42*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         43*       <113> INIT_STATIC_METHOD_CALL      self                         OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435227) 'cleanupUri' ]
+         44*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         45*       < 60> DO_FCALL                                      0   RES[  IS_VAR $16 ]      OP1[  IS_UNUSED  ]
+         46*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_VAR $16 ]
+   56    47*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         48*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~18 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435219) 0 ]
+         49*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~19 ]      OP1[  IS_TMP_VAR ~18 ] OP2[ ,  IS_CONST (268435218) '%3F' ]
+         50*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~19 ] OP2[ , ->55 ]
+   57    51*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         52*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~20 ]      OP1[  IS_CV !2 ] OP2[ ,  IS_CV !0 ]
+         53*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_TMP_VAR ~20 ] OP2[  IS_UNUSED  ]
+         54*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~20 ]
+   61    55*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         56*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435205) 'Symfony%5CComponent%5CDomCrawler%5Cstrpos' ]
+         57*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         58*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435204) '%2F%2F' ] OP2[  IS_UNUSED  ]
+         59*       < 60> DO_FCALL                                      0   RES[  IS_VAR $21 ]      OP1[  IS_UNUSED  ]
+         60*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~22 ]      OP1[  IS_VAR $21 ] OP2[ ,  IS_CONST (268435201) 0 ]
+         61*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~22 ] OP2[ , ->71 ]
+   62    62*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         63*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435196) 'Symfony%5CComponent%5CDomCrawler%5Cpreg_replace' ]
+         64*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435197) '%23%5E%28%5B%5E%2F%5D%2A%29%2F%2F.%2A%24%23' ] OP2[  IS_UNUSED  ]
+         65*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435196) '%241' ] OP2[  IS_UNUSED  ]
+         66*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         67*       < 60> DO_FCALL                                      0   RES[  IS_VAR $23 ]      OP1[  IS_UNUSED  ]
+         68*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~24 ]      OP1[  IS_VAR $23 ] OP2[ ,  IS_CV !0 ]
+         69*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_TMP_VAR ~24 ] OP2[  IS_UNUSED  ]
+         70*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~24 ]
+   65    71*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         72*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435183) 'Symfony%5CComponent%5CDomCrawler%5Cpreg_replace' ]
+         73*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435184) '%23%5E%28.%2A%3F%2F%2F%5B%5E%2F%5D%2A%29%28%3F%3A%5C%2F.%2A%29%3F%24%23' ] OP2[  IS_UNUSED  ]
+         74*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435183) '%241' ] OP2[  IS_UNUSED  ]
+         75*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         76*       < 60> DO_FCALL                                      0   RES[  IS_VAR $25 ]      OP1[  IS_UNUSED  ]
+         77*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_VAR $25 ]
+   68    78*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         79*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~27 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435174) 0 ]
+         80*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~28 ]      OP1[  IS_TMP_VAR ~27 ] OP2[ ,  IS_CONST (268435173) '%2F' ]
+         81*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~28 ] OP2[ , ->86 ]
+   69    82*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         83*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~29 ]      OP1[  IS_CV !2 ] OP2[ ,  IS_CV !0 ]
+         84*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_TMP_VAR ~29 ] OP2[  IS_UNUSED  ]
+         85*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~29 ]
+   73    86*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         87*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435160) 'Symfony%5CComponent%5CDomCrawler%5Cparse_url' ]
+         88*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435161) 'Symfony%5CComponent%5CDomCrawler%5Csubstr' ]
+         89*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         90*       <121> STRLEN                                            RES[  IS_TMP_VAR ~30 ]      OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         91*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~30 ] OP2[  IS_UNUSED  ]
+         92*       < 60> DO_FCALL                                      0   RES[  IS_VAR $31 ]      OP1[  IS_UNUSED  ]
+         93*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $31 ] OP2[  IS_UNUSED  ]
+         94*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435152) 5 ] OP2[  IS_UNUSED  ]
+         95*       < 60> DO_FCALL                                      0   RES[  IS_VAR $32 ]      OP1[  IS_UNUSED  ]
+         96*       <169> COALESCE                                          RES[  IS_TMP_VAR ~33 ]      OP1[  IS_VAR $32 ] OP2[ , ->98 ]
+         97*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~33 ]      OP1[  IS_CONST (268435147) '' ]
+         98*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_TMP_VAR ~33 ]
+   74    99*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        100*       <113> INIT_STATIC_METHOD_CALL      self                         OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435142) 'canonicalizePath' ]
+        101*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435142) 'Symfony%5CComponent%5CDomCrawler%5Csubstr' ]
+        102*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+        103*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435141) 0 ] OP2[  IS_UNUSED  ]
+        104*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435140) 'Symfony%5CComponent%5CDomCrawler%5Cstrrpos' ]
+        105*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+        106*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435139) '%2F' ] OP2[  IS_UNUSED  ]
+        107*       < 60> DO_FCALL                                      0   RES[  IS_VAR $35 ]      OP1[  IS_UNUSED  ]
+        108*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $35 ] OP2[  IS_UNUSED  ]
+        109*       < 60> DO_FCALL                                      0   RES[  IS_VAR $36 ]      OP1[  IS_UNUSED  ]
+        110*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~37 ]      OP1[  IS_VAR $36 ] OP2[ ,  IS_CONST (268435132) '%2F' ]
+        111*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~38 ]      OP1[  IS_TMP_VAR ~37 ] OP2[ ,  IS_CV !0 ]
+        112*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~38 ] OP2[  IS_UNUSED  ]
+        113*       < 60> DO_FCALL                                      0   RES[  IS_VAR $39 ]      OP1[  IS_UNUSED  ]
+        114*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_VAR $39 ]
+   76   115*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        116*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~41 ]      OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435121) '' ]
+        117*       < 47> JMPNZ_EX                                          RES[  IS_TMP_VAR ~41 ]      OP1[  IS_TMP_VAR ~41 ] OP2[ , ->121 ]
+        118*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~42 ]      OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435118) 0 ]
+        119*       < 17> IS_NOT_IDENTICAL                                  RES[  IS_TMP_VAR ~43 ]      OP1[  IS_TMP_VAR ~42 ] OP2[ ,  IS_CONST (268435117) '%2F' ]
+        120*       < 52> BOOL                                              RES[  IS_TMP_VAR ~41 ]      OP1[  IS_TMP_VAR ~43 ]
+        121*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~41 ] OP2[ , ->124 ]
+        122*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~44 ]      OP1[  IS_CONST (268435112) '%2F' ]
+        123*       < 42> JMP                                                       OP1[ ->125 ]
+        124*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~44 ]      OP1[  IS_CONST (268435109) '' ]
+        125*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~45 ]      OP1[  IS_CV !2 ] OP2[ ,  IS_TMP_VAR ~44 ]
+        126*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~46 ]      OP1[  IS_TMP_VAR ~45 ] OP2[ ,  IS_CV !3 ]
+        127*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_TMP_VAR ~46 ] OP2[  IS_UNUSED  ]
+        128*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~46 ]
+   77   129*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        130*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        131*       < 62> RETURN                                                    OP1[  IS_CONST (268435096) null ]
+
+End of function resolve
+
+Function canonicalizepath:
+[+]Function Source Class Name: Symfony\Component\DomCrawler\UriResolver
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:string
+
+[*]ArgInfoNo**0**
+[*]name:path
+[*]type:string
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\symfony\dom-crawler\UriResolver.php
+function name:  canonicalizePath
+number of ops:  54
+compiled vars:  !0 = $path, !1 = $output, !2 = $segment
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   82     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+   84     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~3 ]       OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435393) '' ]
+          3*       < 47> JMPNZ_EX                                          RES[  IS_TMP_VAR ~3 ]       OP1[  IS_TMP_VAR ~3 ] OP2[ , ->6 ]
+          4*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~4 ]       OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435390) '%2F' ]
+          5*       < 52> BOOL                                              RES[  IS_TMP_VAR ~3 ]       OP1[  IS_TMP_VAR ~4 ]
+          6*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~3 ] OP2[ , ->10 ]
+   85     7*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          8*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          9*       < 62> RETURN                                                    OP1[  IS_CV !0 ]
+   88    10*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         11*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435377) 'Symfony%5CComponent%5CDomCrawler%5Csubstr' ]
+         12*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         13*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435376) -1 ] OP2[  IS_UNUSED  ]
+         14*       < 60> DO_FCALL                                      0   RES[  IS_VAR $5 ]       OP1[  IS_UNUSED  ]
+         15*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~6 ]       OP1[  IS_VAR $5 ] OP2[ ,  IS_CONST (268435373) '.' ]
+         16*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~6 ] OP2[ , ->19 ]
+   89    17*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         18*       < 26> ASSIGN_OP                    .=               8           OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435368) '%2F' ]
+   92    19*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         20*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435365) <array> ]
+   94    21*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         22*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435362) 'Symfony%5CComponent%5CDomCrawler%5Cexplode' ]
+         23*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435363) '%2F' ] OP2[  IS_UNUSED  ]
+         24*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         25*       < 60> DO_FCALL                                      0   RES[  IS_VAR $9 ]       OP1[  IS_UNUSED  ]
+         26*       < 77> FE_RESET_R                                        RES[  IS_VAR $10 ]      OP1[  IS_VAR $9 ] OP2[ , ->43 ]
+         27*       < 78> FE_FETCH_R                                                OP1[  IS_VAR $10 ] OP2[ ,  IS_CV !2 ] EXT_JMP_REL[ , ->43 ]
+   95    28*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         29*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~11 ]      OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435352) '..' ]
+         30*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~11 ] OP2[ , ->36 ]
+   96    31*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         32*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435347) 'Symfony%5CComponent%5CDomCrawler%5Carray_pop' ]
+         33*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         34*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         35*       < 42> JMP                                                       OP1[ ->42 ]
+   97    36*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         37*       < 17> IS_NOT_IDENTICAL                                  RES[  IS_TMP_VAR ~13 ]      OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435340) '.' ]
+         38*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~13 ] OP2[ , ->42 ]
+   98    39*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         40*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         41*       <137> OP_DATA                                                   OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+   94    42*       < 42> JMP                                                       OP1[ ->27 ]
+         43*       <127> FE_FREE                                                   OP1[  IS_VAR $10 ] OP2[  IS_UNUSED  ]
+  102    44*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         45*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435325) 'Symfony%5CComponent%5CDomCrawler%5Cimplode' ]
+         46*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435326) '%2F' ] OP2[  IS_UNUSED  ]
+         47*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         48*       < 60> DO_FCALL                                      0   RES[  IS_VAR $15 ]      OP1[  IS_UNUSED  ]
+         49*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_VAR $15 ] OP2[  IS_UNUSED  ]
+         50*       < 62> RETURN                                                    OP1[  IS_VAR $15 ]
+  103    51*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         52*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         53*       < 62> RETURN                                                    OP1[  IS_CONST (268435313) null ]
+
+End of function canonicalizepath
+
+Function cleanupuri:
+[+]Function Source Class Name: Symfony\Component\DomCrawler\UriResolver
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:string
+
+[*]ArgInfoNo**0**
+[*]name:uri
+[*]type:string
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\symfony\dom-crawler\UriResolver.php
+function name:  cleanupUri
+number of ops:  13
+compiled vars:  !0 = $uri
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  108     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  110     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       <113> INIT_STATIC_METHOD_CALL      self                         OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435437) 'cleanupQuery' ]
+          3*       <113> INIT_STATIC_METHOD_CALL      self                         OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435437) 'cleanupAnchor' ]
+          4*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          5*       < 60> DO_FCALL                                      0   RES[  IS_VAR $1 ]       OP1[  IS_UNUSED  ]
+          6*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $1 ] OP2[  IS_UNUSED  ]
+          7*       < 60> DO_FCALL                                      0   RES[  IS_VAR $2 ]       OP1[  IS_UNUSED  ]
+          8*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_VAR $2 ] OP2[  IS_UNUSED  ]
+          9*       < 62> RETURN                                                    OP1[  IS_VAR $2 ]
+  111    10*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         11*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         12*       < 62> RETURN                                                    OP1[  IS_CONST (268435421) null ]
+
+End of function cleanupuri
+
+Function cleanupquery:
+[+]Function Source Class Name: Symfony\Component\DomCrawler\UriResolver
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:string
+
+[*]ArgInfoNo**0**
+[*]name:uri
+[*]type:string
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\symfony\dom-crawler\UriResolver.php
+function name:  cleanupQuery
+number of ops:  23
+compiled vars:  !0 = $uri, !1 = $pos
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  116     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  118     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435427) 'Symfony%5CComponent%5CDomCrawler%5Cstrpos' ]
+          3*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          4*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435426) '%3F' ] OP2[  IS_UNUSED  ]
+          5*       < 60> DO_FCALL                                      0   RES[  IS_VAR $2 ]       OP1[  IS_UNUSED  ]
+          6*       < 22> ASSIGN                                            RES[  IS_TMP_VAR ~3 ]       OP1[  IS_CV !1 ] OP2[ ,  IS_VAR $2 ]
+          7*       <123> TYPE_CHECK                                  1018   RES[  IS_TMP_VAR ~4 ]       OP1[  IS_TMP_VAR ~3 ] OP2[  IS_UNUSED  ]
+          8*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~4 ] OP2[ , ->17 ]
+  119     9*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         10*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435415) 'Symfony%5CComponent%5CDomCrawler%5Csubstr' ]
+         11*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         12*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435414) 0 ] OP2[  IS_UNUSED  ]
+         13*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         14*       < 60> DO_FCALL                                      0   RES[  IS_VAR $5 ]       OP1[  IS_UNUSED  ]
+         15*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_VAR $5 ] OP2[  IS_UNUSED  ]
+         16*       < 62> RETURN                                                    OP1[  IS_VAR $5 ]
+  122    17*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         18*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         19*       < 62> RETURN                                                    OP1[  IS_CV !0 ]
+  123    20*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         21*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         22*       < 62> RETURN                                                    OP1[  IS_CONST (268435395) null ]
+
+End of function cleanupquery
+
+Function cleanupanchor:
+[+]Function Source Class Name: Symfony\Component\DomCrawler\UriResolver
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:string
+
+[*]ArgInfoNo**0**
+[*]name:uri
+[*]type:string
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\symfony\dom-crawler\UriResolver.php
+function name:  cleanupAnchor
+number of ops:  23
+compiled vars:  !0 = $uri, !1 = $pos
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  128     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  130     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435427) 'Symfony%5CComponent%5CDomCrawler%5Cstrpos' ]
+          3*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          4*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435426) '%23' ] OP2[  IS_UNUSED  ]
+          5*       < 60> DO_FCALL                                      0   RES[  IS_VAR $2 ]       OP1[  IS_UNUSED  ]
+          6*       < 22> ASSIGN                                            RES[  IS_TMP_VAR ~3 ]       OP1[  IS_CV !1 ] OP2[ ,  IS_VAR $2 ]
+          7*       <123> TYPE_CHECK                                  1018   RES[  IS_TMP_VAR ~4 ]       OP1[  IS_TMP_VAR ~3 ] OP2[  IS_UNUSED  ]
+          8*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~4 ] OP2[ , ->17 ]
+  131     9*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         10*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435415) 'Symfony%5CComponent%5CDomCrawler%5Csubstr' ]
+         11*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         12*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435414) 0 ] OP2[  IS_UNUSED  ]
+         13*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         14*       < 60> DO_FCALL                                      0   RES[  IS_VAR $5 ]       OP1[  IS_UNUSED  ]
+         15*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_VAR $5 ] OP2[  IS_UNUSED  ]
+         16*       < 62> RETURN                                                    OP1[  IS_VAR $5 ]
+  134    17*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         18*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         19*       < 62> RETURN                                                    OP1[  IS_CV !0 ]
+  135    20*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         21*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         22*       < 62> RETURN                                                    OP1[  IS_CONST (268435395) null ]
+
+End of function cleanupanchor
+
+End of class Symfony\Component\DomCrawler\UriResolver.
+

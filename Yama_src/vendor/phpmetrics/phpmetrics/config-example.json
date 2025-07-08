@@ -1,0 +1,42 @@
+{
+    "includes": [
+        "Controller"
+    ],
+    "excludes": [
+        "tests"
+    ],
+    "report": {
+        "html": "/tmp/report/",
+        "csv": "/tmp/report.csv",
+        "json": "/tmp/report.json",
+        "violations": "/tmp/violations.xml"
+    },
+    "groups": [
+        {
+            "name": "Component",
+            "match": "!component!i"
+        },
+        {
+            "name": "Reporters",
+            "match": "!Report!"
+        }
+    ],
+    "searches": {
+        "Repository which uses Service": {
+            "type": "class",
+            "instanceOf": [
+                "App\\MyRepository"
+            ],
+            "nameMatches": ".*Repository.*",
+            "usesClasses": [
+                ".*Service"
+            ],
+            "failIfFound": true
+        },
+        "Class with too complex code": {
+            "type": "class",
+            "ccn": ">=3",
+            "failIfFound": true
+        }
+    }
+}

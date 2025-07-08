@@ -1,0 +1,404 @@
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\monolog\monolog\src\Monolog\SignalHandler.php
+function name:  (null)
+number of ops:  10
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+    1     0*       <  0> NOP                                                      
+   12     1*       <  0> NOP                                                      
+   14     2*       <  0> NOP                                                      
+   15     3*       <  0> NOP                                                      
+   16     4*       <  0> NOP                                                      
+   29     5*       <  0> NOP                                                      
+   32     6*       <  0> NOP                                                      
+   34     7*       <  0> NOP                                                      
+  121     8*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          9*       < 62> RETURN                                                    OP1[  IS_CONST (268435437) 1 ]
+
+Class Monolog\SignalHandler:
+[+]Class Parent Name: NULL
+End Trait extract
+Start Properties extract:
+Key: logger, Value: UNINIT, Type: Normal
+End Properties extract.
+
+Function __construct:
+[+]Function Source Class Name: Monolog\SignalHandler
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:logger
+[*]type:Psr\Log\LoggerInterface
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\monolog\monolog\src\Monolog\SignalHandler.php
+function name:  __construct
+number of ops:  6
+compiled vars:  !0 = $logger
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   38     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+   40     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435450) 'logger' ]
+          3*       <137> OP_DATA                                                   OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+   41     4*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          5*       < 62> RETURN                                                    OP1[  IS_CONST (268435445) null ]
+
+End of function __construct
+
+Function registersignalhandler:
+[+]Function Source Class Name: Monolog\SignalHandler
+[*]Start of arg_info extract:
+[*]arg_info num_args:5
+[*]Function return type:self
+
+[*]ArgInfoNo**0**
+[*]name:signo
+[*]type:int
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:level
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**2**
+[*]name:callPrevious
+[*]type:bool
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**3**
+[*]name:restartSyscalls
+[*]type:bool
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**4**
+[*]name:async
+[*]type:?bool
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\monolog\monolog\src\Monolog\SignalHandler.php
+function name:  registerSignalHandler
+number of ops:  72
+compiled vars:  !0 = $signo, !1 = $level, !2 = $callPrevious, !3 = $restartSyscalls, !4 = $async, !5 = $handler
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   52     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 64> RECV_INIT                                         RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435421) <const ast> ]
+          2*       < 64> RECV_INIT                                         RES[  IS_CV !2 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435420) <true> ]
+          3*       < 64> RECV_INIT                                         RES[  IS_CV !3 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435419) <true> ]
+          4*       < 64> RECV_INIT                                         RES[  IS_CV !4 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435418) <true> ]
+   54     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435415) 'Monolog%5Cextension_loaded' ]
+          7*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435416) 'pcntl' ] OP2[  IS_UNUSED  ]
+          8*       < 60> DO_FCALL                                      0   RES[  IS_VAR $6 ]       OP1[  IS_UNUSED  ]
+          9*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~7 ]       OP1[  IS_VAR $6 ]
+         10*       < 47> JMPNZ_EX                                          RES[  IS_TMP_VAR ~7 ]       OP1[  IS_TMP_VAR ~7 ] OP2[ , ->16 ]
+         11*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435409) 'Monolog%5Cfunction_exists' ]
+         12*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435410) 'pcntl_signal' ] OP2[  IS_UNUSED  ]
+         13*       < 60> DO_FCALL                                      0   RES[  IS_VAR $8 ]       OP1[  IS_UNUSED  ]
+         14*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~9 ]       OP1[  IS_VAR $8 ]
+         15*       < 52> BOOL                                              RES[  IS_TMP_VAR ~7 ]       OP1[  IS_TMP_VAR ~9 ]
+         16*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~7 ] OP2[ , ->21 ]
+   55    17*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         18*       <184> FETCH_THIS                                        RES[  IS_TMP_VAR ~10 ]      OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         19*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_TMP_VAR ~10 ] OP2[  IS_UNUSED  ]
+         20*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~10 ]
+   58    21*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         22*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435391) 'Monolog%5CLogger' ] OP2[ ,  IS_CONST (268435393) 'toMonologLevel' ]
+         23*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         24*       < 60> DO_FCALL                                      0   RES[  IS_VAR $11 ]      OP1[  IS_UNUSED  ]
+         25*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_VAR $11 ]
+   60    26*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         27*       < 43> JMPZ                                                      OP1[  IS_CV !2 ] OP2[ , ->38 ]
+   61    28*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         29*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435381) 'Monolog%5Cpcntl_signal_get_handler' ]
+         30*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         31*       < 60> DO_FCALL                                      0   RES[  IS_VAR $13 ]      OP1[  IS_UNUSED  ]
+         32*       < 22> ASSIGN                                                    OP1[  IS_CV !5 ] OP2[ ,  IS_VAR $13 ]
+   62    33*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         34*       < 85> FETCH_OBJ_W                                       RES[  IS_VAR $15 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435374) 'previousSignalHandler' ]
+         35*       < 23> ASSIGN_DIM                                                OP1[  IS_VAR $15 ] OP2[ ,  IS_CV !0 ]
+         36*       <137> OP_DATA                                                   OP1[  IS_CV !5 ] OP2[  IS_UNUSED  ]
+         37*       < 42> JMP                                                       OP1[ ->41 ]
+   64    38*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         39*       < 97> FETCH_OBJ_UNSET                                   RES[  IS_VAR $17 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435365) 'previousSignalHandler' ]
+         40*       < 75> UNSET_DIM                                                 OP1[  IS_VAR $17 ] OP2[ ,  IS_CV !0 ]
+   66    41*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         42*       < 85> FETCH_OBJ_W                                       RES[  IS_VAR $18 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435360) 'signalLevelMap' ]
+         43*       < 23> ASSIGN_DIM                                                OP1[  IS_VAR $18 ] OP2[ ,  IS_CV !0 ]
+         44*       <137> OP_DATA                                                   OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+   67    45*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         46*       < 85> FETCH_OBJ_W                                       RES[  IS_VAR $20 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435353) 'signalRestartSyscalls' ]
+         47*       < 23> ASSIGN_DIM                                                OP1[  IS_VAR $20 ] OP2[ ,  IS_CV !0 ]
+         48*       <137> OP_DATA                                                   OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+   69    49*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         50*       <123> TYPE_CHECK                                  1020   RES[  IS_TMP_VAR ~22 ]      OP1[  IS_CV !4 ] OP2[  IS_UNUSED  ]
+         51*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~22 ] OP2[ , ->56 ]
+   70    52*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         53*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435340) 'Monolog%5Cpcntl_async_signals' ]
+         54*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !4 ] OP2[  IS_UNUSED  ]
+         55*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+   73    56*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         57*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435335) 'Monolog%5Cpcntl_signal' ]
+         58*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         59*       <184> FETCH_THIS                                        RES[  IS_TMP_VAR ~24 ]      OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         60*       < 71> INIT_ARRAY                                        RES[  IS_TMP_VAR ~25 ]      OP1[  IS_TMP_VAR ~24 ] OP2[  IS_UNUSED  ]
+         61*       < 72> ADD_ARRAY_ELEMENT                                 RES[  IS_TMP_VAR ~25 ]      OP1[  IS_CONST (268435330) 'handleSignal' ] OP2[  IS_UNUSED  ]
+         62*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~25 ] OP2[  IS_UNUSED  ]
+         63*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         64*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+   75    65*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         66*       <184> FETCH_THIS                                        RES[  IS_TMP_VAR ~27 ]      OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         67*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_TMP_VAR ~27 ] OP2[  IS_UNUSED  ]
+         68*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~27 ]
+   76    69*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         70*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         71*       < 62> RETURN                                                    OP1[  IS_CONST (268435311) null ]
+
+End of function registersignalhandler
+
+Function handlesignal:
+[+]Function Source Class Name: Monolog\SignalHandler
+[*]Start of arg_info extract:
+[*]arg_info num_args:2
+[*]Function return type:void
+
+[*]ArgInfoNo**0**
+[*]name:signo
+[*]type:int
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:siginfo
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]Key: signals, Value: IS_ARRAY, Type: 7
+	[+]Start ARRAY extract:
+	[+]End ARRAY extract.
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\monolog\monolog\src\Monolog\SignalHandler.php
+function name:  handleSignal
+number of ops:  190
+compiled vars:  !0 = $signo, !1 = $siginfo, !2 = $signals, !3 = $pcntl, !4 = $value, !5 = $name, !6 = $level, !7 = $signal, !8 = $context, !9 = $restartSyscalls, !10 = $oldset
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   81     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 64> RECV_INIT                                         RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435343) null ]
+   83     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       <183> BIND_STATIC                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+   85     4*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          5*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~11 ]      OP1[  IS_CV !2 ]
+          6*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~11 ]      OP1[  IS_TMP_VAR ~11 ] OP2[ , ->11 ]
+          7*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435332) 'Monolog%5Cextension_loaded' ]
+          8*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435333) 'pcntl' ] OP2[  IS_UNUSED  ]
+          9*       < 60> DO_FCALL                                      0   RES[  IS_VAR $12 ]      OP1[  IS_UNUSED  ]
+         10*       < 52> BOOL                                              RES[  IS_TMP_VAR ~11 ]      OP1[  IS_VAR $12 ]
+         11*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~11 ] OP2[ , ->51 ]
+   86    12*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         13*       < 68> NEW                                               RES[  IS_VAR $13 ]      OP1[ 'ReflectionExtension' ]
+         14*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435324) 'pcntl' ] OP2[  IS_UNUSED  ]
+         15*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         16*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_VAR $13 ]
+   88    17*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         18*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435317) 'getConstants' ]
+         19*       < 60> DO_FCALL                                      0   RES[  IS_VAR $16 ]      OP1[  IS_UNUSED  ]
+         20*       <152> JMP_SET                                           RES[  IS_TMP_VAR ~17 ]      OP1[  IS_VAR $16 ] OP2[ , ->26 ]
+         21*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435313) 'Monolog%5Cget_defined_constants' ]
+         22*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435314) <true> ] OP2[  IS_UNUSED  ]
+         23*       < 60> DO_FCALL                                      0   RES[  IS_VAR $18 ]      OP1[  IS_UNUSED  ]
+         24*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~19 ]      OP1[  IS_VAR $18 ] OP2[ ,  IS_CONST (268435311) 'Core' ]
+         25*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~17 ]      OP1[  IS_TMP_VAR ~19 ]
+         26*       < 77> FE_RESET_R                                        RES[  IS_VAR $20 ]      OP1[  IS_TMP_VAR ~17 ] OP2[ , ->50 ]
+         27*       < 78> FE_FETCH_R                                        RES[  IS_TMP_VAR ~21 ]      OP1[  IS_VAR $20 ] OP2[ ,  IS_CV !4 ] EXT_JMP_REL[ , ->50 ]
+         28*       < 22> ASSIGN                                                    OP1[  IS_CV !5 ] OP2[ ,  IS_TMP_VAR ~21 ]
+   89    29*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         30*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435300) 'Monolog%5Csubstr' ]
+         31*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !5 ] OP2[  IS_UNUSED  ]
+         32*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435299) 0 ] OP2[  IS_UNUSED  ]
+         33*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435298) 3 ] OP2[  IS_UNUSED  ]
+         34*       < 60> DO_FCALL                                      0   RES[  IS_VAR $23 ]      OP1[  IS_UNUSED  ]
+         35*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~24 ]      OP1[  IS_VAR $23 ] OP2[ ,  IS_CONST (268435295) 'SIG' ]
+         36*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~24 ]      OP1[  IS_TMP_VAR ~24 ] OP2[ , ->40 ]
+         37*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~25 ]      OP1[  IS_CV !5 ] OP2[ ,  IS_CONST (268435292) 3 ]
+         38*       < 17> IS_NOT_IDENTICAL                                  RES[  IS_TMP_VAR ~26 ]      OP1[  IS_TMP_VAR ~25 ] OP2[ ,  IS_CONST (268435291) '_' ]
+         39*       < 52> BOOL                                              RES[  IS_TMP_VAR ~24 ]      OP1[  IS_TMP_VAR ~26 ]
+         40*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~24 ]      OP1[  IS_TMP_VAR ~24 ] OP2[ , ->45 ]
+         41*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435286) 'Monolog%5Cis_int' ]
+         42*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !4 ] OP2[  IS_UNUSED  ]
+         43*       < 60> DO_FCALL                                      0   RES[  IS_VAR $27 ]      OP1[  IS_UNUSED  ]
+         44*       < 52> BOOL                                              RES[  IS_TMP_VAR ~24 ]      OP1[  IS_VAR $27 ]
+         45*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~24 ] OP2[ , ->49 ]
+   90    46*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         47*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !2 ] OP2[ ,  IS_CV !4 ]
+         48*       <137> OP_DATA                                                   OP1[  IS_CV !5 ] OP2[  IS_UNUSED  ]
+   88    49*       < 42> JMP                                                       OP1[ ->27 ]
+         50*       <127> FE_FREE                                                   OP1[  IS_VAR $20 ] OP2[  IS_UNUSED  ]
+   95    51*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         52*       < 91> FETCH_OBJ_IS                                      RES[  IS_TMP_VAR ~29 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435267) 'signalLevelMap' ]
+         53*       < 90> FETCH_DIM_IS                                      RES[  IS_TMP_VAR ~30 ]      OP1[  IS_TMP_VAR ~29 ] OP2[ ,  IS_CV !0 ]
+         54*       <169> COALESCE                                          RES[  IS_TMP_VAR ~31 ]      OP1[  IS_TMP_VAR ~30 ] OP2[ , ->57 ]
+         55*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~32 ]      OP1[  IS_CONST (268435263) 'Psr%5CLog%5CLogLevel' ] OP2[ ,  IS_CONST (268435262) 'CRITICAL' ]
+         56*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~31 ]      OP1[  IS_TMP_VAR ~32 ]
+         57*       < 22> ASSIGN                                                    OP1[  IS_CV !6 ] OP2[ ,  IS_TMP_VAR ~31 ]
+   96    58*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         59*       < 90> FETCH_DIM_IS                                      RES[  IS_TMP_VAR ~34 ]      OP1[  IS_CV !2 ] OP2[ ,  IS_CV !0 ]
+         60*       <169> COALESCE                                          RES[  IS_TMP_VAR ~35 ]      OP1[  IS_TMP_VAR ~34 ] OP2[ , ->62 ]
+         61*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~35 ]      OP1[  IS_CV !0 ]
+         62*       < 22> ASSIGN                                                    OP1[  IS_CV !7 ] OP2[ ,  IS_TMP_VAR ~35 ]
+   97    63*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         64*       <169> COALESCE                                          RES[  IS_TMP_VAR ~37 ]      OP1[  IS_CV !1 ] OP2[ , ->66 ]
+         65*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~37 ]      OP1[  IS_CONST (268435245) <array> ]
+         66*       < 22> ASSIGN                                                    OP1[  IS_CV !8 ] OP2[ ,  IS_TMP_VAR ~37 ]
+   98    67*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         68*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~39 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435240) 'logger' ]
+         69*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~39 ] OP2[ ,  IS_CONST (268435239) 'log' ]
+         70*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !6 ] OP2[  IS_UNUSED  ]
+         71*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435237) 'Monolog%5Csprintf' ]
+         72*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435238) 'Program+received+signal+%25s' ] OP2[  IS_UNUSED  ]
+         73*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !7 ] OP2[  IS_UNUSED  ]
+         74*       < 60> DO_FCALL                                      0   RES[  IS_VAR $40 ]      OP1[  IS_UNUSED  ]
+         75*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $40 ] OP2[  IS_UNUSED  ]
+         76*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !8 ] OP2[  IS_UNUSED  ]
+         77*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  100    78*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         79*       < 91> FETCH_OBJ_IS                                      RES[  IS_TMP_VAR ~42 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435225) 'previousSignalHandler' ]
+         80*       <115> ISSET_ISEMPTY_DIM_OBJ                         0   RES[  IS_TMP_VAR ~43 ]      OP1[  IS_TMP_VAR ~42 ] OP2[ ,  IS_CV !0 ]
+         81*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~44 ]      OP1[  IS_TMP_VAR ~43 ]
+         82*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~44 ] OP2[ , ->85 ]
+  101    83*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         84*       < 62> RETURN                                                    OP1[  IS_CONST (268435216) null ]
+  104    85*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         86*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~45 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435213) 'previousSignalHandler' ]
+         87*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~46 ]      OP1[  IS_TMP_VAR ~45 ] OP2[ ,  IS_CV !0 ]
+         88*       < 99> FETCH_CONSTANT                                    RES[  IS_TMP_VAR ~47 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435210) 'Monolog%5CSIG_DFL' ]
+         89*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~48 ]      OP1[  IS_TMP_VAR ~46 ] OP2[ ,  IS_TMP_VAR ~47 ]
+         90*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~48 ] OP2[ , ->173 ]
+  105    91*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         92*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435205) 'Monolog%5Cextension_loaded' ]
+         93*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435206) 'pcntl' ] OP2[  IS_UNUSED  ]
+         94*       < 60> DO_FCALL                                      0   RES[  IS_VAR $49 ]      OP1[  IS_UNUSED  ]
+         95*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~50 ]      OP1[  IS_VAR $49 ] OP2[ , ->100 ]
+         96*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435201) 'Monolog%5Cfunction_exists' ]
+         97*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435202) 'pcntl_signal' ] OP2[  IS_UNUSED  ]
+         98*       < 60> DO_FCALL                                      0   RES[  IS_VAR $51 ]      OP1[  IS_UNUSED  ]
+         99*       < 52> BOOL                                              RES[  IS_TMP_VAR ~50 ]      OP1[  IS_VAR $51 ]
+        100*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~50 ]      OP1[  IS_TMP_VAR ~50 ] OP2[ , ->105 ]
+        101*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435195) 'Monolog%5Cfunction_exists' ]
+        102*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435196) 'pcntl_sigprocmask' ] OP2[  IS_UNUSED  ]
+        103*       < 60> DO_FCALL                                      0   RES[  IS_VAR $52 ]      OP1[  IS_UNUSED  ]
+        104*       < 52> BOOL                                              RES[  IS_TMP_VAR ~50 ]      OP1[  IS_VAR $52 ]
+        105*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~50 ]      OP1[  IS_TMP_VAR ~50 ] OP2[ , ->110 ]
+        106*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435189) 'Monolog%5Cfunction_exists' ]
+        107*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435190) 'pcntl_signal_dispatch' ] OP2[  IS_UNUSED  ]
+        108*       < 60> DO_FCALL                                      0   RES[  IS_VAR $53 ]      OP1[  IS_UNUSED  ]
+        109*       < 52> BOOL                                              RES[  IS_TMP_VAR ~50 ]      OP1[  IS_VAR $53 ]
+        110*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~50 ]      OP1[  IS_TMP_VAR ~50 ] OP2[ , ->115 ]
+  106   111*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435183) 'Monolog%5Cextension_loaded' ]
+        112*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435184) 'posix' ] OP2[  IS_UNUSED  ]
+        113*       < 60> DO_FCALL                                      0   RES[  IS_VAR $54 ]      OP1[  IS_UNUSED  ]
+        114*       < 52> BOOL                                              RES[  IS_TMP_VAR ~50 ]      OP1[  IS_VAR $54 ]
+        115*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~50 ]      OP1[  IS_TMP_VAR ~50 ] OP2[ , ->120 ]
+        116*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435177) 'Monolog%5Cfunction_exists' ]
+        117*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435178) 'posix_getpid' ] OP2[  IS_UNUSED  ]
+        118*       < 60> DO_FCALL                                      0   RES[  IS_VAR $55 ]      OP1[  IS_UNUSED  ]
+        119*       < 52> BOOL                                              RES[  IS_TMP_VAR ~50 ]      OP1[  IS_VAR $55 ]
+        120*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~50 ]      OP1[  IS_TMP_VAR ~50 ] OP2[ , ->125 ]
+        121*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435171) 'Monolog%5Cfunction_exists' ]
+        122*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435172) 'posix_kill' ] OP2[  IS_UNUSED  ]
+        123*       < 60> DO_FCALL                                      0   RES[  IS_VAR $56 ]      OP1[  IS_UNUSED  ]
+        124*       < 52> BOOL                                              RES[  IS_TMP_VAR ~50 ]      OP1[  IS_VAR $56 ]
+        125*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~50 ] OP2[ , ->172 ]
+  108   126*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        127*       < 91> FETCH_OBJ_IS                                      RES[  IS_TMP_VAR ~57 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435163) 'signalRestartSyscalls' ]
+        128*       < 90> FETCH_DIM_IS                                      RES[  IS_TMP_VAR ~58 ]      OP1[  IS_TMP_VAR ~57 ] OP2[ ,  IS_CV !0 ]
+        129*       <169> COALESCE                                          RES[  IS_TMP_VAR ~59 ]      OP1[  IS_TMP_VAR ~58 ] OP2[ , ->131 ]
+        130*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~59 ]      OP1[  IS_CONST (268435158) <true> ]
+        131*       < 22> ASSIGN                                                    OP1[  IS_CV !9 ] OP2[ ,  IS_TMP_VAR ~59 ]
+  109   132*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        133*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435153) 'Monolog%5Cpcntl_signal' ]
+        134*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+        135*       < 99> FETCH_CONSTANT                                    RES[  IS_TMP_VAR ~61 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435152) 'Monolog%5CSIG_DFL' ]
+        136*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~61 ] OP2[  IS_UNUSED  ]
+        137*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !9 ] OP2[  IS_UNUSED  ]
+        138*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  110   139*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        140*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435145) 'Monolog%5Cpcntl_sigprocmask' ]
+        141*       < 99> FETCH_CONSTANT                                    RES[  IS_TMP_VAR ~63 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435146) 'Monolog%5CSIG_UNBLOCK' ]
+        142*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~63 ] OP2[  IS_UNUSED  ]
+        143*       < 71> INIT_ARRAY                                        RES[  IS_TMP_VAR ~64 ]      OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+        144*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~64 ] OP2[  IS_UNUSED  ]
+        145*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !10 ] OP2[  IS_UNUSED  ]
+        146*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  111   147*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        148*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435135) 'Monolog%5Cposix_kill' ]
+        149*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435136) 'Monolog%5Cposix_getpid' ]
+        150*       < 60> DO_FCALL                                      0   RES[  IS_VAR $66 ]      OP1[  IS_UNUSED  ]
+        151*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $66 ] OP2[  IS_UNUSED  ]
+        152*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+        153*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  112   154*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        155*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435127) 'Monolog%5Cpcntl_signal_dispatch' ]
+        156*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  113   157*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        158*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435124) 'Monolog%5Cpcntl_sigprocmask' ]
+        159*       < 99> FETCH_CONSTANT                                    RES[  IS_TMP_VAR ~69 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435125) 'Monolog%5CSIG_SETMASK' ]
+        160*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~69 ] OP2[  IS_UNUSED  ]
+        161*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !10 ] OP2[  IS_UNUSED  ]
+        162*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  114   163*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        164*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435118) 'Monolog%5Cpcntl_signal' ]
+        165*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+        166*       <184> FETCH_THIS                                        RES[  IS_TMP_VAR ~71 ]      OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        167*       < 71> INIT_ARRAY                                        RES[  IS_TMP_VAR ~72 ]      OP1[  IS_TMP_VAR ~71 ] OP2[  IS_UNUSED  ]
+        168*       < 72> ADD_ARRAY_ELEMENT                                 RES[  IS_TMP_VAR ~72 ]      OP1[  IS_CONST (268435113) 'handleSignal' ] OP2[  IS_UNUSED  ]
+        169*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~72 ] OP2[  IS_UNUSED  ]
+        170*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !9 ] OP2[  IS_UNUSED  ]
+        171*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+        172*       < 42> JMP                                                       OP1[ ->188 ]
+  116   173*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        174*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435102) 'Monolog%5Cis_callable' ]
+        175*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        176*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $74 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435101) 'previousSignalHandler' ]
+        177*       < 93> FETCH_DIM_FUNC_ARG                                RES[  IS_VAR $75 ]      OP1[  IS_VAR $74 ] OP2[ ,  IS_CV !0 ]
+        178*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $75 ] OP2[  IS_UNUSED  ]
+        179*       < 60> DO_FCALL                                      0   RES[  IS_VAR $76 ]      OP1[  IS_UNUSED  ]
+        180*       < 43> JMPZ                                                      OP1[  IS_VAR $76 ] OP2[ , ->188 ]
+  117   181*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        182*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~77 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435090) 'previousSignalHandler' ]
+        183*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~78 ]      OP1[  IS_TMP_VAR ~77 ] OP2[ ,  IS_CV !0 ]
+        184*       <128> INIT_DYNAMIC_CALL                                         OP1[  IS_UNUSED  ] OP2[  IS_TMP_VAR ~78 ]
+        185*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+        186*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+        187*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  119   188*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        189*       < 62> RETURN                                                    OP1[  IS_CONST (268435077) null ]
+
+End of function handlesignal
+
+End of class Monolog\SignalHandler.
+

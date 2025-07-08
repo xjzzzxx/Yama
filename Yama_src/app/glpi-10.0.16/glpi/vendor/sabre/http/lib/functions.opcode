@@ -1,0 +1,952 @@
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\sabre\http\lib\functions.php
+function name:  (null)
+number of ops:  5
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+    3     0*       <  0> NOP                                                      
+    5     1*       <  0> NOP                                                      
+    7     2*       <  0> NOP                                                      
+  414     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       < 62> RETURN                                                    OP1[  IS_CONST (268435447) 1 ]
+
+Function sabre%5Chttp%5Cparsedate:
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:dateString
+[*]type:string
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\sabre\http\lib\functions.php
+function name:  Sabre\HTTP\parseDate
+number of ops:  92
+compiled vars:  !0 = $dateString, !1 = $month, !2 = $weekday, !3 = $wkday, !4 = $time, !5 = $date3, !6 = $date2, !7 = $date1, !8 = $asctime_date, !9 = $rfc850_date, !10 = $rfc1123_date, !11 = $HTTP_date, !12 = $e
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   34     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+   37     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435406) '%28Jan%7CFeb%7CMar%7CApr%7CMay%7CJun%7CJul%7CAug%7CSep%7COct%7CNov%7CDec%29' ]
+   38     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435403) '%28Monday%7CTuesday%7CWednesday%7CThursday%7CFriday%7CSaturday%7CSunday%29' ]
+   39     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435400) '%28Mon%7CTue%7CWed%7CThu%7CFri%7CSat%7CSun%29' ]
+   40     7*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          8*       < 22> ASSIGN                                                    OP1[  IS_CV !4 ] OP2[ ,  IS_CONST (268435397) '%28%5B0-1%5D%5Cd%7C2%5B0-3%5D%29%28%5C%3A%5B0-5%5D%5Cd%29%7B2%7D' ]
+   41     9*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         10*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~17 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435394) '+%28%5B12%5D%5Cd%7C3%5B01%5D%7C+%5B1-9%5D%29' ]
+         11*       < 22> ASSIGN                                                    OP1[  IS_CV !5 ] OP2[ ,  IS_TMP_VAR ~17 ]
+   42    12*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         13*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~19 ]      OP1[  IS_CONST (268435389) '%280%5B1-9%5D%7C%5B12%5D%5Cd%7C3%5B01%5D%29%5C-' ] OP2[ ,  IS_CV !1 ]
+         14*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~20 ]      OP1[  IS_TMP_VAR ~19 ] OP2[ ,  IS_CONST (268435388) '%5C-%5Cd%7B2%7D' ]
+         15*       < 22> ASSIGN                                                    OP1[  IS_CV !6 ] OP2[ ,  IS_TMP_VAR ~20 ]
+   44    16*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         17*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~22 ]      OP1[  IS_CONST (268435383) '%280%5B1-9%5D%7C%5B12%5D%5Cd%7C3%5B01%5D%29+' ] OP2[ ,  IS_CV !1 ]
+         18*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~23 ]      OP1[  IS_TMP_VAR ~22 ] OP2[ ,  IS_CONST (268435382) '+%5B1-9%5D%5Cd%7B3%7D' ]
+         19*       < 22> ASSIGN                                                    OP1[  IS_CV !7 ] OP2[ ,  IS_TMP_VAR ~23 ]
+   48    20*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         21*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~25 ]      OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435377) '+' ]
+         22*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~26 ]      OP1[  IS_TMP_VAR ~25 ] OP2[ ,  IS_CV !5 ]
+         23*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~27 ]      OP1[  IS_TMP_VAR ~26 ] OP2[ ,  IS_CONST (268435374) '+' ]
+         24*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~28 ]      OP1[  IS_TMP_VAR ~27 ] OP2[ ,  IS_CV !4 ]
+         25*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~29 ]      OP1[  IS_TMP_VAR ~28 ] OP2[ ,  IS_CONST (268435371) '+%5B1-9%5D%5Cd%7B3%7D' ]
+         26*       < 22> ASSIGN                                                    OP1[  IS_CV !8 ] OP2[ ,  IS_TMP_VAR ~29 ]
+   50    27*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         28*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~31 ]      OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435366) '%2C+' ]
+         29*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~32 ]      OP1[  IS_TMP_VAR ~31 ] OP2[ ,  IS_CV !6 ]
+         30*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~33 ]      OP1[  IS_TMP_VAR ~32 ] OP2[ ,  IS_CONST (268435363) '+' ]
+         31*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~34 ]      OP1[  IS_TMP_VAR ~33 ] OP2[ ,  IS_CV !4 ]
+         32*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~35 ]      OP1[  IS_TMP_VAR ~34 ] OP2[ ,  IS_CONST (268435360) '+GMT' ]
+         33*       < 22> ASSIGN                                                    OP1[  IS_CV !9 ] OP2[ ,  IS_TMP_VAR ~35 ]
+   52    34*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         35*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~37 ]      OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435355) '%2C+' ]
+         36*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~38 ]      OP1[  IS_TMP_VAR ~37 ] OP2[ ,  IS_CV !7 ]
+         37*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~39 ]      OP1[  IS_TMP_VAR ~38 ] OP2[ ,  IS_CONST (268435352) '+' ]
+         38*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~40 ]      OP1[  IS_TMP_VAR ~39 ] OP2[ ,  IS_CV !4 ]
+         39*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~41 ]      OP1[  IS_TMP_VAR ~40 ] OP2[ ,  IS_CONST (268435349) '+GMT' ]
+         40*       < 22> ASSIGN                                                    OP1[  IS_CV !10 ] OP2[ ,  IS_TMP_VAR ~41 ]
+   54    41*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         42*       < 54> ROPE_INIT                                     7   RES[  IS_TMP_VAR ~44 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435344) '%28' ]
+         43*       < 55> ROPE_ADD                                      1   RES[  IS_TMP_VAR ~44 ]      OP1[  IS_TMP_VAR ~44 ] OP2[ ,  IS_CV !10 ]
+         44*       < 55> ROPE_ADD                                      2   RES[  IS_TMP_VAR ~44 ]      OP1[  IS_TMP_VAR ~44 ] OP2[ ,  IS_CONST (268435341) '%7C' ]
+         45*       < 55> ROPE_ADD                                      3   RES[  IS_TMP_VAR ~44 ]      OP1[  IS_TMP_VAR ~44 ] OP2[ ,  IS_CV !9 ]
+         46*       < 55> ROPE_ADD                                      4   RES[  IS_TMP_VAR ~44 ]      OP1[  IS_TMP_VAR ~44 ] OP2[ ,  IS_CONST (268435338) '%7C' ]
+         47*       < 55> ROPE_ADD                                      5   RES[  IS_TMP_VAR ~44 ]      OP1[  IS_TMP_VAR ~44 ] OP2[ ,  IS_CV !8 ]
+         48*       < 56> ROPE_END                                      6   RES[  IS_TMP_VAR ~43 ]      OP1[  IS_TMP_VAR ~44 ] OP2[ ,  IS_CONST (268435335) '%29' ]
+         49*       < 22> ASSIGN                                                    OP1[  IS_CV !11 ] OP2[ ,  IS_TMP_VAR ~43 ]
+   57    50*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         51*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435330) 'Sabre%5CHTTP%5Ctrim' ]
+         52*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         53*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435329) '+' ] OP2[  IS_UNUSED  ]
+         54*       < 60> DO_FCALL                                      0   RES[  IS_VAR $49 ]      OP1[  IS_UNUSED  ]
+         55*       < 22> ASSIGN                                                    OP1[  IS_CV !0 ] OP2[ ,  IS_VAR $49 ]
+   58    56*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         57*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435322) 'Sabre%5CHTTP%5Cpreg_match' ]
+         58*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~51 ]      OP1[  IS_CONST (268435323) '%2F%5E' ] OP2[ ,  IS_CV !11 ]
+         59*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~52 ]      OP1[  IS_TMP_VAR ~51 ] OP2[ ,  IS_CONST (268435322) '%24%2F' ]
+         60*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~52 ] OP2[  IS_UNUSED  ]
+         61*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         62*       < 60> DO_FCALL                                      0   RES[  IS_VAR $53 ]      OP1[  IS_UNUSED  ]
+         63*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~54 ]      OP1[  IS_VAR $53 ]
+         64*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~54 ] OP2[ , ->67 ]
+   59    65*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         66*       < 62> RETURN                                                    OP1[  IS_CONST (268435309) <false> ]
+   63    67*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         68*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435306) 'Sabre%5CHTTP%5Cstrpos' ]
+         69*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         70*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435305) '+GMT' ] OP2[  IS_UNUSED  ]
+         71*       < 60> DO_FCALL                                      0   RES[  IS_VAR $55 ]      OP1[  IS_UNUSED  ]
+         72*       <123> TYPE_CHECK                                    4   RES[  IS_TMP_VAR ~56 ]      OP1[  IS_VAR $55 ] OP2[  IS_UNUSED  ]
+         73*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~56 ] OP2[ , ->76 ]
+   64    74*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         75*       < 26> ASSIGN_OP                    .=               8           OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435296) '+GMT' ]
+   67    76*       <  0> NOP                                                      
+   68    77*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         78*       < 68> NEW                                               RES[  IS_VAR $58 ]      OP1[ 'DateTime' ]
+         79*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         80*       < 68> NEW                                               RES[  IS_VAR $59 ]      OP1[ 'DateTimeZone' ]
+         81*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435289) 'UTC' ] OP2[  IS_UNUSED  ]
+         82*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         83*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $59 ] OP2[  IS_UNUSED  ]
+         84*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         85*       < 62> RETURN                                                    OP1[  IS_VAR $58 ]
+         86*       < 42> JMP                                                       OP1[ ->90 ]
+   69    87*       <107> CATCH                                       last  RES[  IS_CV !12 ]      OP1[  IS_CONST (268435278) 'Exception' ]
+   70    88*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         89*       < 62> RETURN                                                    OP1[  IS_CONST (268435276) <false> ]
+   72    90*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         91*       < 62> RETURN                                                    OP1[  IS_CONST (268435273) null ]
+
+End of function sabre%5Chttp%5Cparsedate
+
+Function sabre%5Chttp%5Ctodate:
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:string
+
+[*]ArgInfoNo**0**
+[*]name:dateTime
+[*]type:DateTime
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\sabre\http\lib\functions.php
+function name:  Sabre\HTTP\toDate
+number of ops:  20
+compiled vars:  !0 = $dateTime
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   77     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+   81     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       <110> CLONE                                             RES[  IS_TMP_VAR ~1 ]       OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          3*       < 22> ASSIGN                                                    OP1[  IS_CV !0 ] OP2[ ,  IS_TMP_VAR ~1 ]
+   82     4*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          5*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435437) 'setTimezone' ]
+          6*       < 68> NEW                                               RES[  IS_VAR $3 ]       OP1[ 'DateTimeZone' ]
+          7*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435437) 'GMT' ] OP2[  IS_UNUSED  ]
+          8*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+          9*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $3 ] OP2[  IS_UNUSED  ]
+         10*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+   84    11*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         12*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435428) 'format' ]
+         13*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435428) 'D%2C+d+M+Y+H%3Ai%3As+%5CG%5CM%5CT' ] OP2[  IS_UNUSED  ]
+         14*       < 60> DO_FCALL                                      0   RES[  IS_VAR $6 ]       OP1[  IS_UNUSED  ]
+         15*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_VAR $6 ] OP2[  IS_UNUSED  ]
+         16*       < 62> RETURN                                                    OP1[  IS_VAR $6 ]
+   85    17*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         18*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         19*       < 62> RETURN                                                    OP1[  IS_CONST (268435417) null ]
+
+End of function sabre%5Chttp%5Ctodate
+
+Function sabre%5Chttp%5Cnegotiatecontenttype:
+[*]Start of arg_info extract:
+[*]arg_info num_args:2
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:acceptHeaderValue
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:availableOptions
+[*]type:array
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\sabre\http\lib\functions.php
+function name:  Sabre\HTTP\negotiateContentType
+number of ops:  166
+compiled vars:  !0 = $acceptHeaderValue, !1 = $availableOptions, !2 = $proposals, !3 = $options, !4 = $lastQuality, !5 = $lastSpecificity, !6 = $lastOptionIndex, !7 = $lastChoice, !8 = $proposal, !9 = $option, !10 = $optionIndex, !11 = $paramValue, !12 = $paramName, !13 = $specificity
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  107     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 63> RECV                                              RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ]
+  109     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~14 ]      OP1[  IS_CV !0 ]
+          4*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~14 ] OP2[ , ->10 ]
+  111     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435390) 'Sabre%5CHTTP%5Creset' ]
+          7*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+          8*       < 60> DO_FCALL                                      0   RES[  IS_VAR $15 ]      OP1[  IS_UNUSED  ]
+          9*       < 62> RETURN                                                    OP1[  IS_VAR $15 ]
+  114    10*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         11*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435383) 'Sabre%5CHTTP%5Carray_map' ]
+  115    12*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435384) 'Sabre%5CHTTP%5CparseMimeType' ] OP2[  IS_UNUSED  ]
+  116    13*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435383) 'Sabre%5CHTTP%5Cexplode' ]
+         14*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435384) '%2C' ] OP2[  IS_UNUSED  ]
+         15*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         16*       < 60> DO_FCALL                                      0   RES[  IS_VAR $16 ]      OP1[  IS_UNUSED  ]
+         17*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $16 ] OP2[  IS_UNUSED  ]
+         18*       < 60> DO_FCALL                                      0   RES[  IS_VAR $17 ]      OP1[  IS_UNUSED  ]
+  114    19*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_VAR $17 ]
+  120    20*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         21*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435371) 'Sabre%5CHTTP%5Carray_values' ]
+         22*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         23*       < 60> DO_FCALL                                      0   RES[  IS_VAR $19 ]      OP1[  IS_UNUSED  ]
+         24*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_VAR $19 ]
+  122    25*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         26*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435364) 'Sabre%5CHTTP%5Carray_map' ]
+  123    27*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435365) 'Sabre%5CHTTP%5CparseMimeType' ] OP2[  IS_UNUSED  ]
+         28*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         29*       < 60> DO_FCALL                                      0   RES[  IS_VAR $21 ]      OP1[  IS_UNUSED  ]
+  122    30*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_VAR $21 ]
+  127    31*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         32*       < 22> ASSIGN                                                    OP1[  IS_CV !4 ] OP2[ ,  IS_CONST (268435356) 0 ]
+  128    33*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         34*       < 22> ASSIGN                                                    OP1[  IS_CV !5 ] OP2[ ,  IS_CONST (268435353) 0 ]
+  129    35*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         36*       < 22> ASSIGN                                                    OP1[  IS_CV !6 ] OP2[ ,  IS_CONST (268435350) 0 ]
+  130    37*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         38*       < 22> ASSIGN                                                    OP1[  IS_CV !7 ] OP2[ ,  IS_CONST (268435347) null ]
+  132    39*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         40*       < 77> FE_RESET_R                                        RES[  IS_VAR $27 ]      OP1[  IS_CV !2 ] OP2[ , ->161 ]
+         41*       < 78> FE_FETCH_R                                                OP1[  IS_VAR $27 ] OP2[ ,  IS_CV !8 ] EXT_JMP_REL[ , ->161 ]
+  134    42*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         43*       <123> TYPE_CHECK                                    2   RES[  IS_TMP_VAR ~28 ]      OP1[  IS_CV !8 ] OP2[  IS_UNUSED  ]
+         44*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~28 ] OP2[ , ->47 ]
+  135    45*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         46*       < 42> JMP                                                       OP1[ ->41 ]
+  139    47*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         48*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~29 ]      OP1[  IS_CV !8 ] OP2[ ,  IS_CONST (268435328) 'quality' ]
+         49*       < 20> IS_SMALLER                                        RES[  IS_TMP_VAR ~30 ]      OP1[  IS_TMP_VAR ~29 ] OP2[ ,  IS_CV !4 ]
+         50*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~30 ] OP2[ , ->53 ]
+  140    51*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         52*       < 42> JMP                                                       OP1[ ->41 ]
+  143    53*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         54*       < 77> FE_RESET_R                                        RES[  IS_VAR $31 ]      OP1[  IS_CV !3 ] OP2[ , ->159 ]
+         55*       < 78> FE_FETCH_R                                        RES[  IS_TMP_VAR ~32 ]      OP1[  IS_VAR $31 ] OP2[ ,  IS_CV !9 ] EXT_JMP_REL[ , ->159 ]
+         56*       < 22> ASSIGN                                                    OP1[  IS_CV !10 ] OP2[ ,  IS_TMP_VAR ~32 ]
+  144    57*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         58*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~34 ]      OP1[  IS_CV !8 ] OP2[ ,  IS_CONST (268435309) 'type' ]
+         59*       < 17> IS_NOT_IDENTICAL                                  RES[  IS_TMP_VAR ~35 ]      OP1[  IS_TMP_VAR ~34 ] OP2[ ,  IS_CONST (268435308) '%2A' ]
+         60*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~35 ]      OP1[  IS_TMP_VAR ~35 ] OP2[ , ->65 ]
+         61*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~36 ]      OP1[  IS_CV !8 ] OP2[ ,  IS_CONST (268435305) 'type' ]
+         62*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~37 ]      OP1[  IS_CV !9 ] OP2[ ,  IS_CONST (268435304) 'type' ]
+         63*       < 17> IS_NOT_IDENTICAL                                  RES[  IS_TMP_VAR ~38 ]      OP1[  IS_TMP_VAR ~36 ] OP2[ ,  IS_TMP_VAR ~37 ]
+         64*       < 52> BOOL                                              RES[  IS_TMP_VAR ~35 ]      OP1[  IS_TMP_VAR ~38 ]
+         65*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~35 ] OP2[ , ->68 ]
+  146    66*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         67*       < 42> JMP                                                       OP1[ ->55 ]
+  148    68*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         69*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~39 ]      OP1[  IS_CV !8 ] OP2[ ,  IS_CONST (268435291) 'subType' ]
+         70*       < 17> IS_NOT_IDENTICAL                                  RES[  IS_TMP_VAR ~40 ]      OP1[  IS_TMP_VAR ~39 ] OP2[ ,  IS_CONST (268435290) '%2A' ]
+         71*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~40 ]      OP1[  IS_TMP_VAR ~40 ] OP2[ , ->76 ]
+         72*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~41 ]      OP1[  IS_CV !8 ] OP2[ ,  IS_CONST (268435287) 'subType' ]
+         73*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~42 ]      OP1[  IS_CV !9 ] OP2[ ,  IS_CONST (268435286) 'subType' ]
+         74*       < 17> IS_NOT_IDENTICAL                                  RES[  IS_TMP_VAR ~43 ]      OP1[  IS_TMP_VAR ~41 ] OP2[ ,  IS_TMP_VAR ~42 ]
+         75*       < 52> BOOL                                              RES[  IS_TMP_VAR ~40 ]      OP1[  IS_TMP_VAR ~43 ]
+         76*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~40 ] OP2[ , ->79 ]
+  150    77*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         78*       < 42> JMP                                                       OP1[ ->55 ]
+  155    79*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         80*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~44 ]      OP1[  IS_CV !9 ] OP2[ ,  IS_CONST (268435273) 'parameters' ]
+         81*       < 77> FE_RESET_R                                        RES[  IS_VAR $45 ]      OP1[  IS_TMP_VAR ~44 ] OP2[ , ->105 ]
+         82*       < 78> FE_FETCH_R                                        RES[  IS_TMP_VAR ~46 ]      OP1[  IS_VAR $45 ] OP2[ ,  IS_CV !11 ] EXT_JMP_REL[ , ->105 ]
+         83*       < 22> ASSIGN                                                    OP1[  IS_CV !12 ] OP2[ ,  IS_TMP_VAR ~46 ]
+  156    84*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         85*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435264) 'Sabre%5CHTTP%5Carray_key_exists' ]
+         86*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !12 ] OP2[  IS_UNUSED  ]
+         87*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         88*       < 93> FETCH_DIM_FUNC_ARG                                RES[  IS_VAR $48 ]      OP1[  IS_CV !8 ] OP2[ ,  IS_CONST (268435261) 'parameters' ]
+         89*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $48 ] OP2[  IS_UNUSED  ]
+         90*       < 60> DO_FCALL                                      0   RES[  IS_VAR $49 ]      OP1[  IS_UNUSED  ]
+         91*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~50 ]      OP1[  IS_VAR $49 ]
+         92*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~50 ] OP2[ , ->96 ]
+  157    93*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         94*       <127> FE_FREE                                                   OP1[  IS_VAR $45 ] OP2[  IS_UNUSED  ]
+         95*       < 42> JMP                                                       OP1[ ->55 ]
+  159    96*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         97*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~51 ]      OP1[  IS_CV !8 ] OP2[ ,  IS_CONST (268435244) 'parameters' ]
+         98*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~52 ]      OP1[  IS_TMP_VAR ~51 ] OP2[ ,  IS_CV !12 ]
+         99*       < 17> IS_NOT_IDENTICAL                                  RES[  IS_TMP_VAR ~53 ]      OP1[  IS_CV !11 ] OP2[ ,  IS_TMP_VAR ~52 ]
+        100*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~53 ] OP2[ , ->104 ]
+  160   101*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        102*       <127> FE_FREE                                                   OP1[  IS_VAR $45 ] OP2[  IS_UNUSED  ]
+        103*       < 42> JMP                                                       OP1[ ->55 ]
+  155   104*       < 42> JMP                                                       OP1[ ->82 ]
+        105*       <127> FE_FREE                                                   OP1[  IS_VAR $45 ] OP2[  IS_UNUSED  ]
+  168   106*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        107*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~54 ]      OP1[  IS_CV !8 ] OP2[ ,  IS_CONST (268435225) 'type' ]
+        108*       < 17> IS_NOT_IDENTICAL                                  RES[  IS_TMP_VAR ~55 ]      OP1[  IS_TMP_VAR ~54 ] OP2[ ,  IS_CONST (268435224) '%2A' ]
+        109*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~55 ] OP2[ , ->112 ]
+        110*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~56 ]      OP1[  IS_CONST (268435221) 20 ]
+        111*       < 42> JMP                                                       OP1[ ->113 ]
+        112*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~56 ]      OP1[  IS_CONST (268435218) 0 ]
+  169   113*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~57 ]      OP1[  IS_CV !8 ] OP2[ ,  IS_CONST (268435217) 'subType' ]
+        114*       < 17> IS_NOT_IDENTICAL                                  RES[  IS_TMP_VAR ~58 ]      OP1[  IS_TMP_VAR ~57 ] OP2[ ,  IS_CONST (268435216) '%2A' ]
+        115*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~58 ] OP2[ , ->118 ]
+        116*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~59 ]      OP1[  IS_CONST (268435213) 10 ]
+        117*       < 42> JMP                                                       OP1[ ->119 ]
+        118*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~59 ]      OP1[  IS_CONST (268435210) 0 ]
+        119*       <  1> ADD                                               RES[  IS_TMP_VAR ~60 ]      OP1[  IS_TMP_VAR ~56 ] OP2[ ,  IS_TMP_VAR ~59 ]
+  170   120*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435207) 'Sabre%5CHTTP%5Ccount' ]
+        121*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        122*       < 93> FETCH_DIM_FUNC_ARG                                RES[  IS_VAR $61 ]      OP1[  IS_CV !9 ] OP2[ ,  IS_CONST (268435206) 'parameters' ]
+        123*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $61 ] OP2[  IS_UNUSED  ]
+        124*       < 60> DO_FCALL                                      0   RES[  IS_VAR $62 ]      OP1[  IS_UNUSED  ]
+        125*       <  1> ADD                                               RES[  IS_TMP_VAR ~63 ]      OP1[  IS_TMP_VAR ~60 ] OP2[ ,  IS_VAR $62 ]
+  167   126*       < 22> ASSIGN                                                    OP1[  IS_CV !13 ] OP2[ ,  IS_TMP_VAR ~63 ]
+  174   127*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        128*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~65 ]      OP1[  IS_CV !8 ] OP2[ ,  IS_CONST (268435195) 'quality' ]
+        129*       < 20> IS_SMALLER                                        RES[  IS_TMP_VAR ~66 ]      OP1[  IS_CV !4 ] OP2[ ,  IS_TMP_VAR ~65 ]
+        130*       < 47> JMPNZ_EX                                          RES[  IS_TMP_VAR ~66 ]      OP1[  IS_TMP_VAR ~66 ] OP2[ , ->137 ]
+  175   131*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~67 ]      OP1[  IS_CV !8 ] OP2[ ,  IS_CONST (268435190) 'quality' ]
+        132*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~68 ]      OP1[  IS_CV !4 ] OP2[ ,  IS_TMP_VAR ~67 ]
+        133*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~68 ]      OP1[  IS_TMP_VAR ~68 ] OP2[ , ->136 ]
+        134*       < 20> IS_SMALLER                                        RES[  IS_TMP_VAR ~69 ]      OP1[  IS_CV !5 ] OP2[ ,  IS_CV !13 ]
+        135*       < 52> BOOL                                              RES[  IS_TMP_VAR ~68 ]      OP1[  IS_TMP_VAR ~69 ]
+        136*       < 52> BOOL                                              RES[  IS_TMP_VAR ~66 ]      OP1[  IS_TMP_VAR ~68 ]
+        137*       < 47> JMPNZ_EX                                          RES[  IS_TMP_VAR ~66 ]      OP1[  IS_TMP_VAR ~66 ] OP2[ , ->147 ]
+  176   138*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~70 ]      OP1[  IS_CV !8 ] OP2[ ,  IS_CONST (268435177) 'quality' ]
+        139*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~71 ]      OP1[  IS_CV !4 ] OP2[ ,  IS_TMP_VAR ~70 ]
+        140*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~71 ]      OP1[  IS_TMP_VAR ~71 ] OP2[ , ->143 ]
+        141*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~72 ]      OP1[  IS_CV !13 ] OP2[ ,  IS_CV !5 ]
+        142*       < 52> BOOL                                              RES[  IS_TMP_VAR ~71 ]      OP1[  IS_TMP_VAR ~72 ]
+        143*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~71 ]      OP1[  IS_TMP_VAR ~71 ] OP2[ , ->146 ]
+        144*       < 20> IS_SMALLER                                        RES[  IS_TMP_VAR ~73 ]      OP1[  IS_CV !10 ] OP2[ ,  IS_CV !6 ]
+        145*       < 52> BOOL                                              RES[  IS_TMP_VAR ~71 ]      OP1[  IS_TMP_VAR ~73 ]
+        146*       < 52> BOOL                                              RES[  IS_TMP_VAR ~66 ]      OP1[  IS_TMP_VAR ~71 ]
+        147*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~66 ] OP2[ , ->158 ]
+  178   148*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        149*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~74 ]      OP1[  IS_CV !8 ] OP2[ ,  IS_CONST (268435156) 'quality' ]
+        150*       < 22> ASSIGN                                                    OP1[  IS_CV !4 ] OP2[ ,  IS_TMP_VAR ~74 ]
+  179   151*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        152*       < 22> ASSIGN                                                    OP1[  IS_CV !5 ] OP2[ ,  IS_CV !13 ]
+  180   153*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        154*       < 22> ASSIGN                                                    OP1[  IS_CV !6 ] OP2[ ,  IS_CV !10 ]
+  181   155*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        156*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~78 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CV !10 ]
+        157*       < 22> ASSIGN                                                    OP1[  IS_CV !7 ] OP2[ ,  IS_TMP_VAR ~78 ]
+  143   158*       < 42> JMP                                                       OP1[ ->55 ]
+        159*       <127> FE_FREE                                                   OP1[  IS_VAR $31 ] OP2[  IS_UNUSED  ]
+  132   160*       < 42> JMP                                                       OP1[ ->41 ]
+        161*       <127> FE_FREE                                                   OP1[  IS_VAR $27 ] OP2[  IS_UNUSED  ]
+  186   162*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        163*       < 62> RETURN                                                    OP1[  IS_CV !7 ]
+  187   164*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        165*       < 62> RETURN                                                    OP1[  IS_CONST (268435125) null ]
+
+End of function sabre%5Chttp%5Cnegotiatecontenttype
+
+Function sabre%5Chttp%5Cparseprefer:
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:array
+
+[*]ArgInfoNo**0**
+[*]name:input
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\sabre\http\lib\functions.php
+function name:  Sabre\HTTP\parsePrefer
+number of ops:  107
+compiled vars:  !0 = $input, !1 = $token, !2 = $word, !3 = $regex, !4 = $output, !5 = $value, !6 = $matches
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  215     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  217     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435389) '%5B%21%23%24%25%26%27%2A%2B%5C-.%5E_%60%7EA-Za-z0-9%5D%2B' ]
+  220     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435386) '%28%3F%3A+%5Ba-zA-Z0-9%5D%2B+%7C+%22%5Ba-zA-Z0-9%5D%2A%22+%29' ]
+  223     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       < 54> ROPE_INIT                                     5   RES[  IS_TMP_VAR ~10 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435383) '%2F%0A%5E%0A%28%3F%3Cname%3E+' ]
+  225     7*       < 55> ROPE_ADD                                      1   RES[  IS_TMP_VAR ~10 ]      OP1[  IS_TMP_VAR ~10 ] OP2[ ,  IS_CV !1 ]
+          8*       < 55> ROPE_ADD                                      2   RES[  IS_TMP_VAR ~10 ]      OP1[  IS_TMP_VAR ~10 ] OP2[ ,  IS_CONST (268435380) '%29++++++%23+Prefer+property+name%0A%5Cs%2A+++++++++++++++++++%23+Optional+space%0A%28%3F%3A+%3D+%5Cs%2A+++++++++++++%23+Prefer+property+value%0A+++%28%3F%3Cvalue%3E+' ]
+  228     9*       < 55> ROPE_ADD                                      3   RES[  IS_TMP_VAR ~10 ]      OP1[  IS_TMP_VAR ~10 ] OP2[ ,  IS_CV !2 ]
+         10*       < 56> ROPE_END                                      4   RES[  IS_TMP_VAR ~9 ]       OP1[  IS_TMP_VAR ~10 ] OP2[ ,  IS_CONST (268435377) '%29%0A%29%3F%0A%28%3F%3A+%5Cs%2A+%3B+%28%3F%3A+.%2A%29%29%3F+++%23+Prefer+parameters+%28ignored%29%0A%24%0A%2Fx' ]
+  222    11*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_TMP_VAR ~9 ]
+  235    12*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         13*       < 22> ASSIGN                                                    OP1[  IS_CV !4 ] OP2[ ,  IS_CONST (268435372) <array> ]
+  236    14*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         15*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435369) 'Sabre%5CHTTP%5CgetHeaderValues' ]
+         16*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         17*       < 60> DO_FCALL                                      0   RES[  IS_VAR $15 ]      OP1[  IS_UNUSED  ]
+         18*       < 77> FE_RESET_R                                        RES[  IS_VAR $16 ]      OP1[  IS_VAR $15 ] OP2[ , ->100 ]
+         19*       < 78> FE_FETCH_R                                                OP1[  IS_VAR $16 ] OP2[ ,  IS_CV !5 ] EXT_JMP_REL[ , ->100 ]
+  237    20*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         21*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435360) 'Sabre%5CHTTP%5Cpreg_match' ]
+         22*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         23*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !5 ] OP2[  IS_UNUSED  ]
+         24*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !6 ] OP2[  IS_UNUSED  ]
+         25*       < 60> DO_FCALL                                      0   RES[  IS_VAR $17 ]      OP1[  IS_UNUSED  ]
+         26*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~18 ]      OP1[  IS_VAR $17 ]
+         27*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~18 ] OP2[ , ->30 ]
+  239    28*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         29*       < 42> JMP                                                       OP1[ ->19 ]
+  243    30*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         31*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~19 ]      OP1[  IS_CV !6 ] OP2[ ,  IS_CONST (268435343) 'name' ]
+         32*       <188> SWITCH_STRING                                             OP1[  IS_TMP_VAR ~19 ] OP2[ , [ 'return-asynch':->44, 'return-representation':->49, 'return-minimal':->54, 'strict':->59, 'lenient':->64, ] ] EXT_JMP_REL[ , ->69 ]
+  244    33*       < 48> CASE                                              RES[  ]         OP1[  IS_TMP_VAR ~19 ] OP2[ ,  IS_CONST (268435341) 'return-asynch' ]
+         34*       < 44> JMPNZ                                                     OP1[  IS_TMP_VAR ~20 ] OP2[ , ->44 ]
+  247    35*       < 48> CASE                                              RES[  ]         OP1[  IS_TMP_VAR ~19 ] OP2[ ,  IS_CONST (268435338) 'return-representation' ]
+         36*       < 44> JMPNZ                                                     OP1[  IS_TMP_VAR ~20 ] OP2[ , ->49 ]
+  250    37*       < 48> CASE                                              RES[  ]         OP1[  IS_TMP_VAR ~19 ] OP2[ ,  IS_CONST (268435335) 'return-minimal' ]
+         38*       < 44> JMPNZ                                                     OP1[  IS_TMP_VAR ~20 ] OP2[ , ->54 ]
+  253    39*       < 48> CASE                                              RES[  ]         OP1[  IS_TMP_VAR ~19 ] OP2[ ,  IS_CONST (268435332) 'strict' ]
+         40*       < 44> JMPNZ                                                     OP1[  IS_TMP_VAR ~20 ] OP2[ , ->59 ]
+  256    41*       < 48> CASE                                              RES[  ]         OP1[  IS_TMP_VAR ~19 ] OP2[ ,  IS_CONST (268435329) 'lenient' ]
+         42*       < 44> JMPNZ                                                     OP1[  IS_TMP_VAR ~20 ] OP2[ , ->64 ]
+         43*       < 42> JMP                                                       OP1[ ->69 ]
+  245    44*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         45*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !4 ] OP2[ ,  IS_CONST (268435322) 'respond-async' ]
+         46*       <137> OP_DATA                                                   OP1[  IS_CONST (268435321) <true> ] OP2[  IS_UNUSED  ]
+  246    47*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         48*       < 42> JMP                                                       OP1[ ->98 ]
+  248    49*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         50*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !4 ] OP2[ ,  IS_CONST (268435314) 'return' ]
+         51*       <137> OP_DATA                                                   OP1[  IS_CONST (268435313) 'representation' ] OP2[  IS_UNUSED  ]
+  249    52*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         53*       < 42> JMP                                                       OP1[ ->98 ]
+  251    54*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         55*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !4 ] OP2[ ,  IS_CONST (268435306) 'return' ]
+         56*       <137> OP_DATA                                                   OP1[  IS_CONST (268435305) 'minimal' ] OP2[  IS_UNUSED  ]
+  252    57*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         58*       < 42> JMP                                                       OP1[ ->98 ]
+  254    59*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         60*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !4 ] OP2[ ,  IS_CONST (268435298) 'handling' ]
+         61*       <137> OP_DATA                                                   OP1[  IS_CONST (268435297) 'strict' ] OP2[  IS_UNUSED  ]
+  255    62*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         63*       < 42> JMP                                                       OP1[ ->98 ]
+  257    64*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         65*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !4 ] OP2[ ,  IS_CONST (268435290) 'handling' ]
+         66*       <137> OP_DATA                                                   OP1[  IS_CONST (268435289) 'lenient' ] OP2[  IS_UNUSED  ]
+  258    67*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         68*       < 42> JMP                                                       OP1[ ->98 ]
+  260    69*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         70*       <115> ISSET_ISEMPTY_DIM_OBJ                         0   RES[  IS_TMP_VAR ~26 ]      OP1[  IS_CV !6 ] OP2[ ,  IS_CONST (268435282) 'value' ]
+         71*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~26 ] OP2[ , ->81 ]
+  261    72*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         73*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435277) 'Sabre%5CHTTP%5Ctrim' ]
+         74*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         75*       < 93> FETCH_DIM_FUNC_ARG                                RES[  IS_VAR $27 ]      OP1[  IS_CV !6 ] OP2[ ,  IS_CONST (268435276) 'value' ]
+         76*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $27 ] OP2[  IS_UNUSED  ]
+         77*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435273) '%22' ] OP2[  IS_UNUSED  ]
+         78*       < 60> DO_FCALL                                      0   RES[  IS_VAR $28 ]      OP1[  IS_UNUSED  ]
+         79*       < 22> ASSIGN                                                    OP1[  IS_CV !5 ] OP2[ ,  IS_VAR $28 ]
+         80*       < 42> JMP                                                       OP1[ ->83 ]
+  263    81*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         82*       < 22> ASSIGN                                                    OP1[  IS_CV !5 ] OP2[ ,  IS_CONST (268435264) <true> ]
+  265    83*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         84*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435261) 'Sabre%5CHTTP%5Cstrtolower' ]
+         85*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         86*       < 93> FETCH_DIM_FUNC_ARG                                RES[  IS_VAR $31 ]      OP1[  IS_CV !6 ] OP2[ ,  IS_CONST (268435260) 'name' ]
+         87*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $31 ] OP2[  IS_UNUSED  ]
+         88*       < 60> DO_FCALL                                      0   RES[  IS_VAR $32 ]      OP1[  IS_UNUSED  ]
+         89*       <154> ISSET_ISEMPTY_CV                                  RES[  IS_TMP_VAR ~34 ]      OP1[  IS_CV !5 ] OP2[  IS_UNUSED  ]
+         90*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~34 ] OP2[ , ->93 ]
+         91*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~35 ]      OP1[  IS_CONST (268435251) <true> ]
+         92*       < 42> JMP                                                       OP1[ ->94 ]
+         93*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~35 ]      OP1[  IS_CV !5 ]
+         94*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !4 ] OP2[ ,  IS_VAR $32 ]
+         95*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~35 ] OP2[  IS_UNUSED  ]
+  266    96*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         97*       < 42> JMP                                                       OP1[ ->98 ]
+         98*       < 70> FREE                                                      OP1[  IS_TMP_VAR ~19 ]
+  236    99*       < 42> JMP                                                       OP1[ ->19 ]
+        100*       <127> FE_FREE                                                   OP1[  IS_VAR $16 ] OP2[  IS_UNUSED  ]
+  270   101*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        102*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_CV !4 ] OP2[  IS_UNUSED  ]
+        103*       < 62> RETURN                                                    OP1[  IS_CV !4 ]
+  271   104*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        105*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        106*       < 62> RETURN                                                    OP1[  IS_CONST (268435222) null ]
+
+End of function sabre%5Chttp%5Cparseprefer
+
+Function sabre%5Chttp%5Cgetheadervalues:
+[*]Start of arg_info extract:
+[*]arg_info num_args:2
+[*]Function return type:array
+
+[*]ArgInfoNo**0**
+[*]name:values
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:values2
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\sabre\http\lib\functions.php
+function name:  Sabre\HTTP\getHeaderValues
+number of ops:  42
+compiled vars:  !0 = $values, !1 = $values2, !2 = $result, !3 = $l1, !4 = $l2
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  290     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 64> RECV_INIT                                         RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435441) null ]
+  292     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       < 51> CAST                                          7   RES[  IS_TMP_VAR ~5 ]       OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          4*       < 22> ASSIGN                                                    OP1[  IS_CV !0 ] OP2[ ,  IS_TMP_VAR ~5 ]
+  293     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       < 43> JMPZ                                                      OP1[  IS_CV !1 ] OP2[ , ->14 ]
+  294     7*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          8*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435428) 'Sabre%5CHTTP%5Carray_merge' ]
+          9*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         10*       < 51> CAST                                          7   RES[  IS_TMP_VAR ~7 ]       OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         11*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~7 ] OP2[  IS_UNUSED  ]
+         12*       < 60> DO_FCALL                                      0   RES[  IS_VAR $8 ]       OP1[  IS_UNUSED  ]
+         13*       < 22> ASSIGN                                                    OP1[  IS_CV !0 ] OP2[ ,  IS_VAR $8 ]
+  297    14*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         15*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435417) <array> ]
+  298    16*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         17*       < 77> FE_RESET_R                                        RES[  IS_VAR $11 ]      OP1[  IS_CV !0 ] OP2[ , ->35 ]
+         18*       < 78> FE_FETCH_R                                                OP1[  IS_VAR $11 ] OP2[ ,  IS_CV !3 ] EXT_JMP_REL[ , ->35 ]
+  299    19*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         20*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435408) 'Sabre%5CHTTP%5Cexplode' ]
+         21*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435409) '%2C' ] OP2[  IS_UNUSED  ]
+         22*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         23*       < 60> DO_FCALL                                      0   RES[  IS_VAR $12 ]      OP1[  IS_UNUSED  ]
+         24*       < 77> FE_RESET_R                                        RES[  IS_VAR $13 ]      OP1[  IS_VAR $12 ] OP2[ , ->33 ]
+         25*       < 78> FE_FETCH_R                                                OP1[  IS_VAR $13 ] OP2[ ,  IS_CV !4 ] EXT_JMP_REL[ , ->33 ]
+  300    26*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         27*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435398) 'Sabre%5CHTTP%5Ctrim' ]
+         28*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !4 ] OP2[  IS_UNUSED  ]
+         29*       < 60> DO_FCALL                                      0   RES[  IS_VAR $15 ]      OP1[  IS_UNUSED  ]
+         30*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         31*       <137> OP_DATA                                                   OP1[  IS_VAR $15 ] OP2[  IS_UNUSED  ]
+  299    32*       < 42> JMP                                                       OP1[ ->25 ]
+         33*       <127> FE_FREE                                                   OP1[  IS_VAR $13 ] OP2[  IS_UNUSED  ]
+  298    34*       < 42> JMP                                                       OP1[ ->18 ]
+         35*       <127> FE_FREE                                                   OP1[  IS_VAR $11 ] OP2[  IS_UNUSED  ]
+  304    36*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         37*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         38*       < 62> RETURN                                                    OP1[  IS_CV !2 ]
+  305    39*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         40*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         41*       < 62> RETURN                                                    OP1[  IS_CONST (268435373) null ]
+
+End of function sabre%5Chttp%5Cgetheadervalues
+
+Function sabre%5Chttp%5Cparsemimetype:
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:array
+
+[*]ArgInfoNo**0**
+[*]name:str
+[*]type:string
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\sabre\http\lib\functions.php
+function name:  Sabre\HTTP\parseMimeType
+number of ops:  103
+compiled vars:  !0 = $str, !1 = $parameters, !2 = $quality, !3 = $parts, !4 = $mimeType, !5 = $type, !6 = $subType, !7 = $part, !8 = $partName, !9 = $partValue
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  315     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  317     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435404) <array> ]
+  319     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435401) 1 ]
+  321     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435398) 'Sabre%5CHTTP%5Cexplode' ]
+          7*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435399) '%3B' ] OP2[  IS_UNUSED  ]
+          8*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          9*       < 60> DO_FCALL                                      0   RES[  IS_VAR $12 ]      OP1[  IS_UNUSED  ]
+         10*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_VAR $12 ]
+  324    11*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         12*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435390) 'Sabre%5CHTTP%5Ctrim' ]
+         13*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435391) 'Sabre%5CHTTP%5Carray_shift' ]
+         14*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         15*       < 60> DO_FCALL                                      0   RES[  IS_VAR $14 ]      OP1[  IS_UNUSED  ]
+         16*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $14 ] OP2[  IS_UNUSED  ]
+         17*       < 60> DO_FCALL                                      0   RES[  IS_VAR $15 ]      OP1[  IS_UNUSED  ]
+         18*       < 22> ASSIGN                                                    OP1[  IS_CV !4 ] OP2[ ,  IS_VAR $15 ]
+  326    19*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         20*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~17 ]      OP1[  IS_CV !4 ] OP2[ ,  IS_CONST (268435380) '%2A' ]
+         21*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~17 ] OP2[ , ->24 ]
+  327    22*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         23*       < 22> ASSIGN                                                    OP1[  IS_CV !4 ] OP2[ ,  IS_CONST (268435375) '%2A%2F%2A' ]
+  330    24*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         25*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435372) 'Sabre%5CHTTP%5Cexplode' ]
+         26*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435373) '%2F' ] OP2[  IS_UNUSED  ]
+         27*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !4 ] OP2[  IS_UNUSED  ]
+         28*       < 60> DO_FCALL                                      0   RES[  IS_VAR $19 ]      OP1[  IS_UNUSED  ]
+         29*       < 22> ASSIGN                                                    OP1[  IS_CV !4 ] OP2[ ,  IS_VAR $19 ]
+  331    30*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         31*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435364) 'Sabre%5CHTTP%5Ccount' ]
+         32*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !4 ] OP2[  IS_UNUSED  ]
+         33*       < 60> DO_FCALL                                      0   RES[  IS_VAR $21 ]      OP1[  IS_UNUSED  ]
+         34*       < 17> IS_NOT_IDENTICAL                                  RES[  IS_TMP_VAR ~22 ]      OP1[  IS_VAR $21 ] OP2[ ,  IS_CONST (268435361) 2 ]
+         35*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~22 ] OP2[ , ->42 ]
+  333    36*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         37*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435356) 'Sabre%5CHTTP%5Cvar_dump' ]
+         38*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !4 ] OP2[  IS_UNUSED  ]
+         39*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  334    40*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         41*       < 79> EXIT                                                      OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+  337    42*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         43*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~24 ]      OP1[  IS_CV !4 ]
+         44*       < 98> FETCH_LIST_R                                      RES[  IS_VAR $25 ]      OP1[  IS_TMP_VAR ~24 ] OP2[ ,  IS_CONST (268435345) 0 ]
+         45*       < 22> ASSIGN                                                    OP1[  IS_CV !5 ] OP2[ ,  IS_VAR $25 ]
+         46*       < 98> FETCH_LIST_R                                      RES[  IS_VAR $27 ]      OP1[  IS_TMP_VAR ~24 ] OP2[ ,  IS_CONST (268435342) 1 ]
+         47*       < 22> ASSIGN                                                    OP1[  IS_CV !6 ] OP2[ ,  IS_VAR $27 ]
+         48*       < 70> FREE                                                      OP1[  IS_TMP_VAR ~24 ]
+  339    49*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         50*       < 77> FE_RESET_R                                        RES[  IS_VAR $29 ]      OP1[  IS_CV !3 ] OP2[ , ->92 ]
+         51*       < 78> FE_FETCH_R                                                OP1[  IS_VAR $29 ] OP2[ ,  IS_CV !7 ] EXT_JMP_REL[ , ->92 ]
+  340    52*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         53*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435329) 'Sabre%5CHTTP%5Ctrim' ]
+         54*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !7 ] OP2[  IS_UNUSED  ]
+         55*       < 60> DO_FCALL                                      0   RES[  IS_VAR $30 ]      OP1[  IS_UNUSED  ]
+         56*       < 22> ASSIGN                                                    OP1[  IS_CV !7 ] OP2[ ,  IS_VAR $30 ]
+  341    57*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         58*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435322) 'Sabre%5CHTTP%5Cstrpos' ]
+         59*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !7 ] OP2[  IS_UNUSED  ]
+         60*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435321) '%3D' ] OP2[  IS_UNUSED  ]
+         61*       < 60> DO_FCALL                                      0   RES[  IS_VAR $32 ]      OP1[  IS_UNUSED  ]
+         62*       < 43> JMPZ                                                      OP1[  IS_VAR $32 ] OP2[ , ->75 ]
+  343    63*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         64*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435314) 'Sabre%5CHTTP%5Cexplode' ]
+         65*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435315) '%3D' ] OP2[  IS_UNUSED  ]
+         66*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !7 ] OP2[  IS_UNUSED  ]
+         67*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435312) 2 ] OP2[  IS_UNUSED  ]
+         68*       < 60> DO_FCALL                                      0   RES[  IS_VAR $33 ]      OP1[  IS_UNUSED  ]
+         69*       < 98> FETCH_LIST_R                                      RES[  IS_VAR $34 ]      OP1[  IS_VAR $33 ] OP2[ ,  IS_CONST (268435309) 0 ]
+  342    70*       < 22> ASSIGN                                                    OP1[  IS_CV !8 ] OP2[ ,  IS_VAR $34 ]
+         71*       < 98> FETCH_LIST_R                                      RES[  IS_VAR $36 ]      OP1[  IS_VAR $33 ] OP2[ ,  IS_CONST (268435306) 1 ]
+         72*       < 22> ASSIGN                                                    OP1[  IS_CV !9 ] OP2[ ,  IS_VAR $36 ]
+         73*       < 70> FREE                                                      OP1[  IS_VAR $33 ]
+         74*       < 42> JMP                                                       OP1[ ->79 ]
+  345    75*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         76*       < 22> ASSIGN                                                    OP1[  IS_CV !8 ] OP2[ ,  IS_CV !7 ]
+  346    77*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         78*       < 22> ASSIGN                                                    OP1[  IS_CV !9 ] OP2[ ,  IS_CONST (268435293) null ]
+  353    79*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         80*       < 17> IS_NOT_IDENTICAL                                  RES[  IS_TMP_VAR ~40 ]      OP1[  IS_CV !8 ] OP2[ ,  IS_CONST (268435290) 'q' ]
+         81*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~40 ] OP2[ , ->86 ]
+  354    82*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         83*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !1 ] OP2[ ,  IS_CV !8 ]
+         84*       <137> OP_DATA                                                   OP1[  IS_CV !7 ] OP2[  IS_UNUSED  ]
+         85*       < 42> JMP                                                       OP1[ ->91 ]
+  356    86*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         87*       < 51> CAST                                          5   RES[  IS_TMP_VAR ~42 ]      OP1[  IS_CV !9 ] OP2[  IS_UNUSED  ]
+         88*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_TMP_VAR ~42 ]
+  357    89*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         90*       < 42> JMP                                                       OP1[ ->92 ]
+  339    91*       < 42> JMP                                                       OP1[ ->51 ]
+         92*       <127> FE_FREE                                                   OP1[  IS_VAR $29 ] OP2[  IS_UNUSED  ]
+  362    93*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         94*       < 71> INIT_ARRAY                                        RES[  IS_TMP_VAR ~44 ]      OP1[  IS_CV !5 ] OP2[ ,  IS_CONST (268435263) 'type' ]
+  363    95*       < 72> ADD_ARRAY_ELEMENT                                 RES[  IS_TMP_VAR ~44 ]      OP1[  IS_CV !6 ] OP2[ ,  IS_CONST (268435262) 'subType' ]
+  364    96*       < 72> ADD_ARRAY_ELEMENT                                 RES[  IS_TMP_VAR ~44 ]      OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435261) 'quality' ]
+  365    97*       < 72> ADD_ARRAY_ELEMENT                                 RES[  IS_TMP_VAR ~44 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435260) 'parameters' ]
+         98*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_TMP_VAR ~44 ] OP2[  IS_UNUSED  ]
+         99*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~44 ]
+  367   100*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        101*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        102*       < 62> RETURN                                                    OP1[  IS_CONST (268435251) null ]
+
+End of function sabre%5Chttp%5Cparsemimetype
+
+Function sabre%5Chttp%5Cencodepath:
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:string
+
+[*]ArgInfoNo**0**
+[*]name:path
+[*]type:string
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\sabre\http\lib\functions.php
+function name:  Sabre\HTTP\encodePath
+number of ops:  13
+compiled vars:  !0 = $path
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  374     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  376     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435446) 'Sabre%5CHTTP%5Cpreg_replace_callback' ]
+          3*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435447) '%2F%28%5B%5EA-Za-z0-9_%5C-%5C.%7E%5C%28%5C%29%5C%2F%3A%40%5D%29%2F' ] OP2[  IS_UNUSED  ]
+          4*       <142> DECLARE_LAMBDA_FUNCTION                           RES[  IS_TMP_VAR ~1 ]       OP1[  IS_CONST (268435446) '%00sabre%5Chttp%5C%7Bclosure%7DG%3A%5Cdesktop%5CYama%5Capp%5Cglpi-10.0.16%5Cglpi%5Cvendor%5Csabre%5Chttp%5Clib%5Cfunctions.php%3A376%240' ]
+  378     5*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~1 ] OP2[  IS_UNUSED  ]
+  376     6*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          7*       < 60> DO_FCALL                                      0   RES[  IS_VAR $2 ]       OP1[  IS_UNUSED  ]
+          8*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_VAR $2 ] OP2[  IS_UNUSED  ]
+          9*       < 62> RETURN                                                    OP1[  IS_VAR $2 ]
+  379    10*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         11*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         12*       < 62> RETURN                                                    OP1[  IS_CONST (268435431) null ]
+
+End of function sabre%5Chttp%5Cencodepath
+
+Function %00sabre%5Chttp%5C%7Bclosure%7DG%3A%5Cdesktop%5CYama%5Capp%5Cglpi-10.0.16%5Cglpi%5Cvendor%5Csabre%5Chttp%5Clib%5Cfunctions.php%3A376%240:
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:match
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\sabre\http\lib\functions.php
+function name:  Sabre\HTTP\{closure}
+number of ops:  15
+compiled vars:  !0 = $match
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  376     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  377     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435442) 'Sabre%5CHTTP%5Csprintf' ]
+          3*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435443) '%2502x' ] OP2[  IS_UNUSED  ]
+          4*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435442) 'Sabre%5CHTTP%5Cord' ]
+          5*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       < 93> FETCH_DIM_FUNC_ARG                                RES[  IS_VAR $1 ]       OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435441) 0 ]
+          7*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $1 ] OP2[  IS_UNUSED  ]
+          8*       < 60> DO_FCALL                                      0   RES[  IS_VAR $2 ]       OP1[  IS_UNUSED  ]
+          9*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $2 ] OP2[  IS_UNUSED  ]
+         10*       < 60> DO_FCALL                                      0   RES[  IS_VAR $3 ]       OP1[  IS_UNUSED  ]
+         11*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~4 ]       OP1[  IS_CONST (268435432) '%25' ] OP2[ ,  IS_VAR $3 ]
+         12*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~4 ]
+  378    13*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         14*       < 62> RETURN                                                    OP1[  IS_CONST (268435427) null ]
+
+End of function %00sabre%5Chttp%5C%7Bclosure%7DG%3A%5Cdesktop%5CYama%5Capp%5Cglpi-10.0.16%5Cglpi%5Cvendor%5Csabre%5Chttp%5Clib%5Cfunctions.php%3A376%240
+
+Function sabre%5Chttp%5Cencodepathsegment:
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:string
+
+[*]ArgInfoNo**0**
+[*]name:pathSegment
+[*]type:string
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\sabre\http\lib\functions.php
+function name:  Sabre\HTTP\encodePathSegment
+number of ops:  13
+compiled vars:  !0 = $pathSegment
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  386     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  388     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435446) 'Sabre%5CHTTP%5Cpreg_replace_callback' ]
+          3*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435447) '%2F%28%5B%5EA-Za-z0-9_%5C-%5C.%7E%5C%28%5C%29%3A%40%5D%29%2F' ] OP2[  IS_UNUSED  ]
+          4*       <142> DECLARE_LAMBDA_FUNCTION                           RES[  IS_TMP_VAR ~1 ]       OP1[  IS_CONST (268435446) '%00sabre%5Chttp%5C%7Bclosure%7DG%3A%5Cdesktop%5CYama%5Capp%5Cglpi-10.0.16%5Cglpi%5Cvendor%5Csabre%5Chttp%5Clib%5Cfunctions.php%3A388%241' ]
+  390     5*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~1 ] OP2[  IS_UNUSED  ]
+  388     6*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          7*       < 60> DO_FCALL                                      0   RES[  IS_VAR $2 ]       OP1[  IS_UNUSED  ]
+          8*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_VAR $2 ] OP2[  IS_UNUSED  ]
+          9*       < 62> RETURN                                                    OP1[  IS_VAR $2 ]
+  391    10*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         11*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         12*       < 62> RETURN                                                    OP1[  IS_CONST (268435431) null ]
+
+End of function sabre%5Chttp%5Cencodepathsegment
+
+Function %00sabre%5Chttp%5C%7Bclosure%7DG%3A%5Cdesktop%5CYama%5Capp%5Cglpi-10.0.16%5Cglpi%5Cvendor%5Csabre%5Chttp%5Clib%5Cfunctions.php%3A388%241:
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:match
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\sabre\http\lib\functions.php
+function name:  Sabre\HTTP\{closure}
+number of ops:  15
+compiled vars:  !0 = $match
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  388     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  389     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435442) 'Sabre%5CHTTP%5Csprintf' ]
+          3*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435443) '%2502x' ] OP2[  IS_UNUSED  ]
+          4*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435442) 'Sabre%5CHTTP%5Cord' ]
+          5*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       < 93> FETCH_DIM_FUNC_ARG                                RES[  IS_VAR $1 ]       OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435441) 0 ]
+          7*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $1 ] OP2[  IS_UNUSED  ]
+          8*       < 60> DO_FCALL                                      0   RES[  IS_VAR $2 ]       OP1[  IS_UNUSED  ]
+          9*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $2 ] OP2[  IS_UNUSED  ]
+         10*       < 60> DO_FCALL                                      0   RES[  IS_VAR $3 ]       OP1[  IS_UNUSED  ]
+         11*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~4 ]       OP1[  IS_CONST (268435432) '%25' ] OP2[ ,  IS_VAR $3 ]
+         12*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~4 ]
+  390    13*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         14*       < 62> RETURN                                                    OP1[  IS_CONST (268435427) null ]
+
+End of function %00sabre%5Chttp%5C%7Bclosure%7DG%3A%5Cdesktop%5CYama%5Capp%5Cglpi-10.0.16%5Cglpi%5Cvendor%5Csabre%5Chttp%5Clib%5Cfunctions.php%3A388%241
+
+Function sabre%5Chttp%5Cdecodepath:
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:string
+
+[*]ArgInfoNo**0**
+[*]name:path
+[*]type:string
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\sabre\http\lib\functions.php
+function name:  Sabre\HTTP\decodePath
+number of ops:  10
+compiled vars:  !0 = $path
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  396     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  398     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435448) 'Sabre%5CHTTP%5CdecodePathSegment' ]
+          3*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          4*       < 60> DO_FCALL                                      0   RES[  IS_VAR $1 ]       OP1[  IS_UNUSED  ]
+          5*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_VAR $1 ] OP2[  IS_UNUSED  ]
+          6*       < 62> RETURN                                                    OP1[  IS_VAR $1 ]
+  399     7*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          8*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          9*       < 62> RETURN                                                    OP1[  IS_CONST (268435437) null ]
+
+End of function sabre%5Chttp%5Cdecodepath
+
+Function sabre%5Chttp%5Cdecodepathsegment:
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:string
+
+[*]ArgInfoNo**0**
+[*]name:path
+[*]type:string
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\sabre\http\lib\functions.php
+function name:  Sabre\HTTP\decodePathSegment
+number of ops:  32
+compiled vars:  !0 = $path
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  404     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  406     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435435) 'Sabre%5CHTTP%5Crawurldecode' ]
+          3*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          4*       < 60> DO_FCALL                                      0   RES[  IS_VAR $1 ]       OP1[  IS_UNUSED  ]
+          5*       < 22> ASSIGN                                                    OP1[  IS_CV !0 ] OP2[ ,  IS_VAR $1 ]
+  408     6*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          7*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435428) 'Sabre%5CHTTP%5Cmb_check_encoding' ]
+          8*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          9*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435427) 'UTF-8' ] OP2[  IS_UNUSED  ]
+         10*       < 60> DO_FCALL                                      0   RES[  IS_VAR $3 ]       OP1[  IS_UNUSED  ]
+         11*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~4 ]       OP1[  IS_VAR $3 ]
+         12*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~4 ]       OP1[  IS_TMP_VAR ~4 ] OP2[ , ->18 ]
+         13*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435420) 'Sabre%5CHTTP%5Cmb_check_encoding' ]
+         14*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         15*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435419) 'ISO-8859-1' ] OP2[  IS_UNUSED  ]
+         16*       < 60> DO_FCALL                                      0   RES[  IS_VAR $5 ]       OP1[  IS_UNUSED  ]
+         17*       < 52> BOOL                                              RES[  IS_TMP_VAR ~4 ]       OP1[  IS_VAR $5 ]
+         18*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~4 ] OP2[ , ->26 ]
+  409    19*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         20*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435410) 'Sabre%5CHTTP%5Cmb_convert_encoding' ]
+         21*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         22*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435409) 'UTF-8' ] OP2[  IS_UNUSED  ]
+         23*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435408) 'ISO-8859-1' ] OP2[  IS_UNUSED  ]
+         24*       < 60> DO_FCALL                                      0   RES[  IS_VAR $6 ]       OP1[  IS_UNUSED  ]
+         25*       < 22> ASSIGN                                                    OP1[  IS_CV !0 ] OP2[ ,  IS_VAR $6 ]
+  412    26*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         27*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         28*       < 62> RETURN                                                    OP1[  IS_CV !0 ]
+  413    29*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         30*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         31*       < 62> RETURN                                                    OP1[  IS_CONST (268435393) null ]
+
+End of function sabre%5Chttp%5Cdecodepathsegment
+

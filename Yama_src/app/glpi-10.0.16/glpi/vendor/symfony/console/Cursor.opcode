@@ -1,0 +1,696 @@
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\symfony\console\Cursor.php
+function name:  (null)
+number of ops:  5
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   12     0*       <  0> NOP                                                      
+   14     1*       <  0> NOP                                                      
+   21     2*       <  0> NOP                                                      
+  208     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       < 62> RETURN                                                    OP1[  IS_CONST (268435447) 1 ]
+
+Class Symfony\Component\Console\Cursor:
+[+]Class Parent Name: NULL
+End Trait extract
+Start Properties extract:
+Key: output, Value: UNINIT, Type: Normal
+Key: input, Value: UNINIT, Type: Normal
+End Properties extract.
+
+Function __construct:
+[+]Function Source Class Name: Symfony\Component\Console\Cursor
+[*]Start of arg_info extract:
+[*]arg_info num_args:2
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:output
+[*]type:Symfony\Component\Console\Output\OutputInterface
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:input
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\symfony\console\Cursor.php
+function name:  __construct
+number of ops:  22
+compiled vars:  !0 = $output, !1 = $input
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   27     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 64> RECV_INIT                                         RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435429) null ]
+   29     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435426) 'output' ]
+          4*       <137> OP_DATA                                                   OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+   30     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       <169> COALESCE                                          RES[  IS_TMP_VAR ~4 ]       OP1[  IS_CV !1 ] OP2[ , ->18 ]
+          7*       <122> DEFINED                                           RES[  IS_TMP_VAR ~5 ]       OP1[  IS_CONST (268435420) 'STDIN' ] OP2[  IS_UNUSED  ]
+          8*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~5 ] OP2[ , ->12 ]
+          9*       < 99> FETCH_CONSTANT                                    RES[  IS_TMP_VAR ~6 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435417) 'STDIN' ]
+         10*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~7 ]       OP1[  IS_TMP_VAR ~6 ]
+         11*       < 42> JMP                                                       OP1[ ->17 ]
+         12*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435413) 'Symfony%5CComponent%5CConsole%5Cfopen' ]
+         13*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435414) 'php%3A%2F%2Finput' ] OP2[  IS_UNUSED  ]
+         14*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435413) 'r%2B' ] OP2[  IS_UNUSED  ]
+         15*       < 60> DO_FCALL                                      0   RES[  IS_VAR $8 ]       OP1[  IS_UNUSED  ]
+         16*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~7 ]       OP1[  IS_VAR $8 ]
+         17*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~4 ]       OP1[  IS_TMP_VAR ~7 ]
+         18*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435397) 'input' ]
+         19*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~4 ] OP2[  IS_UNUSED  ]
+   31    20*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         21*       < 62> RETURN                                                    OP1[  IS_CONST (268435400) null ]
+
+End of function __construct
+
+Function moveup:
+[+]Function Source Class Name: Symfony\Component\Console\Cursor
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:self
+
+[*]ArgInfoNo**0**
+[*]name:lines
+[*]type:int
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\symfony\console\Cursor.php
+function name:  moveUp
+number of ops:  17
+compiled vars:  !0 = $lines
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   36     0*       < 64> RECV_INIT                                         RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435437) 1 ]
+   38     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~1 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435434) 'output' ]
+          3*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~1 ] OP2[ ,  IS_CONST (268435433) 'write' ]
+          4*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435433) 'Symfony%5CComponent%5CConsole%5Csprintf' ]
+          5*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435434) '%1B%5B%25dA' ] OP2[  IS_UNUSED  ]
+          6*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          7*       < 60> DO_FCALL                                      0   RES[  IS_VAR $2 ]       OP1[  IS_UNUSED  ]
+          8*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $2 ] OP2[  IS_UNUSED  ]
+          9*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+   40    10*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         11*       <184> FETCH_THIS                                        RES[  IS_TMP_VAR ~4 ]       OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         12*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_TMP_VAR ~4 ] OP2[  IS_UNUSED  ]
+         13*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~4 ]
+   41    14*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         15*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         16*       < 62> RETURN                                                    OP1[  IS_CONST (268435413) null ]
+
+End of function moveup
+
+Function movedown:
+[+]Function Source Class Name: Symfony\Component\Console\Cursor
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:self
+
+[*]ArgInfoNo**0**
+[*]name:lines
+[*]type:int
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\symfony\console\Cursor.php
+function name:  moveDown
+number of ops:  17
+compiled vars:  !0 = $lines
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   46     0*       < 64> RECV_INIT                                         RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435437) 1 ]
+   48     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~1 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435434) 'output' ]
+          3*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~1 ] OP2[ ,  IS_CONST (268435433) 'write' ]
+          4*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435433) 'Symfony%5CComponent%5CConsole%5Csprintf' ]
+          5*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435434) '%1B%5B%25dB' ] OP2[  IS_UNUSED  ]
+          6*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          7*       < 60> DO_FCALL                                      0   RES[  IS_VAR $2 ]       OP1[  IS_UNUSED  ]
+          8*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $2 ] OP2[  IS_UNUSED  ]
+          9*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+   50    10*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         11*       <184> FETCH_THIS                                        RES[  IS_TMP_VAR ~4 ]       OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         12*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_TMP_VAR ~4 ] OP2[  IS_UNUSED  ]
+         13*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~4 ]
+   51    14*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         15*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         16*       < 62> RETURN                                                    OP1[  IS_CONST (268435413) null ]
+
+End of function movedown
+
+Function moveright:
+[+]Function Source Class Name: Symfony\Component\Console\Cursor
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:self
+
+[*]ArgInfoNo**0**
+[*]name:columns
+[*]type:int
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\symfony\console\Cursor.php
+function name:  moveRight
+number of ops:  17
+compiled vars:  !0 = $columns
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   56     0*       < 64> RECV_INIT                                         RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435437) 1 ]
+   58     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~1 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435434) 'output' ]
+          3*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~1 ] OP2[ ,  IS_CONST (268435433) 'write' ]
+          4*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435433) 'Symfony%5CComponent%5CConsole%5Csprintf' ]
+          5*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435434) '%1B%5B%25dC' ] OP2[  IS_UNUSED  ]
+          6*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          7*       < 60> DO_FCALL                                      0   RES[  IS_VAR $2 ]       OP1[  IS_UNUSED  ]
+          8*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $2 ] OP2[  IS_UNUSED  ]
+          9*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+   60    10*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         11*       <184> FETCH_THIS                                        RES[  IS_TMP_VAR ~4 ]       OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         12*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_TMP_VAR ~4 ] OP2[  IS_UNUSED  ]
+         13*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~4 ]
+   61    14*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         15*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         16*       < 62> RETURN                                                    OP1[  IS_CONST (268435413) null ]
+
+End of function moveright
+
+Function moveleft:
+[+]Function Source Class Name: Symfony\Component\Console\Cursor
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:self
+
+[*]ArgInfoNo**0**
+[*]name:columns
+[*]type:int
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\symfony\console\Cursor.php
+function name:  moveLeft
+number of ops:  17
+compiled vars:  !0 = $columns
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   66     0*       < 64> RECV_INIT                                         RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435437) 1 ]
+   68     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~1 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435434) 'output' ]
+          3*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~1 ] OP2[ ,  IS_CONST (268435433) 'write' ]
+          4*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435433) 'Symfony%5CComponent%5CConsole%5Csprintf' ]
+          5*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435434) '%1B%5B%25dD' ] OP2[  IS_UNUSED  ]
+          6*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          7*       < 60> DO_FCALL                                      0   RES[  IS_VAR $2 ]       OP1[  IS_UNUSED  ]
+          8*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $2 ] OP2[  IS_UNUSED  ]
+          9*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+   70    10*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         11*       <184> FETCH_THIS                                        RES[  IS_TMP_VAR ~4 ]       OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         12*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_TMP_VAR ~4 ] OP2[  IS_UNUSED  ]
+         13*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~4 ]
+   71    14*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         15*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         16*       < 62> RETURN                                                    OP1[  IS_CONST (268435413) null ]
+
+End of function moveleft
+
+Function movetocolumn:
+[+]Function Source Class Name: Symfony\Component\Console\Cursor
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:self
+
+[*]ArgInfoNo**0**
+[*]name:column
+[*]type:int
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\symfony\console\Cursor.php
+function name:  moveToColumn
+number of ops:  17
+compiled vars:  !0 = $column
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   76     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+   78     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~1 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435434) 'output' ]
+          3*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~1 ] OP2[ ,  IS_CONST (268435433) 'write' ]
+          4*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435433) 'Symfony%5CComponent%5CConsole%5Csprintf' ]
+          5*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435434) '%1B%5B%25dG' ] OP2[  IS_UNUSED  ]
+          6*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          7*       < 60> DO_FCALL                                      0   RES[  IS_VAR $2 ]       OP1[  IS_UNUSED  ]
+          8*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $2 ] OP2[  IS_UNUSED  ]
+          9*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+   80    10*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         11*       <184> FETCH_THIS                                        RES[  IS_TMP_VAR ~4 ]       OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         12*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_TMP_VAR ~4 ] OP2[  IS_UNUSED  ]
+         13*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~4 ]
+   81    14*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         15*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         16*       < 62> RETURN                                                    OP1[  IS_CONST (268435413) null ]
+
+End of function movetocolumn
+
+Function movetoposition:
+[+]Function Source Class Name: Symfony\Component\Console\Cursor
+[*]Start of arg_info extract:
+[*]arg_info num_args:2
+[*]Function return type:self
+
+[*]ArgInfoNo**0**
+[*]name:column
+[*]type:int
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:row
+[*]type:int
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\symfony\console\Cursor.php
+function name:  moveToPosition
+number of ops:  20
+compiled vars:  !0 = $column, !1 = $row
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   86     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 63> RECV                                              RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ]
+   88     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~2 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435430) 'output' ]
+          4*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~2 ] OP2[ ,  IS_CONST (268435429) 'write' ]
+          5*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435429) 'Symfony%5CComponent%5CConsole%5Csprintf' ]
+          6*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435430) '%1B%5B%25d%3B%25dH' ] OP2[  IS_UNUSED  ]
+          7*       <  1> ADD                                               RES[  IS_TMP_VAR ~3 ]       OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435429) 1 ]
+          8*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~3 ] OP2[  IS_UNUSED  ]
+          9*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         10*       < 60> DO_FCALL                                      0   RES[  IS_VAR $4 ]       OP1[  IS_UNUSED  ]
+         11*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $4 ] OP2[  IS_UNUSED  ]
+         12*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+   90    13*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         14*       <184> FETCH_THIS                                        RES[  IS_TMP_VAR ~6 ]       OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         15*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_TMP_VAR ~6 ] OP2[  IS_UNUSED  ]
+         16*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~6 ]
+   91    17*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         18*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         19*       < 62> RETURN                                                    OP1[  IS_CONST (268435406) null ]
+
+End of function movetoposition
+
+Function saveposition:
+[+]Function Source Class Name: Symfony\Component\Console\Cursor
+[*]Start of arg_info extract:
+[*]arg_info num_args:0
+[*]Function return type:self
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\symfony\console\Cursor.php
+function name:  savePosition
+number of ops:  12
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   98     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435447) 'output' ]
+          2*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~0 ] OP2[ ,  IS_CONST (268435446) 'write' ]
+          3*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435446) '%1B7' ] OP2[  IS_UNUSED  ]
+          4*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  100     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       <184> FETCH_THIS                                        RES[  IS_TMP_VAR ~2 ]       OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          7*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_TMP_VAR ~2 ] OP2[  IS_UNUSED  ]
+          8*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~2 ]
+  101     9*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         10*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         11*       < 62> RETURN                                                    OP1[  IS_CONST (268435431) null ]
+
+End of function saveposition
+
+Function restoreposition:
+[+]Function Source Class Name: Symfony\Component\Console\Cursor
+[*]Start of arg_info extract:
+[*]arg_info num_args:0
+[*]Function return type:self
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\symfony\console\Cursor.php
+function name:  restorePosition
+number of ops:  12
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  108     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435447) 'output' ]
+          2*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~0 ] OP2[ ,  IS_CONST (268435446) 'write' ]
+          3*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435446) '%1B8' ] OP2[  IS_UNUSED  ]
+          4*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  110     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       <184> FETCH_THIS                                        RES[  IS_TMP_VAR ~2 ]       OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          7*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_TMP_VAR ~2 ] OP2[  IS_UNUSED  ]
+          8*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~2 ]
+  111     9*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         10*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         11*       < 62> RETURN                                                    OP1[  IS_CONST (268435431) null ]
+
+End of function restoreposition
+
+Function hide:
+[+]Function Source Class Name: Symfony\Component\Console\Cursor
+[*]Start of arg_info extract:
+[*]arg_info num_args:0
+[*]Function return type:self
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\symfony\console\Cursor.php
+function name:  hide
+number of ops:  12
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  118     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435447) 'output' ]
+          2*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~0 ] OP2[ ,  IS_CONST (268435446) 'write' ]
+          3*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435446) '%1B%5B%3F25l' ] OP2[  IS_UNUSED  ]
+          4*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  120     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       <184> FETCH_THIS                                        RES[  IS_TMP_VAR ~2 ]       OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          7*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_TMP_VAR ~2 ] OP2[  IS_UNUSED  ]
+          8*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~2 ]
+  121     9*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         10*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         11*       < 62> RETURN                                                    OP1[  IS_CONST (268435431) null ]
+
+End of function hide
+
+Function show:
+[+]Function Source Class Name: Symfony\Component\Console\Cursor
+[*]Start of arg_info extract:
+[*]arg_info num_args:0
+[*]Function return type:self
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\symfony\console\Cursor.php
+function name:  show
+number of ops:  12
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  128     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435446) 'output' ]
+          2*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~0 ] OP2[ ,  IS_CONST (268435445) 'write' ]
+          3*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435445) '%1B%5B%3F25h%1B%5B%3F0c' ] OP2[  IS_UNUSED  ]
+          4*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  130     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       <184> FETCH_THIS                                        RES[  IS_TMP_VAR ~2 ]       OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          7*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_TMP_VAR ~2 ] OP2[  IS_UNUSED  ]
+          8*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~2 ]
+  131     9*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         10*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         11*       < 62> RETURN                                                    OP1[  IS_CONST (268435430) null ]
+
+End of function show
+
+Function clearline:
+[+]Function Source Class Name: Symfony\Component\Console\Cursor
+[*]Start of arg_info extract:
+[*]arg_info num_args:0
+[*]Function return type:self
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\symfony\console\Cursor.php
+function name:  clearLine
+number of ops:  12
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  140     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435447) 'output' ]
+          2*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~0 ] OP2[ ,  IS_CONST (268435446) 'write' ]
+          3*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435446) '%1B%5B2K' ] OP2[  IS_UNUSED  ]
+          4*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  142     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       <184> FETCH_THIS                                        RES[  IS_TMP_VAR ~2 ]       OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          7*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_TMP_VAR ~2 ] OP2[  IS_UNUSED  ]
+          8*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~2 ]
+  143     9*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         10*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         11*       < 62> RETURN                                                    OP1[  IS_CONST (268435431) null ]
+
+End of function clearline
+
+Function clearlineafter:
+[+]Function Source Class Name: Symfony\Component\Console\Cursor
+[*]Start of arg_info extract:
+[*]arg_info num_args:0
+[*]Function return type:self
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\symfony\console\Cursor.php
+function name:  clearLineAfter
+number of ops:  12
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  150     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435447) 'output' ]
+          2*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~0 ] OP2[ ,  IS_CONST (268435446) 'write' ]
+          3*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435446) '%1B%5BK' ] OP2[  IS_UNUSED  ]
+          4*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  152     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       <184> FETCH_THIS                                        RES[  IS_TMP_VAR ~2 ]       OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          7*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_TMP_VAR ~2 ] OP2[  IS_UNUSED  ]
+          8*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~2 ]
+  153     9*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         10*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         11*       < 62> RETURN                                                    OP1[  IS_CONST (268435431) null ]
+
+End of function clearlineafter
+
+Function clearoutput:
+[+]Function Source Class Name: Symfony\Component\Console\Cursor
+[*]Start of arg_info extract:
+[*]arg_info num_args:0
+[*]Function return type:self
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\symfony\console\Cursor.php
+function name:  clearOutput
+number of ops:  12
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  162     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435447) 'output' ]
+          2*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~0 ] OP2[ ,  IS_CONST (268435446) 'write' ]
+          3*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435446) '%1B%5B0J' ] OP2[  IS_UNUSED  ]
+          4*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  164     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       <184> FETCH_THIS                                        RES[  IS_TMP_VAR ~2 ]       OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          7*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_TMP_VAR ~2 ] OP2[  IS_UNUSED  ]
+          8*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~2 ]
+  165     9*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         10*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         11*       < 62> RETURN                                                    OP1[  IS_CONST (268435431) null ]
+
+End of function clearoutput
+
+Function clearscreen:
+[+]Function Source Class Name: Symfony\Component\Console\Cursor
+[*]Start of arg_info extract:
+[*]arg_info num_args:0
+[*]Function return type:self
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\symfony\console\Cursor.php
+function name:  clearScreen
+number of ops:  12
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  174     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435447) 'output' ]
+          2*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~0 ] OP2[ ,  IS_CONST (268435446) 'write' ]
+          3*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435446) '%1B%5B2J' ] OP2[  IS_UNUSED  ]
+          4*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  176     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       <184> FETCH_THIS                                        RES[  IS_TMP_VAR ~2 ]       OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          7*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_TMP_VAR ~2 ] OP2[  IS_UNUSED  ]
+          8*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~2 ]
+  177     9*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         10*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         11*       < 62> RETURN                                                    OP1[  IS_CONST (268435431) null ]
+
+End of function clearscreen
+
+Function getcurrentposition:
+[+]Function Source Class Name: Symfony\Component\Console\Cursor
+[*]Start of arg_info extract:
+[*]arg_info num_args:0
+[*]Function return type:array
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]Key: isTtySupported, Value: NULL, Type: 1
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\symfony\console\Cursor.php
+function name:  getCurrentPosition
+number of ops:  77
+compiled vars:  !0 = $isTtySupported, !1 = $pipes, !2 = $sttyMode, !3 = $code, !4 = $row, !5 = $col
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  184     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       <183> BIND_STATIC                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+  186     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       <123> TYPE_CHECK                                    2   RES[  IS_TMP_VAR ~6 ]       OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          4*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~6 ]       OP1[  IS_TMP_VAR ~6 ] OP2[ , ->9 ]
+          5*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435265) 'function_exists' ]
+          6*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435264) 'proc_open' ]
+          7*       < 60> DO_FCALL                                      0   RES[  IS_VAR $7 ]       OP1[  IS_UNUSED  ]
+          8*       < 52> BOOL                                              RES[  IS_TMP_VAR ~6 ]       OP1[  IS_VAR $7 ]
+          9*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~6 ] OP2[ , ->20 ]
+  187    10*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         11*       < 57> BEGIN_SILENCE                                     RES[  IS_TMP_VAR ~8 ]       OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         12*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435253) 'Symfony%5CComponent%5CConsole%5Cproc_open' ]
+         13*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435254) 'echo+1+%3E%2Fdev%2Fnull' ] OP2[  IS_UNUSED  ]
+         14*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435253) <array> ] OP2[  IS_UNUSED  ]
+         15*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         16*       < 60> DO_FCALL                                      0   RES[  IS_VAR $9 ]       OP1[  IS_UNUSED  ]
+         17*       < 58> END_SILENCE                                               OP1[  IS_TMP_VAR ~8 ] OP2[  IS_UNUSED  ]
+         18*       < 52> BOOL                                              RES[  IS_TMP_VAR ~10 ]      OP1[  IS_VAR $9 ]
+         19*       < 22> ASSIGN                                                    OP1[  IS_CV !0 ] OP2[ ,  IS_TMP_VAR ~10 ]
+  190    20*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         21*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~12 ]      OP1[  IS_CV !0 ]
+         22*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~12 ] OP2[ , ->25 ]
+  191    23*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         24*       < 62> RETURN                                                    OP1[  IS_CONST (268435234) <array> ]
+  194    25*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         26*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435231) 'Symfony%5CComponent%5CConsole%5Cshell_exec' ]
+         27*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435232) 'stty+-g' ] OP2[  IS_UNUSED  ]
+         28*       < 60> DO_FCALL                                      0   RES[  IS_VAR $13 ]      OP1[  IS_UNUSED  ]
+         29*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_VAR $13 ]
+  195    30*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         31*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435225) 'Symfony%5CComponent%5CConsole%5Cshell_exec' ]
+         32*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435226) 'stty+-icanon+-echo' ] OP2[  IS_UNUSED  ]
+         33*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  197    34*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         35*       < 57> BEGIN_SILENCE                                     RES[  IS_TMP_VAR ~16 ]      OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         36*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435219) 'Symfony%5CComponent%5CConsole%5Cfwrite' ]
+         37*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         38*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $17 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435218) 'input' ]
+         39*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $17 ] OP2[  IS_UNUSED  ]
+         40*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435215) '%1B%5B6n' ] OP2[  IS_UNUSED  ]
+         41*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         42*       < 58> END_SILENCE                                               OP1[  IS_TMP_VAR ~16 ] OP2[  IS_UNUSED  ]
+  199    43*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         44*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435208) 'Symfony%5CComponent%5CConsole%5Ctrim' ]
+         45*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435209) 'Symfony%5CComponent%5CConsole%5Cfread' ]
+         46*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         47*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $19 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435208) 'input' ]
+         48*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $19 ] OP2[  IS_UNUSED  ]
+         49*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435205) 1024 ] OP2[  IS_UNUSED  ]
+         50*       < 60> DO_FCALL                                      0   RES[  IS_VAR $20 ]      OP1[  IS_UNUSED  ]
+         51*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $20 ] OP2[  IS_UNUSED  ]
+         52*       < 60> DO_FCALL                                      0   RES[  IS_VAR $21 ]      OP1[  IS_UNUSED  ]
+         53*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_VAR $21 ]
+  201    54*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         55*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435194) 'Symfony%5CComponent%5CConsole%5Cshell_exec' ]
+         56*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435195) 'Symfony%5CComponent%5CConsole%5Csprintf' ]
+         57*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435196) 'stty+%25s' ] OP2[  IS_UNUSED  ]
+         58*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         59*       < 60> DO_FCALL                                      0   RES[  IS_VAR $23 ]      OP1[  IS_UNUSED  ]
+         60*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $23 ] OP2[  IS_UNUSED  ]
+         61*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  203    62*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         63*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435185) 'Symfony%5CComponent%5CConsole%5Csscanf' ]
+         64*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         65*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435184) '%1B%5B%25d%3B%25dR' ] OP2[  IS_UNUSED  ]
+         66*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !4 ] OP2[  IS_UNUSED  ]
+         67*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !5 ] OP2[  IS_UNUSED  ]
+         68*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  205    69*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         70*       < 71> INIT_ARRAY                                        RES[  IS_TMP_VAR ~26 ]      OP1[  IS_CV !5 ] OP2[  IS_UNUSED  ]
+         71*       < 72> ADD_ARRAY_ELEMENT                                 RES[  IS_TMP_VAR ~26 ]      OP1[  IS_CV !4 ] OP2[  IS_UNUSED  ]
+         72*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_TMP_VAR ~26 ] OP2[  IS_UNUSED  ]
+         73*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~26 ]
+  206    74*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         75*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         76*       < 62> RETURN                                                    OP1[  IS_CONST (268435163) null ]
+
+End of function getcurrentposition
+
+End of class Symfony\Component\Console\Cursor.
+

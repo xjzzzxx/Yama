@@ -1,0 +1,98 @@
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\Http\Response.php
+function name:  (null)
+number of ops:  3
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   36     0*       <  0> NOP                                                      
+   90     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 62> RETURN                                                    OP1[  IS_CONST (268435451) 1 ]
+
+Class Glpi\Http\Response:
+[+]Class Parent Name: NULL
+End Trait extract
+Start Properties extract:
+Properties: NULL
+End Properties extract
+
+Function senderror:
+[+]Function Source Class Name: Glpi\Http\Response
+[*]Start of arg_info extract:
+[*]arg_info num_args:3
+[*]Function return type:void
+
+[*]ArgInfoNo**0**
+[*]name:code
+[*]type:int
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:message
+[*]type:string
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**2**
+[*]name:content_type
+[*]type:string
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\Http\Response.php
+function name:  sendError
+number of ops:  41
+compiled vars:  !0 = $code, !1 = $message, !2 = $content_type, !3 = $output
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   69     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 63> RECV                                              RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ]
+          2*       < 64> RECV_INIT                                         RES[  IS_CV !2 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435430) <const ast> ]
+   73     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~5 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435427) 'CONTENT_TYPE_JSON' ]
+          5*       < 18> IS_EQUAL                                          RES[  ]         OP1[  IS_CV !2 ] OP2[ ,  IS_TMP_VAR ~5 ]
+          6*       < 44> JMPNZ                                                     OP1[  IS_TMP_VAR ~4 ] OP2[ , ->11 ]
+   77     7*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~6 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435422) 'CONTENT_TYPE_TEXT_HTML' ]
+          8*       < 18> IS_EQUAL                                          RES[  ]         OP1[  IS_CV !2 ] OP2[ ,  IS_TMP_VAR ~6 ]
+          9*       < 44> JMPNZ                                                     OP1[  IS_TMP_VAR ~4 ] OP2[ , ->19 ]
+         10*       < 42> JMP                                                       OP1[ ->19 ]
+   74    11*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         12*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435413) 'Glpi%5CHttp%5Cjson_encode' ]
+         13*       < 71> INIT_ARRAY                                        RES[  IS_TMP_VAR ~7 ]       OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435414) 'message' ]
+         14*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~7 ] OP2[  IS_UNUSED  ]
+         15*       < 60> DO_FCALL                                      0   RES[  IS_VAR $8 ]       OP1[  IS_UNUSED  ]
+         16*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_VAR $8 ]
+   75    17*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         18*       < 42> JMP                                                       OP1[ ->23 ]
+   79    19*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         20*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_CV !1 ]
+   80    21*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         22*       < 42> JMP                                                       OP1[ ->23 ]
+   83    23*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         24*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435393) 'Glpi%5CHttp%5Cheader' ]
+         25*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435394) 'Glpi%5CHttp%5Csprintf' ]
+         26*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435395) 'Content-Type%3A+%25s%3B+charset%3DUTF-8' ] OP2[  IS_UNUSED  ]
+         27*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         28*       < 60> DO_FCALL                                      0   RES[  IS_VAR $11 ]      OP1[  IS_UNUSED  ]
+         29*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $11 ] OP2[  IS_UNUSED  ]
+         30*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435388) <true> ] OP2[  IS_UNUSED  ]
+         31*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         32*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+   85    33*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         34*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435381) 'Toolbox' ] OP2[ ,  IS_CONST (268435383) 'logDebug' ]
+         35*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         36*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+   87    37*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         38*       < 79> EXIT                                                      OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+   88    39*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         40*       < 62> RETURN                                                    OP1[  IS_CONST (268435373) null ]
+
+End of function senderror
+
+End of class Glpi\Http\Response.
+

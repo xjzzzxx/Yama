@@ -1,0 +1,505 @@
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\guzzlehttp\psr7\src\CachingStream.php
+function name:  (null)
+number of ops:  8
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+    3     0*       <  0> NOP                                                      
+    5     1*       <  0> NOP                                                      
+    7     2*       <  0> NOP                                                      
+   18     3*       <  0> NOP                                                      
+   21     4*       <  0> NOP                                                      
+   13     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       <144> DECLARE_CLASS                                             OP1[  IS_CONST (268435441) 'guzzlehttp%5Cpsr7%5Ccachingstream' ] OP2[  IS_UNUSED  ]
+  154     7*       < 62> RETURN                                                    OP1[  IS_CONST (268435441) 1 ]
+
+Class GuzzleHttp\Psr7\CachingStream:
+[+]Class Parent Name: NULL
+[+]ClassTrait ClassName: GuzzleHttp\Psr7\StreamDecoratorTrait
+End Trait extract
+Start Properties extract:
+Key: remoteStream, Value: UNINIT, Type: Normal
+Key: skipReadBytes, Value: 0, Type: Normal
+Key: stream, Value: UNINIT, Type: Normal
+End Properties extract.
+
+Function __construct:
+[+]Function Source Class Name: GuzzleHttp\Psr7\CachingStream
+[*]Start of arg_info extract:
+[*]arg_info num_args:2
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:stream
+[*]type:Psr\Http\Message\StreamInterface
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:target
+[*]type:?Psr\Http\Message\StreamInterface
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\guzzlehttp\psr7\src\CachingStream.php
+function name:  __construct
+number of ops:  19
+compiled vars:  !0 = $stream, !1 = $target
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   34     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 64> RECV_INIT                                         RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435442) null ]
+   38     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435439) 'remoteStream' ]
+          4*       <137> OP_DATA                                                   OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+   39     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       <152> JMP_SET                                           RES[  IS_TMP_VAR ~4 ]       OP1[  IS_CV !1 ] OP2[ , ->15 ]
+          7*       < 68> NEW                                               RES[  IS_VAR $5 ]       OP1[ 'GuzzleHttp%5CPsr7%5CStream' ]
+          8*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435433) 'GuzzleHttp%5CPsr7%5CUtils' ] OP2[ ,  IS_CONST (268435435) 'tryFopen' ]
+          9*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435435) 'php%3A%2F%2Ftemp' ] OP2[  IS_UNUSED  ]
+         10*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435434) 'r%2B' ] OP2[  IS_UNUSED  ]
+         11*       < 60> DO_FCALL                                      0   RES[  IS_VAR $6 ]       OP1[  IS_UNUSED  ]
+         12*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $6 ] OP2[  IS_UNUSED  ]
+         13*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         14*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~4 ]       OP1[  IS_VAR $5 ]
+         15*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435416) 'stream' ]
+         16*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~4 ] OP2[  IS_UNUSED  ]
+   40    17*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         18*       < 62> RETURN                                                    OP1[  IS_CONST (268435419) null ]
+
+End of function __construct
+
+Function getsize:
+[+]Function Source Class Name: GuzzleHttp\Psr7\CachingStream
+[*]Start of arg_info extract:
+[*]arg_info num_args:0
+[*]Function return type:?int
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\guzzlehttp\psr7\src\CachingStream.php
+function name:  getSize
+number of ops:  23
+compiled vars:  !0 = $remoteSize
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   44     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~1 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435443) 'remoteStream' ]
+          2*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~1 ] OP2[ ,  IS_CONST (268435442) 'getSize' ]
+          3*       < 60> DO_FCALL                                      0   RES[  IS_VAR $2 ]       OP1[  IS_UNUSED  ]
+          4*       < 22> ASSIGN                                                    OP1[  IS_CV !0 ] OP2[ ,  IS_VAR $2 ]
+   46     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       <123> TYPE_CHECK                                    2   RES[  IS_TMP_VAR ~4 ]       OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          7*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~4 ] OP2[ , ->10 ]
+   47     8*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          9*       < 62> RETURN                                                    OP1[  IS_CONST (268435430) null ]
+   50    10*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         11*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435427) 'GuzzleHttp%5CPsr7%5Cmax' ]
+         12*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~5 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435428) 'stream' ]
+         13*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~5 ] OP2[ ,  IS_CONST (268435427) 'getSize' ]
+         14*       < 60> DO_FCALL                                      0   RES[  IS_VAR $6 ]       OP1[  IS_UNUSED  ]
+         15*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $6 ] OP2[  IS_UNUSED  ]
+         16*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         17*       < 60> DO_FCALL                                      0   RES[  IS_VAR $7 ]       OP1[  IS_UNUSED  ]
+         18*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_VAR $7 ] OP2[  IS_UNUSED  ]
+         19*       < 62> RETURN                                                    OP1[  IS_VAR $7 ]
+   51    20*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         21*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         22*       < 62> RETURN                                                    OP1[  IS_CONST (268435411) null ]
+
+End of function getsize
+
+Function rewind:
+[+]Function Source Class Name: GuzzleHttp\Psr7\CachingStream
+[*]Start of arg_info extract:
+[*]arg_info num_args:0
+[*]Function return type:void
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\guzzlehttp\psr7\src\CachingStream.php
+function name:  rewind
+number of ops:  6
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   55     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435450) 'seek' ]
+          2*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435450) 0 ] OP2[  IS_UNUSED  ]
+          3*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+   56     4*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          5*       < 62> RETURN                                                    OP1[  IS_CONST (268435445) null ]
+
+End of function rewind
+
+Function seek:
+[+]Function Source Class Name: GuzzleHttp\Psr7\CachingStream
+[*]Start of arg_info extract:
+[*]arg_info num_args:2
+[*]Function return type:void
+
+[*]ArgInfoNo**0**
+[*]name:offset
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:whence
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\guzzlehttp\psr7\src\CachingStream.php
+function name:  seek
+number of ops:  81
+compiled vars:  !0 = $offset, !1 = $whence, !2 = $byte, !3 = $size, !4 = $diff
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   58     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 64> RECV_INIT                                         RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435415) <const ast> ]
+   60     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       < 99> FETCH_CONSTANT                                    RES[  IS_TMP_VAR ~5 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435412) 'GuzzleHttp%5CPsr7%5CSEEK_SET' ]
+          4*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~6 ]       OP1[  IS_CV !1 ] OP2[ ,  IS_TMP_VAR ~5 ]
+          5*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~6 ] OP2[ , ->9 ]
+   61     6*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          7*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_CV !0 ]
+          8*       < 42> JMP                                                       OP1[ ->44 ]
+   62     9*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         10*       < 99> FETCH_CONSTANT                                    RES[  IS_TMP_VAR ~8 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435401) 'GuzzleHttp%5CPsr7%5CSEEK_CUR' ]
+         11*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~9 ]       OP1[  IS_CV !1 ] OP2[ ,  IS_TMP_VAR ~8 ]
+         12*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~9 ] OP2[ , ->19 ]
+   63    13*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         14*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435396) 'tell' ]
+         15*       < 60> DO_FCALL                                      0   RES[  IS_VAR $10 ]      OP1[  IS_UNUSED  ]
+         16*       <  1> ADD                                               RES[  IS_TMP_VAR ~11 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_VAR $10 ]
+         17*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_TMP_VAR ~11 ]
+         18*       < 42> JMP                                                       OP1[ ->44 ]
+   64    19*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         20*       < 99> FETCH_CONSTANT                                    RES[  IS_TMP_VAR ~13 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435386) 'GuzzleHttp%5CPsr7%5CSEEK_END' ]
+         21*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~14 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_TMP_VAR ~13 ]
+         22*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~14 ] OP2[ , ->39 ]
+   65    23*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         24*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~15 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435381) 'remoteStream' ]
+         25*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~15 ] OP2[ ,  IS_CONST (268435380) 'getSize' ]
+         26*       < 60> DO_FCALL                                      0   RES[  IS_VAR $16 ]      OP1[  IS_UNUSED  ]
+         27*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_VAR $16 ]
+   66    28*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         29*       <123> TYPE_CHECK                                    2   RES[  IS_TMP_VAR ~18 ]      OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         30*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~18 ] OP2[ , ->35 ]
+   67    31*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         32*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435368) 'cacheEntireStream' ]
+         33*       < 60> DO_FCALL                                      0   RES[  IS_VAR $19 ]      OP1[  IS_UNUSED  ]
+         34*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_VAR $19 ]
+   69    35*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         36*       <  1> ADD                                               RES[  IS_TMP_VAR ~21 ]      OP1[  IS_CV !3 ] OP2[ ,  IS_CV !0 ]
+         37*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_TMP_VAR ~21 ]
+         38*       < 42> JMP                                                       OP1[ ->44 ]
+   71    39*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         40*       < 68> NEW                                               RES[  IS_VAR $23 ]      OP1[ 'InvalidArgumentException' ]
+         41*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435354) 'Invalid+whence' ] OP2[  IS_UNUSED  ]
+         42*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         43*       <108> THROW                                         0           OP1[  IS_VAR $23 ] OP2[  IS_UNUSED  ]
+   74    44*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         45*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~25 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435347) 'stream' ]
+         46*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~25 ] OP2[ ,  IS_CONST (268435346) 'getSize' ]
+         47*       < 60> DO_FCALL                                      0   RES[  IS_VAR $26 ]      OP1[  IS_UNUSED  ]
+         48*       <  2> SUB                                               RES[  IS_TMP_VAR ~27 ]      OP1[  IS_CV !2 ] OP2[ ,  IS_VAR $26 ]
+         49*       < 22> ASSIGN                                                    OP1[  IS_CV !4 ] OP2[ ,  IS_TMP_VAR ~27 ]
+   76    50*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         51*       < 20> IS_SMALLER                                        RES[  IS_TMP_VAR ~29 ]      OP1[  IS_CONST (268435338) 0 ] OP2[ ,  IS_CV !4 ]
+         52*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~29 ] OP2[ , ->74 ]
+   79    53*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         54*       < 42> JMP                                                       OP1[ ->65 ]
+   80    55*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         56*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435329) 'read' ]
+         57*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !4 ] OP2[  IS_UNUSED  ]
+         58*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+   81    59*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         60*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~31 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435323) 'stream' ]
+         61*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~31 ] OP2[ ,  IS_CONST (268435322) 'getSize' ]
+         62*       < 60> DO_FCALL                                      0   RES[  IS_VAR $32 ]      OP1[  IS_UNUSED  ]
+         63*       <  2> SUB                                               RES[  IS_TMP_VAR ~33 ]      OP1[  IS_CV !2 ] OP2[ ,  IS_VAR $32 ]
+         64*       < 22> ASSIGN                                                    OP1[  IS_CV !4 ] OP2[ ,  IS_TMP_VAR ~33 ]
+   79    65*       < 20> IS_SMALLER                                        RES[  IS_TMP_VAR ~35 ]      OP1[  IS_CONST (268435316) 0 ] OP2[ ,  IS_CV !4 ]
+         66*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~35 ]      OP1[  IS_TMP_VAR ~35 ] OP2[ , ->72 ]
+         67*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~36 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435313) 'remoteStream' ]
+         68*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~36 ] OP2[ ,  IS_CONST (268435312) 'eof' ]
+         69*       < 60> DO_FCALL                                      0   RES[  IS_VAR $37 ]      OP1[  IS_UNUSED  ]
+         70*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~38 ]      OP1[  IS_VAR $37 ]
+         71*       < 52> BOOL                                              RES[  IS_TMP_VAR ~35 ]      OP1[  IS_TMP_VAR ~38 ]
+         72*       < 44> JMPNZ                                                     OP1[  IS_TMP_VAR ~35 ] OP2[ , ->55 ]
+         73*       < 42> JMP                                                       OP1[ ->79 ]
+   85    74*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         75*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~39 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435300) 'stream' ]
+         76*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~39 ] OP2[ ,  IS_CONST (268435299) 'seek' ]
+         77*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         78*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+   87    79*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         80*       < 62> RETURN                                                    OP1[  IS_CONST (268435293) null ]
+
+End of function seek
+
+Function read:
+[+]Function Source Class Name: GuzzleHttp\Psr7\CachingStream
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:string
+
+[*]ArgInfoNo**0**
+[*]name:length
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\guzzlehttp\psr7\src\CachingStream.php
+function name:  read
+number of ops:  61
+compiled vars:  !0 = $length, !1 = $data, !2 = $remaining, !3 = $remoteData, !4 = $len
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   89     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+   92     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~5 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435424) 'stream' ]
+          3*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~5 ] OP2[ ,  IS_CONST (268435423) 'read' ]
+          4*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          5*       < 60> DO_FCALL                                      0   RES[  IS_VAR $6 ]       OP1[  IS_UNUSED  ]
+          6*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_VAR $6 ]
+   93     7*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          8*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435415) 'GuzzleHttp%5CPsr7%5Cstrlen' ]
+          9*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         10*       < 60> DO_FCALL                                      0   RES[  IS_VAR $8 ]       OP1[  IS_UNUSED  ]
+         11*       <  2> SUB                                               RES[  IS_TMP_VAR ~9 ]       OP1[  IS_CV !0 ] OP2[ ,  IS_VAR $8 ]
+         12*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_TMP_VAR ~9 ]
+   96    13*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         14*       < 43> JMPZ                                                      OP1[  IS_CV !2 ] OP2[ , ->55 ]
+  101    15*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         16*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~11 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435402) 'remoteStream' ]
+         17*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~11 ] OP2[ ,  IS_CONST (268435401) 'read' ]
+  102    18*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~12 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435401) 'skipReadBytes' ]
+         19*       <  1> ADD                                               RES[  IS_TMP_VAR ~13 ]      OP1[  IS_CV !2 ] OP2[ ,  IS_TMP_VAR ~12 ]
+         20*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~13 ] OP2[  IS_UNUSED  ]
+         21*       < 60> DO_FCALL                                      0   RES[  IS_VAR $14 ]      OP1[  IS_UNUSED  ]
+  101    22*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_VAR $14 ]
+  105    23*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         24*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~16 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435390) 'skipReadBytes' ]
+         25*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~16 ] OP2[ , ->48 ]
+  106    26*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         27*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435385) 'GuzzleHttp%5CPsr7%5Cstrlen' ]
+         28*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         29*       < 60> DO_FCALL                                      0   RES[  IS_VAR $17 ]      OP1[  IS_UNUSED  ]
+         30*       < 22> ASSIGN                                                    OP1[  IS_CV !4 ] OP2[ ,  IS_VAR $17 ]
+  107    31*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         32*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435378) 'GuzzleHttp%5CPsr7%5Csubstr' ]
+         33*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         34*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         35*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $19 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435375) 'skipReadBytes' ]
+         36*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $19 ] OP2[  IS_UNUSED  ]
+         37*       < 60> DO_FCALL                                      0   RES[  IS_VAR $20 ]      OP1[  IS_UNUSED  ]
+         38*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_VAR $20 ]
+  108    39*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         40*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435367) 'GuzzleHttp%5CPsr7%5Cmax' ]
+         41*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435368) 0 ] OP2[  IS_UNUSED  ]
+         42*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~23 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435367) 'skipReadBytes' ]
+         43*       <  2> SUB                                               RES[  IS_TMP_VAR ~24 ]      OP1[  IS_TMP_VAR ~23 ] OP2[ ,  IS_CV !4 ]
+         44*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~24 ] OP2[  IS_UNUSED  ]
+         45*       < 60> DO_FCALL                                      0   RES[  IS_VAR $25 ]      OP1[  IS_UNUSED  ]
+         46*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435354) 'skipReadBytes' ]
+         47*       <137> OP_DATA                                                   OP1[  IS_VAR $25 ] OP2[  IS_UNUSED  ]
+  111    48*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         49*       < 26> ASSIGN_OP                    .=               8           OP1[  IS_CV !1 ] OP2[ ,  IS_CV !3 ]
+  112    50*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         51*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~27 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435350) 'stream' ]
+         52*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~27 ] OP2[ ,  IS_CONST (268435349) 'write' ]
+         53*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         54*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  115    55*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         56*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         57*       < 62> RETURN                                                    OP1[  IS_CV !1 ]
+  116    58*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         59*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         60*       < 62> RETURN                                                    OP1[  IS_CONST (268435335) null ]
+
+End of function read
+
+Function write:
+[+]Function Source Class Name: GuzzleHttp\Psr7\CachingStream
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:int
+
+[*]ArgInfoNo**0**
+[*]name:string
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\guzzlehttp\psr7\src\CachingStream.php
+function name:  write
+number of ops:  29
+compiled vars:  !0 = $string, !1 = $overflow
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  118     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  124     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435438) 'GuzzleHttp%5CPsr7%5Cstrlen' ]
+          3*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          4*       < 60> DO_FCALL                                      0   RES[  IS_VAR $2 ]       OP1[  IS_UNUSED  ]
+          5*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435435) 'tell' ]
+          6*       < 60> DO_FCALL                                      0   RES[  IS_VAR $3 ]       OP1[  IS_UNUSED  ]
+          7*       <  1> ADD                                               RES[  IS_TMP_VAR ~4 ]       OP1[  IS_VAR $2 ] OP2[ ,  IS_VAR $3 ]
+          8*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~5 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435431) 'remoteStream' ]
+          9*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~5 ] OP2[ ,  IS_CONST (268435430) 'tell' ]
+         10*       < 60> DO_FCALL                                      0   RES[  IS_VAR $6 ]       OP1[  IS_UNUSED  ]
+         11*       <  2> SUB                                               RES[  IS_TMP_VAR ~7 ]       OP1[  IS_TMP_VAR ~4 ] OP2[ ,  IS_VAR $6 ]
+         12*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_TMP_VAR ~7 ]
+  125    13*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         14*       < 20> IS_SMALLER                                        RES[  IS_TMP_VAR ~9 ]       OP1[  IS_CONST (268435422) 0 ] OP2[ ,  IS_CV !1 ]
+         15*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~9 ] OP2[ , ->19 ]
+  126    16*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         17*       < 28> ASSIGN_OBJ_OP                                 1           OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435417) 'skipReadBytes' ]
+         18*       <137> OP_DATA                                                   OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+  129    19*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         20*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~11 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435412) 'stream' ]
+         21*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~11 ] OP2[ ,  IS_CONST (268435411) 'write' ]
+         22*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         23*       < 60> DO_FCALL                                      0   RES[  IS_VAR $12 ]      OP1[  IS_UNUSED  ]
+         24*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_VAR $12 ] OP2[  IS_UNUSED  ]
+         25*       < 62> RETURN                                                    OP1[  IS_VAR $12 ]
+  130    26*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         27*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         28*       < 62> RETURN                                                    OP1[  IS_CONST (268435399) null ]
+
+End of function write
+
+Function eof:
+[+]Function Source Class Name: GuzzleHttp\Psr7\CachingStream
+[*]Start of arg_info extract:
+[*]arg_info num_args:0
+[*]Function return type:bool
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\guzzlehttp\psr7\src\CachingStream.php
+function name:  eof
+number of ops:  14
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  134     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435447) 'stream' ]
+          2*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~0 ] OP2[ ,  IS_CONST (268435446) 'eof' ]
+          3*       < 60> DO_FCALL                                      0   RES[  IS_VAR $1 ]       OP1[  IS_UNUSED  ]
+          4*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~2 ]       OP1[  IS_VAR $1 ] OP2[ , ->9 ]
+          5*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~3 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435442) 'remoteStream' ]
+          6*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~3 ] OP2[ ,  IS_CONST (268435441) 'eof' ]
+          7*       < 60> DO_FCALL                                      0   RES[  IS_VAR $4 ]       OP1[  IS_UNUSED  ]
+          8*       < 52> BOOL                                              RES[  IS_TMP_VAR ~2 ]       OP1[  IS_VAR $4 ]
+          9*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_TMP_VAR ~2 ] OP2[  IS_UNUSED  ]
+         10*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~2 ]
+  135    11*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         12*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         13*       < 62> RETURN                                                    OP1[  IS_CONST (268435429) null ]
+
+End of function eof
+
+Function close:
+[+]Function Source Class Name: GuzzleHttp\Psr7\CachingStream
+[*]Start of arg_info extract:
+[*]arg_info num_args:0
+[*]Function return type:void
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\guzzlehttp\psr7\src\CachingStream.php
+function name:  close
+number of ops:  10
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  142     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435447) 'remoteStream' ]
+          2*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~0 ] OP2[ ,  IS_CONST (268435446) 'close' ]
+          3*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  143     4*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          5*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~2 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435442) 'stream' ]
+          6*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~2 ] OP2[ ,  IS_CONST (268435441) 'close' ]
+          7*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  144     8*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          9*       < 62> RETURN                                                    OP1[  IS_CONST (268435437) null ]
+
+End of function close
+
+Function cacheentirestream:
+[+]Function Source Class Name: GuzzleHttp\Psr7\CachingStream
+[*]Start of arg_info extract:
+[*]arg_info num_args:0
+[*]Function return type:int
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\guzzlehttp\psr7\src\CachingStream.php
+function name:  cacheEntireStream
+number of ops:  19
+compiled vars:  !0 = $target
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  148     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 68> NEW                                               RES[  IS_VAR $1 ]       OP1[ 'GuzzleHttp%5CPsr7%5CFnStream' ]
+          2*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435434) <array> ] OP2[  IS_UNUSED  ]
+          3*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+          4*       < 22> ASSIGN                                                    OP1[  IS_CV !0 ] OP2[ ,  IS_VAR $1 ]
+  149     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435427) 'GuzzleHttp%5CPsr7%5CUtils' ] OP2[ ,  IS_CONST (268435429) 'copyToStream' ]
+          7*       <184> FETCH_THIS                                        RES[  IS_VAR $4 ]       OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          8*       < 66> SEND_VAR_EX                                               OP1[  IS_VAR $4 ] OP2[  IS_UNUSED  ]
+          9*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         10*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  151    11*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         12*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435419) 'tell' ]
+         13*       < 60> DO_FCALL                                      0   RES[  IS_VAR $6 ]       OP1[  IS_UNUSED  ]
+         14*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_VAR $6 ] OP2[  IS_UNUSED  ]
+         15*       < 62> RETURN                                                    OP1[  IS_VAR $6 ]
+  152    16*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         17*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         18*       < 62> RETURN                                                    OP1[  IS_CONST (268435409) null ]
+
+End of function cacheentirestream
+
+End of class GuzzleHttp\Psr7\CachingStream.
+

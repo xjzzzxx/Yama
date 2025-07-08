@@ -1,0 +1,274 @@
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\symfony\cache\Messenger\EarlyExpirationHandler.php
+function name:  (null)
+number of ops:  8
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   12     0*       <  0> NOP                                                      
+   14     1*       <  0> NOP                                                      
+   15     2*       <  0> NOP                                                      
+   16     3*       <  0> NOP                                                      
+   23     4*       <  0> NOP                                                      
+   21     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       <144> DECLARE_CLASS                                             OP1[  IS_CONST (268435435) 'symfony%5Ccomponent%5Ccache%5Cmessenger%5Cearlyexpirationhandler' ] OP2[  IS_UNUSED  ]
+   82     7*       < 62> RETURN                                                    OP1[  IS_CONST (268435435) 1 ]
+
+Function %00symfony%5Ccomponent%5Ccache%5Cmessenger%5C%7Bclosure%7DG%3A%5Cdesktop%5CYama%5Capp%5Cglpi-10.0.16%5Cglpi%5Cvendor%5Csymfony%5Ccache%5CMessenger%5CEarlyExpirationHandler.php%3A63%240:
+[*]Start of arg_info extract:
+[*]arg_info num_args:2
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:item
+[*]type:Symfony\Component\Cache\CacheItem
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:startTime
+[*]type:float
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\symfony\cache\Messenger\EarlyExpirationHandler.php
+function name:  Symfony\Component\Cache\Messenger\{closure}
+number of ops:  29
+compiled vars:  !0 = $item, !1 = $startTime, !2 = $endTime
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   63     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 63> RECV                                              RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ]
+   64     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~3 ]       OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435400) 'expiry' ]
+          4*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435399) 'Symfony%5CComponent%5CCache%5CMessenger%5Cmicrotime' ]
+          5*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435400) <true> ] OP2[  IS_UNUSED  ]
+          6*       < 60> DO_FCALL                                      0   RES[  IS_VAR $4 ]       OP1[  IS_UNUSED  ]
+          7*       < 22> ASSIGN                                            RES[  IS_TMP_VAR ~5 ]       OP1[  IS_CV !2 ] OP2[ ,  IS_VAR $4 ]
+          8*       < 20> IS_SMALLER                                        RES[  IS_TMP_VAR ~6 ]       OP1[  IS_TMP_VAR ~5 ] OP2[ ,  IS_TMP_VAR ~3 ]
+          9*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~6 ] OP2[ , ->27 ]
+   65    10*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         11*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~8 ]       OP1[  IS_CONST (268435391) 'Symfony%5CComponent%5CCache%5CCacheItem' ] OP2[ ,  IS_CONST (268435390) 'METADATA_EXPIRY' ]
+         12*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~10 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435391) 'expiry' ]
+         13*       < 85> FETCH_OBJ_W                                       RES[  IS_VAR $7 ]       OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435385) 'newMetadata' ]
+         14*       < 23> ASSIGN_DIM                                                OP1[  IS_VAR $7 ] OP2[ ,  IS_TMP_VAR ~8 ]
+         15*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~10 ] OP2[  IS_UNUSED  ]
+   66    16*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         17*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~12 ]      OP1[  IS_CONST (268435384) 'Symfony%5CComponent%5CCache%5CCacheItem' ] OP2[ ,  IS_CONST (268435383) 'METADATA_CTIME' ]
+         18*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435384) 'Symfony%5CComponent%5CCache%5CMessenger%5Cceil' ]
+         19*       <  2> SUB                                               RES[  IS_TMP_VAR ~14 ]      OP1[  IS_CV !2 ] OP2[ ,  IS_CV !1 ]
+         20*       <  3> MUL                                               RES[  IS_TMP_VAR ~15 ]      OP1[  IS_TMP_VAR ~14 ] OP2[ ,  IS_CONST (268435383) 1000 ]
+         21*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~15 ] OP2[  IS_UNUSED  ]
+         22*       < 60> DO_FCALL                                      0   RES[  IS_VAR $16 ]      OP1[  IS_UNUSED  ]
+         23*       < 51> CAST                                          4   RES[  IS_TMP_VAR ~17 ]      OP1[  IS_VAR $16 ] OP2[  IS_UNUSED  ]
+         24*       < 85> FETCH_OBJ_W                                       RES[  IS_VAR $11 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435368) 'newMetadata' ]
+         25*       < 23> ASSIGN_DIM                                                OP1[  IS_VAR $11 ] OP2[ ,  IS_TMP_VAR ~12 ]
+         26*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~17 ] OP2[  IS_UNUSED  ]
+   68    27*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         28*       < 62> RETURN                                                    OP1[  IS_CONST (268435368) null ]
+
+End of function %00symfony%5Ccomponent%5Ccache%5Cmessenger%5C%7Bclosure%7DG%3A%5Cdesktop%5CYama%5Capp%5Cglpi-10.0.16%5Cglpi%5Cvendor%5Csymfony%5Ccache%5CMessenger%5CEarlyExpirationHandler.php%3A63%240
+
+Class Symfony\Component\Cache\Messenger\EarlyExpirationHandler:
+[+]Class Parent Name: NULL
+End Trait extract
+Start Properties extract:
+Key: reverseContainer, Value: UNINIT, Type: Normal
+End Properties extract.
+
+Function __construct:
+[+]Function Source Class Name: Symfony\Component\Cache\Messenger\EarlyExpirationHandler
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:reverseContainer
+[*]type:Symfony\Component\DependencyInjection\ReverseContainer
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\symfony\cache\Messenger\EarlyExpirationHandler.php
+function name:  __construct
+number of ops:  6
+compiled vars:  !0 = $reverseContainer
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   26     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+   28     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435447) 'reverseContainer' ]
+          3*       <137> OP_DATA                                                   OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+   29     4*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          5*       < 62> RETURN                                                    OP1[  IS_CONST (268435442) null ]
+
+End of function __construct
+
+Function __invoke:
+[+]Function Source Class Name: Symfony\Component\Cache\Messenger\EarlyExpirationHandler
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:message
+[*]type:Symfony\Component\Cache\Messenger\EarlyExpirationMessage
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]Key: setMetadata, Value: NULL, Type: 1
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\symfony\cache\Messenger\EarlyExpirationHandler.php
+function name:  __invoke
+number of ops:  132
+compiled vars:  !0 = $message, !1 = $item, !2 = $metadata, !3 = $expiry, !4 = $ctime, !5 = $processingNonce, !6 = $pool, !7 = $key, !8 = $setMetadata, !9 = $startTime, !10 = $callback, !11 = $save, !12 = $value
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   31     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+   33     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435317) 'getItem' ]
+          3*       < 60> DO_FCALL                                      0   RES[  IS_VAR $13 ]      OP1[  IS_UNUSED  ]
+          4*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_VAR $13 ]
+   34     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435311) 'getMetadata' ]
+          7*       < 60> DO_FCALL                                      0   RES[  IS_VAR $15 ]      OP1[  IS_UNUSED  ]
+          8*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_VAR $15 ]
+   35     9*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         10*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~17 ]      OP1[  IS_CONST (268435306) 'Symfony%5CComponent%5CCache%5CCacheItem' ] OP2[ ,  IS_CONST (268435305) 'METADATA_EXPIRY' ]
+         11*       < 90> FETCH_DIM_IS                                      RES[  IS_TMP_VAR ~18 ]      OP1[  IS_CV !2 ] OP2[ ,  IS_TMP_VAR ~17 ]
+         12*       <169> COALESCE                                          RES[  IS_TMP_VAR ~19 ]      OP1[  IS_TMP_VAR ~18 ] OP2[ , ->14 ]
+         13*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~19 ]      OP1[  IS_CONST (268435302) 0 ]
+         14*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_TMP_VAR ~19 ]
+   36    15*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         16*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~21 ]      OP1[  IS_CONST (268435298) 'Symfony%5CComponent%5CCache%5CCacheItem' ] OP2[ ,  IS_CONST (268435297) 'METADATA_CTIME' ]
+         17*       < 90> FETCH_DIM_IS                                      RES[  IS_TMP_VAR ~22 ]      OP1[  IS_CV !2 ] OP2[ ,  IS_TMP_VAR ~21 ]
+         18*       <169> COALESCE                                          RES[  IS_TMP_VAR ~23 ]      OP1[  IS_TMP_VAR ~22 ] OP2[ , ->20 ]
+         19*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~23 ]      OP1[  IS_CONST (268435294) 0 ]
+         20*       < 22> ASSIGN                                                    OP1[  IS_CV !4 ] OP2[ ,  IS_TMP_VAR ~23 ]
+   38    21*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         22*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~25 ]      OP1[  IS_CV !3 ] OP2[ , ->24 ]
+         23*       < 52> BOOL                                              RES[  IS_TMP_VAR ~25 ]      OP1[  IS_CV !4 ]
+         24*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~25 ] OP2[ , ->78 ]
+   41    25*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         26*       < 71> INIT_ARRAY                                        RES[  IS_TMP_VAR ~26 ]      OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         27*       < 72> ADD_ARRAY_ELEMENT                                 RES[  IS_TMP_VAR ~26 ]      OP1[  IS_CV !4 ] OP2[  IS_UNUSED  ]
+         28*       < 22> ASSIGN                                                    OP1[  IS_CV !5 ] OP2[ ,  IS_TMP_VAR ~26 ]
+   42    29*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         30*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435273) 'getPool' ]
+         31*       < 60> DO_FCALL                                      0   RES[  IS_VAR $28 ]      OP1[  IS_UNUSED  ]
+         32*       < 22> ASSIGN                                                    OP1[  IS_CV !6 ] OP2[ ,  IS_VAR $28 ]
+   43    33*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         34*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435267) 'getKey' ]
+         35*       < 60> DO_FCALL                                      0   RES[  IS_VAR $30 ]      OP1[  IS_UNUSED  ]
+         36*       < 22> ASSIGN                                                    OP1[  IS_CV !7 ] OP2[ ,  IS_VAR $30 ]
+   45    37*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         38*       < 91> FETCH_OBJ_IS                                      RES[  IS_TMP_VAR ~32 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435261) 'processedNonces' ]
+         39*       < 90> FETCH_DIM_IS                                      RES[  IS_TMP_VAR ~33 ]      OP1[  IS_TMP_VAR ~32 ] OP2[ ,  IS_CV !6 ]
+         40*       < 90> FETCH_DIM_IS                                      RES[  IS_TMP_VAR ~34 ]      OP1[  IS_TMP_VAR ~33 ] OP2[ ,  IS_CV !7 ]
+         41*       <169> COALESCE                                          RES[  IS_TMP_VAR ~35 ]      OP1[  IS_TMP_VAR ~34 ] OP2[ , ->43 ]
+         42*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~35 ]      OP1[  IS_CONST (268435254) null ]
+         43*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~36 ]      OP1[  IS_CV !5 ] OP2[ ,  IS_TMP_VAR ~35 ]
+         44*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~36 ] OP2[ , ->47 ]
+   46    45*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         46*       < 62> RETURN                                                    OP1[  IS_CONST (268435247) null ]
+   49    47*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         48*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435244) 'Symfony%5CComponent%5CCache%5CMessenger%5Cmicrotime' ]
+         49*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435245) <true> ] OP2[  IS_UNUSED  ]
+         50*       < 60> DO_FCALL                                      0   RES[  IS_VAR $37 ]      OP1[  IS_UNUSED  ]
+         51*       < 21> IS_SMALLER_OR_EQUAL                               RES[  IS_TMP_VAR ~38 ]      OP1[  IS_CV !3 ] OP2[ ,  IS_VAR $37 ]
+         52*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~38 ] OP2[ , ->55 ]
+   50    53*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         54*       < 62> RETURN                                                    OP1[  IS_CONST (268435236) null ]
+   53    55*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         56*       < 71> INIT_ARRAY                                        RES[  IS_TMP_VAR ~41 ]      OP1[  IS_CV !5 ] OP2[ ,  IS_CV !7 ]
+         57*       < 91> FETCH_OBJ_IS                                      RES[  IS_TMP_VAR ~42 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435232) 'processedNonces' ]
+         58*       < 90> FETCH_DIM_IS                                      RES[  IS_TMP_VAR ~43 ]      OP1[  IS_TMP_VAR ~42 ] OP2[ ,  IS_CV !6 ]
+         59*       <169> COALESCE                                          RES[  IS_TMP_VAR ~44 ]      OP1[  IS_TMP_VAR ~43 ] OP2[ , ->61 ]
+         60*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~44 ]      OP1[  IS_CONST (268435227) <array> ]
+         61*       <  1> ADD                                               RES[  IS_TMP_VAR ~45 ]      OP1[  IS_TMP_VAR ~41 ] OP2[ ,  IS_TMP_VAR ~44 ]
+         62*       < 85> FETCH_OBJ_W                                       RES[  IS_VAR $39 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435221) 'processedNonces' ]
+         63*       < 23> ASSIGN_DIM                                                OP1[  IS_VAR $39 ] OP2[ ,  IS_CV !6 ]
+         64*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~45 ] OP2[  IS_UNUSED  ]
+   55    65*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         66*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~46 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435216) 'processedNonces' ]
+         67*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~47 ]      OP1[  IS_TMP_VAR ~46 ] OP2[ ,  IS_CV !6 ]
+         68*       <190> COUNT                                             RES[  IS_TMP_VAR ~48 ]      OP1[  IS_TMP_VAR ~47 ] OP2[  IS_UNUSED  ]
+         69*       < 20> IS_SMALLER                                        RES[  IS_TMP_VAR ~49 ]      OP1[  IS_CONST (268435211) 100 ] OP2[ ,  IS_TMP_VAR ~48 ]
+         70*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~49 ] OP2[ , ->78 ]
+   56    71*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         72*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435206) 'Symfony%5CComponent%5CCache%5CMessenger%5Carray_pop' ]
+         73*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         74*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $50 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435205) 'processedNonces' ]
+         75*       < 93> FETCH_DIM_FUNC_ARG                                RES[  IS_VAR $51 ]      OP1[  IS_VAR $50 ] OP2[ ,  IS_CV !6 ]
+         76*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $51 ] OP2[  IS_UNUSED  ]
+         77*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+   60    78*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         79*       <183> BIND_STATIC                                               OP1[  IS_CV !8 ] OP2[  IS_UNUSED  ]
+   62    80*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         81*       <169> COALESCE                                          RES[  IS_TMP_VAR ~53 ]      OP1[  IS_CV !8 ] OP2[ , ->90 ]
+         82*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435190) 'Closure' ] OP2[ ,  IS_CONST (268435192) 'bind' ]
+   63    83*       <142> DECLARE_LAMBDA_FUNCTION                           RES[  IS_TMP_VAR ~54 ]      OP1[  IS_CONST (268435192) '%00symfony%5Ccomponent%5Ccache%5Cmessenger%5C%7Bclosure%7DG%3A%5Cdesktop%5CYama%5Capp%5Cglpi-10.0.16%5Cglpi%5Cvendor%5Csymfony%5Ccache%5CMessenger%5CEarlyExpirationHandler.php%3A63%240' ]
+   68    84*       < 65> SEND_VAL                                                  OP1[  IS_TMP_VAR ~54 ]
+   69    85*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435189) null ]
+   70    86*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435188) 'Symfony%5CComponent%5CCache%5CCacheItem' ]
+         87*       < 60> DO_FCALL                                      0   RES[  IS_VAR $55 ]      OP1[  IS_UNUSED  ]
+   62    88*       < 22> ASSIGN                                            RES[  IS_TMP_VAR ~56 ]      OP1[  IS_CV !8 ] OP2[ ,  IS_VAR $55 ]
+         89*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~53 ]      OP1[  IS_TMP_VAR ~56 ]
+         90*       < 70> FREE                                                      OP1[  IS_TMP_VAR ~53 ]
+   73    91*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         92*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435177) 'Symfony%5CComponent%5CCache%5CMessenger%5Cmicrotime' ]
+         93*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435178) <true> ] OP2[  IS_UNUSED  ]
+         94*       < 60> DO_FCALL                                      0   RES[  IS_VAR $57 ]      OP1[  IS_UNUSED  ]
+         95*       < 22> ASSIGN                                                    OP1[  IS_CV !9 ] OP2[ ,  IS_VAR $57 ]
+   74    96*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         97*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435171) 'findPool' ]
+         98*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         99*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $59 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435169) 'reverseContainer' ]
+        100*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $59 ] OP2[  IS_UNUSED  ]
+        101*       < 60> DO_FCALL                                      0   RES[  IS_VAR $60 ]      OP1[  IS_UNUSED  ]
+        102*       < 22> ASSIGN                                                    OP1[  IS_CV !6 ] OP2[ ,  IS_VAR $60 ]
+   75   103*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        104*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435160) 'findCallback' ]
+        105*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        106*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $62 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435158) 'reverseContainer' ]
+        107*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $62 ] OP2[  IS_UNUSED  ]
+        108*       < 60> DO_FCALL                                      0   RES[  IS_VAR $63 ]      OP1[  IS_UNUSED  ]
+        109*       < 22> ASSIGN                                                    OP1[  IS_CV !10 ] OP2[ ,  IS_VAR $63 ]
+   76   110*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        111*       < 22> ASSIGN                                                    OP1[  IS_CV !11 ] OP2[ ,  IS_CONST (268435149) <true> ]
+   77   112*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        113*       <128> INIT_DYNAMIC_CALL                                         OP1[  IS_UNUSED  ] OP2[  IS_CV !10 ]
+        114*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+        115*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !11 ] OP2[  IS_UNUSED  ]
+        116*       < 60> DO_FCALL                                      0   RES[  IS_VAR $66 ]      OP1[  IS_UNUSED  ]
+        117*       < 22> ASSIGN                                                    OP1[  IS_CV !12 ] OP2[ ,  IS_VAR $66 ]
+   78   118*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        119*       <128> INIT_DYNAMIC_CALL                                         OP1[  IS_UNUSED  ] OP2[  IS_CV !8 ]
+        120*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+        121*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !9 ] OP2[  IS_UNUSED  ]
+        122*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+   79   123*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        124*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !6 ] OP2[ ,  IS_CONST (268435124) 'save' ]
+        125*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435124) 'set' ]
+        126*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !12 ] OP2[  IS_UNUSED  ]
+        127*       < 60> DO_FCALL                                      0   RES[  IS_VAR $69 ]      OP1[  IS_UNUSED  ]
+        128*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $69 ] OP2[  IS_UNUSED  ]
+        129*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+   80   130*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        131*       < 62> RETURN                                                    OP1[  IS_CONST (268435114) null ]
+
+End of function __invoke
+
+End of class Symfony\Component\Cache\Messenger\EarlyExpirationHandler.
+

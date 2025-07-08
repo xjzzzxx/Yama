@@ -1,0 +1,101 @@
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\ramsey\uuid\src\Generator\DefaultNameGenerator.php
+function name:  (null)
+number of ops:  8
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   13     0*       <  0> NOP                                                      
+   15     1*       <  0> NOP                                                      
+   17     2*       <  0> NOP                                                      
+   18     3*       <  0> NOP                                                      
+   19     4*       <  0> NOP                                                      
+   27     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       <144> DECLARE_CLASS                                             OP1[  IS_CONST (268435441) 'ramsey%5Cuuid%5Cgenerator%5Cdefaultnamegenerator' ] OP2[  IS_UNUSED  ]
+   49     7*       < 62> RETURN                                                    OP1[  IS_CONST (268435441) 1 ]
+
+Class Ramsey\Uuid\Generator\DefaultNameGenerator:
+[+]Class Parent Name: NULL
+End Trait extract
+Start Properties extract:
+Properties: NULL
+End Properties extract
+
+Function generate:
+[+]Function Source Class Name: Ramsey\Uuid\Generator\DefaultNameGenerator
+[*]Start of arg_info extract:
+[*]arg_info num_args:3
+[*]Function return type:string
+
+[*]ArgInfoNo**0**
+[*]name:ns
+[*]type:Ramsey\Uuid\UuidInterface
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:name
+[*]type:string
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**2**
+[*]name:hashAlgorithm
+[*]type:string
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\ramsey\uuid\src\Generator\DefaultNameGenerator.php
+function name:  generate
+number of ops:  39
+compiled vars:  !0 = $ns, !1 = $name, !2 = $hashAlgorithm, !3 = $bytes, !4 = $e
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   30     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 63> RECV                                              RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ]
+          2*       < 63> RECV                                              RES[  IS_CV !2 ]       OP1[  IS_UNUSED  ]
+   32     3*       <  0> NOP                                                      
+   34     4*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          5*       < 57> BEGIN_SILENCE                                     RES[  IS_TMP_VAR ~5 ]       OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435430) 'hash' ]
+          7*       <117> SEND_VAR                                                  OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+          8*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435427) 'getBytes' ]
+          9*       < 60> DO_FCALL                                      0   RES[  IS_VAR $6 ]       OP1[  IS_UNUSED  ]
+         10*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~7 ]       OP1[  IS_VAR $6 ] OP2[ ,  IS_CV !1 ]
+         11*       < 65> SEND_VAL                                                  OP1[  IS_TMP_VAR ~7 ]
+         12*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435421) <true> ]
+         13*       < 60> DO_FCALL                                      0   RES[  IS_VAR $8 ]       OP1[  IS_UNUSED  ]
+         14*       < 58> END_SILENCE                                               OP1[  IS_TMP_VAR ~5 ] OP2[  IS_UNUSED  ]
+         15*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_VAR $8 ]
+         16*       < 42> JMP                                                       OP1[ ->20 ]
+   35    17*       <107> CATCH                                       last  RES[  IS_CV !4 ]       OP1[  IS_CONST (268435412) 'ValueError' ]
+   36    18*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         19*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435410) <false> ]
+   39    20*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         21*       <123> TYPE_CHECK                                    4   RES[  IS_TMP_VAR ~11 ]      OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         22*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~11 ] OP2[ , ->32 ]
+   40    23*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         24*       < 68> NEW                                               RES[  IS_VAR $12 ]      OP1[ 'Ramsey%5CUuid%5CException%5CNameException' ]
+         25*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435401) 'Ramsey%5CUuid%5CGenerator%5Csprintf' ]
+   41    26*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435402) 'Unable+to+hash+namespace+and+name+with+algorithm+%27%25s%27' ] OP2[  IS_UNUSED  ]
+         27*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         28*       < 60> DO_FCALL                                      0   RES[  IS_VAR $13 ]      OP1[  IS_UNUSED  ]
+         29*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $13 ] OP2[  IS_UNUSED  ]
+         30*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         31*       <108> THROW                                         0           OP1[  IS_VAR $12 ] OP2[  IS_UNUSED  ]
+   46    32*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         33*       < 51> CAST                                          6   RES[  IS_TMP_VAR ~15 ]      OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         34*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_TMP_VAR ~15 ] OP2[  IS_UNUSED  ]
+         35*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~15 ]
+   47    36*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         37*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         38*       < 62> RETURN                                                    OP1[  IS_CONST (268435379) null ]
+
+End of function generate
+
+End of class Ramsey\Uuid\Generator\DefaultNameGenerator.
+

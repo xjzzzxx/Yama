@@ -1,0 +1,30 @@
+filename:       E:\【我的开源项目】\Yama\Yama_datasets\dataset2\C1_type_inference\59_foreach_with_array\second_ex\second_ex.php
+function name:  (null)
+number of ops:  23
+compiled vars:  !0 = $b, !1 = $array, !2 = $value, !3 = $key
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+    2     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 80> FETCH_R                      global               RES[  IS_TMP_VAR ~4 ]       OP1[  IS_CONST (268435442) '_GET' ]
+          2*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~5 ]       OP1[  IS_TMP_VAR ~4 ] OP2[ ,  IS_CONST (268435441) 'p1' ]
+          3*       < 22> ASSIGN                                                    OP1[  IS_CV !0 ] OP2[ ,  IS_TMP_VAR ~5 ]
+    5     4*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          5*       < 71> INIT_ARRAY                                        RES[  IS_TMP_VAR ~7 ]       OP1[  IS_CONST (268435436) 'bar' ] OP2[ ,  IS_CONST (268435437) 'foo' ]
+    6     6*       < 72> ADD_ARRAY_ELEMENT                                 RES[  IS_TMP_VAR ~7 ]       OP1[  IS_CONST (268435436) 'foo' ] OP2[ ,  IS_CONST (268435437) 'bar' ]
+    7     7*       < 72> ADD_ARRAY_ELEMENT                                 RES[  IS_TMP_VAR ~7 ]       OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435436) 'too' ]
+    8     8*       < 72> ADD_ARRAY_ELEMENT                                 RES[  IS_TMP_VAR ~7 ]       OP1[  IS_CONST (268435435) 100 ] OP2[ ,  IS_CONST (268435436) -100 ]
+    4     9*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_TMP_VAR ~7 ]
+   11    10*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         11*       < 77> FE_RESET_R                                        RES[  IS_VAR $9 ]       OP1[  IS_CV !1 ] OP2[ , ->21 ]
+         12*       < 78> FE_FETCH_R                                        RES[  IS_TMP_VAR ~10 ]      OP1[  IS_VAR $9 ] OP2[ ,  IS_CV !2 ] EXT_JMP_REL[ , ->21 ]
+         13*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_TMP_VAR ~10 ]
+   13    14*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         15*       < 54> ROPE_INIT                                     4   RES[  IS_TMP_VAR ~13 ]      OP1[  IS_UNUSED  ] OP2[  IS_CV !3 ]
+         16*       < 55> ROPE_ADD                                      1   RES[  IS_TMP_VAR ~13 ]      OP1[  IS_TMP_VAR ~13 ] OP2[ ,  IS_CONST (268435421) '+%3D%3E+' ]
+         17*       < 55> ROPE_ADD                                      2   RES[  IS_TMP_VAR ~13 ]      OP1[  IS_TMP_VAR ~13 ] OP2[ ,  IS_CV !2 ]
+         18*       < 56> ROPE_END                                      3   RES[  IS_TMP_VAR ~12 ]      OP1[  IS_TMP_VAR ~13 ] OP2[ ,  IS_CONST (268435418) '%0A' ]
+         19*       <136> ECHO                                                      OP1[  IS_TMP_VAR ~12 ]
+   11    20*       < 42> JMP                                                       OP1[ ->12 ]
+         21*       <127> FE_FREE                                                   OP1[  IS_VAR $9 ] OP2[  IS_UNUSED  ]
+   14    22*       < 62> RETURN                                                    OP1[  IS_CONST (268435411) 1 ]
+

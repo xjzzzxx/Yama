@@ -1,0 +1,40 @@
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\install\migrations\update_9.5.x_to_10.0.0\tickettask.php
+function name:  (null)
+number of ops:  33
+compiled vars:  !0 = $default_key_sign, !1 = $DB, !2 = $migration
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   36     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       <122> DEFINED                                           RES[  IS_TMP_VAR ~3 ]       OP1[  IS_CONST (268435422) 'GLPI_ROOT' ] OP2[  IS_UNUSED  ]
+          2*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~4 ]       OP1[  IS_TMP_VAR ~3 ]
+          3*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~4 ] OP2[ , ->6 ]
+   37     4*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          5*       < 79> EXIT                                                      OP1[  IS_CONST (268435415) 'Sorry.+You+can%27t+access+this+file+directly' ] OP2[  IS_UNUSED  ]
+   45     6*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          7*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435412) 'DBConnection' ] OP2[ ,  IS_CONST (268435414) 'getDefaultPrimaryKeySignOption' ]
+          8*       < 60> DO_FCALL                                      0   RES[  IS_VAR $5 ]       OP1[  IS_UNUSED  ]
+          9*       < 22> ASSIGN                                                    OP1[  IS_CV !0 ] OP2[ ,  IS_VAR $5 ]
+   48    10*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         11*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435408) 'fieldExists' ]
+         12*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435408) 'glpi_tickettasks' ] OP2[  IS_UNUSED  ]
+         13*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435407) 'sourceof_items_id' ] OP2[  IS_UNUSED  ]
+         14*       < 60> DO_FCALL                                      0   RES[  IS_VAR $7 ]       OP1[  IS_UNUSED  ]
+         15*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~8 ]       OP1[  IS_VAR $7 ]
+         16*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~8 ] OP2[ , ->32 ]
+   49    17*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         18*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435398) 'addField' ]
+         19*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435398) 'glpi_tickettasks' ] OP2[  IS_UNUSED  ]
+         20*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435397) 'sourceof_items_id' ] OP2[  IS_UNUSED  ]
+         21*       < 54> ROPE_INIT                                     3   RES[  IS_TMP_VAR ~10 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435396) 'int+' ]
+         22*       < 55> ROPE_ADD                                      1   RES[  IS_TMP_VAR ~10 ]      OP1[  IS_TMP_VAR ~10 ] OP2[ ,  IS_CV !0 ]
+         23*       < 56> ROPE_END                                      2   RES[  IS_TMP_VAR ~9 ]       OP1[  IS_TMP_VAR ~10 ] OP2[ ,  IS_CONST (268435393) '+NOT+NULL+DEFAULT+%270%27' ]
+         24*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~9 ] OP2[  IS_UNUSED  ]
+         25*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435390) <array> ] OP2[  IS_UNUSED  ]
+         26*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+   50    27*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         28*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435385) 'addKey' ]
+         29*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435385) 'glpi_tickettasks' ] OP2[  IS_UNUSED  ]
+         30*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435384) 'sourceof_items_id' ] OP2[  IS_UNUSED  ]
+         31*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+   52    32*       < 62> RETURN                                                    OP1[  IS_CONST (268435381) 1 ]
+

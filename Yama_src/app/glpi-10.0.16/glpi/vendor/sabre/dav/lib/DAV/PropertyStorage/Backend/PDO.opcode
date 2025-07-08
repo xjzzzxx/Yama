@@ -1,0 +1,558 @@
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\sabre\dav\lib\DAV\PropertyStorage\Backend\PDO.php
+function name:  (null)
+number of ops:  9
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+    3     0*       <  0> NOP                                                      
+    5     1*       <  0> NOP                                                      
+    7     2*       <  0> NOP                                                      
+    8     3*       <  0> NOP                                                      
+    9     4*       <  0> NOP                                                      
+   45     5*       <  0> NOP                                                      
+   23     6*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          7*       <144> DECLARE_CLASS                                             OP1[  IS_CONST (268435439) 'sabre%5Cdav%5Cpropertystorage%5Cbackend%5Cpdo' ] OP2[  IS_UNUSED  ]
+  225     8*       < 62> RETURN                                                    OP1[  IS_CONST (268435439) 1 ]
+
+Function %00sabre%5Cdav%5Cpropertystorage%5Cbackend%5C%7Bclosure%7DG%3A%5Cdesktop%5CYama%5Capp%5Cglpi-10.0.16%5Cglpi%5Cvendor%5Csabre%5Cdav%5Clib%5CDAV%5CPropertyStorage%5CBackend%5CPDO.php%3A119%240:
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:properties
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]Key: path, Value: NULL, Type: 1
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\sabre\dav\lib\DAV\PropertyStorage\Backend\PDO.php
+function name:  Sabre\DAV\PropertyStorage\Backend\{closure}
+number of ops:  126
+compiled vars:  !0 = $properties, !1 = $path, !2 = $updateSql, !3 = $updateStmt, !4 = $deleteStmt, !5 = $value, !6 = $name, !7 = $valueType
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  119     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       <183> BIND_STATIC                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+  120     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       <184> FETCH_THIS                                        RES[  IS_VAR $8 ]       OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~9 ]       OP1[  IS_VAR $8 ] OP2[ ,  IS_CONST (268435380) 'pdo' ]
+          5*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~9 ] OP2[ ,  IS_CONST (268435379) 'getAttribute' ]
+          6*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~10 ]      OP1[  IS_CONST (268435380) 'PDO' ] OP2[ ,  IS_CONST (268435379) 'ATTR_DRIVER_NAME' ]
+          7*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~10 ] OP2[  IS_UNUSED  ]
+          8*       < 60> DO_FCALL                                      0   RES[  IS_VAR $11 ]      OP1[  IS_UNUSED  ]
+          9*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~12 ]      OP1[  IS_VAR $11 ] OP2[ ,  IS_CONST (268435376) 'pgsql' ]
+         10*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~12 ] OP2[ , ->19 ]
+  122    11*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         12*       < 54> ROPE_INIT                                     3   RES[  IS_TMP_VAR ~16 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435372) 'INSERT+INTO+' ]
+         13*       <184> FETCH_THIS                                        RES[  IS_VAR $13 ]      OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         14*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~14 ]      OP1[  IS_VAR $13 ] OP2[ ,  IS_CONST (268435367) 'tableName' ]
+         15*       < 55> ROPE_ADD                                      1   RES[  IS_TMP_VAR ~16 ]      OP1[  IS_TMP_VAR ~16 ] OP2[ ,  IS_TMP_VAR ~14 ]
+         16*       < 56> ROPE_END                                      2   RES[  IS_TMP_VAR ~15 ]      OP1[  IS_TMP_VAR ~16 ] OP2[ ,  IS_CONST (268435365) '+%28path%2C+name%2C+valuetype%2C+value%29%0AVALUES+%28%3Apath%2C+%3Aname%2C+%3Avaluetype%2C+%3Avalue%29%0AON+CONFLICT+%28path%2C+name%29%0ADO+UPDATE+SET+valuetype+%3D+%3Avaluetype%2C+value+%3D+%3Avalue' ]
+  121    17*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_TMP_VAR ~15 ]
+         18*       < 42> JMP                                                       OP1[ ->26 ]
+  129    19*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         20*       < 54> ROPE_INIT                                     3   RES[  IS_TMP_VAR ~22 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435359) 'REPLACE+INTO+' ]
+         21*       <184> FETCH_THIS                                        RES[  IS_VAR $19 ]      OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         22*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~20 ]      OP1[  IS_VAR $19 ] OP2[ ,  IS_CONST (268435354) 'tableName' ]
+         23*       < 55> ROPE_ADD                                      1   RES[  IS_TMP_VAR ~22 ]      OP1[  IS_TMP_VAR ~22 ] OP2[ ,  IS_TMP_VAR ~20 ]
+         24*       < 56> ROPE_END                                      2   RES[  IS_TMP_VAR ~21 ]      OP1[  IS_TMP_VAR ~22 ] OP2[ ,  IS_CONST (268435352) '+%28path%2C+name%2C+valuetype%2C+value%29%0AVALUES+%28%3Apath%2C+%3Aname%2C+%3Avaluetype%2C+%3Avalue%29' ]
+  128    25*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_TMP_VAR ~21 ]
+  134    26*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         27*       <184> FETCH_THIS                                        RES[  IS_VAR $25 ]      OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         28*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~26 ]      OP1[  IS_VAR $25 ] OP2[ ,  IS_CONST (268435345) 'pdo' ]
+         29*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~26 ] OP2[ ,  IS_CONST (268435344) 'prepare' ]
+         30*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         31*       < 60> DO_FCALL                                      0   RES[  IS_VAR $27 ]      OP1[  IS_UNUSED  ]
+         32*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_VAR $27 ]
+  135    33*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         34*       <184> FETCH_THIS                                        RES[  IS_VAR $29 ]      OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         35*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~30 ]      OP1[  IS_VAR $29 ] OP2[ ,  IS_CONST (268435334) 'pdo' ]
+         36*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~30 ] OP2[ ,  IS_CONST (268435333) 'prepare' ]
+         37*       <184> FETCH_THIS                                        RES[  IS_VAR $31 ]      OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         38*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~32 ]      OP1[  IS_VAR $31 ] OP2[ ,  IS_CONST (268435331) 'tableName' ]
+         39*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~33 ]      OP1[  IS_CONST (268435330) 'DELETE+FROM+' ] OP2[ ,  IS_TMP_VAR ~32 ]
+         40*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~34 ]      OP1[  IS_TMP_VAR ~33 ] OP2[ ,  IS_CONST (268435329) '+WHERE+path+%3D+%3F+AND+name+%3D+%3F' ]
+         41*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~34 ] OP2[  IS_UNUSED  ]
+         42*       < 60> DO_FCALL                                      0   RES[  IS_VAR $35 ]      OP1[  IS_UNUSED  ]
+         43*       < 22> ASSIGN                                                    OP1[  IS_CV !4 ] OP2[ ,  IS_VAR $35 ]
+  137    44*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         45*       < 77> FE_RESET_R                                        RES[  IS_VAR $37 ]      OP1[  IS_CV !0 ] OP2[ , ->121 ]
+         46*       < 78> FE_FETCH_R                                        RES[  IS_TMP_VAR ~38 ]      OP1[  IS_VAR $37 ] OP2[ ,  IS_CV !5 ] EXT_JMP_REL[ , ->121 ]
+         47*       < 22> ASSIGN                                                    OP1[  IS_CV !6 ] OP2[ ,  IS_TMP_VAR ~38 ]
+  138    48*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         49*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435312) 'Sabre%5CDAV%5CPropertyStorage%5CBackend%5Cis_null' ]
+         50*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !5 ] OP2[  IS_UNUSED  ]
+         51*       < 60> DO_FCALL                                      0   RES[  IS_VAR $40 ]      OP1[  IS_UNUSED  ]
+         52*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~41 ]      OP1[  IS_VAR $40 ]
+         53*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~41 ] OP2[ , ->114 ]
+  139    54*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         55*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435303) 'Sabre%5CDAV%5CPropertyStorage%5CBackend%5Cis_scalar' ]
+         56*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !5 ] OP2[  IS_UNUSED  ]
+         57*       < 60> DO_FCALL                                      0   RES[  IS_VAR $42 ]      OP1[  IS_UNUSED  ]
+         58*       < 43> JMPZ                                                      OP1[  IS_VAR $42 ] OP2[ , ->63 ]
+  140    59*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         60*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~43 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435296) 'VT_STRING' ]
+         61*       < 22> ASSIGN                                                    OP1[  IS_CV !7 ] OP2[ ,  IS_TMP_VAR ~43 ]
+         62*       < 42> JMP                                                       OP1[ ->82 ]
+  141    63*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         64*       <138> INSTANCEOF                                        RES[  IS_TMP_VAR ~45 ]      OP1[  IS_CV !5 ] OP2[ ,  IS_CONST (268435289) 'Sabre%5CDAV%5CXml%5CProperty%5CComplex' ]
+         65*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~45 ] OP2[ , ->74 ]
+  142    66*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         67*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~46 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435285) 'VT_XML' ]
+         68*       < 22> ASSIGN                                                    OP1[  IS_CV !7 ] OP2[ ,  IS_TMP_VAR ~46 ]
+  143    69*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         70*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !5 ] OP2[ ,  IS_CONST (268435280) 'getXml' ]
+         71*       < 60> DO_FCALL                                      0   RES[  IS_VAR $48 ]      OP1[  IS_UNUSED  ]
+         72*       < 22> ASSIGN                                                    OP1[  IS_CV !5 ] OP2[ ,  IS_VAR $48 ]
+         73*       < 42> JMP                                                       OP1[ ->82 ]
+  145    74*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         75*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~50 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435272) 'VT_OBJECT' ]
+         76*       < 22> ASSIGN                                                    OP1[  IS_CV !7 ] OP2[ ,  IS_TMP_VAR ~50 ]
+  146    77*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         78*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435267) 'Sabre%5CDAV%5CPropertyStorage%5CBackend%5Cserialize' ]
+         79*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !5 ] OP2[  IS_UNUSED  ]
+         80*       < 60> DO_FCALL                                      0   RES[  IS_VAR $52 ]      OP1[  IS_UNUSED  ]
+         81*       < 22> ASSIGN                                                    OP1[  IS_CV !5 ] OP2[ ,  IS_VAR $52 ]
+  149    82*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         83*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435260) 'bindParam' ]
+         84*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435260) 'path' ] OP2[  IS_UNUSED  ]
+         85*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         86*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~54 ]      OP1[  IS_CONST (268435258) 'PDO' ] OP2[ ,  IS_CONST (268435257) 'PARAM_STR' ]
+         87*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~54 ] OP2[  IS_UNUSED  ]
+         88*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  150    89*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         90*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435252) 'bindParam' ]
+         91*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435252) 'name' ] OP2[  IS_UNUSED  ]
+         92*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !6 ] OP2[  IS_UNUSED  ]
+         93*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~56 ]      OP1[  IS_CONST (268435250) 'PDO' ] OP2[ ,  IS_CONST (268435249) 'PARAM_STR' ]
+         94*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~56 ] OP2[  IS_UNUSED  ]
+         95*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  151    96*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         97*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435244) 'bindParam' ]
+         98*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435244) 'valuetype' ] OP2[  IS_UNUSED  ]
+         99*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !7 ] OP2[  IS_UNUSED  ]
+        100*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~58 ]      OP1[  IS_CONST (268435242) 'PDO' ] OP2[ ,  IS_CONST (268435241) 'PARAM_INT' ]
+        101*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~58 ] OP2[  IS_UNUSED  ]
+        102*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  152   103*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        104*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435236) 'bindParam' ]
+        105*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435236) 'value' ] OP2[  IS_UNUSED  ]
+        106*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !5 ] OP2[  IS_UNUSED  ]
+        107*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~60 ]      OP1[  IS_CONST (268435234) 'PDO' ] OP2[ ,  IS_CONST (268435233) 'PARAM_LOB' ]
+        108*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~60 ] OP2[  IS_UNUSED  ]
+        109*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  154   110*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        111*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435228) 'execute' ]
+        112*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+        113*       < 42> JMP                                                       OP1[ ->120 ]
+  156   114*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        115*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !4 ] OP2[ ,  IS_CONST (268435222) 'execute' ]
+        116*       < 71> INIT_ARRAY                                        RES[  IS_TMP_VAR ~63 ]      OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+        117*       < 72> ADD_ARRAY_ELEMENT                                 RES[  IS_TMP_VAR ~63 ]      OP1[  IS_CV !6 ] OP2[  IS_UNUSED  ]
+        118*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~63 ] OP2[  IS_UNUSED  ]
+        119*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  137   120*       < 42> JMP                                                       OP1[ ->46 ]
+        121*       <127> FE_FREE                                                   OP1[  IS_VAR $37 ] OP2[  IS_UNUSED  ]
+  160   122*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        123*       < 62> RETURN                                                    OP1[  IS_CONST (268435208) <true> ]
+  161   124*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        125*       < 62> RETURN                                                    OP1[  IS_CONST (268435205) null ]
+
+End of function %00sabre%5Cdav%5Cpropertystorage%5Cbackend%5C%7Bclosure%7DG%3A%5Cdesktop%5CYama%5Capp%5Cglpi-10.0.16%5Cglpi%5Cvendor%5Csabre%5Cdav%5Clib%5CDAV%5CPropertyStorage%5CBackend%5CPDO.php%3A119%240
+
+Class Sabre\DAV\PropertyStorage\Backend\PDO:
+[+]Class Parent Name: NULL
+End Trait extract
+Start Properties extract:
+Key: pdo, Value: UNINIT, Type: Normal
+Key: tableName, Value: propertystorage, Type: Normal
+End Properties extract.
+
+Function __construct:
+[+]Function Source Class Name: Sabre\DAV\PropertyStorage\Backend\PDO
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:pdo
+[*]type:PDO
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\sabre\dav\lib\DAV\PropertyStorage\Backend\PDO.php
+function name:  __construct
+number of ops:  6
+compiled vars:  !0 = $pdo
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   57     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+   59     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435450) 'pdo' ]
+          3*       <137> OP_DATA                                                   OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+   60     4*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          5*       < 62> RETURN                                                    OP1[  IS_CONST (268435445) null ]
+
+End of function __construct
+
+Function propfind:
+[+]Function Source Class Name: Sabre\DAV\PropertyStorage\Backend\PDO
+[*]Start of arg_info extract:
+[*]arg_info num_args:2
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:path
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:propFind
+[*]type:Sabre\DAV\PropFind
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\sabre\dav\lib\DAV\PropertyStorage\Backend\PDO.php
+function name:  propFind
+number of ops:  113
+compiled vars:  !0 = $path, !1 = $propFind, !2 = $query, !3 = $stmt, !4 = $row
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   77     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 63> RECV                                              RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ]
+   79     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435395) 'isAllProps' ]
+          4*       < 60> DO_FCALL                                      0   RES[  IS_VAR $5 ]       OP1[  IS_UNUSED  ]
+          5*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~6 ]       OP1[  IS_VAR $5 ]
+          6*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~6 ]       OP1[  IS_TMP_VAR ~6 ] OP2[ , ->14 ]
+          7*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435389) 'Sabre%5CDAV%5CPropertyStorage%5CBackend%5Ccount' ]
+          8*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435390) 'get404Properties' ]
+          9*       < 60> DO_FCALL                                      0   RES[  IS_VAR $7 ]       OP1[  IS_UNUSED  ]
+         10*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $7 ] OP2[  IS_UNUSED  ]
+         11*       < 60> DO_FCALL                                      0   RES[  IS_VAR $8 ]       OP1[  IS_UNUSED  ]
+         12*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~9 ]       OP1[  IS_VAR $8 ] OP2[ ,  IS_CONST (268435384) 0 ]
+         13*       < 52> BOOL                                              RES[  IS_TMP_VAR ~6 ]       OP1[  IS_TMP_VAR ~9 ]
+         14*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~6 ] OP2[ , ->17 ]
+   80    15*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         16*       < 62> RETURN                                                    OP1[  IS_CONST (268435377) null ]
+   83    17*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         18*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~10 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435374) 'tableName' ]
+         19*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~11 ]      OP1[  IS_CONST (268435373) 'SELECT+name%2C+value%2C+valuetype+FROM+' ] OP2[ ,  IS_TMP_VAR ~10 ]
+         20*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~12 ]      OP1[  IS_TMP_VAR ~11 ] OP2[ ,  IS_CONST (268435372) '+WHERE+path+%3D+%3F' ]
+         21*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_TMP_VAR ~12 ]
+   84    22*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         23*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~14 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435367) 'pdo' ]
+         24*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~14 ] OP2[ ,  IS_CONST (268435366) 'prepare' ]
+         25*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         26*       < 60> DO_FCALL                                      0   RES[  IS_VAR $15 ]      OP1[  IS_UNUSED  ]
+         27*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_VAR $15 ]
+   85    28*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         29*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435358) 'execute' ]
+         30*       < 71> INIT_ARRAY                                        RES[  IS_TMP_VAR ~17 ]      OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         31*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~17 ] OP2[  IS_UNUSED  ]
+         32*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+   87    33*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         34*       < 42> JMP                                                       OP1[ ->105 ]
+   88    35*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         36*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435346) 'Sabre%5CDAV%5CPropertyStorage%5CBackend%5Cgettype' ]
+         37*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         38*       < 93> FETCH_DIM_FUNC_ARG                                RES[  IS_VAR $19 ]      OP1[  IS_CV !4 ] OP2[ ,  IS_CONST (268435345) 'value' ]
+         39*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $19 ] OP2[  IS_UNUSED  ]
+         40*       < 60> DO_FCALL                                      0   RES[  IS_VAR $20 ]      OP1[  IS_UNUSED  ]
+         41*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~21 ]      OP1[  IS_VAR $20 ] OP2[ ,  IS_CONST (268435340) 'resource' ]
+         42*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~21 ] OP2[ , ->51 ]
+   89    43*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         44*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435336) 'Sabre%5CDAV%5CPropertyStorage%5CBackend%5Cstream_get_contents' ]
+         45*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         46*       < 93> FETCH_DIM_FUNC_ARG                                RES[  IS_VAR $23 ]      OP1[  IS_CV !4 ] OP2[ ,  IS_CONST (268435335) 'value' ]
+         47*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $23 ] OP2[  IS_UNUSED  ]
+         48*       < 60> DO_FCALL                                      0   RES[  IS_VAR $24 ]      OP1[  IS_UNUSED  ]
+         49*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !4 ] OP2[ ,  IS_CONST (268435325) 'value' ]
+         50*       <137> OP_DATA                                                   OP1[  IS_VAR $24 ] OP2[  IS_UNUSED  ]
+   91    51*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         52*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~25 ]      OP1[  IS_CV !4 ] OP2[ ,  IS_CONST (268435324) 'valuetype' ]
+         53*       < 48> CASE                                              RES[  ]         OP1[  IS_TMP_VAR ~25 ] OP2[ ,  IS_CONST (268435323) null ]
+         54*       < 44> JMPNZ                                                     OP1[  IS_TMP_VAR ~26 ] OP2[ , ->65 ]
+   93    55*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~27 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435320) 'VT_STRING' ]
+         56*       < 48> CASE                                              RES[  ]         OP1[  IS_TMP_VAR ~25 ] OP2[ ,  IS_TMP_VAR ~27 ]
+         57*       < 44> JMPNZ                                                     OP1[  IS_TMP_VAR ~26 ] OP2[ , ->65 ]
+   96    58*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~28 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435315) 'VT_XML' ]
+         59*       < 48> CASE                                              RES[  ]         OP1[  IS_TMP_VAR ~25 ] OP2[ ,  IS_TMP_VAR ~28 ]
+         60*       < 44> JMPNZ                                                     OP1[  IS_TMP_VAR ~26 ] OP2[ , ->76 ]
+   99    61*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~29 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435310) 'VT_OBJECT' ]
+         62*       < 48> CASE                                              RES[  ]         OP1[  IS_TMP_VAR ~25 ] OP2[ ,  IS_TMP_VAR ~29 ]
+         63*       < 44> JMPNZ                                                     OP1[  IS_TMP_VAR ~26 ] OP2[ , ->90 ]
+         64*       < 42> JMP                                                       OP1[ ->104 ]
+   94    65*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         66*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435301) 'set' ]
+         67*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         68*       < 93> FETCH_DIM_FUNC_ARG                                RES[  IS_VAR $30 ]      OP1[  IS_CV !4 ] OP2[ ,  IS_CONST (268435299) 'name' ]
+         69*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $30 ] OP2[  IS_UNUSED  ]
+         70*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         71*       < 93> FETCH_DIM_FUNC_ARG                                RES[  IS_VAR $31 ]      OP1[  IS_CV !4 ] OP2[ ,  IS_CONST (268435294) 'value' ]
+         72*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $31 ] OP2[  IS_UNUSED  ]
+         73*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+   95    74*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         75*       < 42> JMP                                                       OP1[ ->104 ]
+   97    76*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         77*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435283) 'set' ]
+         78*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         79*       < 93> FETCH_DIM_FUNC_ARG                                RES[  IS_VAR $33 ]      OP1[  IS_CV !4 ] OP2[ ,  IS_CONST (268435281) 'name' ]
+         80*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $33 ] OP2[  IS_UNUSED  ]
+         81*       < 68> NEW                                               RES[  IS_VAR $34 ]      OP1[ 'Sabre%5CDAV%5CXml%5CProperty%5CComplex' ]
+         82*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         83*       < 93> FETCH_DIM_FUNC_ARG                                RES[  IS_VAR $35 ]      OP1[  IS_CV !4 ] OP2[ ,  IS_CONST (268435276) 'value' ]
+         84*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $35 ] OP2[  IS_UNUSED  ]
+         85*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         86*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $34 ] OP2[  IS_UNUSED  ]
+         87*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+   98    88*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         89*       < 42> JMP                                                       OP1[ ->104 ]
+  100    90*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         91*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435261) 'set' ]
+         92*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         93*       < 93> FETCH_DIM_FUNC_ARG                                RES[  IS_VAR $38 ]      OP1[  IS_CV !4 ] OP2[ ,  IS_CONST (268435259) 'name' ]
+         94*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $38 ] OP2[  IS_UNUSED  ]
+         95*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435256) 'Sabre%5CDAV%5CPropertyStorage%5CBackend%5Cunserialize' ]
+         96*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         97*       < 93> FETCH_DIM_FUNC_ARG                                RES[  IS_VAR $39 ]      OP1[  IS_CV !4 ] OP2[ ,  IS_CONST (268435255) 'value' ]
+         98*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $39 ] OP2[  IS_UNUSED  ]
+         99*       < 60> DO_FCALL                                      0   RES[  IS_VAR $40 ]      OP1[  IS_UNUSED  ]
+        100*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $40 ] OP2[  IS_UNUSED  ]
+        101*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  101   102*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        103*       < 42> JMP                                                       OP1[ ->104 ]
+        104*       < 70> FREE                                                      OP1[  IS_TMP_VAR ~25 ]
+   87   105*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435240) 'fetch' ]
+        106*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~42 ]      OP1[  IS_CONST (268435241) 'PDO' ] OP2[ ,  IS_CONST (268435240) 'FETCH_ASSOC' ]
+        107*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~42 ] OP2[  IS_UNUSED  ]
+        108*       < 60> DO_FCALL                                      0   RES[  IS_VAR $43 ]      OP1[  IS_UNUSED  ]
+        109*       < 22> ASSIGN                                            RES[  IS_TMP_VAR ~44 ]      OP1[  IS_CV !4 ] OP2[ ,  IS_VAR $43 ]
+        110*       < 44> JMPNZ                                                     OP1[  IS_TMP_VAR ~44 ] OP2[ , ->35 ]
+  104   111*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        112*       < 62> RETURN                                                    OP1[  IS_CONST (268435231) null ]
+
+End of function propfind
+
+Function proppatch:
+[+]Function Source Class Name: Sabre\DAV\PropertyStorage\Backend\PDO
+[*]Start of arg_info extract:
+[*]arg_info num_args:2
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:path
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:propPatch
+[*]type:Sabre\DAV\PropPatch
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\sabre\dav\lib\DAV\PropertyStorage\Backend\PDO.php
+function name:  propPatch
+number of ops:  10
+compiled vars:  !0 = $path, !1 = $propPatch
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  117     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 63> RECV                                              RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ]
+  119     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435446) 'handleRemaining' ]
+          4*       <142> DECLARE_LAMBDA_FUNCTION                           RES[  IS_TMP_VAR ~2 ]       OP1[  IS_CONST (268435446) '%00sabre%5Cdav%5Cpropertystorage%5Cbackend%5C%7Bclosure%7DG%3A%5Cdesktop%5CYama%5Capp%5Cglpi-10.0.16%5Cglpi%5Cvendor%5Csabre%5Cdav%5Clib%5CDAV%5CPropertyStorage%5CBackend%5CPDO.php%3A119%240' ]
+          5*       <182> BIND_LEXICAL                                  0           OP1[  IS_TMP_VAR ~2 ] OP2[ ,  IS_CV !0 ]
+  161     6*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~2 ] OP2[  IS_UNUSED  ]
+          7*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  162     8*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          9*       < 62> RETURN                                                    OP1[  IS_CONST (268435437) null ]
+
+End of function proppatch
+
+Function delete:
+[+]Function Source Class Name: Sabre\DAV\PropertyStorage\Backend\PDO
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:path
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\sabre\dav\lib\DAV\PropertyStorage\Backend\PDO.php
+function name:  delete
+number of ops:  25
+compiled vars:  !0 = $path, !1 = $stmt, !2 = $childPath
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  174     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  176     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~3 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435424) 'pdo' ]
+          3*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~3 ] OP2[ ,  IS_CONST (268435423) 'prepare' ]
+          4*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~4 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435423) 'tableName' ]
+          5*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~5 ]       OP1[  IS_CONST (268435422) 'DELETE+FROM+' ] OP2[ ,  IS_TMP_VAR ~4 ]
+          6*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~6 ]       OP1[  IS_TMP_VAR ~5 ] OP2[ ,  IS_CONST (268435421) '++WHERE+path+%3D+%3F+OR+path+LIKE+%3F+ESCAPE+%27%3D%27' ]
+          7*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~6 ] OP2[  IS_UNUSED  ]
+          8*       < 60> DO_FCALL                                      0   RES[  IS_VAR $7 ]       OP1[  IS_UNUSED  ]
+          9*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_VAR $7 ]
+  177    10*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         11*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435412) 'Sabre%5CDAV%5CPropertyStorage%5CBackend%5Cstrtr' ]
+  178    12*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+  180    13*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435411) <array> ] OP2[  IS_UNUSED  ]
+         14*       < 60> DO_FCALL                                      0   RES[  IS_VAR $9 ]       OP1[  IS_UNUSED  ]
+  184    15*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~10 ]      OP1[  IS_VAR $9 ] OP2[ ,  IS_CONST (268435408) '%2F%25' ]
+  177    16*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_TMP_VAR ~10 ]
+  186    17*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         18*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435403) 'execute' ]
+         19*       < 71> INIT_ARRAY                                        RES[  IS_TMP_VAR ~12 ]      OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         20*       < 72> ADD_ARRAY_ELEMENT                                 RES[  IS_TMP_VAR ~12 ]      OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         21*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~12 ] OP2[  IS_UNUSED  ]
+         22*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  187    23*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         24*       < 62> RETURN                                                    OP1[  IS_CONST (268435393) null ]
+
+End of function delete
+
+Function move:
+[+]Function Source Class Name: Sabre\DAV\PropertyStorage\Backend\PDO
+[*]Start of arg_info extract:
+[*]arg_info num_args:2
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:source
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:destination
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\sabre\dav\lib\DAV\PropertyStorage\Backend\PDO.php
+function name:  move
+number of ops:  79
+compiled vars:  !0 = $source, !1 = $destination, !2 = $select, !3 = $update, !4 = $row, !5 = $trailingPart, !6 = $newPath
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  199     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 63> RECV                                              RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ]
+  205     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~7 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435410) 'pdo' ]
+          4*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~7 ] OP2[ ,  IS_CONST (268435409) 'prepare' ]
+          5*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~8 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435409) 'tableName' ]
+          6*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~9 ]       OP1[  IS_CONST (268435408) 'SELECT+id%2C+path+FROM+' ] OP2[ ,  IS_TMP_VAR ~8 ]
+          7*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~10 ]      OP1[  IS_TMP_VAR ~9 ] OP2[ ,  IS_CONST (268435407) '++WHERE+path+%3D+%3F+OR+path+LIKE+%3F' ]
+          8*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~10 ] OP2[  IS_UNUSED  ]
+          9*       < 60> DO_FCALL                                      0   RES[  IS_VAR $11 ]      OP1[  IS_UNUSED  ]
+         10*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_VAR $11 ]
+  206    11*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         12*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435398) 'execute' ]
+         13*       < 71> INIT_ARRAY                                        RES[  IS_TMP_VAR ~13 ]      OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         14*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~14 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435396) '%2F%25' ]
+         15*       < 72> ADD_ARRAY_ELEMENT                                 RES[  IS_TMP_VAR ~13 ]      OP1[  IS_TMP_VAR ~14 ] OP2[  IS_UNUSED  ]
+         16*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~13 ] OP2[  IS_UNUSED  ]
+         17*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  208    18*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         19*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~16 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435387) 'pdo' ]
+         20*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~16 ] OP2[ ,  IS_CONST (268435386) 'prepare' ]
+         21*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~17 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435386) 'tableName' ]
+         22*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~18 ]      OP1[  IS_CONST (268435385) 'UPDATE+' ] OP2[ ,  IS_TMP_VAR ~17 ]
+         23*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~19 ]      OP1[  IS_TMP_VAR ~18 ] OP2[ ,  IS_CONST (268435384) '+SET+path+%3D+%3F+WHERE+id+%3D+%3F' ]
+         24*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~19 ] OP2[  IS_UNUSED  ]
+         25*       < 60> DO_FCALL                                      0   RES[  IS_VAR $20 ]      OP1[  IS_UNUSED  ]
+         26*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_VAR $20 ]
+  209    27*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         28*       < 42> JMP                                                       OP1[ ->71 ]
+  212    29*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         30*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~22 ]      OP1[  IS_CV !4 ] OP2[ ,  IS_CONST (268435371) 'path' ]
+         31*       < 17> IS_NOT_IDENTICAL                                  RES[  IS_TMP_VAR ~23 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_TMP_VAR ~22 ]
+         32*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~23 ]      OP1[  IS_TMP_VAR ~23 ] OP2[ , ->42 ]
+         33*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435366) 'Sabre%5CDAV%5CPropertyStorage%5CBackend%5Cstrpos' ]
+         34*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         35*       < 93> FETCH_DIM_FUNC_ARG                                RES[  IS_VAR $24 ]      OP1[  IS_CV !4 ] OP2[ ,  IS_CONST (268435365) 'path' ]
+         36*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $24 ] OP2[  IS_UNUSED  ]
+         37*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~25 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435362) '%2F' ]
+         38*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~25 ] OP2[  IS_UNUSED  ]
+         39*       < 60> DO_FCALL                                      0   RES[  IS_VAR $26 ]      OP1[  IS_UNUSED  ]
+         40*       < 17> IS_NOT_IDENTICAL                                  RES[  IS_TMP_VAR ~27 ]      OP1[  IS_VAR $26 ] OP2[ ,  IS_CONST (268435357) 0 ]
+         41*       < 52> BOOL                                              RES[  IS_TMP_VAR ~23 ]      OP1[  IS_TMP_VAR ~27 ]
+         42*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~23 ] OP2[ , ->45 ]
+  213    43*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         44*       < 42> JMP                                                       OP1[ ->71 ]
+  216    45*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         46*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435346) 'Sabre%5CDAV%5CPropertyStorage%5CBackend%5Csubstr' ]
+         47*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         48*       < 93> FETCH_DIM_FUNC_ARG                                RES[  IS_VAR $28 ]      OP1[  IS_CV !4 ] OP2[ ,  IS_CONST (268435345) 'path' ]
+         49*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $28 ] OP2[  IS_UNUSED  ]
+         50*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435342) 'Sabre%5CDAV%5CPropertyStorage%5CBackend%5Cstrlen' ]
+         51*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         52*       < 60> DO_FCALL                                      0   RES[  IS_VAR $29 ]      OP1[  IS_UNUSED  ]
+         53*       <  1> ADD                                               RES[  IS_TMP_VAR ~30 ]      OP1[  IS_VAR $29 ] OP2[ ,  IS_CONST (268435339) 1 ]
+         54*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~30 ] OP2[  IS_UNUSED  ]
+         55*       < 60> DO_FCALL                                      0   RES[  IS_VAR $31 ]      OP1[  IS_UNUSED  ]
+         56*       < 22> ASSIGN                                                    OP1[  IS_CV !5 ] OP2[ ,  IS_VAR $31 ]
+  217    57*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         58*       < 22> ASSIGN                                                    OP1[  IS_CV !6 ] OP2[ ,  IS_CV !1 ]
+  218    59*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         60*       < 43> JMPZ                                                      OP1[  IS_CV !5 ] OP2[ , ->64 ]
+  219    61*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         62*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~34 ]      OP1[  IS_CONST (268435322) '%2F' ] OP2[ ,  IS_CV !5 ]
+         63*       < 26> ASSIGN_OP                    .=               8           OP1[  IS_CV !6 ] OP2[ ,  IS_TMP_VAR ~34 ]
+  221    64*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         65*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435317) 'execute' ]
+         66*       < 71> INIT_ARRAY                                        RES[  IS_TMP_VAR ~36 ]      OP1[  IS_CV !6 ] OP2[  IS_UNUSED  ]
+         67*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~37 ]      OP1[  IS_CV !4 ] OP2[ ,  IS_CONST (268435315) 'id' ]
+         68*       < 72> ADD_ARRAY_ELEMENT                                 RES[  IS_TMP_VAR ~36 ]      OP1[  IS_TMP_VAR ~37 ] OP2[  IS_UNUSED  ]
+         69*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~36 ] OP2[  IS_UNUSED  ]
+         70*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  209    71*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435308) 'fetch' ]
+         72*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~39 ]      OP1[  IS_CONST (268435309) 'PDO' ] OP2[ ,  IS_CONST (268435308) 'FETCH_ASSOC' ]
+         73*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~39 ] OP2[  IS_UNUSED  ]
+         74*       < 60> DO_FCALL                                      0   RES[  IS_VAR $40 ]      OP1[  IS_UNUSED  ]
+         75*       < 22> ASSIGN                                            RES[  IS_TMP_VAR ~41 ]      OP1[  IS_CV !4 ] OP2[ ,  IS_VAR $40 ]
+         76*       < 44> JMPNZ                                                     OP1[  IS_TMP_VAR ~41 ] OP2[ , ->29 ]
+  223    77*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         78*       < 62> RETURN                                                    OP1[  IS_CONST (268435299) null ]
+
+End of function move
+
+End of class Sabre\DAV\PropertyStorage\Backend\PDO.
+

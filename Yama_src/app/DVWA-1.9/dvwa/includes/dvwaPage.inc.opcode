@@ -1,0 +1,1777 @@
+filename:       E:\AAAopensource\Yama\Yama_src\app\DVWA-1.9\dvwa\includes\dvwaPage.inc.php
+function name:  (null)
+number of ops:  259
+compiled vars:  !0 = $html, !1 = $security_levels, !2 = $_DVWA, !3 = $DBMS, !4 = $DBMS_errorFunc, !5 = $PHPUploadPath, !6 = $PHPIDSPath, !7 = $phpDisplayErrors, !8 = $phpSafeMode, !9 = $phpMagicQuotes, !10 = $phpURLInclude, !11 = $phpURLFopen, !12 = $phpGD, !13 = $DVWARecaptcha, !14 = $DVWAUploadsWrite, !15 = $DVWAPHPWrite, !16 = $DVWAOS, !17 = $SERVER_NAME
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+    3     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       <122> DEFINED                                           RES[  IS_TMP_VAR ~18 ]      OP1[  IS_CONST (268435320) 'DVWA_WEB_PAGE_TO_ROOT' ] OP2[  IS_UNUSED  ]
+          2*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~19 ]      OP1[  IS_TMP_VAR ~18 ]
+          3*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~19 ] OP2[ , ->10 ]
+    4     4*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          5*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435313) 'define' ]
+          6*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435312) 'DVWA+System+error-+WEB_PAGE_TO_ROOT+undefined' ]
+          7*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+    5     8*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          9*       < 79> EXIT                                                      OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+    8    10*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         11*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435303) 'session_start' ]
+         12*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+   11    13*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         14*       < 99> FETCH_CONSTANT                                    RES[  IS_TMP_VAR ~22 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435298) 'DVWA_WEB_PAGE_TO_ROOT' ]
+         15*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~23 ]      OP1[  IS_TMP_VAR ~22 ] OP2[ ,  IS_CONST (268435298) 'config%2Fconfig.inc.php' ]
+         16*       < 73> INCLUDE_OR_EVAL                                           OP1[  IS_TMP_VAR ~23 ] OP2[ REQUIRE_ONCE ]
+   12    17*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         18*       < 73> INCLUDE_OR_EVAL                                           OP1[  IS_CONST (268435293) 'dvwaPhpIds.inc.php' ] OP2[ REQUIRE_ONCE ]
+   15    19*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         20*       <154> ISSET_ISEMPTY_CV                                  RES[  IS_TMP_VAR ~26 ]      OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         21*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~27 ]      OP1[  IS_TMP_VAR ~26 ]
+         22*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~27 ] OP2[ , ->25 ]
+   16    23*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         24*       < 22> ASSIGN                                                    OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435282) '' ]
+   20    25*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         26*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435279) <array> ]
+   21    27*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         28*       < 89> FETCH_IS                                          RES[  IS_TMP_VAR ~30 ]      OP1[  IS_CONST (268435276) '_COOKIE' ] OP2[  IS_UNUSED  ]
+         29*       <115> ISSET_ISEMPTY_DIM_OBJ                         0   RES[  IS_TMP_VAR ~31 ]      OP1[  IS_TMP_VAR ~30 ] OP2[ ,  IS_CONST (268435275) 'security' ]
+         30*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~32 ]      OP1[  IS_TMP_VAR ~31 ]
+         31*       < 47> JMPNZ_EX                                          RES[  IS_TMP_VAR ~32 ]      OP1[  IS_TMP_VAR ~32 ] OP2[ , ->40 ]
+         32*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435270) 'in_array' ]
+         33*       < 80> FETCH_R                      global               RES[  IS_TMP_VAR ~33 ]      OP1[  IS_CONST (268435269) '_COOKIE' ]
+         34*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~34 ]      OP1[  IS_TMP_VAR ~33 ] OP2[ ,  IS_CONST (268435268) 'security' ]
+         35*       < 65> SEND_VAL                                                  OP1[  IS_TMP_VAR ~34 ]
+         36*       <117> SEND_VAR                                                  OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         37*       < 60> DO_FCALL                                      0   RES[  IS_VAR $35 ]      OP1[  IS_UNUSED  ]
+         38*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~36 ]      OP1[  IS_VAR $35 ]
+         39*       < 52> BOOL                                              RES[  IS_TMP_VAR ~32 ]      OP1[  IS_TMP_VAR ~36 ]
+         40*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~32 ] OP2[ , ->72 ]
+   23    41*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         42*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435253) 'in_array' ]
+         43*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~37 ]      OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435252) 'default_security_level' ]
+         44*       < 65> SEND_VAL                                                  OP1[  IS_TMP_VAR ~37 ]
+         45*       <117> SEND_VAR                                                  OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         46*       < 60> DO_FCALL                                      0   RES[  IS_VAR $38 ]      OP1[  IS_UNUSED  ]
+         47*       < 43> JMPZ                                                      OP1[  IS_VAR $38 ] OP2[ , ->55 ]
+   24    48*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         49*       < 59> INIT_FCALL_BY_NAME                                        OP2[  IS_CONST (268435241) 'dvwaSecurityLevelSet' ]
+         50*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         51*       < 93> FETCH_DIM_FUNC_ARG                                RES[  IS_VAR $39 ]      OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435239) 'default_security_level' ]
+         52*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $39 ] OP2[  IS_UNUSED  ]
+         53*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         54*       < 42> JMP                                                       OP1[ ->59 ]
+   27    55*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         56*       < 59> INIT_FCALL_BY_NAME                                        OP2[  IS_CONST (268435230) 'dvwaSecurityLevelSet' ]
+         57*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435230) 'impossible' ] OP2[  IS_UNUSED  ]
+         58*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+   30    59*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         60*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~42 ]      OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435225) 'default_phpids_level' ]
+         61*       < 18> IS_EQUAL                                          RES[  IS_TMP_VAR ~43 ]      OP1[  IS_TMP_VAR ~42 ] OP2[ ,  IS_CONST (268435224) 'enabled' ]
+         62*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~43 ] OP2[ , ->68 ]
+   31    63*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         64*       < 59> INIT_FCALL_BY_NAME                                        OP2[  IS_CONST (268435219) 'dvwaPhpIdsEnabledSet' ]
+         65*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435219) <true> ] OP2[  IS_UNUSED  ]
+         66*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         67*       < 42> JMP                                                       OP1[ ->72 ]
+   33    68*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         69*       < 59> INIT_FCALL_BY_NAME                                        OP2[  IS_CONST (268435212) 'dvwaPhpIdsEnabledSet' ]
+         70*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435212) <false> ] OP2[  IS_UNUSED  ]
+         71*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  434    72*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         73*       < 18> IS_EQUAL                                          RES[  IS_TMP_VAR ~46 ]      OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435207) 'MySQL' ]
+         74*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~46 ] OP2[ , ->86 ]
+  435    75*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         76*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435202) 'htmlspecialchars' ]
+         77*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435201) 'strip_tags' ]
+         78*       <117> SEND_VAR                                                  OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         79*       < 60> DO_FCALL                                      0   RES[  IS_VAR $47 ]      OP1[  IS_UNUSED  ]
+         80*       <117> SEND_VAR                                                  OP1[  IS_VAR $47 ] OP2[  IS_UNUSED  ]
+         81*       < 60> DO_FCALL                                      0   RES[  IS_VAR $48 ]      OP1[  IS_UNUSED  ]
+         82*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_VAR $48 ]
+  436    83*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         84*       < 22> ASSIGN                                                    OP1[  IS_CV !4 ] OP2[ ,  IS_CONST (268435188) 'mysql_error%28%29' ]
+         85*       < 42> JMP                                                       OP1[ ->104 ]
+  438    86*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         87*       < 18> IS_EQUAL                                          RES[  IS_TMP_VAR ~51 ]      OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435183) 'PGSQL' ]
+         88*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~51 ] OP2[ , ->100 ]
+  439    89*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         90*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435178) 'htmlspecialchars' ]
+         91*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435177) 'strip_tags' ]
+         92*       <117> SEND_VAR                                                  OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         93*       < 60> DO_FCALL                                      0   RES[  IS_VAR $52 ]      OP1[  IS_UNUSED  ]
+         94*       <117> SEND_VAR                                                  OP1[  IS_VAR $52 ] OP2[  IS_UNUSED  ]
+         95*       < 60> DO_FCALL                                      0   RES[  IS_VAR $53 ]      OP1[  IS_UNUSED  ]
+         96*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_VAR $53 ]
+  440    97*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         98*       < 22> ASSIGN                                                    OP1[  IS_CV !4 ] OP2[ ,  IS_CONST (268435164) 'pg_last_error%28%29' ]
+         99*       < 42> JMP                                                       OP1[ ->104 ]
+  443   100*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        101*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435159) 'No+DBMS+selected.' ]
+  444   102*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        103*       < 22> ASSIGN                                                    OP1[  IS_CV !4 ] OP2[ ,  IS_CONST (268435156) '' ]
+  543   104*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        105*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435153) 'realpath' ]
+        106*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435152) 'getcwd' ]
+        107*       < 60> DO_FCALL                                      0   RES[  IS_VAR $58 ]      OP1[  IS_UNUSED  ]
+        108*       <117> SEND_VAR                                                  OP1[  IS_VAR $58 ] OP2[  IS_UNUSED  ]
+        109*       < 60> DO_FCALL                                      0   RES[  IS_VAR $59 ]      OP1[  IS_UNUSED  ]
+        110*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~60 ]      OP1[  IS_VAR $59 ] OP2[ ,  IS_CONST (268435145) '%2Fhackable%2Fuploads%2F' ]
+        111*       < 22> ASSIGN                                                    OP1[  IS_CV !5 ] OP2[ ,  IS_TMP_VAR ~60 ]
+  544   112*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        113*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435140) 'realpath' ]
+        114*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435139) 'getcwd' ]
+        115*       < 60> DO_FCALL                                      0   RES[  IS_VAR $62 ]      OP1[  IS_UNUSED  ]
+        116*       <117> SEND_VAR                                                  OP1[  IS_VAR $62 ] OP2[  IS_UNUSED  ]
+        117*       < 60> DO_FCALL                                      0   RES[  IS_VAR $63 ]      OP1[  IS_UNUSED  ]
+        118*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~64 ]      OP1[  IS_VAR $63 ] OP2[ ,  IS_CONST (268435132) '%2Fexternal%2Fphpids%2F' ]
+        119*       < 59> INIT_FCALL_BY_NAME                                        OP2[  IS_CONST (268435131) 'dvwaPhpIdsVersionGet' ]
+        120*       < 60> DO_FCALL                                      0   RES[  IS_VAR $65 ]      OP1[  IS_UNUSED  ]
+        121*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~66 ]      OP1[  IS_TMP_VAR ~64 ] OP2[ ,  IS_VAR $65 ]
+        122*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~67 ]      OP1[  IS_TMP_VAR ~66 ] OP2[ ,  IS_CONST (268435127) '%2Flib%2FIDS%2Ftmp%2Fphpids_log.txt' ]
+        123*       < 22> ASSIGN                                                    OP1[  IS_CV !6 ] OP2[ ,  IS_TMP_VAR ~67 ]
+  546   124*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        125*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435122) 'ini_get' ]
+        126*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435121) 'display_errors' ]
+        127*       < 60> DO_FCALL                                      0   RES[  IS_VAR $69 ]      OP1[  IS_UNUSED  ]
+        128*       < 43> JMPZ                                                      OP1[  IS_VAR $69 ] OP2[ , ->131 ]
+        129*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~70 ]      OP1[  IS_CONST (268435116) 'Enabled%3C%2Fem%3E+%3Ci%3E%28Easy+Mode%21%29%3C%2Fi%3E' ]
+        130*       < 42> JMP                                                       OP1[ ->132 ]
+        131*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~70 ]      OP1[  IS_CONST (268435113) 'Disabled%3C%2Fem%3E' ]
+        132*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~71 ]      OP1[  IS_CONST (268435112) 'PHP+function+display_errors%3A+%3Cem%3E' ] OP2[ ,  IS_TMP_VAR ~70 ]
+        133*       < 22> ASSIGN                                                    OP1[  IS_CV !7 ] OP2[ ,  IS_TMP_VAR ~71 ]
+  547   134*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        135*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435107) 'ini_get' ]
+        136*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435106) 'safe_mode' ]
+        137*       < 60> DO_FCALL                                      0   RES[  IS_VAR $73 ]      OP1[  IS_UNUSED  ]
+        138*       < 43> JMPZ                                                      OP1[  IS_VAR $73 ] OP2[ , ->141 ]
+        139*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~74 ]      OP1[  IS_CONST (268435101) 'failure%22%3EEnabled' ]
+        140*       < 42> JMP                                                       OP1[ ->142 ]
+        141*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~74 ]      OP1[  IS_CONST (268435098) 'success%22%3EDisabled' ]
+        142*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~75 ]      OP1[  IS_CONST (268435097) 'PHP+function+safe_mode%3A+%3Cspan+class%3D%22' ] OP2[ ,  IS_TMP_VAR ~74 ]
+        143*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~76 ]      OP1[  IS_TMP_VAR ~75 ] OP2[ ,  IS_CONST (268435096) '%3C%2Fspan%3E' ]
+        144*       < 22> ASSIGN                                                    OP1[  IS_CV !8 ] OP2[ ,  IS_TMP_VAR ~76 ]
+  548   145*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        146*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435091) 'ini_get' ]
+        147*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435090) 'magic_quotes_gpc' ]
+        148*       < 60> DO_FCALL                                      0   RES[  IS_VAR $78 ]      OP1[  IS_UNUSED  ]
+        149*       < 43> JMPZ                                                      OP1[  IS_VAR $78 ] OP2[ , ->152 ]
+        150*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~79 ]      OP1[  IS_CONST (268435085) 'failure%22%3EEnabled' ]
+        151*       < 42> JMP                                                       OP1[ ->153 ]
+        152*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~79 ]      OP1[  IS_CONST (268435082) 'success%22%3EDisabled' ]
+        153*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~80 ]      OP1[  IS_CONST (268435081) 'PHP+function+magic_quotes_gpc%3A+%3Cspan+class%3D%22' ] OP2[ ,  IS_TMP_VAR ~79 ]
+        154*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~81 ]      OP1[  IS_TMP_VAR ~80 ] OP2[ ,  IS_CONST (268435080) '%3C%2Fspan%3E' ]
+        155*       < 22> ASSIGN                                                    OP1[  IS_CV !9 ] OP2[ ,  IS_TMP_VAR ~81 ]
+  549   156*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        157*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435075) 'ini_get' ]
+        158*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435074) 'allow_url_include' ]
+        159*       < 60> DO_FCALL                                      0   RES[  IS_VAR $83 ]      OP1[  IS_UNUSED  ]
+        160*       < 43> JMPZ                                                      OP1[  IS_VAR $83 ] OP2[ , ->163 ]
+        161*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~84 ]      OP1[  IS_CONST (268435069) 'success%22%3EEnabled' ]
+        162*       < 42> JMP                                                       OP1[ ->164 ]
+        163*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~84 ]      OP1[  IS_CONST (268435066) 'failure%22%3EDisabled' ]
+        164*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~85 ]      OP1[  IS_CONST (268435065) 'PHP+function+allow_url_include%3A+%3Cspan+class%3D%22' ] OP2[ ,  IS_TMP_VAR ~84 ]
+        165*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~86 ]      OP1[  IS_TMP_VAR ~85 ] OP2[ ,  IS_CONST (268435064) '%3C%2Fspan%3E' ]
+        166*       < 22> ASSIGN                                                    OP1[  IS_CV !10 ] OP2[ ,  IS_TMP_VAR ~86 ]
+  550   167*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        168*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435059) 'ini_get' ]
+        169*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435058) 'allow_url_fopen' ]
+        170*       < 60> DO_FCALL                                      0   RES[  IS_VAR $88 ]      OP1[  IS_UNUSED  ]
+        171*       < 43> JMPZ                                                      OP1[  IS_VAR $88 ] OP2[ , ->174 ]
+        172*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~89 ]      OP1[  IS_CONST (268435053) 'success%22%3EEnabled' ]
+        173*       < 42> JMP                                                       OP1[ ->175 ]
+        174*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~89 ]      OP1[  IS_CONST (268435050) 'failure%22%3EDisabled' ]
+        175*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~90 ]      OP1[  IS_CONST (268435049) 'PHP+function+allow_url_fopen%3A+%3Cspan+class%3D%22' ] OP2[ ,  IS_TMP_VAR ~89 ]
+        176*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~91 ]      OP1[  IS_TMP_VAR ~90 ] OP2[ ,  IS_CONST (268435048) '%3C%2Fspan%3E' ]
+        177*       < 22> ASSIGN                                                    OP1[  IS_CV !11 ] OP2[ ,  IS_TMP_VAR ~91 ]
+  551   178*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        179*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435043) 'extension_loaded' ]
+        180*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435042) 'gd' ]
+        181*       < 60> DO_FCALL                                      0   RES[  IS_VAR $93 ]      OP1[  IS_UNUSED  ]
+        182*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~94 ]      OP1[  IS_VAR $93 ] OP2[ , ->187 ]
+        183*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435037) 'function_exists' ]
+        184*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435036) 'gd_info' ]
+        185*       < 60> DO_FCALL                                      0   RES[  IS_VAR $95 ]      OP1[  IS_UNUSED  ]
+        186*       < 52> BOOL                                              RES[  IS_TMP_VAR ~94 ]      OP1[  IS_VAR $95 ]
+        187*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~94 ] OP2[ , ->190 ]
+        188*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~96 ]      OP1[  IS_CONST (268435029) 'success%22%3EInstalled' ]
+        189*       < 42> JMP                                                       OP1[ ->191 ]
+        190*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~96 ]      OP1[  IS_CONST (268435026) 'failure%22%3EMissing' ]
+        191*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~97 ]      OP1[  IS_CONST (268435025) 'PHP+module+php-gd%3A+%3Cspan+class%3D%22' ] OP2[ ,  IS_TMP_VAR ~96 ]
+        192*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~98 ]      OP1[  IS_TMP_VAR ~97 ] OP2[ ,  IS_CONST (268435024) '%3C%2Fspan%3E' ]
+        193*       < 22> ASSIGN                                                    OP1[  IS_CV !12 ] OP2[ ,  IS_TMP_VAR ~98 ]
+  553   194*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        195*       <115> ISSET_ISEMPTY_DIM_OBJ                         0   RES[  IS_TMP_VAR ~100 ]     OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435019) 'recaptcha_public_key' ]
+        196*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~100 ]     OP1[  IS_TMP_VAR ~100 ] OP2[ , ->200 ]
+        197*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~101 ]     OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435016) 'recaptcha_public_key' ]
+        198*       < 19> IS_NOT_EQUAL                                      RES[  IS_TMP_VAR ~102 ]     OP1[  IS_TMP_VAR ~101 ] OP2[ ,  IS_CONST (268435015) '' ]
+        199*       < 52> BOOL                                              RES[  IS_TMP_VAR ~100 ]     OP1[  IS_TMP_VAR ~102 ]
+        200*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~100 ] OP2[ , ->205 ]
+        201*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~103 ]     OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435010) 'recaptcha_public_key' ]
+        202*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~104 ]     OP1[  IS_CONST (268435009) 'success%22%3E' ] OP2[ ,  IS_TMP_VAR ~103 ]
+        203*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~105 ]     OP1[  IS_TMP_VAR ~104 ]
+        204*       < 42> JMP                                                       OP1[ ->206 ]
+        205*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~105 ]     OP1[  IS_CONST (268435004) 'failure%22%3EMissing' ]
+        206*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~106 ]     OP1[  IS_CONST (268435003) 'reCAPTCHA+key%3A+%3Cspan+class%3D%22' ] OP2[ ,  IS_TMP_VAR ~105 ]
+        207*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~107 ]     OP1[  IS_TMP_VAR ~106 ] OP2[ ,  IS_CONST (268435002) '%3C%2Fspan%3E' ]
+        208*       < 22> ASSIGN                                                    OP1[  IS_CV !13 ] OP2[ ,  IS_TMP_VAR ~107 ]
+  555   209*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        210*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~109 ]     OP1[  IS_CONST (268434997) 'Writable+folder+' ] OP2[ ,  IS_CV !5 ]
+        211*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~110 ]     OP1[  IS_TMP_VAR ~109 ] OP2[ ,  IS_CONST (268434996) '%3A+%3Cspan+class%3D%22' ]
+        212*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434995) 'is_writable' ]
+        213*       <117> SEND_VAR                                                  OP1[  IS_CV !5 ] OP2[  IS_UNUSED  ]
+        214*       < 60> DO_FCALL                                      0   RES[  IS_VAR $111 ]     OP1[  IS_UNUSED  ]
+        215*       < 43> JMPZ                                                      OP1[  IS_VAR $111 ] OP2[ , ->218 ]
+        216*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~112 ]     OP1[  IS_CONST (268434988) 'success%22%3EYes%29' ]
+        217*       < 42> JMP                                                       OP1[ ->219 ]
+        218*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~112 ]     OP1[  IS_CONST (268434985) 'failure%22%3ENo' ]
+        219*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~113 ]     OP1[  IS_TMP_VAR ~110 ] OP2[ ,  IS_TMP_VAR ~112 ]
+        220*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~114 ]     OP1[  IS_TMP_VAR ~113 ] OP2[ ,  IS_CONST (268434982) '%3C%2Fspan%3E' ]
+        221*       < 22> ASSIGN                                                    OP1[  IS_CV !14 ] OP2[ ,  IS_TMP_VAR ~114 ]
+  556   222*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        223*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~116 ]     OP1[  IS_CONST (268434977) 'Writable+file+' ] OP2[ ,  IS_CV !6 ]
+        224*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~117 ]     OP1[  IS_TMP_VAR ~116 ] OP2[ ,  IS_CONST (268434976) '%3A+%3Cspan+class%3D%22' ]
+        225*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434975) 'is_writable' ]
+        226*       <117> SEND_VAR                                                  OP1[  IS_CV !6 ] OP2[  IS_UNUSED  ]
+        227*       < 60> DO_FCALL                                      0   RES[  IS_VAR $118 ]     OP1[  IS_UNUSED  ]
+        228*       < 43> JMPZ                                                      OP1[  IS_VAR $118 ] OP2[ , ->231 ]
+        229*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~119 ]     OP1[  IS_CONST (268434968) 'success%22%3EYes' ]
+        230*       < 42> JMP                                                       OP1[ ->232 ]
+        231*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~119 ]     OP1[  IS_CONST (268434965) 'failure%22%3ENo' ]
+        232*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~120 ]     OP1[  IS_TMP_VAR ~117 ] OP2[ ,  IS_TMP_VAR ~119 ]
+        233*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~121 ]     OP1[  IS_TMP_VAR ~120 ] OP2[ ,  IS_CONST (268434962) '%3C%2Fspan%3E' ]
+        234*       < 22> ASSIGN                                                    OP1[  IS_CV !15 ] OP2[ ,  IS_TMP_VAR ~121 ]
+  558   235*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        236*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434957) 'strtoupper' ]
+        237*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434956) 'substr' ]
+        238*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268434955) 'WINNT' ]
+        239*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268434954) 0 ]
+        240*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268434953) 3 ]
+        241*       < 60> DO_FCALL                                      0   RES[  IS_VAR $123 ]     OP1[  IS_UNUSED  ]
+        242*       <117> SEND_VAR                                                  OP1[  IS_VAR $123 ] OP2[  IS_UNUSED  ]
+        243*       < 60> DO_FCALL                                      0   RES[  IS_VAR $124 ]     OP1[  IS_UNUSED  ]
+        244*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~125 ]     OP1[  IS_VAR $124 ] OP2[ ,  IS_CONST (268434946) 'WIN' ]
+        245*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~125 ] OP2[ , ->248 ]
+        246*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~126 ]     OP1[  IS_CONST (268434943) 'Windows' ]
+        247*       < 42> JMP                                                       OP1[ ->249 ]
+        248*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~126 ]     OP1[  IS_CONST (268434940) '%2Anix' ]
+        249*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~127 ]     OP1[  IS_CONST (268434939) 'Operating+system%3A+%3Cem%3E' ] OP2[ ,  IS_TMP_VAR ~126 ]
+        250*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~128 ]     OP1[  IS_TMP_VAR ~127 ] OP2[ ,  IS_CONST (268434938) '%3C%2Fem%3E' ]
+        251*       < 22> ASSIGN                                                    OP1[  IS_CV !16 ] OP2[ ,  IS_TMP_VAR ~128 ]
+  559   252*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        253*       < 80> FETCH_R                      global               RES[  IS_TMP_VAR ~130 ]     OP1[  IS_CONST (268434933) '_SERVER' ]
+        254*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~131 ]     OP1[  IS_TMP_VAR ~130 ] OP2[ ,  IS_CONST (268434932) 'SERVER_NAME' ]
+        255*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~132 ]     OP1[  IS_CONST (268434931) 'Web+Server+SERVER_NAME%3A+%3Cem%3E' ] OP2[ ,  IS_TMP_VAR ~131 ]
+        256*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~133 ]     OP1[  IS_TMP_VAR ~132 ] OP2[ ,  IS_CONST (268434930) '%3C%2Fem%3E' ]
+        257*       < 22> ASSIGN                                                    OP1[  IS_CV !17 ] OP2[ ,  IS_TMP_VAR ~133 ]
+  563   258*       < 62> RETURN                                                    OP1[  IS_CONST (268434927) 1 ]
+
+Function dvwaversionget:
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       E:\AAAopensource\Yama\Yama_src\app\DVWA-1.9\dvwa\includes\dvwaPage.inc.php
+function name:  dvwaVersionGet
+number of ops:  4
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   38     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 62> RETURN                                                    OP1[  IS_CONST (268435452) '1.9' ]
+   39     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       < 62> RETURN                                                    OP1[  IS_CONST (268435449) null ]
+
+End of function dvwaversionget
+
+Function dvwareleasedateget:
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       E:\AAAopensource\Yama\Yama_src\app\DVWA-1.9\dvwa\includes\dvwaPage.inc.php
+function name:  dvwaReleaseDateGet
+number of ops:  4
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   43     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 62> RETURN                                                    OP1[  IS_CONST (268435452) '2015-09-19' ]
+   44     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       < 62> RETURN                                                    OP1[  IS_CONST (268435449) null ]
+
+End of function dvwareleasedateget
+
+Function dvwasessiongrab:
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       E:\AAAopensource\Yama\Yama_src\app\DVWA-1.9\dvwa\includes\dvwaPage.inc.php
+function name:  dvwaSessionGrab
+number of ops:  15
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   50     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 89> FETCH_IS                                          RES[  IS_TMP_VAR ~0 ]       OP1[  IS_CONST (268435442) '_SESSION' ] OP2[  IS_UNUSED  ]
+          2*       <115> ISSET_ISEMPTY_DIM_OBJ                         0   RES[  IS_TMP_VAR ~1 ]       OP1[  IS_TMP_VAR ~0 ] OP2[ ,  IS_CONST (268435441) 'dvwa' ]
+          3*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~2 ]       OP1[  IS_TMP_VAR ~1 ]
+          4*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~2 ] OP2[ , ->9 ]
+   51     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       < 83> FETCH_W                      global               RES[  IS_VAR $3 ]       OP1[  IS_CONST (268435434) '_SESSION' ]
+          7*       < 23> ASSIGN_DIM                                                OP1[  IS_VAR $3 ] OP2[ ,  IS_CONST (268435433) 'dvwa' ]
+          8*       <137> OP_DATA                                                   OP1[  IS_CONST (268435432) <array> ] OP2[  IS_UNUSED  ]
+   53     9*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         10*       < 83> FETCH_W                      global               RES[  IS_VAR $5 ]       OP1[  IS_CONST (268435429) '_SESSION' ]
+         11*       < 84> FETCH_DIM_W                                       RES[  IS_VAR $6 ]       OP1[  IS_VAR $5 ] OP2[ ,  IS_CONST (268435428) 'dvwa' ]
+         12*       <111> RETURN_BY_REF                                             OP1[  IS_VAR $6 ]
+   54    13*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         14*       <111> RETURN_BY_REF                                             OP1[  IS_CONST (268435423) null ]
+
+End of function dvwasessiongrab
+
+Function dvwapagestartup:
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:pActions
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       E:\AAAopensource\Yama\Yama_src\app\DVWA-1.9\dvwa\includes\dvwaPage.inc.php
+function name:  dvwaPageStartup
+number of ops:  33
+compiled vars:  !0 = $pActions
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   57     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+   58     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435436) 'in_array' ]
+          3*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435435) 'authenticated' ]
+          4*       <117> SEND_VAR                                                  OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          5*       < 60> DO_FCALL                                      0   RES[  IS_VAR $1 ]       OP1[  IS_UNUSED  ]
+          6*       < 43> JMPZ                                                      OP1[  IS_VAR $1 ] OP2[ , ->18 ]
+   59     7*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          8*       < 59> INIT_FCALL_BY_NAME                                        OP2[  IS_CONST (268435426) 'dvwaIsLoggedIn' ]
+          9*       < 60> DO_FCALL                                      0   RES[  IS_VAR $2 ]       OP1[  IS_UNUSED  ]
+         10*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~3 ]       OP1[  IS_VAR $2 ]
+         11*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~3 ] OP2[ , ->18 ]
+   60    12*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         13*       < 59> INIT_FCALL_BY_NAME                                        OP2[  IS_CONST (268435418) 'dvwaRedirect' ]
+         14*       < 99> FETCH_CONSTANT                                    RES[  IS_TMP_VAR ~4 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435418) 'DVWA_WEB_PAGE_TO_ROOT' ]
+         15*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~5 ]       OP1[  IS_TMP_VAR ~4 ] OP2[ ,  IS_CONST (268435418) 'login.php' ]
+         16*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~5 ] OP2[  IS_UNUSED  ]
+         17*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+   64    18*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         19*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435411) 'in_array' ]
+         20*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435410) 'phpids' ]
+         21*       <117> SEND_VAR                                                  OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         22*       < 60> DO_FCALL                                      0   RES[  IS_VAR $7 ]       OP1[  IS_UNUSED  ]
+         23*       < 43> JMPZ                                                      OP1[  IS_VAR $7 ] OP2[ , ->31 ]
+   65    24*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         25*       < 59> INIT_FCALL_BY_NAME                                        OP2[  IS_CONST (268435401) 'dvwaPhpIdsIsEnabled' ]
+         26*       < 60> DO_FCALL                                      0   RES[  IS_VAR $8 ]       OP1[  IS_UNUSED  ]
+         27*       < 43> JMPZ                                                      OP1[  IS_VAR $8 ] OP2[ , ->31 ]
+   66    28*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         29*       < 59> INIT_FCALL_BY_NAME                                        OP2[  IS_CONST (268435395) 'dvwaPhpIdsTrap' ]
+         30*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+   69    31*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         32*       < 62> RETURN                                                    OP1[  IS_CONST (268435391) null ]
+
+End of function dvwapagestartup
+
+Function dvwaphpidsenabledset:
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:pEnabled
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       E:\AAAopensource\Yama\Yama_src\app\DVWA-1.9\dvwa\includes\dvwaPage.inc.php
+function name:  dvwaPhpIdsEnabledSet
+number of ops:  15
+compiled vars:  !0 = $pEnabled, !1 = $dvwaSession
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   72     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+   73     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435447) 'dvwasessiongrab' ]
+          3*       < 60> DO_FCALL                                      0   RES[  IS_VAR $2 ]       OP1[  IS_UNUSED  ]
+          4*       < 30> ASSIGN_REF                                                OP1[  IS_CV !1 ] OP2[ ,  IS_VAR $2 ]
+   74     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       < 43> JMPZ                                                      OP1[  IS_CV !0 ] OP2[ , ->11 ]
+   75     7*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          8*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435436) 'php_ids' ]
+          9*       <137> OP_DATA                                                   OP1[  IS_CONST (268435435) 'enabled' ] OP2[  IS_UNUSED  ]
+         10*       < 42> JMP                                                       OP1[ ->13 ]
+   78    11*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         12*       < 75> UNSET_DIM                                                 OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435430) 'php_ids' ]
+   80    13*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         14*       < 62> RETURN                                                    OP1[  IS_CONST (268435427) null ]
+
+End of function dvwaphpidsenabledset
+
+Function dvwaphpidsisenabled:
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       E:\AAAopensource\Yama\Yama_src\app\DVWA-1.9\dvwa\includes\dvwaPage.inc.php
+function name:  dvwaPhpIdsIsEnabled
+number of ops:  9
+compiled vars:  !0 = $dvwaSession
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   84     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435451) 'dvwasessiongrab' ]
+          2*       < 60> DO_FCALL                                      0   RES[  IS_VAR $1 ]       OP1[  IS_UNUSED  ]
+          3*       < 30> ASSIGN_REF                                                OP1[  IS_CV !0 ] OP2[ ,  IS_VAR $1 ]
+   85     4*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          5*       <115> ISSET_ISEMPTY_DIM_OBJ                         0   RES[  IS_TMP_VAR ~3 ]       OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435444) 'php_ids' ]
+          6*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~3 ]
+   86     7*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          8*       < 62> RETURN                                                    OP1[  IS_CONST (268435439) null ]
+
+End of function dvwaphpidsisenabled
+
+Function dvwalogin:
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:pUsername
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       E:\AAAopensource\Yama\Yama_src\app\DVWA-1.9\dvwa\includes\dvwaPage.inc.php
+function name:  dvwaLogin
+number of ops:  10
+compiled vars:  !0 = $pUsername, !1 = $dvwaSession
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   89     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+   90     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435449) 'dvwasessiongrab' ]
+          3*       < 60> DO_FCALL                                      0   RES[  IS_VAR $2 ]       OP1[  IS_UNUSED  ]
+          4*       < 30> ASSIGN_REF                                                OP1[  IS_CV !1 ] OP2[ ,  IS_VAR $2 ]
+   91     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435442) 'username' ]
+          7*       <137> OP_DATA                                                   OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+   92     8*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          9*       < 62> RETURN                                                    OP1[  IS_CONST (268435437) null ]
+
+End of function dvwalogin
+
+Function dvwaisloggedin:
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       E:\AAAopensource\Yama\Yama_src\app\DVWA-1.9\dvwa\includes\dvwaPage.inc.php
+function name:  dvwaIsLoggedIn
+number of ops:  9
+compiled vars:  !0 = $dvwaSession
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   96     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435451) 'dvwasessiongrab' ]
+          2*       < 60> DO_FCALL                                      0   RES[  IS_VAR $1 ]       OP1[  IS_UNUSED  ]
+          3*       < 30> ASSIGN_REF                                                OP1[  IS_CV !0 ] OP2[ ,  IS_VAR $1 ]
+   97     4*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          5*       <115> ISSET_ISEMPTY_DIM_OBJ                         0   RES[  IS_TMP_VAR ~3 ]       OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435444) 'username' ]
+          6*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~3 ]
+   98     7*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          8*       < 62> RETURN                                                    OP1[  IS_CONST (268435439) null ]
+
+End of function dvwaisloggedin
+
+Function dvwalogout:
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       E:\AAAopensource\Yama\Yama_src\app\DVWA-1.9\dvwa\includes\dvwaPage.inc.php
+function name:  dvwaLogout
+number of ops:  8
+compiled vars:  !0 = $dvwaSession
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  102     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435451) 'dvwasessiongrab' ]
+          2*       < 60> DO_FCALL                                      0   RES[  IS_VAR $1 ]       OP1[  IS_UNUSED  ]
+          3*       < 30> ASSIGN_REF                                                OP1[  IS_CV !0 ] OP2[ ,  IS_VAR $1 ]
+  103     4*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          5*       < 75> UNSET_DIM                                                 OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435444) 'username' ]
+  104     6*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          7*       < 62> RETURN                                                    OP1[  IS_CONST (268435441) null ]
+
+End of function dvwalogout
+
+Function dvwapagereload:
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       E:\AAAopensource\Yama\Yama_src\app\DVWA-1.9\dvwa\includes\dvwaPage.inc.php
+function name:  dvwaPageReload
+number of ops:  9
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  108     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 59> INIT_FCALL_BY_NAME                                        OP2[  IS_CONST (268435449) 'dvwaRedirect' ]
+          2*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       < 92> FETCH_FUNC_ARG               global               RES[  IS_VAR $0 ]       OP1[  IS_CONST (268435447) '_SERVER' ]
+          4*       < 93> FETCH_DIM_FUNC_ARG                                RES[  IS_VAR $1 ]       OP1[  IS_VAR $0 ] OP2[ ,  IS_CONST (268435446) 'PHP_SELF' ]
+          5*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $1 ] OP2[  IS_UNUSED  ]
+          6*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  109     7*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          8*       < 62> RETURN                                                    OP1[  IS_CONST (268435439) null ]
+
+End of function dvwapagereload
+
+Function dvwacurrentuser:
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       E:\AAAopensource\Yama\Yama_src\app\DVWA-1.9\dvwa\includes\dvwaPage.inc.php
+function name:  dvwaCurrentUser
+number of ops:  14
+compiled vars:  !0 = $dvwaSession
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  112     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435449) 'dvwasessiongrab' ]
+          2*       < 60> DO_FCALL                                      0   RES[  IS_VAR $1 ]       OP1[  IS_UNUSED  ]
+          3*       < 30> ASSIGN_REF                                                OP1[  IS_CV !0 ] OP2[ ,  IS_VAR $1 ]
+  113     4*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          5*       <115> ISSET_ISEMPTY_DIM_OBJ                         0   RES[  IS_TMP_VAR ~3 ]       OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435442) 'username' ]
+          6*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~3 ] OP2[ , ->10 ]
+          7*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~4 ]       OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435439) 'username' ]
+          8*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~5 ]       OP1[  IS_TMP_VAR ~4 ]
+          9*       < 42> JMP                                                       OP1[ ->11 ]
+         10*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~5 ]       OP1[  IS_CONST (268435434) '' ]
+         11*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~5 ]
+  114    12*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         13*       < 62> RETURN                                                    OP1[  IS_CONST (268435429) null ]
+
+End of function dvwacurrentuser
+
+Function dvwapagenewgrab:
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       E:\AAAopensource\Yama\Yama_src\app\DVWA-1.9\dvwa\includes\dvwaPage.inc.php
+function name:  dvwaPageNewGrab
+number of ops:  16
+compiled vars:  !0 = $returnArray
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  120     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435439) 'dvwaversionget' ]
+          2*       < 60> DO_FCALL                                      0   RES[  IS_VAR $1 ]       OP1[  IS_UNUSED  ]
+          3*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~2 ]       OP1[  IS_CONST (268435436) 'Damn+Vulnerable+Web+Application+%28DVWA%29+v' ] OP2[ ,  IS_VAR $1 ]
+          4*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~3 ]       OP1[  IS_TMP_VAR ~2 ] OP2[ ,  IS_CONST (268435435) '' ]
+          5*       < 71> INIT_ARRAY                                        RES[  IS_TMP_VAR ~4 ]       OP1[  IS_TMP_VAR ~3 ] OP2[ ,  IS_CONST (268435434) 'title' ]
+  121     6*       < 72> ADD_ARRAY_ELEMENT                                 RES[  IS_TMP_VAR ~4 ]       OP1[  IS_CONST (268435433) '+%3A%3A+' ] OP2[ ,  IS_CONST (268435434) 'title_separator' ]
+  122     7*       < 72> ADD_ARRAY_ELEMENT                                 RES[  IS_TMP_VAR ~4 ]       OP1[  IS_CONST (268435433) '' ] OP2[ ,  IS_CONST (268435434) 'body' ]
+  123     8*       < 72> ADD_ARRAY_ELEMENT                                 RES[  IS_TMP_VAR ~4 ]       OP1[  IS_CONST (268435433) '' ] OP2[ ,  IS_CONST (268435434) 'page_id' ]
+  124     9*       < 72> ADD_ARRAY_ELEMENT                                 RES[  IS_TMP_VAR ~4 ]       OP1[  IS_CONST (268435433) '' ] OP2[ ,  IS_CONST (268435434) 'help_button' ]
+  125    10*       < 72> ADD_ARRAY_ELEMENT                                 RES[  IS_TMP_VAR ~4 ]       OP1[  IS_CONST (268435433) '' ] OP2[ ,  IS_CONST (268435434) 'source_button' ]
+  119    11*       < 22> ASSIGN                                                    OP1[  IS_CV !0 ] OP2[ ,  IS_TMP_VAR ~4 ]
+  127    12*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         13*       <111> RETURN_BY_REF                                             OP1[  IS_CV !0 ]
+  128    14*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         15*       <111> RETURN_BY_REF                                             OP1[  IS_CONST (268435425) null ]
+
+End of function dvwapagenewgrab
+
+Function dvwasecuritylevelget:
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       E:\AAAopensource\Yama\Yama_src\app\DVWA-1.9\dvwa\includes\dvwaPage.inc.php
+function name:  dvwaSecurityLevelGet
+number of ops:  12
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  132     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 89> FETCH_IS                                          RES[  IS_TMP_VAR ~0 ]       OP1[  IS_CONST (268435448) '_COOKIE' ] OP2[  IS_UNUSED  ]
+          2*       <115> ISSET_ISEMPTY_DIM_OBJ                         0   RES[  IS_TMP_VAR ~1 ]       OP1[  IS_TMP_VAR ~0 ] OP2[ ,  IS_CONST (268435447) 'security' ]
+          3*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~1 ] OP2[ , ->8 ]
+          4*       < 80> FETCH_R                      global               RES[  IS_TMP_VAR ~2 ]       OP1[  IS_CONST (268435444) '_COOKIE' ]
+          5*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~3 ]       OP1[  IS_TMP_VAR ~2 ] OP2[ ,  IS_CONST (268435443) 'security' ]
+          6*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~4 ]       OP1[  IS_TMP_VAR ~3 ]
+          7*       < 42> JMP                                                       OP1[ ->9 ]
+          8*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~4 ]       OP1[  IS_CONST (268435438) 'impossible' ]
+          9*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~4 ]
+  133    10*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         11*       < 62> RETURN                                                    OP1[  IS_CONST (268435433) null ]
+
+End of function dvwasecuritylevelget
+
+Function dvwasecuritylevelset:
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:pSecurityLevel
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       E:\AAAopensource\Yama\Yama_src\app\DVWA-1.9\dvwa\includes\dvwaPage.inc.php
+function name:  dvwaSecurityLevelSet
+number of ops:  35
+compiled vars:  !0 = $pSecurityLevel, !1 = $httponly
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  136     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  137     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 18> IS_EQUAL                                          RES[  IS_TMP_VAR ~2 ]       OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435435) 'impossible' ]
+          3*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~2 ] OP2[ , ->7 ]
+  138     4*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          5*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435430) <true> ]
+          6*       < 42> JMP                                                       OP1[ ->9 ]
+  141     7*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          8*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435425) <false> ]
+  143     9*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         10*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435422) 'setcookie' ]
+         11*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435421) 'session_name' ]
+         12*       < 60> DO_FCALL                                      0   RES[  IS_VAR $5 ]       OP1[  IS_UNUSED  ]
+         13*       <117> SEND_VAR                                                  OP1[  IS_VAR $5 ] OP2[  IS_UNUSED  ]
+         14*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435416) 'session_id' ]
+         15*       < 60> DO_FCALL                                      0   RES[  IS_VAR $6 ]       OP1[  IS_UNUSED  ]
+         16*       <117> SEND_VAR                                                  OP1[  IS_VAR $6 ] OP2[  IS_UNUSED  ]
+         17*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435411) null ]
+         18*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435410) '%2F' ]
+         19*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435409) null ]
+         20*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435408) null ]
+         21*       <117> SEND_VAR                                                  OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         22*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  144    23*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         24*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435401) 'setcookie' ]
+         25*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435400) 'security' ]
+         26*       <117> SEND_VAR                                                  OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         27*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435397) null ]
+         28*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435396) null ]
+         29*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435395) null ]
+         30*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435394) null ]
+         31*       <117> SEND_VAR                                                  OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         32*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  145    33*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         34*       < 62> RETURN                                                    OP1[  IS_CONST (268435387) null ]
+
+End of function dvwasecuritylevelset
+
+Function dvwamessagepush:
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:pMessage
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       E:\AAAopensource\Yama\Yama_src\app\DVWA-1.9\dvwa\includes\dvwaPage.inc.php
+function name:  dvwaMessagePush
+number of ops:  18
+compiled vars:  !0 = $pMessage, !1 = $dvwaSession
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  150     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  151     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435446) 'dvwasessiongrab' ]
+          3*       < 60> DO_FCALL                                      0   RES[  IS_VAR $2 ]       OP1[  IS_UNUSED  ]
+          4*       < 30> ASSIGN_REF                                                OP1[  IS_CV !1 ] OP2[ ,  IS_VAR $2 ]
+  152     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       <115> ISSET_ISEMPTY_DIM_OBJ                         0   RES[  IS_TMP_VAR ~4 ]       OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435439) 'messages' ]
+          7*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~5 ]       OP1[  IS_TMP_VAR ~4 ]
+          8*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~5 ] OP2[ , ->12 ]
+  153     9*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         10*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435432) 'messages' ]
+         11*       <137> OP_DATA                                                   OP1[  IS_CONST (268435431) <array> ] OP2[  IS_UNUSED  ]
+  155    12*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         13*       < 84> FETCH_DIM_W                                       RES[  IS_VAR $7 ]       OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435428) 'messages' ]
+         14*       < 23> ASSIGN_DIM                                                OP1[  IS_VAR $7 ] OP2[  IS_UNUSED  ]
+         15*       <137> OP_DATA                                                   OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+  156    16*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         17*       < 62> RETURN                                                    OP1[  IS_CONST (268435421) null ]
+
+End of function dvwamessagepush
+
+Function dvwamessagepop:
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       E:\AAAopensource\Yama\Yama_src\app\DVWA-1.9\dvwa\includes\dvwaPage.inc.php
+function name:  dvwaMessagePop
+number of ops:  23
+compiled vars:  !0 = $dvwaSession
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  160     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435446) 'dvwasessiongrab' ]
+          2*       < 60> DO_FCALL                                      0   RES[  IS_VAR $1 ]       OP1[  IS_UNUSED  ]
+          3*       < 30> ASSIGN_REF                                                OP1[  IS_CV !0 ] OP2[ ,  IS_VAR $1 ]
+  161     4*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          5*       <115> ISSET_ISEMPTY_DIM_OBJ                         0   RES[  IS_TMP_VAR ~3 ]       OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435439) 'messages' ]
+          6*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~4 ]       OP1[  IS_TMP_VAR ~3 ]
+          7*       < 47> JMPNZ_EX                                          RES[  IS_TMP_VAR ~4 ]       OP1[  IS_TMP_VAR ~4 ] OP2[ , ->12 ]
+          8*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~5 ]       OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435434) 'messages' ]
+          9*       <190> COUNT                                             RES[  IS_TMP_VAR ~6 ]       OP1[  IS_TMP_VAR ~5 ] OP2[  IS_UNUSED  ]
+         10*       < 18> IS_EQUAL                                          RES[  IS_TMP_VAR ~7 ]       OP1[  IS_TMP_VAR ~6 ] OP2[ ,  IS_CONST (268435431) 0 ]
+         11*       < 52> BOOL                                              RES[  IS_TMP_VAR ~4 ]       OP1[  IS_TMP_VAR ~7 ]
+         12*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~4 ] OP2[ , ->15 ]
+  162    13*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         14*       < 62> RETURN                                                    OP1[  IS_CONST (268435424) <false> ]
+  164    15*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         16*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435421) 'array_shift' ]
+         17*       < 84> FETCH_DIM_W                                       RES[  IS_VAR $8 ]       OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435420) 'messages' ]
+         18*       < 67> SEND_REF                                                  OP1[  IS_VAR $8 ] OP2[  IS_UNUSED  ]
+         19*       < 60> DO_FCALL                                      0   RES[  IS_VAR $9 ]       OP1[  IS_UNUSED  ]
+         20*       < 62> RETURN                                                    OP1[  IS_VAR $9 ]
+  165    21*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         22*       < 62> RETURN                                                    OP1[  IS_CONST (268435411) null ]
+
+End of function dvwamessagepop
+
+Function messagespopalltohtml:
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       E:\AAAopensource\Yama\Yama_src\app\DVWA-1.9\dvwa\includes\dvwaPage.inc.php
+function name:  messagesPopAllToHtml
+number of ops:  17
+compiled vars:  !0 = $messagesHtml, !1 = $message
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  169     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 22> ASSIGN                                                    OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435449) '' ]
+  170     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       < 42> JMP                                                       OP1[ ->9 ]
+  171     4*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          5*       < 54> ROPE_INIT                                     3   RES[  IS_TMP_VAR ~4 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435442) '%3Cdiv+class%3D%22message%22%3E' ]
+          6*       < 55> ROPE_ADD                                      1   RES[  IS_TMP_VAR ~4 ]       OP1[  IS_TMP_VAR ~4 ] OP2[ ,  IS_CV !1 ]
+          7*       < 56> ROPE_END                                      2   RES[  IS_TMP_VAR ~3 ]       OP1[  IS_TMP_VAR ~4 ] OP2[ ,  IS_CONST (268435439) '%3C%2Fdiv%3E' ]
+          8*       < 26> ASSIGN_OP                    .=               8           OP1[  IS_CV !0 ] OP2[ ,  IS_TMP_VAR ~3 ]
+  170     9*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435436) 'dvwamessagepop' ]
+         10*       < 60> DO_FCALL                                      0   RES[  IS_VAR $7 ]       OP1[  IS_UNUSED  ]
+         11*       < 22> ASSIGN                                            RES[  IS_TMP_VAR ~8 ]       OP1[  IS_CV !1 ] OP2[ ,  IS_VAR $7 ]
+         12*       < 44> JMPNZ                                                     OP1[  IS_TMP_VAR ~8 ] OP2[ , ->4 ]
+  174    13*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         14*       < 62> RETURN                                                    OP1[  IS_CV !0 ]
+  175    15*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         16*       < 62> RETURN                                                    OP1[  IS_CONST (268435423) null ]
+
+End of function messagespopalltohtml
+
+Function dvwahtmlecho:
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:pPage
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       E:\AAAopensource\Yama\Yama_src\app\DVWA-1.9\dvwa\includes\dvwaPage.inc.php
+function name:  dvwaHtmlEcho
+number of ops:  295
+compiled vars:  !0 = $pPage, !1 = $menuBlocks, !2 = $menuHtml, !3 = $menuBlock, !4 = $menuBlockHtml, !5 = $menuItem, !6 = $selectedClass, !7 = $fixedUrl, !8 = $securityLevelHtml, !9 = $phpIdsHtml, !10 = $userInfoHtml, !11 = $messagesHtml, !12 = $systemInfoHtml
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  179     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  180     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435050) <array> ]
+  182     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435047) 'home' ]
+          5*       <137> OP_DATA                                                   OP1[  IS_CONST (268435046) <array> ] OP2[  IS_UNUSED  ]
+  183     6*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          7*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435043) 'dvwaisloggedin' ]
+          8*       < 60> DO_FCALL                                      0   RES[  IS_VAR $15 ]      OP1[  IS_UNUSED  ]
+          9*       < 43> JMPZ                                                      OP1[  IS_VAR $15 ] OP2[ , ->23 ]
+  184    10*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         11*       < 84> FETCH_DIM_W                                       RES[  IS_VAR $16 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435036) 'home' ]
+         12*       < 23> ASSIGN_DIM                                                OP1[  IS_VAR $16 ] OP2[  IS_UNUSED  ]
+         13*       <137> OP_DATA                                                   OP1[  IS_CONST (268435033) <array> ] OP2[  IS_UNUSED  ]
+  185    14*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         15*       < 84> FETCH_DIM_W                                       RES[  IS_VAR $18 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435030) 'home' ]
+         16*       < 23> ASSIGN_DIM                                                OP1[  IS_VAR $18 ] OP2[  IS_UNUSED  ]
+         17*       <137> OP_DATA                                                   OP1[  IS_CONST (268435027) <array> ] OP2[  IS_UNUSED  ]
+  186    18*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         19*       < 84> FETCH_DIM_W                                       RES[  IS_VAR $20 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435024) 'home' ]
+         20*       < 23> ASSIGN_DIM                                                OP1[  IS_VAR $20 ] OP2[  IS_UNUSED  ]
+         21*       <137> OP_DATA                                                   OP1[  IS_CONST (268435021) <array> ] OP2[  IS_UNUSED  ]
+         22*       < 42> JMP                                                       OP1[ ->31 ]
+  189    23*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         24*       < 84> FETCH_DIM_W                                       RES[  IS_VAR $22 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435016) 'home' ]
+         25*       < 23> ASSIGN_DIM                                                OP1[  IS_VAR $22 ] OP2[  IS_UNUSED  ]
+         26*       <137> OP_DATA                                                   OP1[  IS_CONST (268435013) <array> ] OP2[  IS_UNUSED  ]
+  190    27*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         28*       < 84> FETCH_DIM_W                                       RES[  IS_VAR $24 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435010) 'home' ]
+         29*       < 23> ASSIGN_DIM                                                OP1[  IS_VAR $24 ] OP2[  IS_UNUSED  ]
+         30*       <137> OP_DATA                                                   OP1[  IS_CONST (268435007) <array> ] OP2[  IS_UNUSED  ]
+  193    31*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         32*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435004) 'dvwaisloggedin' ]
+         33*       < 60> DO_FCALL                                      0   RES[  IS_VAR $26 ]      OP1[  IS_UNUSED  ]
+         34*       < 43> JMPZ                                                      OP1[  IS_VAR $26 ] OP2[ , ->78 ]
+  194    35*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         36*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268434997) 'vulnerabilities' ]
+         37*       <137> OP_DATA                                                   OP1[  IS_CONST (268434996) <array> ] OP2[  IS_UNUSED  ]
+  195    38*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         39*       < 84> FETCH_DIM_W                                       RES[  IS_VAR $28 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268434993) 'vulnerabilities' ]
+         40*       < 23> ASSIGN_DIM                                                OP1[  IS_VAR $28 ] OP2[  IS_UNUSED  ]
+         41*       <137> OP_DATA                                                   OP1[  IS_CONST (268434990) <array> ] OP2[  IS_UNUSED  ]
+  196    42*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         43*       < 84> FETCH_DIM_W                                       RES[  IS_VAR $30 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268434987) 'vulnerabilities' ]
+         44*       < 23> ASSIGN_DIM                                                OP1[  IS_VAR $30 ] OP2[  IS_UNUSED  ]
+         45*       <137> OP_DATA                                                   OP1[  IS_CONST (268434984) <array> ] OP2[  IS_UNUSED  ]
+  197    46*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         47*       < 84> FETCH_DIM_W                                       RES[  IS_VAR $32 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268434981) 'vulnerabilities' ]
+         48*       < 23> ASSIGN_DIM                                                OP1[  IS_VAR $32 ] OP2[  IS_UNUSED  ]
+         49*       <137> OP_DATA                                                   OP1[  IS_CONST (268434978) <array> ] OP2[  IS_UNUSED  ]
+  198    50*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         51*       < 84> FETCH_DIM_W                                       RES[  IS_VAR $34 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268434975) 'vulnerabilities' ]
+         52*       < 23> ASSIGN_DIM                                                OP1[  IS_VAR $34 ] OP2[  IS_UNUSED  ]
+         53*       <137> OP_DATA                                                   OP1[  IS_CONST (268434972) <array> ] OP2[  IS_UNUSED  ]
+  199    54*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         55*       < 84> FETCH_DIM_W                                       RES[  IS_VAR $36 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268434969) 'vulnerabilities' ]
+         56*       < 23> ASSIGN_DIM                                                OP1[  IS_VAR $36 ] OP2[  IS_UNUSED  ]
+         57*       <137> OP_DATA                                                   OP1[  IS_CONST (268434966) <array> ] OP2[  IS_UNUSED  ]
+  200    58*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         59*       < 84> FETCH_DIM_W                                       RES[  IS_VAR $38 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268434963) 'vulnerabilities' ]
+         60*       < 23> ASSIGN_DIM                                                OP1[  IS_VAR $38 ] OP2[  IS_UNUSED  ]
+         61*       <137> OP_DATA                                                   OP1[  IS_CONST (268434960) <array> ] OP2[  IS_UNUSED  ]
+  201    62*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         63*       < 84> FETCH_DIM_W                                       RES[  IS_VAR $40 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268434957) 'vulnerabilities' ]
+         64*       < 23> ASSIGN_DIM                                                OP1[  IS_VAR $40 ] OP2[  IS_UNUSED  ]
+         65*       <137> OP_DATA                                                   OP1[  IS_CONST (268434954) <array> ] OP2[  IS_UNUSED  ]
+  202    66*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         67*       < 84> FETCH_DIM_W                                       RES[  IS_VAR $42 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268434951) 'vulnerabilities' ]
+         68*       < 23> ASSIGN_DIM                                                OP1[  IS_VAR $42 ] OP2[  IS_UNUSED  ]
+         69*       <137> OP_DATA                                                   OP1[  IS_CONST (268434948) <array> ] OP2[  IS_UNUSED  ]
+  203    70*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         71*       < 84> FETCH_DIM_W                                       RES[  IS_VAR $44 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268434945) 'vulnerabilities' ]
+         72*       < 23> ASSIGN_DIM                                                OP1[  IS_VAR $44 ] OP2[  IS_UNUSED  ]
+         73*       <137> OP_DATA                                                   OP1[  IS_CONST (268434942) <array> ] OP2[  IS_UNUSED  ]
+  204    74*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         75*       < 84> FETCH_DIM_W                                       RES[  IS_VAR $46 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268434939) 'vulnerabilities' ]
+         76*       < 23> ASSIGN_DIM                                                OP1[  IS_VAR $46 ] OP2[  IS_UNUSED  ]
+         77*       <137> OP_DATA                                                   OP1[  IS_CONST (268434936) <array> ] OP2[  IS_UNUSED  ]
+  207    78*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         79*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268434933) 'meta' ]
+         80*       <137> OP_DATA                                                   OP1[  IS_CONST (268434932) <array> ] OP2[  IS_UNUSED  ]
+  208    81*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         82*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434929) 'dvwaisloggedin' ]
+         83*       < 60> DO_FCALL                                      0   RES[  IS_VAR $49 ]      OP1[  IS_UNUSED  ]
+         84*       < 43> JMPZ                                                      OP1[  IS_VAR $49 ] OP2[ , ->93 ]
+  209    85*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         86*       < 84> FETCH_DIM_W                                       RES[  IS_VAR $50 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268434922) 'meta' ]
+         87*       < 23> ASSIGN_DIM                                                OP1[  IS_VAR $50 ] OP2[  IS_UNUSED  ]
+         88*       <137> OP_DATA                                                   OP1[  IS_CONST (268434919) <array> ] OP2[  IS_UNUSED  ]
+  210    89*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         90*       < 84> FETCH_DIM_W                                       RES[  IS_VAR $52 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268434916) 'meta' ]
+         91*       < 23> ASSIGN_DIM                                                OP1[  IS_VAR $52 ] OP2[  IS_UNUSED  ]
+         92*       <137> OP_DATA                                                   OP1[  IS_CONST (268434913) <array> ] OP2[  IS_UNUSED  ]
+  212    93*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         94*       < 84> FETCH_DIM_W                                       RES[  IS_VAR $54 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268434910) 'meta' ]
+         95*       < 23> ASSIGN_DIM                                                OP1[  IS_VAR $54 ] OP2[  IS_UNUSED  ]
+         96*       <137> OP_DATA                                                   OP1[  IS_CONST (268434907) <array> ] OP2[  IS_UNUSED  ]
+  214    97*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         98*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434904) 'dvwaisloggedin' ]
+         99*       < 60> DO_FCALL                                      0   RES[  IS_VAR $56 ]      OP1[  IS_UNUSED  ]
+        100*       < 43> JMPZ                                                      OP1[  IS_VAR $56 ] OP2[ , ->108 ]
+  215   101*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        102*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268434897) 'logout' ]
+        103*       <137> OP_DATA                                                   OP1[  IS_CONST (268434896) <array> ] OP2[  IS_UNUSED  ]
+  216   104*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        105*       < 84> FETCH_DIM_W                                       RES[  IS_VAR $58 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268434893) 'logout' ]
+        106*       < 23> ASSIGN_DIM                                                OP1[  IS_VAR $58 ] OP2[  IS_UNUSED  ]
+        107*       <137> OP_DATA                                                   OP1[  IS_CONST (268434890) <array> ] OP2[  IS_UNUSED  ]
+  219   108*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        109*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268434887) '' ]
+  221   110*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        111*       < 77> FE_RESET_R                                        RES[  IS_VAR $61 ]      OP1[  IS_CV !1 ] OP2[ , ->152 ]
+        112*       < 78> FE_FETCH_R                                                OP1[  IS_VAR $61 ] OP2[ ,  IS_CV !3 ] EXT_JMP_REL[ , ->152 ]
+  222   113*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        114*       < 22> ASSIGN                                                    OP1[  IS_CV !4 ] OP2[ ,  IS_CONST (268434878) '' ]
+  223   115*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        116*       < 77> FE_RESET_R                                        RES[  IS_VAR $63 ]      OP1[  IS_CV !3 ] OP2[ , ->145 ]
+        117*       < 78> FE_FETCH_R                                                OP1[  IS_VAR $63 ] OP2[ ,  IS_CV !5 ] EXT_JMP_REL[ , ->145 ]
+  224   118*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        119*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~64 ]      OP1[  IS_CV !5 ] OP2[ ,  IS_CONST (268434869) 'id' ]
+        120*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~65 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268434868) 'page_id' ]
+        121*       < 18> IS_EQUAL                                          RES[  IS_TMP_VAR ~66 ]      OP1[  IS_TMP_VAR ~64 ] OP2[ ,  IS_TMP_VAR ~65 ]
+        122*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~66 ] OP2[ , ->125 ]
+        123*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~67 ]      OP1[  IS_CONST (268434863) 'selected' ]
+        124*       < 42> JMP                                                       OP1[ ->126 ]
+        125*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~67 ]      OP1[  IS_CONST (268434860) '' ]
+        126*       < 22> ASSIGN                                                    OP1[  IS_CV !6 ] OP2[ ,  IS_TMP_VAR ~67 ]
+  225   127*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        128*       < 99> FETCH_CONSTANT                                    RES[  IS_TMP_VAR ~69 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434855) 'DVWA_WEB_PAGE_TO_ROOT' ]
+        129*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~70 ]      OP1[  IS_CV !5 ] OP2[ ,  IS_CONST (268434855) 'url' ]
+        130*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~71 ]      OP1[  IS_TMP_VAR ~69 ] OP2[ ,  IS_TMP_VAR ~70 ]
+        131*       < 22> ASSIGN                                                    OP1[  IS_CV !7 ] OP2[ ,  IS_TMP_VAR ~71 ]
+  226   132*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        133*       < 54> ROPE_INIT                                     9   RES[  IS_TMP_VAR ~75 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434848) '%3Cli+onclick%3D%22window.location%3D%27' ]
+        134*       < 55> ROPE_ADD                                      1   RES[  IS_TMP_VAR ~75 ]      OP1[  IS_TMP_VAR ~75 ] OP2[ ,  IS_CV !7 ]
+        135*       < 55> ROPE_ADD                                      2   RES[  IS_TMP_VAR ~75 ]      OP1[  IS_TMP_VAR ~75 ] OP2[ ,  IS_CONST (268434845) '%27%22+class%3D%22' ]
+        136*       < 55> ROPE_ADD                                      3   RES[  IS_TMP_VAR ~75 ]      OP1[  IS_TMP_VAR ~75 ] OP2[ ,  IS_CV !6 ]
+        137*       < 55> ROPE_ADD                                      4   RES[  IS_TMP_VAR ~75 ]      OP1[  IS_TMP_VAR ~75 ] OP2[ ,  IS_CONST (268434842) '%22%3E%3Ca+href%3D%22' ]
+        138*       < 55> ROPE_ADD                                      5   RES[  IS_TMP_VAR ~75 ]      OP1[  IS_TMP_VAR ~75 ] OP2[ ,  IS_CV !7 ]
+        139*       < 55> ROPE_ADD                                      6   RES[  IS_TMP_VAR ~75 ]      OP1[  IS_TMP_VAR ~75 ] OP2[ ,  IS_CONST (268434840) '%22%3E' ]
+        140*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~73 ]      OP1[  IS_CV !5 ] OP2[ ,  IS_CONST (268434837) 'name' ]
+        141*       < 55> ROPE_ADD                                      7   RES[  IS_TMP_VAR ~75 ]      OP1[  IS_TMP_VAR ~75 ] OP2[ ,  IS_TMP_VAR ~73 ]
+        142*       < 56> ROPE_END                                      8   RES[  IS_TMP_VAR ~74 ]      OP1[  IS_TMP_VAR ~75 ] OP2[ ,  IS_CONST (268434835) '%3C%2Fa%3E%3C%2Fli%3E%0A' ]
+        143*       < 26> ASSIGN_OP                    .=               8           OP1[  IS_CV !4 ] OP2[ ,  IS_TMP_VAR ~74 ]
+  223   144*       < 42> JMP                                                       OP1[ ->117 ]
+        145*       <127> FE_FREE                                                   OP1[  IS_VAR $63 ] OP2[  IS_UNUSED  ]
+  228   146*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        147*       < 54> ROPE_INIT                                     3   RES[  IS_TMP_VAR ~82 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434826) '%3Cul+class%3D%22menuBlocks%22%3E' ]
+        148*       < 55> ROPE_ADD                                      1   RES[  IS_TMP_VAR ~82 ]      OP1[  IS_TMP_VAR ~82 ] OP2[ ,  IS_CV !4 ]
+        149*       < 56> ROPE_END                                      2   RES[  IS_TMP_VAR ~81 ]      OP1[  IS_TMP_VAR ~82 ] OP2[ ,  IS_CONST (268434823) '%3C%2Ful%3E' ]
+        150*       < 26> ASSIGN_OP                    .=               8           OP1[  IS_CV !2 ] OP2[ ,  IS_TMP_VAR ~81 ]
+  221   151*       < 42> JMP                                                       OP1[ ->112 ]
+        152*       <127> FE_FREE                                                   OP1[  IS_VAR $61 ] OP2[  IS_UNUSED  ]
+  232   153*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        154*       < 22> ASSIGN                                                    OP1[  IS_CV !8 ] OP2[ ,  IS_CONST (268434814) '' ]
+  233   155*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        156*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434811) 'dvwasecuritylevelget' ]
+        157*       < 60> DO_FCALL                                      0   RES[  IS_VAR $86 ]      OP1[  IS_UNUSED  ]
+        158*       <188> SWITCH_STRING                                             OP1[  IS_VAR $86 ] OP2[ , [ 'low':->166, 'medium':->170, 'high':->174, ] ] EXT_JMP_REL[ , ->178 ]
+  234   159*       < 48> CASE                                              RES[  ]         OP1[  IS_VAR $86 ] OP2[ ,  IS_CONST (268434807) 'low' ]
+        160*       < 44> JMPNZ                                                     OP1[  IS_TMP_VAR ~87 ] OP2[ , ->166 ]
+  237   161*       < 48> CASE                                              RES[  ]         OP1[  IS_VAR $86 ] OP2[ ,  IS_CONST (268434804) 'medium' ]
+        162*       < 44> JMPNZ                                                     OP1[  IS_TMP_VAR ~87 ] OP2[ , ->170 ]
+  240   163*       < 48> CASE                                              RES[  ]         OP1[  IS_VAR $86 ] OP2[ ,  IS_CONST (268434801) 'high' ]
+        164*       < 44> JMPNZ                                                     OP1[  IS_TMP_VAR ~87 ] OP2[ , ->174 ]
+        165*       < 42> JMP                                                       OP1[ ->178 ]
+  235   166*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        167*       < 22> ASSIGN                                                    OP1[  IS_CV !8 ] OP2[ ,  IS_CONST (268434794) 'low' ]
+  236   168*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        169*       < 42> JMP                                                       OP1[ ->182 ]
+  238   170*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        171*       < 22> ASSIGN                                                    OP1[  IS_CV !8 ] OP2[ ,  IS_CONST (268434787) 'medium' ]
+  239   172*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        173*       < 42> JMP                                                       OP1[ ->182 ]
+  241   174*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        175*       < 22> ASSIGN                                                    OP1[  IS_CV !8 ] OP2[ ,  IS_CONST (268434780) 'high' ]
+  242   176*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        177*       < 42> JMP                                                       OP1[ ->182 ]
+  244   178*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        179*       < 22> ASSIGN                                                    OP1[  IS_CV !8 ] OP2[ ,  IS_CONST (268434773) 'impossible' ]
+  245   180*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        181*       < 42> JMP                                                       OP1[ ->182 ]
+        182*       < 70> FREE                                                      OP1[  IS_VAR $86 ]
+  249   183*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        184*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434764) 'dvwaphpidsisenabled' ]
+        185*       < 60> DO_FCALL                                      0   RES[  IS_VAR $92 ]      OP1[  IS_UNUSED  ]
+        186*       < 43> JMPZ                                                      OP1[  IS_VAR $92 ] OP2[ , ->189 ]
+        187*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~93 ]      OP1[  IS_CONST (268434759) 'enabled' ]
+        188*       < 42> JMP                                                       OP1[ ->190 ]
+        189*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~93 ]      OP1[  IS_CONST (268434756) 'disabled' ]
+        190*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~94 ]      OP1[  IS_CONST (268434755) '%3Cem%3EPHPIDS%3A%3C%2Fem%3E+' ] OP2[ ,  IS_TMP_VAR ~93 ]
+        191*       < 22> ASSIGN                                                    OP1[  IS_CV !9 ] OP2[ ,  IS_TMP_VAR ~94 ]
+  250   192*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        193*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434750) 'dvwacurrentuser' ]
+        194*       < 60> DO_FCALL                                      0   RES[  IS_VAR $96 ]      OP1[  IS_UNUSED  ]
+        195*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~97 ]      OP1[  IS_CONST (268434747) '%3Cem%3EUsername%3A%3C%2Fem%3E+' ] OP2[ ,  IS_VAR $96 ]
+        196*       < 22> ASSIGN                                                    OP1[  IS_CV !10 ] OP2[ ,  IS_TMP_VAR ~97 ]
+  252   197*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        198*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434742) 'messagespopalltohtml' ]
+        199*       < 60> DO_FCALL                                      0   RES[  IS_VAR $99 ]      OP1[  IS_UNUSED  ]
+        200*       < 22> ASSIGN                                                    OP1[  IS_CV !11 ] OP2[ ,  IS_VAR $99 ]
+  253   201*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        202*       < 43> JMPZ                                                      OP1[  IS_CV !11 ] OP2[ , ->208 ]
+  254   203*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        204*       < 54> ROPE_INIT                                     3   RES[  IS_TMP_VAR ~102 ]     OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434731) '%3Cdiv+class%3D%22body_padded%22%3E' ]
+        205*       < 55> ROPE_ADD                                      1   RES[  IS_TMP_VAR ~102 ]     OP1[  IS_TMP_VAR ~102 ] OP2[ ,  IS_CV !11 ]
+        206*       < 56> ROPE_END                                      2   RES[  IS_TMP_VAR ~101 ]     OP1[  IS_TMP_VAR ~102 ] OP2[ ,  IS_CONST (268434728) '%3C%2Fdiv%3E' ]
+        207*       < 22> ASSIGN                                                    OP1[  IS_CV !11 ] OP2[ ,  IS_TMP_VAR ~101 ]
+  257   208*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        209*       < 22> ASSIGN                                                    OP1[  IS_CV !12 ] OP2[ ,  IS_CONST (268434723) '' ]
+  258   210*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        211*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434720) 'dvwaisloggedin' ]
+        212*       < 60> DO_FCALL                                      0   RES[  IS_VAR $106 ]     OP1[  IS_UNUSED  ]
+        213*       < 43> JMPZ                                                      OP1[  IS_VAR $106 ] OP2[ , ->223 ]
+  259   214*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        215*       < 54> ROPE_INIT                                     7   RES[  IS_TMP_VAR ~108 ]     OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434713) '%3Cdiv+align%3D%22left%22%3E' ]
+        216*       < 55> ROPE_ADD                                      1   RES[  IS_TMP_VAR ~108 ]     OP1[  IS_TMP_VAR ~108 ] OP2[ ,  IS_CV !10 ]
+        217*       < 55> ROPE_ADD                                      2   RES[  IS_TMP_VAR ~108 ]     OP1[  IS_TMP_VAR ~108 ] OP2[ ,  IS_CONST (268434710) '%3Cbr+%2F%3E%3Cem%3ESecurity+Level%3A%3C%2Fem%3E+' ]
+        218*       < 55> ROPE_ADD                                      3   RES[  IS_TMP_VAR ~108 ]     OP1[  IS_TMP_VAR ~108 ] OP2[ ,  IS_CV !8 ]
+        219*       < 55> ROPE_ADD                                      4   RES[  IS_TMP_VAR ~108 ]     OP1[  IS_TMP_VAR ~108 ] OP2[ ,  IS_CONST (268434707) '%3Cbr+%2F%3E' ]
+        220*       < 55> ROPE_ADD                                      5   RES[  IS_TMP_VAR ~108 ]     OP1[  IS_TMP_VAR ~108 ] OP2[ ,  IS_CV !9 ]
+        221*       < 56> ROPE_END                                      6   RES[  IS_TMP_VAR ~107 ]     OP1[  IS_TMP_VAR ~108 ] OP2[ ,  IS_CONST (268434704) '%3C%2Fdiv%3E' ]
+        222*       < 22> ASSIGN                                                    OP1[  IS_CV !12 ] OP2[ ,  IS_TMP_VAR ~107 ]
+  260   223*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        224*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~113 ]     OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268434699) 'source_button' ]
+        225*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~113 ] OP2[ , ->236 ]
+  261   226*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        227*       < 59> INIT_FCALL_BY_NAME                                        OP2[  IS_CONST (268434694) 'dvwaButtonSourceHtmlGet' ]
+        228*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        229*       < 93> FETCH_DIM_FUNC_ARG                                RES[  IS_VAR $114 ]     OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268434692) 'source_button' ]
+        230*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $114 ] OP2[  IS_UNUSED  ]
+        231*       < 60> DO_FCALL                                      0   RES[  IS_VAR $115 ]     OP1[  IS_UNUSED  ]
+        232*       <  0> NOP                                                      
+        233*       < 53> FAST_CONCAT                                       RES[  IS_TMP_VAR ~116 ]     OP1[  IS_CONST (268434685) '+' ] OP2[ ,  IS_CV !12 ]
+        234*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~117 ]     OP1[  IS_VAR $115 ] OP2[ ,  IS_TMP_VAR ~116 ]
+        235*       < 22> ASSIGN                                                    OP1[  IS_CV !12 ] OP2[ ,  IS_TMP_VAR ~117 ]
+  263   236*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        237*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~119 ]     OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268434678) 'help_button' ]
+        238*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~119 ] OP2[ , ->249 ]
+  264   239*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        240*       < 59> INIT_FCALL_BY_NAME                                        OP2[  IS_CONST (268434673) 'dvwaButtonHelpHtmlGet' ]
+        241*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        242*       < 93> FETCH_DIM_FUNC_ARG                                RES[  IS_VAR $120 ]     OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268434671) 'help_button' ]
+        243*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $120 ] OP2[  IS_UNUSED  ]
+        244*       < 60> DO_FCALL                                      0   RES[  IS_VAR $121 ]     OP1[  IS_UNUSED  ]
+        245*       <  0> NOP                                                      
+        246*       < 53> FAST_CONCAT                                       RES[  IS_TMP_VAR ~122 ]     OP1[  IS_CONST (268434664) '+' ] OP2[ ,  IS_CV !12 ]
+        247*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~123 ]     OP1[  IS_VAR $121 ] OP2[ ,  IS_TMP_VAR ~122 ]
+        248*       < 22> ASSIGN                                                    OP1[  IS_CV !12 ] OP2[ ,  IS_TMP_VAR ~123 ]
+  268   249*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        250*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434657) 'header' ]
+        251*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268434656) 'Cache-Control%3A+no-cache%2C+must-revalidate' ]
+        252*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  269   253*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        254*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434651) 'header' ]
+        255*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268434650) 'Content-Type%3A+text%2Fhtml%3Bcharset%3Dutf-8' ]
+        256*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  270   257*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        258*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434645) 'header' ]
+        259*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268434644) 'Expires%3A+Tue%2C+23+Jun+2009+12%3A00%3A00+GMT' ]
+        260*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  272   261*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        262*       < 54> ROPE_INIT                                     3   RES[  IS_TMP_VAR ~130 ]     OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434640) '%0D%0A%3C%21DOCTYPE+html+PUBLIC+%22-%2F%2FW3C%2F%2FDTD+XHTML+1.0+Strict%2F%2FEN%22+%22http%3A%2F%2Fwww.w3.org%2FTR%2Fxhtml1%2FDTD%2Fxhtml1-strict.dtd%22%3E%0D%0A%0D%0A%3Chtml+xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxhtml%22%3E%0D%0A%0D%0A%09%3Chead%3E%0D%0A%09%09%3Cmeta+http-equiv%3D%22Content-Type%22+content%3D%22text%2Fhtml%3B+charset%3DUTF-8%22+%2F%3E%0D%0A%0D%0A%09%09%3Ctitle%3E' ]
+  280   263*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~128 ]     OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268434637) 'title' ]
+        264*       < 55> ROPE_ADD                                      1   RES[  IS_TMP_VAR ~130 ]     OP1[  IS_TMP_VAR ~130 ] OP2[ ,  IS_TMP_VAR ~128 ]
+        265*       < 56> ROPE_END                                      2   RES[  IS_TMP_VAR ~129 ]     OP1[  IS_TMP_VAR ~130 ] OP2[ ,  IS_CONST (268434635) '%3C%2Ftitle%3E%0D%0A%0D%0A%09%09%3Clink+rel%3D%22stylesheet%22+type%3D%22text%2Fcss%22+href%3D%22' ]
+  282   266*       < 99> FETCH_CONSTANT                                    RES[  IS_TMP_VAR ~132 ]     OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434634) 'DVWA_WEB_PAGE_TO_ROOT' ]
+        267*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~133 ]     OP1[  IS_TMP_VAR ~129 ] OP2[ ,  IS_TMP_VAR ~132 ]
+        268*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~134 ]     OP1[  IS_TMP_VAR ~133 ] OP2[ ,  IS_CONST (268434632) 'dvwa%2Fcss%2Fmain.css%22+%2F%3E%0D%0A%0D%0A%09%09%3Clink+rel%3D%22icon%22+type%3D%22%5Cimage%2Fico%22+href%3D%22' ]
+  284   269*       < 99> FETCH_CONSTANT                                    RES[  IS_TMP_VAR ~135 ]     OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434631) 'DVWA_WEB_PAGE_TO_ROOT' ]
+        270*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~136 ]     OP1[  IS_TMP_VAR ~134 ] OP2[ ,  IS_TMP_VAR ~135 ]
+        271*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~137 ]     OP1[  IS_TMP_VAR ~136 ] OP2[ ,  IS_CONST (268434629) 'favicon.ico%22+%2F%3E%0D%0A%0D%0A%09%09%3Cscript+type%3D%22text%2Fjavascript%22+src%3D%22' ]
+  286   272*       < 99> FETCH_CONSTANT                                    RES[  IS_TMP_VAR ~138 ]     OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434628) 'DVWA_WEB_PAGE_TO_ROOT' ]
+        273*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~139 ]     OP1[  IS_TMP_VAR ~137 ] OP2[ ,  IS_TMP_VAR ~138 ]
+        274*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~140 ]     OP1[  IS_TMP_VAR ~139 ] OP2[ ,  IS_CONST (268434626) 'dvwa%2Fjs%2FdvwaPage.js%22%3E%3C%2Fscript%3E%0D%0A%0D%0A%09%3C%2Fhead%3E%0D%0A%0D%0A%09%3Cbody+class%3D%22home%22%3E%0D%0A%09%09%3Cdiv+id%3D%22container%22%3E%0D%0A%0D%0A%09%09%09%3Cdiv+id%3D%22header%22%3E%0D%0A%0D%0A%09%09%09%09%3Cimg+src%3D%22' ]
+  295   275*       < 99> FETCH_CONSTANT                                    RES[  IS_TMP_VAR ~141 ]     OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434625) 'DVWA_WEB_PAGE_TO_ROOT' ]
+        276*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~142 ]     OP1[  IS_TMP_VAR ~140 ] OP2[ ,  IS_TMP_VAR ~141 ]
+        277*       < 54> ROPE_INIT                                     9   RES[  IS_TMP_VAR ~145 ]     OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434623) 'dvwa%2Fimages%2Flogo.png%22+alt%3D%22Damn+Vulnerable+Web+Application%22+%2F%3E%0D%0A%0D%0A%09%09%09%3C%2Fdiv%3E%0D%0A%0D%0A%09%09%09%3Cdiv+id%3D%22main_menu%22%3E%0D%0A%0D%0A%09%09%09%09%3Cdiv+id%3D%22main_menu_padded%22%3E%0D%0A%09%09%09%09' ]
+  302   278*       < 55> ROPE_ADD                                      1   RES[  IS_TMP_VAR ~145 ]     OP1[  IS_TMP_VAR ~145 ] OP2[ ,  IS_CV !2 ]
+        279*       < 55> ROPE_ADD                                      2   RES[  IS_TMP_VAR ~145 ]     OP1[  IS_TMP_VAR ~145 ] OP2[ ,  IS_CONST (268434621) '%0D%0A%09%09%09%09%3C%2Fdiv%3E%0D%0A%0D%0A%09%09%09%3C%2Fdiv%3E%0D%0A%0D%0A%09%09%09%3Cdiv+id%3D%22main_body%22%3E%0D%0A%0D%0A%09%09%09%09' ]
+  309   280*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~143 ]     OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268434618) 'body' ]
+        281*       < 55> ROPE_ADD                                      3   RES[  IS_TMP_VAR ~145 ]     OP1[  IS_TMP_VAR ~145 ] OP2[ ,  IS_TMP_VAR ~143 ]
+        282*       < 55> ROPE_ADD                                      4   RES[  IS_TMP_VAR ~145 ]     OP1[  IS_TMP_VAR ~145 ] OP2[ ,  IS_CONST (268434616) '%0D%0A%09%09%09%09%3Cbr+%2F%3E%3Cbr+%2F%3E%0D%0A%09%09%09%09' ]
+  311   283*       < 55> ROPE_ADD                                      5   RES[  IS_TMP_VAR ~145 ]     OP1[  IS_TMP_VAR ~145 ] OP2[ ,  IS_CV !11 ]
+        284*       < 55> ROPE_ADD                                      6   RES[  IS_TMP_VAR ~145 ]     OP1[  IS_TMP_VAR ~145 ] OP2[ ,  IS_CONST (268434613) '%0D%0A%0D%0A%09%09%09%3C%2Fdiv%3E%0D%0A%0D%0A%09%09%09%3Cdiv+class%3D%22clear%22%3E%0D%0A%09%09%09%3C%2Fdiv%3E%0D%0A%0D%0A%09%09%09%3Cdiv+id%3D%22system_info%22%3E%0D%0A%09%09%09%09' ]
+  319   285*       < 55> ROPE_ADD                                      7   RES[  IS_TMP_VAR ~145 ]     OP1[  IS_TMP_VAR ~145 ] OP2[ ,  IS_CV !12 ]
+        286*       < 56> ROPE_END                                      8   RES[  IS_TMP_VAR ~144 ]     OP1[  IS_TMP_VAR ~145 ] OP2[ ,  IS_CONST (268434610) '%0D%0A%09%09%09%3C%2Fdiv%3E%0D%0A%0D%0A%09%09%09%3Cdiv+id%3D%22footer%22%3E%0D%0A%0D%0A%09%09%09%09%3Cp%3EDamn+Vulnerable+Web+Application+%28DVWA%29+v' ]
+        287*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~150 ]     OP1[  IS_TMP_VAR ~142 ] OP2[ ,  IS_TMP_VAR ~144 ]
+  324   288*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268434607) 'dvwaversionget' ]
+        289*       < 60> DO_FCALL                                      0   RES[  IS_VAR $151 ]     OP1[  IS_UNUSED  ]
+        290*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~152 ]     OP1[  IS_TMP_VAR ~150 ] OP2[ ,  IS_VAR $151 ]
+        291*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~153 ]     OP1[  IS_TMP_VAR ~152 ] OP2[ ,  IS_CONST (268434602) '%3C%2Fp%3E%0D%0A%0D%0A%09%09%09%3C%2Fdiv%3E%0D%0A%0D%0A%09%09%3C%2Fdiv%3E%0D%0A%0D%0A%09%3C%2Fbody%3E%0D%0A%0D%0A%3C%2Fhtml%3E' ]
+        292*       <136> ECHO                                                      OP1[  IS_TMP_VAR ~153 ]
+  333   293*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        294*       < 62> RETURN                                                    OP1[  IS_CONST (268434597) null ]
+
+End of function dvwahtmlecho
+
+Function dvwahelphtmlecho:
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:pPage
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       E:\AAAopensource\Yama\Yama_src\app\DVWA-1.9\dvwa\includes\dvwaPage.inc.php
+function name:  dvwaHelpHtmlEcho
+number of ops:  31
+compiled vars:  !0 = $pPage
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  336     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  338     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435434) 'header' ]
+          3*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435433) 'Cache-Control%3A+no-cache%2C+must-revalidate' ]
+          4*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  339     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435428) 'header' ]
+          7*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435427) 'Content-Type%3A+text%2Fhtml%3Bcharset%3Dutf-8' ]
+          8*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  340     9*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         10*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435422) 'header' ]
+         11*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435421) 'Expires%3A+Tue%2C+23+Jun+2009+12%3A00%3A00+GMT' ]
+         12*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  342    13*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         14*       < 54> ROPE_INIT                                     3   RES[  IS_TMP_VAR ~6 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435417) '%0D%0A%3C%21DOCTYPE+html+PUBLIC+%22-%2F%2FW3C%2F%2FDTD+XHTML+1.0+Strict%2F%2FEN%22+%22http%3A%2F%2Fwww.w3.org%2FTR%2Fxhtml1%2FDTD%2Fxhtml1-strict.dtd%22%3E%0D%0A%0D%0A%3Chtml+xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxhtml%22%3E%0D%0A%0D%0A%09%3Chead%3E%0D%0A%0D%0A%09%09%3Cmeta+http-equiv%3D%22Content-Type%22+content%3D%22text%2Fhtml%3B+charset%3DUTF-8%22+%2F%3E%0D%0A%0D%0A%09%09%3Ctitle%3E' ]
+  351    15*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~4 ]       OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435414) 'title' ]
+         16*       < 55> ROPE_ADD                                      1   RES[  IS_TMP_VAR ~6 ]       OP1[  IS_TMP_VAR ~6 ] OP2[ ,  IS_TMP_VAR ~4 ]
+         17*       < 56> ROPE_END                                      2   RES[  IS_TMP_VAR ~5 ]       OP1[  IS_TMP_VAR ~6 ] OP2[ ,  IS_CONST (268435412) '%3C%2Ftitle%3E%0D%0A%0D%0A%09%09%3Clink+rel%3D%22stylesheet%22+type%3D%22text%2Fcss%22+href%3D%22' ]
+  353    18*       < 99> FETCH_CONSTANT                                    RES[  IS_TMP_VAR ~8 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435411) 'DVWA_WEB_PAGE_TO_ROOT' ]
+         19*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~9 ]       OP1[  IS_TMP_VAR ~5 ] OP2[ ,  IS_TMP_VAR ~8 ]
+         20*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~10 ]      OP1[  IS_TMP_VAR ~9 ] OP2[ ,  IS_CONST (268435409) 'dvwa%2Fcss%2Fhelp.css%22+%2F%3E%0D%0A%0D%0A%09%09%3Clink+rel%3D%22icon%22+type%3D%22%5Cimage%2Fico%22+href%3D%22' ]
+  355    21*       < 99> FETCH_CONSTANT                                    RES[  IS_TMP_VAR ~11 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435408) 'DVWA_WEB_PAGE_TO_ROOT' ]
+         22*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~12 ]      OP1[  IS_TMP_VAR ~10 ] OP2[ ,  IS_TMP_VAR ~11 ]
+         23*       < 54> ROPE_INIT                                     3   RES[  IS_TMP_VAR ~15 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435407) 'favicon.ico%22+%2F%3E%0D%0A%0D%0A%09%3C%2Fhead%3E%0D%0A%0D%0A%09%3Cbody%3E%0D%0A%0D%0A%09%3Cdiv+id%3D%22container%22%3E%0D%0A%0D%0A%09%09%09' ]
+  363    24*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~13 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435404) 'body' ]
+         25*       < 55> ROPE_ADD                                      1   RES[  IS_TMP_VAR ~15 ]      OP1[  IS_TMP_VAR ~15 ] OP2[ ,  IS_TMP_VAR ~13 ]
+         26*       < 56> ROPE_END                                      2   RES[  IS_TMP_VAR ~14 ]      OP1[  IS_TMP_VAR ~15 ] OP2[ ,  IS_CONST (268435402) '%0D%0A%0D%0A%09%09%3C%2Fdiv%3E%0D%0A%0D%0A%09%3C%2Fbody%3E%0D%0A%0D%0A%3C%2Fhtml%3E' ]
+         27*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~17 ]      OP1[  IS_TMP_VAR ~12 ] OP2[ ,  IS_TMP_VAR ~14 ]
+         28*       <136> ECHO                                                      OP1[  IS_TMP_VAR ~17 ]
+  370    29*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         30*       < 62> RETURN                                                    OP1[  IS_CONST (268435395) null ]
+
+End of function dvwahelphtmlecho
+
+Function dvwasourcehtmlecho:
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:pPage
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       E:\AAAopensource\Yama\Yama_src\app\DVWA-1.9\dvwa\includes\dvwaPage.inc.php
+function name:  dvwaSourceHtmlEcho
+number of ops:  31
+compiled vars:  !0 = $pPage
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  373     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  375     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435434) 'header' ]
+          3*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435433) 'Cache-Control%3A+no-cache%2C+must-revalidate' ]
+          4*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  376     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435428) 'header' ]
+          7*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435427) 'Content-Type%3A+text%2Fhtml%3Bcharset%3Dutf-8' ]
+          8*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  377     9*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         10*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435422) 'header' ]
+         11*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435421) 'Expires%3A+Tue%2C+23+Jun+2009+12%3A00%3A00+GMT' ]
+         12*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  379    13*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         14*       < 54> ROPE_INIT                                     3   RES[  IS_TMP_VAR ~6 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435417) '%0D%0A%3C%21DOCTYPE+html+PUBLIC+%22-%2F%2FW3C%2F%2FDTD+XHTML+1.0+Strict%2F%2FEN%22+%22http%3A%2F%2Fwww.w3.org%2FTR%2Fxhtml1%2FDTD%2Fxhtml1-strict.dtd%22%3E%0D%0A%0D%0A%3Chtml+xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxhtml%22%3E%0D%0A%0D%0A%09%3Chead%3E%0D%0A%0D%0A%09%09%3Cmeta+http-equiv%3D%22Content-Type%22+content%3D%22text%2Fhtml%3B+charset%3DUTF-8%22+%2F%3E%0D%0A%0D%0A%09%09%3Ctitle%3E' ]
+  388    15*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~4 ]       OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435414) 'title' ]
+         16*       < 55> ROPE_ADD                                      1   RES[  IS_TMP_VAR ~6 ]       OP1[  IS_TMP_VAR ~6 ] OP2[ ,  IS_TMP_VAR ~4 ]
+         17*       < 56> ROPE_END                                      2   RES[  IS_TMP_VAR ~5 ]       OP1[  IS_TMP_VAR ~6 ] OP2[ ,  IS_CONST (268435412) '%3C%2Ftitle%3E%0D%0A%0D%0A%09%09%3Clink+rel%3D%22stylesheet%22+type%3D%22text%2Fcss%22+href%3D%22' ]
+  390    18*       < 99> FETCH_CONSTANT                                    RES[  IS_TMP_VAR ~8 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435411) 'DVWA_WEB_PAGE_TO_ROOT' ]
+         19*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~9 ]       OP1[  IS_TMP_VAR ~5 ] OP2[ ,  IS_TMP_VAR ~8 ]
+         20*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~10 ]      OP1[  IS_TMP_VAR ~9 ] OP2[ ,  IS_CONST (268435409) 'dvwa%2Fcss%2Fsource.css%22+%2F%3E%0D%0A%0D%0A%09%09%3Clink+rel%3D%22icon%22+type%3D%22%5Cimage%2Fico%22+href%3D%22' ]
+  392    21*       < 99> FETCH_CONSTANT                                    RES[  IS_TMP_VAR ~11 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435408) 'DVWA_WEB_PAGE_TO_ROOT' ]
+         22*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~12 ]      OP1[  IS_TMP_VAR ~10 ] OP2[ ,  IS_TMP_VAR ~11 ]
+         23*       < 54> ROPE_INIT                                     3   RES[  IS_TMP_VAR ~15 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435407) 'favicon.ico%22+%2F%3E%0D%0A%0D%0A%09%3C%2Fhead%3E%0D%0A%0D%0A%09%3Cbody%3E%0D%0A%0D%0A%09%09%3Cdiv+id%3D%22container%22%3E%0D%0A%0D%0A%09%09%09' ]
+  400    24*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~13 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435404) 'body' ]
+         25*       < 55> ROPE_ADD                                      1   RES[  IS_TMP_VAR ~15 ]      OP1[  IS_TMP_VAR ~15 ] OP2[ ,  IS_TMP_VAR ~13 ]
+         26*       < 56> ROPE_END                                      2   RES[  IS_TMP_VAR ~14 ]      OP1[  IS_TMP_VAR ~15 ] OP2[ ,  IS_CONST (268435402) '%0D%0A%0D%0A%09%09%3C%2Fdiv%3E%0D%0A%0D%0A%09%3C%2Fbody%3E%0D%0A%0D%0A%3C%2Fhtml%3E' ]
+         27*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~17 ]      OP1[  IS_TMP_VAR ~12 ] OP2[ ,  IS_TMP_VAR ~14 ]
+         28*       <136> ECHO                                                      OP1[  IS_TMP_VAR ~17 ]
+  407    29*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         30*       < 62> RETURN                                                    OP1[  IS_CONST (268435395) null ]
+
+End of function dvwasourcehtmlecho
+
+Function dvwaexternallinkurlget:
+[*]Start of arg_info extract:
+[*]arg_info num_args:2
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:pLink
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:text
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       E:\AAAopensource\Yama\Yama_src\app\DVWA-1.9\dvwa\includes\dvwaPage.inc.php
+function name:  dvwaExternalLinkUrlGet
+number of ops:  20
+compiled vars:  !0 = $pLink, !1 = $text
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  410     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 64> RECV_INIT                                         RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435446) null ]
+  411     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       <123> TYPE_CHECK                                    2   RES[  IS_TMP_VAR ~2 ]       OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+          4*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~2 ] OP2[ , ->12 ]
+  412     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~3 ]       OP1[  IS_CONST (268435437) '%3Ca+href%3D%22http%3A%2F%2Fhiderefer.com%2F%3F' ] OP2[ ,  IS_CV !0 ]
+          7*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~4 ]       OP1[  IS_TMP_VAR ~3 ] OP2[ ,  IS_CONST (268435436) '%22+target%3D%22_blank%22%3E' ]
+          8*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~5 ]       OP1[  IS_TMP_VAR ~4 ] OP2[ ,  IS_CV !0 ]
+          9*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~6 ]       OP1[  IS_TMP_VAR ~5 ] OP2[ ,  IS_CONST (268435433) '%3C%2Fa%3E' ]
+         10*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~6 ]
+         11*       < 42> JMP                                                       OP1[ ->18 ]
+  415    12*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         13*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~7 ]       OP1[  IS_CONST (268435426) '%3Ca+href%3D%22http%3A%2F%2Fhiderefer.com%2F%3F' ] OP2[ ,  IS_CV !0 ]
+         14*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~8 ]       OP1[  IS_TMP_VAR ~7 ] OP2[ ,  IS_CONST (268435425) '%22+target%3D%22_blank%22%3E' ]
+         15*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~9 ]       OP1[  IS_TMP_VAR ~8 ] OP2[ ,  IS_CV !1 ]
+         16*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~10 ]      OP1[  IS_TMP_VAR ~9 ] OP2[ ,  IS_CONST (268435422) '%3C%2Fa%3E' ]
+         17*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~10 ]
+  417    18*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         19*       < 62> RETURN                                                    OP1[  IS_CONST (268435417) null ]
+
+End of function dvwaexternallinkurlget
+
+Function dvwabuttonhelphtmlget:
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:pId
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       E:\AAAopensource\Yama\Yama_src\app\DVWA-1.9\dvwa\includes\dvwaPage.inc.php
+function name:  dvwaButtonHelpHtmlGet
+number of ops:  17
+compiled vars:  !0 = $pId, !1 = $security
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  420     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  421     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435444) 'dvwasecuritylevelget' ]
+          3*       < 60> DO_FCALL                                      0   RES[  IS_VAR $2 ]       OP1[  IS_UNUSED  ]
+          4*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_VAR $2 ]
+  422     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       < 99> FETCH_CONSTANT                                    RES[  IS_TMP_VAR ~4 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435437) 'DVWA_WEB_PAGE_TO_ROOT' ]
+          7*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~5 ]       OP1[  IS_CONST (268435437) '%3Cinput+type%3D%22button%22+value%3D%22View+Help%22+class%3D%22popup_button%22+onClick%3D%22javascript%3ApopUp%28+%27' ] OP2[ ,  IS_TMP_VAR ~4 ]
+          8*       < 54> ROPE_INIT                                     5   RES[  IS_TMP_VAR ~7 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435436) 'vulnerabilities%2Fview_help.php%3Fid%3D' ]
+          9*       < 55> ROPE_ADD                                      1   RES[  IS_TMP_VAR ~7 ]       OP1[  IS_TMP_VAR ~7 ] OP2[ ,  IS_CV !0 ]
+         10*       < 55> ROPE_ADD                                      2   RES[  IS_TMP_VAR ~7 ]       OP1[  IS_TMP_VAR ~7 ] OP2[ ,  IS_CONST (268435433) '%26security%3D' ]
+         11*       < 55> ROPE_ADD                                      3   RES[  IS_TMP_VAR ~7 ]       OP1[  IS_TMP_VAR ~7 ] OP2[ ,  IS_CV !1 ]
+         12*       < 56> ROPE_END                                      4   RES[  IS_TMP_VAR ~6 ]       OP1[  IS_TMP_VAR ~7 ] OP2[ ,  IS_CONST (268435430) '%27+%29%22%3E' ]
+         13*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~10 ]      OP1[  IS_TMP_VAR ~5 ] OP2[ ,  IS_TMP_VAR ~6 ]
+         14*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~10 ]
+  423    15*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         16*       < 62> RETURN                                                    OP1[  IS_CONST (268435423) null ]
+
+End of function dvwabuttonhelphtmlget
+
+Function dvwabuttonsourcehtmlget:
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:pId
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       E:\AAAopensource\Yama\Yama_src\app\DVWA-1.9\dvwa\includes\dvwaPage.inc.php
+function name:  dvwaButtonSourceHtmlGet
+number of ops:  17
+compiled vars:  !0 = $pId, !1 = $security
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  426     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  427     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435444) 'dvwasecuritylevelget' ]
+          3*       < 60> DO_FCALL                                      0   RES[  IS_VAR $2 ]       OP1[  IS_UNUSED  ]
+          4*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_VAR $2 ]
+  428     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       < 99> FETCH_CONSTANT                                    RES[  IS_TMP_VAR ~4 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435437) 'DVWA_WEB_PAGE_TO_ROOT' ]
+          7*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~5 ]       OP1[  IS_CONST (268435437) '%3Cinput+type%3D%22button%22+value%3D%22View+Source%22+class%3D%22popup_button%22+onClick%3D%22javascript%3ApopUp%28+%27' ] OP2[ ,  IS_TMP_VAR ~4 ]
+          8*       < 54> ROPE_INIT                                     5   RES[  IS_TMP_VAR ~7 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435436) 'vulnerabilities%2Fview_source.php%3Fid%3D' ]
+          9*       < 55> ROPE_ADD                                      1   RES[  IS_TMP_VAR ~7 ]       OP1[  IS_TMP_VAR ~7 ] OP2[ ,  IS_CV !0 ]
+         10*       < 55> ROPE_ADD                                      2   RES[  IS_TMP_VAR ~7 ]       OP1[  IS_TMP_VAR ~7 ] OP2[ ,  IS_CONST (268435433) '%26security%3D' ]
+         11*       < 55> ROPE_ADD                                      3   RES[  IS_TMP_VAR ~7 ]       OP1[  IS_TMP_VAR ~7 ] OP2[ ,  IS_CV !1 ]
+         12*       < 56> ROPE_END                                      4   RES[  IS_TMP_VAR ~6 ]       OP1[  IS_TMP_VAR ~7 ] OP2[ ,  IS_CONST (268435430) '%27+%29%22%3E' ]
+         13*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~10 ]      OP1[  IS_TMP_VAR ~5 ] OP2[ ,  IS_TMP_VAR ~6 ]
+         14*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~10 ]
+  429    15*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         16*       < 62> RETURN                                                    OP1[  IS_CONST (268435423) null ]
+
+End of function dvwabuttonsourcehtmlget
+
+Function dvwadatabaseconnect:
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       E:\AAAopensource\Yama\Yama_src\app\DVWA-1.9\dvwa\includes\dvwaPage.inc.php
+function name:  dvwaDatabaseConnect
+number of ops:  98
+compiled vars:  !0 = $_DVWA, !1 = $DBMS, !2 = $db, !3 = $DBMS_errorFunc
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  455     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       <168> BIND_GLOBAL                                               OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435404) '_DVWA' ]
+  456     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       <168> BIND_GLOBAL                                               OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435401) 'DBMS' ]
+  458     4*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          5*       <168> BIND_GLOBAL                                               OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435398) 'db' ]
+  460     6*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          7*       < 18> IS_EQUAL                                          RES[  IS_TMP_VAR ~4 ]       OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435395) 'MySQL' ]
+          8*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~4 ] OP2[ , ->80 ]
+  461     9*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         10*       < 57> BEGIN_SILENCE                                     RES[  IS_TMP_VAR ~5 ]       OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         11*       < 59> INIT_FCALL_BY_NAME                                        OP2[  IS_CONST (268435388) 'mysql_connect' ]
+         12*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         13*       < 93> FETCH_DIM_FUNC_ARG                                RES[  IS_VAR $6 ]       OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435386) 'db_server' ]
+         14*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $6 ] OP2[  IS_UNUSED  ]
+         15*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         16*       < 93> FETCH_DIM_FUNC_ARG                                RES[  IS_VAR $7 ]       OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435381) 'db_user' ]
+         17*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $7 ] OP2[  IS_UNUSED  ]
+         18*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         19*       < 93> FETCH_DIM_FUNC_ARG                                RES[  IS_VAR $8 ]       OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435376) 'db_password' ]
+         20*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $8 ] OP2[  IS_UNUSED  ]
+         21*       < 60> DO_FCALL                                      0   RES[  IS_VAR $9 ]       OP1[  IS_UNUSED  ]
+         22*       < 58> END_SILENCE                                               OP1[  IS_TMP_VAR ~5 ] OP2[  IS_UNUSED  ]
+         23*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~10 ]      OP1[  IS_VAR $9 ]
+         24*       < 47> JMPNZ_EX                                          RES[  IS_TMP_VAR ~10 ]      OP1[  IS_TMP_VAR ~10 ] OP2[ , ->34 ]
+  462    25*       < 57> BEGIN_SILENCE                                     RES[  IS_TMP_VAR ~11 ]      OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         26*       < 59> INIT_FCALL_BY_NAME                                        OP2[  IS_CONST (268435363) 'mysql_select_db' ]
+         27*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         28*       < 93> FETCH_DIM_FUNC_ARG                                RES[  IS_VAR $12 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435361) 'db_database' ]
+         29*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $12 ] OP2[  IS_UNUSED  ]
+         30*       < 60> DO_FCALL                                      0   RES[  IS_VAR $13 ]      OP1[  IS_UNUSED  ]
+         31*       < 58> END_SILENCE                                               OP1[  IS_TMP_VAR ~11 ] OP2[  IS_UNUSED  ]
+         32*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~14 ]      OP1[  IS_VAR $13 ]
+         33*       < 52> BOOL                                              RES[  IS_TMP_VAR ~10 ]      OP1[  IS_TMP_VAR ~14 ]
+         34*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~10 ] OP2[ , ->49 ]
+  464    35*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         36*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435346) 'dvwalogout' ]
+         37*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  465    38*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         39*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435341) 'dvwamessagepush' ]
+         40*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~16 ]      OP1[  IS_CONST (268435340) 'Unable+to+connect+to+the+database.%3Cbr+%2F%3E' ] OP2[ ,  IS_CV !3 ]
+         41*       < 65> SEND_VAL                                                  OP1[  IS_TMP_VAR ~16 ]
+         42*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  466    43*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         44*       < 59> INIT_FCALL_BY_NAME                                        OP2[  IS_CONST (268435333) 'dvwaRedirect' ]
+         45*       < 99> FETCH_CONSTANT                                    RES[  IS_TMP_VAR ~18 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435333) 'DVWA_WEB_PAGE_TO_ROOT' ]
+         46*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~19 ]      OP1[  IS_TMP_VAR ~18 ] OP2[ ,  IS_CONST (268435333) 'setup.php' ]
+         47*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~19 ] OP2[  IS_UNUSED  ]
+         48*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  469    49*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         50*       < 68> NEW                                               RES[  IS_VAR $21 ]      OP1[ 'PDO' ]
+         51*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~22 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435326) 'db_server' ]
+         52*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~23 ]      OP1[  IS_CONST (268435325) 'mysql%3Ahost%3D' ] OP2[ ,  IS_TMP_VAR ~22 ]
+         53*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~24 ]      OP1[  IS_TMP_VAR ~23 ] OP2[ ,  IS_CONST (268435324) '%3Bdbname%3D' ]
+         54*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~25 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435323) 'db_database' ]
+         55*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~26 ]      OP1[  IS_TMP_VAR ~24 ] OP2[ ,  IS_TMP_VAR ~25 ]
+         56*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~27 ]      OP1[  IS_TMP_VAR ~26 ] OP2[ ,  IS_CONST (268435320) '%3Bcharset%3Dutf8' ]
+         57*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~27 ] OP2[  IS_UNUSED  ]
+         58*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         59*       < 93> FETCH_DIM_FUNC_ARG                                RES[  IS_VAR $28 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435315) 'db_user' ]
+         60*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $28 ] OP2[  IS_UNUSED  ]
+         61*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         62*       < 93> FETCH_DIM_FUNC_ARG                                RES[  IS_VAR $29 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435310) 'db_password' ]
+         63*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $29 ] OP2[  IS_UNUSED  ]
+         64*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         65*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_VAR $21 ]
+  470    66*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         67*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435301) 'setAttribute' ]
+         68*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~32 ]      OP1[  IS_CONST (268435302) 'PDO' ] OP2[ ,  IS_CONST (268435301) 'ATTR_ERRMODE' ]
+         69*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~32 ] OP2[  IS_UNUSED  ]
+         70*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~33 ]      OP1[  IS_CONST (268435301) 'PDO' ] OP2[ ,  IS_CONST (268435300) 'ERRMODE_EXCEPTION' ]
+         71*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~33 ] OP2[  IS_UNUSED  ]
+         72*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  471    73*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         74*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435295) 'setAttribute' ]
+         75*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~35 ]      OP1[  IS_CONST (268435296) 'PDO' ] OP2[ ,  IS_CONST (268435295) 'ATTR_EMULATE_PREPARES' ]
+         76*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~35 ] OP2[  IS_UNUSED  ]
+         77*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435294) <false> ] OP2[  IS_UNUSED  ]
+         78*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         79*       < 42> JMP                                                       OP1[ ->96 ]
+  473    80*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         81*       < 18> IS_EQUAL                                          RES[  IS_TMP_VAR ~37 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435287) 'PGSQL' ]
+         82*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~37 ] OP2[ , ->91 ]
+  476    83*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         84*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435282) 'dvwamessagepush' ]
+         85*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435281) 'PostgreSQL+is+not+yet+fully+supported.' ]
+         86*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  477    87*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         88*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435276) 'dvwapagereload' ]
+         89*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         90*       < 42> JMP                                                       OP1[ ->96 ]
+  480    91*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         92*       < 54> ROPE_INIT                                     3   RES[  IS_TMP_VAR ~41 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435269) 'Unknown+' ]
+         93*       < 55> ROPE_ADD                                      1   RES[  IS_TMP_VAR ~41 ]      OP1[  IS_TMP_VAR ~41 ] OP2[ ,  IS_CV !1 ]
+         94*       < 56> ROPE_END                                      2   RES[  IS_TMP_VAR ~40 ]      OP1[  IS_TMP_VAR ~41 ] OP2[ ,  IS_CONST (268435266) '+selected.' ]
+         95*       < 79> EXIT                                                      OP1[  IS_TMP_VAR ~40 ] OP2[  IS_UNUSED  ]
+  482    96*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         97*       < 62> RETURN                                                    OP1[  IS_CONST (268435261) null ]
+
+End of function dvwadatabaseconnect
+
+Function dvwaredirect:
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:pLocation
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       E:\AAAopensource\Yama\Yama_src\app\DVWA-1.9\dvwa\includes\dvwaPage.inc.php
+function name:  dvwaRedirect
+number of ops:  14
+compiled vars:  !0 = $pLocation
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  487     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  488     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435448) 'session_commit' ]
+          3*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  489     4*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          5*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435443) 'header' ]
+          6*       <  0> NOP                                                      
+          7*       < 53> FAST_CONCAT                                       RES[  IS_TMP_VAR ~2 ]       OP1[  IS_CONST (268435440) 'Location%3A+' ] OP2[ ,  IS_CV !0 ]
+          8*       < 65> SEND_VAL                                                  OP1[  IS_TMP_VAR ~2 ]
+          9*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  490    10*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         11*       < 79> EXIT                                                      OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+  491    12*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         13*       < 62> RETURN                                                    OP1[  IS_CONST (268435429) null ]
+
+End of function dvwaredirect
+
+Function dvwaguestbook:
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       E:\AAAopensource\Yama\Yama_src\app\DVWA-1.9\dvwa\includes\dvwaPage.inc.php
+function name:  dvwaGuestbook
+number of ops:  53
+compiled vars:  !0 = $query, !1 = $result, !2 = $guestbook, !3 = $name, !4 = $row, !5 = $comment
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  495     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 22> ASSIGN                                                    OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435435) 'SELECT+name%2C+comment+FROM+guestbook' ]
+  496     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       < 59> INIT_FCALL_BY_NAME                                        OP2[  IS_CONST (268435432) 'mysql_query' ]
+          4*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          5*       < 60> DO_FCALL                                      0   RES[  IS_VAR $7 ]       OP1[  IS_UNUSED  ]
+          6*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_VAR $7 ]
+  498     7*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          8*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435424) '' ]
+  500     9*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         10*       < 42> JMP                                                       OP1[ ->44 ]
+  501    11*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         12*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435417) 'dvwasecuritylevelget' ]
+         13*       < 60> DO_FCALL                                      0   RES[  IS_VAR $10 ]      OP1[  IS_UNUSED  ]
+         14*       < 18> IS_EQUAL                                          RES[  IS_TMP_VAR ~11 ]      OP1[  IS_VAR $10 ] OP2[ ,  IS_CONST (268435414) 'impossible' ]
+         15*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~11 ] OP2[ , ->29 ]
+  502    16*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         17*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435409) 'htmlspecialchars' ]
+         18*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~12 ]      OP1[  IS_CV !4 ] OP2[ ,  IS_CONST (268435408) 0 ]
+         19*       < 65> SEND_VAL                                                  OP1[  IS_TMP_VAR ~12 ]
+         20*       < 60> DO_FCALL                                      0   RES[  IS_VAR $13 ]      OP1[  IS_UNUSED  ]
+         21*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_VAR $13 ]
+  503    22*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         23*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435399) 'htmlspecialchars' ]
+         24*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~15 ]      OP1[  IS_CV !4 ] OP2[ ,  IS_CONST (268435398) 1 ]
+         25*       < 65> SEND_VAL                                                  OP1[  IS_TMP_VAR ~15 ]
+         26*       < 60> DO_FCALL                                      0   RES[  IS_VAR $16 ]      OP1[  IS_UNUSED  ]
+         27*       < 22> ASSIGN                                                    OP1[  IS_CV !5 ] OP2[ ,  IS_VAR $16 ]
+         28*       < 42> JMP                                                       OP1[ ->35 ]
+  506    29*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         30*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~18 ]      OP1[  IS_CV !4 ] OP2[ ,  IS_CONST (268435387) 0 ]
+         31*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_TMP_VAR ~18 ]
+  507    32*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         33*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~20 ]      OP1[  IS_CV !4 ] OP2[ ,  IS_CONST (268435382) 1 ]
+         34*       < 22> ASSIGN                                                    OP1[  IS_CV !5 ] OP2[ ,  IS_TMP_VAR ~20 ]
+  510    35*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         36*       < 54> ROPE_INIT                                     3   RES[  IS_TMP_VAR ~23 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435377) '%3Cdiv+id%3D%22guestbook_comments%22%3EName%3A+' ]
+         37*       < 55> ROPE_ADD                                      1   RES[  IS_TMP_VAR ~23 ]      OP1[  IS_TMP_VAR ~23 ] OP2[ ,  IS_CV !3 ]
+         38*       < 56> ROPE_END                                      2   RES[  IS_TMP_VAR ~22 ]      OP1[  IS_TMP_VAR ~23 ] OP2[ ,  IS_CONST (268435374) '%3Cbr+%2F%3E' ]
+         39*       < 54> ROPE_INIT                                     3   RES[  IS_TMP_VAR ~26 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435373) 'Message%3A+' ]
+         40*       < 55> ROPE_ADD                                      1   RES[  IS_TMP_VAR ~26 ]      OP1[  IS_TMP_VAR ~26 ] OP2[ ,  IS_CV !5 ]
+         41*       < 56> ROPE_END                                      2   RES[  IS_TMP_VAR ~25 ]      OP1[  IS_TMP_VAR ~26 ] OP2[ ,  IS_CONST (268435370) '%3Cbr+%2F%3E%3C%2Fdiv%3E%0A' ]
+         42*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~28 ]      OP1[  IS_TMP_VAR ~22 ] OP2[ ,  IS_TMP_VAR ~25 ]
+         43*       < 26> ASSIGN_OP                    .=               8           OP1[  IS_CV !2 ] OP2[ ,  IS_TMP_VAR ~28 ]
+  500    44*       < 59> INIT_FCALL_BY_NAME                                        OP2[  IS_CONST (268435365) 'mysql_fetch_row' ]
+         45*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         46*       < 60> DO_FCALL                                      0   RES[  IS_VAR $30 ]      OP1[  IS_UNUSED  ]
+         47*       < 22> ASSIGN                                            RES[  IS_TMP_VAR ~31 ]      OP1[  IS_CV !4 ] OP2[ ,  IS_VAR $30 ]
+         48*       < 44> JMPNZ                                                     OP1[  IS_TMP_VAR ~31 ] OP2[ , ->11 ]
+  512    49*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         50*       < 62> RETURN                                                    OP1[  IS_CV !2 ]
+  513    51*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         52*       < 62> RETURN                                                    OP1[  IS_CONST (268435351) null ]
+
+End of function dvwaguestbook
+
+Function checktoken:
+[*]Start of arg_info extract:
+[*]arg_info num_args:3
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:user_token
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:session_token
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**2**
+[*]name:returnURL
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       E:\AAAopensource\Yama\Yama_src\app\DVWA-1.9\dvwa\includes\dvwaPage.inc.php
+function name:  checkToken
+number of ops:  20
+compiled vars:  !0 = $user_token, !1 = $session_token, !2 = $returnURL
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  518     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 63> RECV                                              RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ]
+          2*       < 63> RECV                                              RES[  IS_CV !2 ]       OP1[  IS_UNUSED  ]
+  519     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       < 17> IS_NOT_IDENTICAL                                  RES[  IS_TMP_VAR ~3 ]       OP1[  IS_CV !0 ] OP2[ ,  IS_CV !1 ]
+          5*       < 47> JMPNZ_EX                                          RES[  IS_TMP_VAR ~3 ]       OP1[  IS_TMP_VAR ~3 ] OP2[ , ->9 ]
+          6*       <154> ISSET_ISEMPTY_CV                                  RES[  IS_TMP_VAR ~4 ]       OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+          7*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~5 ]       OP1[  IS_TMP_VAR ~4 ]
+          8*       < 52> BOOL                                              RES[  IS_TMP_VAR ~3 ]       OP1[  IS_TMP_VAR ~5 ]
+          9*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~3 ] OP2[ , ->18 ]
+  520    10*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         11*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435430) 'dvwamessagepush' ]
+         12*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435429) 'CSRF+token+is+incorrect' ]
+         13*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  521    14*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         15*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435424) 'dvwaredirect' ]
+         16*       <117> SEND_VAR                                                  OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         17*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  523    18*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         19*       < 62> RETURN                                                    OP1[  IS_CONST (268435417) null ]
+
+End of function checktoken
+
+Function generatesessiontoken:
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       E:\AAAopensource\Yama\Yama_src\app\DVWA-1.9\dvwa\includes\dvwaPage.inc.php
+function name:  generateSessionToken
+number of ops:  18
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  526     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 89> FETCH_IS                                          RES[  IS_TMP_VAR ~0 ]       OP1[  IS_CONST (268435445) '_SESSION' ] OP2[  IS_UNUSED  ]
+          2*       <115> ISSET_ISEMPTY_DIM_OBJ                         0   RES[  IS_TMP_VAR ~1 ]       OP1[  IS_TMP_VAR ~0 ] OP2[ ,  IS_CONST (268435444) 'session_token' ]
+          3*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~1 ] OP2[ , ->7 ]
+  527     4*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          5*       < 59> INIT_FCALL_BY_NAME                                        OP2[  IS_CONST (268435439) 'destroySessionToken' ]
+          6*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  529     7*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          8*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435437) 'md5' ]
+          9*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435436) 'uniqid' ]
+         10*       < 60> DO_FCALL                                      0   RES[  IS_VAR $5 ]       OP1[  IS_UNUSED  ]
+         11*       <117> SEND_VAR                                                  OP1[  IS_VAR $5 ] OP2[  IS_UNUSED  ]
+         12*       < 60> DO_FCALL                                      0   RES[  IS_VAR $6 ]       OP1[  IS_UNUSED  ]
+         13*       < 83> FETCH_W                      global               RES[  IS_VAR $3 ]       OP1[  IS_CONST (268435425) '_SESSION' ]
+         14*       < 23> ASSIGN_DIM                                                OP1[  IS_VAR $3 ] OP2[ ,  IS_CONST (268435424) 'session_token' ]
+         15*       <137> OP_DATA                                                   OP1[  IS_VAR $6 ] OP2[  IS_UNUSED  ]
+  530    16*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         17*       < 62> RETURN                                                    OP1[  IS_CONST (268435421) null ]
+
+End of function generatesessiontoken
+
+Function destroysessiontoken:
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       E:\AAAopensource\Yama\Yama_src\app\DVWA-1.9\dvwa\includes\dvwaPage.inc.php
+function name:  destroySessionToken
+number of ops:  5
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  533     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 95> FETCH_UNSET                                       RES[  IS_VAR $0 ]       OP1[  IS_CONST (268435451) '_SESSION' ] OP2[  IS_UNUSED  ]
+          2*       < 75> UNSET_DIM                                                 OP1[  IS_VAR $0 ] OP2[ ,  IS_CONST (268435450) 'session_token' ]
+  534     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       < 62> RETURN                                                    OP1[  IS_CONST (268435447) null ]
+
+End of function destroysessiontoken
+
+Function tokenfield:
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       E:\AAAopensource\Yama\Yama_src\app\DVWA-1.9\dvwa\includes\dvwaPage.inc.php
+function name:  tokenField
+number of ops:  9
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  537     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 54> ROPE_INIT                                     3   RES[  IS_TMP_VAR ~3 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435451) '%3Cinput+type%3D%27hidden%27+name%3D%27user_token%27+value%3D%27' ]
+          2*       < 80> FETCH_R                      global               RES[  IS_TMP_VAR ~0 ]       OP1[  IS_CONST (268435447) '_SESSION' ]
+          3*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~1 ]       OP1[  IS_TMP_VAR ~0 ] OP2[ ,  IS_CONST (268435446) 'session_token' ]
+          4*       < 55> ROPE_ADD                                      1   RES[  IS_TMP_VAR ~3 ]       OP1[  IS_TMP_VAR ~3 ] OP2[ ,  IS_TMP_VAR ~1 ]
+          5*       < 56> ROPE_END                                      2   RES[  IS_TMP_VAR ~2 ]       OP1[  IS_TMP_VAR ~3 ] OP2[ ,  IS_CONST (268435444) '%27+%2F%3E' ]
+          6*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~2 ]
+  538     7*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          8*       < 62> RETURN                                                    OP1[  IS_CONST (268435439) null ]
+
+End of function tokenfield
+

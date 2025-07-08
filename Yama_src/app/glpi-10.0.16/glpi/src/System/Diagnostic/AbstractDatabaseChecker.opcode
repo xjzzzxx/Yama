@@ -1,0 +1,329 @@
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\System\Diagnostic\AbstractDatabaseChecker.php
+function name:  (null)
+number of ops:  6
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   36     0*       <  0> NOP                                                      
+   38     1*       <  0> NOP                                                      
+   50     2*       <  0> NOP                                                      
+   57     3*       <  0> NOP                                                      
+  160     4*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          5*       < 62> RETURN                                                    OP1[  IS_CONST (268435445) 1 ]
+
+Class Glpi\System\Diagnostic\AbstractDatabaseChecker:
+[+]Class Parent Name: NULL
+End Trait extract
+Start Properties extract:
+Key: db, Value: UNINIT, Type: Normal
+End Properties extract.
+
+Function __construct:
+[+]Function Source Class Name: Glpi\System\Diagnostic\AbstractDatabaseChecker
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:db
+[*]type:DBmysql
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\System\Diagnostic\AbstractDatabaseChecker.php
+function name:  __construct
+number of ops:  6
+compiled vars:  !0 = $db
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   69     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+   71     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435450) 'db' ]
+          3*       <137> OP_DATA                                                   OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+   72     4*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          5*       < 62> RETURN                                                    OP1[  IS_CONST (268435445) null ]
+
+End of function __construct
+
+Function getcolumnsnames:
+[+]Function Source Class Name: Glpi\System\Diagnostic\AbstractDatabaseChecker
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:array
+
+[*]ArgInfoNo**0**
+[*]name:table_name
+[*]type:string
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\System\Diagnostic\AbstractDatabaseChecker.php
+function name:  getColumnsNames
+number of ops:  18
+compiled vars:  !0 = $table_name
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   81     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+   83     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435444) 'fetchTableColumns' ]
+          3*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          4*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+   85     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435438) 'Glpi%5CSystem%5CDiagnostic%5Carray_column' ]
+          7*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          8*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $2 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435437) 'columns' ]
+          9*       < 93> FETCH_DIM_FUNC_ARG                                RES[  IS_VAR $3 ]       OP1[  IS_VAR $2 ] OP2[ ,  IS_CV !0 ]
+         10*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $3 ] OP2[  IS_UNUSED  ]
+         11*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435432) 'Field' ] OP2[  IS_UNUSED  ]
+         12*       < 60> DO_FCALL                                      0   RES[  IS_VAR $4 ]       OP1[  IS_UNUSED  ]
+         13*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_VAR $4 ] OP2[  IS_UNUSED  ]
+         14*       < 62> RETURN                                                    OP1[  IS_VAR $4 ]
+   86    15*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         16*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         17*       < 62> RETURN                                                    OP1[  IS_CONST (268435421) null ]
+
+End of function getcolumnsnames
+
+Function getcolumntype:
+[+]Function Source Class Name: Glpi\System\Diagnostic\AbstractDatabaseChecker
+[*]Start of arg_info extract:
+[*]arg_info num_args:2
+[*]Function return type:?string
+
+[*]ArgInfoNo**0**
+[*]name:table_name
+[*]type:string
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:column_name
+[*]type:string
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\System\Diagnostic\AbstractDatabaseChecker.php
+function name:  getColumnType
+number of ops:  27
+compiled vars:  !0 = $table_name, !1 = $column_name, !2 = $column_specs
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   96     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 63> RECV                                              RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ]
+   98     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435443) 'fetchTableColumns' ]
+          4*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          5*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  100     6*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          7*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~4 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435437) 'columns' ]
+          8*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~5 ]       OP1[  IS_TMP_VAR ~4 ] OP2[ ,  IS_CV !0 ]
+          9*       < 77> FE_RESET_R                                        RES[  IS_VAR $6 ]       OP1[  IS_TMP_VAR ~5 ] OP2[ , ->21 ]
+         10*       < 78> FE_FETCH_R                                                OP1[  IS_VAR $6 ] OP2[ ,  IS_CV !2 ] EXT_JMP_REL[ , ->21 ]
+  101    11*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         12*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~7 ]       OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435428) 'Field' ]
+         13*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~8 ]       OP1[  IS_CV !1 ] OP2[ ,  IS_TMP_VAR ~7 ]
+         14*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~8 ] OP2[ , ->20 ]
+  102    15*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         16*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~9 ]       OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435421) 'Type' ]
+         17*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_TMP_VAR ~9 ] OP2[  IS_UNUSED  ]
+         18*       <127> FE_FREE                                                   OP1[  IS_VAR $6 ] OP2[  IS_UNUSED  ]
+         19*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~9 ]
+  100    20*       < 42> JMP                                                       OP1[ ->10 ]
+         21*       <127> FE_FREE                                                   OP1[  IS_VAR $6 ] OP2[  IS_UNUSED  ]
+  106    22*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         23*       < 62> RETURN                                                    OP1[  IS_CONST (268435408) null ]
+  107    24*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         25*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         26*       < 62> RETURN                                                    OP1[  IS_CONST (268435403) null ]
+
+End of function getcolumntype
+
+Function fetchtablecolumns:
+[+]Function Source Class Name: Glpi\System\Diagnostic\AbstractDatabaseChecker
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:void
+
+[*]ArgInfoNo**0**
+[*]name:table_name
+[*]type:string
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\System\Diagnostic\AbstractDatabaseChecker.php
+function name:  fetchTableColumns
+number of ops:  42
+compiled vars:  !0 = $table_name, !1 = $columns_res
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  116     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  118     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435428) 'Glpi%5CSystem%5CDiagnostic%5Carray_key_exists' ]
+          3*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          4*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          5*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $2 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435425) 'columns' ]
+          6*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $2 ] OP2[  IS_UNUSED  ]
+          7*       < 60> DO_FCALL                                      0   RES[  IS_VAR $3 ]       OP1[  IS_UNUSED  ]
+          8*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~4 ]       OP1[  IS_VAR $3 ]
+          9*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~4 ] OP2[ , ->40 ]
+  119    10*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         11*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~5 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435414) 'db' ]
+         12*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~5 ] OP2[ ,  IS_CONST (268435413) 'doQuery' ]
+         13*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~6 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435413) 'db' ]
+         14*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~6 ] OP2[ ,  IS_CONST (268435412) 'quoteName' ]
+         15*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         16*       < 60> DO_FCALL                                      0   RES[  IS_VAR $7 ]       OP1[  IS_UNUSED  ]
+         17*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~8 ]       OP1[  IS_CONST (268435408) 'SHOW+COLUMNS+FROM+' ] OP2[ ,  IS_VAR $7 ]
+         18*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~8 ] OP2[  IS_UNUSED  ]
+         19*       < 60> DO_FCALL                                      0   RES[  IS_VAR $9 ]       OP1[  IS_UNUSED  ]
+         20*       < 22> ASSIGN                                            RES[  IS_TMP_VAR ~10 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_VAR $9 ]
+         21*       <123> TYPE_CHECK                                    4   RES[  IS_TMP_VAR ~11 ]      OP1[  IS_TMP_VAR ~10 ] OP2[  IS_UNUSED  ]
+         22*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~11 ] OP2[ , ->32 ]
+  120    23*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         24*       < 68> NEW                                               RES[  IS_VAR $12 ]      OP1[ 'Exception' ]
+         25*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435395) 'Glpi%5CSystem%5CDiagnostic%5Csprintf' ]
+         26*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435396) 'Unable+to+get+table+%22%25s%22+columns' ] OP2[  IS_UNUSED  ]
+         27*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         28*       < 60> DO_FCALL                                      0   RES[  IS_VAR $13 ]      OP1[  IS_UNUSED  ]
+         29*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $13 ] OP2[  IS_UNUSED  ]
+         30*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         31*       <108> THROW                                         0           OP1[  IS_VAR $12 ] OP2[  IS_UNUSED  ]
+  123    32*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         33*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435384) 'fetch_all' ]
+         34*       < 99> FETCH_CONSTANT                                    RES[  IS_TMP_VAR ~17 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435384) 'Glpi%5CSystem%5CDiagnostic%5CMYSQLI_ASSOC' ]
+         35*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~17 ] OP2[  IS_UNUSED  ]
+         36*       < 60> DO_FCALL                                      0   RES[  IS_VAR $18 ]      OP1[  IS_UNUSED  ]
+         37*       < 85> FETCH_OBJ_W                                       RES[  IS_VAR $15 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435375) 'columns' ]
+         38*       < 23> ASSIGN_DIM                                                OP1[  IS_VAR $15 ] OP2[ ,  IS_CV !0 ]
+         39*       <137> OP_DATA                                                   OP1[  IS_VAR $18 ] OP2[  IS_UNUSED  ]
+  125    40*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         41*       < 62> RETURN                                                    OP1[  IS_CONST (268435373) null ]
+
+End of function fetchtablecolumns
+
+Function getindex:
+[+]Function Source Class Name: Glpi\System\Diagnostic\AbstractDatabaseChecker
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:array
+
+[*]ArgInfoNo**0**
+[*]name:table_name
+[*]type:string
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\System\Diagnostic\AbstractDatabaseChecker.php
+function name:  getIndex
+number of ops:  78
+compiled vars:  !0 = $table_name, !1 = $keys_res, !2 = $index, !3 = $key_specs, !4 = $key_name
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  135     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  137     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435415) 'Glpi%5CSystem%5CDiagnostic%5Carray_key_exists' ]
+          3*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          4*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          5*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $5 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435412) 'indexes' ]
+          6*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $5 ] OP2[  IS_UNUSED  ]
+          7*       < 60> DO_FCALL                                      0   RES[  IS_VAR $6 ]       OP1[  IS_UNUSED  ]
+          8*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~7 ]       OP1[  IS_VAR $6 ]
+          9*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~7 ] OP2[ , ->70 ]
+  138    10*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         11*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~8 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435401) 'db' ]
+         12*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~8 ] OP2[ ,  IS_CONST (268435400) 'doQuery' ]
+         13*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~9 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435400) 'db' ]
+         14*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~9 ] OP2[ ,  IS_CONST (268435399) 'quoteName' ]
+         15*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         16*       < 60> DO_FCALL                                      0   RES[  IS_VAR $10 ]      OP1[  IS_UNUSED  ]
+         17*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~11 ]      OP1[  IS_CONST (268435395) 'SHOW+INDEX+FROM+' ] OP2[ ,  IS_VAR $10 ]
+         18*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~11 ] OP2[  IS_UNUSED  ]
+         19*       < 60> DO_FCALL                                      0   RES[  IS_VAR $12 ]      OP1[  IS_UNUSED  ]
+         20*       < 22> ASSIGN                                            RES[  IS_TMP_VAR ~13 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_VAR $12 ]
+         21*       <123> TYPE_CHECK                                    4   RES[  IS_TMP_VAR ~14 ]      OP1[  IS_TMP_VAR ~13 ] OP2[  IS_UNUSED  ]
+         22*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~14 ] OP2[ , ->32 ]
+  139    23*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         24*       < 68> NEW                                               RES[  IS_VAR $15 ]      OP1[ 'Exception' ]
+         25*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435382) 'Glpi%5CSystem%5CDiagnostic%5Csprintf' ]
+         26*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435383) 'Unable+to+get+table+%22%25s%22+index' ] OP2[  IS_UNUSED  ]
+         27*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         28*       < 60> DO_FCALL                                      0   RES[  IS_VAR $16 ]      OP1[  IS_UNUSED  ]
+         29*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $16 ] OP2[  IS_UNUSED  ]
+         30*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         31*       <108> THROW                                         0           OP1[  IS_VAR $15 ] OP2[  IS_UNUSED  ]
+  142    32*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         33*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435370) <array> ]
+  143    34*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         35*       < 42> JMP                                                       OP1[ ->62 ]
+  144    36*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         37*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~19 ]      OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435363) 'Index_type' ]
+         38*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~20 ]      OP1[  IS_TMP_VAR ~19 ] OP2[ ,  IS_CONST (268435362) 'FULLTEXT' ]
+         39*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~20 ] OP2[ , ->42 ]
+  145    40*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         41*       < 42> JMP                                                       OP1[ ->62 ]
+  147    42*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         43*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~21 ]      OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435353) 'Key_name' ]
+         44*       < 22> ASSIGN                                                    OP1[  IS_CV !4 ] OP2[ ,  IS_TMP_VAR ~21 ]
+  148    45*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         46*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435348) 'Glpi%5CSystem%5CDiagnostic%5Carray_key_exists' ]
+         47*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !4 ] OP2[  IS_UNUSED  ]
+         48*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         49*       < 60> DO_FCALL                                      0   RES[  IS_VAR $23 ]      OP1[  IS_UNUSED  ]
+         50*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~24 ]      OP1[  IS_VAR $23 ]
+         51*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~24 ] OP2[ , ->55 ]
+  149    52*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         53*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !2 ] OP2[ ,  IS_CV !4 ]
+         54*       <137> OP_DATA                                                   OP1[  IS_CONST (268435335) <array> ] OP2[  IS_UNUSED  ]
+  151    55*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         56*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~27 ]      OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435332) 'Seq_in_index' ]
+         57*       <  2> SUB                                               RES[  IS_TMP_VAR ~28 ]      OP1[  IS_TMP_VAR ~27 ] OP2[ ,  IS_CONST (268435331) 1 ]
+         58*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~30 ]      OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435330) 'Column_name' ]
+         59*       < 84> FETCH_DIM_W                                       RES[  IS_VAR $26 ]      OP1[  IS_CV !2 ] OP2[ ,  IS_CV !4 ]
+         60*       < 23> ASSIGN_DIM                                                OP1[  IS_VAR $26 ] OP2[ ,  IS_TMP_VAR ~28 ]
+         61*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~30 ] OP2[  IS_UNUSED  ]
+  143    62*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435323) 'fetch_assoc' ]
+         63*       < 60> DO_FCALL                                      0   RES[  IS_VAR $31 ]      OP1[  IS_UNUSED  ]
+         64*       < 22> ASSIGN                                            RES[  IS_TMP_VAR ~32 ]      OP1[  IS_CV !3 ] OP2[ ,  IS_VAR $31 ]
+         65*       < 44> JMPNZ                                                     OP1[  IS_TMP_VAR ~32 ] OP2[ , ->36 ]
+  154    66*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         67*       < 85> FETCH_OBJ_W                                       RES[  IS_VAR $33 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435315) 'indexes' ]
+         68*       < 23> ASSIGN_DIM                                                OP1[  IS_VAR $33 ] OP2[ ,  IS_CV !0 ]
+         69*       <137> OP_DATA                                                   OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+  157    70*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         71*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~35 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435308) 'indexes' ]
+         72*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~36 ]      OP1[  IS_TMP_VAR ~35 ] OP2[ ,  IS_CV !0 ]
+         73*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_TMP_VAR ~36 ] OP2[  IS_UNUSED  ]
+         74*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~36 ]
+  158    75*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         76*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         77*       < 62> RETURN                                                    OP1[  IS_CONST (268435297) null ]
+
+End of function getindex
+
+End of class Glpi\System\Diagnostic\AbstractDatabaseChecker.
+

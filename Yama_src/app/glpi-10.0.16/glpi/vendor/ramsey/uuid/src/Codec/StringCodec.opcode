@@ -1,0 +1,379 @@
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\ramsey\uuid\src\Codec\StringCodec.php
+function name:  (null)
+number of ops:  16
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   13     0*       <  0> NOP                                                      
+   15     1*       <  0> NOP                                                      
+   17     2*       <  0> NOP                                                      
+   18     3*       <  0> NOP                                                      
+   19     4*       <  0> NOP                                                      
+   20     5*       <  0> NOP                                                      
+   21     6*       <  0> NOP                                                      
+   22     7*       <  0> NOP                                                      
+   24     8*       <  0> NOP                                                      
+   25     9*       <  0> NOP                                                      
+   26    10*       <  0> NOP                                                      
+   27    11*       <  0> NOP                                                      
+   28    12*       <  0> NOP                                                      
+   37    13*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         14*       <144> DECLARE_CLASS                                             OP1[  IS_CONST (268435425) 'ramsey%5Cuuid%5Ccodec%5Cstringcodec' ] OP2[  IS_UNUSED  ]
+  139    15*       < 62> RETURN                                                    OP1[  IS_CONST (268435425) 1 ]
+
+Class Ramsey\Uuid\Codec\StringCodec:
+[+]Class Parent Name: NULL
+End Trait extract
+Start Properties extract:
+Key: builder, Value: UNINIT, Type: Normal
+End Properties extract.
+
+Function __construct:
+[+]Function Source Class Name: Ramsey\Uuid\Codec\StringCodec
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:builder
+[*]type:Ramsey\Uuid\Builder\UuidBuilderInterface
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\ramsey\uuid\src\Codec\StringCodec.php
+function name:  __construct
+number of ops:  6
+compiled vars:  !0 = $builder
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   49     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+   51     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435450) 'builder' ]
+          3*       <137> OP_DATA                                                   OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+   52     4*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          5*       < 62> RETURN                                                    OP1[  IS_CONST (268435445) null ]
+
+End of function __construct
+
+Function encode:
+[+]Function Source Class Name: Ramsey\Uuid\Codec\StringCodec
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:string
+
+[*]ArgInfoNo**0**
+[*]name:uuid
+[*]type:Ramsey\Uuid\UuidInterface
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\ramsey\uuid\src\Codec\StringCodec.php
+function name:  encode
+number of ops:  44
+compiled vars:  !0 = $uuid, !1 = $fields
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   54     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+   57     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435421) 'getFields' ]
+          3*       < 60> DO_FCALL                                      0   RES[  IS_VAR $2 ]       OP1[  IS_UNUSED  ]
+          4*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_VAR $2 ]
+   59     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435415) 'getTimeLow' ]
+          7*       < 60> DO_FCALL                                      0   RES[  IS_VAR $4 ]       OP1[  IS_UNUSED  ]
+          8*       <112> INIT_METHOD_CALL                                          OP1[  IS_VAR $4 ] OP2[ ,  IS_CONST (268435413) 'toString' ]
+          9*       < 60> DO_FCALL                                      0   RES[  IS_VAR $5 ]       OP1[  IS_UNUSED  ]
+   60    10*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~6 ]       OP1[  IS_VAR $5 ] OP2[ ,  IS_CONST (268435411) '-' ]
+   61    11*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435410) 'getTimeMid' ]
+         12*       < 60> DO_FCALL                                      0   RES[  IS_VAR $7 ]       OP1[  IS_UNUSED  ]
+         13*       <112> INIT_METHOD_CALL                                          OP1[  IS_VAR $7 ] OP2[ ,  IS_CONST (268435408) 'toString' ]
+         14*       < 60> DO_FCALL                                      0   RES[  IS_VAR $8 ]       OP1[  IS_UNUSED  ]
+         15*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~9 ]       OP1[  IS_TMP_VAR ~6 ] OP2[ ,  IS_VAR $8 ]
+   62    16*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~10 ]      OP1[  IS_TMP_VAR ~9 ] OP2[ ,  IS_CONST (268435404) '-' ]
+   63    17*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435403) 'getTimeHiAndVersion' ]
+         18*       < 60> DO_FCALL                                      0   RES[  IS_VAR $11 ]      OP1[  IS_UNUSED  ]
+         19*       <112> INIT_METHOD_CALL                                          OP1[  IS_VAR $11 ] OP2[ ,  IS_CONST (268435401) 'toString' ]
+         20*       < 60> DO_FCALL                                      0   RES[  IS_VAR $12 ]      OP1[  IS_UNUSED  ]
+         21*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~13 ]      OP1[  IS_TMP_VAR ~10 ] OP2[ ,  IS_VAR $12 ]
+   64    22*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~14 ]      OP1[  IS_TMP_VAR ~13 ] OP2[ ,  IS_CONST (268435397) '-' ]
+   65    23*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435396) 'getClockSeqHiAndReserved' ]
+         24*       < 60> DO_FCALL                                      0   RES[  IS_VAR $15 ]      OP1[  IS_UNUSED  ]
+         25*       <112> INIT_METHOD_CALL                                          OP1[  IS_VAR $15 ] OP2[ ,  IS_CONST (268435394) 'toString' ]
+         26*       < 60> DO_FCALL                                      0   RES[  IS_VAR $16 ]      OP1[  IS_UNUSED  ]
+         27*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~17 ]      OP1[  IS_TMP_VAR ~14 ] OP2[ ,  IS_VAR $16 ]
+   66    28*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435390) 'getClockSeqLow' ]
+         29*       < 60> DO_FCALL                                      0   RES[  IS_VAR $18 ]      OP1[  IS_UNUSED  ]
+         30*       <112> INIT_METHOD_CALL                                          OP1[  IS_VAR $18 ] OP2[ ,  IS_CONST (268435388) 'toString' ]
+         31*       < 60> DO_FCALL                                      0   RES[  IS_VAR $19 ]      OP1[  IS_UNUSED  ]
+         32*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~20 ]      OP1[  IS_TMP_VAR ~17 ] OP2[ ,  IS_VAR $19 ]
+   67    33*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~21 ]      OP1[  IS_TMP_VAR ~20 ] OP2[ ,  IS_CONST (268435384) '-' ]
+   68    34*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435383) 'getNode' ]
+         35*       < 60> DO_FCALL                                      0   RES[  IS_VAR $22 ]      OP1[  IS_UNUSED  ]
+         36*       <112> INIT_METHOD_CALL                                          OP1[  IS_VAR $22 ] OP2[ ,  IS_CONST (268435381) 'toString' ]
+         37*       < 60> DO_FCALL                                      0   RES[  IS_VAR $23 ]      OP1[  IS_UNUSED  ]
+         38*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~24 ]      OP1[  IS_TMP_VAR ~21 ] OP2[ ,  IS_VAR $23 ]
+         39*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_TMP_VAR ~24 ] OP2[  IS_UNUSED  ]
+         40*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~24 ]
+   69    41*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         42*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         43*       < 62> RETURN                                                    OP1[  IS_CONST (268435369) null ]
+
+End of function encode
+
+Function encodebinary:
+[+]Function Source Class Name: Ramsey\Uuid\Codec\StringCodec
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:string
+
+[*]ArgInfoNo**0**
+[*]name:uuid
+[*]type:Ramsey\Uuid\UuidInterface
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\ramsey\uuid\src\Codec\StringCodec.php
+function name:  encodeBinary
+number of ops:  11
+compiled vars:  !0 = $uuid
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   76     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+   79     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435447) 'getFields' ]
+          3*       < 60> DO_FCALL                                      0   RES[  IS_VAR $1 ]       OP1[  IS_UNUSED  ]
+          4*       <112> INIT_METHOD_CALL                                          OP1[  IS_VAR $1 ] OP2[ ,  IS_CONST (268435445) 'getBytes' ]
+          5*       < 60> DO_FCALL                                      0   RES[  IS_VAR $2 ]       OP1[  IS_UNUSED  ]
+          6*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_VAR $2 ] OP2[  IS_UNUSED  ]
+          7*       < 62> RETURN                                                    OP1[  IS_VAR $2 ]
+   80     8*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          9*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         10*       < 62> RETURN                                                    OP1[  IS_CONST (268435435) null ]
+
+End of function encodebinary
+
+Function decode:
+[+]Function Source Class Name: Ramsey\Uuid\Codec\StringCodec
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:Ramsey\Uuid\UuidInterface
+
+[*]ArgInfoNo**0**
+[*]name:encodedUuid
+[*]type:string
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\ramsey\uuid\src\Codec\StringCodec.php
+function name:  decode
+number of ops:  16
+compiled vars:  !0 = $encodedUuid
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   87     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+   89     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~1 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435446) 'builder' ]
+          3*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~1 ] OP2[ ,  IS_CONST (268435445) 'build' ]
+          4*       <184> FETCH_THIS                                        RES[  IS_VAR $2 ]       OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          5*       < 66> SEND_VAR_EX                                               OP1[  IS_VAR $2 ] OP2[  IS_UNUSED  ]
+          6*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435441) 'getBytes' ]
+          7*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          8*       < 60> DO_FCALL                                      0   RES[  IS_VAR $3 ]       OP1[  IS_UNUSED  ]
+          9*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $3 ] OP2[  IS_UNUSED  ]
+         10*       < 60> DO_FCALL                                      0   RES[  IS_VAR $4 ]       OP1[  IS_UNUSED  ]
+         11*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_VAR $4 ] OP2[  IS_UNUSED  ]
+         12*       < 62> RETURN                                                    OP1[  IS_VAR $4 ]
+   90    13*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         14*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         15*       < 62> RETURN                                                    OP1[  IS_CONST (268435425) null ]
+
+End of function decode
+
+Function decodebytes:
+[+]Function Source Class Name: Ramsey\Uuid\Codec\StringCodec
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:Ramsey\Uuid\UuidInterface
+
+[*]ArgInfoNo**0**
+[*]name:bytes
+[*]type:string
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\ramsey\uuid\src\Codec\StringCodec.php
+function name:  decodeBytes
+number of ops:  22
+compiled vars:  !0 = $bytes
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   92     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+   94     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       <121> STRLEN                                            RES[  IS_TMP_VAR ~1 ]       OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          3*       < 17> IS_NOT_IDENTICAL                                  RES[  IS_TMP_VAR ~2 ]       OP1[  IS_TMP_VAR ~1 ] OP2[ ,  IS_CONST (268435442) 16 ]
+          4*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~2 ] OP2[ , ->10 ]
+   95     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       < 68> NEW                                               RES[  IS_VAR $3 ]       OP1[ 'Ramsey%5CUuid%5CException%5CInvalidArgumentException' ]
+   96     7*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435437) '%24bytes+string+should+contain+16+characters.' ] OP2[  IS_UNUSED  ]
+          8*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+          9*       <108> THROW                                         0           OP1[  IS_VAR $3 ] OP2[  IS_UNUSED  ]
+  100    10*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         11*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~5 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435430) 'builder' ]
+         12*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~5 ] OP2[ ,  IS_CONST (268435429) 'build' ]
+         13*       <184> FETCH_THIS                                        RES[  IS_VAR $6 ]       OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         14*       < 66> SEND_VAR_EX                                               OP1[  IS_VAR $6 ] OP2[  IS_UNUSED  ]
+         15*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         16*       < 60> DO_FCALL                                      0   RES[  IS_VAR $7 ]       OP1[  IS_UNUSED  ]
+         17*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_VAR $7 ] OP2[  IS_UNUSED  ]
+         18*       < 62> RETURN                                                    OP1[  IS_VAR $7 ]
+  101    19*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         20*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         21*       < 62> RETURN                                                    OP1[  IS_CONST (268435413) null ]
+
+End of function decodebytes
+
+Function getbuilder:
+[+]Function Source Class Name: Ramsey\Uuid\Codec\StringCodec
+[*]Start of arg_info extract:
+[*]arg_info num_args:0
+[*]Function return type:Ramsey\Uuid\Builder\UuidBuilderInterface
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\ramsey\uuid\src\Codec\StringCodec.php
+function name:  getBuilder
+number of ops:  7
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  108     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435452) 'builder' ]
+          2*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_TMP_VAR ~0 ] OP2[  IS_UNUSED  ]
+          3*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~0 ]
+  109     4*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          5*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       < 62> RETURN                                                    OP1[  IS_CONST (268435443) null ]
+
+End of function getbuilder
+
+Function getbytes:
+[+]Function Source Class Name: Ramsey\Uuid\Codec\StringCodec
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:string
+
+[*]ArgInfoNo**0**
+[*]name:encodedUuid
+[*]type:string
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\ramsey\uuid\src\Codec\StringCodec.php
+function name:  getBytes
+number of ops:  65
+compiled vars:  !0 = $encodedUuid, !1 = $parsedUuid, !2 = $components
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  114     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  116     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435406) 'str_replace' ]
+  117     3*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435405) <array> ]
+  118     4*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435404) '' ]
+  119     5*       <117> SEND_VAR                                                  OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          6*       < 60> DO_FCALL                                      0   RES[  IS_VAR $3 ]       OP1[  IS_UNUSED  ]
+  116     7*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_VAR $3 ]
+  123     8*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          9*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435395) 'substr' ]
+         10*       <117> SEND_VAR                                                  OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         11*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435392) 0 ]
+         12*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435391) 8 ]
+         13*       < 60> DO_FCALL                                      0   RES[  IS_VAR $5 ]       OP1[  IS_UNUSED  ]
+         14*       < 71> INIT_ARRAY                                        RES[  IS_TMP_VAR ~6 ]       OP1[  IS_VAR $5 ] OP2[  IS_UNUSED  ]
+  124    15*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435386) 'substr' ]
+         16*       <117> SEND_VAR                                                  OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         17*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435383) 8 ]
+         18*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435382) 4 ]
+         19*       < 60> DO_FCALL                                      0   RES[  IS_VAR $7 ]       OP1[  IS_UNUSED  ]
+         20*       < 72> ADD_ARRAY_ELEMENT                                 RES[  IS_TMP_VAR ~6 ]       OP1[  IS_VAR $7 ] OP2[  IS_UNUSED  ]
+  125    21*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435377) 'substr' ]
+         22*       <117> SEND_VAR                                                  OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         23*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435374) 12 ]
+         24*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435373) 4 ]
+         25*       < 60> DO_FCALL                                      0   RES[  IS_VAR $8 ]       OP1[  IS_UNUSED  ]
+         26*       < 72> ADD_ARRAY_ELEMENT                                 RES[  IS_TMP_VAR ~6 ]       OP1[  IS_VAR $8 ] OP2[  IS_UNUSED  ]
+  126    27*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435368) 'substr' ]
+         28*       <117> SEND_VAR                                                  OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         29*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435365) 16 ]
+         30*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435364) 4 ]
+         31*       < 60> DO_FCALL                                      0   RES[  IS_VAR $9 ]       OP1[  IS_UNUSED  ]
+         32*       < 72> ADD_ARRAY_ELEMENT                                 RES[  IS_TMP_VAR ~6 ]       OP1[  IS_VAR $9 ] OP2[  IS_UNUSED  ]
+  127    33*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435359) 'substr' ]
+         34*       <117> SEND_VAR                                                  OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         35*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435356) 20 ]
+         36*       < 60> DO_FCALL                                      0   RES[  IS_VAR $10 ]      OP1[  IS_UNUSED  ]
+         37*       < 72> ADD_ARRAY_ELEMENT                                 RES[  IS_TMP_VAR ~6 ]       OP1[  IS_VAR $10 ] OP2[  IS_UNUSED  ]
+  122    38*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_TMP_VAR ~6 ]
+  130    39*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         40*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435347) 'Ramsey%5CUuid%5CUuid' ] OP2[ ,  IS_CONST (268435349) 'isValid' ]
+         41*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435349) 'implode' ]
+         42*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435348) '-' ]
+         43*       <117> SEND_VAR                                                  OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         44*       < 60> DO_FCALL                                      0   RES[  IS_VAR $12 ]      OP1[  IS_UNUSED  ]
+         45*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $12 ] OP2[  IS_UNUSED  ]
+         46*       < 60> DO_FCALL                                      0   RES[  IS_VAR $13 ]      OP1[  IS_UNUSED  ]
+         47*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~14 ]      OP1[  IS_VAR $13 ]
+         48*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~14 ] OP2[ , ->55 ]
+  131    49*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         50*       < 68> NEW                                               RES[  IS_VAR $15 ]      OP1[ 'Ramsey%5CUuid%5CException%5CInvalidUuidStringException' ]
+  132    51*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~16 ]      OP1[  IS_CONST (268435333) 'Invalid+UUID+string%3A+' ] OP2[ ,  IS_CV !0 ]
+         52*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~16 ] OP2[  IS_UNUSED  ]
+         53*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         54*       <108> THROW                                         0           OP1[  IS_VAR $15 ] OP2[  IS_UNUSED  ]
+  136    55*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         56*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435324) 'hex2bin' ]
+         57*       <117> SEND_VAR                                                  OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         58*       < 60> DO_FCALL                                      0   RES[  IS_VAR $18 ]      OP1[  IS_UNUSED  ]
+         59*       < 51> CAST                                          6   RES[  IS_TMP_VAR ~19 ]      OP1[  IS_VAR $18 ] OP2[  IS_UNUSED  ]
+         60*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_TMP_VAR ~19 ] OP2[  IS_UNUSED  ]
+         61*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~19 ]
+  137    62*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         63*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         64*       < 62> RETURN                                                    OP1[  IS_CONST (268435309) null ]
+
+End of function getbytes
+
+End of class Ramsey\Uuid\Codec\StringCodec.
+

@@ -1,0 +1,274 @@
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\sebastian\diff\src\MemoryEfficientLongestCommonSubsequenceCalculator.php
+function name:  (null)
+number of ops:  11
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+    1     0*       <  0> NOP                                                      
+   10     1*       <  0> NOP                                                      
+   12     2*       <  0> NOP                                                      
+   13     3*       <  0> NOP                                                      
+   14     4*       <  0> NOP                                                      
+   15     5*       <  0> NOP                                                      
+   16     6*       <  0> NOP                                                      
+   17     7*       <  0> NOP                                                      
+   20     8*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          9*       <144> DECLARE_CLASS                                             OP1[  IS_CONST (268435428) 'sebastianbergmann%5Cdiff%5Cmemoryefficientlongestcommonsubsequencecalculator' ] OP2[  IS_UNUSED  ]
+   89    10*       < 62> RETURN                                                    OP1[  IS_CONST (268435428) 1 ]
+
+Class SebastianBergmann\Diff\MemoryEfficientLongestCommonSubsequenceCalculator:
+[+]Class Parent Name: NULL
+End Trait extract
+Start Properties extract:
+Properties: NULL
+End Properties extract
+
+Function calculate:
+[+]Function Source Class Name: SebastianBergmann\Diff\MemoryEfficientLongestCommonSubsequenceCalculator
+[*]Start of arg_info extract:
+[*]arg_info num_args:2
+[*]Function return type:array
+
+[*]ArgInfoNo**0**
+[*]name:from
+[*]type:array
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:to
+[*]type:array
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\sebastian\diff\src\MemoryEfficientLongestCommonSubsequenceCalculator.php
+function name:  calculate
+number of ops:  121
+compiled vars:  !0 = $from, !1 = $to, !2 = $cFrom, !3 = $cTo, !4 = $i, !5 = $fromStart, !6 = $fromEnd, !7 = $llB, !8 = $llE, !9 = $jMax, !10 = $max, !11 = $j, !12 = $m, !13 = $toStart, !14 = $toEnd
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   25     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 63> RECV                                              RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ]
+   27     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       <190> COUNT                                             RES[  IS_TMP_VAR ~15 ]      OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          4*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_TMP_VAR ~15 ]
+   28     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       <190> COUNT                                             RES[  IS_TMP_VAR ~17 ]      OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+          7*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_TMP_VAR ~17 ]
+   30     8*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          9*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~19 ]      OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435399) 0 ]
+         10*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~19 ] OP2[ , ->13 ]
+   31    11*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         12*       < 62> RETURN                                                    OP1[  IS_CONST (268435394) <array> ]
+   34    13*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         14*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~20 ]      OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435391) 1 ]
+         15*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~20 ] OP2[ , ->31 ]
+   35    16*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         17*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435386) 'in_array' ]
+         18*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~21 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435385) 0 ]
+         19*       < 65> SEND_VAL                                                  OP1[  IS_TMP_VAR ~21 ]
+         20*       <117> SEND_VAR                                                  OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         21*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435380) <true> ]
+         22*       < 60> DO_FCALL                                      0   RES[  IS_VAR $22 ]      OP1[  IS_UNUSED  ]
+         23*       < 43> JMPZ                                                      OP1[  IS_VAR $22 ] OP2[ , ->29 ]
+   36    24*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         25*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~23 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435373) 0 ]
+         26*       < 71> INIT_ARRAY                                        RES[  IS_TMP_VAR ~24 ]      OP1[  IS_TMP_VAR ~23 ] OP2[  IS_UNUSED  ]
+         27*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_TMP_VAR ~24 ] OP2[  IS_UNUSED  ]
+         28*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~24 ]
+   39    29*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         30*       < 62> RETURN                                                    OP1[  IS_CONST (268435364) <array> ]
+   42    31*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         32*       <  4> DIV                                               RES[  IS_TMP_VAR ~25 ]      OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435361) 2 ]
+         33*       < 51> CAST                                          4   RES[  IS_TMP_VAR ~26 ]      OP1[  IS_TMP_VAR ~25 ] OP2[  IS_UNUSED  ]
+         34*       < 22> ASSIGN                                                    OP1[  IS_CV !4 ] OP2[ ,  IS_TMP_VAR ~26 ]
+   43    35*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         36*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435354) 'array_slice' ]
+         37*       <117> SEND_VAR                                                  OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         38*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435351) 0 ]
+         39*       <117> SEND_VAR                                                  OP1[  IS_CV !4 ] OP2[  IS_UNUSED  ]
+         40*       < 60> DO_FCALL                                      0   RES[  IS_VAR $28 ]      OP1[  IS_UNUSED  ]
+         41*       < 22> ASSIGN                                                    OP1[  IS_CV !5 ] OP2[ ,  IS_VAR $28 ]
+   44    42*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         43*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435342) 'array_slice' ]
+         44*       <117> SEND_VAR                                                  OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         45*       <117> SEND_VAR                                                  OP1[  IS_CV !4 ] OP2[  IS_UNUSED  ]
+         46*       < 60> DO_FCALL                                      0   RES[  IS_VAR $30 ]      OP1[  IS_UNUSED  ]
+         47*       < 22> ASSIGN                                                    OP1[  IS_CV !6 ] OP2[ ,  IS_VAR $30 ]
+   45    48*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         49*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435331) 'length' ]
+         50*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !5 ] OP2[  IS_UNUSED  ]
+         51*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         52*       < 60> DO_FCALL                                      0   RES[  IS_VAR $32 ]      OP1[  IS_UNUSED  ]
+         53*       < 22> ASSIGN                                                    OP1[  IS_CV !7 ] OP2[ ,  IS_VAR $32 ]
+   46    54*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         55*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435321) 'length' ]
+         56*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435321) 'array_reverse' ]
+         57*       <117> SEND_VAR                                                  OP1[  IS_CV !6 ] OP2[  IS_UNUSED  ]
+         58*       < 60> DO_FCALL                                      0   RES[  IS_VAR $34 ]      OP1[  IS_UNUSED  ]
+         59*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $34 ] OP2[  IS_UNUSED  ]
+         60*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435314) 'array_reverse' ]
+         61*       <117> SEND_VAR                                                  OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         62*       < 60> DO_FCALL                                      0   RES[  IS_VAR $35 ]      OP1[  IS_UNUSED  ]
+         63*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $35 ] OP2[  IS_UNUSED  ]
+         64*       < 60> DO_FCALL                                      0   RES[  IS_VAR $36 ]      OP1[  IS_UNUSED  ]
+         65*       < 22> ASSIGN                                                    OP1[  IS_CV !8 ] OP2[ ,  IS_VAR $36 ]
+   47    66*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         67*       < 22> ASSIGN                                                    OP1[  IS_CV !9 ] OP2[ ,  IS_CONST (268435301) 0 ]
+   48    68*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         69*       < 22> ASSIGN                                                    OP1[  IS_CV !10 ] OP2[ ,  IS_CONST (268435298) 0 ]
+   50    70*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         71*       < 22> ASSIGN                                                    OP1[  IS_CV !11 ] OP2[ ,  IS_CONST (268435295) 0 ]
+         72*       < 42> JMP                                                       OP1[ ->87 ]
+   51    73*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         74*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~41 ]      OP1[  IS_CV !7 ] OP2[ ,  IS_CV !11 ]
+         75*       <  2> SUB                                               RES[  IS_TMP_VAR ~42 ]      OP1[  IS_CV !3 ] OP2[ ,  IS_CV !11 ]
+         76*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~43 ]      OP1[  IS_CV !8 ] OP2[ ,  IS_TMP_VAR ~42 ]
+         77*       <  1> ADD                                               RES[  IS_TMP_VAR ~44 ]      OP1[  IS_TMP_VAR ~41 ] OP2[ ,  IS_TMP_VAR ~43 ]
+         78*       < 22> ASSIGN                                                    OP1[  IS_CV !12 ] OP2[ ,  IS_TMP_VAR ~44 ]
+   53    79*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         80*       < 21> IS_SMALLER_OR_EQUAL                               RES[  IS_TMP_VAR ~46 ]      OP1[  IS_CV !10 ] OP2[ ,  IS_CV !12 ]
+         81*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~46 ] OP2[ , ->86 ]
+   54    82*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         83*       < 22> ASSIGN                                                    OP1[  IS_CV !10 ] OP2[ ,  IS_CV !12 ]
+   55    84*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         85*       < 22> ASSIGN                                                    OP1[  IS_CV !9 ] OP2[ ,  IS_CV !11 ]
+   50    86*       < 34> PRE_INC                                                   OP1[  IS_CV !11 ]
+         87*       < 21> IS_SMALLER_OR_EQUAL                               RES[  IS_TMP_VAR ~50 ]      OP1[  IS_CV !11 ] OP2[ ,  IS_CV !3 ]
+         88*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         89*       < 44> JMPNZ                                                     OP1[  IS_TMP_VAR ~50 ] OP2[ , ->73 ]
+   59    90*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         91*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435256) 'array_slice' ]
+         92*       <117> SEND_VAR                                                  OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         93*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435253) 0 ]
+         94*       <117> SEND_VAR                                                  OP1[  IS_CV !9 ] OP2[  IS_UNUSED  ]
+         95*       < 60> DO_FCALL                                      0   RES[  IS_VAR $51 ]      OP1[  IS_UNUSED  ]
+         96*       < 22> ASSIGN                                                    OP1[  IS_CV !13 ] OP2[ ,  IS_VAR $51 ]
+   60    97*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         98*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435244) 'array_slice' ]
+         99*       <117> SEND_VAR                                                  OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+        100*       <117> SEND_VAR                                                  OP1[  IS_CV !9 ] OP2[  IS_UNUSED  ]
+        101*       < 60> DO_FCALL                                      0   RES[  IS_VAR $53 ]      OP1[  IS_UNUSED  ]
+        102*       < 22> ASSIGN                                                    OP1[  IS_CV !14 ] OP2[ ,  IS_VAR $53 ]
+   62   103*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        104*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435233) 'array_merge' ]
+   63   105*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435232) 'calculate' ]
+        106*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !5 ] OP2[  IS_UNUSED  ]
+        107*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !13 ] OP2[  IS_UNUSED  ]
+        108*       < 60> DO_FCALL                                      0   RES[  IS_VAR $55 ]      OP1[  IS_UNUSED  ]
+        109*       <117> SEND_VAR                                                  OP1[  IS_VAR $55 ] OP2[  IS_UNUSED  ]
+   64   110*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435224) 'calculate' ]
+        111*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !6 ] OP2[  IS_UNUSED  ]
+        112*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !14 ] OP2[  IS_UNUSED  ]
+        113*       < 60> DO_FCALL                                      0   RES[  IS_VAR $56 ]      OP1[  IS_UNUSED  ]
+        114*       <117> SEND_VAR                                                  OP1[  IS_VAR $56 ] OP2[  IS_UNUSED  ]
+        115*       < 60> DO_FCALL                                      0   RES[  IS_VAR $57 ]      OP1[  IS_UNUSED  ]
+        116*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_VAR $57 ] OP2[  IS_UNUSED  ]
+        117*       < 62> RETURN                                                    OP1[  IS_VAR $57 ]
+   66   118*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        119*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        120*       < 62> RETURN                                                    OP1[  IS_CONST (268435206) null ]
+
+End of function calculate
+
+Function length:
+[+]Function Source Class Name: SebastianBergmann\Diff\MemoryEfficientLongestCommonSubsequenceCalculator
+[*]Start of arg_info extract:
+[*]arg_info num_args:2
+[*]Function return type:array
+
+[*]ArgInfoNo**0**
+[*]name:from
+[*]type:array
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:to
+[*]type:array
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\sebastian\diff\src\MemoryEfficientLongestCommonSubsequenceCalculator.php
+function name:  length
+number of ops:  62
+compiled vars:  !0 = $from, !1 = $to, !2 = $current, !3 = $cFrom, !4 = $cTo, !5 = $i, !6 = $prev, !7 = $j
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   68     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 63> RECV                                              RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ]
+   70     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435438) 'array_fill' ]
+          4*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435437) 0 ]
+          5*       <190> COUNT                                             RES[  IS_TMP_VAR ~8 ]       OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+          6*       <  1> ADD                                               RES[  IS_TMP_VAR ~9 ]       OP1[  IS_TMP_VAR ~8 ] OP2[ ,  IS_CONST (268435434) 1 ]
+          7*       < 65> SEND_VAL                                                  OP1[  IS_TMP_VAR ~9 ]
+          8*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435431) 0 ]
+          9*       < 60> DO_FCALL                                      0   RES[  IS_VAR $10 ]      OP1[  IS_UNUSED  ]
+         10*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_VAR $10 ]
+   71    11*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         12*       <190> COUNT                                             RES[  IS_TMP_VAR ~12 ]      OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         13*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_TMP_VAR ~12 ]
+   72    14*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         15*       <190> COUNT                                             RES[  IS_TMP_VAR ~14 ]      OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         16*       < 22> ASSIGN                                                    OP1[  IS_CV !4 ] OP2[ ,  IS_TMP_VAR ~14 ]
+   74    17*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         18*       < 22> ASSIGN                                                    OP1[  IS_CV !5 ] OP2[ ,  IS_CONST (268435412) 0 ]
+         19*       < 42> JMP                                                       OP1[ ->53 ]
+   75    20*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         21*       < 22> ASSIGN                                                    OP1[  IS_CV !6 ] OP2[ ,  IS_CV !2 ]
+   77    22*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         23*       < 22> ASSIGN                                                    OP1[  IS_CV !7 ] OP2[ ,  IS_CONST (268435403) 0 ]
+         24*       < 42> JMP                                                       OP1[ ->49 ]
+   78    25*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         26*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~19 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CV !5 ]
+         27*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~20 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CV !7 ]
+         28*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~21 ]      OP1[  IS_TMP_VAR ~19 ] OP2[ ,  IS_TMP_VAR ~20 ]
+         29*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~21 ] OP2[ , ->37 ]
+   79    30*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         31*       <  1> ADD                                               RES[  IS_TMP_VAR ~22 ]      OP1[  IS_CV !7 ] OP2[ ,  IS_CONST (268435388) 1 ]
+         32*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~24 ]      OP1[  IS_CV !6 ] OP2[ ,  IS_CV !7 ]
+         33*       <  1> ADD                                               RES[  IS_TMP_VAR ~25 ]      OP1[  IS_TMP_VAR ~24 ] OP2[ ,  IS_CONST (268435385) 1 ]
+         34*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !2 ] OP2[ ,  IS_TMP_VAR ~22 ]
+         35*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~25 ] OP2[  IS_UNUSED  ]
+         36*       < 42> JMP                                                       OP1[ ->48 ]
+   81    37*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         38*       <  1> ADD                                               RES[  IS_TMP_VAR ~26 ]      OP1[  IS_CV !7 ] OP2[ ,  IS_CONST (268435376) 1 ]
+         39*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435375) 'max' ]
+         40*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~28 ]      OP1[  IS_CV !2 ] OP2[ ,  IS_CV !7 ]
+         41*       < 65> SEND_VAL                                                  OP1[  IS_TMP_VAR ~28 ]
+         42*       <  1> ADD                                               RES[  IS_TMP_VAR ~29 ]      OP1[  IS_CV !7 ] OP2[ ,  IS_CONST (268435370) 1 ]
+         43*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~30 ]      OP1[  IS_CV !6 ] OP2[ ,  IS_TMP_VAR ~29 ]
+         44*       < 65> SEND_VAL                                                  OP1[  IS_TMP_VAR ~30 ]
+         45*       < 60> DO_FCALL                                      0   RES[  IS_VAR $31 ]      OP1[  IS_UNUSED  ]
+         46*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !2 ] OP2[ ,  IS_TMP_VAR ~26 ]
+         47*       <137> OP_DATA                                                   OP1[  IS_VAR $31 ] OP2[  IS_UNUSED  ]
+   77    48*       < 34> PRE_INC                                                   OP1[  IS_CV !7 ]
+         49*       < 20> IS_SMALLER                                        RES[  IS_TMP_VAR ~33 ]      OP1[  IS_CV !7 ] OP2[ ,  IS_CV !4 ]
+         50*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         51*       < 44> JMPNZ                                                     OP1[  IS_TMP_VAR ~33 ] OP2[ , ->25 ]
+   74    52*       < 34> PRE_INC                                                   OP1[  IS_CV !5 ]
+         53*       < 20> IS_SMALLER                                        RES[  IS_TMP_VAR ~35 ]      OP1[  IS_CV !5 ] OP2[ ,  IS_CV !3 ]
+         54*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         55*       < 44> JMPNZ                                                     OP1[  IS_TMP_VAR ~35 ] OP2[ , ->20 ]
+   86    56*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         57*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         58*       < 62> RETURN                                                    OP1[  IS_CV !2 ]
+   87    59*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         60*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         61*       < 62> RETURN                                                    OP1[  IS_CONST (268435333) null ]
+
+End of function length
+
+End of class SebastianBergmann\Diff\MemoryEfficientLongestCommonSubsequenceCalculator.
+

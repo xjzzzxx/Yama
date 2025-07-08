@@ -1,0 +1,281 @@
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\symfony\var-exporter\VarExporter.php
+function name:  (null)
+number of ops:  7
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   12     0*       <  0> NOP                                                      
+   14     1*       <  0> NOP                                                      
+   15     2*       <  0> NOP                                                      
+   16     3*       <  0> NOP                                                      
+   17     4*       <  0> NOP                                                      
+  116     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       < 62> RETURN                                                    OP1[  IS_CONST (268435443) 1 ]
+
+Class Symfony\Component\VarExporter\VarExporter:
+[+]Class Parent Name: NULL
+End Trait extract
+Start Properties extract:
+Properties: NULL
+End Properties extract
+
+Function export:
+[+]Function Source Class Name: Symfony\Component\VarExporter\VarExporter
+[*]Start of arg_info extract:
+[*]arg_info num_args:3
+[*]Function return type:string
+
+[*]ArgInfoNo**0**
+[*]name:value
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:isStaticValue
+[*]type:?bool
+[*]is_ref:1
+[*]is_variadic:0
+
+[*]ArgInfoNo**2**
+[*]name:foundClasses
+[*]type:array
+[*]is_ref:1
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\symfony\var-exporter\VarExporter.php
+function name:  export
+number of ops:  220
+compiled vars:  !0 = $value, !1 = $isStaticValue, !2 = $foundClasses, !3 = $objectsPool, !4 = $refsPool, !5 = $objectsCount, !6 = $references, !7 = $v, !8 = $i, !9 = $classes, !10 = $values, !11 = $states, !12 = $class, !13 = $wakeup, !14 = $wakeups, !15 = $k, !16 = $properties, !17 = $vars, !18 = $name
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   41     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 64> RECV_INIT                                         RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435327) null ]
+          2*       < 64> RECV_INIT                                         RES[  IS_CV !2 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435326) <array> ]
+   43     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435323) <true> ]
+   45     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       <123> TYPE_CHECK                                  256   RES[  IS_TMP_VAR ~20 ]      OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          7*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~21 ]      OP1[  IS_TMP_VAR ~20 ]
+          8*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~21 ]      OP1[  IS_TMP_VAR ~21 ] OP2[ , ->14 ]
+          9*       <123> TYPE_CHECK                                  128   RES[  IS_TMP_VAR ~22 ]      OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         10*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~22 ]      OP1[  IS_TMP_VAR ~22 ] OP2[ , ->12 ]
+         11*       < 52> BOOL                                              RES[  IS_TMP_VAR ~22 ]      OP1[  IS_CV !0 ]
+         12*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~23 ]      OP1[  IS_TMP_VAR ~22 ]
+         13*       < 52> BOOL                                              RES[  IS_TMP_VAR ~21 ]      OP1[  IS_TMP_VAR ~23 ]
+         14*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~21 ]      OP1[  IS_TMP_VAR ~21 ] OP2[ , ->18 ]
+         15*       <123> TYPE_CHECK                                  512   RES[  IS_TMP_VAR ~24 ]      OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         16*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~25 ]      OP1[  IS_TMP_VAR ~24 ]
+         17*       < 52> BOOL                                              RES[  IS_TMP_VAR ~21 ]      OP1[  IS_TMP_VAR ~25 ]
+         18*       < 47> JMPNZ_EX                                          RES[  IS_TMP_VAR ~21 ]      OP1[  IS_TMP_VAR ~21 ] OP2[ , ->21 ]
+         19*       <138> INSTANCEOF                                        RES[  IS_TMP_VAR ~26 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435294) 'UnitEnum' ]
+         20*       < 52> BOOL                                              RES[  IS_TMP_VAR ~21 ]      OP1[  IS_TMP_VAR ~26 ]
+         21*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~21 ] OP2[ , ->28 ]
+   46    22*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         23*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435288) 'Symfony%5CComponent%5CVarExporter%5CInternal%5CExporter' ] OP2[ ,  IS_CONST (268435290) 'export' ]
+         24*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         25*       < 60> DO_FCALL                                      0   RES[  IS_VAR $27 ]      OP1[  IS_UNUSED  ]
+         26*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_VAR $27 ] OP2[  IS_UNUSED  ]
+         27*       < 62> RETURN                                                    OP1[  IS_VAR $27 ]
+   49    28*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         29*       < 68> NEW                                               RES[  IS_VAR $28 ]      OP1[ 'SplObjectStorage' ]
+         30*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         31*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_VAR $28 ]
+   50    32*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         33*       < 22> ASSIGN                                                    OP1[  IS_CV !4 ] OP2[ ,  IS_CONST (268435274) <array> ]
+   51    34*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         35*       < 22> ASSIGN                                                    OP1[  IS_CV !5 ] OP2[ ,  IS_CONST (268435271) 0 ]
+   53    36*       <  0> NOP                                                      
+   54    37*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         38*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435266) 'Symfony%5CComponent%5CVarExporter%5CInternal%5CExporter' ] OP2[ ,  IS_CONST (268435268) 'prepare' ]
+         39*       < 71> INIT_ARRAY                                        RES[  IS_TMP_VAR ~34 ]      OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         40*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~34 ] OP2[  IS_UNUSED  ]
+         41*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         42*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !4 ] OP2[  IS_UNUSED  ]
+         43*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !5 ] OP2[  IS_UNUSED  ]
+         44*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         45*       < 60> DO_FCALL                                      0   RES[  IS_VAR $35 ]      OP1[  IS_UNUSED  ]
+         46*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~36 ]      OP1[  IS_VAR $35 ] OP2[ ,  IS_CONST (268435254) 0 ]
+         47*       < 22> ASSIGN                                                    OP1[  IS_CV !0 ] OP2[ ,  IS_TMP_VAR ~36 ]
+   55    48*       <162> FAST_CALL                                                 OP1[ ->50 ]
+         49*       < 42> JMP                                                       OP1[ ->72 ]
+   56    50*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         51*       < 22> ASSIGN                                                    OP1[  IS_CV !6 ] OP2[ ,  IS_CONST (268435245) <array> ]
+   57    52*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         53*       < 77> FE_RESET_R                                        RES[  IS_VAR $39 ]      OP1[  IS_CV !4 ] OP2[ , ->70 ]
+         54*       < 78> FE_FETCH_R                                        RES[  IS_TMP_VAR ~40 ]      OP1[  IS_VAR $39 ] OP2[ ,  IS_CV !7 ] EXT_JMP_REL[ , ->70 ]
+         55*       < 22> ASSIGN                                                    OP1[  IS_CV !8 ] OP2[ ,  IS_TMP_VAR ~40 ]
+   58    56*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         57*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~42 ]      OP1[  IS_CV !7 ] OP2[ ,  IS_CONST (268435234) 0 ]
+         58*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~43 ]      OP1[  IS_TMP_VAR ~42 ] OP2[ ,  IS_CONST (268435233) 'count' ]
+         59*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~43 ] OP2[ , ->65 ]
+   59    60*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         61*       <  1> ADD                                               RES[  IS_TMP_VAR ~44 ]      OP1[  IS_CONST (268435228) 1 ] OP2[ ,  IS_CV !8 ]
+         62*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~46 ]      OP1[  IS_CV !7 ] OP2[ ,  IS_CONST (268435227) 2 ]
+         63*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !6 ] OP2[ ,  IS_TMP_VAR ~44 ]
+         64*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~46 ] OP2[  IS_UNUSED  ]
+   61    65*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         66*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~48 ]      OP1[  IS_CV !7 ] OP2[ ,  IS_CONST (268435221) 1 ]
+         67*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !7 ] OP2[ ,  IS_CONST (268435218) 0 ]
+         68*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~48 ] OP2[  IS_UNUSED  ]
+   57    69*       < 42> JMP                                                       OP1[ ->54 ]
+         70*       <127> FE_FREE                                                   OP1[  IS_VAR $39 ] OP2[  IS_UNUSED  ]
+         71*       <163> FAST_RET                                                 
+   65    72*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         73*       < 43> JMPZ                                                      OP1[  IS_CV !1 ] OP2[ , ->80 ]
+   66    74*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         75*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435204) 'Symfony%5CComponent%5CVarExporter%5CInternal%5CExporter' ] OP2[ ,  IS_CONST (268435206) 'export' ]
+         76*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         77*       < 60> DO_FCALL                                      0   RES[  IS_VAR $49 ]      OP1[  IS_UNUSED  ]
+         78*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_VAR $49 ] OP2[  IS_UNUSED  ]
+         79*       < 62> RETURN                                                    OP1[  IS_VAR $49 ]
+   69    80*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         81*       < 22> ASSIGN                                                    OP1[  IS_CV !9 ] OP2[ ,  IS_CONST (268435196) <array> ]
+   70    82*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         83*       < 22> ASSIGN                                                    OP1[  IS_CV !10 ] OP2[ ,  IS_CONST (268435193) <array> ]
+   71    84*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         85*       < 22> ASSIGN                                                    OP1[  IS_CV !11 ] OP2[ ,  IS_CONST (268435190) <array> ]
+   72    86*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         87*       < 77> FE_RESET_R                                        RES[  IS_VAR $53 ]      OP1[  IS_CV !3 ] OP2[ , ->128 ]
+         88*       < 78> FE_FETCH_R                                        RES[  IS_TMP_VAR ~54 ]      OP1[  IS_VAR $53 ] OP2[ ,  IS_CV !7 ] EXT_JMP_REL[ , ->128 ]
+         89*       < 22> ASSIGN                                                    OP1[  IS_CV !8 ] OP2[ ,  IS_TMP_VAR ~54 ]
+   73    90*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         91*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~56 ]      OP1[  IS_CV !3 ] OP2[ ,  IS_CV !7 ]
+         92*       < 98> FETCH_LIST_R                                      RES[  IS_VAR $57 ]      OP1[  IS_TMP_VAR ~56 ] OP2[ ,  IS_CONST (268435177) 1 ]
+         93*       < 22> ASSIGN                                                    OP1[  IS_CV !12 ] OP2[ ,  IS_VAR $57 ]
+         94*       < 98> FETCH_LIST_R                                      RES[  IS_VAR $59 ]      OP1[  IS_TMP_VAR ~56 ] OP2[ ,  IS_CONST (268435174) 2 ]
+         95*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !10 ] OP2[  IS_UNUSED  ]
+         96*       <137> OP_DATA                                                   OP1[  IS_VAR $59 ] OP2[  IS_UNUSED  ]
+         97*       < 98> FETCH_LIST_R                                      RES[  IS_VAR $61 ]      OP1[  IS_TMP_VAR ~56 ] OP2[ ,  IS_CONST (268435169) 3 ]
+         98*       < 22> ASSIGN                                                    OP1[  IS_CV !13 ] OP2[ ,  IS_VAR $61 ]
+         99*       < 70> FREE                                                      OP1[  IS_TMP_VAR ~56 ]
+   74   100*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        101*       < 23> ASSIGN_DIM                                        RES[  IS_TMP_VAR ~64 ]      OP1[  IS_CV !9 ] OP2[  IS_UNUSED  ]
+        102*       <137> OP_DATA                                                   OP1[  IS_CV !12 ] OP2[  IS_UNUSED  ]
+        103*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !2 ] OP2[ ,  IS_CV !12 ]
+        104*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~64 ] OP2[  IS_UNUSED  ]
+   76   105*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        106*       < 20> IS_SMALLER                                        RES[  IS_TMP_VAR ~65 ]      OP1[  IS_CONST (268435152) 0 ] OP2[ ,  IS_CV !13 ]
+        107*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~65 ] OP2[ , ->112 ]
+   77   108*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        109*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !11 ] OP2[ ,  IS_CV !13 ]
+        110*       <137> OP_DATA                                                   OP1[  IS_CV !8 ] OP2[  IS_UNUSED  ]
+        111*       < 42> JMP                                                       OP1[ ->127 ]
+   78   112*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        113*       < 20> IS_SMALLER                                        RES[  IS_TMP_VAR ~67 ]      OP1[  IS_CV !13 ] OP2[ ,  IS_CONST (268435139) 0 ]
+        114*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~67 ] OP2[ , ->127 ]
+   79   115*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        116*       <  3> MUL                                               RES[  IS_TMP_VAR ~68 ]      OP1[  IS_CV !13 ] OP2[ ,  IS_CONST (268435134) -1 ]
+        117*       < 71> INIT_ARRAY                                        RES[  IS_TMP_VAR ~70 ]      OP1[  IS_CV !8 ] OP2[  IS_UNUSED  ]
+        118*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435131) 'Symfony%5CComponent%5CVarExporter%5Carray_pop' ]
+        119*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !10 ] OP2[  IS_UNUSED  ]
+        120*       < 60> DO_FCALL                                      0   RES[  IS_VAR $71 ]      OP1[  IS_UNUSED  ]
+        121*       < 72> ADD_ARRAY_ELEMENT                                 RES[  IS_TMP_VAR ~70 ]      OP1[  IS_VAR $71 ] OP2[  IS_UNUSED  ]
+        122*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !11 ] OP2[ ,  IS_TMP_VAR ~68 ]
+        123*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~70 ] OP2[  IS_UNUSED  ]
+   80   124*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        125*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !10 ] OP2[  IS_UNUSED  ]
+        126*       <137> OP_DATA                                                   OP1[  IS_CONST (268435118) <array> ] OP2[  IS_UNUSED  ]
+   72   127*       < 42> JMP                                                       OP1[ ->88 ]
+        128*       <127> FE_FREE                                                   OP1[  IS_VAR $53 ] OP2[  IS_UNUSED  ]
+   83   129*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        130*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435111) 'Symfony%5CComponent%5CVarExporter%5Cksort' ]
+        131*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !11 ] OP2[  IS_UNUSED  ]
+        132*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+   85   133*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        134*       < 22> ASSIGN                                                    OP1[  IS_CV !14 ] OP2[ ,  IS_CONST (268435106) <array> ]
+   86   135*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        136*       < 77> FE_RESET_R                                        RES[  IS_VAR $75 ]      OP1[  IS_CV !11 ] OP2[ , ->153 ]
+        137*       < 78> FE_FETCH_R                                        RES[  IS_TMP_VAR ~76 ]      OP1[  IS_VAR $75 ] OP2[ ,  IS_CV !7 ] EXT_JMP_REL[ , ->153 ]
+        138*       < 22> ASSIGN                                                    OP1[  IS_CV !15 ] OP2[ ,  IS_TMP_VAR ~76 ]
+   87   139*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        140*       <123> TYPE_CHECK                                  128   RES[  IS_TMP_VAR ~78 ]      OP1[  IS_CV !7 ] OP2[  IS_UNUSED  ]
+        141*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~78 ] OP2[ , ->149 ]
+   88   142*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        143*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~79 ]      OP1[  IS_CV !7 ] OP2[ ,  IS_CONST (268435089) 0 ]
+        144*       <  3> MUL                                               RES[  IS_TMP_VAR ~80 ]      OP1[  IS_TMP_VAR ~79 ] OP2[ ,  IS_CONST (268435088) -1 ]
+        145*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~82 ]      OP1[  IS_CV !7 ] OP2[ ,  IS_CONST (268435087) 1 ]
+        146*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !14 ] OP2[ ,  IS_TMP_VAR ~80 ]
+        147*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~82 ] OP2[  IS_UNUSED  ]
+        148*       < 42> JMP                                                       OP1[ ->152 ]
+   90   149*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        150*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !14 ] OP2[  IS_UNUSED  ]
+        151*       <137> OP_DATA                                                   OP1[  IS_CV !7 ] OP2[  IS_UNUSED  ]
+   86   152*       < 42> JMP                                                       OP1[ ->137 ]
+        153*       <127> FE_FREE                                                   OP1[  IS_VAR $75 ] OP2[  IS_UNUSED  ]
+   94   154*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        155*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~84 ]      OP1[  IS_CV !14 ] OP2[ ,  IS_CONST (268435068) 0 ]
+        156*       <123> TYPE_CHECK                                    2   RES[  IS_TMP_VAR ~85 ]      OP1[  IS_TMP_VAR ~84 ] OP2[  IS_UNUSED  ]
+        157*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~85 ] OP2[ , ->160 ]
+   95   158*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        159*       < 75> UNSET_DIM                                                 OP1[  IS_CV !14 ] OP2[ ,  IS_CONST (268435061) 0 ]
+   98   160*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        161*       < 22> ASSIGN                                                    OP1[  IS_CV !16 ] OP2[ ,  IS_CONST (268435058) <array> ]
+   99   162*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        163*       < 77> FE_RESET_R                                        RES[  IS_VAR $87 ]      OP1[  IS_CV !10 ] OP2[ , ->184 ]
+        164*       < 78> FE_FETCH_R                                        RES[  IS_TMP_VAR ~88 ]      OP1[  IS_VAR $87 ] OP2[ ,  IS_CV !17 ] EXT_JMP_REL[ , ->184 ]
+        165*       < 22> ASSIGN                                                    OP1[  IS_CV !8 ] OP2[ ,  IS_TMP_VAR ~88 ]
+  100   166*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        167*       < 77> FE_RESET_R                                        RES[  IS_VAR $90 ]      OP1[  IS_CV !17 ] OP2[ , ->182 ]
+        168*       < 78> FE_FETCH_R                                        RES[  IS_TMP_VAR ~91 ]      OP1[  IS_VAR $90 ] OP2[ ,  IS_CV !10 ] EXT_JMP_REL[ , ->182 ]
+        169*       < 22> ASSIGN                                                    OP1[  IS_CV !12 ] OP2[ ,  IS_TMP_VAR ~91 ]
+  101   170*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        171*       < 77> FE_RESET_R                                        RES[  IS_VAR $93 ]      OP1[  IS_CV !10 ] OP2[ , ->180 ]
+        172*       < 78> FE_FETCH_R                                        RES[  IS_TMP_VAR ~94 ]      OP1[  IS_VAR $93 ] OP2[ ,  IS_CV !7 ] EXT_JMP_REL[ , ->180 ]
+        173*       < 22> ASSIGN                                                    OP1[  IS_CV !18 ] OP2[ ,  IS_TMP_VAR ~94 ]
+  102   174*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        175*       < 84> FETCH_DIM_W                                       RES[  IS_VAR $96 ]      OP1[  IS_CV !16 ] OP2[ ,  IS_CV !12 ]
+        176*       < 84> FETCH_DIM_W                                       RES[  IS_VAR $97 ]      OP1[  IS_VAR $96 ] OP2[ ,  IS_CV !18 ]
+        177*       < 23> ASSIGN_DIM                                                OP1[  IS_VAR $97 ] OP2[ ,  IS_CV !8 ]
+        178*       <137> OP_DATA                                                   OP1[  IS_CV !7 ] OP2[  IS_UNUSED  ]
+  101   179*       < 42> JMP                                                       OP1[ ->172 ]
+        180*       <127> FE_FREE                                                   OP1[  IS_VAR $93 ] OP2[  IS_UNUSED  ]
+  100   181*       < 42> JMP                                                       OP1[ ->168 ]
+        182*       <127> FE_FREE                                                   OP1[  IS_VAR $90 ] OP2[  IS_UNUSED  ]
+   99   183*       < 42> JMP                                                       OP1[ ->164 ]
+        184*       <127> FE_FREE                                                   OP1[  IS_VAR $87 ] OP2[  IS_UNUSED  ]
+  107   185*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        186*       < 47> JMPNZ_EX                                          RES[  IS_TMP_VAR ~99 ]      OP1[  IS_CV !9 ] OP2[ , ->188 ]
+        187*       < 52> BOOL                                              RES[  IS_TMP_VAR ~99 ]      OP1[  IS_CV !6 ]
+        188*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~99 ] OP2[ , ->209 ]
+  108   189*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        190*       < 68> NEW                                               RES[  IS_VAR $100 ]     OP1[ 'Symfony%5CComponent%5CVarExporter%5CInternal%5CHydrator' ]
+        191*       < 68> NEW                                               RES[  IS_VAR $101 ]     OP1[ 'Symfony%5CComponent%5CVarExporter%5CInternal%5CRegistry' ]
+        192*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !9 ] OP2[  IS_UNUSED  ]
+        193*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+        194*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $101 ] OP2[  IS_UNUSED  ]
+        195*       < 43> JMPZ                                                      OP1[  IS_CV !6 ] OP2[ , ->201 ]
+        196*       < 68> NEW                                               RES[  IS_VAR $103 ]     OP1[ 'Symfony%5CComponent%5CVarExporter%5CInternal%5CValues' ]
+        197*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !6 ] OP2[  IS_UNUSED  ]
+        198*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+        199*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~105 ]     OP1[  IS_VAR $103 ]
+        200*       < 42> JMP                                                       OP1[ ->202 ]
+        201*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~105 ]     OP1[  IS_CONST (268434985) null ]
+        202*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~105 ] OP2[  IS_UNUSED  ]
+        203*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !16 ] OP2[  IS_UNUSED  ]
+        204*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+        205*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !14 ] OP2[  IS_UNUSED  ]
+        206*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+        207*       < 22> ASSIGN                                                    OP1[  IS_CV !0 ] OP2[ ,  IS_VAR $100 ]
+        208*       < 42> JMP                                                       OP1[ ->211 ]
+  110   209*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        210*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268434968) <true> ]
+  113   211*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        212*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268434965) 'Symfony%5CComponent%5CVarExporter%5CInternal%5CExporter' ] OP2[ ,  IS_CONST (268434967) 'export' ]
+        213*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+        214*       < 60> DO_FCALL                                      0   RES[  IS_VAR $109 ]     OP1[  IS_UNUSED  ]
+        215*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_VAR $109 ] OP2[  IS_UNUSED  ]
+        216*       < 62> RETURN                                                    OP1[  IS_VAR $109 ]
+  114   217*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        218*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        219*       < 62> RETURN                                                    OP1[  IS_CONST (268434955) null ]
+
+End of function export
+
+End of class Symfony\Component\VarExporter\VarExporter.
+

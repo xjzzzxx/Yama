@@ -1,0 +1,60 @@
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\front\graph.send.php
+function name:  (null)
+number of ops:  53
+compiled vars:  !0 = $statdata_itemtype, !1 = $_UGET, !2 = $graph_data
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   36     0*       <  0> NOP                                                      
+   37     1*       <  0> NOP                                                      
+   38     2*       <  0> NOP                                                      
+   39     3*       <  0> NOP                                                      
+   41     4*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          5*       < 73> INCLUDE_OR_EVAL                                           OP1[  IS_CONST (268435412) '..%2Finc%2Fincludes.php' ] OP2[ INCLUDE ]
+   44     6*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          7*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435409) 'Session' ] OP2[ ,  IS_CONST (268435411) 'checkRight' ]
+          8*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435411) 'statistic' ] OP2[  IS_UNUSED  ]
+          9*       < 99> FETCH_CONSTANT                                    RES[  IS_TMP_VAR ~4 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435410) 'READ' ]
+         10*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~4 ] OP2[  IS_UNUSED  ]
+         11*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+   47    12*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         13*       < 90> FETCH_DIM_IS                                      RES[  IS_TMP_VAR ~6 ]       OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435404) 'statdata_itemtype' ]
+         14*       <169> COALESCE                                          RES[  IS_TMP_VAR ~7 ]       OP1[  IS_TMP_VAR ~6 ] OP2[ , ->16 ]
+         15*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~7 ]       OP1[  IS_CONST (268435401) null ]
+         16*       < 22> ASSIGN                                                    OP1[  IS_CV !0 ] OP2[ ,  IS_TMP_VAR ~7 ]
+   50    17*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         18*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435396) 'is_a' ]
+         19*       <117> SEND_VAR                                                  OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         20*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435393) 'Glpi%5CStat%5CStatData' ]
+         21*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435392) <true> ]
+         22*       < 60> DO_FCALL                                      0   RES[  IS_VAR $9 ]       OP1[  IS_UNUSED  ]
+         23*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~10 ]      OP1[  IS_VAR $9 ]
+         24*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~10 ] OP2[ , ->32 ]
+   51    25*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         26*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435383) 'Glpi%5CHttp%5CResponse' ] OP2[ ,  IS_CONST (268435385) 'sendError' ]
+         27*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435385) 400 ] OP2[  IS_UNUSED  ]
+         28*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435384) 'Invalid+stats+itemtype' ] OP2[  IS_UNUSED  ]
+         29*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~11 ]      OP1[  IS_CONST (268435384) 'Glpi%5CHttp%5CResponse' ] OP2[ ,  IS_CONST (268435383) 'CONTENT_TYPE_TEXT_PLAIN' ]
+         30*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~11 ] OP2[  IS_UNUSED  ]
+         31*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+   55    32*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         33*       <109> FETCH_CLASS                                   0   RES[  IS_VAR $13 ]      OP2[  IS_CV !0 ]
+         34*       < 68> NEW                                               RES[  IS_VAR $14 ]      OP1[  IS_VAR $13 ]
+         35*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         36*       < 92> FETCH_FUNC_ARG               global               RES[  IS_VAR $15 ]      OP1[  IS_CONST (268435372) '_GET' ]
+         37*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $15 ] OP2[  IS_UNUSED  ]
+         38*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         39*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_VAR $14 ]
+   56    40*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         41*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435363) 'Glpi%5CCsv%5CCsvResponse' ] OP2[ ,  IS_CONST (268435365) 'output' ]
+   57    42*       < 68> NEW                                               RES[  IS_VAR $18 ]      OP1[ 'Glpi%5CCsv%5CStatCsvExport' ]
+         43*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435365) 'getSeries' ]
+         44*       < 60> DO_FCALL                                      0   RES[  IS_VAR $19 ]      OP1[  IS_UNUSED  ]
+         45*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $19 ] OP2[  IS_UNUSED  ]
+         46*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435361) 'getOptions' ]
+         47*       < 60> DO_FCALL                                      0   RES[  IS_VAR $20 ]      OP1[  IS_UNUSED  ]
+         48*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $20 ] OP2[  IS_UNUSED  ]
+         49*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         50*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $18 ] OP2[  IS_UNUSED  ]
+         51*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+   59    52*       < 62> RETURN                                                    OP1[  IS_CONST (268435351) 1 ]
+

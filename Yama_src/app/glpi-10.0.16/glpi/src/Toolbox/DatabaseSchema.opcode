@@ -1,0 +1,96 @@
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\Toolbox\DatabaseSchema.php
+function name:  (null)
+number of ops:  2
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   59     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 62> RETURN                                                    OP1[  IS_CONST (268435453) 1 ]
+
+Class Glpi\Toolbox\DatabaseSchema:
+[+]Class Parent Name: NULL
+End Trait extract
+Start Properties extract:
+Properties: NULL
+End Properties extract
+
+Function getemptyschemapath:
+[+]Function Source Class Name: Glpi\Toolbox\DatabaseSchema
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:?string
+
+[*]ArgInfoNo**0**
+[*]name:version
+[*]type:string
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\Toolbox\DatabaseSchema.php
+function name:  getEmptySchemaPath
+number of ops:  52
+compiled vars:  !0 = $version, !1 = $normalized_version, !2 = $latest_version, !3 = $schema_path
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   47     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+   49     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435413) 'Glpi%5CToolbox%5CVersionParser' ] OP2[ ,  IS_CONST (268435415) 'getNormalizedVersion' ]
+          3*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          4*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435413) <false> ] OP2[  IS_UNUSED  ]
+          5*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435412) <true> ] OP2[  IS_UNUSED  ]
+          6*       < 60> DO_FCALL                                      0   RES[  IS_VAR $4 ]       OP1[  IS_UNUSED  ]
+          7*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_VAR $4 ]
+   50     8*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          9*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435405) 'Glpi%5CToolbox%5CVersionParser' ] OP2[ ,  IS_CONST (268435407) 'getNormalizedVersion' ]
+         10*       < 99> FETCH_CONSTANT                                    RES[  IS_TMP_VAR ~6 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435407) 'Glpi%5CToolbox%5CGLPI_VERSION' ]
+         11*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~6 ] OP2[  IS_UNUSED  ]
+         12*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435406) <false> ] OP2[  IS_UNUSED  ]
+         13*       < 60> DO_FCALL                                      0   RES[  IS_VAR $7 ]       OP1[  IS_UNUSED  ]
+         14*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_VAR $7 ]
+   52    15*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         16*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~9 ]       OP1[  IS_CV !1 ] OP2[ ,  IS_CV !2 ]
+         17*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~9 ] OP2[ , ->28 ]
+   53    18*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435395) 'Glpi%5CToolbox%5Csprintf' ]
+         19*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435396) '%25s%2Finstall%2Fmysql%2Fglpi-empty.sql' ] OP2[  IS_UNUSED  ]
+         20*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435395) 'Glpi%5CToolbox%5Crealpath' ]
+         21*       < 99> FETCH_CONSTANT                                    RES[  IS_TMP_VAR ~10 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435396) 'Glpi%5CToolbox%5CGLPI_ROOT' ]
+         22*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~10 ] OP2[  IS_UNUSED  ]
+         23*       < 60> DO_FCALL                                      0   RES[  IS_VAR $11 ]      OP1[  IS_UNUSED  ]
+         24*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $11 ] OP2[  IS_UNUSED  ]
+         25*       < 60> DO_FCALL                                      0   RES[  IS_VAR $12 ]      OP1[  IS_UNUSED  ]
+         26*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~13 ]      OP1[  IS_VAR $12 ]
+         27*       < 42> JMP                                                       OP1[ ->38 ]
+   54    28*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435385) 'Glpi%5CToolbox%5Csprintf' ]
+         29*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435386) '%25s%2Finstall%2Fmysql%2Fglpi-%25s-empty.sql' ] OP2[  IS_UNUSED  ]
+         30*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435385) 'Glpi%5CToolbox%5Crealpath' ]
+         31*       < 99> FETCH_CONSTANT                                    RES[  IS_TMP_VAR ~14 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435386) 'Glpi%5CToolbox%5CGLPI_ROOT' ]
+         32*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~14 ] OP2[  IS_UNUSED  ]
+         33*       < 60> DO_FCALL                                      0   RES[  IS_VAR $15 ]      OP1[  IS_UNUSED  ]
+         34*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $15 ] OP2[  IS_UNUSED  ]
+         35*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         36*       < 60> DO_FCALL                                      0   RES[  IS_VAR $16 ]      OP1[  IS_UNUSED  ]
+         37*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~13 ]      OP1[  IS_VAR $16 ]
+   52    38*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_TMP_VAR ~13 ]
+   56    39*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         40*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435371) 'Glpi%5CToolbox%5Cfile_exists' ]
+         41*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         42*       < 60> DO_FCALL                                      0   RES[  IS_VAR $18 ]      OP1[  IS_UNUSED  ]
+         43*       < 43> JMPZ                                                      OP1[  IS_VAR $18 ] OP2[ , ->46 ]
+         44*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~19 ]      OP1[  IS_CV !3 ]
+         45*       < 42> JMP                                                       OP1[ ->47 ]
+         46*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~19 ]      OP1[  IS_CONST (268435362) null ]
+         47*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_TMP_VAR ~19 ] OP2[  IS_UNUSED  ]
+         48*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~19 ]
+   57    49*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         50*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         51*       < 62> RETURN                                                    OP1[  IS_CONST (268435353) null ]
+
+End of function getemptyschemapath
+
+End of class Glpi\Toolbox\DatabaseSchema.
+

@@ -1,0 +1,1452 @@
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\wapmorgan\unified-archive\src\LzwStreamWrapper.php
+function name:  (null)
+number of ops:  16
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+    3     0*       <  0> NOP                                                      
+   13     1*       <  0> NOP                                                      
+   14     2*       <  0> NOP                                                      
+   26     3*       <  0> NOP                                                      
+   27     4*       <  0> NOP                                                      
+   28     5*       <  0> NOP                                                      
+   31     6*       <  0> NOP                                                      
+   33     7*       <  0> NOP                                                      
+   34     8*       <  0> NOP                                                      
+   35     9*       <  0> NOP                                                      
+   36    10*       <  0> NOP                                                      
+   37    11*       <  0> NOP                                                      
+   38    12*       <  0> NOP                                                      
+   39    13*       <  0> NOP                                                      
+  442    14*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         15*       < 62> RETURN                                                    OP1[  IS_CONST (2) 1 ]
+
+Class wapmorgan\UnifiedArchive\LzwStreamWrapper:
+[+]Class Parent Name: NULL
+End Trait extract
+Start Properties extract:
+Key: registered, Value: UNINIT, Type: Normal
+Key: installed, Value: UNINIT, Type: Normal
+Key: TMP_FILE_THRESHOLD, Value: UNINIT, Type: Normal
+Key: AVERAGE_COMPRESSION_RATIO, Value: UNINIT, Type: Normal
+Key: forceTmpFile, Value: UNINIT, Type: Normal
+Key: highLimit, Value: UNINIT, Type: Normal
+Key: mode, Value: UNINIT, Type: Normal
+Key: path, Value: 0, Type: Normal
+End Properties extract.
+
+Function registerwrapper:
+[+]Function Source Class Name: wapmorgan\UnifiedArchive\LzwStreamWrapper
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\wapmorgan\unified-archive\src\LzwStreamWrapper.php
+function name:  registerWrapper
+number of ops:  14
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   21     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       <173> FETCH_STATIC_PROP_R          unknown              RES[  IS_TMP_VAR ~0 ]       OP1[  IS_CONST (26) 'registered' ] OP2[  IS_UNUSED  ]
+          2*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~1 ]       OP1[  IS_TMP_VAR ~0 ]
+          3*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~1 ] OP2[ , ->9 ]
+   22     4*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          5*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (19) 'wapmorgan%5CUnifiedArchive%5Cstream_wrapper_register' ]
+          6*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (20) 'compress.lzw' ] OP2[  IS_UNUSED  ]
+          7*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (19) 'wapmorgan%5CUnifiedArchive%5CLzwStreamWrapper' ] OP2[  IS_UNUSED  ]
+          8*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+   23     9*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         10*       < 25> ASSIGN_STATIC_PROP                                        OP1[  IS_CONST (14) 'registered' ] OP2[  IS_UNUSED  ]
+         11*       <137> OP_DATA                                                   OP1[  IS_CONST (13) <true> ] OP2[  IS_UNUSED  ]
+   24    12*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         13*       < 62> RETURN                                                    OP1[  IS_CONST (10) null ]
+
+End of function registerwrapper
+
+Function stream_open:
+[+]Function Source Class Name: wapmorgan\UnifiedArchive\LzwStreamWrapper
+[*]Start of arg_info extract:
+[*]arg_info num_args:3
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:path
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:mode
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**2**
+[*]name:options
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\wapmorgan\unified-archive\src\LzwStreamWrapper.php
+function name:  stream_open
+number of ops:  198
+compiled vars:  !0 = $path, !1 = $mode, !2 = $options, !3 = $schema, !4 = $expected_data_size, !5 = $available_memory, !6 = $prefix, !7 = $tmp, !8 = $tmp2
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   49     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 63> RECV                                              RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ]
+          2*       < 63> RECV                                              RES[  IS_CV !2 ]       OP1[  IS_UNUSED  ]
+   52     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (388) 'checkBinary' ]
+          5*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+   53     6*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          7*       <173> FETCH_STATIC_PROP_R          unknown              RES[  IS_TMP_VAR ~10 ]      OP1[  IS_CONST (384) 'installed' ] OP2[  IS_UNUSED  ]
+          8*       <123> TYPE_CHECK                                    4   RES[  IS_TMP_VAR ~11 ]      OP1[  IS_TMP_VAR ~10 ] OP2[  IS_UNUSED  ]
+          9*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~11 ] OP2[ , ->15 ]
+   54    10*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         11*       < 68> NEW                                               RES[  IS_VAR $12 ]      OP1[ 'Exception' ]
+         12*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (377) 'compress+and+uncompress+commands+are+required' ] OP2[  IS_UNUSED  ]
+         13*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         14*       <108> THROW                                         0           OP1[  IS_VAR $12 ] OP2[  IS_UNUSED  ]
+   56    15*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         16*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (370) 'compress.lzw%3A%2F%2F' ]
+   57    17*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         18*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (367) 'wapmorgan%5CUnifiedArchive%5Cstrncasecmp' ]
+         19*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         20*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         21*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (364) 'wapmorgan%5CUnifiedArchive%5Cstrlen' ]
+         22*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         23*       < 60> DO_FCALL                                      0   RES[  IS_VAR $15 ]      OP1[  IS_UNUSED  ]
+         24*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $15 ] OP2[  IS_UNUSED  ]
+         25*       < 60> DO_FCALL                                      0   RES[  IS_VAR $16 ]      OP1[  IS_UNUSED  ]
+         26*       < 18> IS_EQUAL                                          RES[  IS_TMP_VAR ~17 ]      OP1[  IS_VAR $16 ] OP2[ ,  IS_CONST (357) 0 ]
+         27*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~17 ] OP2[ , ->37 ]
+   58    28*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         29*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (352) 'wapmorgan%5CUnifiedArchive%5Csubstr' ]
+         30*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         31*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (351) 'wapmorgan%5CUnifiedArchive%5Cstrlen' ]
+         32*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         33*       < 60> DO_FCALL                                      0   RES[  IS_VAR $18 ]      OP1[  IS_UNUSED  ]
+         34*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $18 ] OP2[  IS_UNUSED  ]
+         35*       < 60> DO_FCALL                                      0   RES[  IS_VAR $19 ]      OP1[  IS_UNUSED  ]
+         36*       < 22> ASSIGN                                                    OP1[  IS_CV !0 ] OP2[ ,  IS_VAR $19 ]
+   60    37*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         38*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (340) 'wapmorgan%5CUnifiedArchive%5Cfile_exists' ]
+         39*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         40*       < 60> DO_FCALL                                      0   RES[  IS_VAR $21 ]      OP1[  IS_UNUSED  ]
+         41*       < 43> JMPZ                                                      OP1[  IS_VAR $21 ] OP2[ , ->130 ]
+   61    42*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         43*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (334) 'wapmorgan%5CUnifiedArchive%5Crealpath' ]
+         44*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         45*       < 60> DO_FCALL                                      0   RES[  IS_VAR $23 ]      OP1[  IS_UNUSED  ]
+         46*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (327) 'path' ]
+         47*       <137> OP_DATA                                                   OP1[  IS_VAR $23 ] OP2[  IS_UNUSED  ]
+   62    48*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         49*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (325) 'wapmorgan%5CUnifiedArchive%5Cfilesize' ]
+         50*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         51*       < 60> DO_FCALL                                      0   RES[  IS_VAR $24 ]      OP1[  IS_UNUSED  ]
+   63    52*       <173> FETCH_STATIC_PROP_R          unknown              RES[  IS_TMP_VAR ~25 ]      OP1[  IS_CONST (322) 'AVERAGE_COMPRESSION_RATIO' ] OP2[  IS_UNUSED  ]
+         53*       <  3> MUL                                               RES[  IS_TMP_VAR ~26 ]      OP1[  IS_VAR $24 ] OP2[ ,  IS_TMP_VAR ~25 ]
+   62    54*       < 22> ASSIGN                                                    OP1[  IS_CV !4 ] OP2[ ,  IS_TMP_VAR ~26 ]
+   64    55*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         56*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (315) 'getAvailableMemory' ]
+         57*       < 60> DO_FCALL                                      0   RES[  IS_VAR $28 ]      OP1[  IS_UNUSED  ]
+         58*       < 22> ASSIGN                                                    OP1[  IS_CV !5 ] OP2[ ,  IS_VAR $28 ]
+   66    59*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         60*       <173> FETCH_STATIC_PROP_R          unknown              RES[  IS_TMP_VAR ~30 ]      OP1[  IS_CONST (309) 'TMP_FILE_THRESHOLD' ] OP2[  IS_UNUSED  ]
+         61*       <  3> MUL                                               RES[  IS_TMP_VAR ~31 ]      OP1[  IS_CV !5 ] OP2[ ,  IS_TMP_VAR ~30 ]
+         62*       < 21> IS_SMALLER_OR_EQUAL                               RES[  IS_TMP_VAR ~32 ]      OP1[  IS_CV !4 ] OP2[ ,  IS_TMP_VAR ~31 ]
+         63*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~32 ]      OP1[  IS_TMP_VAR ~32 ] OP2[ , ->67 ]
+   67    64*       <173> FETCH_STATIC_PROP_R          unknown              RES[  IS_TMP_VAR ~33 ]      OP1[  IS_CONST (302) 'forceTmpFile' ] OP2[  IS_UNUSED  ]
+         65*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~34 ]      OP1[  IS_TMP_VAR ~33 ]
+         66*       < 52> BOOL                                              RES[  IS_TMP_VAR ~32 ]      OP1[  IS_TMP_VAR ~34 ]
+         67*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~32 ]      OP1[  IS_TMP_VAR ~32 ] OP2[ , ->73 ]
+   68    68*       <173> FETCH_STATIC_PROP_R          unknown              RES[  IS_TMP_VAR ~35 ]      OP1[  IS_CONST (295) 'highLimit' ] OP2[  IS_UNUSED  ]
+         69*       <  3> MUL                                               RES[  IS_TMP_VAR ~36 ]      OP1[  IS_TMP_VAR ~35 ] OP2[ ,  IS_CONST (294) 1024 ]
+         70*       <  3> MUL                                               RES[  IS_TMP_VAR ~37 ]      OP1[  IS_TMP_VAR ~36 ] OP2[ ,  IS_CONST (293) 1024 ]
+         71*       < 20> IS_SMALLER                                        RES[  IS_TMP_VAR ~38 ]      OP1[  IS_CV !4 ] OP2[ ,  IS_TMP_VAR ~37 ]
+         72*       < 52> BOOL                                              RES[  IS_TMP_VAR ~32 ]      OP1[  IS_TMP_VAR ~38 ]
+         73*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~32 ] OP2[ , ->78 ]
+   69    74*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         75*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (284) 'read' ]
+         76*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         77*       < 42> JMP                                                       OP1[ ->129 ]
+   71    78*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         79*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (278) 'wapmorgan%5CUnifiedArchive%5Cbasename' ]
+         80*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (279) 'G%3A%5Cdesktop%5CYama%5Capp%5Cglpi-10.0.16%5Cglpi%5Cvendor%5Cwapmorgan%5Cunified-archive%5Csrc%5CLzwStreamWrapper.php' ] OP2[  IS_UNUSED  ]
+         81*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (278) '.php' ] OP2[  IS_UNUSED  ]
+         82*       < 60> DO_FCALL                                      0   RES[  IS_VAR $40 ]      OP1[  IS_UNUSED  ]
+         83*       < 22> ASSIGN                                                    OP1[  IS_CV !6 ] OP2[ ,  IS_VAR $40 ]
+   72    84*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         85*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (271) 'wapmorgan%5CUnifiedArchive%5Ctempnam' ]
+         86*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (272) 'wapmorgan%5CUnifiedArchive%5Csys_get_temp_dir' ]
+         87*       < 60> DO_FCALL                                      0   RES[  IS_VAR $42 ]      OP1[  IS_UNUSED  ]
+         88*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $42 ] OP2[  IS_UNUSED  ]
+         89*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !6 ] OP2[  IS_UNUSED  ]
+         90*       < 60> DO_FCALL                                      0   RES[  IS_VAR $43 ]      OP1[  IS_UNUSED  ]
+         91*       < 22> ASSIGN                                            RES[  IS_TMP_VAR ~44 ]      OP1[  IS_CV !7 ] OP2[ ,  IS_VAR $43 ]
+         92*       <123> TYPE_CHECK                                    4   RES[  IS_TMP_VAR ~45 ]      OP1[  IS_TMP_VAR ~44 ] OP2[  IS_UNUSED  ]
+         93*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~45 ] OP2[ , ->102 ]
+   73    94*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         95*       < 68> NEW                                               RES[  IS_VAR $46 ]      OP1[ 'Exception' ]
+   75    96*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (257) 'wapmorgan%5CUnifiedArchive%5Csys_get_temp_dir' ]
+         97*       < 60> DO_FCALL                                      0   RES[  IS_VAR $47 ]      OP1[  IS_UNUSED  ]
+         98*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~48 ]      OP1[  IS_CONST (256) 'wapmorgan%5CUnifiedArchive%5CLzwStreamWrapper%2C+line+73%3A+Could+not+create+temporary+file+in+' ] OP2[ ,  IS_VAR $47 ]
+         99*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~48 ] OP2[  IS_UNUSED  ]
+        100*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+        101*       <108> THROW                                         0           OP1[  IS_VAR $46 ] OP2[  IS_UNUSED  ]
+   76   102*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        103*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (247) 'wapmorgan%5CUnifiedArchive%5Ctempnam' ]
+        104*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (248) 'wapmorgan%5CUnifiedArchive%5Csys_get_temp_dir' ]
+        105*       < 60> DO_FCALL                                      0   RES[  IS_VAR $50 ]      OP1[  IS_UNUSED  ]
+        106*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $50 ] OP2[  IS_UNUSED  ]
+        107*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !6 ] OP2[  IS_UNUSED  ]
+        108*       < 60> DO_FCALL                                      0   RES[  IS_VAR $51 ]      OP1[  IS_UNUSED  ]
+        109*       < 22> ASSIGN                                            RES[  IS_TMP_VAR ~52 ]      OP1[  IS_CV !8 ] OP2[ ,  IS_VAR $51 ]
+        110*       <123> TYPE_CHECK                                    4   RES[  IS_TMP_VAR ~53 ]      OP1[  IS_TMP_VAR ~52 ] OP2[  IS_UNUSED  ]
+        111*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~53 ] OP2[ , ->120 ]
+   77   112*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        113*       < 68> NEW                                               RES[  IS_VAR $54 ]      OP1[ 'Exception' ]
+   79   114*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (233) 'wapmorgan%5CUnifiedArchive%5Csys_get_temp_dir' ]
+        115*       < 60> DO_FCALL                                      0   RES[  IS_VAR $55 ]      OP1[  IS_UNUSED  ]
+        116*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~56 ]      OP1[  IS_CONST (232) 'wapmorgan%5CUnifiedArchive%5CLzwStreamWrapper%2C+line+77%3A+Could+not+create+temporary+file+in+' ] OP2[ ,  IS_VAR $55 ]
+        117*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~56 ] OP2[  IS_UNUSED  ]
+        118*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+        119*       <108> THROW                                         0           OP1[  IS_VAR $54 ] OP2[  IS_UNUSED  ]
+   80   120*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        121*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (223) 'tmp' ]
+        122*       <137> OP_DATA                                                   OP1[  IS_CV !7 ] OP2[  IS_UNUSED  ]
+   81   123*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        124*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (218) 'tmp2' ]
+        125*       <137> OP_DATA                                                   OP1[  IS_CV !8 ] OP2[  IS_UNUSED  ]
+   82   126*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        127*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (213) 'read' ]
+        128*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+        129*       < 42> JMP                                                       OP1[ ->191 ]
+   85   130*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        131*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (207) 'path' ]
+        132*       <137> OP_DATA                                                   OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+   86   133*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        134*       <173> FETCH_STATIC_PROP_R          unknown              RES[  IS_TMP_VAR ~62 ]      OP1[  IS_CONST (202) 'forceTmpFile' ] OP2[  IS_UNUSED  ]
+        135*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~62 ] OP2[ , ->188 ]
+   87   136*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        137*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (197) 'wapmorgan%5CUnifiedArchive%5Cbasename' ]
+        138*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (198) 'G%3A%5Cdesktop%5CYama%5Capp%5Cglpi-10.0.16%5Cglpi%5Cvendor%5Cwapmorgan%5Cunified-archive%5Csrc%5CLzwStreamWrapper.php' ] OP2[  IS_UNUSED  ]
+        139*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (197) '.php' ] OP2[  IS_UNUSED  ]
+        140*       < 60> DO_FCALL                                      0   RES[  IS_VAR $63 ]      OP1[  IS_UNUSED  ]
+        141*       < 22> ASSIGN                                                    OP1[  IS_CV !6 ] OP2[ ,  IS_VAR $63 ]
+   88   142*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        143*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (190) 'wapmorgan%5CUnifiedArchive%5Ctempnam' ]
+        144*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (191) 'wapmorgan%5CUnifiedArchive%5Csys_get_temp_dir' ]
+        145*       < 60> DO_FCALL                                      0   RES[  IS_VAR $65 ]      OP1[  IS_UNUSED  ]
+        146*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $65 ] OP2[  IS_UNUSED  ]
+        147*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !6 ] OP2[  IS_UNUSED  ]
+        148*       < 60> DO_FCALL                                      0   RES[  IS_VAR $66 ]      OP1[  IS_UNUSED  ]
+        149*       < 22> ASSIGN                                            RES[  IS_TMP_VAR ~67 ]      OP1[  IS_CV !7 ] OP2[ ,  IS_VAR $66 ]
+        150*       <123> TYPE_CHECK                                    4   RES[  IS_TMP_VAR ~68 ]      OP1[  IS_TMP_VAR ~67 ] OP2[  IS_UNUSED  ]
+        151*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~68 ] OP2[ , ->160 ]
+   89   152*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        153*       < 68> NEW                                               RES[  IS_VAR $69 ]      OP1[ 'Exception' ]
+   91   154*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (176) 'wapmorgan%5CUnifiedArchive%5Csys_get_temp_dir' ]
+        155*       < 60> DO_FCALL                                      0   RES[  IS_VAR $70 ]      OP1[  IS_UNUSED  ]
+        156*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~71 ]      OP1[  IS_CONST (175) 'wapmorgan%5CUnifiedArchive%5CLzwStreamWrapper%2C+line+89%3A+Could+not+create+temporary+file+in+' ] OP2[ ,  IS_VAR $70 ]
+        157*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~71 ] OP2[  IS_UNUSED  ]
+        158*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+        159*       <108> THROW                                         0           OP1[  IS_VAR $69 ] OP2[  IS_UNUSED  ]
+   92   160*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        161*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (166) 'wapmorgan%5CUnifiedArchive%5Ctempnam' ]
+        162*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (167) 'wapmorgan%5CUnifiedArchive%5Csys_get_temp_dir' ]
+        163*       < 60> DO_FCALL                                      0   RES[  IS_VAR $73 ]      OP1[  IS_UNUSED  ]
+        164*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $73 ] OP2[  IS_UNUSED  ]
+        165*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !6 ] OP2[  IS_UNUSED  ]
+        166*       < 60> DO_FCALL                                      0   RES[  IS_VAR $74 ]      OP1[  IS_UNUSED  ]
+        167*       < 22> ASSIGN                                            RES[  IS_TMP_VAR ~75 ]      OP1[  IS_CV !8 ] OP2[ ,  IS_VAR $74 ]
+        168*       <123> TYPE_CHECK                                    4   RES[  IS_TMP_VAR ~76 ]      OP1[  IS_TMP_VAR ~75 ] OP2[  IS_UNUSED  ]
+        169*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~76 ] OP2[ , ->178 ]
+   93   170*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        171*       < 68> NEW                                               RES[  IS_VAR $77 ]      OP1[ 'Exception' ]
+   95   172*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (152) 'wapmorgan%5CUnifiedArchive%5Csys_get_temp_dir' ]
+        173*       < 60> DO_FCALL                                      0   RES[  IS_VAR $78 ]      OP1[  IS_UNUSED  ]
+        174*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~79 ]      OP1[  IS_CONST (151) 'wapmorgan%5CUnifiedArchive%5CLzwStreamWrapper%2C+line+93%3A+Could+not+create+temporary+file+in+' ] OP2[ ,  IS_VAR $78 ]
+        175*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~79 ] OP2[  IS_UNUSED  ]
+        176*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+        177*       <108> THROW                                         0           OP1[  IS_VAR $77 ] OP2[  IS_UNUSED  ]
+   96   178*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        179*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (142) 'tmp' ]
+        180*       <137> OP_DATA                                                   OP1[  IS_CV !7 ] OP2[  IS_UNUSED  ]
+   97   181*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        182*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (137) 'tmp2' ]
+        183*       <137> OP_DATA                                                   OP1[  IS_CV !8 ] OP2[  IS_UNUSED  ]
+   98   184*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        185*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (132) 'pointer' ]
+        186*       <137> OP_DATA                                                   OP1[  IS_CONST (131) 0 ] OP2[  IS_UNUSED  ]
+        187*       < 42> JMP                                                       OP1[ ->191 ]
+  100   188*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        189*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (126) 'pointer' ]
+        190*       <137> OP_DATA                                                   OP1[  IS_CONST (125) 0 ] OP2[  IS_UNUSED  ]
+  103   191*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        192*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (122) 'mode' ]
+        193*       <137> OP_DATA                                                   OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+  105   194*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        195*       < 62> RETURN                                                    OP1[  IS_CONST (117) <true> ]
+  106   196*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        197*       < 62> RETURN                                                    OP1[  IS_CONST (114) null ]
+
+End of function stream_open
+
+Function getavailablememory:
+[+]Function Source Class Name: wapmorgan\UnifiedArchive\LzwStreamWrapper
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\wapmorgan\unified-archive\src\LzwStreamWrapper.php
+function name:  getAvailableMemory
+number of ops:  51
+compiled vars:  !0 = $limit, !1 = $s, !2 = $multipleer
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  114     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (100) 'wapmorgan%5CUnifiedArchive%5Cstrtoupper' ]
+          2*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (101) 'wapmorgan%5CUnifiedArchive%5Cini_get' ]
+          3*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (102) 'memory_limit' ] OP2[  IS_UNUSED  ]
+          4*       < 60> DO_FCALL                                      0   RES[  IS_VAR $3 ]       OP1[  IS_UNUSED  ]
+          5*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $3 ] OP2[  IS_UNUSED  ]
+          6*       < 60> DO_FCALL                                      0   RES[  IS_VAR $4 ]       OP1[  IS_UNUSED  ]
+          7*       < 22> ASSIGN                                                    OP1[  IS_CV !0 ] OP2[ ,  IS_VAR $4 ]
+  115     8*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          9*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (91) <array> ]
+  116    10*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         11*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (88) 'wapmorgan%5CUnifiedArchive%5Carray_search' ]
+         12*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (89) 'wapmorgan%5CUnifiedArchive%5Csubstr' ]
+         13*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         14*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (88) -1 ] OP2[  IS_UNUSED  ]
+         15*       < 60> DO_FCALL                                      0   RES[  IS_VAR $7 ]       OP1[  IS_UNUSED  ]
+         16*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $7 ] OP2[  IS_UNUSED  ]
+         17*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         18*       < 60> DO_FCALL                                      0   RES[  IS_VAR $8 ]       OP1[  IS_UNUSED  ]
+         19*       < 22> ASSIGN                                            RES[  IS_TMP_VAR ~9 ]       OP1[  IS_CV !2 ] OP2[ ,  IS_VAR $8 ]
+         20*       <123> TYPE_CHECK                                  1018   RES[  IS_TMP_VAR ~10 ]      OP1[  IS_TMP_VAR ~9 ] OP2[  IS_UNUSED  ]
+         21*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~10 ] OP2[ , ->40 ]
+  117    22*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         23*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (71) 'wapmorgan%5CUnifiedArchive%5Csubstr' ]
+         24*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         25*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (70) 0 ] OP2[  IS_UNUSED  ]
+         26*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (69) -1 ] OP2[  IS_UNUSED  ]
+         27*       < 60> DO_FCALL                                      0   RES[  IS_VAR $11 ]      OP1[  IS_UNUSED  ]
+         28*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (66) 'wapmorgan%5CUnifiedArchive%5Cpow' ]
+         29*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (67) 1024 ] OP2[  IS_UNUSED  ]
+         30*       <  1> ADD                                               RES[  IS_TMP_VAR ~12 ]      OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (66) 1 ]
+         31*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~12 ] OP2[  IS_UNUSED  ]
+         32*       < 60> DO_FCALL                                      0   RES[  IS_VAR $13 ]      OP1[  IS_UNUSED  ]
+         33*       <  3> MUL                                               RES[  IS_TMP_VAR ~14 ]      OP1[  IS_VAR $11 ] OP2[ ,  IS_VAR $13 ]
+         34*       < 22> ASSIGN                                                    OP1[  IS_CV !0 ] OP2[ ,  IS_TMP_VAR ~14 ]
+  118    35*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         36*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (55) 'wapmorgan%5CUnifiedArchive%5Cmemory_get_usage' ]
+         37*       < 60> DO_FCALL                                      0   RES[  IS_VAR $16 ]      OP1[  IS_UNUSED  ]
+         38*       < 26> ASSIGN_OP                    -=               2           OP1[  IS_CV !0 ] OP2[ ,  IS_VAR $16 ]
+         39*       < 42> JMP                                                       OP1[ ->47 ]
+  119    40*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         41*       < 18> IS_EQUAL                                          RES[  IS_TMP_VAR ~18 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (48) -1 ]
+         42*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~18 ] OP2[ , ->47 ]
+  120    43*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         44*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (43) 'getSystemMemory' ]
+         45*       < 60> DO_FCALL                                      0   RES[  IS_VAR $19 ]      OP1[  IS_UNUSED  ]
+         46*       < 22> ASSIGN                                                    OP1[  IS_CV !0 ] OP2[ ,  IS_VAR $19 ]
+  124    47*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         48*       < 62> RETURN                                                    OP1[  IS_CV !0 ]
+  125    49*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         50*       < 62> RETURN                                                    OP1[  IS_CONST (33) null ]
+
+End of function getavailablememory
+
+Function getsystemmemory:
+[+]Function Source Class Name: wapmorgan\UnifiedArchive\LzwStreamWrapper
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\wapmorgan\unified-archive\src\LzwStreamWrapper.php
+function name:  getSystemMemory
+number of ops:  13
+compiled vars:  !0 = $output, !1 = $resultCode
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  133     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       <113> INIT_STATIC_METHOD_CALL      self                         OP1[  IS_UNUSED  ] OP2[  IS_CONST (24) 'exec' ]
+          2*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (24) 'free+--bytes+%7C+head+-n3+%7C+tail+-n1+%7C+awk+%27%7Bprint+%244%7D%27' ] OP2[  IS_UNUSED  ]
+          3*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          4*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+          5*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  136     6*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          7*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (15) 'wapmorgan%5CUnifiedArchive%5Ctrim' ]
+          8*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          9*       < 60> DO_FCALL                                      0   RES[  IS_VAR $3 ]       OP1[  IS_UNUSED  ]
+         10*       < 62> RETURN                                                    OP1[  IS_VAR $3 ]
+  137    11*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         12*       < 62> RETURN                                                    OP1[  IS_CONST (8) null ]
+
+End of function getsystemmemory
+
+Function exec:
+[+]Function Source Class Name: wapmorgan\UnifiedArchive\LzwStreamWrapper
+[*]Start of arg_info extract:
+[*]arg_info num_args:3
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:command
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:output
+[*]type:(null)
+[*]is_ref:1
+[*]is_variadic:0
+
+[*]ArgInfoNo**2**
+[*]name:resultCode
+[*]type:(null)
+[*]is_ref:1
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\wapmorgan\unified-archive\src\LzwStreamWrapper.php
+function name:  exec
+number of ops:  107
+compiled vars:  !0 = $command, !1 = $output, !2 = $resultCode, !3 = $execOutput, !4 = $process, !5 = $pipes
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  145     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 63> RECV                                              RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ]
+          2*       < 64> RECV_INIT                                         RES[  IS_CV !2 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (210) null ]
+  147     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (207) 'wapmorgan%5CUnifiedArchive%5Cfunction_exists' ]
+          5*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (208) 'system' ] OP2[  IS_UNUSED  ]
+          6*       < 60> DO_FCALL                                      0   RES[  IS_VAR $6 ]       OP1[  IS_UNUSED  ]
+          7*       < 43> JMPZ                                                      OP1[  IS_VAR $6 ] OP2[ , ->26 ]
+  148     8*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          9*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (201) 'wapmorgan%5CUnifiedArchive%5Cob_start' ]
+         10*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  149    11*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         12*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (198) 'wapmorgan%5CUnifiedArchive%5Csystem' ]
+         13*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         14*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         15*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  150    16*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         17*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (191) 'wapmorgan%5CUnifiedArchive%5Cob_get_contents' ]
+         18*       < 60> DO_FCALL                                      0   RES[  IS_VAR $9 ]       OP1[  IS_UNUSED  ]
+         19*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_VAR $9 ]
+  151    20*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         21*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (186) 'wapmorgan%5CUnifiedArchive%5Cob_end_clean' ]
+         22*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  153    23*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         24*       < 62> RETURN                                                    OP1[  IS_CONST (183) null ]
+         25*       < 42> JMP                                                       OP1[ ->105 ]
+  154    26*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         27*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (178) 'wapmorgan%5CUnifiedArchive%5Cfunction_exists' ]
+         28*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (179) 'exec' ] OP2[  IS_UNUSED  ]
+         29*       < 60> DO_FCALL                                      0   RES[  IS_VAR $12 ]      OP1[  IS_UNUSED  ]
+         30*       < 43> JMPZ                                                      OP1[  IS_VAR $12 ] OP2[ , ->49 ]
+  155    31*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         32*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (172) <array> ]
+  156    33*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         34*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (169) 'wapmorgan%5CUnifiedArchive%5Cexec' ]
+         35*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         36*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         37*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         38*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  157    39*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         40*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (160) 'wapmorgan%5CUnifiedArchive%5Cimplode' ]
+         41*       < 99> FETCH_CONSTANT                                    RES[  IS_TMP_VAR ~15 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (161) 'wapmorgan%5CUnifiedArchive%5CPHP_EOL' ]
+         42*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~15 ] OP2[  IS_UNUSED  ]
+         43*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         44*       < 60> DO_FCALL                                      0   RES[  IS_VAR $16 ]      OP1[  IS_UNUSED  ]
+         45*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_VAR $16 ]
+  159    46*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         47*       < 62> RETURN                                                    OP1[  IS_CONST (152) null ]
+         48*       < 42> JMP                                                       OP1[ ->105 ]
+  160    49*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         50*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (147) 'wapmorgan%5CUnifiedArchive%5Cfunction_exists' ]
+         51*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (148) 'proc_open' ] OP2[  IS_UNUSED  ]
+         52*       < 60> DO_FCALL                                      0   RES[  IS_VAR $18 ]      OP1[  IS_UNUSED  ]
+         53*       < 43> JMPZ                                                      OP1[  IS_VAR $18 ] OP2[ , ->87 ]
+  161    54*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         55*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (141) 'wapmorgan%5CUnifiedArchive%5Cproc_open' ]
+         56*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+  162    57*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (140) 'wapmorgan%5CUnifiedArchive%5Cfopen' ]
+         58*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (141) 'php%3A%2F%2Fmemory' ] OP2[  IS_UNUSED  ]
+         59*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (140) 'w' ] OP2[  IS_UNUSED  ]
+         60*       < 60> DO_FCALL                                      0   RES[  IS_VAR $19 ]      OP1[  IS_UNUSED  ]
+         61*       < 71> INIT_ARRAY                                        RES[  IS_TMP_VAR ~20 ]      OP1[  IS_VAR $19 ] OP2[ ,  IS_CONST (137) 1 ]
+         62*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~20 ] OP2[  IS_UNUSED  ]
+  161    63*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !5 ] OP2[  IS_UNUSED  ]
+         64*       < 60> DO_FCALL                                      0   RES[  IS_VAR $21 ]      OP1[  IS_UNUSED  ]
+         65*       < 22> ASSIGN                                                    OP1[  IS_CV !4 ] OP2[ ,  IS_VAR $21 ]
+  163    66*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         67*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (126) 'wapmorgan%5CUnifiedArchive%5Cstream_get_contents' ]
+         68*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         69*       < 93> FETCH_DIM_FUNC_ARG                                RES[  IS_VAR $23 ]      OP1[  IS_CV !5 ] OP2[ ,  IS_CONST (125) 1 ]
+         70*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $23 ] OP2[  IS_UNUSED  ]
+         71*       < 60> DO_FCALL                                      0   RES[  IS_VAR $24 ]      OP1[  IS_UNUSED  ]
+         72*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_VAR $24 ]
+  164    73*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         74*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (116) 'wapmorgan%5CUnifiedArchive%5Cfclose' ]
+         75*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         76*       < 93> FETCH_DIM_FUNC_ARG                                RES[  IS_VAR $26 ]      OP1[  IS_CV !5 ] OP2[ ,  IS_CONST (115) 1 ]
+         77*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $26 ] OP2[  IS_UNUSED  ]
+         78*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  165    79*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         80*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (108) 'wapmorgan%5CUnifiedArchive%5Cproc_close' ]
+         81*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !4 ] OP2[  IS_UNUSED  ]
+         82*       < 60> DO_FCALL                                      0   RES[  IS_VAR $28 ]      OP1[  IS_UNUSED  ]
+         83*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_VAR $28 ]
+  167    84*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         85*       < 62> RETURN                                                    OP1[  IS_CONST (101) null ]
+         86*       < 42> JMP                                                       OP1[ ->105 ]
+  168    87*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         88*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (96) 'wapmorgan%5CUnifiedArchive%5Cfunction_exists' ]
+         89*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (97) 'shell_exec' ] OP2[  IS_UNUSED  ]
+         90*       < 60> DO_FCALL                                      0   RES[  IS_VAR $30 ]      OP1[  IS_UNUSED  ]
+         91*       < 43> JMPZ                                                      OP1[  IS_VAR $30 ] OP2[ , ->100 ]
+  169    92*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         93*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (90) 'wapmorgan%5CUnifiedArchive%5Cshell_exec' ]
+         94*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         95*       < 60> DO_FCALL                                      0   RES[  IS_VAR $31 ]      OP1[  IS_UNUSED  ]
+         96*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_VAR $31 ]
+  171    97*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         98*       < 62> RETURN                                                    OP1[  IS_CONST (83) null ]
+         99*       < 42> JMP                                                       OP1[ ->105 ]
+  173   100*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        101*       < 68> NEW                                               RES[  IS_VAR $33 ]      OP1[ 'Exception' ]
+  175   102*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (78) 'G%3A%5Cdesktop%5CYama%5Capp%5Cglpi-10.0.16%5Cglpi%5Cvendor%5Cwapmorgan%5Cunified-archive%5Csrc%5CLzwStreamWrapper.php%2C+line+173%3A+Execution+functions+is+required%21+Make+sure+one+of+exec+function+is+allowed+%28system%2C+exec%2C+proc_open%2C+shell_exec%29' ] OP2[  IS_UNUSED  ]
+        103*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+        104*       <108> THROW                                         0           OP1[  IS_VAR $33 ] OP2[  IS_UNUSED  ]
+  177   105*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        106*       < 62> RETURN                                                    OP1[  IS_CONST (71) null ]
+
+End of function exec
+
+Function read:
+[+]Function Source Class Name: wapmorgan\UnifiedArchive\LzwStreamWrapper
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\wapmorgan\unified-archive\src\LzwStreamWrapper.php
+function name:  read
+number of ops:  97
+compiled vars:  !0 = $output, !1 = $resultCode
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  184     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~2 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (192) 'tmp' ]
+          2*       <123> TYPE_CHECK                                  1020   RES[  IS_TMP_VAR ~3 ]       OP1[  IS_TMP_VAR ~2 ] OP2[  IS_UNUSED  ]
+          3*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~3 ] OP2[ , ->50 ]
+  185     4*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          5*       <113> INIT_STATIC_METHOD_CALL      self                         OP1[  IS_UNUSED  ] OP2[  IS_CONST (185) 'exec' ]
+          6*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (185) 'wapmorgan%5CUnifiedArchive%5Cescapeshellarg' ]
+          7*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          8*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $4 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (184) 'path' ]
+          9*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $4 ] OP2[  IS_UNUSED  ]
+         10*       < 60> DO_FCALL                                      0   RES[  IS_VAR $5 ]       OP1[  IS_UNUSED  ]
+         11*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~6 ]       OP1[  IS_CONST (179) 'uncompress+--stdout+' ] OP2[ ,  IS_VAR $5 ]
+  186    12*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~7 ]       OP1[  IS_TMP_VAR ~6 ] OP2[ ,  IS_CONST (178) '+%3E+' ]
+         13*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~8 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (177) 'tmp' ]
+         14*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~9 ]       OP1[  IS_TMP_VAR ~7 ] OP2[ ,  IS_TMP_VAR ~8 ]
+         15*       < 65> SEND_VAL                                                  OP1[  IS_TMP_VAR ~9 ]
+         16*       < 67> SEND_REF                                                  OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         17*       < 67> SEND_REF                                                  OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         18*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  190    19*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         20*       < 18> IS_EQUAL                                          RES[  IS_TMP_VAR ~11 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (164) 0 ]
+         21*       < 47> JMPNZ_EX                                          RES[  IS_TMP_VAR ~11 ]      OP1[  IS_TMP_VAR ~11 ] OP2[ , ->24 ]
+         22*       < 18> IS_EQUAL                                          RES[  IS_TMP_VAR ~12 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (161) 2 ]
+         23*       < 52> BOOL                                              RES[  IS_TMP_VAR ~11 ]      OP1[  IS_TMP_VAR ~12 ]
+         24*       < 47> JMPNZ_EX                                          RES[  IS_TMP_VAR ~11 ]      OP1[  IS_TMP_VAR ~11 ] OP2[ , ->29 ]
+         25*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (156) 'wapmorgan%5CUnifiedArchive%5Cis_null' ]
+         26*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         27*       < 60> DO_FCALL                                      0   RES[  IS_VAR $13 ]      OP1[  IS_UNUSED  ]
+         28*       < 52> BOOL                                              RES[  IS_TMP_VAR ~11 ]      OP1[  IS_VAR $13 ]
+         29*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~11 ] OP2[ , ->42 ]
+  191    30*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         31*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (148) 'wapmorgan%5CUnifiedArchive%5Cfilesize' ]
+         32*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         33*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $15 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (147) 'tmp' ]
+         34*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $15 ] OP2[  IS_UNUSED  ]
+         35*       < 60> DO_FCALL                                      0   RES[  IS_VAR $16 ]      OP1[  IS_UNUSED  ]
+         36*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (137) 'dataSize' ]
+         37*       <137> OP_DATA                                                   OP1[  IS_VAR $16 ] OP2[  IS_UNUSED  ]
+  193    38*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         39*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (136) 'pointer' ]
+         40*       <137> OP_DATA                                                   OP1[  IS_CONST (135) 0 ] OP2[  IS_UNUSED  ]
+         41*       < 42> JMP                                                       OP1[ ->49 ]
+  195    42*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         43*       < 68> NEW                                               RES[  IS_VAR $18 ]      OP1[ 'Exception' ]
+  196    44*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~19 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (130) 'path' ]
+         45*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~20 ]      OP1[  IS_CONST (129) 'G%3A%5Cdesktop%5CYama%5Capp%5Cglpi-10.0.16%5Cglpi%5Cvendor%5Cwapmorgan%5Cunified-archive%5Csrc%5CLzwStreamWrapper.php%2C+line+195%3A+Could+not+read+file+' ] OP2[ ,  IS_TMP_VAR ~19 ]
+         46*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~20 ] OP2[  IS_UNUSED  ]
+         47*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         48*       <108> THROW                                         0           OP1[  IS_VAR $18 ] OP2[  IS_UNUSED  ]
+         49*       < 42> JMP                                                       OP1[ ->95 ]
+  199    50*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         51*       <113> INIT_STATIC_METHOD_CALL      self                         OP1[  IS_UNUSED  ] OP2[  IS_CONST (118) 'exec' ]
+         52*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (118) 'wapmorgan%5CUnifiedArchive%5Cescapeshellarg' ]
+         53*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         54*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $22 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (117) 'path' ]
+         55*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $22 ] OP2[  IS_UNUSED  ]
+         56*       < 60> DO_FCALL                                      0   RES[  IS_VAR $23 ]      OP1[  IS_UNUSED  ]
+         57*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~24 ]      OP1[  IS_CONST (112) 'uncompress+--stdout+' ] OP2[ ,  IS_VAR $23 ]
+         58*       < 65> SEND_VAL                                                  OP1[  IS_TMP_VAR ~24 ]
+  200    59*       < 67> SEND_REF                                                  OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         60*       < 67> SEND_REF                                                  OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         61*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  201    62*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         63*       < 32> ASSIGN_OBJ_REF                                            OP1[  IS_UNUSED  ] OP2[  IS_CONST (101) 'data' ]
+         64*       <137> OP_DATA                                                   OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+  202    65*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         66*       < 18> IS_EQUAL                                          RES[  IS_TMP_VAR ~27 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (96) 0 ]
+         67*       < 47> JMPNZ_EX                                          RES[  IS_TMP_VAR ~27 ]      OP1[  IS_TMP_VAR ~27 ] OP2[ , ->70 ]
+         68*       < 18> IS_EQUAL                                          RES[  IS_TMP_VAR ~28 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (93) 2 ]
+         69*       < 52> BOOL                                              RES[  IS_TMP_VAR ~27 ]      OP1[  IS_TMP_VAR ~28 ]
+         70*       < 47> JMPNZ_EX                                          RES[  IS_TMP_VAR ~27 ]      OP1[  IS_TMP_VAR ~27 ] OP2[ , ->75 ]
+         71*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (88) 'wapmorgan%5CUnifiedArchive%5Cis_null' ]
+         72*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         73*       < 60> DO_FCALL                                      0   RES[  IS_VAR $29 ]      OP1[  IS_UNUSED  ]
+         74*       < 52> BOOL                                              RES[  IS_TMP_VAR ~27 ]      OP1[  IS_VAR $29 ]
+         75*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~27 ] OP2[ , ->88 ]
+  203    76*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         77*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (80) 'wapmorgan%5CUnifiedArchive%5Cstrlen' ]
+         78*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         79*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $31 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (79) 'data' ]
+         80*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $31 ] OP2[  IS_UNUSED  ]
+         81*       < 60> DO_FCALL                                      0   RES[  IS_VAR $32 ]      OP1[  IS_UNUSED  ]
+         82*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (69) 'dataSize' ]
+         83*       <137> OP_DATA                                                   OP1[  IS_VAR $32 ] OP2[  IS_UNUSED  ]
+  205    84*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         85*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (68) 'pointer' ]
+         86*       <137> OP_DATA                                                   OP1[  IS_CONST (67) 0 ] OP2[  IS_UNUSED  ]
+         87*       < 42> JMP                                                       OP1[ ->95 ]
+  207    88*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         89*       < 68> NEW                                               RES[  IS_VAR $34 ]      OP1[ 'Exception' ]
+  208    90*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~35 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (62) 'path' ]
+         91*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~36 ]      OP1[  IS_CONST (61) 'G%3A%5Cdesktop%5CYama%5Capp%5Cglpi-10.0.16%5Cglpi%5Cvendor%5Cwapmorgan%5Cunified-archive%5Csrc%5CLzwStreamWrapper.php%2C+line+207%3A+Could+not+read+file+' ] OP2[ ,  IS_TMP_VAR ~35 ]
+         92*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~36 ] OP2[  IS_UNUSED  ]
+         93*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         94*       <108> THROW                                         0           OP1[  IS_VAR $34 ] OP2[  IS_UNUSED  ]
+  211    95*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         96*       < 62> RETURN                                                    OP1[  IS_CONST (52) null ]
+
+End of function read
+
+Function stream_stat:
+[+]Function Source Class Name: wapmorgan\UnifiedArchive\LzwStreamWrapper
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\wapmorgan\unified-archive\src\LzwStreamWrapper.php
+function name:  stream_stat
+number of ops:  6
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  219     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (10) 'dataSize' ]
+          2*       < 71> INIT_ARRAY                                        RES[  IS_TMP_VAR ~1 ]       OP1[  IS_TMP_VAR ~0 ] OP2[ ,  IS_CONST (9) 'size' ]
+          3*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~1 ]
+  221     4*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          5*       < 62> RETURN                                                    OP1[  IS_CONST (4) null ]
+
+End of function stream_stat
+
+Function stream_close:
+[+]Function Source Class Name: wapmorgan\UnifiedArchive\LzwStreamWrapper
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\wapmorgan\unified-archive\src\LzwStreamWrapper.php
+function name:  stream_close
+number of ops:  152
+compiled vars:  !0 = $output, !1 = $code, !2 = $process, !3 = $pipes, !4 = $resultCode
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  229     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~5 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (302) 'writtenBytes' ]
+          2*       < 20> IS_SMALLER                                        RES[  IS_TMP_VAR ~6 ]       OP1[  IS_CONST (301) 0 ] OP2[ ,  IS_TMP_VAR ~5 ]
+          3*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~6 ] OP2[ , ->123 ]
+  231     4*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          5*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~7 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (296) 'tmp' ]
+          6*       <123> TYPE_CHECK                                  1020   RES[  IS_TMP_VAR ~8 ]       OP1[  IS_TMP_VAR ~7 ] OP2[  IS_UNUSED  ]
+          7*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~8 ] OP2[ , ->65 ]
+  233     8*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          9*       <113> INIT_STATIC_METHOD_CALL      self                         OP1[  IS_UNUSED  ] OP2[  IS_CONST (289) 'exec' ]
+         10*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (289) 'wapmorgan%5CUnifiedArchive%5Cescapeshellarg' ]
+         11*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         12*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $9 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (288) 'tmp' ]
+         13*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $9 ] OP2[  IS_UNUSED  ]
+         14*       < 60> DO_FCALL                                      0   RES[  IS_VAR $10 ]      OP1[  IS_UNUSED  ]
+         15*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~11 ]      OP1[  IS_CONST (283) 'compress+-c+' ] OP2[ ,  IS_VAR $10 ]
+         16*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~12 ]      OP1[  IS_TMP_VAR ~11 ] OP2[ ,  IS_CONST (282) '+%3E+' ]
+  234    17*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (281) 'wapmorgan%5CUnifiedArchive%5Cescapeshellarg' ]
+         18*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         19*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $13 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (280) 'tmp2' ]
+         20*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $13 ] OP2[  IS_UNUSED  ]
+         21*       < 60> DO_FCALL                                      0   RES[  IS_VAR $14 ]      OP1[  IS_UNUSED  ]
+         22*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~15 ]      OP1[  IS_TMP_VAR ~12 ] OP2[ ,  IS_VAR $14 ]
+         23*       < 65> SEND_VAL                                                  OP1[  IS_TMP_VAR ~15 ]
+         24*       < 67> SEND_REF                                                  OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         25*       < 67> SEND_REF                                                  OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         26*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  238    27*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         28*       < 18> IS_EQUAL                                          RES[  IS_TMP_VAR ~17 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (263) 0 ]
+         29*       < 47> JMPNZ_EX                                          RES[  IS_TMP_VAR ~17 ]      OP1[  IS_TMP_VAR ~17 ] OP2[ , ->32 ]
+         30*       < 18> IS_EQUAL                                          RES[  IS_TMP_VAR ~18 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (260) 2 ]
+         31*       < 52> BOOL                                              RES[  IS_TMP_VAR ~17 ]      OP1[  IS_TMP_VAR ~18 ]
+         32*       < 47> JMPNZ_EX                                          RES[  IS_TMP_VAR ~17 ]      OP1[  IS_TMP_VAR ~17 ] OP2[ , ->37 ]
+         33*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (255) 'wapmorgan%5CUnifiedArchive%5Cis_null' ]
+         34*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         35*       < 60> DO_FCALL                                      0   RES[  IS_VAR $19 ]      OP1[  IS_UNUSED  ]
+         36*       < 52> BOOL                                              RES[  IS_TMP_VAR ~17 ]      OP1[  IS_VAR $19 ]
+         37*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~17 ] OP2[ , ->57 ]
+  240    38*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         39*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (246) 'wapmorgan%5CUnifiedArchive%5Crename' ]
+         40*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         41*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $20 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (245) 'tmp2' ]
+         42*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $20 ] OP2[  IS_UNUSED  ]
+         43*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         44*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $21 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (240) 'path' ]
+         45*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $21 ] OP2[  IS_UNUSED  ]
+         46*       < 60> DO_FCALL                                      0   RES[  IS_VAR $22 ]      OP1[  IS_UNUSED  ]
+         47*       <123> TYPE_CHECK                                  1014   RES[  IS_TMP_VAR ~23 ]      OP1[  IS_VAR $22 ] OP2[  IS_UNUSED  ]
+         48*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~23 ] OP2[ , ->56 ]
+  241    49*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         50*       < 68> NEW                                               RES[  IS_VAR $24 ]      OP1[ 'RuntimeException' ]
+  242    51*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~25 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (229) 'path' ]
+         52*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~26 ]      OP1[  IS_CONST (228) 'G%3A%5Cdesktop%5CYama%5Capp%5Cglpi-10.0.16%5Cglpi%5Cvendor%5Cwapmorgan%5Cunified-archive%5Csrc%5CLzwStreamWrapper.php%2C+line+241%3A+Could+not+replace+original+file+' ] OP2[ ,  IS_TMP_VAR ~25 ]
+         53*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~26 ] OP2[  IS_UNUSED  ]
+         54*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         55*       <108> THROW                                         0           OP1[  IS_VAR $24 ] OP2[  IS_UNUSED  ]
+         56*       < 42> JMP                                                       OP1[ ->64 ]
+  245    57*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         58*       < 68> NEW                                               RES[  IS_VAR $28 ]      OP1[ 'RuntimeException' ]
+  246    59*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~29 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (217) 'tmp2' ]
+         60*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~30 ]      OP1[  IS_CONST (216) 'G%3A%5Cdesktop%5CYama%5Capp%5Cglpi-10.0.16%5Cglpi%5Cvendor%5Cwapmorgan%5Cunified-archive%5Csrc%5CLzwStreamWrapper.php%2C+line+245%3A+Could+not+compress+changed+data+in+' ] OP2[ ,  IS_TMP_VAR ~29 ]
+         61*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~30 ] OP2[  IS_UNUSED  ]
+         62*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         63*       <108> THROW                                         0           OP1[  IS_VAR $28 ] OP2[  IS_UNUSED  ]
+         64*       < 42> JMP                                                       OP1[ ->123 ]
+  252    65*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         66*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (205) 'wapmorgan%5CUnifiedArchive%5Cfunction_exists' ]
+         67*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (206) 'proc_open' ] OP2[  IS_UNUSED  ]
+         68*       < 60> DO_FCALL                                      0   RES[  IS_VAR $32 ]      OP1[  IS_UNUSED  ]
+         69*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~33 ]      OP1[  IS_VAR $32 ]
+         70*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~33 ] OP2[ , ->76 ]
+  253    71*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         72*       < 68> NEW                                               RES[  IS_VAR $34 ]      OP1[ 'Exception' ]
+  254    73*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (197) 'proc_open+is+necessary+for+writing+changed+data+in+the+file' ] OP2[  IS_UNUSED  ]
+         74*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         75*       <108> THROW                                         0           OP1[  IS_VAR $34 ] OP2[  IS_UNUSED  ]
+  258    76*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         77*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (190) 'wapmorgan%5CUnifiedArchive%5Cproc_open' ]
+         78*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (191) 'wapmorgan%5CUnifiedArchive%5Cescapeshellarg' ]
+         79*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         80*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $36 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (190) 'path' ]
+         81*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $36 ] OP2[  IS_UNUSED  ]
+         82*       < 60> DO_FCALL                                      0   RES[  IS_VAR $37 ]      OP1[  IS_UNUSED  ]
+         83*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~38 ]      OP1[  IS_CONST (185) 'compress+%3E+' ] OP2[ ,  IS_VAR $37 ]
+         84*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~38 ] OP2[  IS_UNUSED  ]
+  259    85*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (182) <array> ] OP2[  IS_UNUSED  ]
+  258    86*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         87*       < 60> DO_FCALL                                      0   RES[  IS_VAR $39 ]      OP1[  IS_UNUSED  ]
+         88*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_VAR $39 ]
+  261    89*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         90*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (173) 'wapmorgan%5CUnifiedArchive%5Cfwrite' ]
+         91*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         92*       < 93> FETCH_DIM_FUNC_ARG                                RES[  IS_VAR $41 ]      OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (172) 0 ]
+         93*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $41 ] OP2[  IS_UNUSED  ]
+         94*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         95*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $42 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (167) 'data' ]
+         96*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $42 ] OP2[  IS_UNUSED  ]
+         97*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  262    98*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         99*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (160) 'wapmorgan%5CUnifiedArchive%5Cfclose' ]
+        100*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        101*       < 93> FETCH_DIM_FUNC_ARG                                RES[  IS_VAR $44 ]      OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (159) 0 ]
+        102*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $44 ] OP2[  IS_UNUSED  ]
+        103*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  263   104*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        105*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (152) 'wapmorgan%5CUnifiedArchive%5Cproc_close' ]
+        106*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+        107*       < 60> DO_FCALL                                      0   RES[  IS_VAR $46 ]      OP1[  IS_UNUSED  ]
+        108*       < 22> ASSIGN                                                    OP1[  IS_CV !4 ] OP2[ ,  IS_VAR $46 ]
+  264   109*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        110*       < 18> IS_EQUAL                                          RES[  IS_TMP_VAR ~48 ]      OP1[  IS_CV !4 ] OP2[ ,  IS_CONST (145) 0 ]
+        111*       < 47> JMPNZ_EX                                          RES[  IS_TMP_VAR ~48 ]      OP1[  IS_TMP_VAR ~48 ] OP2[ , ->114 ]
+        112*       < 18> IS_EQUAL                                          RES[  IS_TMP_VAR ~49 ]      OP1[  IS_CV !4 ] OP2[ ,  IS_CONST (142) 2 ]
+        113*       < 52> BOOL                                              RES[  IS_TMP_VAR ~48 ]      OP1[  IS_TMP_VAR ~49 ]
+        114*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~48 ] OP2[ , ->116 ]
+        115*       < 42> JMP                                                       OP1[ ->123 ]
+  267   116*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        117*       < 68> NEW                                               RES[  IS_VAR $50 ]      OP1[ 'RuntimeException' ]
+  268   118*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~51 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (133) 'path' ]
+        119*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~52 ]      OP1[  IS_CONST (132) 'G%3A%5Cdesktop%5CYama%5Capp%5Cglpi-10.0.16%5Cglpi%5Cvendor%5Cwapmorgan%5Cunified-archive%5Csrc%5CLzwStreamWrapper.php%2C+line+267%3A+Could+not+compress+changed+data+in+' ] OP2[ ,  IS_TMP_VAR ~51 ]
+        120*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~52 ] OP2[  IS_UNUSED  ]
+        121*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+        122*       <108> THROW                                         0           OP1[  IS_VAR $50 ] OP2[  IS_UNUSED  ]
+  272   123*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        124*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~54 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (123) 'tmp' ]
+        125*       <123> TYPE_CHECK                                  1020   RES[  IS_TMP_VAR ~55 ]      OP1[  IS_TMP_VAR ~54 ] OP2[  IS_UNUSED  ]
+        126*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~55 ] OP2[ , ->147 ]
+  273   127*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        128*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (116) 'wapmorgan%5CUnifiedArchive%5Cunlink' ]
+        129*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        130*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $56 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (115) 'tmp' ]
+        131*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $56 ] OP2[  IS_UNUSED  ]
+        132*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  274   133*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        134*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (108) 'wapmorgan%5CUnifiedArchive%5Cfile_exists' ]
+        135*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        136*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $58 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (107) 'tmp2' ]
+        137*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $58 ] OP2[  IS_UNUSED  ]
+        138*       < 60> DO_FCALL                                      0   RES[  IS_VAR $59 ]      OP1[  IS_UNUSED  ]
+        139*       < 43> JMPZ                                                      OP1[  IS_VAR $59 ] OP2[ , ->146 ]
+        140*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        141*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (98) 'wapmorgan%5CUnifiedArchive%5Cunlink' ]
+        142*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        143*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $60 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (97) 'tmp2' ]
+        144*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $60 ] OP2[  IS_UNUSED  ]
+        145*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+        146*       < 42> JMP                                                       OP1[ ->150 ]
+  276   147*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        148*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (88) 'data' ]
+        149*       <137> OP_DATA                                                   OP1[  IS_CONST (87) null ] OP2[  IS_UNUSED  ]
+  278   150*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        151*       < 62> RETURN                                                    OP1[  IS_CONST (84) null ]
+
+End of function stream_close
+
+Function stream_read:
+[+]Function Source Class Name: wapmorgan\UnifiedArchive\LzwStreamWrapper
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:false
+
+[*]ArgInfoNo**0**
+[*]name:count
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\wapmorgan\unified-archive\src\LzwStreamWrapper.php
+function name:  stream_read
+number of ops:  73
+compiled vars:  !0 = $count, !1 = $fp, !2 = $data
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  284     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  286     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~3 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (142) 'tmp' ]
+          3*       <123> TYPE_CHECK                                  1020   RES[  IS_TMP_VAR ~4 ]       OP1[  IS_TMP_VAR ~3 ] OP2[  IS_UNUSED  ]
+          4*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~4 ] OP2[ , ->51 ]
+  287     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (135) 'wapmorgan%5CUnifiedArchive%5Cfopen' ]
+          7*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          8*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $5 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (134) 'tmp' ]
+          9*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $5 ] OP2[  IS_UNUSED  ]
+         10*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (131) 'wapmorgan%5CUnifiedArchive%5Cstrpos' ]
+         11*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         12*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $6 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (130) 'mode' ]
+         13*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $6 ] OP2[  IS_UNUSED  ]
+         14*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (127) 'b' ] OP2[  IS_UNUSED  ]
+         15*       < 60> DO_FCALL                                      0   RES[  IS_VAR $7 ]       OP1[  IS_UNUSED  ]
+         16*       < 17> IS_NOT_IDENTICAL                                  RES[  IS_TMP_VAR ~8 ]       OP1[  IS_VAR $7 ] OP2[ ,  IS_CONST (124) 0 ]
+         17*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~8 ] OP2[ , ->20 ]
+         18*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~9 ]       OP1[  IS_CONST (121) 'b' ]
+         19*       < 42> JMP                                                       OP1[ ->21 ]
+  288    20*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~9 ]       OP1[  IS_CONST (118) null ]
+         21*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~10 ]      OP1[  IS_CONST (117) 'r' ] OP2[ ,  IS_TMP_VAR ~9 ]
+         22*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~10 ] OP2[  IS_UNUSED  ]
+         23*       < 60> DO_FCALL                                      0   RES[  IS_VAR $11 ]      OP1[  IS_UNUSED  ]
+  287    24*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_VAR $11 ]
+  289    25*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         26*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (108) 'wapmorgan%5CUnifiedArchive%5Cfseek' ]
+         27*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         28*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         29*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $13 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (105) 'pointer' ]
+         30*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $13 ] OP2[  IS_UNUSED  ]
+         31*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  290    32*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         33*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (98) 'wapmorgan%5CUnifiedArchive%5Cfread' ]
+         34*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         35*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         36*       < 60> DO_FCALL                                      0   RES[  IS_VAR $15 ]      OP1[  IS_UNUSED  ]
+         37*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_VAR $15 ]
+  291    38*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         39*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (90) 'wapmorgan%5CUnifiedArchive%5Cftell' ]
+         40*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         41*       < 60> DO_FCALL                                      0   RES[  IS_VAR $18 ]      OP1[  IS_UNUSED  ]
+         42*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (83) 'pointer' ]
+         43*       <137> OP_DATA                                                   OP1[  IS_VAR $18 ] OP2[  IS_UNUSED  ]
+  292    44*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         45*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (81) 'wapmorgan%5CUnifiedArchive%5Cfclose' ]
+         46*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         47*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  294    48*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         49*       < 62> RETURN                                                    OP1[  IS_CV !2 ]
+         50*       < 42> JMP                                                       OP1[ ->71 ]
+  296    51*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         52*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (70) 'wapmorgan%5CUnifiedArchive%5Csubstr' ]
+         53*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         54*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $20 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (69) 'data' ]
+         55*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $20 ] OP2[  IS_UNUSED  ]
+         56*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         57*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $21 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (64) 'pointer' ]
+         58*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $21 ] OP2[  IS_UNUSED  ]
+  297    59*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~22 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (61) 'pointer' ]
+         60*       <  1> ADD                                               RES[  IS_TMP_VAR ~23 ]      OP1[  IS_TMP_VAR ~22 ] OP2[ ,  IS_CV !0 ]
+         61*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~23 ] OP2[  IS_UNUSED  ]
+         62*       < 60> DO_FCALL                                      0   RES[  IS_VAR $24 ]      OP1[  IS_UNUSED  ]
+  296    63*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_VAR $24 ]
+  298    64*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         65*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~27 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (51) 'pointer' ]
+         66*       <  1> ADD                                               RES[  IS_TMP_VAR ~28 ]      OP1[  IS_TMP_VAR ~27 ] OP2[ ,  IS_CV !0 ]
+         67*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (46) 'pointer' ]
+         68*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~28 ] OP2[  IS_UNUSED  ]
+  300    69*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         70*       < 62> RETURN                                                    OP1[  IS_CV !2 ]
+  302    71*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         72*       < 62> RETURN                                                    OP1[  IS_CONST (38) null ]
+
+End of function stream_read
+
+Function stream_eof:
+[+]Function Source Class Name: wapmorgan\UnifiedArchive\LzwStreamWrapper
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\wapmorgan\unified-archive\src\LzwStreamWrapper.php
+function name:  stream_eof
+number of ops:  7
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  309     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (12) 'pointer' ]
+          2*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~1 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (11) 'dataSize' ]
+          3*       < 21> IS_SMALLER_OR_EQUAL                               RES[  IS_TMP_VAR ~2 ]       OP1[  IS_TMP_VAR ~1 ] OP2[ ,  IS_TMP_VAR ~0 ]
+          4*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~2 ]
+  310     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       < 62> RETURN                                                    OP1[  IS_CONST (4) null ]
+
+End of function stream_eof
+
+Function stream_tell:
+[+]Function Source Class Name: wapmorgan\UnifiedArchive\LzwStreamWrapper
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\wapmorgan\unified-archive\src\LzwStreamWrapper.php
+function name:  stream_tell
+number of ops:  5
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  317     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (8) 'pointer' ]
+          2*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~0 ]
+  318     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       < 62> RETURN                                                    OP1[  IS_CONST (3) null ]
+
+End of function stream_tell
+
+Function stream_write:
+[+]Function Source Class Name: wapmorgan\UnifiedArchive\LzwStreamWrapper
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:false
+
+[*]ArgInfoNo**0**
+[*]name:data
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\wapmorgan\unified-archive\src\LzwStreamWrapper.php
+function name:  stream_write
+number of ops:  92
+compiled vars:  !0 = $data, !1 = $fp, !2 = $count, !3 = $prefix, !4 = $postfix
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  324     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  326     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (181) 'wapmorgan%5CUnifiedArchive%5Cstrlen' ]
+          3*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          4*       < 60> DO_FCALL                                      0   RES[  IS_VAR $6 ]       OP1[  IS_UNUSED  ]
+          5*       < 28> ASSIGN_OBJ_OP                                 1           OP1[  IS_UNUSED  ] OP2[  IS_CONST (174) 'writtenBytes' ]
+          6*       <137> OP_DATA                                                   OP1[  IS_VAR $6 ] OP2[  IS_UNUSED  ]
+  327     7*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          8*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~7 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (172) 'tmp' ]
+          9*       <123> TYPE_CHECK                                  1020   RES[  IS_TMP_VAR ~8 ]       OP1[  IS_TMP_VAR ~7 ] OP2[  IS_UNUSED  ]
+         10*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~8 ] OP2[ , ->54 ]
+  328    11*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         12*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (165) 'wapmorgan%5CUnifiedArchive%5Cfopen' ]
+         13*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         14*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $9 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (164) 'tmp' ]
+         15*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $9 ] OP2[  IS_UNUSED  ]
+         16*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (161) 'wapmorgan%5CUnifiedArchive%5Cstrpos' ]
+         17*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         18*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $10 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (160) 'mode' ]
+         19*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $10 ] OP2[  IS_UNUSED  ]
+         20*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (157) 'b' ] OP2[  IS_UNUSED  ]
+         21*       < 60> DO_FCALL                                      0   RES[  IS_VAR $11 ]      OP1[  IS_UNUSED  ]
+         22*       < 17> IS_NOT_IDENTICAL                                  RES[  IS_TMP_VAR ~12 ]      OP1[  IS_VAR $11 ] OP2[ ,  IS_CONST (154) 0 ]
+         23*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~12 ] OP2[ , ->26 ]
+         24*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~13 ]      OP1[  IS_CONST (151) 'b' ]
+         25*       < 42> JMP                                                       OP1[ ->27 ]
+  329    26*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~13 ]      OP1[  IS_CONST (148) null ]
+         27*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~14 ]      OP1[  IS_CONST (147) 'w' ] OP2[ ,  IS_TMP_VAR ~13 ]
+         28*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~14 ] OP2[  IS_UNUSED  ]
+         29*       < 60> DO_FCALL                                      0   RES[  IS_VAR $15 ]      OP1[  IS_UNUSED  ]
+  328    30*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_VAR $15 ]
+  330    31*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         32*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (138) 'wapmorgan%5CUnifiedArchive%5Cfseek' ]
+         33*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         34*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         35*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $17 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (135) 'pointer' ]
+         36*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $17 ] OP2[  IS_UNUSED  ]
+         37*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  331    38*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         39*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (128) 'wapmorgan%5CUnifiedArchive%5Cfwrite' ]
+         40*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         41*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         42*       < 60> DO_FCALL                                      0   RES[  IS_VAR $19 ]      OP1[  IS_UNUSED  ]
+         43*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_VAR $19 ]
+  332    44*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         45*       < 28> ASSIGN_OBJ_OP                                 1           OP1[  IS_UNUSED  ] OP2[  IS_CONST (119) 'pointer' ]
+         46*       <137> OP_DATA                                                   OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+  333    47*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         48*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (114) 'wapmorgan%5CUnifiedArchive%5Cfclose' ]
+         49*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         50*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  335    51*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         52*       < 62> RETURN                                                    OP1[  IS_CV !2 ]
+         53*       < 42> JMP                                                       OP1[ ->90 ]
+  337    54*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         55*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (103) 'wapmorgan%5CUnifiedArchive%5Cstrlen' ]
+         56*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         57*       < 60> DO_FCALL                                      0   RES[  IS_VAR $23 ]      OP1[  IS_UNUSED  ]
+         58*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_VAR $23 ]
+  338    59*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         60*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (96) 'wapmorgan%5CUnifiedArchive%5Csubstr' ]
+         61*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         62*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $25 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (95) 'data' ]
+         63*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $25 ] OP2[  IS_UNUSED  ]
+         64*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (92) 0 ] OP2[  IS_UNUSED  ]
+         65*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         66*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $26 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (89) 'pointer' ]
+         67*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $26 ] OP2[  IS_UNUSED  ]
+         68*       < 60> DO_FCALL                                      0   RES[  IS_VAR $27 ]      OP1[  IS_UNUSED  ]
+         69*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_VAR $27 ]
+  339    70*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         71*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (80) 'wapmorgan%5CUnifiedArchive%5Csubstr' ]
+         72*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         73*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $29 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (79) 'data' ]
+         74*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $29 ] OP2[  IS_UNUSED  ]
+         75*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~30 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (76) 'pointer' ]
+         76*       <  1> ADD                                               RES[  IS_TMP_VAR ~31 ]      OP1[  IS_TMP_VAR ~30 ] OP2[ ,  IS_CV !2 ]
+         77*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~31 ] OP2[  IS_UNUSED  ]
+         78*       < 60> DO_FCALL                                      0   RES[  IS_VAR $32 ]      OP1[  IS_UNUSED  ]
+         79*       < 22> ASSIGN                                                    OP1[  IS_CV !4 ] OP2[ ,  IS_VAR $32 ]
+  340    80*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         81*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~35 ]      OP1[  IS_CV !3 ] OP2[ ,  IS_CV !0 ]
+         82*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~36 ]      OP1[  IS_TMP_VAR ~35 ] OP2[ ,  IS_CV !4 ]
+         83*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (61) 'data' ]
+         84*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~36 ] OP2[  IS_UNUSED  ]
+  341    85*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         86*       < 28> ASSIGN_OBJ_OP                                 1           OP1[  IS_UNUSED  ] OP2[  IS_CONST (56) 'pointer' ]
+         87*       <137> OP_DATA                                                   OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+  343    88*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         89*       < 62> RETURN                                                    OP1[  IS_CV !2 ]
+  345    90*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         91*       < 62> RETURN                                                    OP1[  IS_CONST (47) null ]
+
+End of function stream_write
+
+Function stream_seek:
+[+]Function Source Class Name: wapmorgan\UnifiedArchive\LzwStreamWrapper
+[*]Start of arg_info extract:
+[*]arg_info num_args:2
+[*]Function return type:object|string|int|float|false
+
+[*]ArgInfoNo**0**
+[*]name:offset
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:whence
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\wapmorgan\unified-archive\src\LzwStreamWrapper.php
+function name:  stream_seek
+number of ops:  56
+compiled vars:  !0 = $offset, !1 = $whence, !2 = $actual_data_size
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  352     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 64> RECV_INIT                                         RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (110) <const ast> ]
+  355     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       < 99> FETCH_CONSTANT                                    RES[  IS_TMP_VAR ~4 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (107) 'wapmorgan%5CUnifiedArchive%5CSEEK_SET' ]
+          4*       < 18> IS_EQUAL                                          RES[  ]         OP1[  IS_CV !1 ] OP2[ ,  IS_TMP_VAR ~4 ]
+          5*       < 44> JMPNZ                                                     OP1[  IS_TMP_VAR ~3 ] OP2[ , ->13 ]
+  358     6*       < 99> FETCH_CONSTANT                                    RES[  IS_TMP_VAR ~5 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (104) 'wapmorgan%5CUnifiedArchive%5CSEEK_CUR' ]
+          7*       < 18> IS_EQUAL                                          RES[  ]         OP1[  IS_CV !1 ] OP2[ ,  IS_TMP_VAR ~5 ]
+          8*       < 44> JMPNZ                                                     OP1[  IS_TMP_VAR ~3 ] OP2[ , ->18 ]
+  361     9*       < 99> FETCH_CONSTANT                                    RES[  IS_TMP_VAR ~6 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (101) 'wapmorgan%5CUnifiedArchive%5CSEEK_END' ]
+         10*       < 18> IS_EQUAL                                          RES[  ]         OP1[  IS_CV !1 ] OP2[ ,  IS_TMP_VAR ~6 ]
+         11*       < 44> JMPNZ                                                     OP1[  IS_TMP_VAR ~3 ] OP2[ , ->23 ]
+         12*       < 42> JMP                                                       OP1[ ->50 ]
+  356    13*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         14*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (94) 'pointer' ]
+         15*       <137> OP_DATA                                                   OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+  357    16*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         17*       < 42> JMP                                                       OP1[ ->52 ]
+  359    18*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         19*       < 28> ASSIGN_OBJ_OP                                 1           OP1[  IS_UNUSED  ] OP2[  IS_CONST (85) 'pointer' ]
+         20*       <137> OP_DATA                                                   OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+  360    21*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         22*       < 42> JMP                                                       OP1[ ->52 ]
+  362    23*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         24*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (76) 'wapmorgan%5CUnifiedArchive%5Cis_null' ]
+         25*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         26*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $9 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (75) 'tmp' ]
+         27*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $9 ] OP2[  IS_UNUSED  ]
+         28*       < 60> DO_FCALL                                      0   RES[  IS_VAR $10 ]      OP1[  IS_UNUSED  ]
+         29*       < 43> JMPZ                                                      OP1[  IS_VAR $10 ] OP2[ , ->37 ]
+         30*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (68) 'wapmorgan%5CUnifiedArchive%5Cstrlen' ]
+         31*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         32*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $11 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (67) 'data' ]
+         33*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $11 ] OP2[  IS_UNUSED  ]
+         34*       < 60> DO_FCALL                                      0   RES[  IS_VAR $12 ]      OP1[  IS_UNUSED  ]
+         35*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~13 ]      OP1[  IS_VAR $12 ]
+         36*       < 42> JMP                                                       OP1[ ->43 ]
+  363    37*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (58) 'wapmorgan%5CUnifiedArchive%5Cfilesize' ]
+         38*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         39*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $14 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (57) 'tmp' ]
+         40*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $14 ] OP2[  IS_UNUSED  ]
+         41*       < 60> DO_FCALL                                      0   RES[  IS_VAR $15 ]      OP1[  IS_UNUSED  ]
+         42*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~13 ]      OP1[  IS_VAR $15 ]
+  362    43*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_TMP_VAR ~13 ]
+  364    44*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         45*       <  2> SUB                                               RES[  IS_TMP_VAR ~18 ]      OP1[  IS_CV !2 ] OP2[ ,  IS_CV !0 ]
+         46*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (44) 'pointer' ]
+         47*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~18 ] OP2[  IS_UNUSED  ]
+  365    48*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         49*       < 42> JMP                                                       OP1[ ->52 ]
+  367    50*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         51*       < 62> RETURN                                                    OP1[  IS_CONST (35) <false> ]
+  370    52*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         53*       < 62> RETURN                                                    OP1[  IS_CONST (32) <true> ]
+  371    54*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         55*       < 62> RETURN                                                    OP1[  IS_CONST (29) null ]
+
+End of function stream_seek
+
+Function stream_lock:
+[+]Function Source Class Name: wapmorgan\UnifiedArchive\LzwStreamWrapper
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:?false
+
+[*]ArgInfoNo**0**
+[*]name:operation
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\wapmorgan\unified-archive\src\LzwStreamWrapper.php
+function name:  stream_lock
+number of ops:  12
+compiled vars:  !0 = $operation
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  377     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  379     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~1 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (20) 'tmp' ]
+          3*       <123> TYPE_CHECK                                  1020   RES[  IS_TMP_VAR ~2 ]       OP1[  IS_TMP_VAR ~1 ] OP2[  IS_UNUSED  ]
+          4*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~2 ] OP2[ , ->8 ]
+  380     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       < 62> RETURN                                                    OP1[  IS_CONST (13) <false> ]
+          7*       < 42> JMP                                                       OP1[ ->10 ]
+  382     8*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          9*       < 62> RETURN                                                    OP1[  IS_CONST (8) <true> ]
+  384    10*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         11*       < 62> RETURN                                                    OP1[  IS_CONST (5) null ]
+
+End of function stream_lock
+
+Function stream_truncate:
+[+]Function Source Class Name: wapmorgan\UnifiedArchive\LzwStreamWrapper
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:?false
+
+[*]ArgInfoNo**0**
+[*]name:new_size
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\wapmorgan\unified-archive\src\LzwStreamWrapper.php
+function name:  stream_truncate
+number of ops:  84
+compiled vars:  !0 = $new_size, !1 = $actual_data_size, !2 = $fp
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  389     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  391     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (164) 'wapmorgan%5CUnifiedArchive%5Cis_null' ]
+          3*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $3 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (163) 'tmp' ]
+          5*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $3 ] OP2[  IS_UNUSED  ]
+          6*       < 60> DO_FCALL                                      0   RES[  IS_VAR $4 ]       OP1[  IS_UNUSED  ]
+          7*       < 43> JMPZ                                                      OP1[  IS_VAR $4 ] OP2[ , ->15 ]
+          8*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (156) 'wapmorgan%5CUnifiedArchive%5Cstrlen' ]
+          9*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         10*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $5 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (155) 'data' ]
+         11*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $5 ] OP2[  IS_UNUSED  ]
+         12*       < 60> DO_FCALL                                      0   RES[  IS_VAR $6 ]       OP1[  IS_UNUSED  ]
+         13*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~7 ]       OP1[  IS_VAR $6 ]
+         14*       < 42> JMP                                                       OP1[ ->21 ]
+  392    15*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (146) 'wapmorgan%5CUnifiedArchive%5Cfilesize' ]
+         16*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         17*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $8 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (145) 'tmp' ]
+         18*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $8 ] OP2[  IS_UNUSED  ]
+         19*       < 60> DO_FCALL                                      0   RES[  IS_VAR $9 ]       OP1[  IS_UNUSED  ]
+         20*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~7 ]       OP1[  IS_VAR $9 ]
+  391    21*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_TMP_VAR ~7 ]
+  393    22*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         23*       < 20> IS_SMALLER                                        RES[  IS_TMP_VAR ~11 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CV !0 ]
+         24*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~11 ] OP2[ , ->35 ]
+  394    25*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         26*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (128) 'stream_write' ]
+         27*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (128) 'wapmorgan%5CUnifiedArchive%5Cstr_repeat' ]
+         28*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (129) '%00' ] OP2[  IS_UNUSED  ]
+  395    29*       <  2> SUB                                               RES[  IS_TMP_VAR ~12 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CV !1 ]
+         30*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~12 ] OP2[  IS_UNUSED  ]
+         31*       < 60> DO_FCALL                                      0   RES[  IS_VAR $13 ]      OP1[  IS_UNUSED  ]
+         32*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $13 ] OP2[  IS_UNUSED  ]
+         33*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         34*       < 42> JMP                                                       OP1[ ->82 ]
+  396    35*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         36*       < 20> IS_SMALLER                                        RES[  IS_TMP_VAR ~15 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CV !1 ]
+         37*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~15 ] OP2[ , ->82 ]
+  397    38*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         39*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~16 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (108) 'tmp' ]
+         40*       <123> TYPE_CHECK                                    2   RES[  IS_TMP_VAR ~17 ]      OP1[  IS_TMP_VAR ~16 ] OP2[  IS_UNUSED  ]
+         41*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~17 ] OP2[ , ->53 ]
+  398    42*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         43*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (102) 'wapmorgan%5CUnifiedArchive%5Csubstr' ]
+         44*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         45*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $19 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (101) 'data' ]
+         46*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $19 ] OP2[  IS_UNUSED  ]
+         47*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (98) 0 ] OP2[  IS_UNUSED  ]
+         48*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         49*       < 60> DO_FCALL                                      0   RES[  IS_VAR $20 ]      OP1[  IS_UNUSED  ]
+         50*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (87) 'data' ]
+         51*       <137> OP_DATA                                                   OP1[  IS_VAR $20 ] OP2[  IS_UNUSED  ]
+         52*       < 42> JMP                                                       OP1[ ->82 ]
+  400    53*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         54*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (85) 'wapmorgan%5CUnifiedArchive%5Cfopen' ]
+         55*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         56*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $21 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (84) 'tmp' ]
+         57*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $21 ] OP2[  IS_UNUSED  ]
+         58*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (81) 'wapmorgan%5CUnifiedArchive%5Cstrpos' ]
+         59*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         60*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $22 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (80) 'mode' ]
+         61*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $22 ] OP2[  IS_UNUSED  ]
+         62*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (77) 'b' ] OP2[  IS_UNUSED  ]
+         63*       < 60> DO_FCALL                                      0   RES[  IS_VAR $23 ]      OP1[  IS_UNUSED  ]
+         64*       < 17> IS_NOT_IDENTICAL                                  RES[  IS_TMP_VAR ~24 ]      OP1[  IS_VAR $23 ] OP2[ ,  IS_CONST (74) 0 ]
+         65*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~24 ] OP2[ , ->68 ]
+  401    66*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~25 ]      OP1[  IS_CONST (71) 'b' ]
+         67*       < 42> JMP                                                       OP1[ ->69 ]
+         68*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~25 ]      OP1[  IS_CONST (68) null ]
+         69*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~26 ]      OP1[  IS_CONST (67) 'w' ] OP2[ ,  IS_TMP_VAR ~25 ]
+         70*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~26 ] OP2[  IS_UNUSED  ]
+         71*       < 60> DO_FCALL                                      0   RES[  IS_VAR $27 ]      OP1[  IS_UNUSED  ]
+  400    72*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_VAR $27 ]
+  402    73*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         74*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (58) 'wapmorgan%5CUnifiedArchive%5Cftruncate' ]
+         75*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         76*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         77*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  403    78*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         79*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (51) 'wapmorgan%5CUnifiedArchive%5Cfclose' ]
+         80*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         81*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  406    82*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         83*       < 62> RETURN                                                    OP1[  IS_CONST (46) null ]
+
+End of function stream_truncate
+
+Function checkbinary:
+[+]Function Source Class Name: wapmorgan\UnifiedArchive\LzwStreamWrapper
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\wapmorgan\unified-archive\src\LzwStreamWrapper.php
+function name:  checkBinary
+number of ops:  46
+compiled vars:  !0 = $output
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  413     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       <173> FETCH_STATIC_PROP_R          unknown              RES[  IS_TMP_VAR ~1 ]       OP1[  IS_CONST (90) 'installed' ] OP2[  IS_UNUSED  ]
+          2*       <123> TYPE_CHECK                                    2   RES[  IS_TMP_VAR ~2 ]       OP1[  IS_TMP_VAR ~1 ] OP2[  IS_UNUSED  ]
+          3*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~2 ] OP2[ , ->44 ]
+  414     4*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          5*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (83) 'wapmorgan%5CUnifiedArchive%5Cstrncasecmp' ]
+          6*       < 99> FETCH_CONSTANT                                    RES[  IS_TMP_VAR ~3 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (84) 'wapmorgan%5CUnifiedArchive%5CPHP_OS' ]
+          7*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~3 ] OP2[  IS_UNUSED  ]
+          8*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (83) 'win' ] OP2[  IS_UNUSED  ]
+          9*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (82) 3 ] OP2[  IS_UNUSED  ]
+         10*       < 60> DO_FCALL                                      0   RES[  IS_VAR $4 ]       OP1[  IS_UNUSED  ]
+         11*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~5 ]       OP1[  IS_VAR $4 ] OP2[ ,  IS_CONST (79) 0 ]
+         12*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~5 ] OP2[ , ->17 ]
+  415    13*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         14*       < 25> ASSIGN_STATIC_PROP                                        OP1[  IS_CONST (74) 'installed' ] OP2[  IS_UNUSED  ]
+         15*       <137> OP_DATA                                                   OP1[  IS_CONST (73) <false> ] OP2[  IS_UNUSED  ]
+         16*       < 42> JMP                                                       OP1[ ->44 ]
+  417    17*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         18*       <113> INIT_STATIC_METHOD_CALL      self                         OP1[  IS_UNUSED  ] OP2[  IS_CONST (68) 'exec' ]
+         19*       < 65> SEND_VAL                                                  OP1[  IS_CONST (68) 'command+-v+compress' ]
+         20*       < 67> SEND_REF                                                  OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         21*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  418    22*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         23*       <154> ISSET_ISEMPTY_CV                                  RES[  IS_TMP_VAR ~8 ]       OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         24*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~8 ] OP2[ , ->29 ]
+  419    25*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         26*       < 25> ASSIGN_STATIC_PROP                                        OP1[  IS_CONST (55) 'installed' ] OP2[  IS_UNUSED  ]
+         27*       <137> OP_DATA                                                   OP1[  IS_CONST (54) <false> ] OP2[  IS_UNUSED  ]
+         28*       < 42> JMP                                                       OP1[ ->44 ]
+  421    29*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         30*       <113> INIT_STATIC_METHOD_CALL      self                         OP1[  IS_UNUSED  ] OP2[  IS_CONST (49) 'exec' ]
+         31*       < 65> SEND_VAL                                                  OP1[  IS_CONST (49) 'command+-v+uncompress' ]
+         32*       < 67> SEND_REF                                                  OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         33*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  422    34*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         35*       <154> ISSET_ISEMPTY_CV                                  RES[  IS_TMP_VAR ~11 ]      OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         36*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~11 ] OP2[ , ->41 ]
+  423    37*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         38*       < 25> ASSIGN_STATIC_PROP                                        OP1[  IS_CONST (36) 'installed' ] OP2[  IS_UNUSED  ]
+         39*       <137> OP_DATA                                                   OP1[  IS_CONST (35) <false> ] OP2[  IS_UNUSED  ]
+         40*       < 42> JMP                                                       OP1[ ->44 ]
+  425    41*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         42*       < 25> ASSIGN_STATIC_PROP                                        OP1[  IS_CONST (30) 'installed' ] OP2[  IS_UNUSED  ]
+         43*       <137> OP_DATA                                                   OP1[  IS_CONST (29) <true> ] OP2[  IS_UNUSED  ]
+  430    44*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         45*       < 62> RETURN                                                    OP1[  IS_CONST (26) null ]
+
+End of function checkbinary
+
+Function isbinaryavailable:
+[+]Function Source Class Name: wapmorgan\UnifiedArchive\LzwStreamWrapper
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\wapmorgan\unified-archive\src\LzwStreamWrapper.php
+function name:  isBinaryAvailable
+number of ops:  8
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  438     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       <113> INIT_STATIC_METHOD_CALL      self                         OP1[  IS_UNUSED  ] OP2[  IS_CONST (14) 'checkBinary' ]
+          2*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  439     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       <173> FETCH_STATIC_PROP_R          unknown              RES[  IS_TMP_VAR ~1 ]       OP1[  IS_CONST (10) 'installed' ] OP2[  IS_UNUSED  ]
+          5*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~1 ]
+  440     6*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          7*       < 62> RETURN                                                    OP1[  IS_CONST (5) null ]
+
+End of function isbinaryavailable
+
+End of class wapmorgan\UnifiedArchive\LzwStreamWrapper.
+

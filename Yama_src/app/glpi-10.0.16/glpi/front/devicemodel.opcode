@@ -1,0 +1,40 @@
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\front\devicemodel.php
+function name:  (null)
+number of ops:  33
+compiled vars:  !0 = $dropdown
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   36     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 73> INCLUDE_OR_EVAL                                           OP1[  IS_CONST (268435437) '..%2Finc%2Fincludes.php' ] OP2[ INCLUDE ]
+   38     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       < 89> FETCH_IS                                          RES[  IS_TMP_VAR ~2 ]       OP1[  IS_CONST (268435434) '_GET' ] OP2[  IS_UNUSED  ]
+          4*       <115> ISSET_ISEMPTY_DIM_OBJ                         0   RES[  IS_TMP_VAR ~3 ]       OP1[  IS_TMP_VAR ~2 ] OP2[ ,  IS_CONST (268435433) 'itemtype' ]
+          5*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~4 ]       OP1[  IS_TMP_VAR ~3 ]
+          6*       < 47> JMPNZ_EX                                          RES[  IS_TMP_VAR ~4 ]       OP1[  IS_TMP_VAR ~4 ] OP2[ , ->14 ]
+          7*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435428) 'class_exists' ]
+          8*       < 80> FETCH_R                      global               RES[  IS_TMP_VAR ~5 ]       OP1[  IS_CONST (268435427) '_GET' ]
+          9*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~6 ]       OP1[  IS_TMP_VAR ~5 ] OP2[ ,  IS_CONST (268435426) 'itemtype' ]
+         10*       < 65> SEND_VAL                                                  OP1[  IS_TMP_VAR ~6 ]
+         11*       < 60> DO_FCALL                                      0   RES[  IS_VAR $7 ]       OP1[  IS_UNUSED  ]
+         12*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~8 ]       OP1[  IS_VAR $7 ]
+         13*       < 52> BOOL                                              RES[  IS_TMP_VAR ~4 ]       OP1[  IS_TMP_VAR ~8 ]
+         14*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~4 ] OP2[ , ->20 ]
+   39    15*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         16*       < 68> NEW                                               RES[  IS_VAR $9 ]       OP1[ 'RuntimeException' ]
+   40    17*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435413) 'Missing+or+incorrect+device+type+called%21' ] OP2[  IS_UNUSED  ]
+         18*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         19*       <108> THROW                                         0           OP1[  IS_VAR $9 ] OP2[  IS_UNUSED  ]
+   44    20*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         21*       < 59> INIT_FCALL_BY_NAME                                        OP2[  IS_CONST (268435406) 'getItemForItemtype' ]
+         22*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         23*       < 92> FETCH_FUNC_ARG               global               RES[  IS_VAR $11 ]      OP1[  IS_CONST (268435404) '_GET' ]
+         24*       < 93> FETCH_DIM_FUNC_ARG                                RES[  IS_VAR $12 ]      OP1[  IS_VAR $11 ] OP2[ ,  IS_CONST (268435403) 'itemtype' ]
+         25*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $12 ] OP2[  IS_UNUSED  ]
+         26*       < 60> DO_FCALL                                      0   RES[  IS_VAR $13 ]      OP1[  IS_UNUSED  ]
+         27*       < 22> ASSIGN                                                    OP1[  IS_CV !0 ] OP2[ ,  IS_VAR $13 ]
+   45    28*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         29*       < 99> FETCH_CONSTANT                                    RES[  IS_TMP_VAR ~15 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435394) 'GLPI_ROOT' ]
+         30*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~16 ]      OP1[  IS_TMP_VAR ~15 ] OP2[ ,  IS_CONST (268435394) '%2Ffront%2Fdropdown.common.php' ]
+         31*       < 73> INCLUDE_OR_EVAL                                           OP1[  IS_TMP_VAR ~16 ] OP2[ INCLUDE ]
+   46    32*       < 62> RETURN                                                    OP1[  IS_CONST (268435391) 1 ]
+

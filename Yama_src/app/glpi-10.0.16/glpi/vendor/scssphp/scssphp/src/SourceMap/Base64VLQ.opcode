@@ -1,0 +1,242 @@
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\scssphp\scssphp\src\SourceMap\Base64VLQ.php
+function name:  (null)
+number of ops:  2
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  152     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 62> RETURN                                                    OP1[  IS_CONST (268435453) 1 ]
+
+Class ScssPhp\ScssPhp\SourceMap\Base64VLQ:
+[+]Class Parent Name: NULL
+End Trait extract
+Start Properties extract:
+Properties: NULL
+End Properties extract
+
+Function encode:
+[+]Function Source Class Name: ScssPhp\ScssPhp\SourceMap\Base64VLQ
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:value
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\scssphp\scssphp\src\SourceMap\Base64VLQ.php
+function name:  encode
+number of ops:  38
+compiled vars:  !0 = $value, !1 = $encoded, !2 = $vlq, !3 = $digit
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   58     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+   60     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435409) '' ]
+   61     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       <113> INIT_STATIC_METHOD_CALL      self                         OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435406) 'toVLQSigned' ]
+          5*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          6*       < 60> DO_FCALL                                      0   RES[  IS_VAR $5 ]       OP1[  IS_UNUSED  ]
+          7*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_VAR $5 ]
+   63     8*       <  0> NOP                                                      
+   64     9*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         10*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~7 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435396) 'VLQ_BASE_MASK' ]
+         11*       < 10> BW_AND                                            RES[  IS_TMP_VAR ~8 ]       OP1[  IS_CV !2 ] OP2[ ,  IS_TMP_VAR ~7 ]
+         12*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_TMP_VAR ~8 ]
+   67    13*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         14*       <  7> SR                                                RES[  IS_TMP_VAR ~10 ]      OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435389) 1 ]
+         15*       < 99> FETCH_CONSTANT                                    RES[  IS_TMP_VAR ~11 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435388) 'ScssPhp%5CScssPhp%5CSourceMap%5CPHP_INT_MAX' ]
+         16*       < 10> BW_AND                                            RES[  IS_TMP_VAR ~12 ]      OP1[  IS_TMP_VAR ~10 ] OP2[ ,  IS_TMP_VAR ~11 ]
+         17*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~13 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435387) 'VLQ_BASE_SHIFT' ]
+         18*       <  2> SUB                                               RES[  IS_TMP_VAR ~14 ]      OP1[  IS_TMP_VAR ~13 ] OP2[ ,  IS_CONST (268435386) 1 ]
+         19*       <  7> SR                                                RES[  IS_TMP_VAR ~15 ]      OP1[  IS_TMP_VAR ~12 ] OP2[ ,  IS_TMP_VAR ~14 ]
+         20*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_TMP_VAR ~15 ]
+   69    21*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         22*       < 20> IS_SMALLER                                        RES[  IS_TMP_VAR ~17 ]      OP1[  IS_CONST (268435379) 0 ] OP2[ ,  IS_CV !2 ]
+         23*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~17 ] OP2[ , ->27 ]
+   70    24*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         25*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~18 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435374) 'VLQ_CONTINUATION_BIT' ]
+         26*       < 26> ASSIGN_OP                    |=               9           OP1[  IS_CV !3 ] OP2[ ,  IS_TMP_VAR ~18 ]
+   73    27*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         28*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435369) 'ScssPhp%5CScssPhp%5CSourceMap%5CBase64' ] OP2[ ,  IS_CONST (268435371) 'encode' ]
+         29*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         30*       < 60> DO_FCALL                                      0   RES[  IS_VAR $20 ]      OP1[  IS_UNUSED  ]
+         31*       < 26> ASSIGN_OP                    .=               8           OP1[  IS_CV !1 ] OP2[ ,  IS_VAR $20 ]
+   74    32*       < 20> IS_SMALLER                                        RES[  ]         OP1[  IS_CONST (268435365) 0 ] OP2[ ,  IS_CV !2 ]
+         33*       < 44> JMPNZ                                                     OP1[  IS_TMP_VAR ~22 ] OP2[ , ->9 ]
+   76    34*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         35*       < 62> RETURN                                                    OP1[  IS_CV !1 ]
+   77    36*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         37*       < 62> RETURN                                                    OP1[  IS_CONST (268435356) null ]
+
+End of function encode
+
+Function decode:
+[+]Function Source Class Name: ScssPhp\ScssPhp\SourceMap\Base64VLQ
+[*]Start of arg_info extract:
+[*]arg_info num_args:2
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:str
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:index
+[*]type:(null)
+[*]is_ref:1
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\scssphp\scssphp\src\SourceMap\Base64VLQ.php
+function name:  decode
+number of ops:  40
+compiled vars:  !0 = $str, !1 = $index, !2 = $result, !3 = $shift, !4 = $c, !5 = $digit, !6 = $continuation
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   87     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 63> RECV                                              RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ]
+   89     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435420) 0 ]
+   90     4*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          5*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435417) 0 ]
+   92     6*       <  0> NOP                                                      
+   93     7*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          8*       < 36> POST_INC                                          RES[  IS_TMP_VAR ~9 ]       OP1[  IS_CV !1 ]
+          9*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~10 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_TMP_VAR ~9 ]
+         10*       < 22> ASSIGN                                                    OP1[  IS_CV !4 ] OP2[ ,  IS_TMP_VAR ~10 ]
+   94    11*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         12*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435404) 'ScssPhp%5CScssPhp%5CSourceMap%5CBase64' ] OP2[ ,  IS_CONST (268435406) 'decode' ]
+         13*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !4 ] OP2[  IS_UNUSED  ]
+         14*       < 60> DO_FCALL                                      0   RES[  IS_VAR $12 ]      OP1[  IS_UNUSED  ]
+         15*       < 22> ASSIGN                                                    OP1[  IS_CV !5 ] OP2[ ,  IS_VAR $12 ]
+   95    16*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         17*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~14 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435398) 'VLQ_CONTINUATION_BIT' ]
+         18*       < 10> BW_AND                                            RES[  IS_TMP_VAR ~15 ]      OP1[  IS_CV !5 ] OP2[ ,  IS_TMP_VAR ~14 ]
+         19*       < 19> IS_NOT_EQUAL                                      RES[  IS_TMP_VAR ~16 ]      OP1[  IS_TMP_VAR ~15 ] OP2[ ,  IS_CONST (268435395) 0 ]
+         20*       < 22> ASSIGN                                                    OP1[  IS_CV !6 ] OP2[ ,  IS_TMP_VAR ~16 ]
+   96    21*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         22*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~18 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435390) 'VLQ_BASE_MASK' ]
+         23*       < 26> ASSIGN_OP                    &=              10           OP1[  IS_CV !5 ] OP2[ ,  IS_TMP_VAR ~18 ]
+   97    24*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         25*       <  6> SL                                                RES[  IS_TMP_VAR ~20 ]      OP1[  IS_CV !5 ] OP2[ ,  IS_CV !3 ]
+         26*       <  1> ADD                                               RES[  IS_TMP_VAR ~21 ]      OP1[  IS_CV !2 ] OP2[ ,  IS_TMP_VAR ~20 ]
+         27*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_TMP_VAR ~21 ]
+   98    28*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         29*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~23 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435377) 'VLQ_BASE_SHIFT' ]
+         30*       <  1> ADD                                               RES[  IS_TMP_VAR ~24 ]      OP1[  IS_CV !3 ] OP2[ ,  IS_TMP_VAR ~23 ]
+         31*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_TMP_VAR ~24 ]
+   99    32*       < 44> JMPNZ                                                     OP1[  IS_CV !6 ] OP2[ , ->7 ]
+  101    33*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         34*       <113> INIT_STATIC_METHOD_CALL      self                         OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435368) 'fromVLQSigned' ]
+         35*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         36*       < 60> DO_FCALL                                      0   RES[  IS_VAR $26 ]      OP1[  IS_UNUSED  ]
+         37*       < 62> RETURN                                                    OP1[  IS_VAR $26 ]
+  102    38*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         39*       < 62> RETURN                                                    OP1[  IS_CONST (268435360) null ]
+
+End of function decode
+
+Function tovlqsigned:
+[+]Function Source Class Name: ScssPhp\ScssPhp\SourceMap\Base64VLQ
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:value
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\scssphp\scssphp\src\SourceMap\Base64VLQ.php
+function name:  toVLQSigned
+number of ops:  15
+compiled vars:  !0 = $value
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  114     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  116     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 20> IS_SMALLER                                        RES[  IS_TMP_VAR ~1 ]       OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435445) 0 ]
+          3*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~1 ] OP2[ , ->9 ]
+  117     4*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          5*       <  3> MUL                                               RES[  IS_TMP_VAR ~2 ]       OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435440) -1 ]
+          6*       <  6> SL                                                RES[  IS_TMP_VAR ~3 ]       OP1[  IS_TMP_VAR ~2 ] OP2[ ,  IS_CONST (268435439) 1 ]
+          7*       <  1> ADD                                               RES[  IS_TMP_VAR ~4 ]       OP1[  IS_TMP_VAR ~3 ] OP2[ ,  IS_CONST (268435438) 1 ]
+          8*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~4 ]
+  120     9*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         10*       <  6> SL                                                RES[  IS_TMP_VAR ~5 ]       OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435433) 1 ]
+         11*       <  1> ADD                                               RES[  IS_TMP_VAR ~6 ]       OP1[  IS_TMP_VAR ~5 ] OP2[ ,  IS_CONST (268435432) 0 ]
+         12*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~6 ]
+  121    13*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         14*       < 62> RETURN                                                    OP1[  IS_CONST (268435427) null ]
+
+End of function tovlqsigned
+
+Function fromvlqsigned:
+[+]Function Source Class Name: ScssPhp\ScssPhp\SourceMap\Base64VLQ
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:value
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\scssphp\scssphp\src\SourceMap\Base64VLQ.php
+function name:  fromVLQSigned
+number of ops:  21
+compiled vars:  !0 = $value, !1 = $negate
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  133     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  135     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 10> BW_AND                                            RES[  IS_TMP_VAR ~2 ]       OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435435) 1 ]
+          3*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~3 ]       OP1[  IS_TMP_VAR ~2 ] OP2[ ,  IS_CONST (268435434) 1 ]
+          4*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_TMP_VAR ~3 ]
+  138     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       <  7> SR                                                RES[  IS_TMP_VAR ~5 ]       OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435429) 1 ]
+          7*       < 99> FETCH_CONSTANT                                    RES[  IS_TMP_VAR ~6 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435428) 'ScssPhp%5CScssPhp%5CSourceMap%5CPHP_INT_MAX' ]
+          8*       < 10> BW_AND                                            RES[  IS_TMP_VAR ~7 ]       OP1[  IS_TMP_VAR ~5 ] OP2[ ,  IS_TMP_VAR ~6 ]
+          9*       < 22> ASSIGN                                                    OP1[  IS_CV !0 ] OP2[ ,  IS_TMP_VAR ~7 ]
+  140    10*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         11*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~9 ]       OP1[  IS_CV !1 ]
+         12*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~9 ] OP2[ , ->15 ]
+  141    13*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         14*       < 62> RETURN                                                    OP1[  IS_CV !0 ]
+  149    15*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         16*       <  3> MUL                                               RES[  IS_TMP_VAR ~10 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435413) -1 ]
+         17*       <  9> BW_OR                                             RES[  IS_TMP_VAR ~11 ]      OP1[  IS_TMP_VAR ~10 ] OP2[ ,  IS_CONST (268435412) -2147483648 ]
+         18*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~11 ]
+  150    19*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         20*       < 62> RETURN                                                    OP1[  IS_CONST (268435407) null ]
+
+End of function fromvlqsigned
+
+End of class ScssPhp\ScssPhp\SourceMap\Base64VLQ.
+

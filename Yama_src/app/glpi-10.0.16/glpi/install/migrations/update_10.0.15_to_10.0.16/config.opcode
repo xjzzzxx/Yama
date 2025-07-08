@@ -1,0 +1,39 @@
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\install\migrations\update_10.0.15_to_10.0.16\config.php
+function name:  (null)
+number of ops:  32
+compiled vars:  !0 = $DB, !1 = $migration, !2 = $or_criteria, !3 = $field
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   40     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       <168> BIND_GLOBAL                                               OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435419) 'DB' ]
+          2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       <168> BIND_GLOBAL                                               OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435416) 'migration' ]
+   43     4*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          5*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435413) <array> ]
+   44     6*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          7*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435410) 'NotificationMailingSetting' ] OP2[ ,  IS_CONST (268435412) 'getRelatedConfigKeys' ]
+          8*       < 60> DO_FCALL                                      0   RES[  IS_VAR $5 ]       OP1[  IS_UNUSED  ]
+          9*       < 77> FE_RESET_R                                        RES[  IS_VAR $6 ]       OP1[  IS_VAR $5 ] OP2[ , ->19 ]
+         10*       < 78> FE_FETCH_R                                                OP1[  IS_VAR $6 ] OP2[ ,  IS_CV !3 ] EXT_JMP_REL[ , ->19 ]
+   47    11*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         12*       < 71> INIT_ARRAY                                        RES[  IS_TMP_VAR ~8 ]       OP1[  IS_CONST (268435404) 'LIKE' ] OP2[  IS_UNUSED  ]
+         13*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~9 ]       OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435403) '%5C+%25' ]
+         14*       < 72> ADD_ARRAY_ELEMENT                                 RES[  IS_TMP_VAR ~8 ]       OP1[  IS_TMP_VAR ~9 ] OP2[  IS_UNUSED  ]
+         15*       < 71> INIT_ARRAY                                        RES[  IS_TMP_VAR ~10 ]      OP1[  IS_TMP_VAR ~8 ] OP2[ ,  IS_CONST (268435400) 'old_value' ]
+   46    16*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+   47    17*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~10 ] OP2[  IS_UNUSED  ]
+   44    18*       < 42> JMP                                                       OP1[ ->10 ]
+         19*       <127> FE_FREE                                                   OP1[  IS_VAR $6 ] OP2[  IS_UNUSED  ]
+   50    20*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         21*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435389) 'addPostQuery' ]
+   51    22*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435389) 'buildUpdate' ]
+   52    23*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435389) 'glpi_logs' ] OP2[  IS_UNUSED  ]
+   54    24*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435388) <array> ] OP2[  IS_UNUSED  ]
+   58    25*       < 71> INIT_ARRAY                                        RES[  IS_TMP_VAR ~11 ]      OP1[  IS_CONST (268435387) 'Config' ] OP2[ ,  IS_CONST (268435388) 'itemtype' ]
+   59    26*       < 72> ADD_ARRAY_ELEMENT                                 RES[  IS_TMP_VAR ~11 ]      OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435387) 'OR' ]
+         27*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~11 ] OP2[  IS_UNUSED  ]
+         28*       < 60> DO_FCALL                                      0   RES[  IS_VAR $12 ]      OP1[  IS_UNUSED  ]
+         29*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $12 ] OP2[  IS_UNUSED  ]
+         30*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+   63    31*       < 62> RETURN                                                    OP1[  IS_CONST (268435378) 1 ]
+

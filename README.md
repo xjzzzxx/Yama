@@ -6,19 +6,41 @@ Yama successfully discovered and reported 38 zero-day vulnerabilities in 24 GitH
 
 * [CVEs](#cves)
 
-
-Due to space limitations, the semantic parsing rules for opcodes and the experimental results of reclassifying each test case in RQ2 can be found here:
-
-* [opcodesSemantics](https://github.com/xjzzzxx/Yama/blob/main/Yama_appendix/opcodesSemantics.pdf)
-* [RQ2details](https://github.com/xjzzzxx/Yama/blob/main/Yama_appendix/RQ2details.pdf)
-
-# Preview
-**Yama's complete code and datasets will be published after the paper is accepted.**
+# Directory
 
 * [Yama_src](https://github.com/xjzzzxx/Yama/blob/main/Yama_src)
 * [Yama_datasets](https://github.com/xjzzzxx/Yama/blob/main/Yama_datasets)
 
+
+# Usage
+
 ![alt text](yama_welcome.png)
+
+## Analyze dataset1
+`php yama.php -t="..\Yama_datasets\dataset1\dataset1"`
+
+## Analyze dataset2
+
+`php yama.php -t="..\Yama_datasets\dataset2\C1_type_inference"`
+
+`php yama.php -t="..\Yama_datasets\dataset2\C2_Dynamic_nature"`
+
+`php yama.php -t="..\Yama_datasets\dataset2\C3_Buil-in_func"`
+
+## Analyze Sample app
+
+`php yama.php -t=".\app\DVWA-1.9"`
+
+`php yama.php -t=".\app\glpi-10.0.16"`
+
+# Citation/Paper
+
+The link to the corresponding paper will be provided once it is officially accepted and published.
+
+
+# 📘 Documentation Status
+
+This documentation is still in its early stages, and may contain omissions or incomplete sections. We are actively working to improve and expand the documentation.
 
 
 # CVEs

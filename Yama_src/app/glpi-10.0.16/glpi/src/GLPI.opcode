@@ -1,0 +1,212 @@
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\GLPI.php
+function name:  (null)
+number of ops:  7
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   36     0*       <  0> NOP                                                      
+   37     1*       <  0> NOP                                                      
+   38     2*       <  0> NOP                                                      
+   39     3*       <  0> NOP                                                      
+   46     4*       <  0> NOP                                                      
+  126     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       < 62> RETURN                                                    OP1[  IS_CONST (268435443) 1 ]
+
+Class GLPI:
+[+]Class Parent Name: NULL
+End Trait extract
+Start Properties extract:
+Key: error_handler, Value: UNINIT, Type: Normal
+Key: log_level, Value: UNINIT, Type: Normal
+End Properties extract.
+
+Function initlogger:
+[+]Function Source Class Name: GLPI
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\GLPI.php
+function name:  initLogger
+number of ops:  89
+compiled vars:  !0 = $PHPLOGGER, !1 = $SQLLOGGER, !2 = $type, !3 = $logger, !4 = $handler, !5 = $formatter
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   60     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       <168> BIND_GLOBAL                                               OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435387) 'PHPLOGGER' ]
+          2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       <168> BIND_GLOBAL                                               OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435384) 'SQLLOGGER' ]
+   62     4*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          5*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~7 ]       OP1[  IS_CONST (268435383) 'Monolog%5CLogger' ] OP2[ ,  IS_CONST (268435382) 'WARNING' ]
+          6*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435379) 'log_level' ]
+          7*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~7 ] OP2[  IS_UNUSED  ]
+   63     8*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          9*       <122> DEFINED                                           RES[  IS_TMP_VAR ~8 ]       OP1[  IS_CONST (268435377) 'GLPI_LOG_LVL' ] OP2[  IS_UNUSED  ]
+         10*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~8 ] OP2[ , ->16 ]
+   64    11*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         12*       < 99> FETCH_CONSTANT                                    RES[  IS_TMP_VAR ~10 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435373) 'GLPI_LOG_LVL' ]
+         13*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435370) 'log_level' ]
+         14*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~10 ] OP2[  IS_UNUSED  ]
+         15*       < 42> JMP                                                       OP1[ ->31 ]
+   66    16*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         17*       < 89> FETCH_IS                                          RES[  IS_TMP_VAR ~11 ]      OP1[  IS_CONST (268435365) '_SESSION' ] OP2[  IS_UNUSED  ]
+         18*       <115> ISSET_ISEMPTY_DIM_OBJ                         0   RES[  IS_TMP_VAR ~12 ]      OP1[  IS_TMP_VAR ~11 ] OP2[ ,  IS_CONST (268435364) 'glpi_use_mode' ]
+         19*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~13 ]      OP1[  IS_TMP_VAR ~12 ]
+         20*       < 47> JMPNZ_EX                                          RES[  IS_TMP_VAR ~13 ]      OP1[  IS_TMP_VAR ~13 ] OP2[ , ->26 ]
+   67    21*       < 80> FETCH_R                      global               RES[  IS_TMP_VAR ~14 ]      OP1[  IS_CONST (268435359) '_SESSION' ]
+         22*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~15 ]      OP1[  IS_TMP_VAR ~14 ] OP2[ ,  IS_CONST (268435358) 'glpi_use_mode' ]
+         23*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~16 ]      OP1[  IS_CONST (268435358) 'Session' ] OP2[ ,  IS_CONST (268435357) 'DEBUG_MODE' ]
+         24*       < 18> IS_EQUAL                                          RES[  IS_TMP_VAR ~17 ]      OP1[  IS_TMP_VAR ~15 ] OP2[ ,  IS_TMP_VAR ~16 ]
+         25*       < 52> BOOL                                              RES[  IS_TMP_VAR ~13 ]      OP1[  IS_TMP_VAR ~17 ]
+         26*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~13 ] OP2[ , ->31 ]
+   69    27*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         28*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~19 ]      OP1[  IS_CONST (268435352) 'Monolog%5CLogger' ] OP2[ ,  IS_CONST (268435351) 'DEBUG' ]
+         29*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435348) 'log_level' ]
+         30*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~19 ] OP2[  IS_UNUSED  ]
+   72    31*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         32*       < 77> FE_RESET_R                                        RES[  IS_VAR $20 ]      OP1[  IS_CONST (268435346) <array> ] OP2[ , ->86 ]
+         33*       < 78> FE_FETCH_R                                                OP1[  IS_VAR $20 ] OP2[ ,  IS_CV !2 ] EXT_JMP_REL[ , ->86 ]
+   73    34*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         35*       < 68> NEW                                               RES[  IS_VAR $21 ]      OP1[ 'Monolog%5CLogger' ]
+         36*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~22 ]      OP1[  IS_CONST (268435341) 'glpi' ] OP2[ ,  IS_CV !2 ]
+         37*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~23 ]      OP1[  IS_TMP_VAR ~22 ] OP2[ ,  IS_CONST (268435340) 'log' ]
+         38*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~23 ] OP2[  IS_UNUSED  ]
+         39*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         40*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_VAR $21 ]
+   74    41*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         42*       < 68> NEW                                               RES[  IS_VAR $26 ]      OP1[ 'Monolog%5CHandler%5CStreamHandler' ]
+   75    43*       < 99> FETCH_CONSTANT                                    RES[  IS_TMP_VAR ~27 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435331) 'GLPI_LOG_DIR' ]
+         44*       < 54> ROPE_INIT                                     3   RES[  IS_TMP_VAR ~29 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435331) '%2F' ]
+         45*       < 55> ROPE_ADD                                      1   RES[  IS_TMP_VAR ~29 ]      OP1[  IS_TMP_VAR ~29 ] OP2[ ,  IS_CV !2 ]
+         46*       < 56> ROPE_END                                      2   RES[  IS_TMP_VAR ~28 ]      OP1[  IS_TMP_VAR ~29 ] OP2[ ,  IS_CONST (268435328) '-errors.log' ]
+         47*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~31 ]      OP1[  IS_TMP_VAR ~27 ] OP2[ ,  IS_TMP_VAR ~28 ]
+         48*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~31 ] OP2[  IS_UNUSED  ]
+         49*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+   76    50*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $32 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435321) 'log_level' ]
+         51*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $32 ] OP2[  IS_UNUSED  ]
+         52*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+   74    53*       < 22> ASSIGN                                                    OP1[  IS_CV !4 ] OP2[ ,  IS_VAR $26 ]
+   78    54*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         55*       < 68> NEW                                               RES[  IS_VAR $35 ]      OP1[ 'Monolog%5CFormatter%5CLineFormatter' ]
+         56*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435312) null ] OP2[  IS_UNUSED  ]
+         57*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435311) 'Y-m-d+H%3Ai%3As' ] OP2[  IS_UNUSED  ]
+         58*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435310) <true> ] OP2[  IS_UNUSED  ]
+         59*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435309) <true> ] OP2[  IS_UNUSED  ]
+         60*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         61*       < 22> ASSIGN                                                    OP1[  IS_CV !5 ] OP2[ ,  IS_VAR $35 ]
+   79    62*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         63*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !4 ] OP2[ ,  IS_CONST (268435302) 'setFormatter' ]
+         64*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !5 ] OP2[  IS_UNUSED  ]
+         65*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+   80    66*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         67*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435296) 'pushHandler' ]
+         68*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !4 ] OP2[  IS_UNUSED  ]
+         69*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+   81    70*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         71*       <188> SWITCH_STRING                                             OP1[  IS_CV !2 ] OP2[ , [ 'php':->77, 'sql':->81, ] ] EXT_JMP_REL[ , ->85 ]
+   82    72*       < 18> IS_EQUAL                                          RES[  ]         OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435289) 'php' ]
+         73*       < 44> JMPNZ                                                     OP1[  IS_TMP_VAR ~40 ] OP2[ , ->77 ]
+   85    74*       < 18> IS_EQUAL                                          RES[  ]         OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435286) 'sql' ]
+         75*       < 44> JMPNZ                                                     OP1[  IS_TMP_VAR ~40 ] OP2[ , ->81 ]
+         76*       < 42> JMP                                                       OP1[ ->85 ]
+   83    77*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         78*       < 22> ASSIGN                                                    OP1[  IS_CV !0 ] OP2[ ,  IS_CV !3 ]
+   84    79*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         80*       < 42> JMP                                                       OP1[ ->85 ]
+   86    81*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         82*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_CV !3 ]
+   87    83*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         84*       < 42> JMP                                                       OP1[ ->85 ]
+   72    85*       < 42> JMP                                                       OP1[ ->33 ]
+         86*       <127> FE_FREE                                                   OP1[  IS_VAR $20 ] OP2[  IS_UNUSED  ]
+   90    87*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         88*       < 62> RETURN                                                    OP1[  IS_CONST (268435259) null ]
+
+End of function initlogger
+
+Function getloglevel:
+[+]Function Source Class Name: GLPI
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\GLPI.php
+function name:  getLogLevel
+number of ops:  8
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   99     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435448) 'Toolbox' ] OP2[ ,  IS_CONST (268435450) 'deprecated' ]
+          2*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  100     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~1 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435446) 'log_level' ]
+          5*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~1 ]
+  101     6*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          7*       < 62> RETURN                                                    OP1[  IS_CONST (268435441) null ]
+
+End of function getloglevel
+
+Function initerrorhandler:
+[+]Function Source Class Name: GLPI
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\GLPI.php
+function name:  initErrorHandler
+number of ops:  14
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  110     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435445) 'Glpi%5CApplication%5CErrorHandler' ] OP2[ ,  IS_CONST (268435447) 'getInstance' ]
+          2*       < 60> DO_FCALL                                      0   RES[  IS_VAR $1 ]       OP1[  IS_UNUSED  ]
+          3*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435440) 'error_handler' ]
+          4*       <137> OP_DATA                                                   OP1[  IS_VAR $1 ] OP2[  IS_UNUSED  ]
+  111     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~2 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435439) 'error_handler' ]
+          7*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~2 ] OP2[ ,  IS_CONST (268435438) 'register' ]
+          8*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  113     9*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         10*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~4 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435434) 'error_handler' ]
+         11*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~4 ]
+  114    12*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         13*       < 62> RETURN                                                    OP1[  IS_CONST (268435429) null ]
+
+End of function initerrorhandler
+
+Function geterrorhandler:
+[+]Function Source Class Name: GLPI
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\GLPI.php
+function name:  getErrorHandler
+number of ops:  5
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  123     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435452) 'error_handler' ]
+          2*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~0 ]
+  124     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       < 62> RETURN                                                    OP1[  IS_CONST (268435447) null ]
+
+End of function geterrorhandler
+
+End of class GLPI.
+

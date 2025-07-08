@@ -1,0 +1,861 @@
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\symfony\cache\Traits\FilesystemCommonTrait.php
+function name:  (null)
+number of ops:  5
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   12     0*       <  0> NOP                                                      
+   14     1*       <  0> NOP                                                      
+   23     2*       <  0> NOP                                                      
+  206     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       < 62> RETURN                                                    OP1[  IS_CONST (268435447) 1 ]
+
+Class Symfony\Component\Cache\Traits\FilesystemCommonTrait:
+[+]Class Parent Name: NULL
+End Trait extract
+Start Properties extract:
+Key: directory, Value: UNINIT, Type: Normal
+Key: tmp, Value: UNINIT, Type: Normal
+End Properties extract.
+
+Function init:
+[+]Function Source Class Name: Symfony\Component\Cache\Traits\FilesystemCommonTrait
+[*]Start of arg_info extract:
+[*]arg_info num_args:2
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:namespace
+[*]type:string
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:directory
+[*]type:?string
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\symfony\cache\Traits\FilesystemCommonTrait.php
+function name:  init
+number of ops:  82
+compiled vars:  !0 = $namespace, !1 = $directory, !2 = $match
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   26     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 63> RECV                                              RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ]
+   28     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       <115> ISSET_ISEMPTY_DIM_OBJ                         0   RES[  IS_TMP_VAR ~3 ]       OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435322) 0 ]
+          4*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~4 ]       OP1[  IS_TMP_VAR ~3 ]
+          5*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~4 ] OP2[ , ->13 ]
+   29     6*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          7*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435315) 'Symfony%5CComponent%5CCache%5CTraits%5Csys_get_temp_dir' ]
+          8*       < 60> DO_FCALL                                      0   RES[  IS_VAR $5 ]       OP1[  IS_UNUSED  ]
+          9*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~6 ]       OP1[  IS_VAR $5 ] OP2[ ,  IS_CONST (268435314) '%5C' ]
+         10*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~7 ]       OP1[  IS_TMP_VAR ~6 ] OP2[ ,  IS_CONST (268435313) 'symfony-cache' ]
+         11*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_TMP_VAR ~7 ]
+         12*       < 42> JMP                                                       OP1[ ->20 ]
+   31    13*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         14*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435306) 'Symfony%5CComponent%5CCache%5CTraits%5Crealpath' ]
+         15*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         16*       < 60> DO_FCALL                                      0   RES[  IS_VAR $9 ]       OP1[  IS_UNUSED  ]
+         17*       <152> JMP_SET                                           RES[  IS_TMP_VAR ~10 ]      OP1[  IS_VAR $9 ] OP2[ , ->19 ]
+         18*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~10 ]      OP1[  IS_CV !1 ]
+         19*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_TMP_VAR ~10 ]
+   33    20*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         21*       <115> ISSET_ISEMPTY_DIM_OBJ                         0   RES[  IS_TMP_VAR ~12 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435295) 0 ]
+         22*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~12 ] OP2[ , ->45 ]
+   34    23*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         24*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435290) 'Symfony%5CComponent%5CCache%5CTraits%5Cpreg_match' ]
+         25*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435291) '%23%5B%5E-%2B_.A-Za-z0-9%5D%23' ] OP2[  IS_UNUSED  ]
+         26*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         27*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         28*       < 60> DO_FCALL                                      0   RES[  IS_VAR $13 ]      OP1[  IS_UNUSED  ]
+         29*       < 43> JMPZ                                                      OP1[  IS_VAR $13 ] OP2[ , ->41 ]
+   35    30*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         31*       < 68> NEW                                               RES[  IS_VAR $14 ]      OP1[ 'Symfony%5CComponent%5CCache%5CException%5CInvalidArgumentException' ]
+         32*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435280) 'Symfony%5CComponent%5CCache%5CTraits%5Csprintf' ]
+         33*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435281) 'Namespace+contains+%22%25s%22+but+only+characters+in+%5B-%2B_.A-Za-z0-9%5D+are+allowed.' ] OP2[  IS_UNUSED  ]
+         34*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         35*       < 93> FETCH_DIM_FUNC_ARG                                RES[  IS_VAR $15 ]      OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435278) 0 ]
+         36*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $15 ] OP2[  IS_UNUSED  ]
+         37*       < 60> DO_FCALL                                      0   RES[  IS_VAR $16 ]      OP1[  IS_UNUSED  ]
+         38*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $16 ] OP2[  IS_UNUSED  ]
+         39*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         40*       <108> THROW                                         0           OP1[  IS_VAR $14 ] OP2[  IS_UNUSED  ]
+   37    41*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         42*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~18 ]      OP1[  IS_CONST (268435265) '%5C' ] OP2[ ,  IS_CV !0 ]
+         43*       < 26> ASSIGN_OP                    .=               8           OP1[  IS_CV !1 ] OP2[ ,  IS_TMP_VAR ~18 ]
+         44*       < 42> JMP                                                       OP1[ ->47 ]
+   39    45*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         46*       < 26> ASSIGN_OP                    .=               8           OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435258) '%5C%40' ]
+   41    47*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         48*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435255) 'Symfony%5CComponent%5CCache%5CTraits%5Cis_dir' ]
+         49*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         50*       < 60> DO_FCALL                                      0   RES[  IS_VAR $21 ]      OP1[  IS_UNUSED  ]
+         51*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~22 ]      OP1[  IS_VAR $21 ]
+         52*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~22 ] OP2[ , ->61 ]
+   42    53*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         54*       < 57> BEGIN_SILENCE                                     RES[  IS_TMP_VAR ~23 ]      OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         55*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435244) 'Symfony%5CComponent%5CCache%5CTraits%5Cmkdir' ]
+         56*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         57*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435243) 511 ] OP2[  IS_UNUSED  ]
+         58*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435242) <true> ] OP2[  IS_UNUSED  ]
+         59*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         60*       < 58> END_SILENCE                                               OP1[  IS_TMP_VAR ~23 ] OP2[  IS_UNUSED  ]
+   44    61*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         62*       < 26> ASSIGN_OP                    .=               8           OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435235) '%5C' ]
+   46    63*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         64*       <121> STRLEN                                            RES[  IS_TMP_VAR ~26 ]      OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         65*       < 20> IS_SMALLER                                        RES[  IS_TMP_VAR ~27 ]      OP1[  IS_CONST (268435230) 234 ] OP2[ ,  IS_TMP_VAR ~26 ]
+         66*       < 52> BOOL                                              RES[  IS_TMP_VAR ~28 ]      OP1[  IS_TMP_VAR ~27 ]
+         67*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~28 ] OP2[ , ->77 ]
+   47    68*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         69*       < 68> NEW                                               RES[  IS_VAR $29 ]      OP1[ 'Symfony%5CComponent%5CCache%5CException%5CInvalidArgumentException' ]
+         70*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435223) 'Symfony%5CComponent%5CCache%5CTraits%5Csprintf' ]
+         71*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435224) 'Cache+directory+too+long+%28%25s%29.' ] OP2[  IS_UNUSED  ]
+         72*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         73*       < 60> DO_FCALL                                      0   RES[  IS_VAR $30 ]      OP1[  IS_UNUSED  ]
+         74*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $30 ] OP2[  IS_UNUSED  ]
+         75*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         76*       <108> THROW                                         0           OP1[  IS_VAR $29 ] OP2[  IS_UNUSED  ]
+   50    77*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         78*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435211) 'directory' ]
+         79*       <137> OP_DATA                                                   OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+   51    80*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         81*       < 62> RETURN                                                    OP1[  IS_CONST (268435206) null ]
+
+End of function init
+
+Function doclear:
+[+]Function Source Class Name: Symfony\Component\Cache\Traits\FilesystemCommonTrait
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:namespace
+[*]type:string
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\symfony\cache\Traits\FilesystemCommonTrait.php
+function name:  doClear
+number of ops:  45
+compiled vars:  !0 = $namespace, !1 = $ok, !2 = $file
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   56     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+   58     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435403) <true> ]
+   60     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435400) 'scanHashDir' ]
+          5*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $4 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435398) 'directory' ]
+          7*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $4 ] OP2[  IS_UNUSED  ]
+          8*       < 60> DO_FCALL                                      0   RES[  IS_VAR $5 ]       OP1[  IS_UNUSED  ]
+          9*       < 77> FE_RESET_R                                        RES[  IS_VAR $6 ]       OP1[  IS_VAR $5 ] OP2[ , ->40 ]
+         10*       < 78> FE_FETCH_R                                                OP1[  IS_VAR $6 ] OP2[ ,  IS_CV !2 ] EXT_JMP_REL[ , ->40 ]
+   61    11*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         12*       < 17> IS_NOT_IDENTICAL                                  RES[  IS_TMP_VAR ~7 ]       OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435387) '' ]
+         13*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~7 ]       OP1[  IS_TMP_VAR ~7 ] OP2[ , ->23 ]
+         14*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435384) 'Symfony%5CComponent%5CCache%5CTraits%5Cstr_starts_with' ]
+         15*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435385) 'getFileKey' ]
+         16*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         17*       < 60> DO_FCALL                                      0   RES[  IS_VAR $8 ]       OP1[  IS_UNUSED  ]
+         18*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $8 ] OP2[  IS_UNUSED  ]
+         19*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         20*       < 60> DO_FCALL                                      0   RES[  IS_VAR $9 ]       OP1[  IS_UNUSED  ]
+         21*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~10 ]      OP1[  IS_VAR $9 ]
+         22*       < 52> BOOL                                              RES[  IS_TMP_VAR ~7 ]       OP1[  IS_TMP_VAR ~10 ]
+         23*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~7 ] OP2[ , ->26 ]
+   62    24*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         25*       < 42> JMP                                                       OP1[ ->10 ]
+   65    26*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         27*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435363) 'doUnlink' ]
+         28*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         29*       < 60> DO_FCALL                                      0   RES[  IS_VAR $11 ]      OP1[  IS_UNUSED  ]
+         30*       < 47> JMPNZ_EX                                          RES[  IS_TMP_VAR ~12 ]      OP1[  IS_VAR $11 ] OP2[ , ->36 ]
+         31*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435357) 'Symfony%5CComponent%5CCache%5CTraits%5Cfile_exists' ]
+         32*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         33*       < 60> DO_FCALL                                      0   RES[  IS_VAR $13 ]      OP1[  IS_UNUSED  ]
+         34*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~14 ]      OP1[  IS_VAR $13 ]
+         35*       < 52> BOOL                                              RES[  IS_TMP_VAR ~12 ]      OP1[  IS_TMP_VAR ~14 ]
+         36*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~12 ]      OP1[  IS_TMP_VAR ~12 ] OP2[ , ->38 ]
+         37*       < 52> BOOL                                              RES[  IS_TMP_VAR ~12 ]      OP1[  IS_CV !1 ]
+         38*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_TMP_VAR ~12 ]
+   60    39*       < 42> JMP                                                       OP1[ ->10 ]
+         40*       <127> FE_FREE                                                   OP1[  IS_VAR $6 ] OP2[  IS_UNUSED  ]
+   68    41*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         42*       < 62> RETURN                                                    OP1[  IS_CV !1 ]
+   69    43*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         44*       < 62> RETURN                                                    OP1[  IS_CONST (268435334) null ]
+
+End of function doclear
+
+Function dodelete:
+[+]Function Source Class Name: Symfony\Component\Cache\Traits\FilesystemCommonTrait
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:ids
+[*]type:array
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\symfony\cache\Traits\FilesystemCommonTrait.php
+function name:  doDelete
+number of ops:  36
+compiled vars:  !0 = $ids, !1 = $ok, !2 = $id, !3 = $file
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   74     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+   76     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435418) <true> ]
+   78     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       < 77> FE_RESET_R                                        RES[  IS_VAR $5 ]       OP1[  IS_CV !0 ] OP2[ , ->31 ]
+          5*       < 78> FE_FETCH_R                                                OP1[  IS_VAR $5 ] OP2[ ,  IS_CV !2 ] EXT_JMP_REL[ , ->31 ]
+   79     6*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          7*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435409) 'getFile' ]
+          8*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+          9*       < 60> DO_FCALL                                      0   RES[  IS_VAR $6 ]       OP1[  IS_UNUSED  ]
+         10*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_VAR $6 ]
+   80    11*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         12*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435401) 'Symfony%5CComponent%5CCache%5CTraits%5Cis_file' ]
+         13*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         14*       < 60> DO_FCALL                                      0   RES[  IS_VAR $8 ]       OP1[  IS_UNUSED  ]
+         15*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~9 ]       OP1[  IS_VAR $8 ]
+         16*       < 47> JMPNZ_EX                                          RES[  IS_TMP_VAR ~9 ]       OP1[  IS_TMP_VAR ~9 ] OP2[ , ->21 ]
+         17*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435394) 'doUnlink' ]
+         18*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         19*       < 60> DO_FCALL                                      0   RES[  IS_VAR $10 ]      OP1[  IS_UNUSED  ]
+         20*       < 52> BOOL                                              RES[  IS_TMP_VAR ~9 ]       OP1[  IS_VAR $10 ]
+         21*       < 47> JMPNZ_EX                                          RES[  IS_TMP_VAR ~9 ]       OP1[  IS_TMP_VAR ~9 ] OP2[ , ->27 ]
+         22*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435386) 'Symfony%5CComponent%5CCache%5CTraits%5Cfile_exists' ]
+         23*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         24*       < 60> DO_FCALL                                      0   RES[  IS_VAR $11 ]      OP1[  IS_UNUSED  ]
+         25*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~12 ]      OP1[  IS_VAR $11 ]
+         26*       < 52> BOOL                                              RES[  IS_TMP_VAR ~9 ]       OP1[  IS_TMP_VAR ~12 ]
+         27*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~9 ]       OP1[  IS_TMP_VAR ~9 ] OP2[ , ->29 ]
+         28*       < 52> BOOL                                              RES[  IS_TMP_VAR ~9 ]       OP1[  IS_CV !1 ]
+         29*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_TMP_VAR ~9 ]
+   78    30*       < 42> JMP                                                       OP1[ ->5 ]
+         31*       <127> FE_FREE                                                   OP1[  IS_VAR $5 ] OP2[  IS_UNUSED  ]
+   83    32*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         33*       < 62> RETURN                                                    OP1[  IS_CV !1 ]
+   84    34*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         35*       < 62> RETURN                                                    OP1[  IS_CONST (268435363) null ]
+
+End of function dodelete
+
+Function dounlink:
+[+]Function Source Class Name: Symfony\Component\Cache\Traits\FilesystemCommonTrait
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:file
+[*]type:string
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\symfony\cache\Traits\FilesystemCommonTrait.php
+function name:  doUnlink
+number of ops:  10
+compiled vars:  !0 = $file
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   86     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+   88     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 57> BEGIN_SILENCE                                     RES[  IS_TMP_VAR ~1 ]       OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435438) 'Symfony%5CComponent%5CCache%5CTraits%5Cunlink' ]
+          4*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          5*       < 60> DO_FCALL                                      0   RES[  IS_VAR $2 ]       OP1[  IS_UNUSED  ]
+          6*       < 58> END_SILENCE                                               OP1[  IS_TMP_VAR ~1 ] OP2[  IS_UNUSED  ]
+          7*       < 62> RETURN                                                    OP1[  IS_VAR $2 ]
+   89     8*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          9*       < 62> RETURN                                                    OP1[  IS_CONST (268435429) null ]
+
+End of function dounlink
+
+Function write:
+[+]Function Source Class Name: Symfony\Component\Cache\Traits\FilesystemCommonTrait
+[*]Start of arg_info extract:
+[*]arg_info num_args:3
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:file
+[*]type:string
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:data
+[*]type:string
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**2**
+[*]name:expiresAt
+[*]type:?int
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\symfony\cache\Traits\FilesystemCommonTrait.php
+function name:  write
+number of ops:  127
+compiled vars:  !0 = $file, !1 = $data, !2 = $expiresAt, !3 = $unlink, !4 = $h, !5 = $e, !6 = $success
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   91     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 63> RECV                                              RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ]
+          2*       < 64> RECV_INIT                                         RES[  IS_CV !2 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435252) null ]
+   93     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435249) <false> ]
+   94     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435246) 'Symfony%5CComponent%5CCache%5CTraits%5Cset_error_handler' ]
+          7*       <157> FETCH_CLASS_NAME                                  RES[  IS_TMP_VAR ~8 ]       OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          8*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~9 ]       OP1[  IS_TMP_VAR ~8 ] OP2[ ,  IS_CONST (268435245) '%3A%3AthrowError' ]
+          9*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~9 ] OP2[  IS_UNUSED  ]
+         10*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+   95    11*       <  0> NOP                                                      
+   96    12*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         13*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~12 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435236) 'tmp' ]
+         14*       <123> TYPE_CHECK                                    2   RES[  IS_TMP_VAR ~13 ]      OP1[  IS_TMP_VAR ~12 ] OP2[  IS_UNUSED  ]
+         15*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~13 ] OP2[ , ->27 ]
+   97    16*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         17*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~15 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435230) 'directory' ]
+         18*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435229) 'Symfony%5CComponent%5CCache%5CTraits%5Cbin2hex' ]
+         19*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435230) 'Symfony%5CComponent%5CCache%5CTraits%5Crandom_bytes' ]
+         20*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435231) 6 ] OP2[  IS_UNUSED  ]
+         21*       < 60> DO_FCALL                                      0   RES[  IS_VAR $16 ]      OP1[  IS_UNUSED  ]
+         22*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $16 ] OP2[  IS_UNUSED  ]
+         23*       < 60> DO_FCALL                                      0   RES[  IS_VAR $17 ]      OP1[  IS_UNUSED  ]
+         24*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~18 ]      OP1[  IS_TMP_VAR ~15 ] OP2[ ,  IS_VAR $17 ]
+         25*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435213) 'tmp' ]
+         26*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~18 ] OP2[  IS_UNUSED  ]
+   99    27*       <  0> NOP                                                      
+  100    28*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         29*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435214) 'Symfony%5CComponent%5CCache%5CTraits%5Cfopen' ]
+         30*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         31*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $19 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435213) 'tmp' ]
+         32*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $19 ] OP2[  IS_UNUSED  ]
+         33*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435210) 'x' ] OP2[  IS_UNUSED  ]
+         34*       < 60> DO_FCALL                                      0   RES[  IS_VAR $20 ]      OP1[  IS_UNUSED  ]
+         35*       < 22> ASSIGN                                                    OP1[  IS_CV !4 ] OP2[ ,  IS_VAR $20 ]
+         36*       < 42> JMP                                                       OP1[ ->68 ]
+  101    37*       <107> CATCH                                       last  RES[  IS_CV !5 ]       OP1[  IS_CONST (268435203) 'ErrorException' ]
+  102    38*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         39*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435201) 'Symfony%5CComponent%5CCache%5CTraits%5Cstr_contains' ]
+         40*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !5 ] OP2[ ,  IS_CONST (268435202) 'getMessage' ]
+         41*       < 60> DO_FCALL                                      0   RES[  IS_VAR $22 ]      OP1[  IS_UNUSED  ]
+         42*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $22 ] OP2[  IS_UNUSED  ]
+         43*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435198) 'File+exists' ] OP2[  IS_UNUSED  ]
+         44*       < 60> DO_FCALL                                      0   RES[  IS_VAR $23 ]      OP1[  IS_UNUSED  ]
+         45*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~24 ]      OP1[  IS_VAR $23 ]
+         46*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~24 ] OP2[ , ->49 ]
+  103    47*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         48*       <108> THROW                                         0           OP1[  IS_CV !5 ] OP2[  IS_UNUSED  ]
+  106    49*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         50*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~26 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435186) 'directory' ]
+         51*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435185) 'Symfony%5CComponent%5CCache%5CTraits%5Cbin2hex' ]
+         52*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435186) 'Symfony%5CComponent%5CCache%5CTraits%5Crandom_bytes' ]
+         53*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435187) 6 ] OP2[  IS_UNUSED  ]
+         54*       < 60> DO_FCALL                                      0   RES[  IS_VAR $27 ]      OP1[  IS_UNUSED  ]
+         55*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $27 ] OP2[  IS_UNUSED  ]
+         56*       < 60> DO_FCALL                                      0   RES[  IS_VAR $28 ]      OP1[  IS_UNUSED  ]
+         57*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~29 ]      OP1[  IS_TMP_VAR ~26 ] OP2[ ,  IS_VAR $28 ]
+         58*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435169) 'tmp' ]
+         59*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~29 ] OP2[  IS_UNUSED  ]
+  107    60*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         61*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435172) 'Symfony%5CComponent%5CCache%5CTraits%5Cfopen' ]
+         62*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         63*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $30 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435171) 'tmp' ]
+         64*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $30 ] OP2[  IS_UNUSED  ]
+         65*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435168) 'x' ] OP2[  IS_UNUSED  ]
+         66*       < 60> DO_FCALL                                      0   RES[  IS_VAR $31 ]      OP1[  IS_UNUSED  ]
+         67*       < 22> ASSIGN                                                    OP1[  IS_CV !4 ] OP2[ ,  IS_VAR $31 ]
+  109    68*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         69*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435161) 'Symfony%5CComponent%5CCache%5CTraits%5Cfwrite' ]
+         70*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !4 ] OP2[  IS_UNUSED  ]
+         71*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         72*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  110    73*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         74*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435154) 'Symfony%5CComponent%5CCache%5CTraits%5Cfclose' ]
+         75*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !4 ] OP2[  IS_UNUSED  ]
+         76*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  111    77*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         78*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435149) <true> ]
+  113    79*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         80*       <123> TYPE_CHECK                                  1020   RES[  IS_TMP_VAR ~36 ]      OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         81*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~36 ] OP2[ , ->94 ]
+  114    82*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         83*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435140) 'Symfony%5CComponent%5CCache%5CTraits%5Ctouch' ]
+         84*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         85*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $37 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435139) 'tmp' ]
+         86*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $37 ] OP2[  IS_UNUSED  ]
+         87*       <152> JMP_SET                                           RES[  IS_TMP_VAR ~38 ]      OP1[  IS_CV !2 ] OP2[ , ->92 ]
+         88*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435134) 'Symfony%5CComponent%5CCache%5CTraits%5Ctime' ]
+         89*       < 60> DO_FCALL                                      0   RES[  IS_VAR $39 ]      OP1[  IS_UNUSED  ]
+         90*       <  1> ADD                                               RES[  IS_TMP_VAR ~40 ]      OP1[  IS_VAR $39 ] OP2[ ,  IS_CONST (268435133) 31556952 ]
+         91*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~38 ]      OP1[  IS_TMP_VAR ~40 ]
+         92*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~38 ] OP2[  IS_UNUSED  ]
+         93*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  117    94*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         95*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435124) 'Symfony%5CComponent%5CCache%5CTraits%5Crename' ]
+         96*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         97*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $42 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435123) 'tmp' ]
+         98*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $42 ] OP2[  IS_UNUSED  ]
+         99*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+        100*       < 60> DO_FCALL                                      0   RES[  IS_VAR $43 ]      OP1[  IS_UNUSED  ]
+        101*       < 22> ASSIGN                                                    OP1[  IS_CV !6 ] OP2[ ,  IS_VAR $43 ]
+  118   102*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        103*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~45 ]      OP1[  IS_CV !6 ]
+        104*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_TMP_VAR ~45 ]
+  120   105*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        106*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~47 ]      OP1[  IS_CV !6 ]
+        107*       <162> FAST_CALL                                                 OP1[ ->111 ]
+        108*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~47 ]
+  121   109*       <162> FAST_CALL                                                 OP1[ ->111 ]
+        110*       < 42> JMP                                                       OP1[ ->125 ]
+  122   111*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        112*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435094) 'Symfony%5CComponent%5CCache%5CTraits%5Crestore_error_handler' ]
+        113*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  124   114*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        115*       < 43> JMPZ                                                      OP1[  IS_CV !3 ] OP2[ , ->124 ]
+  125   116*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        117*       < 57> BEGIN_SILENCE                                     RES[  IS_TMP_VAR ~49 ]      OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        118*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435085) 'Symfony%5CComponent%5CCache%5CTraits%5Cunlink' ]
+        119*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        120*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $50 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435084) 'tmp' ]
+        121*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $50 ] OP2[  IS_UNUSED  ]
+        122*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+        123*       < 58> END_SILENCE                                               OP1[  IS_TMP_VAR ~49 ] OP2[  IS_UNUSED  ]
+        124*       <163> FAST_RET                                                 
+  128   125*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        126*       < 62> RETURN                                                    OP1[  IS_CONST (268435073) null ]
+
+End of function write
+
+Function getfile:
+[+]Function Source Class Name: Symfony\Component\Cache\Traits\FilesystemCommonTrait
+[*]Start of arg_info extract:
+[*]arg_info num_args:3
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:id
+[*]type:string
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:mkdir
+[*]type:bool
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**2**
+[*]name:directory
+[*]type:?string
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\symfony\cache\Traits\FilesystemCommonTrait.php
+function name:  getFile
+number of ops:  60
+compiled vars:  !0 = $id, !1 = $mkdir, !2 = $directory, !3 = $hash, !4 = $dir
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  130     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 64> RECV_INIT                                         RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435358) <false> ]
+          2*       < 64> RECV_INIT                                         RES[  IS_CV !2 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435357) null ]
+  133     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435354) 'Symfony%5CComponent%5CCache%5CTraits%5Cstr_replace' ]
+          5*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435355) '%2F' ] OP2[  IS_UNUSED  ]
+          6*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435354) '-' ] OP2[  IS_UNUSED  ]
+          7*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435353) 'Symfony%5CComponent%5CCache%5CTraits%5Cbase64_encode' ]
+          8*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435354) 'Symfony%5CComponent%5CCache%5CTraits%5Chash' ]
+          9*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435355) 'md5' ] OP2[  IS_UNUSED  ]
+         10*       <157> FETCH_CLASS_NAME                                  RES[  IS_TMP_VAR ~5 ]       OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         11*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~6 ]       OP1[  IS_TMP_VAR ~5 ] OP2[ ,  IS_CV !0 ]
+         12*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~6 ] OP2[  IS_UNUSED  ]
+         13*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435348) <true> ] OP2[  IS_UNUSED  ]
+         14*       < 60> DO_FCALL                                      0   RES[  IS_VAR $7 ]       OP1[  IS_UNUSED  ]
+         15*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $7 ] OP2[  IS_UNUSED  ]
+         16*       < 60> DO_FCALL                                      0   RES[  IS_VAR $8 ]       OP1[  IS_UNUSED  ]
+         17*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $8 ] OP2[  IS_UNUSED  ]
+         18*       < 60> DO_FCALL                                      0   RES[  IS_VAR $9 ]       OP1[  IS_UNUSED  ]
+         19*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_VAR $9 ]
+  134    20*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         21*       <169> COALESCE                                          RES[  IS_TMP_VAR ~11 ]      OP1[  IS_CV !2 ] OP2[ , ->24 ]
+         22*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~12 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435331) 'directory' ]
+         23*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~11 ]      OP1[  IS_TMP_VAR ~12 ]
+         24*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435328) 'Symfony%5CComponent%5CCache%5CTraits%5Cstrtoupper' ]
+         25*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~13 ]      OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435329) 0 ]
+         26*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~14 ]      OP1[  IS_TMP_VAR ~13 ] OP2[ ,  IS_CONST (268435328) '%5C' ]
+         27*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~15 ]      OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435327) 1 ]
+         28*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~16 ]      OP1[  IS_TMP_VAR ~14 ] OP2[ ,  IS_TMP_VAR ~15 ]
+         29*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~17 ]      OP1[  IS_TMP_VAR ~16 ] OP2[ ,  IS_CONST (268435324) '%5C' ]
+         30*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~17 ] OP2[  IS_UNUSED  ]
+         31*       < 60> DO_FCALL                                      0   RES[  IS_VAR $18 ]      OP1[  IS_UNUSED  ]
+         32*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~19 ]      OP1[  IS_TMP_VAR ~11 ] OP2[ ,  IS_VAR $18 ]
+         33*       < 22> ASSIGN                                                    OP1[  IS_CV !4 ] OP2[ ,  IS_TMP_VAR ~19 ]
+  136    34*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         35*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~21 ]      OP1[  IS_CV !1 ] OP2[ , ->41 ]
+         36*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435311) 'Symfony%5CComponent%5CCache%5CTraits%5Cis_dir' ]
+         37*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !4 ] OP2[  IS_UNUSED  ]
+         38*       < 60> DO_FCALL                                      0   RES[  IS_VAR $22 ]      OP1[  IS_UNUSED  ]
+         39*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~23 ]      OP1[  IS_VAR $22 ]
+         40*       < 52> BOOL                                              RES[  IS_TMP_VAR ~21 ]      OP1[  IS_TMP_VAR ~23 ]
+         41*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~21 ] OP2[ , ->50 ]
+  137    42*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         43*       < 57> BEGIN_SILENCE                                     RES[  IS_TMP_VAR ~24 ]      OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         44*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435298) 'Symfony%5CComponent%5CCache%5CTraits%5Cmkdir' ]
+         45*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !4 ] OP2[  IS_UNUSED  ]
+         46*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435297) 511 ] OP2[  IS_UNUSED  ]
+         47*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435296) <true> ] OP2[  IS_UNUSED  ]
+         48*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         49*       < 58> END_SILENCE                                               OP1[  IS_TMP_VAR ~24 ] OP2[  IS_UNUSED  ]
+  140    50*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         51*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435289) 'Symfony%5CComponent%5CCache%5CTraits%5Csubstr' ]
+         52*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         53*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435288) 2 ] OP2[  IS_UNUSED  ]
+         54*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435287) 20 ] OP2[  IS_UNUSED  ]
+         55*       < 60> DO_FCALL                                      0   RES[  IS_VAR $26 ]      OP1[  IS_UNUSED  ]
+         56*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~27 ]      OP1[  IS_CV !4 ] OP2[ ,  IS_VAR $26 ]
+         57*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~27 ]
+  141    58*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         59*       < 62> RETURN                                                    OP1[  IS_CONST (268435278) null ]
+
+End of function getfile
+
+Function getfilekey:
+[+]Function Source Class Name: Symfony\Component\Cache\Traits\FilesystemCommonTrait
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:string
+
+[*]ArgInfoNo**0**
+[*]name:file
+[*]type:string
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\symfony\cache\Traits\FilesystemCommonTrait.php
+function name:  getFileKey
+number of ops:  6
+compiled vars:  !0 = $file
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  143     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  145     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 62> RETURN                                                    OP1[  IS_CONST (268435450) '' ]
+  146     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          5*       < 62> RETURN                                                    OP1[  IS_CONST (268435445) null ]
+
+End of function getfilekey
+
+Function scanhashdir:
+[+]Function Source Class Name: Symfony\Component\Cache\Traits\FilesystemCommonTrait
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:Generator
+
+[*]ArgInfoNo**0**
+[*]name:directory
+[*]type:string
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\symfony\cache\Traits\FilesystemCommonTrait.php
+function name:  scanHashDir
+number of ops:  75
+compiled vars:  !0 = $directory, !1 = $chars, !2 = $i, !3 = $j, !4 = $dir, !5 = $file
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  148     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       <139> GENERATOR_CREATE                                          OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+  150     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435385) 'Symfony%5CComponent%5CCache%5CTraits%5Cis_dir' ]
+          4*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          5*       < 60> DO_FCALL                                      0   RES[  IS_VAR $6 ]       OP1[  IS_UNUSED  ]
+          6*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~7 ]       OP1[  IS_VAR $6 ]
+          7*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~7 ] OP2[ , ->10 ]
+  151     8*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          9*       <161> GENERATOR_RETURN                                         
+  154    10*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         11*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435373) '%2B-ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789' ]
+  156    12*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         13*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435370) 0 ]
+         14*       < 42> JMP                                                       OP1[ ->70 ]
+  157    15*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         16*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435365) 'Symfony%5CComponent%5CCache%5CTraits%5Cis_dir' ]
+         17*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~10 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CV !2 ]
+         18*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~11 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_TMP_VAR ~10 ]
+         19*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~11 ] OP2[  IS_UNUSED  ]
+         20*       < 60> DO_FCALL                                      0   RES[  IS_VAR $12 ]      OP1[  IS_UNUSED  ]
+         21*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~13 ]      OP1[  IS_VAR $12 ]
+         22*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~13 ] OP2[ , ->25 ]
+  158    23*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         24*       < 42> JMP                                                       OP1[ ->69 ]
+  161    25*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         26*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435348) 0 ]
+         27*       < 42> JMP                                                       OP1[ ->66 ]
+  162    28*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         29*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435343) 'Symfony%5CComponent%5CCache%5CTraits%5Cis_dir' ]
+         30*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~15 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CV !2 ]
+         31*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~16 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_TMP_VAR ~15 ]
+         32*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~17 ]      OP1[  IS_TMP_VAR ~16 ] OP2[ ,  IS_CONST (268435340) '%5C' ]
+         33*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~18 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CV !3 ]
+         34*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~19 ]      OP1[  IS_TMP_VAR ~17 ] OP2[ ,  IS_TMP_VAR ~18 ]
+         35*       < 22> ASSIGN                                            RES[  IS_TMP_VAR ~20 ]      OP1[  IS_CV !4 ] OP2[ ,  IS_TMP_VAR ~19 ]
+         36*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~20 ] OP2[  IS_UNUSED  ]
+         37*       < 60> DO_FCALL                                      0   RES[  IS_VAR $21 ]      OP1[  IS_UNUSED  ]
+         38*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~22 ]      OP1[  IS_VAR $21 ]
+         39*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~22 ] OP2[ , ->42 ]
+  163    40*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         41*       < 42> JMP                                                       OP1[ ->65 ]
+  166    42*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         43*       < 57> BEGIN_SILENCE                                     RES[  IS_TMP_VAR ~23 ]      OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         44*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435317) 'Symfony%5CComponent%5CCache%5CTraits%5Cscandir' ]
+         45*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !4 ] OP2[  IS_UNUSED  ]
+         46*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435316) 2 ] OP2[  IS_UNUSED  ]
+         47*       < 60> DO_FCALL                                      0   RES[  IS_VAR $24 ]      OP1[  IS_UNUSED  ]
+         48*       < 58> END_SILENCE                                               OP1[  IS_TMP_VAR ~23 ] OP2[  IS_UNUSED  ]
+         49*       <152> JMP_SET                                           RES[  IS_TMP_VAR ~25 ]      OP1[  IS_VAR $24 ] OP2[ , ->51 ]
+         50*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~25 ]      OP1[  IS_CONST (268435309) <array> ]
+         51*       < 77> FE_RESET_R                                        RES[  IS_VAR $26 ]      OP1[  IS_TMP_VAR ~25 ] OP2[ , ->64 ]
+         52*       < 78> FE_FETCH_R                                                OP1[  IS_VAR $26 ] OP2[ ,  IS_CV !5 ] EXT_JMP_REL[ , ->64 ]
+  167    53*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         54*       < 17> IS_NOT_IDENTICAL                                  RES[  IS_TMP_VAR ~27 ]      OP1[  IS_CV !5 ] OP2[ ,  IS_CONST (268435302) '.' ]
+         55*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~27 ]      OP1[  IS_TMP_VAR ~27 ] OP2[ , ->58 ]
+         56*       < 17> IS_NOT_IDENTICAL                                  RES[  IS_TMP_VAR ~28 ]      OP1[  IS_CV !5 ] OP2[ ,  IS_CONST (268435299) '..' ]
+         57*       < 52> BOOL                                              RES[  IS_TMP_VAR ~27 ]      OP1[  IS_TMP_VAR ~28 ]
+         58*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~27 ] OP2[ , ->63 ]
+  168    59*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         60*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~29 ]      OP1[  IS_CV !4 ] OP2[ ,  IS_CONST (268435292) '%5C' ]
+         61*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~30 ]      OP1[  IS_TMP_VAR ~29 ] OP2[ ,  IS_CV !5 ]
+         62*       <160> YIELD                                                     OP1[  IS_TMP_VAR ~30 ] OP2[  IS_UNUSED  ]
+  166    63*       < 42> JMP                                                       OP1[ ->52 ]
+         64*       <127> FE_FREE                                                   OP1[  IS_VAR $26 ] OP2[  IS_UNUSED  ]
+  161    65*       < 34> PRE_INC                                                   OP1[  IS_CV !3 ]
+         66*       < 20> IS_SMALLER                                        RES[  IS_TMP_VAR ~33 ]      OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435281) 38 ]
+         67*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         68*       < 44> JMPNZ                                                     OP1[  IS_TMP_VAR ~33 ] OP2[ , ->28 ]
+  156    69*       < 34> PRE_INC                                                   OP1[  IS_CV !2 ]
+         70*       < 20> IS_SMALLER                                        RES[  IS_TMP_VAR ~35 ]      OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435274) 38 ]
+         71*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         72*       < 44> JMPNZ                                                     OP1[  IS_TMP_VAR ~35 ] OP2[ , ->15 ]
+  173    73*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         74*       <161> GENERATOR_RETURN                                         
+
+End of function scanhashdir
+
+Function throwerror:
+[+]Function Source Class Name: Symfony\Component\Cache\Traits\FilesystemCommonTrait
+[*]Start of arg_info extract:
+[*]arg_info num_args:4
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:type
+[*]type:int
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:message
+[*]type:string
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**2**
+[*]name:file
+[*]type:string
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**3**
+[*]name:line
+[*]type:int
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\symfony\cache\Traits\FilesystemCommonTrait.php
+function name:  throwError
+number of ops:  15
+compiled vars:  !0 = $type, !1 = $message, !2 = $file, !3 = $line
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  178     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 63> RECV                                              RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ]
+          2*       < 63> RECV                                              RES[  IS_CV !2 ]       OP1[  IS_UNUSED  ]
+          3*       < 63> RECV                                              RES[  IS_CV !3 ]       OP1[  IS_UNUSED  ]
+  180     4*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          5*       < 68> NEW                                               RES[  IS_VAR $4 ]       OP1[ 'ErrorException' ]
+          6*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+          7*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435440) 0 ] OP2[  IS_UNUSED  ]
+          8*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          9*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         10*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         11*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         12*       <108> THROW                                         0           OP1[  IS_VAR $4 ] OP2[  IS_UNUSED  ]
+  181    13*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         14*       < 62> RETURN                                                    OP1[  IS_CONST (268435427) null ]
+
+End of function throwerror
+
+Function __sleep:
+[+]Function Source Class Name: Symfony\Component\Cache\Traits\FilesystemCommonTrait
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\symfony\cache\Traits\FilesystemCommonTrait.php
+function name:  __sleep
+number of ops:  9
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  188     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 68> NEW                                               RES[  IS_VAR $0 ]       OP1[ 'BadMethodCallException' ]
+          2*       <157> FETCH_CLASS_NAME                                  RES[  IS_TMP_VAR ~1 ]       OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~2 ]       OP1[  IS_CONST (268435445) 'Cannot+serialize+' ] OP2[ ,  IS_TMP_VAR ~1 ]
+          4*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~2 ] OP2[  IS_UNUSED  ]
+          5*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+          6*       <108> THROW                                         0           OP1[  IS_VAR $0 ] OP2[  IS_UNUSED  ]
+  189     7*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          8*       < 62> RETURN                                                    OP1[  IS_CONST (268435436) null ]
+
+End of function __sleep
+
+Function __wakeup:
+[+]Function Source Class Name: Symfony\Component\Cache\Traits\FilesystemCommonTrait
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\symfony\cache\Traits\FilesystemCommonTrait.php
+function name:  __wakeup
+number of ops:  9
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  193     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 68> NEW                                               RES[  IS_VAR $0 ]       OP1[ 'BadMethodCallException' ]
+          2*       <157> FETCH_CLASS_NAME                                  RES[  IS_TMP_VAR ~1 ]       OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~2 ]       OP1[  IS_CONST (268435445) 'Cannot+unserialize+' ] OP2[ ,  IS_TMP_VAR ~1 ]
+          4*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~2 ] OP2[  IS_UNUSED  ]
+          5*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+          6*       <108> THROW                                         0           OP1[  IS_VAR $0 ] OP2[  IS_UNUSED  ]
+  194     7*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          8*       < 62> RETURN                                                    OP1[  IS_CONST (268435436) null ]
+
+End of function __wakeup
+
+Function __destruct:
+[+]Function Source Class Name: Symfony\Component\Cache\Traits\FilesystemCommonTrait
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\symfony\cache\Traits\FilesystemCommonTrait.php
+function name:  __destruct
+number of ops:  29
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  198     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435413) 'Symfony%5CComponent%5CCache%5CTraits%5Cmethod_exists' ]
+          2*       <157> FETCH_CLASS_NAME                                  RES[  IS_TMP_VAR ~0 ]       OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~0 ] OP2[  IS_UNUSED  ]
+          4*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435410) '__destruct' ] OP2[  IS_UNUSED  ]
+          5*       < 60> DO_FCALL                                      0   RES[  IS_VAR $1 ]       OP1[  IS_UNUSED  ]
+          6*       < 43> JMPZ                                                      OP1[  IS_VAR $1 ] OP2[ , ->10 ]
+  199     7*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          8*       <113> INIT_STATIC_METHOD_CALL      parent                       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435403) '__destruct' ]
+          9*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  201    10*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         11*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~3 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435399) 'tmp' ]
+         12*       <123> TYPE_CHECK                                  1020   RES[  IS_TMP_VAR ~4 ]       OP1[  IS_TMP_VAR ~3 ] OP2[  IS_UNUSED  ]
+         13*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~4 ]       OP1[  IS_TMP_VAR ~4 ] OP2[ , ->20 ]
+         14*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435394) 'Symfony%5CComponent%5CCache%5CTraits%5Cis_file' ]
+         15*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         16*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $5 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435393) 'tmp' ]
+         17*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $5 ] OP2[  IS_UNUSED  ]
+         18*       < 60> DO_FCALL                                      0   RES[  IS_VAR $6 ]       OP1[  IS_UNUSED  ]
+         19*       < 52> BOOL                                              RES[  IS_TMP_VAR ~4 ]       OP1[  IS_VAR $6 ]
+         20*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~4 ] OP2[ , ->27 ]
+  202    21*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         22*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435382) 'Symfony%5CComponent%5CCache%5CTraits%5Cunlink' ]
+         23*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         24*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $7 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435381) 'tmp' ]
+         25*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $7 ] OP2[  IS_UNUSED  ]
+         26*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  204    27*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         28*       < 62> RETURN                                                    OP1[  IS_CONST (268435374) null ]
+
+End of function __destruct
+
+End of class Symfony\Component\Cache\Traits\FilesystemCommonTrait.
+

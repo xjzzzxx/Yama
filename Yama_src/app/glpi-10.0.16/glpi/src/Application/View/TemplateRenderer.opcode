@@ -1,0 +1,495 @@
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\Application\View\TemplateRenderer.php
+function name:  (null)
+number of ops:  24
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   36     0*       <  0> NOP                                                      
+   38     1*       <  0> NOP                                                      
+   39     2*       <  0> NOP                                                      
+   40     3*       <  0> NOP                                                      
+   41     4*       <  0> NOP                                                      
+   42     5*       <  0> NOP                                                      
+   43     6*       <  0> NOP                                                      
+   44     7*       <  0> NOP                                                      
+   45     8*       <  0> NOP                                                      
+   46     9*       <  0> NOP                                                      
+   47    10*       <  0> NOP                                                      
+   48    11*       <  0> NOP                                                      
+   49    12*       <  0> NOP                                                      
+   50    13*       <  0> NOP                                                      
+   51    14*       <  0> NOP                                                      
+   52    15*       <  0> NOP                                                      
+   53    16*       <  0> NOP                                                      
+   54    17*       <  0> NOP                                                      
+   55    18*       <  0> NOP                                                      
+   56    19*       <  0> NOP                                                      
+   57    20*       <  0> NOP                                                      
+   58    21*       <  0> NOP                                                      
+  192    22*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         23*       < 62> RETURN                                                    OP1[  IS_CONST (268435409) 1 ]
+
+Class Glpi\Application\View\TemplateRenderer:
+[+]Class Parent Name: NULL
+End Trait extract
+Start Properties extract:
+Key: environment, Value: UNINIT, Type: Normal
+End Properties extract.
+
+Function __construct:
+[+]Function Source Class Name: Glpi\Application\View\TemplateRenderer
+[*]Start of arg_info extract:
+[*]arg_info num_args:2
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:rootdir
+[*]type:string
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:cachedir
+[*]type:string
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\Application\View\TemplateRenderer.php
+function name:  __construct
+number of ops:  215
+compiled vars:  !0 = $rootdir, !1 = $cachedir, !2 = $loader, !3 = $active_plugins, !4 = $plugin_key, !5 = $env_params, !6 = $tpl_cachedir
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   70     0*       < 64> RECV_INIT                                         RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435310) <const ast> ]
+          1*       < 64> RECV_INIT                                         RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435309) <const ast> ]
+   72     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       < 68> NEW                                               RES[  IS_VAR $7 ]       OP1[ 'Twig%5CLoader%5CFilesystemLoader' ]
+          4*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~8 ]       OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435306) '%2Ftemplates' ]
+          5*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~8 ] OP2[  IS_UNUSED  ]
+          6*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          7*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+          8*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_VAR $7 ]
+   74     9*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         10*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435295) 'Plugin' ] OP2[ ,  IS_CONST (268435297) 'getPlugins' ]
+         11*       < 60> DO_FCALL                                      0   RES[  IS_VAR $11 ]      OP1[  IS_UNUSED  ]
+         12*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_VAR $11 ]
+   75    13*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         14*       < 77> FE_RESET_R                                        RES[  IS_VAR $13 ]      OP1[  IS_CV !3 ] OP2[ , ->26 ]
+         15*       < 78> FE_FETCH_R                                                OP1[  IS_VAR $13 ] OP2[ ,  IS_CV !4 ] EXT_JMP_REL[ , ->26 ]
+   79    16*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         17*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435285) 'addPath' ]
+         18*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435285) 'Plugin' ] OP2[ ,  IS_CONST (268435287) 'getPhpDir' ]
+         19*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~14 ]      OP1[  IS_CV !4 ] OP2[ ,  IS_CONST (268435287) '%2Ftemplates' ]
+         20*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~14 ] OP2[  IS_UNUSED  ]
+         21*       < 60> DO_FCALL                                      0   RES[  IS_VAR $15 ]      OP1[  IS_UNUSED  ]
+         22*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $15 ] OP2[  IS_UNUSED  ]
+         23*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !4 ] OP2[  IS_UNUSED  ]
+         24*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+   75    25*       < 42> JMP                                                       OP1[ ->15 ]
+         26*       <127> FE_FREE                                                   OP1[  IS_VAR $13 ] OP2[  IS_UNUSED  ]
+   83    27*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         28*       < 89> FETCH_IS                                          RES[  IS_TMP_VAR ~17 ]      OP1[  IS_CONST (268435270) '_SESSION' ] OP2[  IS_UNUSED  ]
+         29*       < 90> FETCH_DIM_IS                                      RES[  IS_TMP_VAR ~18 ]      OP1[  IS_TMP_VAR ~17 ] OP2[ ,  IS_CONST (268435269) 'glpi_use_mode' ]
+         30*       <169> COALESCE                                          RES[  IS_TMP_VAR ~19 ]      OP1[  IS_TMP_VAR ~18 ] OP2[ , ->34 ]
+         31*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~20 ]      OP1[  IS_CONST (268435267) 'Session' ] OP2[ ,  IS_CONST (268435266) 'DEBUG_MODE' ]
+         32*       <123> TYPE_CHECK                                    2   RES[  IS_TMP_VAR ~21 ]      OP1[  IS_TMP_VAR ~20 ] OP2[  IS_UNUSED  ]
+         33*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~19 ]      OP1[  IS_TMP_VAR ~21 ]
+         34*       < 71> INIT_ARRAY                                        RES[  IS_TMP_VAR ~22 ]      OP1[  IS_TMP_VAR ~19 ] OP2[ ,  IS_CONST (268435263) 'debug' ]
+         35*       < 72> ADD_ARRAY_ELEMENT                                 RES[  IS_TMP_VAR ~22 ]      OP1[  IS_CONST (268435262) <true> ] OP2[ ,  IS_CONST (268435263) 'auto_reload' ]
+   82    36*       < 22> ASSIGN                                                    OP1[  IS_CV !5 ] OP2[ ,  IS_TMP_VAR ~22 ]
+   87    37*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         38*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~24 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435258) '%2Ftemplates' ]
+         39*       < 22> ASSIGN                                                    OP1[  IS_CV !6 ] OP2[ ,  IS_TMP_VAR ~24 ]
+   89    40*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         41*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435253) 'Glpi%5CApplication%5CView%5Cfile_exists' ]
+         42*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !6 ] OP2[  IS_UNUSED  ]
+         43*       < 60> DO_FCALL                                      0   RES[  IS_VAR $26 ]      OP1[  IS_UNUSED  ]
+         44*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~27 ]      OP1[  IS_VAR $26 ] OP2[ , ->50 ]
+         45*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435248) 'Glpi%5CApplication%5CView%5Cis_writable' ]
+         46*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !6 ] OP2[  IS_UNUSED  ]
+         47*       < 60> DO_FCALL                                      0   RES[  IS_VAR $28 ]      OP1[  IS_UNUSED  ]
+         48*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~29 ]      OP1[  IS_VAR $28 ]
+         49*       < 52> BOOL                                              RES[  IS_TMP_VAR ~27 ]      OP1[  IS_TMP_VAR ~29 ]
+         50*       < 47> JMPNZ_EX                                          RES[  IS_TMP_VAR ~27 ]      OP1[  IS_TMP_VAR ~27 ] OP2[ , ->62 ]
+   90    51*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435239) 'Glpi%5CApplication%5CView%5Cfile_exists' ]
+         52*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !6 ] OP2[  IS_UNUSED  ]
+         53*       < 60> DO_FCALL                                      0   RES[  IS_VAR $30 ]      OP1[  IS_UNUSED  ]
+         54*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~31 ]      OP1[  IS_VAR $30 ]
+         55*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~31 ]      OP1[  IS_TMP_VAR ~31 ] OP2[ , ->61 ]
+         56*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435232) 'Glpi%5CApplication%5CView%5Cis_writable' ]
+         57*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         58*       < 60> DO_FCALL                                      0   RES[  IS_VAR $32 ]      OP1[  IS_UNUSED  ]
+         59*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~33 ]      OP1[  IS_VAR $32 ]
+         60*       < 52> BOOL                                              RES[  IS_TMP_VAR ~31 ]      OP1[  IS_TMP_VAR ~33 ]
+         61*       < 52> BOOL                                              RES[  IS_TMP_VAR ~27 ]      OP1[  IS_TMP_VAR ~31 ]
+         62*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~27 ] OP2[ , ->74 ]
+   92    63*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         64*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435219) 'Glpi%5CApplication%5CView%5Ctrigger_error' ]
+         65*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435220) 'Glpi%5CApplication%5CView%5Csprintf' ]
+         66*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435221) 'Cache+directory+%22%25s%22+is+not+writeable.' ] OP2[  IS_UNUSED  ]
+         67*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !6 ] OP2[  IS_UNUSED  ]
+         68*       < 60> DO_FCALL                                      0   RES[  IS_VAR $34 ]      OP1[  IS_UNUSED  ]
+         69*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $34 ] OP2[  IS_UNUSED  ]
+         70*       < 99> FETCH_CONSTANT                                    RES[  IS_TMP_VAR ~35 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435214) 'Glpi%5CApplication%5CView%5CE_USER_WARNING' ]
+         71*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~35 ] OP2[  IS_UNUSED  ]
+         72*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         73*       < 42> JMP                                                       OP1[ ->77 ]
+   94    74*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         75*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !5 ] OP2[ ,  IS_CONST (268435207) 'cache' ]
+         76*       <137> OP_DATA                                                   OP1[  IS_CV !6 ] OP2[  IS_UNUSED  ]
+   97    77*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         78*       < 68> NEW                                               RES[  IS_VAR $39 ]      OP1[ 'Twig%5CEnvironment' ]
+   98    79*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         80*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !5 ] OP2[  IS_UNUSED  ]
+         81*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+   97    82*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435194) 'environment' ]
+   98    83*       <137> OP_DATA                                                   OP1[  IS_VAR $39 ] OP2[  IS_UNUSED  ]
+  102    84*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         85*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~41 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435191) 'environment' ]
+         86*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~41 ] OP2[ ,  IS_CONST (268435190) 'addExtension' ]
+         87*       < 68> NEW                                               RES[  IS_VAR $42 ]      OP1[ 'Twig%5CExtension%5CDebugExtension' ]
+         88*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         89*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $42 ] OP2[  IS_UNUSED  ]
+         90*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  103    91*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         92*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~45 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435182) 'environment' ]
+         93*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~45 ] OP2[ ,  IS_CONST (268435181) 'addExtension' ]
+         94*       < 68> NEW                                               RES[  IS_VAR $46 ]      OP1[ 'Twig%5CExtra%5CString%5CStringExtension' ]
+         95*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         96*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $46 ] OP2[  IS_UNUSED  ]
+         97*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  105    98*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         99*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~49 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435173) 'environment' ]
+        100*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~49 ] OP2[ ,  IS_CONST (268435172) 'addExtension' ]
+        101*       < 68> NEW                                               RES[  IS_VAR $50 ]      OP1[ 'Glpi%5CApplication%5CView%5CExtension%5CConfigExtension' ]
+        102*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+        103*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $50 ] OP2[  IS_UNUSED  ]
+        104*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  106   105*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        106*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~53 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435164) 'environment' ]
+        107*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~53 ] OP2[ ,  IS_CONST (268435163) 'addExtension' ]
+        108*       < 68> NEW                                               RES[  IS_VAR $54 ]      OP1[ 'Glpi%5CApplication%5CView%5CExtension%5CSecurityExtension' ]
+        109*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+        110*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $54 ] OP2[  IS_UNUSED  ]
+        111*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  107   112*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        113*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~57 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435155) 'environment' ]
+        114*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~57 ] OP2[ ,  IS_CONST (268435154) 'addExtension' ]
+        115*       < 68> NEW                                               RES[  IS_VAR $58 ]      OP1[ 'Glpi%5CApplication%5CView%5CExtension%5CDataHelpersExtension' ]
+        116*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+        117*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $58 ] OP2[  IS_UNUSED  ]
+        118*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  108   119*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        120*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~61 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435146) 'environment' ]
+        121*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~61 ] OP2[ ,  IS_CONST (268435145) 'addExtension' ]
+        122*       < 68> NEW                                               RES[  IS_VAR $62 ]      OP1[ 'Glpi%5CApplication%5CView%5CExtension%5CDocumentExtension' ]
+        123*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+        124*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $62 ] OP2[  IS_UNUSED  ]
+        125*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  109   126*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        127*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~65 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435137) 'environment' ]
+        128*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~65 ] OP2[ ,  IS_CONST (268435136) 'addExtension' ]
+        129*       < 68> NEW                                               RES[  IS_VAR $66 ]      OP1[ 'Glpi%5CApplication%5CView%5CExtension%5CFrontEndAssetsExtension' ]
+        130*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+        131*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $66 ] OP2[  IS_UNUSED  ]
+        132*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  110   133*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        134*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~69 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435128) 'environment' ]
+        135*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~69 ] OP2[ ,  IS_CONST (268435127) 'addExtension' ]
+        136*       < 68> NEW                                               RES[  IS_VAR $70 ]      OP1[ 'Glpi%5CApplication%5CView%5CExtension%5CI18nExtension' ]
+        137*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+        138*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $70 ] OP2[  IS_UNUSED  ]
+        139*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  111   140*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        141*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~73 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435119) 'environment' ]
+        142*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~73 ] OP2[ ,  IS_CONST (268435118) 'addExtension' ]
+        143*       < 68> NEW                                               RES[  IS_VAR $74 ]      OP1[ 'Glpi%5CApplication%5CView%5CExtension%5CItemtypeExtension' ]
+        144*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+        145*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $74 ] OP2[  IS_UNUSED  ]
+        146*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  112   147*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        148*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~77 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435110) 'environment' ]
+        149*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~77 ] OP2[ ,  IS_CONST (268435109) 'addExtension' ]
+        150*       < 68> NEW                                               RES[  IS_VAR $78 ]      OP1[ 'Glpi%5CApplication%5CView%5CExtension%5CPhpExtension' ]
+        151*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+        152*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $78 ] OP2[  IS_UNUSED  ]
+        153*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  113   154*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        155*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~81 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435101) 'environment' ]
+        156*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~81 ] OP2[ ,  IS_CONST (268435100) 'addExtension' ]
+        157*       < 68> NEW                                               RES[  IS_VAR $82 ]      OP1[ 'Glpi%5CApplication%5CView%5CExtension%5CPluginExtension' ]
+        158*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+        159*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $82 ] OP2[  IS_UNUSED  ]
+        160*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  114   161*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        162*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~85 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435092) 'environment' ]
+        163*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~85 ] OP2[ ,  IS_CONST (268435091) 'addExtension' ]
+        164*       < 68> NEW                                               RES[  IS_VAR $86 ]      OP1[ 'Glpi%5CApplication%5CView%5CExtension%5CRoutingExtension' ]
+        165*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+        166*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $86 ] OP2[  IS_UNUSED  ]
+        167*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  115   168*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        169*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~89 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435083) 'environment' ]
+        170*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~89 ] OP2[ ,  IS_CONST (268435082) 'addExtension' ]
+        171*       < 68> NEW                                               RES[  IS_VAR $90 ]      OP1[ 'Glpi%5CApplication%5CView%5CExtension%5CSearchExtension' ]
+        172*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+        173*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $90 ] OP2[  IS_UNUSED  ]
+        174*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  116   175*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        176*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~93 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435074) 'environment' ]
+        177*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~93 ] OP2[ ,  IS_CONST (268435073) 'addExtension' ]
+        178*       < 68> NEW                                               RES[  IS_VAR $94 ]      OP1[ 'Glpi%5CApplication%5CView%5CExtension%5CSessionExtension' ]
+        179*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+        180*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $94 ] OP2[  IS_UNUSED  ]
+        181*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  117   182*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        183*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~97 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435065) 'environment' ]
+        184*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~97 ] OP2[ ,  IS_CONST (268435064) 'addExtension' ]
+        185*       < 68> NEW                                               RES[  IS_VAR $98 ]      OP1[ 'Glpi%5CApplication%5CView%5CExtension%5CTeamExtension' ]
+        186*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+        187*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $98 ] OP2[  IS_UNUSED  ]
+        188*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  120   189*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        190*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~101 ]     OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435056) 'environment' ]
+        191*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~101 ] OP2[ ,  IS_CONST (268435055) 'addGlobal' ]
+        192*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435055) '_post' ] OP2[  IS_UNUSED  ]
+        193*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        194*       < 92> FETCH_FUNC_ARG               global               RES[  IS_VAR $102 ]     OP1[  IS_CONST (268435052) '_POST' ]
+        195*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $102 ] OP2[  IS_UNUSED  ]
+        196*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  121   197*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        198*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~104 ]     OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435045) 'environment' ]
+        199*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~104 ] OP2[ ,  IS_CONST (268435044) 'addGlobal' ]
+        200*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435044) '_get' ] OP2[  IS_UNUSED  ]
+        201*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        202*       < 92> FETCH_FUNC_ARG               global               RES[  IS_VAR $105 ]     OP1[  IS_CONST (268435041) '_GET' ]
+        203*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $105 ] OP2[  IS_UNUSED  ]
+        204*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  122   205*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        206*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~107 ]     OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435034) 'environment' ]
+        207*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~107 ] OP2[ ,  IS_CONST (268435033) 'addGlobal' ]
+        208*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435033) '_request' ] OP2[  IS_UNUSED  ]
+        209*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        210*       < 92> FETCH_FUNC_ARG               global               RES[  IS_VAR $108 ]     OP1[  IS_CONST (268435030) '_REQUEST' ]
+        211*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $108 ] OP2[  IS_UNUSED  ]
+        212*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  123   213*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        214*       < 62> RETURN                                                    OP1[  IS_CONST (268435023) null ]
+
+End of function __construct
+
+Function getinstance:
+[+]Function Source Class Name: Glpi\Application\View\TemplateRenderer
+[*]Start of arg_info extract:
+[*]arg_info num_args:0
+[*]Function return type:Glpi\Application\View\TemplateRenderer
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]Key: instance, Value: NULL, Type: 1
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\Application\View\TemplateRenderer.php
+function name:  getInstance
+number of ops:  15
+compiled vars:  !0 = $instance
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  132     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       <183> BIND_STATIC                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+  134     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       <123> TYPE_CHECK                                    2   RES[  IS_TMP_VAR ~1 ]       OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          4*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~1 ] OP2[ , ->9 ]
+  135     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       < 68> NEW                          self                 RES[  IS_VAR $2 ]      
+          7*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+          8*       < 22> ASSIGN                                                    OP1[  IS_CV !0 ] OP2[ ,  IS_VAR $2 ]
+  138     9*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         10*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         11*       < 62> RETURN                                                    OP1[  IS_CV !0 ]
+  139    12*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         13*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         14*       < 62> RETURN                                                    OP1[  IS_CONST (268435427) null ]
+
+End of function getinstance
+
+Function getenvironment:
+[+]Function Source Class Name: Glpi\Application\View\TemplateRenderer
+[*]Start of arg_info extract:
+[*]arg_info num_args:0
+[*]Function return type:Twig\Environment
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\Application\View\TemplateRenderer.php
+function name:  getEnvironment
+number of ops:  7
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  148     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435452) 'environment' ]
+          2*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_TMP_VAR ~0 ] OP2[  IS_UNUSED  ]
+          3*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~0 ]
+  149     4*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          5*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       < 62> RETURN                                                    OP1[  IS_CONST (268435443) null ]
+
+End of function getenvironment
+
+Function render:
+[+]Function Source Class Name: Glpi\Application\View\TemplateRenderer
+[*]Start of arg_info extract:
+[*]arg_info num_args:2
+[*]Function return type:string
+
+[*]ArgInfoNo**0**
+[*]name:template
+[*]type:string
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:variables
+[*]type:array
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\Application\View\TemplateRenderer.php
+function name:  render
+number of ops:  44
+compiled vars:  !0 = $template, !1 = $variables, !2 = $e
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  159     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 64> RECV_INIT                                         RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435419) <array> ]
+  161     2*       <  0> NOP                                                      
+  162     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435414) 'Glpi%5CDebug%5CProfiler' ] OP2[ ,  IS_CONST (268435416) 'getInstance' ]
+          5*       < 60> DO_FCALL                                      0   RES[  IS_VAR $4 ]       OP1[  IS_UNUSED  ]
+          6*       <112> INIT_METHOD_CALL                                          OP1[  IS_VAR $4 ] OP2[ ,  IS_CONST (268435414) 'start' ]
+          7*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          8*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~5 ]       OP1[  IS_CONST (268435413) 'Glpi%5CDebug%5CProfiler' ] OP2[ ,  IS_CONST (268435412) 'CATEGORY_TWIG' ]
+          9*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~5 ] OP2[  IS_UNUSED  ]
+         10*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  163    11*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         12*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~7 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435407) 'environment' ]
+         13*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~7 ] OP2[ ,  IS_CONST (268435406) 'load' ]
+         14*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         15*       < 60> DO_FCALL                                      0   RES[  IS_VAR $8 ]       OP1[  IS_UNUSED  ]
+         16*       <112> INIT_METHOD_CALL                                          OP1[  IS_VAR $8 ] OP2[ ,  IS_CONST (268435402) 'render' ]
+         17*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         18*       < 60> DO_FCALL                                      0   RES[  IS_VAR $9 ]       OP1[  IS_UNUSED  ]
+         19*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_VAR $9 ] OP2[  IS_UNUSED  ]
+         20*       <162> FAST_CALL                                                 OP1[ ->32 ]
+         21*       < 62> RETURN                                                    OP1[  IS_VAR $9 ]
+         22*       < 42> JMP                                                       OP1[ ->30 ]
+  164    23*       <107> CATCH                                       last  RES[  IS_CV !2 ]       OP1[  IS_CONST (268435390) 'Twig%5CError%5CError' ]
+  165    24*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         25*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435388) 'Glpi%5CApplication%5CErrorHandler' ] OP2[ ,  IS_CONST (268435390) 'getInstance' ]
+         26*       < 60> DO_FCALL                                      0   RES[  IS_VAR $10 ]      OP1[  IS_UNUSED  ]
+         27*       <112> INIT_METHOD_CALL                                          OP1[  IS_VAR $10 ] OP2[ ,  IS_CONST (268435388) 'handleTwigError' ]
+         28*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         29*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  166    30*       <162> FAST_CALL                                                 OP1[ ->32 ]
+         31*       < 42> JMP                                                       OP1[ ->39 ]
+  167    32*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         33*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435378) 'Glpi%5CDebug%5CProfiler' ] OP2[ ,  IS_CONST (268435380) 'getInstance' ]
+         34*       < 60> DO_FCALL                                      0   RES[  IS_VAR $12 ]      OP1[  IS_UNUSED  ]
+         35*       <112> INIT_METHOD_CALL                                          OP1[  IS_VAR $12 ] OP2[ ,  IS_CONST (268435378) 'stop' ]
+         36*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         37*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         38*       <163> FAST_RET                                                 
+  169    39*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         40*       < 62> RETURN                                                    OP1[  IS_CONST (268435370) '' ]
+  170    41*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         42*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         43*       < 62> RETURN                                                    OP1[  IS_CONST (268435365) null ]
+
+End of function render
+
+Function display:
+[+]Function Source Class Name: Glpi\Application\View\TemplateRenderer
+[*]Start of arg_info extract:
+[*]arg_info num_args:2
+[*]Function return type:void
+
+[*]ArgInfoNo**0**
+[*]name:template
+[*]type:string
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:variables
+[*]type:array
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\Application\View\TemplateRenderer.php
+function name:  display
+number of ops:  38
+compiled vars:  !0 = $template, !1 = $variables, !2 = $e
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  180     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 64> RECV_INIT                                         RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435424) <array> ]
+  182     2*       <  0> NOP                                                      
+  183     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435419) 'Glpi%5CDebug%5CProfiler' ] OP2[ ,  IS_CONST (268435421) 'getInstance' ]
+          5*       < 60> DO_FCALL                                      0   RES[  IS_VAR $4 ]       OP1[  IS_UNUSED  ]
+          6*       <112> INIT_METHOD_CALL                                          OP1[  IS_VAR $4 ] OP2[ ,  IS_CONST (268435419) 'start' ]
+          7*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          8*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~5 ]       OP1[  IS_CONST (268435418) 'Glpi%5CDebug%5CProfiler' ] OP2[ ,  IS_CONST (268435417) 'CATEGORY_TWIG' ]
+          9*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~5 ] OP2[  IS_UNUSED  ]
+         10*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  184    11*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         12*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~7 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435412) 'environment' ]
+         13*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~7 ] OP2[ ,  IS_CONST (268435411) 'load' ]
+         14*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         15*       < 60> DO_FCALL                                      0   RES[  IS_VAR $8 ]       OP1[  IS_UNUSED  ]
+         16*       <112> INIT_METHOD_CALL                                          OP1[  IS_VAR $8 ] OP2[ ,  IS_CONST (268435407) 'display' ]
+         17*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         18*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         19*       < 42> JMP                                                       OP1[ ->27 ]
+  185    20*       <107> CATCH                                       last  RES[  IS_CV !2 ]       OP1[  IS_CONST (268435401) 'Twig%5CError%5CError' ]
+  186    21*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         22*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435399) 'Glpi%5CApplication%5CErrorHandler' ] OP2[ ,  IS_CONST (268435401) 'getInstance' ]
+         23*       < 60> DO_FCALL                                      0   RES[  IS_VAR $10 ]      OP1[  IS_UNUSED  ]
+         24*       <112> INIT_METHOD_CALL                                          OP1[  IS_VAR $10 ] OP2[ ,  IS_CONST (268435399) 'handleTwigError' ]
+         25*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         26*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  187    27*       <162> FAST_CALL                                                 OP1[ ->29 ]
+         28*       < 42> JMP                                                       OP1[ ->36 ]
+  188    29*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         30*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435389) 'Glpi%5CDebug%5CProfiler' ] OP2[ ,  IS_CONST (268435391) 'getInstance' ]
+         31*       < 60> DO_FCALL                                      0   RES[  IS_VAR $12 ]      OP1[  IS_UNUSED  ]
+         32*       <112> INIT_METHOD_CALL                                          OP1[  IS_VAR $12 ] OP2[ ,  IS_CONST (268435389) 'stop' ]
+         33*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         34*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         35*       <163> FAST_RET                                                 
+  190    36*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         37*       < 62> RETURN                                                    OP1[  IS_CONST (268435381) null ]
+
+End of function display
+
+End of class Glpi\Application\View\TemplateRenderer.
+

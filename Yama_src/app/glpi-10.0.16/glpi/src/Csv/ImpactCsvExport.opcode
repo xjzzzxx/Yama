@@ -1,0 +1,256 @@
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\Csv\ImpactCsvExport.php
+function name:  (null)
+number of ops:  8
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   36     0*       <  0> NOP                                                      
+   38     1*       <  0> NOP                                                      
+   39     2*       <  0> NOP                                                      
+   40     3*       <  0> NOP                                                      
+   41     4*       <  0> NOP                                                      
+   43     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       <144> DECLARE_CLASS                                             OP1[  IS_CONST (268435441) 'glpi%5Ccsv%5Cimpactcsvexport' ] OP2[  IS_UNUSED  ]
+  119     7*       < 62> RETURN                                                    OP1[  IS_CONST (268435441) 1 ]
+
+Class Glpi\Csv\ImpactCsvExport:
+[+]Class Parent Name: NULL
+End Trait extract
+Start Properties extract:
+Key: item, Value: UNINIT, Type: Normal
+End Properties extract.
+
+Function __construct:
+[+]Function Source Class Name: Glpi\Csv\ImpactCsvExport
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:item
+[*]type:CommonDBTM
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\Csv\ImpactCsvExport.php
+function name:  __construct
+number of ops:  6
+compiled vars:  !0 = $item
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   48     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+   50     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435450) 'item' ]
+          3*       <137> OP_DATA                                                   OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+   51     4*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          5*       < 62> RETURN                                                    OP1[  IS_CONST (268435445) null ]
+
+End of function __construct
+
+Function getfilename:
+[+]Function Source Class Name: Glpi\Csv\ImpactCsvExport
+[*]Start of arg_info extract:
+[*]arg_info num_args:0
+[*]Function return type:string
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\Csv\ImpactCsvExport.php
+function name:  getFileName
+number of ops:  11
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   55     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435449) 'item' ]
+          2*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~1 ]       OP1[  IS_TMP_VAR ~0 ] OP2[ ,  IS_CONST (268435448) 'fields' ]
+          3*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~2 ]       OP1[  IS_TMP_VAR ~1 ] OP2[ ,  IS_CONST (268435447) 'name' ]
+          4*       <  0> NOP                                                      
+          5*       < 53> FAST_CONCAT                                       RES[  IS_TMP_VAR ~3 ]       OP1[  IS_TMP_VAR ~2 ] OP2[ ,  IS_CONST (268435444) '.csv' ]
+          6*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_TMP_VAR ~3 ] OP2[  IS_UNUSED  ]
+          7*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~3 ]
+   56     8*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          9*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         10*       < 62> RETURN                                                    OP1[  IS_CONST (268435435) null ]
+
+End of function getfilename
+
+Function getfileheader:
+[+]Function Source Class Name: Glpi\Csv\ImpactCsvExport
+[*]Start of arg_info extract:
+[*]arg_info num_args:0
+[*]Function return type:array
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\Csv\ImpactCsvExport.php
+function name:  getFileHeader
+number of ops:  22
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   61     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435437) 'Glpi%5CCsv%5C__' ]
+          2*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435438) 'Relation' ] OP2[  IS_UNUSED  ]
+          3*       < 60> DO_FCALL                                      0   RES[  IS_VAR $0 ]       OP1[  IS_UNUSED  ]
+          4*       < 71> INIT_ARRAY                                        RES[  IS_TMP_VAR ~1 ]       OP1[  IS_VAR $0 ] OP2[  IS_UNUSED  ]
+   62     5*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435433) 'Glpi%5CCsv%5C__' ]
+          6*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435434) 'Itemtype' ] OP2[  IS_UNUSED  ]
+          7*       < 60> DO_FCALL                                      0   RES[  IS_VAR $2 ]       OP1[  IS_UNUSED  ]
+          8*       < 72> ADD_ARRAY_ELEMENT                                 RES[  IS_TMP_VAR ~1 ]       OP1[  IS_VAR $2 ] OP2[  IS_UNUSED  ]
+   63     9*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435429) 'Glpi%5CCsv%5C__' ]
+         10*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435430) 'Id' ] OP2[  IS_UNUSED  ]
+         11*       < 60> DO_FCALL                                      0   RES[  IS_VAR $3 ]       OP1[  IS_UNUSED  ]
+         12*       < 72> ADD_ARRAY_ELEMENT                                 RES[  IS_TMP_VAR ~1 ]       OP1[  IS_VAR $3 ] OP2[  IS_UNUSED  ]
+   64    13*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435425) 'Glpi%5CCsv%5C__' ]
+         14*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435426) 'Name' ] OP2[  IS_UNUSED  ]
+         15*       < 60> DO_FCALL                                      0   RES[  IS_VAR $4 ]       OP1[  IS_UNUSED  ]
+         16*       < 72> ADD_ARRAY_ELEMENT                                 RES[  IS_TMP_VAR ~1 ]       OP1[  IS_VAR $4 ] OP2[  IS_UNUSED  ]
+         17*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_TMP_VAR ~1 ] OP2[  IS_UNUSED  ]
+         18*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~1 ]
+   66    19*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         20*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         21*       < 62> RETURN                                                    OP1[  IS_CONST (268435413) null ]
+
+End of function getfileheader
+
+Function getfilecontent:
+[+]Function Source Class Name: Glpi\Csv\ImpactCsvExport
+[*]Start of arg_info extract:
+[*]arg_info num_args:0
+[*]Function return type:array
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\Csv\ImpactCsvExport.php
+function name:  getFileContent
+number of ops:  107
+compiled vars:  !0 = $content, !1 = $graph, !2 = $impact_item, !3 = $impact_context, !4 = $max_depth, !5 = $data, !6 = $directions, !7 = $direction, !8 = $impact_data, !9 = $direction_label, !10 = $data_elements, !11 = $data_type, !12 = $data_element
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   70     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 22> ASSIGN                                                    OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435400) <array> ]
+   73     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435397) 'Impact' ] OP2[ ,  IS_CONST (268435399) 'buildGraph' ]
+          4*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          5*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $14 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435397) 'item' ]
+          6*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $14 ] OP2[  IS_UNUSED  ]
+          7*       < 60> DO_FCALL                                      0   RES[  IS_VAR $15 ]      OP1[  IS_UNUSED  ]
+          8*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_VAR $15 ]
+   74     9*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         10*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435388) 'ImpactItem' ] OP2[ ,  IS_CONST (268435390) 'findForItem' ]
+         11*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         12*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $17 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435388) 'item' ]
+         13*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $17 ] OP2[  IS_UNUSED  ]
+         14*       < 60> DO_FCALL                                      0   RES[  IS_VAR $18 ]      OP1[  IS_UNUSED  ]
+         15*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_VAR $18 ]
+   75    16*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         17*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435379) 'ImpactContext' ] OP2[ ,  IS_CONST (268435381) 'findForImpactItem' ]
+         18*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         19*       < 60> DO_FCALL                                      0   RES[  IS_VAR $20 ]      OP1[  IS_UNUSED  ]
+         20*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_VAR $20 ]
+   78    21*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         22*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~22 ]      OP1[  IS_CV !3 ]
+         23*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~22 ] OP2[ , ->28 ]
+   79    24*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         25*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~23 ]      OP1[  IS_CONST (268435368) 'Impact' ] OP2[ ,  IS_CONST (268435367) 'DEFAULT_DEPTH' ]
+         26*       < 22> ASSIGN                                                    OP1[  IS_CV !4 ] OP2[ ,  IS_TMP_VAR ~23 ]
+         27*       < 42> JMP                                                       OP1[ ->32 ]
+   81    28*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         29*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~25 ]      OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435362) 'fields' ]
+         30*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~26 ]      OP1[  IS_TMP_VAR ~25 ] OP2[ ,  IS_CONST (268435361) 'max_depth' ]
+         31*       < 22> ASSIGN                                                    OP1[  IS_CV !4 ] OP2[ ,  IS_TMP_VAR ~26 ]
+   85    32*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         33*       < 22> ASSIGN                                                    OP1[  IS_CV !5 ] OP2[ ,  IS_CONST (268435356) <array> ]
+   86    34*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         35*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~29 ]      OP1[  IS_CONST (268435354) 'Impact' ] OP2[ ,  IS_CONST (268435353) 'DIRECTION_FORWARD' ]
+         36*       < 71> INIT_ARRAY                                        RES[  IS_TMP_VAR ~30 ]      OP1[  IS_TMP_VAR ~29 ] OP2[  IS_UNUSED  ]
+         37*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~31 ]      OP1[  IS_CONST (268435353) 'Impact' ] OP2[ ,  IS_CONST (268435352) 'DIRECTION_BACKWARD' ]
+         38*       < 72> ADD_ARRAY_ELEMENT                                 RES[  IS_TMP_VAR ~30 ]      OP1[  IS_TMP_VAR ~31 ] OP2[  IS_UNUSED  ]
+         39*       < 22> ASSIGN                                                    OP1[  IS_CV !6 ] OP2[ ,  IS_TMP_VAR ~30 ]
+   87    40*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         41*       < 77> FE_RESET_R                                        RES[  IS_VAR $33 ]      OP1[  IS_CV !6 ] OP2[ , ->55 ]
+         42*       < 78> FE_FETCH_R                                                OP1[  IS_VAR $33 ] OP2[ ,  IS_CV !7 ] EXT_JMP_REL[ , ->55 ]
+   88    43*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         44*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435341) 'Impact' ] OP2[ ,  IS_CONST (268435343) 'buildListData' ]
+   89    45*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         46*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !7 ] OP2[  IS_UNUSED  ]
+         47*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+   91    48*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $35 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435337) 'item' ]
+         49*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $35 ] OP2[  IS_UNUSED  ]
+   89    50*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !4 ] OP2[  IS_UNUSED  ]
+         51*       < 60> DO_FCALL                                      0   RES[  IS_VAR $36 ]      OP1[  IS_UNUSED  ]
+   88    52*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !5 ] OP2[ ,  IS_CV !7 ]
+   89    53*       <137> OP_DATA                                                   OP1[  IS_VAR $36 ] OP2[  IS_UNUSED  ]
+   87    54*       < 42> JMP                                                       OP1[ ->42 ]
+         55*       <127> FE_FREE                                                   OP1[  IS_VAR $33 ] OP2[  IS_UNUSED  ]
+   97    56*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         57*       < 77> FE_RESET_R                                        RES[  IS_VAR $37 ]      OP1[  IS_CV !5 ] OP2[ , ->100 ]
+         58*       < 78> FE_FETCH_R                                        RES[  IS_TMP_VAR ~38 ]      OP1[  IS_VAR $37 ] OP2[ ,  IS_CV !8 ] EXT_JMP_REL[ , ->100 ]
+         59*       < 22> ASSIGN                                                    OP1[  IS_CV !7 ] OP2[ ,  IS_TMP_VAR ~38 ]
+   98    60*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         61*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~40 ]      OP1[  IS_CONST (268435313) 'Impact' ] OP2[ ,  IS_CONST (268435312) 'DIRECTION_FORWARD' ]
+         62*       < 18> IS_EQUAL                                          RES[  IS_TMP_VAR ~41 ]      OP1[  IS_CV !7 ] OP2[ ,  IS_TMP_VAR ~40 ]
+         63*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~41 ] OP2[ , ->70 ]
+   99    64*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         65*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435307) 'Glpi%5CCsv%5C__' ]
+         66*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435308) 'Impact' ] OP2[  IS_UNUSED  ]
+         67*       < 60> DO_FCALL                                      0   RES[  IS_VAR $42 ]      OP1[  IS_UNUSED  ]
+         68*       < 22> ASSIGN                                                    OP1[  IS_CV !9 ] OP2[ ,  IS_VAR $42 ]
+         69*       < 42> JMP                                                       OP1[ ->75 ]
+  101    70*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         71*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435299) 'Glpi%5CCsv%5C__' ]
+         72*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435300) 'Impacted+by' ] OP2[  IS_UNUSED  ]
+         73*       < 60> DO_FCALL                                      0   RES[  IS_VAR $44 ]      OP1[  IS_UNUSED  ]
+         74*       < 22> ASSIGN                                                    OP1[  IS_CV !9 ] OP2[ ,  IS_VAR $44 ]
+  104    75*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         76*       < 77> FE_RESET_R                                        RES[  IS_VAR $46 ]      OP1[  IS_CV !8 ] OP2[ , ->98 ]
+         77*       < 78> FE_FETCH_R                                        RES[  IS_TMP_VAR ~47 ]      OP1[  IS_VAR $46 ] OP2[ ,  IS_CV !10 ] EXT_JMP_REL[ , ->98 ]
+         78*       < 22> ASSIGN                                                    OP1[  IS_CV !11 ] OP2[ ,  IS_TMP_VAR ~47 ]
+  105    79*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         80*       < 77> FE_RESET_R                                        RES[  IS_VAR $49 ]      OP1[  IS_CV !10 ] OP2[ , ->96 ]
+         81*       < 78> FE_FETCH_R                                                OP1[  IS_VAR $49 ] OP2[ ,  IS_CV !12 ] EXT_JMP_REL[ , ->96 ]
+  107    82*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         83*       < 71> INIT_ARRAY                                        RES[  IS_TMP_VAR ~51 ]      OP1[  IS_CV !9 ] OP2[  IS_UNUSED  ]
+  108    84*       < 72> ADD_ARRAY_ELEMENT                                 RES[  IS_TMP_VAR ~51 ]      OP1[  IS_CV !11 ] OP2[  IS_UNUSED  ]
+  109    85*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~52 ]      OP1[  IS_CV !12 ] OP2[ ,  IS_CONST (268435275) 'stored' ]
+         86*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~53 ]      OP1[  IS_TMP_VAR ~52 ] OP2[ ,  IS_CONST (268435274) 'fields' ]
+         87*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~54 ]      OP1[  IS_TMP_VAR ~53 ] OP2[ ,  IS_CONST (268435273) 'id' ]
+         88*       < 72> ADD_ARRAY_ELEMENT                                 RES[  IS_TMP_VAR ~51 ]      OP1[  IS_TMP_VAR ~54 ] OP2[  IS_UNUSED  ]
+  110    89*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~55 ]      OP1[  IS_CV !12 ] OP2[ ,  IS_CONST (268435270) 'stored' ]
+         90*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~56 ]      OP1[  IS_TMP_VAR ~55 ] OP2[ ,  IS_CONST (268435269) 'fields' ]
+         91*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~57 ]      OP1[  IS_TMP_VAR ~56 ] OP2[ ,  IS_CONST (268435268) 'name' ]
+         92*       < 72> ADD_ARRAY_ELEMENT                                 RES[  IS_TMP_VAR ~51 ]      OP1[  IS_TMP_VAR ~57 ] OP2[  IS_UNUSED  ]
+  106    93*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+  110    94*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~51 ] OP2[  IS_UNUSED  ]
+  105    95*       < 42> JMP                                                       OP1[ ->81 ]
+         96*       <127> FE_FREE                                                   OP1[  IS_VAR $49 ] OP2[  IS_UNUSED  ]
+  104    97*       < 42> JMP                                                       OP1[ ->77 ]
+         98*       <127> FE_FREE                                                   OP1[  IS_VAR $46 ] OP2[  IS_UNUSED  ]
+   97    99*       < 42> JMP                                                       OP1[ ->58 ]
+        100*       <127> FE_FREE                                                   OP1[  IS_VAR $37 ] OP2[  IS_UNUSED  ]
+  116   101*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        102*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+        103*       < 62> RETURN                                                    OP1[  IS_CV !0 ]
+  117   104*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        105*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        106*       < 62> RETURN                                                    OP1[  IS_CONST (268435239) null ]
+
+End of function getfilecontent
+
+End of class Glpi\Csv\ImpactCsvExport.
+

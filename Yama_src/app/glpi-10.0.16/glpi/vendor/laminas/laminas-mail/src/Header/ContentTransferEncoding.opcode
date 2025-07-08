@@ -1,0 +1,310 @@
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\laminas\laminas-mail\src\Header\ContentTransferEncoding.php
+function name:  (null)
+number of ops:  6
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+    3     0*       <  0> NOP                                                      
+   12     1*       <  0> NOP                                                      
+   27     2*       <  0> NOP                                                      
+    5     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       <144> DECLARE_CLASS                                             OP1[  IS_CONST (268435445) 'laminas%5Cmail%5Cheader%5Ccontenttransferencoding' ] OP2[  IS_UNUSED  ]
+  109     5*       < 62> RETURN                                                    OP1[  IS_CONST (268435445) 1 ]
+
+Class Laminas\Mail\Header\ContentTransferEncoding:
+[+]Class Parent Name: NULL
+End Trait extract
+Start Properties extract:
+Key: allowedTransferEncodings, Value: UNINIT, Type: Normal
+End Properties extract.
+
+Function fromstring:
+[+]Function Source Class Name: Laminas\Mail\Header\ContentTransferEncoding
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:headerLine
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\laminas\laminas-mail\src\Header\ContentTransferEncoding.php
+function name:  fromString
+number of ops:  38
+compiled vars:  !0 = $headerLine, !1 = $name, !2 = $value, !3 = $header
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   34     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+   36     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435432) 'Laminas%5CMail%5CHeader%5CGenericHeader' ] OP2[ ,  IS_CONST (268435434) 'splitHeaderLine' ]
+          3*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          4*       < 60> DO_FCALL                                      0   RES[  IS_VAR $4 ]       OP1[  IS_UNUSED  ]
+          5*       < 98> FETCH_LIST_R                                      RES[  IS_VAR $5 ]       OP1[  IS_VAR $4 ] OP2[ ,  IS_CONST (268435430) 0 ]
+          6*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_VAR $5 ]
+          7*       < 98> FETCH_LIST_R                                      RES[  IS_VAR $7 ]       OP1[  IS_VAR $4 ] OP2[ ,  IS_CONST (268435427) 1 ]
+          8*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_VAR $7 ]
+          9*       < 70> FREE                                                      OP1[  IS_VAR $4 ]
+   37    10*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         11*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435420) 'Laminas%5CMail%5CHeader%5CHeaderWrap' ] OP2[ ,  IS_CONST (268435422) 'mimeDecodeValue' ]
+         12*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         13*       < 60> DO_FCALL                                      0   RES[  IS_VAR $9 ]       OP1[  IS_UNUSED  ]
+         14*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_VAR $9 ]
+   40    15*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         16*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435414) 'Laminas%5CMail%5CHeader%5Cstrtolower' ]
+         17*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         18*       < 60> DO_FCALL                                      0   RES[  IS_VAR $11 ]      OP1[  IS_UNUSED  ]
+         19*       < 17> IS_NOT_IDENTICAL                                  RES[  IS_TMP_VAR ~12 ]      OP1[  IS_VAR $11 ] OP2[ ,  IS_CONST (268435411) 'content-transfer-encoding' ]
+         20*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~12 ] OP2[ , ->26 ]
+   41    21*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         22*       < 68> NEW                                               RES[  IS_VAR $13 ]      OP1[ 'Laminas%5CMail%5CHeader%5CException%5CInvalidArgumentException' ]
+         23*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435406) 'Invalid+header+line+for+Content-Transfer-Encoding+string' ] OP2[  IS_UNUSED  ]
+         24*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         25*       <108> THROW                                         0           OP1[  IS_VAR $13 ] OP2[  IS_UNUSED  ]
+   44    26*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         27*       < 68> NEW                          static               RES[  IS_VAR $15 ]     
+         28*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         29*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_VAR $15 ]
+   45    30*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         31*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435391) 'setTransferEncoding' ]
+         32*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         33*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+   47    34*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         35*       < 62> RETURN                                                    OP1[  IS_CV !3 ]
+   48    36*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         37*       < 62> RETURN                                                    OP1[  IS_CONST (268435381) null ]
+
+End of function fromstring
+
+Function getfieldname:
+[+]Function Source Class Name: Laminas\Mail\Header\ContentTransferEncoding
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\laminas\laminas-mail\src\Header\ContentTransferEncoding.php
+function name:  getFieldName
+number of ops:  4
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   52     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 62> RETURN                                                    OP1[  IS_CONST (268435452) 'Content-Transfer-Encoding' ]
+   53     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       < 62> RETURN                                                    OP1[  IS_CONST (268435449) null ]
+
+End of function getfieldname
+
+Function getfieldvalue:
+[+]Function Source Class Name: Laminas\Mail\Header\ContentTransferEncoding
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:format
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\laminas\laminas-mail\src\Header\ContentTransferEncoding.php
+function name:  getFieldValue
+number of ops:  6
+compiled vars:  !0 = $format
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   55     0*       < 64> RECV_INIT                                         RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435451) <const ast> ]
+   57     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~1 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435448) 'transferEncoding' ]
+          3*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~1 ]
+   58     4*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          5*       < 62> RETURN                                                    OP1[  IS_CONST (268435443) null ]
+
+End of function getfieldvalue
+
+Function setencoding:
+[+]Function Source Class Name: Laminas\Mail\Header\ContentTransferEncoding
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:encoding
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\laminas\laminas-mail\src\Header\ContentTransferEncoding.php
+function name:  setEncoding
+number of ops:  6
+compiled vars:  !0 = $encoding
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   60     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+   63     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       <184> FETCH_THIS                                        RES[  IS_TMP_VAR ~1 ]       OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~1 ]
+   64     4*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          5*       < 62> RETURN                                                    OP1[  IS_CONST (268435445) null ]
+
+End of function setencoding
+
+Function getencoding:
+[+]Function Source Class Name: Laminas\Mail\Header\ContentTransferEncoding
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\laminas\laminas-mail\src\Header\ContentTransferEncoding.php
+function name:  getEncoding
+number of ops:  4
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   68     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 62> RETURN                                                    OP1[  IS_CONST (268435452) 'ASCII' ]
+   69     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       < 62> RETURN                                                    OP1[  IS_CONST (268435449) null ]
+
+End of function getencoding
+
+Function tostring:
+[+]Function Source Class Name: Laminas\Mail\Header\ContentTransferEncoding
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\laminas\laminas-mail\src\Header\ContentTransferEncoding.php
+function name:  toString
+number of ops:  7
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   73     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435450) 'getFieldValue' ]
+          2*       < 60> DO_FCALL                                      0   RES[  IS_VAR $0 ]       OP1[  IS_UNUSED  ]
+          3*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~1 ]       OP1[  IS_CONST (268435448) 'Content-Transfer-Encoding%3A+' ] OP2[ ,  IS_VAR $0 ]
+          4*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~1 ]
+   74     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       < 62> RETURN                                                    OP1[  IS_CONST (268435443) null ]
+
+End of function tostring
+
+Function settransferencoding:
+[+]Function Source Class Name: Laminas\Mail\Header\ContentTransferEncoding
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:transferEncoding
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\laminas\laminas-mail\src\Header\ContentTransferEncoding.php
+function name:  setTransferEncoding
+number of ops:  42
+compiled vars:  !0 = $transferEncoding
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   83     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+   86     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435430) 'Laminas%5CMail%5CHeader%5Cstrtolower' ]
+          3*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          4*       < 60> DO_FCALL                                      0   RES[  IS_VAR $1 ]       OP1[  IS_UNUSED  ]
+          5*       < 22> ASSIGN                                                    OP1[  IS_CV !0 ] OP2[ ,  IS_VAR $1 ]
+   88     6*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          7*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435423) 'Laminas%5CMail%5CHeader%5Cin_array' ]
+          8*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          9*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         10*       <177> FETCH_STATIC_PROP_FUNC_ARG   unknown              RES[  IS_VAR $3 ]       OP1[  IS_CONST (268435420) 'allowedTransferEncodings' ]
+         11*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $3 ] OP2[  IS_UNUSED  ]
+         12*       < 60> DO_FCALL                                      0   RES[  IS_VAR $4 ]       OP1[  IS_UNUSED  ]
+         13*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~5 ]       OP1[  IS_VAR $4 ]
+         14*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~5 ] OP2[ , ->34 ]
+   89    15*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         16*       < 68> NEW                                               RES[  IS_VAR $6 ]       OP1[ 'Laminas%5CMail%5CHeader%5CException%5CInvalidArgumentException' ]
+         17*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435409) 'Laminas%5CMail%5CHeader%5Csprintf' ]
+   90    18*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435410) 'Laminas%5CMail%5CHeader%5Cimplode' ]
+         19*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435411) '%2C+' ] OP2[  IS_UNUSED  ]
+         20*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         21*       <177> FETCH_STATIC_PROP_FUNC_ARG   unknown              RES[  IS_VAR $7 ]       OP1[  IS_CONST (268435408) 'allowedTransferEncodings' ]
+         22*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $7 ] OP2[  IS_UNUSED  ]
+         23*       < 60> DO_FCALL                                      0   RES[  IS_VAR $8 ]       OP1[  IS_UNUSED  ]
+         24*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~9 ]       OP1[  IS_CONST (268435403) '%25s+expects+one+of+%22' ] OP2[ ,  IS_VAR $8 ]
+         25*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~10 ]      OP1[  IS_TMP_VAR ~9 ] OP2[ ,  IS_CONST (268435402) '%22%3B+received+%22%25s%22' ]
+         26*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~10 ] OP2[  IS_UNUSED  ]
+   91    27*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435399) 'Laminas%5CMail%5CHeader%5CContentTransferEncoding%3A%3AsetTransferEncoding' ] OP2[  IS_UNUSED  ]
+   92    28*       < 51> CAST                                          6   RES[  IS_TMP_VAR ~11 ]      OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         29*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~11 ] OP2[  IS_UNUSED  ]
+         30*       < 60> DO_FCALL                                      0   RES[  IS_VAR $12 ]      OP1[  IS_UNUSED  ]
+         31*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $12 ] OP2[  IS_UNUSED  ]
+         32*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         33*       <108> THROW                                         0           OP1[  IS_VAR $6 ] OP2[  IS_UNUSED  ]
+   95    34*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         35*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435384) 'transferEncoding' ]
+         36*       <137> OP_DATA                                                   OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+   96    37*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         38*       <184> FETCH_THIS                                        RES[  IS_TMP_VAR ~15 ]      OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         39*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~15 ]
+   97    40*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         41*       < 62> RETURN                                                    OP1[  IS_CONST (268435373) null ]
+
+End of function settransferencoding
+
+Function gettransferencoding:
+[+]Function Source Class Name: Laminas\Mail\Header\ContentTransferEncoding
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\laminas\laminas-mail\src\Header\ContentTransferEncoding.php
+function name:  getTransferEncoding
+number of ops:  5
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  106     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435452) 'transferEncoding' ]
+          2*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~0 ]
+  107     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       < 62> RETURN                                                    OP1[  IS_CONST (268435447) null ]
+
+End of function gettransferencoding
+
+End of class Laminas\Mail\Header\ContentTransferEncoding.
+

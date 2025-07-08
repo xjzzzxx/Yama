@@ -1,0 +1,42 @@
+filename:       E:\AAAopensource\Yama\Yama_src\app\DVWA-1.9\vulnerabilities\fi\include.php
+function name:  (null)
+number of ops:  35
+compiled vars:  !0 = $WarningHtml, !1 = $page
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+    4     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 22> ASSIGN                                                    OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435435) '' ]
+    5     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435432) 'ini_get' ]
+          4*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435431) 'allow_url_include' ]
+          5*       < 60> DO_FCALL                                      0   RES[  IS_VAR $3 ]       OP1[  IS_UNUSED  ]
+          6*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~4 ]       OP1[  IS_VAR $3 ]
+          7*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~4 ] OP2[ , ->10 ]
+    6     8*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          9*       < 26> ASSIGN_OP                    .=               8           OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435422) '%3Cdiv+class%3D%22warning%22%3EThe+PHP+function+%3Cem%3Eallow_url_include%3C%2Fem%3E+is+not+enabled.%3C%2Fdiv%3E' ]
+    8    10*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         11*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435419) 'ini_get' ]
+         12*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435418) 'allow_url_fopen' ]
+         13*       < 60> DO_FCALL                                      0   RES[  IS_VAR $6 ]       OP1[  IS_UNUSED  ]
+         14*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~7 ]       OP1[  IS_VAR $6 ]
+         15*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~7 ] OP2[ , ->18 ]
+    9    16*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         17*       < 26> ASSIGN_OP                    .=               8           OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435409) '%3Cdiv+class%3D%22warning%22%3EThe+PHP+function+%3Cem%3Eallow_url_fopen%3C%2Fem%3E+is+not+enabled.%3C%2Fdiv%3E' ]
+   13    18*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         19*       < 54> ROPE_INIT                                     3   RES[  IS_TMP_VAR ~11 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435407) '%0D%0A%3Cdiv+class%3D%22body_padded%22%3E%0D%0A%09%3Ch1%3EVulnerability%3A+File+Inclusion%3C%2Fh1%3E%0D%0A%0D%0A%09' ]
+   17    20*       < 55> ROPE_ADD                                      1   RES[  IS_TMP_VAR ~11 ]      OP1[  IS_TMP_VAR ~11 ] OP2[ ,  IS_CV !0 ]
+         21*       < 56> ROPE_END                                      2   RES[  IS_TMP_VAR ~10 ]      OP1[  IS_TMP_VAR ~11 ] OP2[ ,  IS_CONST (268435404) '%0D%0A%0D%0A%09%3Cdiv+class%3D%22vulnerable_code_area%22%3E%0D%0A%09%09%5B%3Cem%3E%3Ca+href%3D%22%3Fpage%3Dfile1.php%22%3Efile1.php%3C%2Fa%3E%3C%2Fem%3E%5D+-+%5B%3Cem%3E%3Ca+href%3D%22%3Fpage%3Dfile2.php%22%3Efile2.php%3C%2Fa%3E%3C%2Fem%3E%5D+-+%5B%3Cem%3E%3Ca+href%3D%22%3Fpage%3Dfile3.php%22%3Efile3.php%3C%2Fa%3E%3C%2Fem%3E%5D%0D%0A%09%3C%2Fdiv%3E%0D%0A%0D%0A%09%3Ch2%3EMore+Information%3C%2Fh2%3E%0D%0A%09%3Cul%3E%0D%0A%09%09%3Cli%3E' ]
+   25    22*       < 59> INIT_FCALL_BY_NAME                                        OP2[  IS_CONST (268435403) 'dvwaExternalLinkUrlGet' ]
+         23*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435403) 'https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FRemote_File_Inclusion' ] OP2[  IS_UNUSED  ]
+         24*       < 60> DO_FCALL                                      0   RES[  IS_VAR $13 ]      OP1[  IS_UNUSED  ]
+         25*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~14 ]      OP1[  IS_TMP_VAR ~10 ] OP2[ ,  IS_VAR $13 ]
+         26*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~15 ]      OP1[  IS_TMP_VAR ~14 ] OP2[ ,  IS_CONST (268435398) '%3C%2Fli%3E%0D%0A%09%09%3Cli%3E' ]
+   26    27*       < 59> INIT_FCALL_BY_NAME                                        OP2[  IS_CONST (268435397) 'dvwaExternalLinkUrlGet' ]
+         28*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435397) 'https%3A%2F%2Fwww.owasp.org%2Findex.php%2FTop_10_2007-A3' ] OP2[  IS_UNUSED  ]
+         29*       < 60> DO_FCALL                                      0   RES[  IS_VAR $16 ]      OP1[  IS_UNUSED  ]
+         30*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~17 ]      OP1[  IS_TMP_VAR ~15 ] OP2[ ,  IS_VAR $16 ]
+         31*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~18 ]      OP1[  IS_TMP_VAR ~17 ] OP2[ ,  IS_CONST (268435392) '%3C%2Fli%3E%0D%0A%09%3C%2Ful%3E%0D%0A%3C%2Fdiv%3E%0A' ]
+   13    32*       < 27> ASSIGN_DIM_OP                .=               8           OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435380) 'body' ]
+   26    33*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~18 ] OP2[  IS_UNUSED  ]
+   31    34*       < 62> RETURN                                                    OP1[  IS_CONST (268435387) 1 ]
+

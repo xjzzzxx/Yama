@@ -1,0 +1,1062 @@
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\GLPIKey.php
+function name:  (null)
+number of ops:  7
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   36     0*       <  0> NOP                                                      
+   37     1*       <  0> NOP                                                      
+   49     2*       <  0> NOP                                                      
+   56     3*       <  0> NOP                                                      
+   63     4*       <  0> NOP                                                      
+  478     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       < 62> RETURN                                                    OP1[  IS_CONST (268435443) 1 ]
+
+Class GLPIKey:
+[+]Class Parent Name: NULL
+End Trait extract
+Start Properties extract:
+Key: keyfile, Value: UNINIT, Type: Normal
+Key: legacykeyfile, Value: UNINIT, Type: Normal
+End Properties extract.
+
+Function __construct:
+[+]Function Source Class Name: GLPIKey
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:config_dir
+[*]type:string
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\GLPIKey.php
+function name:  __construct
+number of ops:  11
+compiled vars:  !0 = $config_dir
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   86     0*       < 64> RECV_INIT                                         RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435448) <const ast> ]
+   88     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~2 ]       OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435446) '%2Fglpicrypt.key' ]
+          3*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435443) 'keyfile' ]
+          4*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~2 ] OP2[  IS_UNUSED  ]
+   89     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~4 ]       OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435440) '%2Fglpi.key' ]
+          7*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435437) 'legacykeyfile' ]
+          8*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~4 ] OP2[  IS_UNUSED  ]
+   90     9*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         10*       < 62> RETURN                                                    OP1[  IS_CONST (268435433) null ]
+
+End of function __construct
+
+Function getexpectedkeypath:
+[+]Function Source Class Name: GLPIKey
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:?string
+
+[*]ArgInfoNo**0**
+[*]name:glpi_version
+[*]type:string
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\GLPIKey.php
+function name:  getExpectedKeyPath
+number of ops:  30
+compiled vars:  !0 = $glpi_version
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  100     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  102     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435442) 'version_compare' ]
+          3*       <117> SEND_VAR                                                  OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          4*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435439) '9.4.6' ]
+          5*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435438) '%3C' ]
+          6*       < 60> DO_FCALL                                      0   RES[  IS_VAR $1 ]       OP1[  IS_UNUSED  ]
+          7*       < 43> JMPZ                                                      OP1[  IS_VAR $1 ] OP2[ , ->11 ]
+  103     8*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          9*       < 62> RETURN                                                    OP1[  IS_CONST (268435431) null ]
+         10*       < 42> JMP                                                       OP1[ ->27 ]
+  104    11*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         12*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435426) 'version_compare' ]
+         13*       <117> SEND_VAR                                                  OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         14*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435423) '9.5.x' ]
+         15*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435422) '%3C' ]
+         16*       < 60> DO_FCALL                                      0   RES[  IS_VAR $2 ]       OP1[  IS_UNUSED  ]
+         17*       < 43> JMPZ                                                      OP1[  IS_VAR $2 ] OP2[ , ->23 ]
+  105    18*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         19*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~3 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435415) 'legacykeyfile' ]
+         20*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_TMP_VAR ~3 ] OP2[  IS_UNUSED  ]
+         21*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~3 ]
+         22*       < 42> JMP                                                       OP1[ ->27 ]
+  107    23*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         24*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~4 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435406) 'keyfile' ]
+         25*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_TMP_VAR ~4 ] OP2[  IS_UNUSED  ]
+         26*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~4 ]
+  109    27*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         28*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         29*       < 62> RETURN                                                    OP1[  IS_CONST (268435397) null ]
+
+End of function getexpectedkeypath
+
+Function keyexists:
+[+]Function Source Class Name: GLPIKey
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\GLPIKey.php
+function name:  keyExists
+number of ops:  8
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  118     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435451) 'file_exists' ]
+          2*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435450) 'keyfile' ]
+          3*       < 65> SEND_VAL                                                  OP1[  IS_TMP_VAR ~0 ]
+          4*       < 60> DO_FCALL                                      0   RES[  IS_VAR $1 ]       OP1[  IS_UNUSED  ]
+          5*       < 62> RETURN                                                    OP1[  IS_VAR $1 ]
+  119     6*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          7*       < 62> RETURN                                                    OP1[  IS_CONST (268435441) null ]
+
+End of function keyexists
+
+Function get:
+[+]Function Source Class Name: GLPIKey
+[*]Start of arg_info extract:
+[*]arg_info num_args:0
+[*]Function return type:?string
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\GLPIKey.php
+function name:  get
+number of ops:  54
+compiled vars:  !0 = $key
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  128     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435433) 'file_exists' ]
+          2*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~1 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435432) 'keyfile' ]
+          3*       < 65> SEND_VAL                                                  OP1[  IS_TMP_VAR ~1 ]
+          4*       < 60> DO_FCALL                                      0   RES[  IS_VAR $2 ]       OP1[  IS_UNUSED  ]
+          5*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~3 ]       OP1[  IS_VAR $2 ]
+          6*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~3 ] OP2[ , ->14 ]
+  129     7*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          8*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435421) 'trigger_error' ]
+          9*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435420) 'You+must+create+a+security+key%2C+see+security%3Achange_key+command.' ]
+         10*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435419) 512 ]
+         11*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  130    12*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         13*       < 62> RETURN                                                    OP1[  IS_CONST (268435414) null ]
+  132    14*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         15*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435411) 'is_readable' ]
+         16*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~5 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435410) 'keyfile' ]
+         17*       < 65> SEND_VAL                                                  OP1[  IS_TMP_VAR ~5 ]
+         18*       < 60> DO_FCALL                                      0   RES[  IS_VAR $6 ]       OP1[  IS_UNUSED  ]
+         19*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~7 ]       OP1[  IS_VAR $6 ]
+         20*       < 47> JMPNZ_EX                                          RES[  IS_TMP_VAR ~7 ]       OP1[  IS_TMP_VAR ~7 ] OP2[ , ->28 ]
+         21*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435401) 'file_get_contents' ]
+         22*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~8 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435400) 'keyfile' ]
+         23*       < 65> SEND_VAL                                                  OP1[  IS_TMP_VAR ~8 ]
+         24*       < 60> DO_FCALL                                      0   RES[  IS_VAR $9 ]       OP1[  IS_UNUSED  ]
+         25*       < 22> ASSIGN                                            RES[  IS_TMP_VAR ~10 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_VAR $9 ]
+         26*       <123> TYPE_CHECK                                    4   RES[  IS_TMP_VAR ~11 ]      OP1[  IS_TMP_VAR ~10 ] OP2[  IS_UNUSED  ]
+         27*       < 52> BOOL                                              RES[  IS_TMP_VAR ~7 ]       OP1[  IS_TMP_VAR ~11 ]
+         28*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~7 ] OP2[ , ->36 ]
+  133    29*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         30*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435385) 'trigger_error' ]
+         31*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435384) 'Unable+to+get+security+key+file+contents.' ]
+         32*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435383) 512 ]
+         33*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  134    34*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         35*       < 62> RETURN                                                    OP1[  IS_CONST (268435378) null ]
+  136    36*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         37*       <121> STRLEN                                            RES[  IS_TMP_VAR ~13 ]      OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         38*       < 99> FETCH_CONSTANT                                    RES[  IS_TMP_VAR ~14 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435373) 'SODIUM_CRYPTO_AEAD_XCHACHA20POLY1305_IETF_KEYBYTES' ]
+         39*       < 17> IS_NOT_IDENTICAL                                  RES[  IS_TMP_VAR ~15 ]      OP1[  IS_TMP_VAR ~13 ] OP2[ ,  IS_TMP_VAR ~14 ]
+         40*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~15 ] OP2[ , ->48 ]
+  137    41*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         42*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435367) 'trigger_error' ]
+         43*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435366) 'Invalid+security+key+file+contents.' ]
+         44*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435365) 512 ]
+         45*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  138    46*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         47*       < 62> RETURN                                                    OP1[  IS_CONST (268435360) null ]
+  140    48*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         49*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         50*       < 62> RETURN                                                    OP1[  IS_CV !0 ]
+  141    51*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         52*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         53*       < 62> RETURN                                                    OP1[  IS_CONST (268435349) null ]
+
+End of function get
+
+Function getlegacykey:
+[+]Function Source Class Name: GLPIKey
+[*]Start of arg_info extract:
+[*]arg_info num_args:0
+[*]Function return type:?string
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\GLPIKey.php
+function name:  getLegacyKey
+number of ops:  39
+compiled vars:  !0 = $key
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  151     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435441) 'file_exists' ]
+          2*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~1 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435440) 'legacykeyfile' ]
+          3*       < 65> SEND_VAL                                                  OP1[  IS_TMP_VAR ~1 ]
+          4*       < 60> DO_FCALL                                      0   RES[  IS_VAR $2 ]       OP1[  IS_UNUSED  ]
+          5*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~3 ]       OP1[  IS_VAR $2 ]
+          6*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~3 ] OP2[ , ->11 ]
+  152     7*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          8*       < 99> FETCH_CONSTANT                                    RES[  IS_TMP_VAR ~4 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435429) 'GLPIKEY' ]
+          9*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_TMP_VAR ~4 ] OP2[  IS_UNUSED  ]
+         10*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~4 ]
+  155    11*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         12*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435423) 'is_readable' ]
+         13*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~5 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435422) 'legacykeyfile' ]
+         14*       < 65> SEND_VAL                                                  OP1[  IS_TMP_VAR ~5 ]
+         15*       < 60> DO_FCALL                                      0   RES[  IS_VAR $6 ]       OP1[  IS_UNUSED  ]
+         16*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~7 ]       OP1[  IS_VAR $6 ]
+         17*       < 47> JMPNZ_EX                                          RES[  IS_TMP_VAR ~7 ]       OP1[  IS_TMP_VAR ~7 ] OP2[ , ->25 ]
+         18*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435413) 'file_get_contents' ]
+         19*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~8 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435412) 'legacykeyfile' ]
+         20*       < 65> SEND_VAL                                                  OP1[  IS_TMP_VAR ~8 ]
+         21*       < 60> DO_FCALL                                      0   RES[  IS_VAR $9 ]       OP1[  IS_UNUSED  ]
+         22*       < 22> ASSIGN                                            RES[  IS_TMP_VAR ~10 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_VAR $9 ]
+         23*       <123> TYPE_CHECK                                    4   RES[  IS_TMP_VAR ~11 ]      OP1[  IS_TMP_VAR ~10 ] OP2[  IS_UNUSED  ]
+         24*       < 52> BOOL                                              RES[  IS_TMP_VAR ~7 ]       OP1[  IS_TMP_VAR ~11 ]
+         25*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~7 ] OP2[ , ->33 ]
+  156    26*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         27*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435397) 'trigger_error' ]
+         28*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435396) 'Unable+to+get+security+legacy+key+file+contents.' ]
+         29*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435395) 512 ]
+         30*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  157    31*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         32*       < 62> RETURN                                                    OP1[  IS_CONST (268435390) null ]
+  159    33*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         34*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         35*       < 62> RETURN                                                    OP1[  IS_CV !0 ]
+  160    36*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         37*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         38*       < 62> RETURN                                                    OP1[  IS_CONST (268435379) null ]
+
+End of function getlegacykey
+
+Function generate:
+[+]Function Source Class Name: GLPIKey
+[*]Start of arg_info extract:
+[*]arg_info num_args:0
+[*]Function return type:bool
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\GLPIKey.php
+function name:  generate
+number of ops:  117
+compiled vars:  !0 = $DB, !1 = $previous_key, !2 = $key, !3 = $written_bytes
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  171     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       <168> BIND_GLOBAL                                               OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435408) 'DB' ]
+  175     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435405) 'file_exists' ]
+          4*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~4 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435404) 'keyfile' ]
+          5*       < 65> SEND_VAL                                                  OP1[  IS_TMP_VAR ~4 ]
+          6*       < 60> DO_FCALL                                      0   RES[  IS_VAR $5 ]       OP1[  IS_UNUSED  ]
+          7*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~6 ]       OP1[  IS_VAR $5 ] OP2[ , ->14 ]
+          8*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435397) 'is_writable' ]
+          9*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~7 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435396) 'keyfile' ]
+         10*       < 65> SEND_VAL                                                  OP1[  IS_TMP_VAR ~7 ]
+         11*       < 60> DO_FCALL                                      0   RES[  IS_VAR $8 ]       OP1[  IS_UNUSED  ]
+         12*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~9 ]       OP1[  IS_VAR $8 ]
+         13*       < 52> BOOL                                              RES[  IS_TMP_VAR ~6 ]       OP1[  IS_TMP_VAR ~9 ]
+         14*       < 47> JMPNZ_EX                                          RES[  IS_TMP_VAR ~6 ]       OP1[  IS_TMP_VAR ~6 ] OP2[ , ->31 ]
+  176    15*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435385) 'file_exists' ]
+         16*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~10 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435384) 'keyfile' ]
+         17*       < 65> SEND_VAL                                                  OP1[  IS_TMP_VAR ~10 ]
+         18*       < 60> DO_FCALL                                      0   RES[  IS_VAR $11 ]      OP1[  IS_UNUSED  ]
+         19*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~12 ]      OP1[  IS_VAR $11 ]
+         20*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~12 ]      OP1[  IS_TMP_VAR ~12 ] OP2[ , ->30 ]
+         21*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435375) 'is_writable' ]
+         22*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435374) 'dirname' ]
+         23*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~13 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435373) 'keyfile' ]
+         24*       < 65> SEND_VAL                                                  OP1[  IS_TMP_VAR ~13 ]
+         25*       < 60> DO_FCALL                                      0   RES[  IS_VAR $14 ]      OP1[  IS_UNUSED  ]
+         26*       <117> SEND_VAR                                                  OP1[  IS_VAR $14 ] OP2[  IS_UNUSED  ]
+         27*       < 60> DO_FCALL                                      0   RES[  IS_VAR $15 ]      OP1[  IS_UNUSED  ]
+         28*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~16 ]      OP1[  IS_VAR $15 ]
+         29*       < 52> BOOL                                              RES[  IS_TMP_VAR ~12 ]      OP1[  IS_TMP_VAR ~16 ]
+         30*       < 52> BOOL                                              RES[  IS_TMP_VAR ~6 ]       OP1[  IS_TMP_VAR ~12 ]
+         31*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~6 ] OP2[ , ->44 ]
+  178    32*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         33*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435354) 'trigger_error' ]
+         34*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435353) 'sprintf' ]
+         35*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435352) 'Security+key+file+path+%28%25s%29+is+not+writable.' ]
+         36*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~17 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435351) 'keyfile' ]
+         37*       < 65> SEND_VAL                                                  OP1[  IS_TMP_VAR ~17 ]
+         38*       < 60> DO_FCALL                                      0   RES[  IS_VAR $18 ]      OP1[  IS_UNUSED  ]
+         39*       <117> SEND_VAR                                                  OP1[  IS_VAR $18 ] OP2[  IS_UNUSED  ]
+         40*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435344) 512 ]
+         41*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  179    42*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         43*       < 62> RETURN                                                    OP1[  IS_CONST (268435339) <false> ]
+  183    44*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         45*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435336) null ]
+  184    46*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         47*       <138> INSTANCEOF                                        RES[  IS_TMP_VAR ~21 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435333) 'DBmysql' ]
+         48*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~21 ]      OP1[  IS_TMP_VAR ~21 ] OP2[ , ->51 ]
+         49*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~22 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435331) 'connected' ]
+         50*       < 52> BOOL                                              RES[  IS_TMP_VAR ~21 ]      OP1[  IS_TMP_VAR ~22 ]
+         51*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~21 ] OP2[ , ->65 ]
+  185    52*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         53*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435324) 'keyExists' ]
+         54*       < 60> DO_FCALL                                      0   RES[  IS_VAR $23 ]      OP1[  IS_UNUSED  ]
+         55*       < 43> JMPZ                                                      OP1[  IS_VAR $23 ] OP2[ , ->65 ]
+  186    56*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         57*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435318) 'get' ]
+         58*       < 60> DO_FCALL                                      0   RES[  IS_VAR $24 ]      OP1[  IS_UNUSED  ]
+         59*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_VAR $24 ]
+  187    60*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         61*       <123> TYPE_CHECK                                    2   RES[  IS_TMP_VAR ~26 ]      OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         62*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~26 ] OP2[ , ->65 ]
+  190    63*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         64*       < 62> RETURN                                                    OP1[  IS_CONST (268435306) <false> ]
+  195    65*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         66*       < 59> INIT_FCALL_BY_NAME                                        OP2[  IS_CONST (268435303) 'sodium_crypto_aead_chacha20poly1305_ietf_keygen' ]
+         67*       < 60> DO_FCALL                                      0   RES[  IS_VAR $27 ]      OP1[  IS_UNUSED  ]
+         68*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_VAR $27 ]
+  196    69*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         70*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435297) 'file_put_contents' ]
+         71*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~29 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435296) 'keyfile' ]
+         72*       < 65> SEND_VAL                                                  OP1[  IS_TMP_VAR ~29 ]
+         73*       <117> SEND_VAR                                                  OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         74*       < 60> DO_FCALL                                      0   RES[  IS_VAR $30 ]      OP1[  IS_UNUSED  ]
+         75*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_VAR $30 ]
+  197    76*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         77*       <121> STRLEN                                            RES[  IS_TMP_VAR ~32 ]      OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         78*       < 17> IS_NOT_IDENTICAL                                  RES[  IS_TMP_VAR ~33 ]      OP1[  IS_CV !3 ] OP2[ ,  IS_TMP_VAR ~32 ]
+         79*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~33 ] OP2[ , ->87 ]
+  198    80*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         81*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435277) 'trigger_error' ]
+         82*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435276) 'Unable+to+write+security+key+file+contents.' ]
+         83*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435275) 512 ]
+         84*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  199    85*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         86*       < 62> RETURN                                                    OP1[  IS_CONST (268435270) <false> ]
+  202    87*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         88*       <138> INSTANCEOF                                        RES[  IS_TMP_VAR ~35 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435267) 'DBmysql' ]
+         89*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~35 ]      OP1[  IS_TMP_VAR ~35 ] OP2[ , ->92 ]
+         90*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~36 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435265) 'connected' ]
+         91*       < 52> BOOL                                              RES[  IS_TMP_VAR ~35 ]      OP1[  IS_TMP_VAR ~36 ]
+         92*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~35 ] OP2[ , ->112 ]
+  203    93*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         94*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435258) 'migrateFieldsInDb' ]
+         95*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         96*       < 60> DO_FCALL                                      0   RES[  IS_VAR $37 ]      OP1[  IS_UNUSED  ]
+         97*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~38 ]      OP1[  IS_VAR $37 ]
+         98*       < 47> JMPNZ_EX                                          RES[  IS_TMP_VAR ~38 ]      OP1[  IS_TMP_VAR ~38 ] OP2[ , ->104 ]
+         99*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435250) 'migrateConfigsInDb' ]
+        100*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+        101*       < 60> DO_FCALL                                      0   RES[  IS_VAR $39 ]      OP1[  IS_UNUSED  ]
+        102*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~40 ]      OP1[  IS_VAR $39 ]
+        103*       < 52> BOOL                                              RES[  IS_TMP_VAR ~38 ]      OP1[  IS_TMP_VAR ~40 ]
+        104*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~38 ] OP2[ , ->112 ]
+  204   105*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        106*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435238) 'trigger_error' ]
+        107*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435237) 'Error+during+encrypted+data+update+in+database.' ]
+        108*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435236) 512 ]
+        109*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  205   110*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        111*       < 62> RETURN                                                    OP1[  IS_CONST (268435231) <false> ]
+  209   112*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        113*       < 62> RETURN                                                    OP1[  IS_CONST (268435228) <true> ]
+  210   114*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        115*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        116*       < 62> RETURN                                                    OP1[  IS_CONST (268435223) null ]
+
+End of function generate
+
+Function getfields:
+[+]Function Source Class Name: GLPIKey
+[*]Start of arg_info extract:
+[*]arg_info num_args:0
+[*]Function return type:array
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\GLPIKey.php
+function name:  getFields
+number of ops:  28
+compiled vars:  !0 = $PLUGIN_HOOKS, !1 = $fields, !2 = $plugfields
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  220     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       <168> BIND_GLOBAL                                               OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435444) 'PLUGIN_HOOKS' ]
+  222     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~3 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435441) 'fields' ]
+          4*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_TMP_VAR ~3 ]
+  223     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~5 ]       OP1[  IS_CONST (268435437) 'Glpi%5CPlugin%5CHooks' ] OP2[ ,  IS_CONST (268435436) 'SECURED_FIELDS' ]
+          7*       <115> ISSET_ISEMPTY_DIM_OBJ                         0   RES[  IS_TMP_VAR ~6 ]       OP1[  IS_CV !0 ] OP2[ ,  IS_TMP_VAR ~5 ]
+          8*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~6 ] OP2[ , ->22 ]
+  224     9*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         10*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~7 ]       OP1[  IS_CONST (268435432) 'Glpi%5CPlugin%5CHooks' ] OP2[ ,  IS_CONST (268435431) 'SECURED_FIELDS' ]
+         11*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~8 ]       OP1[  IS_CV !0 ] OP2[ ,  IS_TMP_VAR ~7 ]
+         12*       < 77> FE_RESET_R                                        RES[  IS_VAR $9 ]       OP1[  IS_TMP_VAR ~8 ] OP2[ , ->21 ]
+         13*       < 78> FE_FETCH_R                                                OP1[  IS_VAR $9 ] OP2[ ,  IS_CV !2 ] EXT_JMP_REL[ , ->21 ]
+  225    14*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         15*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435424) 'array_merge' ]
+         16*       <117> SEND_VAR                                                  OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         17*       <117> SEND_VAR                                                  OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         18*       < 60> DO_FCALL                                      0   RES[  IS_VAR $10 ]      OP1[  IS_UNUSED  ]
+         19*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_VAR $10 ]
+  224    20*       < 42> JMP                                                       OP1[ ->13 ]
+         21*       <127> FE_FREE                                                   OP1[  IS_VAR $9 ] OP2[  IS_UNUSED  ]
+  229    22*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         23*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         24*       < 62> RETURN                                                    OP1[  IS_CV !1 ]
+  230    25*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         26*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         27*       < 62> RETURN                                                    OP1[  IS_CONST (268435401) null ]
+
+End of function getfields
+
+Function getconfigs:
+[+]Function Source Class Name: GLPIKey
+[*]Start of arg_info extract:
+[*]arg_info num_args:0
+[*]Function return type:array
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\GLPIKey.php
+function name:  getConfigs
+number of ops:  27
+compiled vars:  !0 = $PLUGIN_HOOKS, !1 = $configs, !2 = $plugconfigs, !3 = $plugin
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  240     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       <168> BIND_GLOBAL                                               OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435444) 'PLUGIN_HOOKS' ]
+  242     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~4 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435441) 'configs' ]
+          4*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_TMP_VAR ~4 ]
+  244     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~6 ]       OP1[  IS_CONST (268435437) 'Glpi%5CPlugin%5CHooks' ] OP2[ ,  IS_CONST (268435436) 'SECURED_CONFIGS' ]
+          7*       <115> ISSET_ISEMPTY_DIM_OBJ                         0   RES[  IS_TMP_VAR ~7 ]       OP1[  IS_CV !0 ] OP2[ ,  IS_TMP_VAR ~6 ]
+          8*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~7 ] OP2[ , ->21 ]
+  245     9*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         10*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~8 ]       OP1[  IS_CONST (268435432) 'Glpi%5CPlugin%5CHooks' ] OP2[ ,  IS_CONST (268435431) 'SECURED_CONFIGS' ]
+         11*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~9 ]       OP1[  IS_CV !0 ] OP2[ ,  IS_TMP_VAR ~8 ]
+         12*       < 77> FE_RESET_R                                        RES[  IS_VAR $10 ]      OP1[  IS_TMP_VAR ~9 ] OP2[ , ->20 ]
+         13*       < 78> FE_FETCH_R                                        RES[  IS_TMP_VAR ~11 ]      OP1[  IS_VAR $10 ] OP2[ ,  IS_CV !2 ] EXT_JMP_REL[ , ->20 ]
+         14*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_TMP_VAR ~11 ]
+  246    15*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         16*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~13 ]      OP1[  IS_CONST (268435422) 'plugin%3A' ] OP2[ ,  IS_CV !3 ]
+         17*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !1 ] OP2[ ,  IS_TMP_VAR ~13 ]
+         18*       <137> OP_DATA                                                   OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+  245    19*       < 42> JMP                                                       OP1[ ->13 ]
+         20*       <127> FE_FREE                                                   OP1[  IS_VAR $10 ] OP2[  IS_UNUSED  ]
+  250    21*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         22*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         23*       < 62> RETURN                                                    OP1[  IS_CV !1 ]
+  251    24*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         25*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         26*       < 62> RETURN                                                    OP1[  IS_CONST (268435403) null ]
+
+End of function getconfigs
+
+Function isconfigsecured:
+[+]Function Source Class Name: GLPIKey
+[*]Start of arg_info extract:
+[*]arg_info num_args:2
+[*]Function return type:bool
+
+[*]ArgInfoNo**0**
+[*]name:context
+[*]type:string
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:name
+[*]type:string
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\GLPIKey.php
+function name:  isConfigSecured
+number of ops:  20
+compiled vars:  !0 = $context, !1 = $name, !2 = $secured_configs
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  261     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 63> RECV                                              RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ]
+  264     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435446) 'getConfigs' ]
+          4*       < 60> DO_FCALL                                      0   RES[  IS_VAR $3 ]       OP1[  IS_UNUSED  ]
+          5*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_VAR $3 ]
+  266     6*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          7*       <194> ARRAY_KEY_EXISTS                                  RES[  IS_TMP_VAR ~5 ]       OP1[  IS_CV !0 ] OP2[ ,  IS_CV !2 ]
+          8*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~5 ]       OP1[  IS_TMP_VAR ~5 ] OP2[ , ->15 ]
+  267     9*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435436) 'in_array' ]
+         10*       <117> SEND_VAR                                                  OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         11*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~6 ]       OP1[  IS_CV !2 ] OP2[ ,  IS_CV !0 ]
+         12*       < 65> SEND_VAL                                                  OP1[  IS_TMP_VAR ~6 ]
+         13*       < 60> DO_FCALL                                      0   RES[  IS_VAR $7 ]       OP1[  IS_UNUSED  ]
+         14*       < 52> BOOL                                              RES[  IS_TMP_VAR ~5 ]       OP1[  IS_VAR $7 ]
+         15*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_TMP_VAR ~5 ] OP2[  IS_UNUSED  ]
+         16*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~5 ]
+  268    17*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         18*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         19*       < 62> RETURN                                                    OP1[  IS_CONST (268435417) null ]
+
+End of function isconfigsecured
+
+Function migratefieldsindb:
+[+]Function Source Class Name: GLPIKey
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:bool
+
+[*]ArgInfoNo**0**
+[*]name:sodium_key
+[*]type:?string
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\GLPIKey.php
+function name:  migrateFieldsInDb
+number of ops:  85
+compiled vars:  !0 = $sodium_key, !1 = $DB, !2 = $success, !3 = $field, !4 = $table, !5 = $column, !6 = $iterator, !7 = $row, !8 = $value, !9 = $pass
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  277     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  280     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       <168> BIND_GLOBAL                                               OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435424) 'DB' ]
+  282     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435421) <true> ]
+  284     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435418) 'getFields' ]
+          7*       < 60> DO_FCALL                                      0   RES[  IS_VAR $11 ]      OP1[  IS_UNUSED  ]
+          8*       < 77> FE_RESET_R                                        RES[  IS_VAR $12 ]      OP1[  IS_VAR $11 ] OP2[ , ->78 ]
+          9*       < 78> FE_FETCH_R                                                OP1[  IS_VAR $12 ] OP2[ ,  IS_CV !3 ] EXT_JMP_REL[ , ->78 ]
+  285    10*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         11*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435410) 'explode' ]
+         12*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435409) '.' ]
+         13*       <117> SEND_VAR                                                  OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         14*       < 60> DO_FCALL                                      0   RES[  IS_VAR $13 ]      OP1[  IS_UNUSED  ]
+         15*       < 98> FETCH_LIST_R                                      RES[  IS_VAR $14 ]      OP1[  IS_VAR $13 ] OP2[ ,  IS_CONST (268435404) 0 ]
+         16*       < 22> ASSIGN                                                    OP1[  IS_CV !4 ] OP2[ ,  IS_VAR $14 ]
+         17*       < 98> FETCH_LIST_R                                      RES[  IS_VAR $16 ]      OP1[  IS_VAR $13 ] OP2[ ,  IS_CONST (268435401) 1 ]
+         18*       < 22> ASSIGN                                                    OP1[  IS_CV !5 ] OP2[ ,  IS_VAR $16 ]
+         19*       < 70> FREE                                                      OP1[  IS_VAR $13 ]
+  287    20*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         21*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435394) 'request' ]
+  288    22*       < 71> INIT_ARRAY                                        RES[  IS_TMP_VAR ~18 ]      OP1[  IS_CONST (268435394) 'id' ] OP2[  IS_UNUSED  ]
+         23*       < 72> ADD_ARRAY_ELEMENT                                 RES[  IS_TMP_VAR ~18 ]      OP1[  IS_CV !5 ] OP2[  IS_UNUSED  ]
+         24*       < 71> INIT_ARRAY                                        RES[  IS_TMP_VAR ~19 ]      OP1[  IS_TMP_VAR ~18 ] OP2[ ,  IS_CONST (268435391) 'SELECT' ]
+  289    25*       < 72> ADD_ARRAY_ELEMENT                                 RES[  IS_TMP_VAR ~19 ]      OP1[  IS_CV !4 ] OP2[ ,  IS_CONST (268435390) 'FROM' ]
+  288    26*       < 71> INIT_ARRAY                                        RES[  IS_TMP_VAR ~20 ]      OP1[  IS_CONST (268435389) null ] OP2[ ,  IS_CV !5 ]
+         27*       < 71> INIT_ARRAY                                        RES[  IS_TMP_VAR ~21 ]      OP1[  IS_TMP_VAR ~20 ] OP2[ ,  IS_CONST (268435388) 'NOT' ]
+         28*       < 72> ADD_ARRAY_ELEMENT                                 RES[  IS_TMP_VAR ~19 ]      OP1[  IS_TMP_VAR ~21 ] OP2[  IS_UNUSED  ]
+         29*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~19 ] OP2[  IS_UNUSED  ]
+         30*       < 60> DO_FCALL                                      0   RES[  IS_VAR $22 ]      OP1[  IS_UNUSED  ]
+  287    31*       < 22> ASSIGN                                                    OP1[  IS_CV !6 ] OP2[ ,  IS_VAR $22 ]
+  293    32*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         33*       < 77> FE_RESET_R                                        RES[  IS_VAR $24 ]      OP1[  IS_CV !6 ] OP2[ , ->76 ]
+         34*       < 78> FE_FETCH_R                                                OP1[  IS_VAR $24 ] OP2[ ,  IS_CV !7 ] EXT_JMP_REL[ , ->76 ]
+  294    35*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         36*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~25 ]      OP1[  IS_CV !7 ] OP2[ ,  IS_CV !5 ]
+         37*       < 51> CAST                                          6   RES[  IS_TMP_VAR ~26 ]      OP1[  IS_TMP_VAR ~25 ] OP2[  IS_UNUSED  ]
+         38*       < 22> ASSIGN                                                    OP1[  IS_CV !8 ] OP2[ ,  IS_TMP_VAR ~26 ]
+  295    39*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         40*       <123> TYPE_CHECK                                  1020   RES[  IS_TMP_VAR ~28 ]      OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         41*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~28 ] OP2[ , ->52 ]
+  296    42*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         43*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435357) 'encrypt' ]
+         44*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435357) 'decrypt' ]
+         45*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !8 ] OP2[  IS_UNUSED  ]
+         46*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         47*       < 60> DO_FCALL                                      0   RES[  IS_VAR $29 ]      OP1[  IS_UNUSED  ]
+         48*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $29 ] OP2[  IS_UNUSED  ]
+         49*       < 60> DO_FCALL                                      0   RES[  IS_VAR $30 ]      OP1[  IS_UNUSED  ]
+         50*       < 22> ASSIGN                                                    OP1[  IS_CV !9 ] OP2[ ,  IS_VAR $30 ]
+         51*       < 42> JMP                                                       OP1[ ->60 ]
+  298    52*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         53*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435341) 'encrypt' ]
+         54*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435341) 'decryptUsingLegacyKey' ]
+         55*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !8 ] OP2[  IS_UNUSED  ]
+         56*       < 60> DO_FCALL                                      0   RES[  IS_VAR $32 ]      OP1[  IS_UNUSED  ]
+         57*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $32 ] OP2[  IS_UNUSED  ]
+         58*       < 60> DO_FCALL                                      0   RES[  IS_VAR $33 ]      OP1[  IS_UNUSED  ]
+         59*       < 22> ASSIGN                                                    OP1[  IS_CV !9 ] OP2[ ,  IS_VAR $33 ]
+  300    60*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         61*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435329) 'update' ]
+  301    62*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !4 ] OP2[  IS_UNUSED  ]
+  302    63*       < 71> INIT_ARRAY                                        RES[  IS_TMP_VAR ~35 ]      OP1[  IS_CV !9 ] OP2[ ,  IS_CV !3 ]
+         64*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~35 ] OP2[  IS_UNUSED  ]
+  303    65*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~36 ]      OP1[  IS_CV !7 ] OP2[ ,  IS_CONST (268435323) 'id' ]
+         66*       < 71> INIT_ARRAY                                        RES[  IS_TMP_VAR ~37 ]      OP1[  IS_TMP_VAR ~36 ] OP2[ ,  IS_CONST (268435322) 'id' ]
+         67*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~37 ] OP2[  IS_UNUSED  ]
+         68*       < 60> DO_FCALL                                      0   RES[  IS_VAR $38 ]      OP1[  IS_UNUSED  ]
+  300    69*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_VAR $38 ]
+  306    70*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         71*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~40 ]      OP1[  IS_CV !2 ]
+         72*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~40 ] OP2[ , ->75 ]
+  307    73*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         74*       < 42> JMP                                                       OP1[ ->76 ]
+  293    75*       < 42> JMP                                                       OP1[ ->34 ]
+         76*       <127> FE_FREE                                                   OP1[  IS_VAR $24 ] OP2[  IS_UNUSED  ]
+  284    77*       < 42> JMP                                                       OP1[ ->9 ]
+         78*       <127> FE_FREE                                                   OP1[  IS_VAR $12 ] OP2[  IS_UNUSED  ]
+  312    79*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         80*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         81*       < 62> RETURN                                                    OP1[  IS_CV !2 ]
+  313    82*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         83*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         84*       < 62> RETURN                                                    OP1[  IS_CONST (268435287) null ]
+
+End of function migratefieldsindb
+
+Function migrateconfigsindb:
+[+]Function Source Class Name: GLPIKey
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:bool
+
+[*]ArgInfoNo**0**
+[*]name:sodium_key
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\GLPIKey.php
+function name:  migrateConfigsInDb
+number of ops:  78
+compiled vars:  !0 = $sodium_key, !1 = $DB, !2 = $success, !3 = $names, !4 = $context, !5 = $iterator, !6 = $row, !7 = $value, !8 = $pass
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  322     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  325     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       <168> BIND_GLOBAL                                               OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435399) 'DB' ]
+  327     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435396) <true> ]
+  329     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435393) 'getConfigs' ]
+          7*       < 60> DO_FCALL                                      0   RES[  IS_VAR $10 ]      OP1[  IS_UNUSED  ]
+          8*       < 77> FE_RESET_R                                        RES[  IS_VAR $11 ]      OP1[  IS_VAR $10 ] OP2[ , ->71 ]
+          9*       < 78> FE_FETCH_R                                        RES[  IS_TMP_VAR ~12 ]      OP1[  IS_VAR $11 ] OP2[ ,  IS_CV !3 ] EXT_JMP_REL[ , ->71 ]
+         10*       < 22> ASSIGN                                                    OP1[  IS_CV !4 ] OP2[ ,  IS_TMP_VAR ~12 ]
+  330    11*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         12*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435383) 'request' ]
+  331    13*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435383) 'Config' ] OP2[ ,  IS_CONST (268435385) 'getTable' ]
+         14*       < 60> DO_FCALL                                      0   RES[  IS_VAR $14 ]      OP1[  IS_UNUSED  ]
+         15*       < 71> INIT_ARRAY                                        RES[  IS_TMP_VAR ~15 ]      OP1[  IS_VAR $14 ] OP2[ ,  IS_CONST (268435383) 'FROM' ]
+  333    16*       < 71> INIT_ARRAY                                        RES[  IS_TMP_VAR ~16 ]      OP1[  IS_CV !4 ] OP2[ ,  IS_CONST (268435382) 'context' ]
+  334    17*       < 72> ADD_ARRAY_ELEMENT                                 RES[  IS_TMP_VAR ~16 ]      OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435381) 'name' ]
+  331    18*       < 72> ADD_ARRAY_ELEMENT                                 RES[  IS_TMP_VAR ~16 ]      OP1[  IS_CONST (268435380) <array> ] OP2[  IS_UNUSED  ]
+         19*       < 72> ADD_ARRAY_ELEMENT                                 RES[  IS_TMP_VAR ~15 ]      OP1[  IS_TMP_VAR ~16 ] OP2[ ,  IS_CONST (268435379) 'WHERE' ]
+         20*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~15 ] OP2[  IS_UNUSED  ]
+         21*       < 60> DO_FCALL                                      0   RES[  IS_VAR $17 ]      OP1[  IS_UNUSED  ]
+  330    22*       < 22> ASSIGN                                                    OP1[  IS_CV !5 ] OP2[ ,  IS_VAR $17 ]
+  339    23*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         24*       < 77> FE_RESET_R                                        RES[  IS_VAR $19 ]      OP1[  IS_CV !5 ] OP2[ , ->69 ]
+         25*       < 78> FE_FETCH_R                                                OP1[  IS_VAR $19 ] OP2[ ,  IS_CV !6 ] EXT_JMP_REL[ , ->69 ]
+  340    26*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         27*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~20 ]      OP1[  IS_CV !6 ] OP2[ ,  IS_CONST (268435364) 'value' ]
+         28*       < 51> CAST                                          6   RES[  IS_TMP_VAR ~21 ]      OP1[  IS_TMP_VAR ~20 ] OP2[  IS_UNUSED  ]
+         29*       < 22> ASSIGN                                                    OP1[  IS_CV !7 ] OP2[ ,  IS_TMP_VAR ~21 ]
+  341    30*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         31*       <123> TYPE_CHECK                                  1020   RES[  IS_TMP_VAR ~23 ]      OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         32*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~23 ] OP2[ , ->43 ]
+  342    33*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         34*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435351) 'encrypt' ]
+         35*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435351) 'decrypt' ]
+         36*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !7 ] OP2[  IS_UNUSED  ]
+         37*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         38*       < 60> DO_FCALL                                      0   RES[  IS_VAR $24 ]      OP1[  IS_UNUSED  ]
+         39*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $24 ] OP2[  IS_UNUSED  ]
+         40*       < 60> DO_FCALL                                      0   RES[  IS_VAR $25 ]      OP1[  IS_UNUSED  ]
+         41*       < 22> ASSIGN                                                    OP1[  IS_CV !8 ] OP2[ ,  IS_VAR $25 ]
+         42*       < 42> JMP                                                       OP1[ ->51 ]
+  344    43*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         44*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435335) 'encrypt' ]
+         45*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435335) 'decryptUsingLegacyKey' ]
+         46*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !7 ] OP2[  IS_UNUSED  ]
+         47*       < 60> DO_FCALL                                      0   RES[  IS_VAR $27 ]      OP1[  IS_UNUSED  ]
+         48*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $27 ] OP2[  IS_UNUSED  ]
+         49*       < 60> DO_FCALL                                      0   RES[  IS_VAR $28 ]      OP1[  IS_UNUSED  ]
+         50*       < 22> ASSIGN                                                    OP1[  IS_CV !8 ] OP2[ ,  IS_VAR $28 ]
+  346    51*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         52*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435323) 'update' ]
+  347    53*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435323) 'Config' ] OP2[ ,  IS_CONST (268435325) 'getTable' ]
+         54*       < 60> DO_FCALL                                      0   RES[  IS_VAR $30 ]      OP1[  IS_UNUSED  ]
+         55*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $30 ] OP2[  IS_UNUSED  ]
+  348    56*       < 71> INIT_ARRAY                                        RES[  IS_TMP_VAR ~31 ]      OP1[  IS_CV !8 ] OP2[ ,  IS_CONST (268435321) 'value' ]
+         57*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~31 ] OP2[  IS_UNUSED  ]
+  349    58*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~32 ]      OP1[  IS_CV !6 ] OP2[ ,  IS_CONST (268435318) 'id' ]
+         59*       < 71> INIT_ARRAY                                        RES[  IS_TMP_VAR ~33 ]      OP1[  IS_TMP_VAR ~32 ] OP2[ ,  IS_CONST (268435317) 'id' ]
+         60*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~33 ] OP2[  IS_UNUSED  ]
+         61*       < 60> DO_FCALL                                      0   RES[  IS_VAR $34 ]      OP1[  IS_UNUSED  ]
+  346    62*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_VAR $34 ]
+  352    63*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         64*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~36 ]      OP1[  IS_CV !2 ]
+         65*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~36 ] OP2[ , ->68 ]
+  353    66*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         67*       < 42> JMP                                                       OP1[ ->69 ]
+  339    68*       < 42> JMP                                                       OP1[ ->25 ]
+         69*       <127> FE_FREE                                                   OP1[  IS_VAR $19 ] OP2[  IS_UNUSED  ]
+  329    70*       < 42> JMP                                                       OP1[ ->9 ]
+         71*       <127> FE_FREE                                                   OP1[  IS_VAR $11 ] OP2[  IS_UNUSED  ]
+  358    72*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         73*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         74*       < 62> RETURN                                                    OP1[  IS_CV !2 ]
+  359    75*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         76*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         77*       < 62> RETURN                                                    OP1[  IS_CONST (268435282) null ]
+
+End of function migrateconfigsindb
+
+Function encrypt:
+[+]Function Source Class Name: GLPIKey
+[*]Start of arg_info extract:
+[*]arg_info num_args:2
+[*]Function return type:string
+
+[*]ArgInfoNo**0**
+[*]name:string
+[*]type:string
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:key
+[*]type:?string
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\GLPIKey.php
+function name:  encrypt
+number of ops:  38
+compiled vars:  !0 = $string, !1 = $key, !2 = $nonce, !3 = $encrypted
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  369     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 64> RECV_INIT                                         RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435443) null ]
+  371     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       <123> TYPE_CHECK                                    2   RES[  IS_TMP_VAR ~4 ]       OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+          4*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~4 ] OP2[ , ->9 ]
+  372     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435434) 'get' ]
+          7*       < 60> DO_FCALL                                      0   RES[  IS_VAR $5 ]       OP1[  IS_UNUSED  ]
+          8*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_VAR $5 ]
+  375     9*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         10*       <123> TYPE_CHECK                                    2   RES[  IS_TMP_VAR ~7 ]       OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         11*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~7 ] OP2[ , ->14 ]
+  378    12*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         13*       < 62> RETURN                                                    OP1[  IS_CONST (268435422) '' ]
+  381    14*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         15*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435419) 'random_bytes' ]
+         16*       < 99> FETCH_CONSTANT                                    RES[  IS_TMP_VAR ~8 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435418) 'SODIUM_CRYPTO_AEAD_XCHACHA20POLY1305_IETF_NPUBBYTES' ]
+         17*       < 65> SEND_VAL                                                  OP1[  IS_TMP_VAR ~8 ]
+         18*       < 60> DO_FCALL                                      0   RES[  IS_VAR $9 ]       OP1[  IS_UNUSED  ]
+         19*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_VAR $9 ]
+  382    20*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         21*       < 59> INIT_FCALL_BY_NAME                                        OP2[  IS_CONST (268435410) 'sodium_crypto_aead_xchacha20poly1305_ietf_encrypt' ]
+  383    22*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         23*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         24*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         25*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         26*       < 60> DO_FCALL                                      0   RES[  IS_VAR $11 ]      OP1[  IS_UNUSED  ]
+  382    27*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_VAR $11 ]
+  388    28*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         29*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435396) 'base64_encode' ]
+         30*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~13 ]      OP1[  IS_CV !2 ] OP2[ ,  IS_CV !3 ]
+         31*       < 65> SEND_VAL                                                  OP1[  IS_TMP_VAR ~13 ]
+         32*       < 60> DO_FCALL                                      0   RES[  IS_VAR $14 ]      OP1[  IS_UNUSED  ]
+         33*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_VAR $14 ] OP2[  IS_UNUSED  ]
+         34*       < 62> RETURN                                                    OP1[  IS_VAR $14 ]
+  389    35*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         36*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         37*       < 62> RETURN                                                    OP1[  IS_CONST (268435381) null ]
+
+End of function encrypt
+
+Function decrypt:
+[+]Function Source Class Name: GLPIKey
+[*]Start of arg_info extract:
+[*]arg_info num_args:2
+[*]Function return type:?string
+
+[*]ArgInfoNo**0**
+[*]name:string
+[*]type:?string
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:key
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\GLPIKey.php
+function name:  decrypt
+number of ops:  83
+compiled vars:  !0 = $string, !1 = $key, !2 = $nonce, !3 = $ciphertext, !4 = $plaintext
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  399     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 64> RECV_INIT                                         RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435425) null ]
+  401     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       <154> ISSET_ISEMPTY_CV                                  RES[  IS_TMP_VAR ~5 ]       OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          4*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~5 ] OP2[ , ->8 ]
+  403     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          7*       < 62> RETURN                                                    OP1[  IS_CV !0 ]
+  406     8*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          9*       <123> TYPE_CHECK                                    2   RES[  IS_TMP_VAR ~6 ]       OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         10*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~6 ] OP2[ , ->15 ]
+  407    11*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         12*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435404) 'get' ]
+         13*       < 60> DO_FCALL                                      0   RES[  IS_VAR $7 ]       OP1[  IS_UNUSED  ]
+         14*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_VAR $7 ]
+  410    15*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         16*       <123> TYPE_CHECK                                    2   RES[  IS_TMP_VAR ~9 ]       OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         17*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~9 ] OP2[ , ->21 ]
+  412    18*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         19*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         20*       < 62> RETURN                                                    OP1[  IS_CV !0 ]
+  415    21*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         22*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435386) 'base64_decode' ]
+         23*       <117> SEND_VAR                                                  OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         24*       < 60> DO_FCALL                                      0   RES[  IS_VAR $10 ]      OP1[  IS_UNUSED  ]
+         25*       < 22> ASSIGN                                                    OP1[  IS_CV !0 ] OP2[ ,  IS_VAR $10 ]
+  417    26*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         27*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435377) 'mb_substr' ]
+         28*       <117> SEND_VAR                                                  OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         29*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435374) 0 ]
+         30*       < 99> FETCH_CONSTANT                                    RES[  IS_TMP_VAR ~12 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435373) 'SODIUM_CRYPTO_AEAD_XCHACHA20POLY1305_IETF_NPUBBYTES' ]
+         31*       < 65> SEND_VAL                                                  OP1[  IS_TMP_VAR ~12 ]
+         32*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435371) '8bit' ]
+         33*       < 60> DO_FCALL                                      0   RES[  IS_VAR $13 ]      OP1[  IS_UNUSED  ]
+         34*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_VAR $13 ]
+  418    35*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         36*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435364) 'mb_strlen' ]
+         37*       <117> SEND_VAR                                                  OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         38*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435361) '8bit' ]
+         39*       < 60> DO_FCALL                                      0   RES[  IS_VAR $15 ]      OP1[  IS_UNUSED  ]
+         40*       < 99> FETCH_CONSTANT                                    RES[  IS_TMP_VAR ~16 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435358) 'SODIUM_CRYPTO_AEAD_XCHACHA20POLY1305_IETF_NPUBBYTES' ]
+         41*       < 17> IS_NOT_IDENTICAL                                  RES[  IS_TMP_VAR ~17 ]      OP1[  IS_VAR $15 ] OP2[ ,  IS_TMP_VAR ~16 ]
+         42*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~17 ] OP2[ , ->50 ]
+  419    43*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         44*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435352) 'trigger_error' ]
+  420    45*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435351) 'Unable+to+extract+nonce+from+string.+It+may+not+have+been+crypted+with+sodium+functions.' ]
+  421    46*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435350) 512 ]
+         47*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  423    48*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         49*       < 62> RETURN                                                    OP1[  IS_CONST (268435345) '' ]
+  426    50*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         51*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435342) 'mb_substr' ]
+         52*       <117> SEND_VAR                                                  OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         53*       < 99> FETCH_CONSTANT                                    RES[  IS_TMP_VAR ~19 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435339) 'SODIUM_CRYPTO_AEAD_XCHACHA20POLY1305_IETF_NPUBBYTES' ]
+         54*       < 65> SEND_VAL                                                  OP1[  IS_TMP_VAR ~19 ]
+         55*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435337) null ]
+         56*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435336) '8bit' ]
+         57*       < 60> DO_FCALL                                      0   RES[  IS_VAR $20 ]      OP1[  IS_UNUSED  ]
+         58*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_VAR $20 ]
+  428    59*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         60*       < 59> INIT_FCALL_BY_NAME                                        OP2[  IS_CONST (268435329) 'sodium_crypto_aead_xchacha20poly1305_ietf_decrypt' ]
+  429    61*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         62*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         63*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         64*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         65*       < 60> DO_FCALL                                      0   RES[  IS_VAR $22 ]      OP1[  IS_UNUSED  ]
+  428    66*       < 22> ASSIGN                                                    OP1[  IS_CV !4 ] OP2[ ,  IS_VAR $22 ]
+  434    67*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         68*       <123> TYPE_CHECK                                    4   RES[  IS_TMP_VAR ~24 ]      OP1[  IS_CV !4 ] OP2[  IS_UNUSED  ]
+         69*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~24 ] OP2[ , ->77 ]
+  435    70*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         71*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435309) 'trigger_error' ]
+  436    72*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435308) 'Unable+to+decrypt+string.+It+may+have+been+crypted+with+another+key.' ]
+  437    73*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435307) 512 ]
+         74*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  439    75*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         76*       < 62> RETURN                                                    OP1[  IS_CONST (268435302) '' ]
+  441    77*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         78*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_CV !4 ] OP2[  IS_UNUSED  ]
+         79*       < 62> RETURN                                                    OP1[  IS_CV !4 ]
+  442    80*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         81*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         82*       < 62> RETURN                                                    OP1[  IS_CONST (268435291) null ]
+
+End of function decrypt
+
+Function decryptusinglegacykey:
+[+]Function Source Class Name: GLPIKey
+[*]Start of arg_info extract:
+[*]arg_info num_args:2
+[*]Function return type:string
+
+[*]ArgInfoNo**0**
+[*]name:string
+[*]type:string
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:key
+[*]type:?string
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\GLPIKey.php
+function name:  decryptUsingLegacyKey
+number of ops:  70
+compiled vars:  !0 = $string, !1 = $key, !2 = $result, !3 = $i, !4 = $char, !5 = $keychar
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  453     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 64> RECV_INIT                                         RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435435) null ]
+  456     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       <123> TYPE_CHECK                                    2   RES[  IS_TMP_VAR ~6 ]       OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+          4*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~6 ] OP2[ , ->9 ]
+  457     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435426) 'getLegacyKey' ]
+          7*       < 60> DO_FCALL                                      0   RES[  IS_VAR $7 ]       OP1[  IS_UNUSED  ]
+          8*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_VAR $7 ]
+  460     9*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         10*       <123> TYPE_CHECK                                    2   RES[  IS_TMP_VAR ~9 ]       OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         11*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~9 ] OP2[ , ->15 ]
+  462    12*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         13*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         14*       < 62> RETURN                                                    OP1[  IS_CV !0 ]
+  465    15*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         16*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435408) '' ]
+  466    17*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         18*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435405) 'base64_decode' ]
+         19*       <117> SEND_VAR                                                  OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         20*       < 60> DO_FCALL                                      0   RES[  IS_VAR $11 ]      OP1[  IS_UNUSED  ]
+         21*       < 22> ASSIGN                                                    OP1[  IS_CV !0 ] OP2[ ,  IS_VAR $11 ]
+  468    22*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         23*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435396) 0 ]
+         24*       < 42> JMP                                                       OP1[ ->57 ]
+  469    25*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         26*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435391) 'substr' ]
+         27*       <117> SEND_VAR                                                  OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         28*       <117> SEND_VAR                                                  OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         29*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435386) 1 ]
+         30*       < 60> DO_FCALL                                      0   RES[  IS_VAR $14 ]      OP1[  IS_UNUSED  ]
+         31*       < 22> ASSIGN                                                    OP1[  IS_CV !4 ] OP2[ ,  IS_VAR $14 ]
+  470    32*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         33*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435379) 'substr' ]
+         34*       <117> SEND_VAR                                                  OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         35*       <121> STRLEN                                            RES[  IS_TMP_VAR ~16 ]      OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         36*       <  5> MOD                                               RES[  IS_TMP_VAR ~17 ]      OP1[  IS_CV !3 ] OP2[ ,  IS_TMP_VAR ~16 ]
+         37*       <  2> SUB                                               RES[  IS_TMP_VAR ~18 ]      OP1[  IS_TMP_VAR ~17 ] OP2[ ,  IS_CONST (268435372) 1 ]
+         38*       < 65> SEND_VAL                                                  OP1[  IS_TMP_VAR ~18 ]
+         39*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435369) 1 ]
+         40*       < 60> DO_FCALL                                      0   RES[  IS_VAR $19 ]      OP1[  IS_UNUSED  ]
+         41*       < 22> ASSIGN                                                    OP1[  IS_CV !5 ] OP2[ ,  IS_VAR $19 ]
+  471    42*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         43*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435362) 'chr' ]
+         44*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435361) 'ord' ]
+         45*       <117> SEND_VAR                                                  OP1[  IS_CV !4 ] OP2[  IS_UNUSED  ]
+         46*       < 60> DO_FCALL                                      0   RES[  IS_VAR $21 ]      OP1[  IS_UNUSED  ]
+         47*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435356) 'ord' ]
+         48*       <117> SEND_VAR                                                  OP1[  IS_CV !5 ] OP2[  IS_UNUSED  ]
+         49*       < 60> DO_FCALL                                      0   RES[  IS_VAR $22 ]      OP1[  IS_UNUSED  ]
+         50*       <  2> SUB                                               RES[  IS_TMP_VAR ~23 ]      OP1[  IS_VAR $21 ] OP2[ ,  IS_VAR $22 ]
+         51*       < 65> SEND_VAL                                                  OP1[  IS_TMP_VAR ~23 ]
+         52*       < 60> DO_FCALL                                      0   RES[  IS_VAR $24 ]      OP1[  IS_UNUSED  ]
+         53*       < 22> ASSIGN                                                    OP1[  IS_CV !4 ] OP2[ ,  IS_VAR $24 ]
+  472    54*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         55*       < 26> ASSIGN_OP                    .=               8           OP1[  IS_CV !2 ] OP2[ ,  IS_CV !4 ]
+  468    56*       < 34> PRE_INC                                                   OP1[  IS_CV !3 ]
+         57*       <121> STRLEN                                            RES[  IS_TMP_VAR ~28 ]      OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         58*       < 20> IS_SMALLER                                        RES[  IS_TMP_VAR ~29 ]      OP1[  IS_CV !3 ] OP2[ ,  IS_TMP_VAR ~28 ]
+         59*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         60*       < 44> JMPNZ                                                     OP1[  IS_TMP_VAR ~29 ] OP2[ , ->25 ]
+  475    61*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         62*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435327) 'Glpi%5CToolbox%5CSanitizer' ] OP2[ ,  IS_CONST (268435329) 'unsanitize' ]
+         63*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         64*       < 60> DO_FCALL                                      0   RES[  IS_VAR $30 ]      OP1[  IS_UNUSED  ]
+         65*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_VAR $30 ] OP2[  IS_UNUSED  ]
+         66*       < 62> RETURN                                                    OP1[  IS_VAR $30 ]
+  476    67*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         68*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         69*       < 62> RETURN                                                    OP1[  IS_CONST (268435317) null ]
+
+End of function decryptusinglegacykey
+
+End of class GLPIKey.
+

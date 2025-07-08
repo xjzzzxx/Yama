@@ -1,0 +1,130 @@
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\sabre\vobject\lib\TimezoneGuesser\FindFromTimezoneIdentifier.php
+function name:  (null)
+number of ops:  6
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+    3     0*       <  0> NOP                                                      
+    5     1*       <  0> NOP                                                      
+    7     2*       <  0> NOP                                                      
+   13     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       <144> DECLARE_CLASS                                             OP1[  IS_CONST (268435439) 'sabre%5Cvobject%5Ctimezoneguesser%5Cfindfromtimezoneidentifier' ] OP2[  IS_UNUSED  ]
+   72     5*       < 62> RETURN                                                    OP1[  IS_CONST (268435439) 1 ]
+
+Class Sabre\VObject\TimezoneGuesser\FindFromTimezoneIdentifier:
+[+]Class Parent Name: NULL
+End Trait extract
+Start Properties extract:
+Properties: NULL
+End Properties extract
+
+Function find:
+[+]Function Source Class Name: Sabre\VObject\TimezoneGuesser\FindFromTimezoneIdentifier
+[*]Start of arg_info extract:
+[*]arg_info num_args:2
+[*]Function return type:?DateTimeZone
+
+[*]ArgInfoNo**0**
+[*]name:tzid
+[*]type:string
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:failIfUncertain
+[*]type:bool
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\sabre\vobject\lib\TimezoneGuesser\FindFromTimezoneIdentifier.php
+function name:  find
+number of ops:  53
+compiled vars:  !0 = $tzid, !1 = $failIfUncertain, !2 = $tzIdentifiers, !3 = $matches, !4 = $e
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   15     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 64> RECV_INIT                                         RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435392) <false> ]
+   28     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       <115> ISSET_ISEMPTY_DIM_OBJ                         0   RES[  IS_TMP_VAR ~5 ]       OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435389) 0 ]
+          4*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~6 ]       OP1[  IS_TMP_VAR ~5 ]
+          5*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~6 ] OP2[ , ->8 ]
+   29     6*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          7*       < 62> RETURN                                                    OP1[  IS_CONST (268435382) null ]
+   31     8*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          9*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~7 ]       OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435379) 0 ]
+         10*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~8 ]       OP1[  IS_TMP_VAR ~7 ] OP2[ ,  IS_CONST (268435378) '%28' ]
+         11*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~8 ] OP2[ , ->14 ]
+   32    12*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         13*       < 62> RETURN                                                    OP1[  IS_CONST (268435373) null ]
+   40    14*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         15*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435370) 'DateTimeZone' ] OP2[ ,  IS_CONST (268435372) 'listIdentifiers' ]
+         16*       < 60> DO_FCALL                                      0   RES[  IS_VAR $9 ]       OP1[  IS_UNUSED  ]
+         17*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_VAR $9 ]
+   42    18*       <  0> NOP                                                      
+   44    19*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         20*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435364) 'Sabre%5CVObject%5CTimezoneGuesser%5Cin_array' ]
+         21*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         22*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         23*       < 60> DO_FCALL                                      0   RES[  IS_VAR $11 ]      OP1[  IS_UNUSED  ]
+         24*       < 47> JMPNZ_EX                                          RES[  IS_TMP_VAR ~12 ]      OP1[  IS_VAR $11 ] OP2[ , ->31 ]
+   45    25*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435357) 'Sabre%5CVObject%5CTimezoneGuesser%5Cpreg_match' ]
+         26*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435358) '%2F%5EGMT%28%5C%2B%7C-%29%28%5B0-9%5D%7B4%7D%29%24%2F' ] OP2[  IS_UNUSED  ]
+         27*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         28*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         29*       < 60> DO_FCALL                                      0   RES[  IS_VAR $13 ]      OP1[  IS_UNUSED  ]
+         30*       < 52> BOOL                                              RES[  IS_TMP_VAR ~12 ]      OP1[  IS_VAR $13 ]
+         31*       < 47> JMPNZ_EX                                          RES[  IS_TMP_VAR ~12 ]      OP1[  IS_TMP_VAR ~12 ] OP2[ , ->39 ]
+   46    32*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435347) 'Sabre%5CVObject%5CTimezoneGuesser%5Cin_array' ]
+         33*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         34*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435346) 'getIdentifiersBC' ]
+         35*       < 60> DO_FCALL                                      0   RES[  IS_VAR $14 ]      OP1[  IS_UNUSED  ]
+         36*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $14 ] OP2[  IS_UNUSED  ]
+         37*       < 60> DO_FCALL                                      0   RES[  IS_VAR $15 ]      OP1[  IS_UNUSED  ]
+         38*       < 52> BOOL                                              RES[  IS_TMP_VAR ~12 ]      OP1[  IS_VAR $15 ]
+         39*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~12 ] OP2[ , ->46 ]
+   48    40*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         41*       < 68> NEW                                               RES[  IS_VAR $16 ]      OP1[ 'DateTimeZone' ]
+         42*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         43*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         44*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_VAR $16 ] OP2[  IS_UNUSED  ]
+         45*       < 62> RETURN                                                    OP1[  IS_VAR $16 ]
+         46*       < 42> JMP                                                       OP1[ ->48 ]
+   50    47*       <107> CATCH                                       last  RES[  IS_CV !4 ]       OP1[  IS_CONST (268435324) 'Exception' ]
+   53    48*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         49*       < 62> RETURN                                                    OP1[  IS_CONST (268435322) null ]
+   54    50*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         51*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         52*       < 62> RETURN                                                    OP1[  IS_CONST (268435317) null ]
+
+End of function find
+
+Function getidentifiersbc:
+[+]Function Source Class Name: Sabre\VObject\TimezoneGuesser\FindFromTimezoneIdentifier
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\sabre\vobject\lib\TimezoneGuesser\FindFromTimezoneIdentifier.php
+function name:  getIdentifiersBC
+number of ops:  5
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   69     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 73> INCLUDE_OR_EVAL                                   RES[  IS_VAR $0 ]       OP1[  IS_CONST (268435443) 'G%3A%5Cdesktop%5CYama%5Capp%5Cglpi-10.0.16%5Cglpi%5Cvendor%5Csabre%5Cvobject%5Clib%5CTimezoneGuesser%2F..%2Ftimezonedata%2Fphp-bc.php' ] OP2[ INCLUDE ]
+          2*       < 62> RETURN                                                    OP1[  IS_VAR $0 ]
+   70     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       < 62> RETURN                                                    OP1[  IS_CONST (268435438) null ]
+
+End of function getidentifiersbc
+
+End of class Sabre\VObject\TimezoneGuesser\FindFromTimezoneIdentifier.
+

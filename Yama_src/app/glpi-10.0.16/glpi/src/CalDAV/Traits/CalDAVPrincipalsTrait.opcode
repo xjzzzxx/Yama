@@ -1,0 +1,346 @@
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\CalDAV\Traits\CalDAVPrincipalsTrait.php
+function name:  (null)
+number of ops:  8
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   36     0*       <  0> NOP                                                      
+   38     1*       <  0> NOP                                                      
+   39     2*       <  0> NOP                                                      
+   40     3*       <  0> NOP                                                      
+   41     4*       <  0> NOP                                                      
+   42     5*       <  0> NOP                                                      
+  183     6*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          7*       < 62> RETURN                                                    OP1[  IS_CONST (268435441) 1 ]
+
+Class Glpi\CalDAV\Traits\CalDAVPrincipalsTrait:
+[+]Class Parent Name: NULL
+End Trait extract
+Start Properties extract:
+Properties: NULL
+End Properties extract
+
+Function canviewprincipalobjects:
+[+]Function Source Class Name: Glpi\CalDAV\Traits\CalDAVPrincipalsTrait
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:bool
+
+[*]ArgInfoNo**0**
+[*]name:path
+[*]type:string
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\CalDAV\Traits\CalDAVPrincipalsTrait.php
+function name:  canViewPrincipalObjects
+number of ops:  43
+compiled vars:  !0 = $path, !1 = $principal_type, !2 = $can_view
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   59     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+   61     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435425) 'getPrincipalItemtypeFromUri' ]
+          3*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          4*       < 60> DO_FCALL                                      0   RES[  IS_VAR $3 ]       OP1[  IS_UNUSED  ]
+          5*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_VAR $3 ]
+   62     6*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          7*       <188> SWITCH_STRING                                             OP1[  IS_CV !1 ] OP2[ , [ 'Group':->13, 'User':->23, ] ] EXT_JMP_REL[ , ->33 ]
+          8*       < 18> IS_EQUAL                                          RES[  ]         OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435416) 'Group' ]
+          9*       < 44> JMPNZ                                                     OP1[  IS_TMP_VAR ~5 ] OP2[ , ->13 ]
+         10*       < 18> IS_EQUAL                                          RES[  ]         OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435413) 'User' ]
+         11*       < 44> JMPNZ                                                     OP1[  IS_TMP_VAR ~5 ] OP2[ , ->23 ]
+         12*       < 42> JMP                                                       OP1[ ->33 ]
+   64    13*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         14*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435406) 'canViewGroupObjects' ]
+         15*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435406) 'getGroupIdFromPrincipalUri' ]
+         16*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         17*       < 60> DO_FCALL                                      0   RES[  IS_VAR $6 ]       OP1[  IS_UNUSED  ]
+         18*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $6 ] OP2[  IS_UNUSED  ]
+         19*       < 60> DO_FCALL                                      0   RES[  IS_VAR $7 ]       OP1[  IS_UNUSED  ]
+         20*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_VAR $7 ]
+   65    21*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         22*       < 42> JMP                                                       OP1[ ->37 ]
+   67    23*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         24*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435390) 'canViewUserObjects' ]
+         25*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435390) 'getUsernameFromPrincipalUri' ]
+         26*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         27*       < 60> DO_FCALL                                      0   RES[  IS_VAR $9 ]       OP1[  IS_UNUSED  ]
+         28*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $9 ] OP2[  IS_UNUSED  ]
+         29*       < 60> DO_FCALL                                      0   RES[  IS_VAR $10 ]      OP1[  IS_UNUSED  ]
+         30*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_VAR $10 ]
+   68    31*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         32*       < 42> JMP                                                       OP1[ ->37 ]
+   70    33*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         34*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435374) <false> ]
+   71    35*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         36*       < 42> JMP                                                       OP1[ ->37 ]
+   74    37*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         38*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         39*       < 62> RETURN                                                    OP1[  IS_CV !2 ]
+   75    40*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         41*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         42*       < 62> RETURN                                                    OP1[  IS_CONST (268435359) null ]
+
+End of function canviewprincipalobjects
+
+Function canviewgroupobjects:
+[+]Function Source Class Name: Glpi\CalDAV\Traits\CalDAVPrincipalsTrait
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:bool
+
+[*]ArgInfoNo**0**
+[*]name:group_id
+[*]type:int
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\CalDAV\Traits\CalDAVPrincipalsTrait.php
+function name:  canViewGroupObjects
+number of ops:  22
+compiled vars:  !0 = $group_id, !1 = $groups_iterator, !2 = $group
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   84     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+   86     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435446) 'getVisibleGroupsIterator' ]
+          3*       < 60> DO_FCALL                                      0   RES[  IS_VAR $3 ]       OP1[  IS_UNUSED  ]
+          4*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_VAR $3 ]
+   87     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       < 77> FE_RESET_R                                        RES[  IS_VAR $5 ]       OP1[  IS_CV !1 ] OP2[ , ->16 ]
+          7*       < 78> FE_FETCH_R                                                OP1[  IS_VAR $5 ] OP2[ ,  IS_CV !2 ] EXT_JMP_REL[ , ->16 ]
+   88     8*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          9*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~6 ]       OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435434) 'id' ]
+         10*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~7 ]       OP1[  IS_CV !0 ] OP2[ ,  IS_TMP_VAR ~6 ]
+         11*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~7 ] OP2[ , ->15 ]
+   89    12*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         13*       <127> FE_FREE                                                   OP1[  IS_VAR $5 ] OP2[  IS_UNUSED  ]
+         14*       < 62> RETURN                                                    OP1[  IS_CONST (268435425) <true> ]
+   87    15*       < 42> JMP                                                       OP1[ ->7 ]
+         16*       <127> FE_FREE                                                   OP1[  IS_VAR $5 ] OP2[  IS_UNUSED  ]
+   93    17*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         18*       < 62> RETURN                                                    OP1[  IS_CONST (268435418) <false> ]
+   94    19*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         20*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         21*       < 62> RETURN                                                    OP1[  IS_CONST (268435413) null ]
+
+End of function canviewgroupobjects
+
+Function canviewuserobjects:
+[+]Function Source Class Name: Glpi\CalDAV\Traits\CalDAVPrincipalsTrait
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:bool
+
+[*]ArgInfoNo**0**
+[*]name:username
+[*]type:string
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\CalDAV\Traits\CalDAVPrincipalsTrait.php
+function name:  canViewUserObjects
+number of ops:  22
+compiled vars:  !0 = $username, !1 = $users_iterator, !2 = $user
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  103     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  105     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435446) 'getVisibleUsersIterator' ]
+          3*       < 60> DO_FCALL                                      0   RES[  IS_VAR $3 ]       OP1[  IS_UNUSED  ]
+          4*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_VAR $3 ]
+  106     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       < 77> FE_RESET_R                                        RES[  IS_VAR $5 ]       OP1[  IS_CV !1 ] OP2[ , ->16 ]
+          7*       < 78> FE_FETCH_R                                                OP1[  IS_VAR $5 ] OP2[ ,  IS_CV !2 ] EXT_JMP_REL[ , ->16 ]
+  107     8*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          9*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~6 ]       OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435434) 'name' ]
+         10*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~7 ]       OP1[  IS_CV !0 ] OP2[ ,  IS_TMP_VAR ~6 ]
+         11*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~7 ] OP2[ , ->15 ]
+  108    12*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         13*       <127> FE_FREE                                                   OP1[  IS_VAR $5 ] OP2[  IS_UNUSED  ]
+         14*       < 62> RETURN                                                    OP1[  IS_CONST (268435425) <true> ]
+  106    15*       < 42> JMP                                                       OP1[ ->7 ]
+         16*       <127> FE_FREE                                                   OP1[  IS_VAR $5 ] OP2[  IS_UNUSED  ]
+  112    17*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         18*       < 62> RETURN                                                    OP1[  IS_CONST (268435418) <false> ]
+  113    19*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         20*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         21*       < 62> RETURN                                                    OP1[  IS_CONST (268435413) null ]
+
+End of function canviewuserobjects
+
+Function getvisiblegroupsiterator:
+[+]Function Source Class Name: Glpi\CalDAV\Traits\CalDAVPrincipalsTrait
+[*]Start of arg_info extract:
+[*]arg_info num_args:0
+[*]Function return type:Iterator
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\CalDAV\Traits\CalDAVPrincipalsTrait.php
+function name:  getVisibleGroupsIterator
+number of ops:  67
+compiled vars:  !0 = $DB, !1 = $groups_criteria, !2 = $groups_iterator
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  124     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       <168> BIND_GLOBAL                                               OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435404) 'DB' ]
+  127     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435401) 'Session' ] OP2[ ,  IS_CONST (268435403) 'haveRight' ]
+          4*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          5*       <177> FETCH_STATIC_PROP_FUNC_ARG   unknown              RES[  IS_VAR $3 ]       OP1[  IS_CONST (268435401) 'rightname' ]
+          6*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $3 ] OP2[  IS_UNUSED  ]
+          7*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~4 ]       OP1[  IS_CONST (268435401) 'Planning' ] OP2[ ,  IS_CONST (268435400) 'READALL' ]
+          8*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~4 ] OP2[  IS_UNUSED  ]
+          9*       < 60> DO_FCALL                                      0   RES[  IS_VAR $5 ]       OP1[  IS_UNUSED  ]
+         10*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~6 ]       OP1[  IS_VAR $5 ]
+         11*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~6 ]       OP1[  IS_TMP_VAR ~6 ] OP2[ , ->15 ]
+  128    12*       < 89> FETCH_IS                                          RES[  IS_TMP_VAR ~7 ]       OP1[  IS_CONST (268435393) '_SESSION' ] OP2[  IS_UNUSED  ]
+         13*       <115> ISSET_ISEMPTY_DIM_OBJ                         1   RES[  IS_TMP_VAR ~8 ]       OP1[  IS_TMP_VAR ~7 ] OP2[ ,  IS_CONST (268435392) 'glpigroups' ]
+         14*       < 52> BOOL                                              RES[  IS_TMP_VAR ~6 ]       OP1[  IS_TMP_VAR ~8 ]
+         15*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~6 ] OP2[ , ->21 ]
+  131    16*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         17*       < 68> NEW                                               RES[  IS_VAR $9 ]       OP1[ 'EmptyIterator' ]
+         18*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         19*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_VAR $9 ] OP2[  IS_UNUSED  ]
+         20*       < 62> RETURN                                                    OP1[  IS_VAR $9 ]
+  134    21*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         22*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435377) 'Glpi%5CCalDAV%5CTraits%5CgetEntitiesRestrictCriteria' ]
+  135    23*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435378) 'Group' ] OP2[ ,  IS_CONST (268435380) 'getTable' ]
+         24*       < 60> DO_FCALL                                      0   RES[  IS_VAR $11 ]      OP1[  IS_UNUSED  ]
+         25*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $11 ] OP2[  IS_UNUSED  ]
+  136    26*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435376) 'entities_id' ] OP2[  IS_UNUSED  ]
+         27*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+  137    28*       < 92> FETCH_FUNC_ARG               global               RES[  IS_VAR $12 ]      OP1[  IS_CONST (268435373) '_SESSION' ]
+         29*       < 93> FETCH_DIM_FUNC_ARG                                RES[  IS_VAR $13 ]      OP1[  IS_VAR $12 ] OP2[ ,  IS_CONST (268435372) 'glpiactiveentities' ]
+         30*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $13 ] OP2[  IS_UNUSED  ]
+  138    31*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435369) <true> ] OP2[  IS_UNUSED  ]
+         32*       < 60> DO_FCALL                                      0   RES[  IS_VAR $14 ]      OP1[  IS_UNUSED  ]
+  134    33*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_VAR $14 ]
+  142    34*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         35*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435362) 'is_task' ]
+         36*       <137> OP_DATA                                                   OP1[  IS_CONST (268435361) 1 ] OP2[  IS_UNUSED  ]
+  145    37*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         38*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435358) 'Session' ] OP2[ ,  IS_CONST (268435360) 'haveRight' ]
+         39*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         40*       <177> FETCH_STATIC_PROP_FUNC_ARG   unknown              RES[  IS_VAR $17 ]      OP1[  IS_CONST (268435358) 'rightname' ]
+         41*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $17 ] OP2[  IS_UNUSED  ]
+         42*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~18 ]      OP1[  IS_CONST (268435358) 'Planning' ] OP2[ ,  IS_CONST (268435357) 'READALL' ]
+         43*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~18 ] OP2[  IS_UNUSED  ]
+         44*       < 60> DO_FCALL                                      0   RES[  IS_VAR $19 ]      OP1[  IS_UNUSED  ]
+         45*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~20 ]      OP1[  IS_VAR $19 ]
+         46*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~20 ] OP2[ , ->52 ]
+  146    47*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         48*       < 80> FETCH_R                      global               RES[  IS_TMP_VAR ~22 ]      OP1[  IS_CONST (268435349) '_SESSION' ]
+         49*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~23 ]      OP1[  IS_TMP_VAR ~22 ] OP2[ ,  IS_CONST (268435348) 'glpigroups' ]
+         50*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435344) 'id' ]
+         51*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~23 ] OP2[  IS_UNUSED  ]
+  149    52*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         53*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435341) 'request' ]
+  151    54*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435341) 'Group' ] OP2[ ,  IS_CONST (268435343) 'getTable' ]
+         55*       < 60> DO_FCALL                                      0   RES[  IS_VAR $24 ]      OP1[  IS_UNUSED  ]
+         56*       < 71> INIT_ARRAY                                        RES[  IS_TMP_VAR ~25 ]      OP1[  IS_VAR $24 ] OP2[ ,  IS_CONST (268435341) 'FROM' ]
+  152    57*       < 72> ADD_ARRAY_ELEMENT                                 RES[  IS_TMP_VAR ~25 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435340) 'WHERE' ]
+         58*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~25 ] OP2[  IS_UNUSED  ]
+         59*       < 60> DO_FCALL                                      0   RES[  IS_VAR $26 ]      OP1[  IS_UNUSED  ]
+  149    60*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_VAR $26 ]
+  156    61*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         62*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         63*       < 62> RETURN                                                    OP1[  IS_CV !2 ]
+  157    64*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         65*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         66*       < 62> RETURN                                                    OP1[  IS_CONST (268435323) null ]
+
+End of function getvisiblegroupsiterator
+
+Function getvisibleusersiterator:
+[+]Function Source Class Name: Glpi\CalDAV\Traits\CalDAVPrincipalsTrait
+[*]Start of arg_info extract:
+[*]arg_info num_args:0
+[*]Function return type:Iterator
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\CalDAV\Traits\CalDAVPrincipalsTrait.php
+function name:  getVisibleUsersIterator
+number of ops:  50
+compiled vars:  !0 = $rights
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  167     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435398) 'Session' ] OP2[ ,  IS_CONST (268435400) 'haveRightsOr' ]
+          2*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       <177> FETCH_STATIC_PROP_FUNC_ARG   unknown              RES[  IS_VAR $1 ]       OP1[  IS_CONST (268435398) 'rightname' ]
+          4*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $1 ] OP2[  IS_UNUSED  ]
+          5*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~2 ]       OP1[  IS_CONST (268435398) 'Planning' ] OP2[ ,  IS_CONST (268435397) 'READALL' ]
+          6*       < 71> INIT_ARRAY                                        RES[  IS_TMP_VAR ~3 ]       OP1[  IS_TMP_VAR ~2 ] OP2[  IS_UNUSED  ]
+          7*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~4 ]       OP1[  IS_CONST (268435397) 'Planning' ] OP2[ ,  IS_CONST (268435396) 'READGROUP' ]
+          8*       < 72> ADD_ARRAY_ELEMENT                                 RES[  IS_TMP_VAR ~3 ]       OP1[  IS_TMP_VAR ~4 ] OP2[  IS_UNUSED  ]
+          9*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~3 ] OP2[  IS_UNUSED  ]
+         10*       < 60> DO_FCALL                                      0   RES[  IS_VAR $5 ]       OP1[  IS_UNUSED  ]
+         11*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~6 ]       OP1[  IS_VAR $5 ]
+         12*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~6 ] OP2[ , ->16 ]
+  169    13*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         14*       < 22> ASSIGN                                                    OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435385) 'id' ]
+         15*       < 42> JMP                                                       OP1[ ->40 ]
+  171    16*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         17*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435380) 'Session' ] OP2[ ,  IS_CONST (268435382) 'haveRight' ]
+         18*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         19*       <177> FETCH_STATIC_PROP_FUNC_ARG   unknown              RES[  IS_VAR $8 ]       OP1[  IS_CONST (268435380) 'rightname' ]
+         20*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $8 ] OP2[  IS_UNUSED  ]
+         21*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~9 ]       OP1[  IS_CONST (268435380) 'Planning' ] OP2[ ,  IS_CONST (268435379) 'READGROUP' ]
+         22*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~9 ] OP2[  IS_UNUSED  ]
+         23*       < 60> DO_FCALL                                      0   RES[  IS_VAR $10 ]      OP1[  IS_UNUSED  ]
+         24*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~11 ]      OP1[  IS_VAR $10 ] OP2[ , ->34 ]
+  172    25*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435374) 'Session' ] OP2[ ,  IS_CONST (268435376) 'haveRight' ]
+         26*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         27*       <177> FETCH_STATIC_PROP_FUNC_ARG   unknown              RES[  IS_VAR $12 ]      OP1[  IS_CONST (268435374) 'rightname' ]
+         28*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $12 ] OP2[  IS_UNUSED  ]
+         29*       <181> FETCH_CLASS_CONSTANT                              RES[  IS_TMP_VAR ~13 ]      OP1[  IS_CONST (268435374) 'Planning' ] OP2[ ,  IS_CONST (268435373) 'READALL' ]
+         30*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~13 ] OP2[  IS_UNUSED  ]
+         31*       < 60> DO_FCALL                                      0   RES[  IS_VAR $14 ]      OP1[  IS_UNUSED  ]
+         32*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~15 ]      OP1[  IS_VAR $14 ]
+         33*       < 52> BOOL                                              RES[  IS_TMP_VAR ~11 ]      OP1[  IS_TMP_VAR ~15 ]
+         34*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~11 ] OP2[ , ->38 ]
+  175    35*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         36*       < 22> ASSIGN                                                    OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435362) 'groups' ]
+         37*       < 42> JMP                                                       OP1[ ->40 ]
+  178    38*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         39*       < 22> ASSIGN                                                    OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435357) <array> ]
+  180    40*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         41*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435354) 'User' ] OP2[ ,  IS_CONST (268435356) 'getSqlSearchResult' ]
+         42*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435356) <false> ] OP2[  IS_UNUSED  ]
+         43*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         44*       < 60> DO_FCALL                                      0   RES[  IS_VAR $18 ]      OP1[  IS_UNUSED  ]
+         45*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_VAR $18 ] OP2[  IS_UNUSED  ]
+         46*       < 62> RETURN                                                    OP1[  IS_VAR $18 ]
+  181    47*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         48*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         49*       < 62> RETURN                                                    OP1[  IS_CONST (268435343) null ]
+
+End of function getvisibleusersiterator
+
+End of class Glpi\CalDAV\Traits\CalDAVPrincipalsTrait.
+

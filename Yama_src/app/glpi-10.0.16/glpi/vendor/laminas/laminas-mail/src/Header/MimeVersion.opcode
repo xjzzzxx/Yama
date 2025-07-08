@@ -1,0 +1,296 @@
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\laminas\laminas-mail\src\Header\MimeVersion.php
+function name:  (null)
+number of ops:  4
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+    3     0*       <  0> NOP                                                      
+    5     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       <144> DECLARE_CLASS                                             OP1[  IS_CONST (268435449) 'laminas%5Cmail%5Cheader%5Cmimeversion' ] OP2[  IS_UNUSED  ]
+   82     3*       < 62> RETURN                                                    OP1[  IS_CONST (268435449) 1 ]
+
+Class Laminas\Mail\Header\MimeVersion:
+[+]Class Parent Name: NULL
+End Trait extract
+Start Properties extract:
+Key: version, Value: 1.0, Type: Normal
+End Properties extract.
+
+Function fromstring:
+[+]Function Source Class Name: Laminas\Mail\Header\MimeVersion
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:headerLine
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\laminas\laminas-mail\src\Header\MimeVersion.php
+function name:  fromString
+number of ops:  47
+compiled vars:  !0 = $headerLine, !1 = $name, !2 = $value, !3 = $header, !4 = $matches
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   12     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+   14     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435427) 'Laminas%5CMail%5CHeader%5CGenericHeader' ] OP2[ ,  IS_CONST (268435429) 'splitHeaderLine' ]
+          3*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          4*       < 60> DO_FCALL                                      0   RES[  IS_VAR $5 ]       OP1[  IS_UNUSED  ]
+          5*       < 98> FETCH_LIST_R                                      RES[  IS_VAR $6 ]       OP1[  IS_VAR $5 ] OP2[ ,  IS_CONST (268435425) 0 ]
+          6*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_VAR $6 ]
+          7*       < 98> FETCH_LIST_R                                      RES[  IS_VAR $8 ]       OP1[  IS_VAR $5 ] OP2[ ,  IS_CONST (268435422) 1 ]
+          8*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_VAR $8 ]
+          9*       < 70> FREE                                                      OP1[  IS_VAR $5 ]
+   15    10*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         11*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435415) 'Laminas%5CMail%5CHeader%5CHeaderWrap' ] OP2[ ,  IS_CONST (268435417) 'mimeDecodeValue' ]
+         12*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         13*       < 60> DO_FCALL                                      0   RES[  IS_VAR $10 ]      OP1[  IS_UNUSED  ]
+         14*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_VAR $10 ]
+   18    15*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         16*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435409) 'Laminas%5CMail%5CHeader%5Cstrtolower' ]
+         17*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         18*       < 60> DO_FCALL                                      0   RES[  IS_VAR $12 ]      OP1[  IS_UNUSED  ]
+         19*       < 17> IS_NOT_IDENTICAL                                  RES[  IS_TMP_VAR ~13 ]      OP1[  IS_VAR $12 ] OP2[ ,  IS_CONST (268435406) 'mime-version' ]
+         20*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~13 ] OP2[ , ->26 ]
+   19    21*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         22*       < 68> NEW                                               RES[  IS_VAR $14 ]      OP1[ 'Laminas%5CMail%5CHeader%5CException%5CInvalidArgumentException' ]
+         23*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435401) 'Invalid+header+line+for+MIME-Version+string' ] OP2[  IS_UNUSED  ]
+         24*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         25*       <108> THROW                                         0           OP1[  IS_VAR $14 ] OP2[  IS_UNUSED  ]
+   23    26*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         27*       < 68> NEW                          static               RES[  IS_VAR $16 ]     
+         28*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         29*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_VAR $16 ]
+   24    30*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         31*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435386) 'Laminas%5CMail%5CHeader%5Cpreg_match' ]
+         32*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435387) '%2F%5E%28%3FP%3Cversion%3E%5Cd%2B%5C.%5Cd%2B%29%24%2F' ] OP2[  IS_UNUSED  ]
+         33*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         34*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !4 ] OP2[  IS_UNUSED  ]
+         35*       < 60> DO_FCALL                                      0   RES[  IS_VAR $19 ]      OP1[  IS_UNUSED  ]
+         36*       < 43> JMPZ                                                      OP1[  IS_VAR $19 ] OP2[ , ->43 ]
+   25    37*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         38*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435376) 'setVersion' ]
+         39*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         40*       < 93> FETCH_DIM_FUNC_ARG                                RES[  IS_VAR $20 ]      OP1[  IS_CV !4 ] OP2[ ,  IS_CONST (268435374) 'version' ]
+         41*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $20 ] OP2[  IS_UNUSED  ]
+         42*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+   28    43*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         44*       < 62> RETURN                                                    OP1[  IS_CV !3 ]
+   29    45*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         46*       < 62> RETURN                                                    OP1[  IS_CONST (268435363) null ]
+
+End of function fromstring
+
+Function getfieldname:
+[+]Function Source Class Name: Laminas\Mail\Header\MimeVersion
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\laminas\laminas-mail\src\Header\MimeVersion.php
+function name:  getFieldName
+number of ops:  4
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   33     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 62> RETURN                                                    OP1[  IS_CONST (268435452) 'MIME-Version' ]
+   34     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       < 62> RETURN                                                    OP1[  IS_CONST (268435449) null ]
+
+End of function getfieldname
+
+Function getfieldvalue:
+[+]Function Source Class Name: Laminas\Mail\Header\MimeVersion
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:format
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\laminas\laminas-mail\src\Header\MimeVersion.php
+function name:  getFieldValue
+number of ops:  6
+compiled vars:  !0 = $format
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   36     0*       < 64> RECV_INIT                                         RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435451) <const ast> ]
+   38     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~1 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435448) 'version' ]
+          3*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~1 ]
+   39     4*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          5*       < 62> RETURN                                                    OP1[  IS_CONST (268435443) null ]
+
+End of function getfieldvalue
+
+Function setencoding:
+[+]Function Source Class Name: Laminas\Mail\Header\MimeVersion
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:encoding
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\laminas\laminas-mail\src\Header\MimeVersion.php
+function name:  setEncoding
+number of ops:  6
+compiled vars:  !0 = $encoding
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   41     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+   44     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       <184> FETCH_THIS                                        RES[  IS_TMP_VAR ~1 ]       OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~1 ]
+   45     4*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          5*       < 62> RETURN                                                    OP1[  IS_CONST (268435445) null ]
+
+End of function setencoding
+
+Function getencoding:
+[+]Function Source Class Name: Laminas\Mail\Header\MimeVersion
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\laminas\laminas-mail\src\Header\MimeVersion.php
+function name:  getEncoding
+number of ops:  4
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   49     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 62> RETURN                                                    OP1[  IS_CONST (268435452) 'ASCII' ]
+   50     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       < 62> RETURN                                                    OP1[  IS_CONST (268435449) null ]
+
+End of function getencoding
+
+Function tostring:
+[+]Function Source Class Name: Laminas\Mail\Header\MimeVersion
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\laminas\laminas-mail\src\Header\MimeVersion.php
+function name:  toString
+number of ops:  7
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   54     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435450) 'getFieldValue' ]
+          2*       < 60> DO_FCALL                                      0   RES[  IS_VAR $0 ]       OP1[  IS_UNUSED  ]
+          3*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~1 ]       OP1[  IS_CONST (268435448) 'MIME-Version%3A+' ] OP2[ ,  IS_VAR $0 ]
+          4*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~1 ]
+   55     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       < 62> RETURN                                                    OP1[  IS_CONST (268435443) null ]
+
+End of function tostring
+
+Function setversion:
+[+]Function Source Class Name: Laminas\Mail\Header\MimeVersion
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:version
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\laminas\laminas-mail\src\Header\MimeVersion.php
+function name:  setVersion
+number of ops:  21
+compiled vars:  !0 = $version
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   63     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+   65     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435443) 'Laminas%5CMail%5CHeader%5Cpreg_match' ]
+          3*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435444) '%2F%5E%5B1-9%5D%5Cd%2A%5C.%5Cd%2B%24%2F' ] OP2[  IS_UNUSED  ]
+          4*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          5*       < 60> DO_FCALL                                      0   RES[  IS_VAR $1 ]       OP1[  IS_UNUSED  ]
+          6*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~2 ]       OP1[  IS_VAR $1 ]
+          7*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~2 ] OP2[ , ->13 ]
+   66     8*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          9*       < 68> NEW                                               RES[  IS_VAR $3 ]       OP1[ 'Laminas%5CMail%5CHeader%5CException%5CInvalidArgumentException' ]
+         10*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435433) 'Invalid+MIME-Version+value+detected' ] OP2[  IS_UNUSED  ]
+         11*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         12*       <108> THROW                                         0           OP1[  IS_VAR $3 ] OP2[  IS_UNUSED  ]
+   68    13*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         14*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435426) 'version' ]
+         15*       <137> OP_DATA                                                   OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+   69    16*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         17*       <184> FETCH_THIS                                        RES[  IS_TMP_VAR ~6 ]       OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         18*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~6 ]
+   70    19*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         20*       < 62> RETURN                                                    OP1[  IS_CONST (268435415) null ]
+
+End of function setversion
+
+Function getversion:
+[+]Function Source Class Name: Laminas\Mail\Header\MimeVersion
+[*]Start of arg_info extract:
+[*]arg_info num_args: NULL
+[*]End of arg_info extract.
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\laminas\laminas-mail\src\Header\MimeVersion.php
+function name:  getVersion
+number of ops:  5
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   79     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435452) 'version' ]
+          2*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~0 ]
+   80     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       < 62> RETURN                                                    OP1[  IS_CONST (268435447) null ]
+
+End of function getversion
+
+End of class Laminas\Mail\Header\MimeVersion.
+

@@ -1,0 +1,302 @@
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\monolog\monolog\src\Monolog\Registry.php
+function name:  (null)
+number of ops:  5
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+    1     0*       <  0> NOP                                                      
+   12     1*       <  0> NOP                                                      
+   14     2*       <  0> NOP                                                      
+  135     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       < 62> RETURN                                                    OP1[  IS_CONST (268435447) 1 ]
+
+Class Monolog\Registry:
+[+]Class Parent Name: NULL
+End Trait extract
+Start Properties extract:
+Properties: NULL
+End Properties extract
+
+Function addlogger:
+[+]Function Source Class Name: Monolog\Registry
+[*]Start of arg_info extract:
+[*]arg_info num_args:3
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:logger
+[*]type:Monolog\Logger
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:name
+[*]type:?string
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**2**
+[*]name:overwrite
+[*]type:bool
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\monolog\monolog\src\Monolog\Registry.php
+function name:  addLogger
+number of ops:  27
+compiled vars:  !0 = $logger, !1 = $name, !2 = $overwrite
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   56     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 64> RECV_INIT                                         RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435444) null ]
+          2*       < 64> RECV_INIT                                         RES[  IS_CV !2 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435443) <false> ]
+   58     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       <152> JMP_SET                                           RES[  IS_TMP_VAR ~3 ]       OP1[  IS_CV !1 ] OP2[ , ->8 ]
+          5*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435438) 'getName' ]
+          6*       < 60> DO_FCALL                                      0   RES[  IS_VAR $4 ]       OP1[  IS_UNUSED  ]
+          7*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~3 ]       OP1[  IS_VAR $4 ]
+          8*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_TMP_VAR ~3 ]
+   60     9*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         10*       <176> FETCH_STATIC_PROP_IS                              RES[  IS_TMP_VAR ~6 ]       OP1[  IS_CONST (268435430) 'loggers' ] OP2[  IS_UNUSED  ]
+         11*       <115> ISSET_ISEMPTY_DIM_OBJ                         0   RES[  IS_TMP_VAR ~7 ]       OP1[  IS_TMP_VAR ~6 ] OP2[ ,  IS_CV !1 ]
+         12*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~7 ]       OP1[  IS_TMP_VAR ~7 ] OP2[ , ->15 ]
+         13*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~8 ]       OP1[  IS_CV !2 ]
+         14*       < 52> BOOL                                              RES[  IS_TMP_VAR ~7 ]       OP1[  IS_TMP_VAR ~8 ]
+         15*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~7 ] OP2[ , ->21 ]
+   61    16*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         17*       < 68> NEW                                               RES[  IS_VAR $9 ]       OP1[ 'InvalidArgumentException' ]
+         18*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435417) 'Logger+with+the+given+name+already+exists' ] OP2[  IS_UNUSED  ]
+         19*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         20*       <108> THROW                                         0           OP1[  IS_VAR $9 ] OP2[  IS_UNUSED  ]
+   64    21*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         22*       <174> FETCH_STATIC_PROP_W          unknown              RES[  IS_VAR $11 ]      OP1[  IS_CONST (268435410) 'loggers' ] OP2[  IS_UNUSED  ]
+         23*       < 23> ASSIGN_DIM                                                OP1[  IS_VAR $11 ] OP2[ ,  IS_CV !1 ]
+         24*       <137> OP_DATA                                                   OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+   65    25*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         26*       < 62> RETURN                                                    OP1[  IS_CONST (268435403) null ]
+
+End of function addlogger
+
+Function haslogger:
+[+]Function Source Class Name: Monolog\Registry
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:bool
+
+[*]ArgInfoNo**0**
+[*]name:logger
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\monolog\monolog\src\Monolog\Registry.php
+function name:  hasLogger
+number of ops:  25
+compiled vars:  !0 = $logger, !1 = $index
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   72     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+   74     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       <138> INSTANCEOF                                        RES[  IS_TMP_VAR ~2 ]       OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435443) 'Monolog%5CLogger' ]
+          3*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~2 ] OP2[ , ->17 ]
+   75     4*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          5*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435439) 'Monolog%5Carray_search' ]
+          6*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          7*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          8*       <177> FETCH_STATIC_PROP_FUNC_ARG   unknown              RES[  IS_VAR $3 ]       OP1[  IS_CONST (268435436) 'loggers' ]
+          9*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $3 ] OP2[  IS_UNUSED  ]
+         10*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435433) <true> ] OP2[  IS_UNUSED  ]
+         11*       < 60> DO_FCALL                                      0   RES[  IS_VAR $4 ]       OP1[  IS_UNUSED  ]
+         12*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_VAR $4 ]
+   77    13*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         14*       <123> TYPE_CHECK                                  1018   RES[  IS_TMP_VAR ~6 ]       OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         15*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_TMP_VAR ~6 ] OP2[  IS_UNUSED  ]
+         16*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~6 ]
+   80    17*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         18*       <176> FETCH_STATIC_PROP_IS                              RES[  IS_TMP_VAR ~7 ]       OP1[  IS_CONST (268435418) 'loggers' ] OP2[  IS_UNUSED  ]
+         19*       <115> ISSET_ISEMPTY_DIM_OBJ                         0   RES[  IS_TMP_VAR ~8 ]       OP1[  IS_TMP_VAR ~7 ] OP2[ ,  IS_CV !0 ]
+         20*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_TMP_VAR ~8 ] OP2[  IS_UNUSED  ]
+         21*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~8 ]
+   81    22*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         23*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         24*       < 62> RETURN                                                    OP1[  IS_CONST (268435407) null ]
+
+End of function haslogger
+
+Function removelogger:
+[+]Function Source Class Name: Monolog\Registry
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:void
+
+[*]ArgInfoNo**0**
+[*]name:logger
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\monolog\monolog\src\Monolog\Registry.php
+function name:  removeLogger
+number of ops:  24
+compiled vars:  !0 = $logger, !1 = $idx
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   88     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+   90     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       <138> INSTANCEOF                                        RES[  IS_TMP_VAR ~2 ]       OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435442) 'Monolog%5CLogger' ]
+          3*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~2 ] OP2[ , ->19 ]
+   91     4*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          5*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435438) 'Monolog%5Carray_search' ]
+          6*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          7*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          8*       <177> FETCH_STATIC_PROP_FUNC_ARG   unknown              RES[  IS_VAR $3 ]       OP1[  IS_CONST (268435435) 'loggers' ]
+          9*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $3 ] OP2[  IS_UNUSED  ]
+         10*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435432) <true> ] OP2[  IS_UNUSED  ]
+         11*       < 60> DO_FCALL                                      0   RES[  IS_VAR $4 ]       OP1[  IS_UNUSED  ]
+         12*       < 22> ASSIGN                                            RES[  IS_TMP_VAR ~5 ]       OP1[  IS_CV !1 ] OP2[ ,  IS_VAR $4 ]
+         13*       <123> TYPE_CHECK                                  1018   RES[  IS_TMP_VAR ~6 ]       OP1[  IS_TMP_VAR ~5 ] OP2[  IS_UNUSED  ]
+         14*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~6 ] OP2[ , ->18 ]
+   92    15*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         16*       <178> FETCH_STATIC_PROP_UNSET                           RES[  IS_VAR $7 ]       OP1[  IS_CONST (268435421) 'loggers' ] OP2[  IS_UNUSED  ]
+         17*       < 75> UNSET_DIM                                                 OP1[  IS_VAR $7 ] OP2[ ,  IS_CV !1 ]
+         18*       < 42> JMP                                                       OP1[ ->22 ]
+   95    19*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         20*       <178> FETCH_STATIC_PROP_UNSET                           RES[  IS_VAR $8 ]       OP1[  IS_CONST (268435414) 'loggers' ] OP2[  IS_UNUSED  ]
+         21*       < 75> UNSET_DIM                                                 OP1[  IS_VAR $8 ] OP2[ ,  IS_CV !0 ]
+   97    22*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         23*       < 62> RETURN                                                    OP1[  IS_CONST (268435409) null ]
+
+End of function removelogger
+
+Function clear:
+[+]Function Source Class Name: Monolog\Registry
+[*]Start of arg_info extract:
+[*]arg_info num_args:0
+[*]Function return type:void
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\monolog\monolog\src\Monolog\Registry.php
+function name:  clear
+number of ops:  5
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  104     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 25> ASSIGN_STATIC_PROP                                        OP1[  IS_CONST (268435447) 'loggers' ] OP2[  IS_UNUSED  ]
+          2*       <137> OP_DATA                                                   OP1[  IS_CONST (268435446) <array> ] OP2[  IS_UNUSED  ]
+  105     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       < 62> RETURN                                                    OP1[  IS_CONST (268435443) null ]
+
+End of function clear
+
+Function getinstance:
+[+]Function Source Class Name: Monolog\Registry
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:Monolog\Logger
+
+[*]ArgInfoNo**0**
+[*]name:name
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\monolog\monolog\src\Monolog\Registry.php
+function name:  getInstance
+number of ops:  23
+compiled vars:  !0 = $name
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  113     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  115     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       <176> FETCH_STATIC_PROP_IS                              RES[  IS_TMP_VAR ~1 ]       OP1[  IS_CONST (268435443) 'loggers' ] OP2[  IS_UNUSED  ]
+          3*       <115> ISSET_ISEMPTY_DIM_OBJ                         0   RES[  IS_TMP_VAR ~2 ]       OP1[  IS_TMP_VAR ~1 ] OP2[ ,  IS_CV !0 ]
+          4*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~3 ]       OP1[  IS_TMP_VAR ~2 ]
+          5*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~3 ] OP2[ , ->15 ]
+  116     6*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          7*       < 68> NEW                                               RES[  IS_VAR $4 ]       OP1[ 'InvalidArgumentException' ]
+          8*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435434) 'Monolog%5Csprintf' ]
+          9*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435435) 'Requested+%22%25s%22+logger+instance+is+not+in+the+registry' ] OP2[  IS_UNUSED  ]
+         10*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         11*       < 60> DO_FCALL                                      0   RES[  IS_VAR $5 ]       OP1[  IS_UNUSED  ]
+         12*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $5 ] OP2[  IS_UNUSED  ]
+         13*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         14*       <108> THROW                                         0           OP1[  IS_VAR $4 ] OP2[  IS_UNUSED  ]
+  119    15*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         16*       <173> FETCH_STATIC_PROP_R          unknown              RES[  IS_TMP_VAR ~7 ]       OP1[  IS_CONST (268435422) 'loggers' ] OP2[  IS_UNUSED  ]
+         17*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~8 ]       OP1[  IS_TMP_VAR ~7 ] OP2[ ,  IS_CV !0 ]
+         18*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_TMP_VAR ~8 ] OP2[  IS_UNUSED  ]
+         19*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~8 ]
+  120    20*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         21*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         22*       < 62> RETURN                                                    OP1[  IS_CONST (268435411) null ]
+
+End of function getinstance
+
+Function __callstatic:
+[+]Function Source Class Name: Monolog\Registry
+[*]Start of arg_info extract:
+[*]arg_info num_args:2
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:name
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:arguments
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\monolog\monolog\src\Monolog\Registry.php
+function name:  __callStatic
+number of ops:  9
+compiled vars:  !0 = $name, !1 = $arguments
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  130     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 63> RECV                                              RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ]
+  132     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       <113> INIT_STATIC_METHOD_CALL      self                         OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435447) 'getInstance' ]
+          4*       <117> SEND_VAR                                                  OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          5*       < 60> DO_FCALL                                      0   RES[  IS_VAR $2 ]       OP1[  IS_UNUSED  ]
+          6*       < 62> RETURN                                                    OP1[  IS_VAR $2 ]
+  133     7*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          8*       < 62> RETURN                                                    OP1[  IS_CONST (268435439) null ]
+
+End of function __callstatic
+
+End of class Monolog\Registry.
+

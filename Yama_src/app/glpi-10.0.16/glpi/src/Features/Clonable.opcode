@@ -1,0 +1,708 @@
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\Features\Clonable.php
+function name:  (null)
+number of ops:  7
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   36     0*       <  0> NOP                                                      
+   38     1*       <  0> NOP                                                      
+   39     2*       <  0> NOP                                                      
+   40     3*       <  0> NOP                                                      
+   41     4*       <  0> NOP                                                      
+  324     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       < 62> RETURN                                                    OP1[  IS_CONST (268435443) 1 ]
+
+Class Glpi\Features\Clonable:
+[+]Class Parent Name: NULL
+End Trait extract
+Start Properties extract:
+Key: last_clone_index, Value: UNINIT, Type: Normal
+End Properties extract.
+
+Function getclonerelations:
+[+]Function Source Class Name: Glpi\Features\Clonable
+[*]Start of arg_info extract:
+[*]arg_info num_args:0
+[*]Function return type:array
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\Features\Clonable.php
+function name:  getCloneRelations
+number of ops:  3
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   61     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 62> RETURN                                                    OP1[  IS_CONST (268435451) null ]
+
+End of function getclonerelations
+
+Function cleancloneinput:
+[+]Function Source Class Name: Glpi\Features\Clonable
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:array
+
+[*]ArgInfoNo**0**
+[*]name:input
+[*]type:array
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\Features\Clonable.php
+function name:  cleanCloneInput
+number of ops:  22
+compiled vars:  !0 = $input, !1 = $properties_to_clean, !2 = $property
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   72     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+   74     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435431) <array> ]
+   82     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       < 77> FE_RESET_R                                        RES[  IS_VAR $4 ]       OP1[  IS_CV !1 ] OP2[ , ->15 ]
+          5*       < 78> FE_FETCH_R                                                OP1[  IS_VAR $4 ] OP2[ ,  IS_CV !2 ] EXT_JMP_REL[ , ->15 ]
+   83     6*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          7*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435422) 'Glpi%5CFeatures%5Carray_key_exists' ]
+          8*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+          9*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         10*       < 60> DO_FCALL                                      0   RES[  IS_VAR $5 ]       OP1[  IS_UNUSED  ]
+         11*       < 43> JMPZ                                                      OP1[  IS_VAR $5 ] OP2[ , ->14 ]
+   84    12*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         13*       < 75> UNSET_DIM                                                 OP1[  IS_CV !0 ] OP2[ ,  IS_CV !2 ]
+   82    14*       < 42> JMP                                                       OP1[ ->5 ]
+         15*       <127> FE_FREE                                                   OP1[  IS_VAR $4 ] OP2[  IS_UNUSED  ]
+   88    16*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         17*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         18*       < 62> RETURN                                                    OP1[  IS_CV !0 ]
+   89    19*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         20*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         21*       < 62> RETURN                                                    OP1[  IS_CONST (268435397) null ]
+
+End of function cleancloneinput
+
+Function clonerelations:
+[+]Function Source Class Name: Glpi\Features\Clonable
+[*]Start of arg_info extract:
+[*]arg_info num_args:2
+[*]Function return type:void
+
+[*]ArgInfoNo**0**
+[*]name:source
+[*]type:CommonDBTM
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:history
+[*]type:bool
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\Features\Clonable.php
+function name:  cloneRelations
+number of ops:  173
+compiled vars:  !0 = $source, !1 = $history, !2 = $clone_relations, !3 = $classname, !4 = $override_input, !5 = $cloned, !6 = $relation_newitems, !7 = $relation_items, !8 = $relation_item, !9 = $origin_id, !10 = $itemtype, !11 = $relation_newitem, !12 = $foreignkey
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  101     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 63> RECV                                              RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ]
+  103     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435365) 'getCloneRelations' ]
+          4*       < 60> DO_FCALL                                      0   RES[  IS_VAR $13 ]      OP1[  IS_UNUSED  ]
+          5*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_VAR $13 ]
+  104     6*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          7*       < 77> FE_RESET_R                                        RES[  IS_VAR $15 ]      OP1[  IS_CV !2 ] OP2[ , ->170 ]
+          8*       < 78> FE_FETCH_R                                                OP1[  IS_VAR $15 ] OP2[ ,  IS_CV !3 ] EXT_JMP_REL[ , ->170 ]
+  105     9*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         10*       < 22> ASSIGN                                                    OP1[  IS_CV !4 ] OP2[ ,  IS_CONST (268435353) <array> ]
+  107    11*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         12*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435350) 'Glpi%5CFeatures%5Cis_a' ]
+         13*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         14*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435349) 'CommonDBConnexity' ] OP2[  IS_UNUSED  ]
+         15*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435348) <true> ] OP2[  IS_UNUSED  ]
+         16*       < 60> DO_FCALL                                      0   RES[  IS_VAR $17 ]      OP1[  IS_UNUSED  ]
+         17*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~18 ]      OP1[  IS_VAR $17 ]
+         18*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~18 ] OP2[ , ->31 ]
+  108    19*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         20*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435339) 'Glpi%5CFeatures%5Ctrigger_error' ]
+  109    21*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435340) 'Glpi%5CFeatures%5Csprintf' ]
+  110    22*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435341) 'Unable+to+clone+elements+of+class+%25s+as+it+does+not+extends+%22CommonDBConnexity%22' ] OP2[  IS_UNUSED  ]
+         23*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         24*       < 60> DO_FCALL                                      0   RES[  IS_VAR $19 ]      OP1[  IS_UNUSED  ]
+         25*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $19 ] OP2[  IS_UNUSED  ]
+  113    26*       < 99> FETCH_CONSTANT                                    RES[  IS_TMP_VAR ~20 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435334) 'Glpi%5CFeatures%5CE_USER_WARNING' ]
+         27*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~20 ] OP2[  IS_UNUSED  ]
+         28*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  115    29*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         30*       < 42> JMP                                                       OP1[ ->8 ]
+  118    31*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         32*       <109> FETCH_CLASS                                   0   RES[  IS_VAR $22 ]      OP2[  IS_CV !3 ]
+         33*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_VAR $22 ] OP2[ ,  IS_CONST (268435323) 'getItemField' ]
+         34*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435323) 'getType' ]
+         35*       < 60> DO_FCALL                                      0   RES[  IS_VAR $23 ]      OP1[  IS_UNUSED  ]
+         36*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $23 ] OP2[  IS_UNUSED  ]
+         37*       < 60> DO_FCALL                                      0   RES[  IS_VAR $24 ]      OP1[  IS_UNUSED  ]
+         38*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435317) 'getID' ]
+         39*       < 60> DO_FCALL                                      0   RES[  IS_VAR $26 ]      OP1[  IS_UNUSED  ]
+         40*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !4 ] OP2[ ,  IS_VAR $24 ]
+         41*       <137> OP_DATA                                                   OP1[  IS_VAR $26 ] OP2[  IS_UNUSED  ]
+  121    42*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         43*       <109> FETCH_CLASS                                   0   RES[  IS_VAR $27 ]      OP2[  IS_CV !3 ]
+         44*       <173> FETCH_STATIC_PROP_R          unknown              RES[  IS_TMP_VAR ~28 ]      OP1[  IS_CONST (268435307) 'disableAutoEntityForwarding' ] OP2[ ,  IS_VAR $27 ]
+         45*       <123> TYPE_CHECK                                  1014   RES[  IS_TMP_VAR ~29 ]      OP1[  IS_TMP_VAR ~28 ] OP2[  IS_UNUSED  ]
+         46*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~29 ] OP2[ , ->73 ]
+  122    47*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         48*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435301) 'isEntityAssign' ]
+         49*       < 60> DO_FCALL                                      0   RES[  IS_VAR $31 ]      OP1[  IS_UNUSED  ]
+         50*       < 43> JMPZ                                                      OP1[  IS_VAR $31 ] OP2[ , ->55 ]
+         51*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435297) 'getEntityID' ]
+         52*       < 60> DO_FCALL                                      0   RES[  IS_VAR $32 ]      OP1[  IS_UNUSED  ]
+         53*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~33 ]      OP1[  IS_VAR $32 ]
+         54*       < 42> JMP                                                       OP1[ ->58 ]
+         55*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435291) 'Session' ] OP2[ ,  IS_CONST (268435293) 'getActiveEntity' ]
+         56*       < 60> DO_FCALL                                      0   RES[  IS_VAR $34 ]      OP1[  IS_UNUSED  ]
+         57*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~33 ]      OP1[  IS_VAR $34 ]
+         58*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !4 ] OP2[ ,  IS_CONST (268435280) 'entities_id' ]
+         59*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~33 ] OP2[  IS_UNUSED  ]
+  123    60*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         61*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435284) 'maybeRecursive' ]
+         62*       < 60> DO_FCALL                                      0   RES[  IS_VAR $36 ]      OP1[  IS_UNUSED  ]
+         63*       < 43> JMPZ                                                      OP1[  IS_VAR $36 ] OP2[ , ->68 ]
+         64*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435280) 'isRecursive' ]
+         65*       < 60> DO_FCALL                                      0   RES[  IS_VAR $37 ]      OP1[  IS_UNUSED  ]
+         66*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~38 ]      OP1[  IS_VAR $37 ]
+         67*       < 42> JMP                                                       OP1[ ->71 ]
+         68*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435274) 'Session' ] OP2[ ,  IS_CONST (268435276) 'getIsActiveEntityRecursive' ]
+         69*       < 60> DO_FCALL                                      0   RES[  IS_VAR $39 ]      OP1[  IS_UNUSED  ]
+         70*       < 31> QM_ASSIGN                                         RES[  IS_TMP_VAR ~38 ]      OP1[  IS_VAR $39 ]
+         71*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !4 ] OP2[ ,  IS_CONST (268435263) 'is_recursive' ]
+         72*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~38 ] OP2[  IS_UNUSED  ]
+  126    73*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         74*       < 22> ASSIGN                                                    OP1[  IS_CV !5 ] OP2[ ,  IS_CONST (268435266) <array> ]
+  127    75*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         76*       < 22> ASSIGN                                                    OP1[  IS_CV !6 ] OP2[ ,  IS_CONST (268435263) <array> ]
+  129    77*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         78*       <109> FETCH_CLASS                                   0   RES[  IS_VAR $42 ]      OP2[  IS_CV !3 ]
+         79*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_VAR $42 ] OP2[ ,  IS_CONST (268435258) 'getItemsAssociatedTo' ]
+         80*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435258) 'getType' ]
+         81*       < 60> DO_FCALL                                      0   RES[  IS_VAR $43 ]      OP1[  IS_UNUSED  ]
+         82*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $43 ] OP2[  IS_UNUSED  ]
+         83*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435254) 'getID' ]
+         84*       < 60> DO_FCALL                                      0   RES[  IS_VAR $44 ]      OP1[  IS_UNUSED  ]
+         85*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $44 ] OP2[  IS_UNUSED  ]
+         86*       < 60> DO_FCALL                                      0   RES[  IS_VAR $45 ]      OP1[  IS_UNUSED  ]
+         87*       < 22> ASSIGN                                                    OP1[  IS_CV !7 ] OP2[ ,  IS_VAR $45 ]
+  131    88*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         89*       < 77> FE_RESET_R                                        RES[  IS_VAR $47 ]      OP1[  IS_CV !7 ] OP2[ , ->131 ]
+         90*       < 78> FE_FETCH_R                                                OP1[  IS_VAR $47 ] OP2[ ,  IS_CV !8 ] EXT_JMP_REL[ , ->131 ]
+  132    91*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         92*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435238) 'isTemplate' ]
+         93*       < 60> DO_FCALL                                      0   RES[  IS_VAR $48 ]      OP1[  IS_UNUSED  ]
+         94*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~49 ]      OP1[  IS_VAR $48 ] OP2[ , ->98 ]
+         95*       < 91> FETCH_OBJ_IS                                      RES[  IS_TMP_VAR ~50 ]      OP1[  IS_CV !8 ] OP2[ ,  IS_CONST (268435234) 'fields' ]
+         96*       <115> ISSET_ISEMPTY_DIM_OBJ                         0   RES[  IS_TMP_VAR ~51 ]      OP1[  IS_TMP_VAR ~50 ] OP2[ ,  IS_CONST (268435233) 'name' ]
+         97*       < 52> BOOL                                              RES[  IS_TMP_VAR ~49 ]      OP1[  IS_TMP_VAR ~51 ]
+         98*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~49 ] OP2[ , ->104 ]
+  134    99*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        100*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~53 ]      OP1[  IS_CV !8 ] OP2[ ,  IS_CONST (268435227) 'fields' ]
+        101*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~54 ]      OP1[  IS_TMP_VAR ~53 ] OP2[ ,  IS_CONST (268435226) 'name' ]
+        102*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !4 ] OP2[ ,  IS_CONST (268435222) 'name' ]
+        103*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~54 ] OP2[  IS_UNUSED  ]
+  136   104*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        105*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !8 ] OP2[ ,  IS_CONST (268435219) 'getID' ]
+        106*       < 60> DO_FCALL                                      0   RES[  IS_VAR $55 ]      OP1[  IS_UNUSED  ]
+        107*       < 22> ASSIGN                                                    OP1[  IS_CV !9 ] OP2[ ,  IS_VAR $55 ]
+  137   108*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        109*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !8 ] OP2[ ,  IS_CONST (268435213) 'getType' ]
+        110*       < 60> DO_FCALL                                      0   RES[  IS_VAR $57 ]      OP1[  IS_UNUSED  ]
+        111*       < 22> ASSIGN                                                    OP1[  IS_CV !10 ] OP2[ ,  IS_VAR $57 ]
+  138   112*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        113*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !8 ] OP2[ ,  IS_CONST (268435207) 'clone' ]
+        114*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !4 ] OP2[  IS_UNUSED  ]
+        115*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+        116*       < 60> DO_FCALL                                      0   RES[  IS_VAR $61 ]      OP1[  IS_UNUSED  ]
+        117*       < 84> FETCH_DIM_W                                       RES[  IS_VAR $59 ]      OP1[  IS_CV !5 ] OP2[ ,  IS_CV !10 ]
+        118*       < 23> ASSIGN_DIM                                                OP1[  IS_VAR $59 ] OP2[ ,  IS_CV !9 ]
+        119*       <137> OP_DATA                                                   OP1[  IS_VAR $61 ] OP2[  IS_UNUSED  ]
+  139   120*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        121*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !8 ] OP2[ ,  IS_CONST (268435193) 'getFromDB' ]
+        122*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        123*       < 93> FETCH_DIM_FUNC_ARG                                RES[  IS_VAR $62 ]      OP1[  IS_CV !5 ] OP2[ ,  IS_CV !10 ]
+        124*       < 93> FETCH_DIM_FUNC_ARG                                RES[  IS_VAR $63 ]      OP1[  IS_VAR $62 ] OP2[ ,  IS_CV !9 ]
+        125*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $63 ] OP2[  IS_UNUSED  ]
+        126*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  140   127*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        128*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !6 ] OP2[  IS_UNUSED  ]
+        129*       <137> OP_DATA                                                   OP1[  IS_CV !8 ] OP2[  IS_UNUSED  ]
+  131   130*       < 42> JMP                                                       OP1[ ->90 ]
+        131*       <127> FE_FREE                                                   OP1[  IS_VAR $47 ] OP2[  IS_UNUSED  ]
+  143   132*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        133*       < 77> FE_RESET_R                                        RES[  IS_VAR $66 ]      OP1[  IS_CV !6 ] OP2[ , ->168 ]
+        134*       < 78> FE_FETCH_R                                                OP1[  IS_VAR $66 ] OP2[ ,  IS_CV !11 ] EXT_JMP_REL[ , ->168 ]
+  144   135*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        136*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !11 ] OP2[ ,  IS_CONST (268435165) 'getType' ]
+        137*       < 60> DO_FCALL                                      0   RES[  IS_VAR $67 ]      OP1[  IS_UNUSED  ]
+        138*       < 22> ASSIGN                                                    OP1[  IS_CV !10 ] OP2[ ,  IS_VAR $67 ]
+  145   139*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        140*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435159) 'Glpi%5CFeatures%5CgetForeignKeyFieldForItemType' ]
+        141*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !10 ] OP2[  IS_UNUSED  ]
+        142*       < 60> DO_FCALL                                      0   RES[  IS_VAR $69 ]      OP1[  IS_UNUSED  ]
+        143*       < 22> ASSIGN                                                    OP1[  IS_CV !12 ] OP2[ ,  IS_VAR $69 ]
+  146   144*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        145*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !11 ] OP2[ ,  IS_CONST (268435152) 'isField' ]
+        146*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !12 ] OP2[  IS_UNUSED  ]
+        147*       < 60> DO_FCALL                                      0   RES[  IS_VAR $71 ]      OP1[  IS_UNUSED  ]
+        148*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~72 ]      OP1[  IS_VAR $71 ] OP2[ , ->154 ]
+        149*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~74 ]      OP1[  IS_CV !11 ] OP2[ ,  IS_CONST (268435146) 'fields' ]
+        150*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~75 ]      OP1[  IS_TMP_VAR ~74 ] OP2[ ,  IS_CV !12 ]
+        151*       < 90> FETCH_DIM_IS                                      RES[  IS_TMP_VAR ~73 ]      OP1[  IS_CV !5 ] OP2[ ,  IS_CV !10 ]
+        152*       <115> ISSET_ISEMPTY_DIM_OBJ                         0   RES[  IS_TMP_VAR ~76 ]      OP1[  IS_TMP_VAR ~73 ] OP2[ ,  IS_TMP_VAR ~75 ]
+        153*       < 52> BOOL                                              RES[  IS_TMP_VAR ~72 ]      OP1[  IS_TMP_VAR ~76 ]
+        154*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~72 ] OP2[ , ->167 ]
+  147   155*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        156*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !11 ] OP2[ ,  IS_CONST (268435133) 'update' ]
+  148   157*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !11 ] OP2[ ,  IS_CONST (268435133) 'getID' ]
+        158*       < 60> DO_FCALL                                      0   RES[  IS_VAR $77 ]      OP1[  IS_UNUSED  ]
+        159*       < 71> INIT_ARRAY                                        RES[  IS_TMP_VAR ~78 ]      OP1[  IS_VAR $77 ] OP2[ ,  IS_CONST (268435131) 'id' ]
+  149   160*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~80 ]      OP1[  IS_CV !11 ] OP2[ ,  IS_CONST (268435130) 'fields' ]
+        161*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~81 ]      OP1[  IS_TMP_VAR ~80 ] OP2[ ,  IS_CV !12 ]
+        162*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~79 ]      OP1[  IS_CV !5 ] OP2[ ,  IS_CV !10 ]
+        163*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~82 ]      OP1[  IS_TMP_VAR ~79 ] OP2[ ,  IS_TMP_VAR ~81 ]
+        164*       < 72> ADD_ARRAY_ELEMENT                                 RES[  IS_TMP_VAR ~78 ]      OP1[  IS_TMP_VAR ~82 ] OP2[ ,  IS_CV !12 ]
+        165*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~78 ] OP2[  IS_UNUSED  ]
+        166*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  143   167*       < 42> JMP                                                       OP1[ ->134 ]
+        168*       <127> FE_FREE                                                   OP1[  IS_VAR $66 ] OP2[  IS_UNUSED  ]
+  104   169*       < 42> JMP                                                       OP1[ ->8 ]
+        170*       <127> FE_FREE                                                   OP1[  IS_VAR $15 ] OP2[  IS_UNUSED  ]
+  154   171*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        172*       < 62> RETURN                                                    OP1[  IS_CONST (268435107) null ]
+
+End of function clonerelations
+
+Function prepareinputforclone:
+[+]Function Source Class Name: Glpi\Features\Clonable
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:input
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\Features\Clonable.php
+function name:  prepareInputForClone
+number of ops:  5
+compiled vars:  !0 = $input
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  166     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  168     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 62> RETURN                                                    OP1[  IS_CV !0 ]
+  169     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       < 62> RETURN                                                    OP1[  IS_CONST (268435447) null ]
+
+End of function prepareinputforclone
+
+Function clonemultiple:
+[+]Function Source Class Name: Glpi\Features\Clonable
+[*]Start of arg_info extract:
+[*]arg_info num_args:3
+[*]Function return type:bool
+
+[*]ArgInfoNo**0**
+[*]name:n
+[*]type:int
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:override_input
+[*]type:array
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**2**
+[*]name:history
+[*]type:bool
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\Features\Clonable.php
+function name:  cloneMultiple
+number of ops:  41
+compiled vars:  !0 = $n, !1 = $override_input, !2 = $history, !3 = $failure, !4 = $i
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  182     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 64> RECV_INIT                                         RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435442) <array> ]
+          2*       < 64> RECV_INIT                                         RES[  IS_CV !2 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435441) <true> ]
+  187     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435438) <false> ]
+  189     5*       <  0> NOP                                                      
+  191     6*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          7*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435433) 'last_clone_index' ]
+          8*       <137> OP_DATA                                                   OP1[  IS_CONST (268435432) 0 ] OP2[  IS_UNUSED  ]
+  192     9*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         10*       < 22> ASSIGN                                                    OP1[  IS_CV !4 ] OP2[ ,  IS_CONST (268435429) 0 ]
+         11*       < 42> JMP                                                       OP1[ ->22 ]
+  193    12*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         13*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435424) 'clone' ]
+         14*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         15*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         16*       < 60> DO_FCALL                                      0   RES[  IS_VAR $9 ]       OP1[  IS_UNUSED  ]
+         17*       <123> TYPE_CHECK                                    4   RES[  IS_TMP_VAR ~10 ]      OP1[  IS_VAR $9 ] OP2[  IS_UNUSED  ]
+         18*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~10 ] OP2[ , ->21 ]
+  196    19*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         20*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435412) <true> ]
+  192    21*       < 34> PRE_INC                                                   OP1[  IS_CV !4 ]
+         22*       < 20> IS_SMALLER                                        RES[  IS_TMP_VAR ~13 ]      OP1[  IS_CV !4 ] OP2[ ,  IS_CV !0 ]
+         23*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~13 ]      OP1[  IS_TMP_VAR ~13 ] OP2[ , ->26 ]
+         24*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~14 ]      OP1[  IS_CV !3 ]
+         25*       < 52> BOOL                                              RES[  IS_TMP_VAR ~13 ]      OP1[  IS_TMP_VAR ~14 ]
+         26*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         27*       < 44> JMPNZ                                                     OP1[  IS_TMP_VAR ~13 ] OP2[ , ->12 ]
+  199    28*       <162> FAST_CALL                                                 OP1[ ->30 ]
+         29*       < 42> JMP                                                       OP1[ ->34 ]
+  201    30*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         31*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435391) 'last_clone_index' ]
+         32*       <137> OP_DATA                                                   OP1[  IS_CONST (268435390) null ] OP2[  IS_UNUSED  ]
+         33*       <163> FAST_RET                                                 
+  204    34*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         35*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~16 ]      OP1[  IS_CV !3 ]
+         36*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_TMP_VAR ~16 ] OP2[  IS_UNUSED  ]
+         37*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~16 ]
+  205    38*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         39*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         40*       < 62> RETURN                                                    OP1[  IS_CONST (268435375) null ]
+
+End of function clonemultiple
+
+Function clone:
+[+]Function Source Class Name: Glpi\Features\Clonable
+[*]Start of arg_info extract:
+[*]arg_info num_args:2
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:override_input
+[*]type:array
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:history
+[*]type:bool
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\Features\Clonable.php
+function name:  clone
+number of ops:  88
+compiled vars:  !0 = $override_input, !1 = $history, !2 = $DB, !3 = $new_item, !4 = $input, !5 = $value, !6 = $key, !7 = $copy_name, !8 = $newID
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  217     0*       < 64> RECV_INIT                                         RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435422) <array> ]
+          1*       < 64> RECV_INIT                                         RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435421) <true> ]
+  220     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       <168> BIND_GLOBAL                                               OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435418) 'DB' ]
+  222     4*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          5*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435415) 'isSlave' ]
+          6*       < 60> DO_FCALL                                      0   RES[  IS_VAR $9 ]       OP1[  IS_UNUSED  ]
+          7*       < 43> JMPZ                                                      OP1[  IS_VAR $9 ] OP2[ , ->10 ]
+  223     8*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          9*       < 62> RETURN                                                    OP1[  IS_CONST (268435409) <false> ]
+  225    10*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         11*       < 68> NEW                          static               RES[  IS_VAR $10 ]     
+         12*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         13*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_VAR $10 ]
+  226    14*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         15*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435398) 'Toolbox' ] OP2[ ,  IS_CONST (268435400) 'addslashes_deep' ]
+         16*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         17*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $13 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435398) 'fields' ]
+         18*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $13 ] OP2[  IS_UNUSED  ]
+         19*       < 60> DO_FCALL                                      0   RES[  IS_VAR $14 ]      OP1[  IS_UNUSED  ]
+         20*       < 22> ASSIGN                                                    OP1[  IS_CV !4 ] OP2[ ,  IS_VAR $14 ]
+  227    21*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         22*       < 77> FE_RESET_R                                        RES[  IS_VAR $16 ]      OP1[  IS_CV !0 ] OP2[ , ->32 ]
+         23*       < 78> FE_FETCH_R                                        RES[  IS_TMP_VAR ~17 ]      OP1[  IS_VAR $16 ] OP2[ ,  IS_CV !5 ] EXT_JMP_REL[ , ->32 ]
+         24*       < 22> ASSIGN                                                    OP1[  IS_CV !6 ] OP2[ ,  IS_TMP_VAR ~17 ]
+  228    25*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         26*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435381) 'Toolbox' ] OP2[ ,  IS_CONST (268435383) 'addslashes_deep' ]
+         27*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !5 ] OP2[  IS_UNUSED  ]
+         28*       < 60> DO_FCALL                                      0   RES[  IS_VAR $20 ]      OP1[  IS_UNUSED  ]
+         29*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !4 ] OP2[ ,  IS_CV !6 ]
+         30*       <137> OP_DATA                                                   OP1[  IS_VAR $20 ] OP2[  IS_UNUSED  ]
+  227    31*       < 42> JMP                                                       OP1[ ->23 ]
+         32*       <127> FE_FREE                                                   OP1[  IS_VAR $16 ] OP2[  IS_UNUSED  ]
+  230    33*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         34*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435369) 'cleanCloneInput' ]
+         35*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !4 ] OP2[  IS_UNUSED  ]
+         36*       < 60> DO_FCALL                                      0   RES[  IS_VAR $21 ]      OP1[  IS_UNUSED  ]
+         37*       < 22> ASSIGN                                                    OP1[  IS_CV !4 ] OP2[ ,  IS_VAR $21 ]
+  233    38*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         39*       <115> ISSET_ISEMPTY_DIM_OBJ                         0   RES[  IS_TMP_VAR ~23 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435361) 'name' ]
+         40*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~24 ]      OP1[  IS_TMP_VAR ~23 ]
+         41*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~24 ] OP2[ , ->54 ]
+  234    42*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         43*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435354) 'getUniqueCloneName' ]
+         44*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !4 ] OP2[  IS_UNUSED  ]
+         45*       < 60> DO_FCALL                                      0   RES[  IS_VAR $25 ]      OP1[  IS_UNUSED  ]
+         46*       < 22> ASSIGN                                            RES[  IS_TMP_VAR ~26 ]      OP1[  IS_CV !7 ] OP2[ ,  IS_VAR $25 ]
+         47*       <123> TYPE_CHECK                                  1020   RES[  IS_TMP_VAR ~27 ]      OP1[  IS_TMP_VAR ~26 ] OP2[  IS_UNUSED  ]
+         48*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~27 ] OP2[ , ->54 ]
+  235    49*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         50*       <113> INIT_STATIC_METHOD_CALL      static                       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435342) 'getNameField' ]
+         51*       < 60> DO_FCALL                                      0   RES[  IS_VAR $28 ]      OP1[  IS_UNUSED  ]
+         52*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !4 ] OP2[ ,  IS_VAR $28 ]
+         53*       <137> OP_DATA                                                   OP1[  IS_CV !7 ] OP2[  IS_UNUSED  ]
+  239    54*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         55*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435334) 'prepareInputForClone' ]
+         56*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !4 ] OP2[  IS_UNUSED  ]
+         57*       < 60> DO_FCALL                                      0   RES[  IS_VAR $30 ]      OP1[  IS_UNUSED  ]
+         58*       < 22> ASSIGN                                                    OP1[  IS_CV !4 ] OP2[ ,  IS_VAR $30 ]
+  241    59*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         60*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !4 ] OP2[ ,  IS_CONST (268435326) 'clone' ]
+         61*       <137> OP_DATA                                                   OP1[  IS_CONST (268435325) <true> ] OP2[  IS_UNUSED  ]
+  242    62*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         63*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435322) 'add' ]
+         64*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !4 ] OP2[  IS_UNUSED  ]
+         65*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435320) <array> ] OP2[  IS_UNUSED  ]
+         66*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         67*       < 60> DO_FCALL                                      0   RES[  IS_VAR $33 ]      OP1[  IS_UNUSED  ]
+         68*       < 22> ASSIGN                                                    OP1[  IS_CV !8 ] OP2[ ,  IS_VAR $33 ]
+  244    69*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         70*       <123> TYPE_CHECK                                  1018   RES[  IS_TMP_VAR ~35 ]      OP1[  IS_CV !8 ] OP2[  IS_UNUSED  ]
+         71*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~35 ] OP2[ , ->84 ]
+  245    72*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         73*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435305) 'cloneRelations' ]
+         74*       <184> FETCH_THIS                                        RES[  IS_VAR $36 ]      OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         75*       < 66> SEND_VAR_EX                                               OP1[  IS_VAR $36 ] OP2[  IS_UNUSED  ]
+         76*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         77*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  246    78*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         79*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435295) 'post_clone' ]
+         80*       <184> FETCH_THIS                                        RES[  IS_VAR $38 ]      OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         81*       < 66> SEND_VAR_EX                                               OP1[  IS_VAR $38 ] OP2[  IS_UNUSED  ]
+         82*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         83*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  249    84*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         85*       < 62> RETURN                                                    OP1[  IS_CV !8 ]
+  250    86*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         87*       < 62> RETURN                                                    OP1[  IS_CONST (268435281) null ]
+
+End of function clone
+
+Function getuniqueclonename:
+[+]Function Source Class Name: Glpi\Features\Clonable
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:?string
+
+[*]ArgInfoNo**0**
+[*]name:input
+[*]type:array
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\Features\Clonable.php
+function name:  getUniqueCloneName
+number of ops:  56
+compiled vars:  !0 = $input, !1 = $copy_name, !2 = $name_field, !3 = $current_name, !4 = $table, !5 = $copy_index
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  259     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  261     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435432) null ]
+  263     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       <113> INIT_STATIC_METHOD_CALL      static                       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435429) 'getNameField' ]
+          5*       < 60> DO_FCALL                                      0   RES[  IS_VAR $7 ]       OP1[  IS_UNUSED  ]
+          6*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_VAR $7 ]
+  266     7*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          8*       <115> ISSET_ISEMPTY_DIM_OBJ                         0   RES[  IS_TMP_VAR ~9 ]       OP1[  IS_CV !0 ] OP2[ ,  IS_CV !2 ]
+          9*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~9 ] OP2[ , ->50 ]
+  267    10*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         11*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435417) '' ]
+  268    12*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         13*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~11 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CV !2 ]
+         14*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_TMP_VAR ~11 ]
+  269    15*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         16*       <113> INIT_STATIC_METHOD_CALL      static                       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435408) 'getTable' ]
+         17*       < 60> DO_FCALL                                      0   RES[  IS_VAR $13 ]      OP1[  IS_UNUSED  ]
+         18*       < 22> ASSIGN                                                    OP1[  IS_CV !4 ] OP2[ ,  IS_VAR $13 ]
+  271    19*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         20*       < 22> ASSIGN                                                    OP1[  IS_CV !5 ] OP2[ ,  IS_CONST (268435402) 0 ]
+  274    21*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         22*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435399) 'Glpi%5CFeatures%5Cis_null' ]
+         23*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         24*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $16 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435398) 'last_clone_index' ]
+         25*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $16 ] OP2[  IS_UNUSED  ]
+         26*       < 60> DO_FCALL                                      0   RES[  IS_VAR $17 ]      OP1[  IS_UNUSED  ]
+         27*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~18 ]      OP1[  IS_VAR $17 ]
+         28*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~18 ] OP2[ , ->32 ]
+  275    29*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         30*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~19 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435387) 'last_clone_index' ]
+         31*       < 22> ASSIGN                                                    OP1[  IS_CV !5 ] OP2[ ,  IS_TMP_VAR ~19 ]
+  279    32*       <  0> NOP                                                      
+  280    33*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         34*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435380) 'computeCloneName' ]
+         35*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         36*       < 34> PRE_INC                                           RES[  IS_TMP_VAR ~21 ]      OP1[  IS_CV !5 ]
+         37*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~21 ] OP2[  IS_UNUSED  ]
+         38*       < 60> DO_FCALL                                      0   RES[  IS_VAR $22 ]      OP1[  IS_UNUSED  ]
+         39*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_VAR $22 ]
+  281    40*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435370) 'Glpi%5CFeatures%5CcountElementsInTable' ]
+         41*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !4 ] OP2[  IS_UNUSED  ]
+         42*       < 71> INIT_ARRAY                                        RES[  IS_TMP_VAR ~24 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CV !2 ]
+         43*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~24 ] OP2[  IS_UNUSED  ]
+         44*       < 60> DO_FCALL                                      0   RES[  IS_VAR $25 ]      OP1[  IS_UNUSED  ]
+         45*       < 20> IS_SMALLER                                        RES[  ]         OP1[  IS_CONST (268435363) 0 ] OP2[ ,  IS_VAR $25 ]
+         46*       < 44> JMPNZ                                                     OP1[  IS_TMP_VAR ~26 ] OP2[ , ->33 ]
+  284    47*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         48*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435358) 'last_clone_index' ]
+         49*       <137> OP_DATA                                                   OP1[  IS_CV !5 ] OP2[  IS_UNUSED  ]
+  287    50*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         51*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         52*       < 62> RETURN                                                    OP1[  IS_CV !1 ]
+  288    53*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         54*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         55*       < 62> RETURN                                                    OP1[  IS_CONST (268435345) null ]
+
+End of function getuniqueclonename
+
+Function computeclonename:
+[+]Function Source Class Name: Glpi\Features\Clonable
+[*]Start of arg_info extract:
+[*]arg_info num_args:2
+[*]Function return type:string
+
+[*]ArgInfoNo**0**
+[*]name:current_name
+[*]type:string
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:copy_index
+[*]type:int
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\Features\Clonable.php
+function name:  computeCloneName
+number of ops:  29
+compiled vars:  !0 = $current_name, !1 = $copy_index
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  300     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 63> RECV                                              RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ]
+  305     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       < 18> IS_EQUAL                                          RES[  IS_TMP_VAR ~2 ]       OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435434) 1 ]
+          4*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~2 ] OP2[ , ->15 ]
+  306     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435429) 'Glpi%5CFeatures%5Csprintf' ]
+          7*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435430) 'Glpi%5CFeatures%5C__' ]
+          8*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435431) '%25s+%28copy%29' ] OP2[  IS_UNUSED  ]
+          9*       < 60> DO_FCALL                                      0   RES[  IS_VAR $3 ]       OP1[  IS_UNUSED  ]
+         10*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $3 ] OP2[  IS_UNUSED  ]
+         11*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         12*       < 60> DO_FCALL                                      0   RES[  IS_VAR $4 ]       OP1[  IS_UNUSED  ]
+         13*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_VAR $4 ] OP2[  IS_UNUSED  ]
+         14*       < 62> RETURN                                                    OP1[  IS_VAR $4 ]
+  310    15*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         16*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435416) 'Glpi%5CFeatures%5Csprintf' ]
+         17*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435417) 'Glpi%5CFeatures%5C__' ]
+         18*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435418) '%25s+%28copy+%25d%29' ] OP2[  IS_UNUSED  ]
+         19*       < 60> DO_FCALL                                      0   RES[  IS_VAR $5 ]       OP1[  IS_UNUSED  ]
+         20*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $5 ] OP2[  IS_UNUSED  ]
+         21*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         22*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         23*       < 60> DO_FCALL                                      0   RES[  IS_VAR $6 ]       OP1[  IS_UNUSED  ]
+         24*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_VAR $6 ] OP2[  IS_UNUSED  ]
+         25*       < 62> RETURN                                                    OP1[  IS_VAR $6 ]
+  311    26*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         27*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         28*       < 62> RETURN                                                    OP1[  IS_CONST (268435399) null ]
+
+End of function computeclonename
+
+Function post_clone:
+[+]Function Source Class Name: Glpi\Features\Clonable
+[*]Start of arg_info extract:
+[*]arg_info num_args:2
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:source
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:history
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\Features\Clonable.php
+function name:  post_clone
+number of ops:  4
+compiled vars:  !0 = $source, !1 = $history
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  320     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 63> RECV                                              RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ]
+  322     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       < 62> RETURN                                                    OP1[  IS_CONST (268435449) null ]
+
+End of function post_clone
+
+End of class Glpi\Features\Clonable.
+

@@ -1,0 +1,23 @@
+filename:       E:\AAAopensource\Yama\Yama_src\app\DVWA-1.9\vulnerabilities\xss_r\source\low.php
+function name:  (null)
+number of ops:  16
+compiled vars:  !0 = $html
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+    4     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 80> FETCH_R                      global               RES[  IS_TMP_VAR ~1 ]       OP1[  IS_CONST (268435444) '_GET' ]
+          2*       <194> ARRAY_KEY_EXISTS                                  RES[  IS_TMP_VAR ~2 ]       OP1[  IS_CONST (268435443) 'name' ] OP2[ ,  IS_TMP_VAR ~1 ]
+          3*       < 46> JMPZ_EX                                           RES[  IS_TMP_VAR ~2 ]       OP1[  IS_TMP_VAR ~2 ] OP2[ , ->8 ]
+          4*       < 80> FETCH_R                      global               RES[  IS_TMP_VAR ~3 ]       OP1[  IS_CONST (268435440) '_GET' ]
+          5*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~4 ]       OP1[  IS_TMP_VAR ~3 ] OP2[ ,  IS_CONST (268435439) 'name' ]
+          6*       < 19> IS_NOT_EQUAL                                      RES[  IS_TMP_VAR ~5 ]       OP1[  IS_TMP_VAR ~4 ] OP2[ ,  IS_CONST (268435438) null ]
+          7*       < 52> BOOL                                              RES[  IS_TMP_VAR ~2 ]       OP1[  IS_TMP_VAR ~5 ]
+          8*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~2 ] OP2[ , ->15 ]
+    6     9*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         10*       < 80> FETCH_R                      global               RES[  IS_TMP_VAR ~6 ]       OP1[  IS_CONST (268435431) '_GET' ]
+         11*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~7 ]       OP1[  IS_TMP_VAR ~6 ] OP2[ ,  IS_CONST (268435430) 'name' ]
+         12*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~8 ]       OP1[  IS_CONST (268435429) '%3Cpre%3EHello+' ] OP2[ ,  IS_TMP_VAR ~7 ]
+         13*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~9 ]       OP1[  IS_TMP_VAR ~8 ] OP2[ ,  IS_CONST (268435428) '%3C%2Fpre%3E' ]
+         14*       < 26> ASSIGN_OP                    .=               8           OP1[  IS_CV !0 ] OP2[ ,  IS_TMP_VAR ~9 ]
+   10    15*       < 62> RETURN                                                    OP1[  IS_CONST (268435425) 1 ]
+

@@ -1,0 +1,87 @@
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\sabre\vobject\lib\TimezoneGuesser\FindFromOffset.php
+function name:  (null)
+number of ops:  5
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+    3     0*       <  0> NOP                                                      
+    5     1*       <  0> NOP                                                      
+   12     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       <144> DECLARE_CLASS                                             OP1[  IS_CONST (268435442) 'sabre%5Cvobject%5Ctimezoneguesser%5Cfindfromoffset' ] OP2[  IS_UNUSED  ]
+   32     4*       < 62> RETURN                                                    OP1[  IS_CONST (268435442) 1 ]
+
+Class Sabre\VObject\TimezoneGuesser\FindFromOffset:
+[+]Class Parent Name: NULL
+End Trait extract
+Start Properties extract:
+Properties: NULL
+End Properties extract
+
+Function find:
+[+]Function Source Class Name: Sabre\VObject\TimezoneGuesser\FindFromOffset
+[*]Start of arg_info extract:
+[*]arg_info num_args:2
+[*]Function return type:?DateTimeZone
+
+[*]ArgInfoNo**0**
+[*]name:tzid
+[*]type:string
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:failIfUncertain
+[*]type:bool
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\sabre\vobject\lib\TimezoneGuesser\FindFromOffset.php
+function name:  find
+number of ops:  34
+compiled vars:  !0 = $tzid, !1 = $failIfUncertain, !2 = $matches
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   14     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 64> RECV_INIT                                         RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435405) <false> ]
+   18     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435402) 'Sabre%5CVObject%5CTimezoneGuesser%5Cpreg_match' ]
+          4*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435403) '%2F%5EGMT%28%5C%2B%7C-%29%28%5B0-9%5D%7B4%7D%29%24%2F' ] OP2[  IS_UNUSED  ]
+          5*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          6*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+          7*       < 60> DO_FCALL                                      0   RES[  IS_VAR $3 ]       OP1[  IS_UNUSED  ]
+          8*       < 43> JMPZ                                                      OP1[  IS_VAR $3 ] OP2[ , ->29 ]
+   25     9*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         10*       < 68> NEW                                               RES[  IS_VAR $4 ]       OP1[ 'DateTimeZone' ]
+         11*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~5 ]       OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435392) 1 ]
+         12*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~6 ]       OP1[  IS_CONST (268435391) 'Etc%2FGMT' ] OP2[ ,  IS_TMP_VAR ~5 ]
+         13*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435390) 'Sabre%5CVObject%5CTimezoneGuesser%5Cltrim' ]
+         14*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435391) 'Sabre%5CVObject%5CTimezoneGuesser%5Csubstr' ]
+         15*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         16*       < 93> FETCH_DIM_FUNC_ARG                                RES[  IS_VAR $7 ]       OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435390) 2 ]
+         17*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $7 ] OP2[  IS_UNUSED  ]
+         18*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435387) 0 ] OP2[  IS_UNUSED  ]
+         19*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435386) 2 ] OP2[  IS_UNUSED  ]
+         20*       < 60> DO_FCALL                                      0   RES[  IS_VAR $8 ]       OP1[  IS_UNUSED  ]
+         21*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $8 ] OP2[  IS_UNUSED  ]
+         22*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435381) '0' ] OP2[  IS_UNUSED  ]
+         23*       < 60> DO_FCALL                                      0   RES[  IS_VAR $9 ]       OP1[  IS_UNUSED  ]
+         24*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~10 ]      OP1[  IS_TMP_VAR ~6 ] OP2[ ,  IS_VAR $9 ]
+         25*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~10 ] OP2[  IS_UNUSED  ]
+         26*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         27*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_VAR $4 ] OP2[  IS_UNUSED  ]
+         28*       < 62> RETURN                                                    OP1[  IS_VAR $4 ]
+   29    29*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         30*       < 62> RETURN                                                    OP1[  IS_CONST (268435366) null ]
+   30    31*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         32*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         33*       < 62> RETURN                                                    OP1[  IS_CONST (268435361) null ]
+
+End of function find
+
+End of class Sabre\VObject\TimezoneGuesser\FindFromOffset.
+

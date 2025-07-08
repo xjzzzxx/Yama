@@ -1,0 +1,153 @@
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\Toolbox\DataExport.php
+function name:  (null)
+number of ops:  3
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   36     0*       <  0> NOP                                                      
+   90     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 62> RETURN                                                    OP1[  IS_CONST (268435451) 1 ]
+
+Class Glpi\Toolbox\DataExport:
+[+]Class Parent Name: NULL
+End Trait extract
+Start Properties extract:
+Properties: NULL
+End Properties extract
+
+Function normalizevaluefortextexport:
+[+]Function Source Class Name: Glpi\Toolbox\DataExport
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:string
+
+[*]ArgInfoNo**0**
+[*]name:value
+[*]type:string
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\src\Toolbox\DataExport.php
+function name:  normalizeValueForTextExport
+number of ops:  108
+compiled vars:  !0 = $value, !1 = $document, !2 = $xpath, !3 = $invisible_elements, !4 = $element, !5 = $icons_elements, !6 = $nbsp
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   50     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+   52     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435385) 'Glpi%5CToolbox%5CSanitizer' ] OP2[ ,  IS_CONST (268435387) 'unsanitize' ]
+          3*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          4*       < 60> DO_FCALL                                      0   RES[  IS_VAR $7 ]       OP1[  IS_UNUSED  ]
+          5*       < 22> ASSIGN                                                    OP1[  IS_CV !0 ] OP2[ ,  IS_VAR $7 ]
+   54     6*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          7*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435379) 'Glpi%5CRichText%5CRichText' ] OP2[ ,  IS_CONST (268435381) 'isRichTextHtmlContent' ]
+          8*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          9*       < 60> DO_FCALL                                      0   RES[  IS_VAR $9 ]       OP1[  IS_UNUSED  ]
+         10*       < 43> JMPZ                                                      OP1[  IS_VAR $9 ] OP2[ , ->102 ]
+   55    11*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         12*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435373) 'Glpi%5CToolbox%5Clibxml_use_internal_errors' ]
+         13*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435374) <true> ] OP2[  IS_UNUSED  ]
+         14*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+   56    15*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         16*       < 68> NEW                                               RES[  IS_VAR $11 ]      OP1[ 'DOMDocument' ]
+         17*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         18*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_VAR $11 ]
+   57    19*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         20*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435363) 'loadHTML' ]
+   58    21*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~14 ]      OP1[  IS_CONST (268435363) '%3C%3Fxml+encoding%3D%22utf-8%22+%3F%3E%3Cdiv%3E' ] OP2[ ,  IS_CV !0 ]
+         22*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~15 ]      OP1[  IS_TMP_VAR ~14 ] OP2[ ,  IS_CONST (268435362) '%3C%2Fdiv%3E' ]
+         23*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~15 ] OP2[  IS_UNUSED  ]
+   59    24*       < 99> FETCH_CONSTANT                                    RES[  IS_TMP_VAR ~16 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435359) 'Glpi%5CToolbox%5CLIBXML_HTML_NOIMPLIED' ]
+         25*       < 99> FETCH_CONSTANT                                    RES[  IS_TMP_VAR ~17 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435360) 'Glpi%5CToolbox%5CLIBXML_HTML_NODEFDTD' ]
+         26*       <  9> BW_OR                                             RES[  IS_TMP_VAR ~18 ]      OP1[  IS_TMP_VAR ~16 ] OP2[ ,  IS_TMP_VAR ~17 ]
+         27*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~18 ] OP2[  IS_UNUSED  ]
+         28*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+   63    29*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         30*       < 68> NEW                                               RES[  IS_VAR $20 ]      OP1[ 'DOMXPath' ]
+         31*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         32*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         33*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_VAR $20 ]
+   64    34*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         35*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435345) 'query' ]
+         36*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435345) '%2F%2Fdiv%5Bcontains%28%40class%2C+%22invisible%22%29%5D' ] OP2[  IS_UNUSED  ]
+         37*       < 60> DO_FCALL                                      0   RES[  IS_VAR $23 ]      OP1[  IS_UNUSED  ]
+         38*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_VAR $23 ]
+   65    39*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         40*       < 77> FE_RESET_R                                        RES[  IS_VAR $25 ]      OP1[  IS_CV !3 ] OP2[ , ->48 ]
+         41*       < 78> FE_FETCH_R                                                OP1[  IS_VAR $25 ] OP2[ ,  IS_CV !4 ] EXT_JMP_REL[ , ->48 ]
+   66    42*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         43*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~26 ]      OP1[  IS_CV !4 ] OP2[ ,  IS_CONST (268435332) 'parentNode' ]
+         44*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~26 ] OP2[ ,  IS_CONST (268435331) 'removeChild' ]
+         45*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !4 ] OP2[  IS_UNUSED  ]
+         46*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+   65    47*       < 42> JMP                                                       OP1[ ->41 ]
+         48*       <127> FE_FREE                                                   OP1[  IS_VAR $25 ] OP2[  IS_UNUSED  ]
+   70    49*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         50*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435321) 'query' ]
+         51*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435321) '%2F%2F%2A%5Bcontains%28%40class%2C+%22fa-%22%29+or+contains%28%40class%2C+%22ti-%22%29%5D' ] OP2[  IS_UNUSED  ]
+         52*       < 60> DO_FCALL                                      0   RES[  IS_VAR $28 ]      OP1[  IS_UNUSED  ]
+         53*       < 22> ASSIGN                                                    OP1[  IS_CV !5 ] OP2[ ,  IS_VAR $28 ]
+   71    54*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         55*       < 77> FE_RESET_R                                        RES[  IS_VAR $30 ]      OP1[  IS_CV !5 ] OP2[ , ->74 ]
+         56*       < 78> FE_FETCH_R                                                OP1[  IS_VAR $30 ] OP2[ ,  IS_CV !4 ] EXT_JMP_REL[ , ->74 ]
+   72    57*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         58*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435308) 'Glpi%5CToolbox%5Cstrlen' ]
+         59*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435309) 'Glpi%5CToolbox%5Ctrim' ]
+         60*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         61*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $31 ]      OP1[  IS_CV !4 ] OP2[ ,  IS_CONST (268435308) 'textContent' ]
+         62*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $31 ] OP2[  IS_UNUSED  ]
+         63*       < 60> DO_FCALL                                      0   RES[  IS_VAR $32 ]      OP1[  IS_UNUSED  ]
+         64*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $32 ] OP2[  IS_UNUSED  ]
+         65*       < 60> DO_FCALL                                      0   RES[  IS_VAR $33 ]      OP1[  IS_UNUSED  ]
+         66*       < 16> IS_IDENTICAL                                      RES[  IS_TMP_VAR ~34 ]      OP1[  IS_VAR $33 ] OP2[ ,  IS_CONST (268435299) 0 ]
+         67*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~34 ] OP2[ , ->73 ]
+   73    68*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         69*       < 82> FETCH_OBJ_R                                       RES[  IS_TMP_VAR ~35 ]      OP1[  IS_CV !4 ] OP2[ ,  IS_CONST (268435294) 'parentNode' ]
+         70*       <112> INIT_METHOD_CALL                                          OP1[  IS_TMP_VAR ~35 ] OP2[ ,  IS_CONST (268435293) 'removeChild' ]
+         71*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !4 ] OP2[  IS_UNUSED  ]
+         72*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+   71    73*       < 42> JMP                                                       OP1[ ->56 ]
+         74*       <127> FE_FREE                                                   OP1[  IS_VAR $30 ] OP2[  IS_UNUSED  ]
+   77    75*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         76*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435283) 'saveHTML' ]
+         77*       < 60> DO_FCALL                                      0   RES[  IS_VAR $37 ]      OP1[  IS_UNUSED  ]
+         78*       < 22> ASSIGN                                                    OP1[  IS_CV !0 ] OP2[ ,  IS_VAR $37 ]
+   80    79*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         80*       <113> INIT_STATIC_METHOD_CALL                                   OP1[  IS_CONST (268435277) 'Glpi%5CRichText%5CRichText' ] OP2[ ,  IS_CONST (268435279) 'getTextFromHtml' ]
+         81*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         82*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435277) <true> ] OP2[  IS_UNUSED  ]
+         83*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435276) <true> ] OP2[  IS_UNUSED  ]
+         84*       < 60> DO_FCALL                                      0   RES[  IS_VAR $39 ]      OP1[  IS_UNUSED  ]
+         85*       < 22> ASSIGN                                                    OP1[  IS_CV !0 ] OP2[ ,  IS_VAR $39 ]
+   83    86*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         87*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435269) 'Glpi%5CToolbox%5Cchr' ]
+         88*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435270) 194 ] OP2[  IS_UNUSED  ]
+         89*       < 60> DO_FCALL                                      0   RES[  IS_VAR $41 ]      OP1[  IS_UNUSED  ]
+         90*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435267) 'Glpi%5CToolbox%5Cchr' ]
+         91*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435268) 160 ] OP2[  IS_UNUSED  ]
+         92*       < 60> DO_FCALL                                      0   RES[  IS_VAR $42 ]      OP1[  IS_UNUSED  ]
+         93*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~43 ]      OP1[  IS_VAR $41 ] OP2[ ,  IS_VAR $42 ]
+         94*       < 22> ASSIGN                                                    OP1[  IS_CV !6 ] OP2[ ,  IS_TMP_VAR ~43 ]
+   84    95*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         96*       < 69> INIT_NS_FCALL_BY_NAME                                     OP2[  IS_CONST (268435259) 'Glpi%5CToolbox%5Ctrim' ]
+         97*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         98*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~45 ]      OP1[  IS_CONST (268435258) '+%0A%0D%09' ] OP2[ ,  IS_CV !6 ]
+         99*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~45 ] OP2[  IS_UNUSED  ]
+        100*       < 60> DO_FCALL                                      0   RES[  IS_VAR $46 ]      OP1[  IS_UNUSED  ]
+        101*       < 22> ASSIGN                                                    OP1[  IS_CV !0 ] OP2[ ,  IS_VAR $46 ]
+   87   102*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        103*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+        104*       < 62> RETURN                                                    OP1[  IS_CV !0 ]
+   88   105*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        106*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        107*       < 62> RETURN                                                    OP1[  IS_CONST (268435241) null ]
+
+End of function normalizevaluefortextexport
+
+End of class Glpi\Toolbox\DataExport.
+

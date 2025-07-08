@@ -1,0 +1,30 @@
+filename:       E:\AAAopensource\Yama\Yama_src\app\DVWA-1.9\vulnerabilities\fi\file1.php
+function name:  (null)
+number of ops:  23
+compiled vars:  !0 = $page
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+    9     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 59> INIT_FCALL_BY_NAME                                        OP2[  IS_CONST (268435438) 'dvwaCurrentUser' ]
+          2*       < 60> DO_FCALL                                      0   RES[  IS_VAR $2 ]       OP1[  IS_UNUSED  ]
+          3*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~3 ]       OP1[  IS_CONST (268435436) '%0D%0A%3Cdiv+class%3D%22body_padded%22%3E%0D%0A%09%3Ch1%3EVulnerability%3A+File+Inclusion%3C%2Fh1%3E%0D%0A%09%3Cdiv+class%3D%22vulnerable_code_area%22%3E%0D%0A%09%09%3Ch3%3EFile+1%3C%2Fh3%3E%0D%0A%09%09%3Chr+%2F%3E%0D%0A%09%09Hello+%3Cem%3E' ] OP2[ ,  IS_VAR $2 ]
+          4*       < 54> ROPE_INIT                                     3   RES[  IS_TMP_VAR ~7 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435437) '%3C%2Fem%3E%3Cbr+%2F%3E%0D%0A%09%09Your+IP+address+is%3A+%3Cem%3E' ]
+   10     5*       < 80> FETCH_R                      global               RES[  IS_TMP_VAR ~4 ]       OP1[  IS_CONST (268435433) '_SERVER' ]
+          6*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~5 ]       OP1[  IS_TMP_VAR ~4 ] OP2[ ,  IS_CONST (268435432) 'REMOTE_ADDR' ]
+          7*       < 55> ROPE_ADD                                      1   RES[  IS_TMP_VAR ~7 ]       OP1[  IS_TMP_VAR ~7 ] OP2[ ,  IS_TMP_VAR ~5 ]
+          8*       < 56> ROPE_END                                      2   RES[  IS_TMP_VAR ~6 ]       OP1[  IS_TMP_VAR ~7 ] OP2[ ,  IS_CONST (268435430) '%3C%2Fem%3E%3Cbr+%2F%3E%3Cbr+%2F%3E%0D%0A%09%09%5B%3Cem%3E%3Ca+href%3D%22%3Fpage%3Dinclude.php%22%3Eback%3C%2Fa%3E%3C%2Fem%3E%5D%0D%0A%09%3C%2Fdiv%3E%0D%0A%0D%0A%09%3Ch2%3EMore+info%3C%2Fh2%3E%0D%0A%09%3Cul%3E%0D%0A%09%09%3Cli%3E' ]
+          9*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~9 ]       OP1[  IS_TMP_VAR ~3 ] OP2[ ,  IS_TMP_VAR ~6 ]
+   16    10*       < 59> INIT_FCALL_BY_NAME                                        OP2[  IS_CONST (268435427) 'dvwaExternalLinkUrlGet' ]
+         11*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435427) 'https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FRemote_File_Inclusion' ] OP2[  IS_UNUSED  ]
+         12*       < 60> DO_FCALL                                      0   RES[  IS_VAR $10 ]      OP1[  IS_UNUSED  ]
+         13*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~11 ]      OP1[  IS_TMP_VAR ~9 ] OP2[ ,  IS_VAR $10 ]
+         14*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~12 ]      OP1[  IS_TMP_VAR ~11 ] OP2[ ,  IS_CONST (268435422) '%3C%2Fli%3E%0D%0A%09%09%3Cli%3E' ]
+   17    15*       < 59> INIT_FCALL_BY_NAME                                        OP2[  IS_CONST (268435421) 'dvwaExternalLinkUrlGet' ]
+         16*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435421) 'https%3A%2F%2Fwww.owasp.org%2Findex.php%2FTop_10_2007-A3' ] OP2[  IS_UNUSED  ]
+         17*       < 60> DO_FCALL                                      0   RES[  IS_VAR $13 ]      OP1[  IS_UNUSED  ]
+         18*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~14 ]      OP1[  IS_TMP_VAR ~12 ] OP2[ ,  IS_VAR $13 ]
+         19*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~15 ]      OP1[  IS_TMP_VAR ~14 ] OP2[ ,  IS_CONST (268435416) '%3C%2Fli%3E%0D%0A%09%3C%2Ful%3E%0D%0A%3C%2Fdiv%3E%0A' ]
+    3    20*       < 27> ASSIGN_DIM_OP                .=               8           OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435399) 'body' ]
+   17    21*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~15 ] OP2[  IS_UNUSED  ]
+   22    22*       < 62> RETURN                                                    OP1[  IS_CONST (268435411) 1 ]
+

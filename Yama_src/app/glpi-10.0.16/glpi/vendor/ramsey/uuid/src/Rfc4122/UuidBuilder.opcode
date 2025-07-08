@@ -1,0 +1,292 @@
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\ramsey\uuid\src\Rfc4122\UuidBuilder.php
+function name:  (null)
+number of ops:  16
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   13     0*       <  0> NOP                                                      
+   15     1*       <  0> NOP                                                      
+   17     2*       <  0> NOP                                                      
+   18     3*       <  0> NOP                                                      
+   19     4*       <  0> NOP                                                      
+   20     5*       <  0> NOP                                                      
+   21     6*       <  0> NOP                                                      
+   22     7*       <  0> NOP                                                      
+   23     8*       <  0> NOP                                                      
+   24     9*       <  0> NOP                                                      
+   25    10*       <  0> NOP                                                      
+   26    11*       <  0> NOP                                                      
+   38    12*       <  0> NOP                                                      
+   33    13*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         14*       <144> DECLARE_CLASS                                             OP1[  IS_CONST (268435425) 'ramsey%5Cuuid%5Crfc4122%5Cuuidbuilder' ] OP2[  IS_UNUSED  ]
+  112    15*       < 62> RETURN                                                    OP1[  IS_CONST (268435425) 1 ]
+
+Class Ramsey\Uuid\Rfc4122\UuidBuilder:
+[+]Class Parent Name: NULL
+End Trait extract
+Start Properties extract:
+Key: numberConverter, Value: UNINIT, Type: Normal
+Key: timeConverter, Value: UNINIT, Type: Normal
+End Properties extract.
+
+Function __construct:
+[+]Function Source Class Name: Ramsey\Uuid\Rfc4122\UuidBuilder
+[*]Start of arg_info extract:
+[*]arg_info num_args:2
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:numberConverter
+[*]type:Ramsey\Uuid\Converter\NumberConverterInterface
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:timeConverter
+[*]type:Ramsey\Uuid\Converter\TimeConverterInterface
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\ramsey\uuid\src\Rfc4122\UuidBuilder.php
+function name:  __construct
+number of ops:  10
+compiled vars:  !0 = $numberConverter, !1 = $timeConverter
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   53     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 63> RECV                                              RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ]
+   57     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435447) 'numberConverter' ]
+          4*       <137> OP_DATA                                                   OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+   58     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       < 24> ASSIGN_OBJ                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435442) 'timeConverter' ]
+          7*       <137> OP_DATA                                                   OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+   59     8*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          9*       < 62> RETURN                                                    OP1[  IS_CONST (268435437) null ]
+
+End of function __construct
+
+Function build:
+[+]Function Source Class Name: Ramsey\Uuid\Rfc4122\UuidBuilder
+[*]Start of arg_info extract:
+[*]arg_info num_args:2
+[*]Function return type:Ramsey\Uuid\UuidInterface
+
+[*]ArgInfoNo**0**
+[*]name:codec
+[*]type:Ramsey\Uuid\Codec\CodecInterface
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:bytes
+[*]type:string
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\ramsey\uuid\src\Rfc4122\UuidBuilder.php
+function name:  build
+number of ops:  149
+compiled vars:  !0 = $codec, !1 = $bytes, !2 = $fields, !3 = $e
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   71     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 63> RECV                                              RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ]
+   73     2*       <  0> NOP                                                      
+   74     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       <112> INIT_METHOD_CALL                                          OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435377) 'buildFields' ]
+          5*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+          6*       < 60> DO_FCALL                                      0   RES[  IS_VAR $4 ]       OP1[  IS_UNUSED  ]
+          7*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_VAR $4 ]
+   76     8*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          9*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435369) 'isNil' ]
+         10*       < 60> DO_FCALL                                      0   RES[  IS_VAR $6 ]       OP1[  IS_UNUSED  ]
+         11*       < 43> JMPZ                                                      OP1[  IS_VAR $6 ] OP2[ , ->25 ]
+   77    12*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         13*       < 68> NEW                                               RES[  IS_VAR $7 ]       OP1[ 'Ramsey%5CUuid%5CRfc4122%5CNilUuid' ]
+         14*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         15*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         16*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $8 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435359) 'numberConverter' ]
+         17*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $8 ] OP2[  IS_UNUSED  ]
+         18*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         19*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         20*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $9 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435352) 'timeConverter' ]
+         21*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $9 ] OP2[  IS_UNUSED  ]
+         22*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         23*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_VAR $7 ] OP2[  IS_UNUSED  ]
+         24*       < 62> RETURN                                                    OP1[  IS_VAR $7 ]
+   80    25*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         26*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435341) 'getVersion' ]
+         27*       < 60> DO_FCALL                                      0   RES[  IS_VAR $11 ]      OP1[  IS_UNUSED  ]
+         28*       <187> SWITCH_LONG                                               OP1[  IS_VAR $11 ] OP2[ , [ 1:->42, 2:->56, 3:->70, 4:->84, 5:->98, 6:->112, ] ] EXT_JMP_REL[ , ->126 ]
+   81    29*       < 48> CASE                                              RES[  ]         OP1[  IS_VAR $11 ] OP2[ ,  IS_CONST (268435338) 1 ]
+         30*       < 44> JMPNZ                                                     OP1[  IS_TMP_VAR ~12 ] OP2[ , ->42 ]
+   83    31*       < 48> CASE                                              RES[  ]         OP1[  IS_VAR $11 ] OP2[ ,  IS_CONST (268435335) 2 ]
+         32*       < 44> JMPNZ                                                     OP1[  IS_TMP_VAR ~12 ] OP2[ , ->56 ]
+   85    33*       < 48> CASE                                              RES[  ]         OP1[  IS_VAR $11 ] OP2[ ,  IS_CONST (268435332) 3 ]
+         34*       < 44> JMPNZ                                                     OP1[  IS_TMP_VAR ~12 ] OP2[ , ->70 ]
+   87    35*       < 48> CASE                                              RES[  ]         OP1[  IS_VAR $11 ] OP2[ ,  IS_CONST (268435329) 4 ]
+         36*       < 44> JMPNZ                                                     OP1[  IS_TMP_VAR ~12 ] OP2[ , ->84 ]
+   89    37*       < 48> CASE                                              RES[  ]         OP1[  IS_VAR $11 ] OP2[ ,  IS_CONST (268435326) 5 ]
+         38*       < 44> JMPNZ                                                     OP1[  IS_TMP_VAR ~12 ] OP2[ , ->98 ]
+   91    39*       < 48> CASE                                              RES[  ]         OP1[  IS_VAR $11 ] OP2[ ,  IS_CONST (268435323) 6 ]
+         40*       < 44> JMPNZ                                                     OP1[  IS_TMP_VAR ~12 ] OP2[ , ->112 ]
+         41*       < 42> JMP                                                       OP1[ ->126 ]
+   82    42*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         43*       < 68> NEW                                               RES[  IS_VAR $13 ]      OP1[ 'Ramsey%5CUuid%5CRfc4122%5CUuidV1' ]
+         44*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         45*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         46*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $14 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435312) 'numberConverter' ]
+         47*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $14 ] OP2[  IS_UNUSED  ]
+         48*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         49*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         50*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $15 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435305) 'timeConverter' ]
+         51*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $15 ] OP2[  IS_UNUSED  ]
+         52*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         53*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_VAR $13 ] OP2[  IS_UNUSED  ]
+         54*       < 70> FREE                                                      OP1[  IS_VAR $11 ]
+         55*       < 62> RETURN                                                    OP1[  IS_VAR $13 ]
+   84    56*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         57*       < 68> NEW                                               RES[  IS_VAR $17 ]      OP1[ 'Ramsey%5CUuid%5CRfc4122%5CUuidV2' ]
+         58*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         59*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         60*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $18 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435288) 'numberConverter' ]
+         61*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $18 ] OP2[  IS_UNUSED  ]
+         62*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         63*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         64*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $19 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435281) 'timeConverter' ]
+         65*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $19 ] OP2[  IS_UNUSED  ]
+         66*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         67*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_VAR $17 ] OP2[  IS_UNUSED  ]
+         68*       < 70> FREE                                                      OP1[  IS_VAR $11 ]
+         69*       < 62> RETURN                                                    OP1[  IS_VAR $17 ]
+   86    70*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         71*       < 68> NEW                                               RES[  IS_VAR $21 ]      OP1[ 'Ramsey%5CUuid%5CRfc4122%5CUuidV3' ]
+         72*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         73*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         74*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $22 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435264) 'numberConverter' ]
+         75*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $22 ] OP2[  IS_UNUSED  ]
+         76*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         77*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         78*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $23 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435257) 'timeConverter' ]
+         79*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $23 ] OP2[  IS_UNUSED  ]
+         80*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         81*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_VAR $21 ] OP2[  IS_UNUSED  ]
+         82*       < 70> FREE                                                      OP1[  IS_VAR $11 ]
+         83*       < 62> RETURN                                                    OP1[  IS_VAR $21 ]
+   88    84*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         85*       < 68> NEW                                               RES[  IS_VAR $25 ]      OP1[ 'Ramsey%5CUuid%5CRfc4122%5CUuidV4' ]
+         86*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         87*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         88*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $26 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435240) 'numberConverter' ]
+         89*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $26 ] OP2[  IS_UNUSED  ]
+         90*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         91*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         92*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $27 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435233) 'timeConverter' ]
+         93*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $27 ] OP2[  IS_UNUSED  ]
+         94*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         95*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_VAR $25 ] OP2[  IS_UNUSED  ]
+         96*       < 70> FREE                                                      OP1[  IS_VAR $11 ]
+         97*       < 62> RETURN                                                    OP1[  IS_VAR $25 ]
+   90    98*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         99*       < 68> NEW                                               RES[  IS_VAR $29 ]      OP1[ 'Ramsey%5CUuid%5CRfc4122%5CUuidV5' ]
+        100*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+        101*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        102*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $30 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435216) 'numberConverter' ]
+        103*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $30 ] OP2[  IS_UNUSED  ]
+        104*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+        105*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        106*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $31 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435209) 'timeConverter' ]
+        107*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $31 ] OP2[  IS_UNUSED  ]
+        108*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+        109*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_VAR $29 ] OP2[  IS_UNUSED  ]
+        110*       < 70> FREE                                                      OP1[  IS_VAR $11 ]
+        111*       < 62> RETURN                                                    OP1[  IS_VAR $29 ]
+   92   112*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        113*       < 68> NEW                                               RES[  IS_VAR $33 ]      OP1[ 'Ramsey%5CUuid%5CNonstandard%5CUuidV6' ]
+        114*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+        115*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        116*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $34 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435192) 'numberConverter' ]
+        117*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $34 ] OP2[  IS_UNUSED  ]
+        118*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+        119*       <100> CHECK_FUNC_ARG                                            OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        120*       < 94> FETCH_OBJ_FUNC_ARG                                RES[  IS_VAR $35 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435185) 'timeConverter' ]
+        121*       <185> SEND_FUNC_ARG                                             OP1[  IS_VAR $35 ] OP2[  IS_UNUSED  ]
+        122*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+        123*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_VAR $33 ] OP2[  IS_UNUSED  ]
+        124*       < 70> FREE                                                      OP1[  IS_VAR $11 ]
+        125*       < 62> RETURN                                                    OP1[  IS_VAR $33 ]
+        126*       < 70> FREE                                                      OP1[  IS_VAR $11 ]
+   95   127*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        128*       < 68> NEW                                               RES[  IS_VAR $37 ]      OP1[ 'Ramsey%5CUuid%5CException%5CUnsupportedOperationException' ]
+   97   129*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435170) 'The+UUID+version+in+the+given+fields+is+not+supported+by+this+UUID+builder' ] OP2[  IS_UNUSED  ]
+        130*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+        131*       <108> THROW                                         0           OP1[  IS_VAR $37 ] OP2[  IS_UNUSED  ]
+        132*       < 42> JMP                                                       OP1[ ->146 ]
+   99   133*       <107> CATCH                                       last  RES[  IS_CV !3 ]       OP1[  IS_CONST (268435163) 'Throwable' ]
+  100   134*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        135*       < 68> NEW                                               RES[  IS_VAR $39 ]      OP1[ 'Ramsey%5CUuid%5CException%5CUnableToBuildUuidException' ]
+        136*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435161) 'getMessage' ]
+        137*       < 60> DO_FCALL                                      0   RES[  IS_VAR $40 ]      OP1[  IS_UNUSED  ]
+        138*       < 50> SEND_VAR_NO_REF_EX                                        OP1[  IS_VAR $40 ] OP2[  IS_UNUSED  ]
+        139*       <112> INIT_METHOD_CALL                                          OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435157) 'getCode' ]
+        140*       < 60> DO_FCALL                                      0   RES[  IS_VAR $41 ]      OP1[  IS_UNUSED  ]
+        141*       < 51> CAST                                          4   RES[  IS_TMP_VAR ~42 ]      OP1[  IS_VAR $41 ] OP2[  IS_UNUSED  ]
+        142*       <116> SEND_VAL_EX                                               OP1[  IS_TMP_VAR ~42 ] OP2[  IS_UNUSED  ]
+        143*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+        144*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+        145*       <108> THROW                                         0           OP1[  IS_VAR $39 ] OP2[  IS_UNUSED  ]
+  102   146*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        147*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+        148*       < 62> RETURN                                                    OP1[  IS_CONST (268435141) null ]
+
+End of function build
+
+Function buildfields:
+[+]Function Source Class Name: Ramsey\Uuid\Rfc4122\UuidBuilder
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:Ramsey\Uuid\Rfc4122\FieldsInterface
+
+[*]ArgInfoNo**0**
+[*]name:bytes
+[*]type:string
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       G:\desktop\Yama\app\glpi-10.0.16\glpi\vendor\ramsey\uuid\src\Rfc4122\UuidBuilder.php
+function name:  buildFields
+number of ops:  10
+compiled vars:  !0 = $bytes
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  107     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  109     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 68> NEW                                               RES[  IS_VAR $1 ]       OP1[ 'Ramsey%5CUuid%5CRfc4122%5CFields' ]
+          3*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          4*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+          5*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_VAR $1 ] OP2[  IS_UNUSED  ]
+          6*       < 62> RETURN                                                    OP1[  IS_VAR $1 ]
+  110     7*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          8*       <124> VERIFY_RETURN_TYPE                                        OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          9*       < 62> RETURN                                                    OP1[  IS_CONST (268435437) null ]
+
+End of function buildfields
+
+End of class Ramsey\Uuid\Rfc4122\UuidBuilder.
+

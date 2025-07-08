@@ -1,0 +1,849 @@
+filename:       E:\AAAopensource\Yama\Yama_src\app\DVWA-1.9\external\recaptcha\recaptchalib.php
+function name:  (null)
+number of ops:  18
+compiled vars:  none
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   38     0*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          1*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435444) 'define' ]
+          2*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435443) 'RECAPTCHA_API_SERVER' ]
+          3*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435442) 'http%3A%2F%2Fwww.google.com%2Frecaptcha%2Fapi' ]
+          4*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+   39     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435437) 'define' ]
+          7*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435436) 'RECAPTCHA_API_SECURE_SERVER' ]
+          8*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435435) 'https%3A%2F%2Fwww.google.com%2Frecaptcha%2Fapi' ]
+          9*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+   40    10*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         11*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435430) 'define' ]
+         12*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435429) 'RECAPTCHA_VERIFY_SERVER' ]
+         13*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435428) 'www.google.com' ]
+         14*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+  140    15*       <  0> NOP                                                      
+  280    16*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         17*       < 62> RETURN                                                    OP1[  IS_CONST (268435421) 1 ]
+
+Function _recaptcha_qsencode:
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:data
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       E:\AAAopensource\Yama\Yama_src\app\DVWA-1.9\external\recaptcha\recaptchalib.php
+function name:  _recaptcha_qsencode
+number of ops:  33
+compiled vars:  !0 = $data, !1 = $req, !2 = $value, !3 = $key
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   47     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+   48     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435443) '' ]
+   49     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       < 77> FE_RESET_R                                        RES[  IS_VAR $5 ]       OP1[  IS_CV !0 ] OP2[ , ->19 ]
+          5*       < 78> FE_FETCH_R                                        RES[  IS_TMP_VAR ~6 ]       OP1[  IS_VAR $5 ] OP2[ ,  IS_CV !2 ] EXT_JMP_REL[ , ->19 ]
+          6*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_TMP_VAR ~6 ]
+   50     7*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          8*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~8 ]       OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435432) '%3D' ]
+          9*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435431) 'urlencode' ]
+         10*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435430) 'stripslashes' ]
+         11*       <117> SEND_VAR                                                  OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         12*       < 60> DO_FCALL                                      0   RES[  IS_VAR $9 ]       OP1[  IS_UNUSED  ]
+         13*       <117> SEND_VAR                                                  OP1[  IS_VAR $9 ] OP2[  IS_UNUSED  ]
+         14*       < 60> DO_FCALL                                      0   RES[  IS_VAR $10 ]      OP1[  IS_UNUSED  ]
+         15*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~11 ]      OP1[  IS_TMP_VAR ~8 ] OP2[ ,  IS_VAR $10 ]
+         16*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~12 ]      OP1[  IS_TMP_VAR ~11 ] OP2[ ,  IS_CONST (268435419) '%26' ]
+         17*       < 26> ASSIGN_OP                    .=               8           OP1[  IS_CV !1 ] OP2[ ,  IS_TMP_VAR ~12 ]
+   49    18*       < 42> JMP                                                       OP1[ ->5 ]
+         19*       <127> FE_FREE                                                   OP1[  IS_VAR $5 ] OP2[  IS_UNUSED  ]
+   53    20*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         21*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435410) 'substr' ]
+         22*       <117> SEND_VAR                                                  OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         23*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435407) 0 ]
+         24*       <121> STRLEN                                            RES[  IS_TMP_VAR ~14 ]      OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         25*       <  2> SUB                                               RES[  IS_TMP_VAR ~15 ]      OP1[  IS_TMP_VAR ~14 ] OP2[ ,  IS_CONST (268435404) 1 ]
+         26*       < 65> SEND_VAL                                                  OP1[  IS_TMP_VAR ~15 ]
+         27*       < 60> DO_FCALL                                      0   RES[  IS_VAR $16 ]      OP1[  IS_UNUSED  ]
+         28*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_VAR $16 ]
+   54    29*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         30*       < 62> RETURN                                                    OP1[  IS_CV !1 ]
+   55    31*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         32*       < 62> RETURN                                                    OP1[  IS_CONST (268435391) null ]
+
+End of function _recaptcha_qsencode
+
+Function _recaptcha_http_post:
+[*]Start of arg_info extract:
+[*]arg_info num_args:4
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:host
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:path
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**2**
+[*]name:data
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**3**
+[*]name:port
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       E:\AAAopensource\Yama\Yama_src\app\DVWA-1.9\external\recaptcha\recaptchalib.php
+function name:  _recaptcha_http_post
+number of ops:  82
+compiled vars:  !0 = $host, !1 = $path, !2 = $data, !3 = $port, !4 = $req, !5 = $http_request, !6 = $response, !7 = $fs, !8 = $errno, !9 = $errstr
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   67     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 63> RECV                                              RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ]
+          2*       < 63> RECV                                              RES[  IS_CV !2 ]       OP1[  IS_UNUSED  ]
+          3*       < 64> RECV_INIT                                         RES[  IS_CV !3 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435426) 80 ]
+   69     4*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          5*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435423) '_recaptcha_qsencode' ]
+          6*       <117> SEND_VAR                                                  OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+          7*       < 60> DO_FCALL                                      0   RES[  IS_VAR $10 ]      OP1[  IS_UNUSED  ]
+          8*       < 22> ASSIGN                                                    OP1[  IS_CV !4 ] OP2[ ,  IS_VAR $10 ]
+   71     9*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         10*       < 54> ROPE_INIT                                     3   RES[  IS_TMP_VAR ~13 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435414) 'POST+' ]
+         11*       < 55> ROPE_ADD                                      1   RES[  IS_TMP_VAR ~13 ]      OP1[  IS_TMP_VAR ~13 ] OP2[ ,  IS_CV !1 ]
+         12*       < 56> ROPE_END                                      2   RES[  IS_TMP_VAR ~12 ]      OP1[  IS_TMP_VAR ~13 ] OP2[ ,  IS_CONST (268435411) '+HTTP%2F1.0%0D%0A' ]
+         13*       < 22> ASSIGN                                                    OP1[  IS_CV !5 ] OP2[ ,  IS_TMP_VAR ~12 ]
+   72    14*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         15*       < 54> ROPE_INIT                                     3   RES[  IS_TMP_VAR ~17 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435406) 'Host%3A+' ]
+         16*       < 55> ROPE_ADD                                      1   RES[  IS_TMP_VAR ~17 ]      OP1[  IS_TMP_VAR ~17 ] OP2[ ,  IS_CV !0 ]
+         17*       < 56> ROPE_END                                      2   RES[  IS_TMP_VAR ~16 ]      OP1[  IS_TMP_VAR ~17 ] OP2[ ,  IS_CONST (268435403) '%0D%0A' ]
+         18*       < 26> ASSIGN_OP                    .=               8           OP1[  IS_CV !5 ] OP2[ ,  IS_TMP_VAR ~16 ]
+   73    19*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         20*       < 26> ASSIGN_OP                    .=               8           OP1[  IS_CV !5 ] OP2[ ,  IS_CONST (268435398) 'Content-Type%3A+application%2Fx-www-form-urlencoded%3B%0D%0A' ]
+   74    21*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         22*       <121> STRLEN                                            RES[  IS_TMP_VAR ~21 ]      OP1[  IS_CV !4 ] OP2[  IS_UNUSED  ]
+         23*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~22 ]      OP1[  IS_CONST (268435393) 'Content-Length%3A+' ] OP2[ ,  IS_TMP_VAR ~21 ]
+         24*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~23 ]      OP1[  IS_TMP_VAR ~22 ] OP2[ ,  IS_CONST (268435392) '%0D%0A' ]
+         25*       < 26> ASSIGN_OP                    .=               8           OP1[  IS_CV !5 ] OP2[ ,  IS_TMP_VAR ~23 ]
+   75    26*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         27*       < 26> ASSIGN_OP                    .=               8           OP1[  IS_CV !5 ] OP2[ ,  IS_CONST (268435387) 'User-Agent%3A+reCAPTCHA%2FPHP%0D%0A' ]
+   76    28*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         29*       < 26> ASSIGN_OP                    .=               8           OP1[  IS_CV !5 ] OP2[ ,  IS_CONST (268435384) '%0D%0A' ]
+   77    30*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         31*       < 26> ASSIGN_OP                    .=               8           OP1[  IS_CV !5 ] OP2[ ,  IS_CV !4 ]
+   79    32*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         33*       < 22> ASSIGN                                                    OP1[  IS_CV !6 ] OP2[ ,  IS_CONST (268435377) '' ]
+   80    34*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         35*       < 57> BEGIN_SILENCE                                     RES[  IS_TMP_VAR ~29 ]      OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         36*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435372) 'fsockopen' ]
+         37*       <117> SEND_VAR                                                  OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         38*       <117> SEND_VAR                                                  OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         39*       < 67> SEND_REF                                                  OP1[  IS_CV !8 ] OP2[  IS_UNUSED  ]
+         40*       < 67> SEND_REF                                                  OP1[  IS_CV !9 ] OP2[  IS_UNUSED  ]
+         41*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435363) 10 ]
+         42*       < 60> DO_FCALL                                      0   RES[  IS_VAR $30 ]      OP1[  IS_UNUSED  ]
+         43*       < 58> END_SILENCE                                               OP1[  IS_TMP_VAR ~29 ] OP2[  IS_UNUSED  ]
+         44*       < 22> ASSIGN                                            RES[  IS_TMP_VAR ~31 ]      OP1[  IS_CV !7 ] OP2[ ,  IS_VAR $30 ]
+         45*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~32 ]      OP1[  IS_TMP_VAR ~31 ]
+         46*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~32 ] OP2[ , ->49 ]
+   81    47*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         48*       < 79> EXIT                                                      OP1[  IS_CONST (268435350) 'Could+not+open+socket' ] OP2[  IS_UNUSED  ]
+   84    49*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         50*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435347) 'fwrite' ]
+         51*       <117> SEND_VAR                                                  OP1[  IS_CV !7 ] OP2[  IS_UNUSED  ]
+         52*       <117> SEND_VAR                                                  OP1[  IS_CV !5 ] OP2[  IS_UNUSED  ]
+         53*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+   86    54*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         55*       < 42> JMP                                                       OP1[ ->62 ]
+   87    56*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         57*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435334) 'fgets' ]
+         58*       <117> SEND_VAR                                                  OP1[  IS_CV !7 ] OP2[  IS_UNUSED  ]
+         59*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435331) 1160 ]
+         60*       < 60> DO_FCALL                                      0   RES[  IS_VAR $34 ]      OP1[  IS_UNUSED  ]
+         61*       < 26> ASSIGN_OP                    .=               8           OP1[  IS_CV !6 ] OP2[ ,  IS_VAR $34 ]
+   86    62*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435326) 'feof' ]
+         63*       <117> SEND_VAR                                                  OP1[  IS_CV !7 ] OP2[  IS_UNUSED  ]
+         64*       < 60> DO_FCALL                                      0   RES[  IS_VAR $36 ]      OP1[  IS_UNUSED  ]
+         65*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~37 ]      OP1[  IS_VAR $36 ]
+         66*       < 44> JMPNZ                                                     OP1[  IS_TMP_VAR ~37 ] OP2[ , ->56 ]
+   88    67*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         68*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435315) 'fclose' ]
+         69*       <117> SEND_VAR                                                  OP1[  IS_CV !7 ] OP2[  IS_UNUSED  ]
+         70*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+   89    71*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         72*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435308) 'explode' ]
+         73*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435307) '%0D%0A%0D%0A' ]
+         74*       <117> SEND_VAR                                                  OP1[  IS_CV !6 ] OP2[  IS_UNUSED  ]
+         75*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435304) 2 ]
+         76*       < 60> DO_FCALL                                      0   RES[  IS_VAR $39 ]      OP1[  IS_UNUSED  ]
+         77*       < 22> ASSIGN                                                    OP1[  IS_CV !6 ] OP2[ ,  IS_VAR $39 ]
+   91    78*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         79*       < 62> RETURN                                                    OP1[  IS_CV !6 ]
+   92    80*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         81*       < 62> RETURN                                                    OP1[  IS_CONST (268435293) null ]
+
+End of function _recaptcha_http_post
+
+Function recaptcha_get_html:
+[*]Start of arg_info extract:
+[*]arg_info num_args:3
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:pubkey
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:error
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**2**
+[*]name:use_ssl
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       E:\AAAopensource\Yama\Yama_src\app\DVWA-1.9\external\recaptcha\recaptchalib.php
+function name:  recaptcha_get_html
+number of ops:  33
+compiled vars:  !0 = $pubkey, !1 = $error, !2 = $use_ssl, !3 = $server, !4 = $errorpart
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  106     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 64> RECV_INIT                                         RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435440) null ]
+          2*       < 64> RECV_INIT                                         RES[  IS_CV !2 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435439) <false> ]
+  114     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       < 43> JMPZ                                                      OP1[  IS_CV !2 ] OP2[ , ->9 ]
+  115     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       < 99> FETCH_CONSTANT                                    RES[  IS_TMP_VAR ~5 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435432) 'RECAPTCHA_API_SECURE_SERVER' ]
+          7*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_TMP_VAR ~5 ]
+          8*       < 42> JMP                                                       OP1[ ->12 ]
+  117     9*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         10*       < 99> FETCH_CONSTANT                                    RES[  IS_TMP_VAR ~7 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435426) 'RECAPTCHA_API_SERVER' ]
+         11*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_TMP_VAR ~7 ]
+  120    12*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         13*       < 22> ASSIGN                                                    OP1[  IS_CV !4 ] OP2[ ,  IS_CONST (268435422) '' ]
+  121    14*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         15*       < 43> JMPZ                                                      OP1[  IS_CV !1 ] OP2[ , ->19 ]
+  122    16*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         17*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~10 ]      OP1[  IS_CONST (268435415) '%26amp%3Berror%3D' ] OP2[ ,  IS_CV !1 ]
+         18*       < 22> ASSIGN                                                    OP1[  IS_CV !4 ] OP2[ ,  IS_TMP_VAR ~10 ]
+  124    19*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         20*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~12 ]      OP1[  IS_CONST (268435410) '%3Cscript+type%3D%22text%2Fjavascript%22+src%3D%22' ] OP2[ ,  IS_CV !3 ]
+         21*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~13 ]      OP1[  IS_TMP_VAR ~12 ] OP2[ ,  IS_CONST (268435409) '%2Fchallenge%3Fk%3D' ]
+         22*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~14 ]      OP1[  IS_TMP_VAR ~13 ] OP2[ ,  IS_CV !0 ]
+         23*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~15 ]      OP1[  IS_TMP_VAR ~14 ] OP2[ ,  IS_CV !4 ]
+         24*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~16 ]      OP1[  IS_TMP_VAR ~15 ] OP2[ ,  IS_CONST (268435404) '%22%3E%3C%2Fscript%3E%0A%0A%09%3Cnoscript%3E%0A++%09%09%3Ciframe+src%3D%22' ]
+  127    25*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~17 ]      OP1[  IS_TMP_VAR ~16 ] OP2[ ,  IS_CV !3 ]
+         26*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~18 ]      OP1[  IS_TMP_VAR ~17 ] OP2[ ,  IS_CONST (268435401) '%2Fnoscript%3Fk%3D' ]
+         27*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~19 ]      OP1[  IS_TMP_VAR ~18 ] OP2[ ,  IS_CV !0 ]
+         28*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~20 ]      OP1[  IS_TMP_VAR ~19 ] OP2[ ,  IS_CV !4 ]
+         29*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~21 ]      OP1[  IS_TMP_VAR ~20 ] OP2[ ,  IS_CONST (268435396) '%22+height%3D%22300%22+width%3D%22500%22+frameborder%3D%220%22%3E%3C%2Fiframe%3E%3Cbr%2F%3E%0A++%09%09%3Ctextarea+name%3D%22recaptcha_challenge_field%22+rows%3D%223%22+cols%3D%2240%22%3E%3C%2Ftextarea%3E%0A++%09%09%3Cinput+type%3D%22hidden%22+name%3D%22recaptcha_response_field%22+value%3D%22manual_challenge%22%2F%3E%0A%09%3C%2Fnoscript%3E' ]
+         30*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~21 ]
+  131    31*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         32*       < 62> RETURN                                                    OP1[  IS_CONST (268435391) null ]
+
+End of function recaptcha_get_html
+
+Function recaptcha_check_answer:
+[*]Start of arg_info extract:
+[*]arg_info num_args:5
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:privkey
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:remoteip
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**2**
+[*]name:challenge
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**3**
+[*]name:response
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**4**
+[*]name:extra_params
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       E:\AAAopensource\Yama\Yama_src\app\DVWA-1.9\external\recaptcha\recaptchalib.php
+function name:  recaptcha_check_answer
+number of ops:  93
+compiled vars:  !0 = $privkey, !1 = $remoteip, !2 = $challenge, !3 = $response, !4 = $extra_params, !5 = $recaptcha_response, !6 = $answers
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  154     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 63> RECV                                              RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ]
+          2*       < 63> RECV                                              RES[  IS_CV !2 ]       OP1[  IS_UNUSED  ]
+          3*       < 63> RECV                                              RES[  IS_CV !3 ]       OP1[  IS_UNUSED  ]
+          4*       < 64> RECV_INIT                                         RES[  IS_CV !4 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435404) <array> ]
+  156     5*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          6*       < 18> IS_EQUAL                                          RES[  IS_TMP_VAR ~7 ]       OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435401) null ]
+          7*       < 47> JMPNZ_EX                                          RES[  IS_TMP_VAR ~7 ]       OP1[  IS_TMP_VAR ~7 ] OP2[ , ->10 ]
+          8*       < 18> IS_EQUAL                                          RES[  IS_TMP_VAR ~8 ]       OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435398) '' ]
+          9*       < 52> BOOL                                              RES[  IS_TMP_VAR ~7 ]       OP1[  IS_TMP_VAR ~8 ]
+         10*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~7 ] OP2[ , ->13 ]
+  157    11*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         12*       < 79> EXIT                                                      OP1[  IS_CONST (268435391) 'To+use+reCAPTCHA+you+must+get+an+API+key+from+%3Ca+href%3D%27https%3A%2F%2Fwww.google.com%2Frecaptcha%2Fadmin%2Fcreate%27+target%3D%27_blank%27%3Ehttps%3A%2F%2Fwww.google.com%2Frecaptcha%2Fadmin%2Fcreate%3C%2Fa%3E' ] OP2[  IS_UNUSED  ]
+  160    13*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         14*       < 18> IS_EQUAL                                          RES[  IS_TMP_VAR ~9 ]       OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435388) null ]
+         15*       < 47> JMPNZ_EX                                          RES[  IS_TMP_VAR ~9 ]       OP1[  IS_TMP_VAR ~9 ] OP2[ , ->18 ]
+         16*       < 18> IS_EQUAL                                          RES[  IS_TMP_VAR ~10 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435385) '' ]
+         17*       < 52> BOOL                                              RES[  IS_TMP_VAR ~9 ]       OP1[  IS_TMP_VAR ~10 ]
+         18*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~9 ] OP2[ , ->21 ]
+  161    19*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         20*       < 79> EXIT                                                      OP1[  IS_CONST (268435378) 'For+security+reasons%2C+you+must+pass+the+remote+ip+to+reCAPTCHA' ] OP2[  IS_UNUSED  ]
+  167    21*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         22*       < 18> IS_EQUAL                                          RES[  IS_TMP_VAR ~11 ]      OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435375) null ]
+         23*       < 47> JMPNZ_EX                                          RES[  IS_TMP_VAR ~11 ]      OP1[  IS_TMP_VAR ~11 ] OP2[ , ->27 ]
+         24*       <121> STRLEN                                            RES[  IS_TMP_VAR ~12 ]      OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         25*       < 18> IS_EQUAL                                          RES[  IS_TMP_VAR ~13 ]      OP1[  IS_TMP_VAR ~12 ] OP2[ ,  IS_CONST (268435370) 0 ]
+         26*       < 52> BOOL                                              RES[  IS_TMP_VAR ~11 ]      OP1[  IS_TMP_VAR ~13 ]
+         27*       < 47> JMPNZ_EX                                          RES[  IS_TMP_VAR ~11 ]      OP1[  IS_TMP_VAR ~11 ] OP2[ , ->30 ]
+         28*       < 18> IS_EQUAL                                          RES[  IS_TMP_VAR ~14 ]      OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435365) null ]
+         29*       < 52> BOOL                                              RES[  IS_TMP_VAR ~11 ]      OP1[  IS_TMP_VAR ~14 ]
+         30*       < 47> JMPNZ_EX                                          RES[  IS_TMP_VAR ~11 ]      OP1[  IS_TMP_VAR ~11 ] OP2[ , ->34 ]
+         31*       <121> STRLEN                                            RES[  IS_TMP_VAR ~15 ]      OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         32*       < 18> IS_EQUAL                                          RES[  IS_TMP_VAR ~16 ]      OP1[  IS_TMP_VAR ~15 ] OP2[ ,  IS_CONST (268435358) 0 ]
+         33*       < 52> BOOL                                              RES[  IS_TMP_VAR ~11 ]      OP1[  IS_TMP_VAR ~16 ]
+         34*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~11 ] OP2[ , ->47 ]
+  168    35*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         36*       < 68> NEW                                               RES[  IS_VAR $17 ]      OP1[ 'ReCaptchaResponse' ]
+         37*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         38*       < 22> ASSIGN                                                    OP1[  IS_CV !5 ] OP2[ ,  IS_VAR $17 ]
+  169    39*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         40*       < 24> ASSIGN_OBJ                                                OP1[  IS_CV !5 ] OP2[ ,  IS_CONST (268435345) 'is_valid' ]
+         41*       <137> OP_DATA                                                   OP1[  IS_CONST (268435344) <false> ] OP2[  IS_UNUSED  ]
+  170    42*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         43*       < 24> ASSIGN_OBJ                                                OP1[  IS_CV !5 ] OP2[ ,  IS_CONST (268435341) 'error' ]
+         44*       <137> OP_DATA                                                   OP1[  IS_CONST (268435340) 'incorrect-captcha-sol' ] OP2[  IS_UNUSED  ]
+  171    45*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         46*       < 62> RETURN                                                    OP1[  IS_CV !5 ]
+  174    47*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         48*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435333) '_recaptcha_http_post' ]
+         49*       < 99> FETCH_CONSTANT                                    RES[  IS_TMP_VAR ~22 ]      OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435332) 'RECAPTCHA_VERIFY_SERVER' ]
+         50*       < 65> SEND_VAL                                                  OP1[  IS_TMP_VAR ~22 ]
+         51*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435330) '%2Frecaptcha%2Fapi%2Fverify' ]
+  176    52*       < 71> INIT_ARRAY                                        RES[  IS_TMP_VAR ~23 ]      OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435329) 'privatekey' ]
+  177    53*       < 72> ADD_ARRAY_ELEMENT                                 RES[  IS_TMP_VAR ~23 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435328) 'remoteip' ]
+  178    54*       < 72> ADD_ARRAY_ELEMENT                                 RES[  IS_TMP_VAR ~23 ]      OP1[  IS_CV !2 ] OP2[ ,  IS_CONST (268435327) 'challenge' ]
+  179    55*       < 72> ADD_ARRAY_ELEMENT                                 RES[  IS_TMP_VAR ~23 ]      OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435326) 'response' ]
+  180    56*       <  1> ADD                                               RES[  IS_TMP_VAR ~24 ]      OP1[  IS_TMP_VAR ~23 ] OP2[ ,  IS_CV !4 ]
+         57*       < 65> SEND_VAL                                                  OP1[  IS_TMP_VAR ~24 ]
+         58*       < 60> DO_FCALL                                      0   RES[  IS_VAR $25 ]      OP1[  IS_UNUSED  ]
+  174    59*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_VAR $25 ]
+  183    60*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         61*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435315) 'explode' ]
+         62*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435314) '%0A' ]
+         63*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~27 ]      OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435313) 1 ]
+         64*       < 65> SEND_VAL                                                  OP1[  IS_TMP_VAR ~27 ]
+         65*       < 60> DO_FCALL                                      0   RES[  IS_VAR $28 ]      OP1[  IS_UNUSED  ]
+         66*       < 22> ASSIGN                                                    OP1[  IS_CV !6 ] OP2[ ,  IS_VAR $28 ]
+  184    67*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         68*       < 68> NEW                                               RES[  IS_VAR $30 ]      OP1[ 'ReCaptchaResponse' ]
+         69*       < 60> DO_FCALL                                      0           OP1[  IS_UNUSED  ]
+         70*       < 22> ASSIGN                                                    OP1[  IS_CV !5 ] OP2[ ,  IS_VAR $30 ]
+  186    71*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         72*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435298) 'trim' ]
+         73*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~33 ]      OP1[  IS_CV !6 ] OP2[ ,  IS_CONST (268435297) 0 ]
+         74*       < 65> SEND_VAL                                                  OP1[  IS_TMP_VAR ~33 ]
+         75*       < 60> DO_FCALL                                      0   RES[  IS_VAR $34 ]      OP1[  IS_UNUSED  ]
+         76*       < 18> IS_EQUAL                                          RES[  IS_TMP_VAR ~35 ]      OP1[  IS_VAR $34 ] OP2[ ,  IS_CONST (268435292) 'true' ]
+         77*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~35 ] OP2[ , ->82 ]
+  187    78*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         79*       < 24> ASSIGN_OBJ                                                OP1[  IS_CV !5 ] OP2[ ,  IS_CONST (268435287) 'is_valid' ]
+         80*       <137> OP_DATA                                                   OP1[  IS_CONST (268435286) <true> ] OP2[  IS_UNUSED  ]
+         81*       < 42> JMP                                                       OP1[ ->89 ]
+  190    82*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         83*       < 24> ASSIGN_OBJ                                                OP1[  IS_CV !5 ] OP2[ ,  IS_CONST (268435281) 'is_valid' ]
+         84*       <137> OP_DATA                                                   OP1[  IS_CONST (268435280) <false> ] OP2[  IS_UNUSED  ]
+  191    85*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         86*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~39 ]      OP1[  IS_CV !6 ] OP2[ ,  IS_CONST (268435278) 1 ]
+         87*       < 24> ASSIGN_OBJ                                                OP1[  IS_CV !5 ] OP2[ ,  IS_CONST (268435275) 'error' ]
+         88*       <137> OP_DATA                                                   OP1[  IS_TMP_VAR ~39 ] OP2[  IS_UNUSED  ]
+  193    89*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         90*       < 62> RETURN                                                    OP1[  IS_CV !5 ]
+  195    91*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         92*       < 62> RETURN                                                    OP1[  IS_CONST (268435267) null ]
+
+End of function recaptcha_check_answer
+
+Function recaptcha_get_signup_url:
+[*]Start of arg_info extract:
+[*]arg_info num_args:2
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:domain
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:appname
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       E:\AAAopensource\Yama\Yama_src\app\DVWA-1.9\external\recaptcha\recaptchalib.php
+function name:  recaptcha_get_signup_url
+number of ops:  12
+compiled vars:  !0 = $domain, !1 = $appname
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  204     0*       < 64> RECV_INIT                                         RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435449) null ]
+          1*       < 64> RECV_INIT                                         RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435448) null ]
+  205     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435445) '_recaptcha_qsencode' ]
+          4*       < 71> INIT_ARRAY                                        RES[  IS_TMP_VAR ~2 ]       OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435444) 'domains' ]
+          5*       < 72> ADD_ARRAY_ELEMENT                                 RES[  IS_TMP_VAR ~2 ]       OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435443) 'app' ]
+          6*       < 65> SEND_VAL                                                  OP1[  IS_TMP_VAR ~2 ]
+          7*       < 60> DO_FCALL                                      0   RES[  IS_VAR $3 ]       OP1[  IS_UNUSED  ]
+          8*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~4 ]       OP1[  IS_CONST (268435438) 'https%3A%2F%2Fwww.google.com%2Frecaptcha%2Fadmin%2Fcreate%3F' ] OP2[ ,  IS_VAR $3 ]
+          9*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~4 ]
+  206    10*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         11*       < 62> RETURN                                                    OP1[  IS_CONST (268435433) null ]
+
+End of function recaptcha_get_signup_url
+
+Function _recaptcha_aes_pad:
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:val
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       E:\AAAopensource\Yama\Yama_src\app\DVWA-1.9\external\recaptcha\recaptchalib.php
+function name:  _recaptcha_aes_pad
+number of ops:  22
+compiled vars:  !0 = $val, !1 = $block_size, !2 = $numpad
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  208     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  209     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435448) 16 ]
+  210     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       <121> STRLEN                                            RES[  IS_TMP_VAR ~4 ]       OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          5*       <  5> MOD                                               RES[  IS_TMP_VAR ~5 ]       OP1[  IS_TMP_VAR ~4 ] OP2[ ,  IS_CV !1 ]
+          6*       <  2> SUB                                               RES[  IS_TMP_VAR ~6 ]       OP1[  IS_CV !1 ] OP2[ ,  IS_TMP_VAR ~5 ]
+          7*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_TMP_VAR ~6 ]
+  211     8*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          9*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435435) 'str_pad' ]
+         10*       <117> SEND_VAR                                                  OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         11*       <121> STRLEN                                            RES[  IS_TMP_VAR ~8 ]       OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         12*       <  1> ADD                                               RES[  IS_TMP_VAR ~9 ]       OP1[  IS_TMP_VAR ~8 ] OP2[ ,  IS_CV !2 ]
+         13*       < 65> SEND_VAL                                                  OP1[  IS_TMP_VAR ~9 ]
+         14*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435426) 'chr' ]
+         15*       <117> SEND_VAR                                                  OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         16*       < 60> DO_FCALL                                      0   RES[  IS_VAR $10 ]      OP1[  IS_UNUSED  ]
+         17*       <117> SEND_VAR                                                  OP1[  IS_VAR $10 ] OP2[  IS_UNUSED  ]
+         18*       < 60> DO_FCALL                                      0   RES[  IS_VAR $11 ]      OP1[  IS_UNUSED  ]
+         19*       < 62> RETURN                                                    OP1[  IS_VAR $11 ]
+  212    20*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         21*       < 62> RETURN                                                    OP1[  IS_CONST (268435413) null ]
+
+End of function _recaptcha_aes_pad
+
+Function _recaptcha_aes_encrypt:
+[*]Start of arg_info extract:
+[*]arg_info num_args:2
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:val
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:ky
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       E:\AAAopensource\Yama\Yama_src\app\DVWA-1.9\external\recaptcha\recaptchalib.php
+function name:  _recaptcha_aes_encrypt
+number of ops:  32
+compiled vars:  !0 = $val, !1 = $ky, !2 = $mode, !3 = $enc
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  216     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 63> RECV                                              RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ]
+  217     2*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          3*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435438) 'function_exists' ]
+          4*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435437) 'mcrypt_encrypt' ]
+          5*       < 60> DO_FCALL                                      0   RES[  IS_VAR $4 ]       OP1[  IS_UNUSED  ]
+          6*       < 14> BOOL_NOT                                          RES[  IS_TMP_VAR ~5 ]       OP1[  IS_VAR $4 ]
+          7*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~5 ] OP2[ , ->10 ]
+  218     8*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          9*       < 79> EXIT                                                      OP1[  IS_CONST (268435428) 'To+use+reCAPTCHA+Mailhide%2C+you+need+to+have+the+mcrypt+php+module+installed.' ] OP2[  IS_UNUSED  ]
+  220    10*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         11*       < 99> FETCH_CONSTANT                                    RES[  IS_TMP_VAR ~6 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435425) 'MCRYPT_MODE_CBC' ]
+         12*       < 22> ASSIGN                                                    OP1[  IS_CV !2 ] OP2[ ,  IS_TMP_VAR ~6 ]
+  221    13*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         14*       < 99> FETCH_CONSTANT                                    RES[  IS_TMP_VAR ~8 ]       OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435421) 'MCRYPT_RIJNDAEL_128' ]
+         15*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_TMP_VAR ~8 ]
+  222    16*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         17*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435417) '_recaptcha_aes_pad' ]
+         18*       <117> SEND_VAR                                                  OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         19*       < 60> DO_FCALL                                      0   RES[  IS_VAR $10 ]      OP1[  IS_UNUSED  ]
+         20*       < 22> ASSIGN                                                    OP1[  IS_CV !0 ] OP2[ ,  IS_VAR $10 ]
+  223    21*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         22*       < 59> INIT_FCALL_BY_NAME                                        OP2[  IS_CONST (268435408) 'mcrypt_encrypt' ]
+         23*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         24*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         25*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         26*       < 66> SEND_VAR_EX                                               OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         27*       <116> SEND_VAL_EX                                               OP1[  IS_CONST (268435400) '%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00' ] OP2[  IS_UNUSED  ]
+         28*       < 60> DO_FCALL                                      0   RES[  IS_VAR $12 ]      OP1[  IS_UNUSED  ]
+         29*       < 62> RETURN                                                    OP1[  IS_VAR $12 ]
+  224    30*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         31*       < 62> RETURN                                                    OP1[  IS_CONST (268435393) null ]
+
+End of function _recaptcha_aes_encrypt
+
+Function _recaptcha_mailhide_urlbase64:
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:x
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       E:\AAAopensource\Yama\Yama_src\app\DVWA-1.9\external\recaptcha\recaptchalib.php
+function name:  _recaptcha_mailhide_urlbase64
+number of ops:  13
+compiled vars:  !0 = $x
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  227     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  228     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435447) 'strtr' ]
+          3*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435446) 'base64_encode' ]
+          4*       <117> SEND_VAR                                                  OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          5*       < 60> DO_FCALL                                      0   RES[  IS_VAR $1 ]       OP1[  IS_UNUSED  ]
+          6*       <117> SEND_VAR                                                  OP1[  IS_VAR $1 ] OP2[  IS_UNUSED  ]
+          7*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435439) '%2B%2F' ]
+          8*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435438) '-_' ]
+          9*       < 60> DO_FCALL                                      0   RES[  IS_VAR $2 ]       OP1[  IS_UNUSED  ]
+         10*       < 62> RETURN                                                    OP1[  IS_VAR $2 ]
+  229    11*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         12*       < 62> RETURN                                                    OP1[  IS_CONST (268435431) null ]
+
+End of function _recaptcha_mailhide_urlbase64
+
+Function recaptcha_mailhide_url:
+[*]Start of arg_info extract:
+[*]arg_info num_args:3
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:pubkey
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:privkey
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**2**
+[*]name:email
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       E:\AAAopensource\Yama\Yama_src\app\DVWA-1.9\external\recaptcha\recaptchalib.php
+function name:  recaptcha_mailhide_url
+number of ops:  39
+compiled vars:  !0 = $pubkey, !1 = $privkey, !2 = $email, !3 = $ky, !4 = $cryptmail
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  232     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 63> RECV                                              RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ]
+          2*       < 63> RECV                                              RES[  IS_CV !2 ]       OP1[  IS_UNUSED  ]
+  233     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       < 18> IS_EQUAL                                          RES[  IS_TMP_VAR ~5 ]       OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435436) '' ]
+          5*       < 47> JMPNZ_EX                                          RES[  IS_TMP_VAR ~5 ]       OP1[  IS_TMP_VAR ~5 ] OP2[ , ->8 ]
+          6*       < 18> IS_EQUAL                                          RES[  IS_TMP_VAR ~6 ]       OP1[  IS_CV !0 ] OP2[ ,  IS_CONST (268435433) null ]
+          7*       < 52> BOOL                                              RES[  IS_TMP_VAR ~5 ]       OP1[  IS_TMP_VAR ~6 ]
+          8*       < 47> JMPNZ_EX                                          RES[  IS_TMP_VAR ~5 ]       OP1[  IS_TMP_VAR ~5 ] OP2[ , ->11 ]
+          9*       < 18> IS_EQUAL                                          RES[  IS_TMP_VAR ~7 ]       OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435428) '' ]
+         10*       < 52> BOOL                                              RES[  IS_TMP_VAR ~5 ]       OP1[  IS_TMP_VAR ~7 ]
+         11*       < 47> JMPNZ_EX                                          RES[  IS_TMP_VAR ~5 ]       OP1[  IS_TMP_VAR ~5 ] OP2[ , ->14 ]
+         12*       < 18> IS_EQUAL                                          RES[  IS_TMP_VAR ~8 ]       OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435423) null ]
+         13*       < 52> BOOL                                              RES[  IS_TMP_VAR ~5 ]       OP1[  IS_TMP_VAR ~8 ]
+         14*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~5 ] OP2[ , ->17 ]
+  235    15*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         16*       < 79> EXIT                                                      OP1[  IS_CONST (268435416) 'To+use+reCAPTCHA+Mailhide%2C+you+have+to+sign+up+for+a+public+and+private+key%2C+you+can+do+so+at+%3Ca+href%3D%27http%3A%2F%2Fwww.google.com%2Frecaptcha%2Fmailhide%2Fapikey%27+target%3D%27_blank%27%3Ehttp%3A%2F%2Fwww.google.com%2Frecaptcha%2Fmailhide%2Fapikey%3C%2Fa%3E' ] OP2[  IS_UNUSED  ]
+  239    17*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         18*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435413) 'pack' ]
+         19*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435412) 'H%2A' ]
+         20*       <117> SEND_VAR                                                  OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         21*       < 60> DO_FCALL                                      0   RES[  IS_VAR $9 ]       OP1[  IS_UNUSED  ]
+         22*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_VAR $9 ]
+  240    23*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         24*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435403) '_recaptcha_aes_encrypt' ]
+         25*       <117> SEND_VAR                                                  OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         26*       <117> SEND_VAR                                                  OP1[  IS_CV !3 ] OP2[  IS_UNUSED  ]
+         27*       < 60> DO_FCALL                                      0   RES[  IS_VAR $11 ]      OP1[  IS_UNUSED  ]
+         28*       < 22> ASSIGN                                                    OP1[  IS_CV !4 ] OP2[ ,  IS_VAR $11 ]
+  242    29*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         30*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~13 ]      OP1[  IS_CONST (268435392) 'http%3A%2F%2Fwww.google.com%2Frecaptcha%2Fmailhide%2Fd%3Fk%3D' ] OP2[ ,  IS_CV !0 ]
+         31*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~14 ]      OP1[  IS_TMP_VAR ~13 ] OP2[ ,  IS_CONST (268435391) '%26c%3D' ]
+         32*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435390) '_recaptcha_mailhide_urlbase64' ]
+         33*       <117> SEND_VAR                                                  OP1[  IS_CV !4 ] OP2[  IS_UNUSED  ]
+         34*       < 60> DO_FCALL                                      0   RES[  IS_VAR $15 ]      OP1[  IS_UNUSED  ]
+         35*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~16 ]      OP1[  IS_TMP_VAR ~14 ] OP2[ ,  IS_VAR $15 ]
+         36*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~16 ]
+  243    37*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         38*       < 62> RETURN                                                    OP1[  IS_CONST (268435379) null ]
+
+End of function recaptcha_mailhide_url
+
+Function _recaptcha_mailhide_email_parts:
+[*]Start of arg_info extract:
+[*]arg_info num_args:1
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:email
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       E:\AAAopensource\Yama\Yama_src\app\DVWA-1.9\external\recaptcha\recaptchalib.php
+function name:  _recaptcha_mailhide_email_parts
+number of ops:  50
+compiled vars:  !0 = $email, !1 = $arr
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  250     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+  251     1*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          2*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435430) 'preg_split' ]
+          3*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435429) '%2F%40%2F' ]
+          4*       <117> SEND_VAR                                                  OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+          5*       < 60> DO_FCALL                                      0   RES[  IS_VAR $2 ]       OP1[  IS_UNUSED  ]
+          6*       < 22> ASSIGN                                                    OP1[  IS_CV !1 ] OP2[ ,  IS_VAR $2 ]
+  253     7*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          8*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~4 ]       OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435420) 0 ]
+          9*       <121> STRLEN                                            RES[  IS_TMP_VAR ~5 ]       OP1[  IS_TMP_VAR ~4 ] OP2[  IS_UNUSED  ]
+         10*       < 21> IS_SMALLER_OR_EQUAL                               RES[  IS_TMP_VAR ~6 ]       OP1[  IS_TMP_VAR ~5 ] OP2[ ,  IS_CONST (268435417) 4 ]
+         11*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~6 ] OP2[ , ->22 ]
+  254    12*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         13*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435413) 'substr' ]
+         14*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~8 ]       OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435412) 0 ]
+         15*       < 65> SEND_VAL                                                  OP1[  IS_TMP_VAR ~8 ]
+         16*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435409) 0 ]
+         17*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435408) 1 ]
+         18*       < 60> DO_FCALL                                      0   RES[  IS_VAR $9 ]       OP1[  IS_UNUSED  ]
+         19*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435400) 0 ]
+         20*       <137> OP_DATA                                                   OP1[  IS_VAR $9 ] OP2[  IS_UNUSED  ]
+         21*       < 42> JMP                                                       OP1[ ->46 ]
+  255    22*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         23*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~10 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435397) 0 ]
+         24*       <121> STRLEN                                            RES[  IS_TMP_VAR ~11 ]      OP1[  IS_TMP_VAR ~10 ] OP2[  IS_UNUSED  ]
+         25*       < 21> IS_SMALLER_OR_EQUAL                               RES[  IS_TMP_VAR ~12 ]      OP1[  IS_TMP_VAR ~11 ] OP2[ ,  IS_CONST (268435394) 6 ]
+         26*       < 43> JMPZ                                                      OP1[  IS_TMP_VAR ~12 ] OP2[ , ->37 ]
+  256    27*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         28*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435390) 'substr' ]
+         29*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~14 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435389) 0 ]
+         30*       < 65> SEND_VAL                                                  OP1[  IS_TMP_VAR ~14 ]
+         31*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435386) 0 ]
+         32*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435385) 3 ]
+         33*       < 60> DO_FCALL                                      0   RES[  IS_VAR $15 ]      OP1[  IS_UNUSED  ]
+         34*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435377) 0 ]
+         35*       <137> OP_DATA                                                   OP1[  IS_VAR $15 ] OP2[  IS_UNUSED  ]
+         36*       < 42> JMP                                                       OP1[ ->46 ]
+  258    37*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         38*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435375) 'substr' ]
+         39*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~17 ]      OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435374) 0 ]
+         40*       < 65> SEND_VAL                                                  OP1[  IS_TMP_VAR ~17 ]
+         41*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435371) 0 ]
+         42*       < 65> SEND_VAL                                                  OP1[  IS_CONST (268435370) 4 ]
+         43*       < 60> DO_FCALL                                      0   RES[  IS_VAR $18 ]      OP1[  IS_UNUSED  ]
+         44*       < 23> ASSIGN_DIM                                                OP1[  IS_CV !1 ] OP2[ ,  IS_CONST (268435362) 0 ]
+         45*       <137> OP_DATA                                                   OP1[  IS_VAR $18 ] OP2[  IS_UNUSED  ]
+  260    46*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         47*       < 62> RETURN                                                    OP1[  IS_CV !1 ]
+  261    48*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         49*       < 62> RETURN                                                    OP1[  IS_CONST (268435357) null ]
+
+End of function _recaptcha_mailhide_email_parts
+
+Function recaptcha_mailhide_html:
+[*]Start of arg_info extract:
+[*]arg_info num_args:3
+[*]Function return type:(null)
+
+[*]ArgInfoNo**0**
+[*]name:pubkey
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**1**
+[*]name:privkey
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+
+[*]ArgInfoNo**2**
+[*]name:email
+[*]type:(null)
+[*]is_ref:0
+[*]is_variadic:0
+[*]End of arg_info extract.
+
+[*]Start static_variables extract:
+[*]static_variables: NULL
+[*]End static_variables extract.
+
+filename:       E:\AAAopensource\Yama\Yama_src\app\DVWA-1.9\external\recaptcha\recaptchalib.php
+function name:  recaptcha_mailhide_html
+number of ops:  39
+compiled vars:  !0 = $pubkey, !1 = $privkey, !2 = $email, !3 = $emailparts, !4 = $url
+line      #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  269     0*       < 63> RECV                                              RES[  IS_CV !0 ]       OP1[  IS_UNUSED  ]
+          1*       < 63> RECV                                              RES[  IS_CV !1 ]       OP1[  IS_UNUSED  ]
+          2*       < 63> RECV                                              RES[  IS_CV !2 ]       OP1[  IS_UNUSED  ]
+  270     3*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          4*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435436) '_recaptcha_mailhide_email_parts' ]
+          5*       <117> SEND_VAR                                                  OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+          6*       < 60> DO_FCALL                                      0   RES[  IS_VAR $5 ]       OP1[  IS_UNUSED  ]
+          7*       < 22> ASSIGN                                                    OP1[  IS_CV !3 ] OP2[ ,  IS_VAR $5 ]
+  271     8*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+          9*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435427) 'recaptcha_mailhide_url' ]
+         10*       <117> SEND_VAR                                                  OP1[  IS_CV !0 ] OP2[  IS_UNUSED  ]
+         11*       <117> SEND_VAR                                                  OP1[  IS_CV !1 ] OP2[  IS_UNUSED  ]
+         12*       <117> SEND_VAR                                                  OP1[  IS_CV !2 ] OP2[  IS_UNUSED  ]
+         13*       < 60> DO_FCALL                                      0   RES[  IS_VAR $7 ]       OP1[  IS_UNUSED  ]
+         14*       < 22> ASSIGN                                                    OP1[  IS_CV !4 ] OP2[ ,  IS_VAR $7 ]
+  273    15*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         16*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435414) 'htmlentities' ]
+         17*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~9 ]       OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435413) 0 ]
+         18*       < 65> SEND_VAL                                                  OP1[  IS_TMP_VAR ~9 ]
+         19*       < 60> DO_FCALL                                      0   RES[  IS_VAR $10 ]      OP1[  IS_UNUSED  ]
+         20*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~11 ]      OP1[  IS_VAR $10 ] OP2[ ,  IS_CONST (268435408) '%3Ca+href%3D%27' ]
+         21*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435407) 'htmlentities' ]
+         22*       <117> SEND_VAR                                                  OP1[  IS_CV !4 ] OP2[  IS_UNUSED  ]
+         23*       < 60> DO_FCALL                                      0   RES[  IS_VAR $12 ]      OP1[  IS_UNUSED  ]
+         24*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~13 ]      OP1[  IS_TMP_VAR ~11 ] OP2[ ,  IS_VAR $12 ]
+  274    25*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~14 ]      OP1[  IS_TMP_VAR ~13 ] OP2[ ,  IS_CONST (268435400) '%27+onclick%3D%22window.open%28%27' ]
+         26*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435399) 'htmlentities' ]
+         27*       <117> SEND_VAR                                                  OP1[  IS_CV !4 ] OP2[  IS_UNUSED  ]
+         28*       < 60> DO_FCALL                                      0   RES[  IS_VAR $15 ]      OP1[  IS_UNUSED  ]
+         29*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~16 ]      OP1[  IS_TMP_VAR ~14 ] OP2[ ,  IS_VAR $15 ]
+         30*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~17 ]      OP1[  IS_TMP_VAR ~16 ] OP2[ ,  IS_CONST (268435392) '%27%2C+%27%27%2C+%27toolbar%3D0%2Cscrollbars%3D0%2Clocation%3D0%2Cstatusbar%3D0%2Cmenubar%3D0%2Cresizable%3D0%2Cwidth%3D500%2Cheight%3D300%27%29%3B+return+false%3B%22+title%3D%22Reveal+this+e-mail+address%22%3E...%3C%2Fa%3E%40' ]
+         31*       < 61> INIT_FCALL                                                OP1[  IS_UNUSED  ] OP2[  IS_CONST (268435391) 'htmlentities' ]
+         32*       < 81> FETCH_DIM_R                                       RES[  IS_TMP_VAR ~18 ]      OP1[  IS_CV !3 ] OP2[ ,  IS_CONST (268435390) 1 ]
+         33*       < 65> SEND_VAL                                                  OP1[  IS_TMP_VAR ~18 ]
+         34*       < 60> DO_FCALL                                      0   RES[  IS_VAR $19 ]      OP1[  IS_UNUSED  ]
+         35*       <  8> CONCAT                                            RES[  IS_TMP_VAR ~20 ]      OP1[  IS_TMP_VAR ~17 ] OP2[ ,  IS_VAR $19 ]
+         36*       < 62> RETURN                                                    OP1[  IS_TMP_VAR ~20 ]
+  276    37*       <101> EXT_STMT                                                  OP1[  IS_UNUSED  ] OP2[  IS_UNUSED  ]
+         38*       < 62> RETURN                                                    OP1[  IS_CONST (268435379) null ]
+
+End of function recaptcha_mailhide_html
+
+Class ReCaptchaResponse:
+[+]Class Parent Name: NULL
+End Trait extract
+Start Properties extract:
+Key: is_valid, Value: UNINIT, Type: Normal
+Key: error, Value: UNINIT, Type: Normal
+End Properties extract.
+
+Class ReCaptchaResponse: [no user functions]
+End of class ReCaptchaResponse.
+
