@@ -79,3 +79,7 @@ This documentation is still in its early stages, and may contain omissions or in
 * CVE-2024-44794
 * CVE-2024-44796
 * CVE-2024-41349
+
+# Contact 
+Please contact jiazhenzhao@nudt.edu.cn for any questions.
+
