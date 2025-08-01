@@ -35,7 +35,20 @@ Yama successfully discovered and reported 38 zero-day vulnerabilities in 24 GitH
 
 # Citation/Paper
 
-The link to the corresponding paper will be provided once it is officially accepted and published.
+You can find more details in our paper.
+
+```
+@ARTICLE{11095739,
+  author={Zhao, Jiazhen and Zhu, Kailong and Yu, Lu and Huang, Hui and Lu, Yuliang},
+  journal={IEEE Transactions on Information Forensics and Security}, 
+  title={Yama: Precise Opcode-Based Data Flow Analysis for Detecting PHP Applications Vulnerabilities}, 
+  year={2025},
+  volume={20},
+  number={},
+  pages={7748-7763},
+  keywords={Semantics;Codes;Security;Arrays;Accuracy;Static analysis;Analytical models;Switches;Source coding;Prototypes;Web security;PHP applications vulnerability;data flow analysis;opcode-based},
+  doi={10.1109/TIFS.2025.3592537}}
+```
 
 
 # 📘 Documentation Status
